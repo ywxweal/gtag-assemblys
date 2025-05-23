@@ -7,13 +7,13 @@ namespace GorillaNetworking
 	// Token: 0x02000C27 RID: 3111
 	public class FriendshipBracelet : MonoBehaviour
 	{
-		// Token: 0x06004D0B RID: 19723 RVA: 0x0016EDBE File Offset: 0x0016CFBE
+		// Token: 0x06004D0C RID: 19724 RVA: 0x0016EE96 File Offset: 0x0016D096
 		protected void Awake()
 		{
 			this.ownerRig = base.GetComponentInParent<VRRig>();
 		}
 
-		// Token: 0x06004D0C RID: 19724 RVA: 0x0016EDCC File Offset: 0x0016CFCC
+		// Token: 0x06004D0D RID: 19725 RVA: 0x0016EEA4 File Offset: 0x0016D0A4
 		private AudioSource GetAudioSource()
 		{
 			if (!this.isLeftHand)
@@ -23,13 +23,13 @@ namespace GorillaNetworking
 			return this.ownerRig.leftHandPlayer;
 		}
 
-		// Token: 0x06004D0D RID: 19725 RVA: 0x0016EDED File Offset: 0x0016CFED
+		// Token: 0x06004D0E RID: 19726 RVA: 0x0016EEC5 File Offset: 0x0016D0C5
 		private void OnEnable()
 		{
 			this.PlayAppearEffects();
 		}
 
-		// Token: 0x06004D0E RID: 19726 RVA: 0x0016EDF5 File Offset: 0x0016CFF5
+		// Token: 0x06004D0F RID: 19727 RVA: 0x0016EECD File Offset: 0x0016D0CD
 		public void PlayAppearEffects()
 		{
 			this.GetAudioSource().GTPlayOneShot(this.braceletFormedSound, 1f);
@@ -39,7 +39,7 @@ namespace GorillaNetworking
 			}
 		}
 
-		// Token: 0x06004D0F RID: 19727 RVA: 0x0016EE28 File Offset: 0x0016D028
+		// Token: 0x06004D10 RID: 19728 RVA: 0x0016EF00 File Offset: 0x0016D100
 		private void OnDisable()
 		{
 			if (!this.ownerRig.gameObject.activeInHierarchy)
@@ -53,7 +53,7 @@ namespace GorillaNetworking
 			}
 		}
 
-		// Token: 0x06004D10 RID: 19728 RVA: 0x0016EE78 File Offset: 0x0016D078
+		// Token: 0x06004D11 RID: 19729 RVA: 0x0016EF50 File Offset: 0x0016D150
 		public void UpdateBeads(List<Color> colors, int selfIndex)
 		{
 			int num = colors.Count - 1;
@@ -80,39 +80,39 @@ namespace GorillaNetworking
 			}
 		}
 
-		// Token: 0x04004FF5 RID: 20469
+		// Token: 0x04004FF6 RID: 20470
 		[SerializeField]
 		private SkinnedMeshRenderer[] braceletStrings;
 
-		// Token: 0x04004FF6 RID: 20470
+		// Token: 0x04004FF7 RID: 20471
 		[SerializeField]
 		private MeshRenderer[] braceletBeads;
 
-		// Token: 0x04004FF7 RID: 20471
+		// Token: 0x04004FF8 RID: 20472
 		[SerializeField]
 		private MeshRenderer[] braceletBananas;
 
-		// Token: 0x04004FF8 RID: 20472
+		// Token: 0x04004FF9 RID: 20473
 		[SerializeField]
 		private bool isLeftHand;
 
-		// Token: 0x04004FF9 RID: 20473
+		// Token: 0x04004FFA RID: 20474
 		[SerializeField]
 		private AudioClip braceletFormedSound;
 
-		// Token: 0x04004FFA RID: 20474
+		// Token: 0x04004FFB RID: 20475
 		[SerializeField]
 		private AudioClip braceletBrokenSound;
 
-		// Token: 0x04004FFB RID: 20475
+		// Token: 0x04004FFC RID: 20476
 		[SerializeField]
 		private ParticleSystem braceletFormedParticle;
 
-		// Token: 0x04004FFC RID: 20476
+		// Token: 0x04004FFD RID: 20477
 		[SerializeField]
 		private ParticleSystem braceletBrokenParticle;
 
-		// Token: 0x04004FFD RID: 20477
+		// Token: 0x04004FFE RID: 20478
 		private VRRig ownerRig;
 	}
 }

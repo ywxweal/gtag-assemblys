@@ -8,7 +8,7 @@ namespace GorillaTag.Audio
 	// Token: 0x02000D8F RID: 3471
 	public class GTMicWrapper : MicWrapper
 	{
-		// Token: 0x06005626 RID: 22054 RVA: 0x001A3334 File Offset: 0x001A1534
+		// Token: 0x06005627 RID: 22055 RVA: 0x001A340C File Offset: 0x001A160C
 		public GTMicWrapper(string device, int suggestedFrequency, bool allowPitchAdjustment, float pitchAdjustment, bool allowVolumeAdjustment, float volumeAdjustment, Photon.Voice.ILogger logger)
 			: base(device, suggestedFrequency, logger)
 		{
@@ -16,28 +16,28 @@ namespace GorillaTag.Audio
 			this.UpdateVolumeAdjustment(allowVolumeAdjustment, volumeAdjustment);
 		}
 
-		// Token: 0x06005627 RID: 22055 RVA: 0x001A3420 File Offset: 0x001A1620
+		// Token: 0x06005628 RID: 22056 RVA: 0x001A34F8 File Offset: 0x001A16F8
 		public void UpdateWrapper(bool allowPitchAdjustment, float pitchAdjustment, bool allowVolumeAdjustment, float volumeAdjustment)
 		{
 			this.UpdatePitchAdjustment(allowPitchAdjustment, pitchAdjustment);
 			this.UpdateVolumeAdjustment(allowVolumeAdjustment, volumeAdjustment);
 		}
 
-		// Token: 0x06005628 RID: 22056 RVA: 0x001A3433 File Offset: 0x001A1633
+		// Token: 0x06005629 RID: 22057 RVA: 0x001A350B File Offset: 0x001A170B
 		public void UpdatePitchAdjustment(bool allow, float pitchAdjustment)
 		{
 			this._allowPitchAdjustment = allow;
 			this._pitchAdjustment = pitchAdjustment;
 		}
 
-		// Token: 0x06005629 RID: 22057 RVA: 0x001A3443 File Offset: 0x001A1643
+		// Token: 0x0600562A RID: 22058 RVA: 0x001A351B File Offset: 0x001A171B
 		public void UpdateVolumeAdjustment(bool allow, float volumeAdjustment)
 		{
 			this._allowVolumeAdjustment = allow;
 			this._volumeAdjustment = volumeAdjustment;
 		}
 
-		// Token: 0x0600562A RID: 22058 RVA: 0x001A3454 File Offset: 0x001A1654
+		// Token: 0x0600562B RID: 22059 RVA: 0x001A352C File Offset: 0x001A172C
 		public override bool Read(float[] buffer)
 		{
 			if (base.Error != null)
@@ -80,13 +80,13 @@ namespace GorillaTag.Audio
 			return false;
 		}
 
-		// Token: 0x0600562B RID: 22059 RVA: 0x001A35B6 File Offset: 0x001A17B6
+		// Token: 0x0600562C RID: 22060 RVA: 0x001A368E File Offset: 0x001A188E
 		private void PitchShift(float pitchShift, long numSampsToProcess, float sampleRate, float[] indata)
 		{
 			this.PitchShift(pitchShift, numSampsToProcess, 2048L, 10L, sampleRate, indata);
 		}
 
-		// Token: 0x0600562C RID: 22060 RVA: 0x001A35CC File Offset: 0x001A17CC
+		// Token: 0x0600562D RID: 22061 RVA: 0x001A36A4 File Offset: 0x001A18A4
 		public void PitchShift(float pitchShift, long numSampsToProcess, long fftFrameSize, long osamp, float sampleRate, float[] indata)
 		{
 			long num = fftFrameSize / 2L;
@@ -223,7 +223,7 @@ namespace GorillaTag.Audio
 			}
 		}
 
-		// Token: 0x0600562D RID: 22061 RVA: 0x001A3A44 File Offset: 0x001A1C44
+		// Token: 0x0600562E RID: 22062 RVA: 0x001A3B1C File Offset: 0x001A1D1C
 		public void ShortTimeFourierTransform(float[] fftBuffer, long fftFrameSize, long sign)
 		{
 			for (long num = 2L; num < 2L * fftFrameSize - 2L; num += 2L)
@@ -284,52 +284,52 @@ namespace GorillaTag.Audio
 			}
 		}
 
-		// Token: 0x040059F2 RID: 23026
+		// Token: 0x040059F3 RID: 23027
 		private bool _allowPitchAdjustment;
 
-		// Token: 0x040059F3 RID: 23027
+		// Token: 0x040059F4 RID: 23028
 		private float _pitchAdjustment = 1f;
 
-		// Token: 0x040059F4 RID: 23028
+		// Token: 0x040059F5 RID: 23029
 		private bool _allowVolumeAdjustment;
 
-		// Token: 0x040059F5 RID: 23029
+		// Token: 0x040059F6 RID: 23030
 		private float _volumeAdjustment = 1f;
 
-		// Token: 0x040059F6 RID: 23030
+		// Token: 0x040059F7 RID: 23031
 		private static readonly int MaxFrameLength = 16000;
 
-		// Token: 0x040059F7 RID: 23031
+		// Token: 0x040059F8 RID: 23032
 		private readonly float[] InFifo = new float[GTMicWrapper.MaxFrameLength];
 
-		// Token: 0x040059F8 RID: 23032
+		// Token: 0x040059F9 RID: 23033
 		private readonly float[] OutFifo = new float[GTMicWrapper.MaxFrameLength];
 
-		// Token: 0x040059F9 RID: 23033
+		// Token: 0x040059FA RID: 23034
 		private readonly float[] FfTworksp = new float[2 * GTMicWrapper.MaxFrameLength];
 
-		// Token: 0x040059FA RID: 23034
+		// Token: 0x040059FB RID: 23035
 		private readonly float[] LastPhase = new float[GTMicWrapper.MaxFrameLength / 2 + 1];
 
-		// Token: 0x040059FB RID: 23035
+		// Token: 0x040059FC RID: 23036
 		private readonly float[] SumPhase = new float[GTMicWrapper.MaxFrameLength / 2 + 1];
 
-		// Token: 0x040059FC RID: 23036
+		// Token: 0x040059FD RID: 23037
 		private readonly float[] OutputAccum = new float[2 * GTMicWrapper.MaxFrameLength];
 
-		// Token: 0x040059FD RID: 23037
+		// Token: 0x040059FE RID: 23038
 		private readonly float[] AnaFreq = new float[GTMicWrapper.MaxFrameLength];
 
-		// Token: 0x040059FE RID: 23038
+		// Token: 0x040059FF RID: 23039
 		private readonly float[] AnaMagn = new float[GTMicWrapper.MaxFrameLength];
 
-		// Token: 0x040059FF RID: 23039
+		// Token: 0x04005A00 RID: 23040
 		private readonly float[] SynFreq = new float[GTMicWrapper.MaxFrameLength];
 
-		// Token: 0x04005A00 RID: 23040
+		// Token: 0x04005A01 RID: 23041
 		private readonly float[] SynMagn = new float[GTMicWrapper.MaxFrameLength];
 
-		// Token: 0x04005A01 RID: 23041
+		// Token: 0x04005A02 RID: 23042
 		private long _gRover;
 	}
 }

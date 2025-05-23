@@ -11,7 +11,7 @@ namespace GorillaTagScripts
 	[BurstCompile]
 	public struct BuilderFindPotentialSnaps : IJobParallelFor
 	{
-		// Token: 0x06004473 RID: 17523 RVA: 0x00142A9C File Offset: 0x00140C9C
+		// Token: 0x06004474 RID: 17524 RVA: 0x00142B74 File Offset: 0x00140D74
 		public void Execute(int index)
 		{
 			BuilderGridPlaneData builderGridPlaneData = this.gridPlanes[index];
@@ -26,7 +26,7 @@ namespace GorillaTagScripts
 			}
 		}
 
-		// Token: 0x06004474 RID: 17524 RVA: 0x00142AFC File Offset: 0x00140CFC
+		// Token: 0x06004475 RID: 17525 RVA: 0x00142BD4 File Offset: 0x00140DD4
 		public bool TryPlaceGridPlaneOnGridPlane(ref BuilderGridPlaneData gridPlane, ref BuilderGridPlaneData checkGridPlane, ref BuilderPotentialPlacementData potentialPlacement)
 		{
 			if (checkGridPlane.male == gridPlane.male)
@@ -183,57 +183,57 @@ namespace GorillaTagScripts
 			return true;
 		}
 
-		// Token: 0x06004475 RID: 17525 RVA: 0x0013EEEA File Offset: 0x0013D0EA
+		// Token: 0x06004476 RID: 17526 RVA: 0x0013EFC2 File Offset: 0x0013D1C2
 		private Vector2Int Rotate90(Vector2Int v, int offsetX, int offsetY)
 		{
 			return new Vector2Int(v.y * -1 + offsetY, v.x);
 		}
 
-		// Token: 0x06004476 RID: 17526 RVA: 0x0013EF03 File Offset: 0x0013D103
+		// Token: 0x06004477 RID: 17527 RVA: 0x0013EFDB File Offset: 0x0013D1DB
 		private Vector2Int Rotate270(Vector2Int v, int offsetX, int offsetY)
 		{
 			return new Vector2Int(v.y, v.x * -1 + offsetX);
 		}
 
-		// Token: 0x06004477 RID: 17527 RVA: 0x0013EF1C File Offset: 0x0013D11C
+		// Token: 0x06004478 RID: 17528 RVA: 0x0013EFF4 File Offset: 0x0013D1F4
 		private Vector2Int Rotate180(Vector2Int v, int offsetX, int offsetY)
 		{
 			return new Vector2Int(v.x * -1 + offsetX, v.y * -1 + offsetY);
 		}
 
-		// Token: 0x04004732 RID: 18226
+		// Token: 0x04004733 RID: 18227
 		[ReadOnly]
 		public float gridSize;
 
-		// Token: 0x04004733 RID: 18227
+		// Token: 0x04004734 RID: 18228
 		[ReadOnly]
 		public BuilderTable.SnapParams currSnapParams;
 
-		// Token: 0x04004734 RID: 18228
+		// Token: 0x04004735 RID: 18229
 		[ReadOnly]
 		public NativeList<BuilderGridPlaneData> gridPlanes;
 
-		// Token: 0x04004735 RID: 18229
+		// Token: 0x04004736 RID: 18230
 		[ReadOnly]
 		public NativeList<BuilderGridPlaneData> checkGridPlanes;
 
-		// Token: 0x04004736 RID: 18230
+		// Token: 0x04004737 RID: 18231
 		[ReadOnly]
 		public Vector3 worldToLocalPos;
 
-		// Token: 0x04004737 RID: 18231
+		// Token: 0x04004738 RID: 18232
 		[ReadOnly]
 		public Quaternion worldToLocalRot;
 
-		// Token: 0x04004738 RID: 18232
+		// Token: 0x04004739 RID: 18233
 		[ReadOnly]
 		public Vector3 localToWorldPos;
 
-		// Token: 0x04004739 RID: 18233
+		// Token: 0x0400473A RID: 18234
 		[ReadOnly]
 		public Quaternion localToWorldRot;
 
-		// Token: 0x0400473A RID: 18234
+		// Token: 0x0400473B RID: 18235
 		public NativeQueue<BuilderPotentialPlacementData>.ParallelWriter potentialPlacements;
 	}
 }

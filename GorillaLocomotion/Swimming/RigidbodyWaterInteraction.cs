@@ -9,7 +9,7 @@ namespace GorillaLocomotion.Swimming
 	[RequireComponent(typeof(Rigidbody))]
 	public class RigidbodyWaterInteraction : MonoBehaviour
 	{
-		// Token: 0x06005135 RID: 20789 RVA: 0x00188456 File Offset: 0x00186656
+		// Token: 0x06005136 RID: 20790 RVA: 0x0018852E File Offset: 0x0018672E
 		protected void Awake()
 		{
 			this.rb = base.GetComponent<Rigidbody>();
@@ -17,27 +17,27 @@ namespace GorillaLocomotion.Swimming
 			RigidbodyWaterInteractionManager.RegisterRBWI(this);
 		}
 
-		// Token: 0x06005136 RID: 20790 RVA: 0x0018847B File Offset: 0x0018667B
+		// Token: 0x06005137 RID: 20791 RVA: 0x00188553 File Offset: 0x00186753
 		protected void OnEnable()
 		{
 			this.overlappingWaterVolumes.Clear();
 			RigidbodyWaterInteractionManager.RegisterRBWI(this);
 		}
 
-		// Token: 0x06005137 RID: 20791 RVA: 0x0018848E File Offset: 0x0018668E
+		// Token: 0x06005138 RID: 20792 RVA: 0x00188566 File Offset: 0x00186766
 		protected void OnDisable()
 		{
 			this.overlappingWaterVolumes.Clear();
 			RigidbodyWaterInteractionManager.UnregisterRBWI(this);
 		}
 
-		// Token: 0x06005138 RID: 20792 RVA: 0x001884A1 File Offset: 0x001866A1
+		// Token: 0x06005139 RID: 20793 RVA: 0x00188579 File Offset: 0x00186779
 		private void OnDestroy()
 		{
 			RigidbodyWaterInteractionManager.UnregisterRBWI(this);
 		}
 
-		// Token: 0x06005139 RID: 20793 RVA: 0x001884AC File Offset: 0x001866AC
+		// Token: 0x0600513A RID: 20794 RVA: 0x00188584 File Offset: 0x00186784
 		public void InvokeFixedUpdate()
 		{
 			if (this.rb.isKinematic)
@@ -176,7 +176,7 @@ namespace GorillaLocomotion.Swimming
 			this.rb.angularDrag = this.baseAngularDrag;
 		}
 
-		// Token: 0x0600513A RID: 20794 RVA: 0x001889DC File Offset: 0x00186BDC
+		// Token: 0x0600513B RID: 20795 RVA: 0x00188AB4 File Offset: 0x00186CB4
 		protected void OnTriggerEnter(Collider other)
 		{
 			WaterVolume component = other.GetComponent<WaterVolume>();
@@ -186,7 +186,7 @@ namespace GorillaLocomotion.Swimming
 			}
 		}
 
-		// Token: 0x0600513B RID: 20795 RVA: 0x00188A14 File Offset: 0x00186C14
+		// Token: 0x0600513C RID: 20796 RVA: 0x00188AEC File Offset: 0x00186CEC
 		protected void OnTriggerExit(Collider other)
 		{
 			WaterVolume component = other.GetComponent<WaterVolume>();
@@ -196,56 +196,56 @@ namespace GorillaLocomotion.Swimming
 			}
 		}
 
-		// Token: 0x04005521 RID: 21793
+		// Token: 0x04005522 RID: 21794
 		public bool applyDamping = true;
 
-		// Token: 0x04005522 RID: 21794
+		// Token: 0x04005523 RID: 21795
 		public bool applyBuoyancyForce = true;
 
-		// Token: 0x04005523 RID: 21795
+		// Token: 0x04005524 RID: 21796
 		public bool applyAngularDrag = true;
 
-		// Token: 0x04005524 RID: 21796
+		// Token: 0x04005525 RID: 21797
 		public bool applyWaterCurrents = true;
 
-		// Token: 0x04005525 RID: 21797
+		// Token: 0x04005526 RID: 21798
 		public bool applySurfaceTorque = true;
 
-		// Token: 0x04005526 RID: 21798
+		// Token: 0x04005527 RID: 21799
 		public float underWaterDampingHalfLife = 0.25f;
 
-		// Token: 0x04005527 RID: 21799
+		// Token: 0x04005528 RID: 21800
 		public float waterSurfaceDampingHalfLife = 1f;
 
-		// Token: 0x04005528 RID: 21800
+		// Token: 0x04005529 RID: 21801
 		public float underWaterBuoyancyFactor = 0.5f;
 
-		// Token: 0x04005529 RID: 21801
+		// Token: 0x0400552A RID: 21802
 		public float angularDrag = 0.5f;
 
-		// Token: 0x0400552A RID: 21802
+		// Token: 0x0400552B RID: 21803
 		public float surfaceTorqueAmount = 0.5f;
 
-		// Token: 0x0400552B RID: 21803
+		// Token: 0x0400552C RID: 21804
 		public bool enablePreciseWaterCollision;
 
-		// Token: 0x0400552C RID: 21804
+		// Token: 0x0400552D RID: 21805
 		public float objectRadiusForWaterCollision = 0.25f;
 
-		// Token: 0x0400552D RID: 21805
+		// Token: 0x0400552E RID: 21806
 		[Range(0f, 1f)]
 		public float buoyancyEquilibrium = 0.8f;
 
-		// Token: 0x0400552E RID: 21806
+		// Token: 0x0400552F RID: 21807
 		private Rigidbody rb;
 
-		// Token: 0x0400552F RID: 21807
+		// Token: 0x04005530 RID: 21808
 		private List<WaterVolume> overlappingWaterVolumes = new List<WaterVolume>();
 
-		// Token: 0x04005530 RID: 21808
+		// Token: 0x04005531 RID: 21809
 		private List<WaterCurrent> activeWaterCurrents = new List<WaterCurrent>(16);
 
-		// Token: 0x04005531 RID: 21809
+		// Token: 0x04005532 RID: 21810
 		private float baseAngularDrag = 0.05f;
 	}
 }

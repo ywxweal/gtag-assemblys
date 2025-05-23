@@ -7,12 +7,12 @@ using UnityEngine.Serialization;
 public class PaperPlaneProjectile : MonoBehaviour
 {
 	// Token: 0x1400004B RID: 75
-	// (add) Token: 0x06001B93 RID: 7059 RVA: 0x000875F4 File Offset: 0x000857F4
-	// (remove) Token: 0x06001B94 RID: 7060 RVA: 0x0008762C File Offset: 0x0008582C
+	// (add) Token: 0x06001B93 RID: 7059 RVA: 0x00087614 File Offset: 0x00085814
+	// (remove) Token: 0x06001B94 RID: 7060 RVA: 0x0008764C File Offset: 0x0008584C
 	public event PaperPlaneProjectile.PaperPlaneHit OnHit;
 
 	// Token: 0x170002FD RID: 765
-	// (get) Token: 0x06001B95 RID: 7061 RVA: 0x00087661 File Offset: 0x00085861
+	// (get) Token: 0x06001B95 RID: 7061 RVA: 0x00087681 File Offset: 0x00085881
 	public new Transform transform
 	{
 		get
@@ -22,7 +22,7 @@ public class PaperPlaneProjectile : MonoBehaviour
 	}
 
 	// Token: 0x170002FE RID: 766
-	// (get) Token: 0x06001B96 RID: 7062 RVA: 0x00087669 File Offset: 0x00085869
+	// (get) Token: 0x06001B96 RID: 7062 RVA: 0x00087689 File Offset: 0x00085889
 	public VRRig MyRig
 	{
 		get
@@ -31,20 +31,20 @@ public class PaperPlaneProjectile : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001B97 RID: 7063 RVA: 0x00087671 File Offset: 0x00085871
+	// Token: 0x06001B97 RID: 7063 RVA: 0x00087691 File Offset: 0x00085891
 	private void Awake()
 	{
 		this._tCached = base.transform;
 		this.spawnWorldEffects = base.GetComponent<SpawnWorldEffects>();
 	}
 
-	// Token: 0x06001B98 RID: 7064 RVA: 0x0008768B File Offset: 0x0008588B
+	// Token: 0x06001B98 RID: 7064 RVA: 0x000876AB File Offset: 0x000858AB
 	private void Start()
 	{
 		this.ResetProjectile();
 	}
 
-	// Token: 0x06001B99 RID: 7065 RVA: 0x00087693 File Offset: 0x00085893
+	// Token: 0x06001B99 RID: 7065 RVA: 0x000876B3 File Offset: 0x000858B3
 	public void ResetProjectile()
 	{
 		this._timeElapsed = 0f;
@@ -52,7 +52,7 @@ public class PaperPlaneProjectile : MonoBehaviour
 		this.crashingObject.SetActive(false);
 	}
 
-	// Token: 0x06001B9A RID: 7066 RVA: 0x000876B8 File Offset: 0x000858B8
+	// Token: 0x06001B9A RID: 7066 RVA: 0x000876D8 File Offset: 0x000858D8
 	public void Launch(Vector3 startPos, Quaternion startRot, Vector3 vel)
 	{
 		base.gameObject.SetActive(true);
@@ -72,7 +72,7 @@ public class PaperPlaneProjectile : MonoBehaviour
 		this.scaleFactor = 0.7f * (this.transform.lossyScale.x - 1f + 1.4285715f);
 	}
 
-	// Token: 0x06001B9B RID: 7067 RVA: 0x0008777C File Offset: 0x0008597C
+	// Token: 0x06001B9B RID: 7067 RVA: 0x0008779C File Offset: 0x0008599C
 	private void Update()
 	{
 		if (this._stopped)
@@ -120,7 +120,7 @@ public class PaperPlaneProjectile : MonoBehaviour
 		this.crashingObject.SetActive(true);
 	}
 
-	// Token: 0x06001B9C RID: 7068 RVA: 0x0008796E File Offset: 0x00085B6E
+	// Token: 0x06001B9C RID: 7068 RVA: 0x0008798E File Offset: 0x00085B8E
 	internal void SetVRRig(VRRig rig)
 	{
 		this.myRig = rig;

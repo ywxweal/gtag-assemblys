@@ -8,7 +8,7 @@ using UnityEngine;
 // Token: 0x02000819 RID: 2073
 public class KIDUI_AnimatedEllipsis : MonoBehaviour
 {
-	// Token: 0x060032C8 RID: 13000 RVA: 0x000FA5B6 File Offset: 0x000F87B6
+	// Token: 0x060032C9 RID: 13001 RVA: 0x000FA68E File Offset: 0x000F888E
 	private void Awake()
 	{
 		if (this._ellipsisObjects != null)
@@ -18,18 +18,18 @@ public class KIDUI_AnimatedEllipsis : MonoBehaviour
 		this.SetupEllipsis();
 	}
 
-	// Token: 0x060032C9 RID: 13001 RVA: 0x000023F4 File Offset: 0x000005F4
+	// Token: 0x060032CA RID: 13002 RVA: 0x000023F4 File Offset: 0x000005F4
 	private void Start()
 	{
 	}
 
-	// Token: 0x060032CA RID: 13002 RVA: 0x000FA5C7 File Offset: 0x000F87C7
+	// Token: 0x060032CB RID: 13003 RVA: 0x000FA69F File Offset: 0x000F889F
 	private void OnDisable()
 	{
 		this.StopAnimation();
 	}
 
-	// Token: 0x060032CB RID: 13003 RVA: 0x000FA5D0 File Offset: 0x000F87D0
+	// Token: 0x060032CC RID: 13004 RVA: 0x000FA6A8 File Offset: 0x000F88A8
 	private void SetupEllipsis()
 	{
 		if (this._ellipsisRoot == null)
@@ -46,7 +46,7 @@ public class KIDUI_AnimatedEllipsis : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060032CC RID: 13004 RVA: 0x000FA6A6 File Offset: 0x000F88A6
+	// Token: 0x060032CD RID: 13005 RVA: 0x000FA77E File Offset: 0x000F897E
 	private IEnumerator EllipsisAnimation()
 	{
 		int currIndex = 0;
@@ -73,7 +73,7 @@ public class KIDUI_AnimatedEllipsis : MonoBehaviour
 		yield break;
 	}
 
-	// Token: 0x060032CD RID: 13005 RVA: 0x000FA6B5 File Offset: 0x000F88B5
+	// Token: 0x060032CE RID: 13006 RVA: 0x000FA78D File Offset: 0x000F898D
 	private IEnumerator EllipsisAnimation2()
 	{
 		float time = 0f;
@@ -91,7 +91,7 @@ public class KIDUI_AnimatedEllipsis : MonoBehaviour
 		yield break;
 	}
 
-	// Token: 0x060032CE RID: 13006 RVA: 0x000FA6C4 File Offset: 0x000F88C4
+	// Token: 0x060032CF RID: 13007 RVA: 0x000FA79C File Offset: 0x000F899C
 	public async Task StartAnimation()
 	{
 		if (this._ellipsisObjects == null)
@@ -119,7 +119,7 @@ public class KIDUI_AnimatedEllipsis : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060032CF RID: 13007 RVA: 0x000FA708 File Offset: 0x000F8908
+	// Token: 0x060032D0 RID: 13008 RVA: 0x000FA7E0 File Offset: 0x000F89E0
 	public async Task StopAnimation()
 	{
 		this._runAnimation = false;
@@ -129,7 +129,7 @@ public class KIDUI_AnimatedEllipsis : MonoBehaviour
 		this._ellipsisRoot.SetActive(false);
 	}
 
-	// Token: 0x060032D0 RID: 13008 RVA: 0x000FA74C File Offset: 0x000F894C
+	// Token: 0x060032D1 RID: 13009 RVA: 0x000FA824 File Offset: 0x000F8A24
 	public float LerpLoop(float start, float end, float time, float offsetTime, float duration)
 	{
 		float num = (offsetTime - time) % duration / duration;
@@ -137,74 +137,74 @@ public class KIDUI_AnimatedEllipsis : MonoBehaviour
 		return Mathf.Lerp(start, end, num2);
 	}
 
-	// Token: 0x04003987 RID: 14727
+	// Token: 0x04003988 RID: 14728
 	[Header("Ellipsis Spawning")]
 	[SerializeField]
 	private bool _animateOnStart = true;
 
-	// Token: 0x04003988 RID: 14728
+	// Token: 0x04003989 RID: 14729
 	[SerializeField]
 	private int _ellipsisCount = 3;
 
-	// Token: 0x04003989 RID: 14729
+	// Token: 0x0400398A RID: 14730
 	[SerializeField]
 	private GameObject _ellipsisPrefab;
 
-	// Token: 0x0400398A RID: 14730
+	// Token: 0x0400398B RID: 14731
 	[SerializeField]
 	private GameObject _ellipsisRoot;
 
-	// Token: 0x0400398B RID: 14731
+	// Token: 0x0400398C RID: 14732
 	[SerializeField]
 	private List<float> _ellipsisStartingValues = new List<float>();
 
-	// Token: 0x0400398C RID: 14732
+	// Token: 0x0400398D RID: 14733
 	[Header("Animation Settings")]
 	[SerializeField]
 	private bool _shouldLerp;
 
-	// Token: 0x0400398D RID: 14733
+	// Token: 0x0400398E RID: 14734
 	[SerializeField]
 	private AnimationCurve _ellipsisAnimationCurve;
 
-	// Token: 0x0400398E RID: 14734
+	// Token: 0x0400398F RID: 14735
 	[SerializeField]
 	private float _animationSpeedMultiplier = 0.25f;
 
-	// Token: 0x0400398F RID: 14735
+	// Token: 0x04003990 RID: 14736
 	[SerializeField]
 	private float _startingScale = 0.33f;
 
-	// Token: 0x04003990 RID: 14736
+	// Token: 0x04003991 RID: 14737
 	[SerializeField]
 	private float _intermediaryScale = 0.66f;
 
-	// Token: 0x04003991 RID: 14737
+	// Token: 0x04003992 RID: 14738
 	[SerializeField]
 	private float _endScale = 1f;
 
-	// Token: 0x04003992 RID: 14738
+	// Token: 0x04003993 RID: 14739
 	[SerializeField]
 	private float _scaleDuration = 0.25f;
 
-	// Token: 0x04003993 RID: 14739
+	// Token: 0x04003994 RID: 14740
 	[SerializeField]
 	private float _pauseBetweenScale = 0.25f;
 
-	// Token: 0x04003994 RID: 14740
+	// Token: 0x04003995 RID: 14741
 	[SerializeField]
 	private float _pauseBetweenCycles = 0.5f;
 
-	// Token: 0x04003995 RID: 14741
+	// Token: 0x04003996 RID: 14742
 	private bool _runAnimation;
 
-	// Token: 0x04003996 RID: 14742
+	// Token: 0x04003997 RID: 14743
 	private float _nextChange;
 
-	// Token: 0x04003997 RID: 14743
+	// Token: 0x04003998 RID: 14744
 	[TupleElementNames(new string[] { "ellipsis", "startingScale", "currentScale", "lerpT" })]
 	private ValueTuple<GameObject, float, float, float>[] _ellipsisObjects;
 
-	// Token: 0x04003998 RID: 14744
+	// Token: 0x04003999 RID: 14745
 	private Coroutine _animationCoroutine;
 }

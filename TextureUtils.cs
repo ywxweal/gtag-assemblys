@@ -7,7 +7,7 @@ using UnityEngine.Rendering;
 // Token: 0x020009CF RID: 2511
 public static class TextureUtils
 {
-	// Token: 0x06003C22 RID: 15394 RVA: 0x0011F89C File Offset: 0x0011DA9C
+	// Token: 0x06003C23 RID: 15395 RVA: 0x0011F974 File Offset: 0x0011DB74
 	public static Vector4 GetTexelSize(this Texture tex)
 	{
 		if (tex.AsNull<Texture>() == null)
@@ -20,7 +20,7 @@ public static class TextureUtils
 		return new Vector4(1f / num, 1f / num2, num, num2);
 	}
 
-	// Token: 0x06003C23 RID: 15395 RVA: 0x0011F90C File Offset: 0x0011DB0C
+	// Token: 0x06003C24 RID: 15396 RVA: 0x0011F9E4 File Offset: 0x0011DBE4
 	public static Color32 CalcAverageColor(Texture2D tex)
 	{
 		if (tex == null)
@@ -41,7 +41,7 @@ public static class TextureUtils
 		return new Color32((byte)(num2 / num), (byte)(num3 / num), (byte)(num4 / num), byte.MaxValue);
 	}
 
-	// Token: 0x06003C24 RID: 15396 RVA: 0x0011F998 File Offset: 0x0011DB98
+	// Token: 0x06003C25 RID: 15397 RVA: 0x0011FA70 File Offset: 0x0011DC70
 	public static void SaveToFile(Texture source, string filePath, int width, int height, SaveTextureFileFormat fileFormat = SaveTextureFileFormat.PNG, int jpgQuality = 95, bool asynchronous = true, Action<bool> done = null)
 	{
 		if (source is Texture2D || source is RenderTexture)
@@ -98,7 +98,7 @@ public static class TextureUtils
 		done2(false);
 	}
 
-	// Token: 0x06003C25 RID: 15397 RVA: 0x0011FA90 File Offset: 0x0011DC90
+	// Token: 0x06003C26 RID: 15398 RVA: 0x0011FB68 File Offset: 0x0011DD68
 	public static Texture2D CreateCopy(Texture2D tex)
 	{
 		if (tex == null)

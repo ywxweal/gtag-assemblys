@@ -5,7 +5,7 @@ using UnityEngine;
 // Token: 0x020003E2 RID: 994
 public class BetaChecker : MonoBehaviour
 {
-	// Token: 0x06001800 RID: 6144 RVA: 0x00074F03 File Offset: 0x00073103
+	// Token: 0x06001800 RID: 6144 RVA: 0x00074F23 File Offset: 0x00073123
 	private void Start()
 	{
 		if (PlayerPrefs.GetString("CheckedBox2") == "true")
@@ -15,7 +15,7 @@ public class BetaChecker : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001801 RID: 6145 RVA: 0x00074F30 File Offset: 0x00073130
+	// Token: 0x06001801 RID: 6145 RVA: 0x00074F50 File Offset: 0x00073150
 	private void Update()
 	{
 		if (!this.doNotEnable)

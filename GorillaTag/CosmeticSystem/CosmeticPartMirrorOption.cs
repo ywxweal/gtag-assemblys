@@ -7,10 +7,10 @@ namespace GorillaTag.CosmeticSystem
 	[Serializable]
 	public struct CosmeticPartMirrorOption
 	{
-		// Token: 0x0400595A RID: 22874
+		// Token: 0x0400595B RID: 22875
 		public ECosmeticPartMirrorAxis axis;
 
-		// Token: 0x0400595B RID: 22875
+		// Token: 0x0400595C RID: 22876
 		[Tooltip("This will multiply the local scale for the selected axis by -1.")]
 		public bool negativeScale;
 	}

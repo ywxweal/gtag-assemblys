@@ -4,7 +4,7 @@ using UnityEngine;
 // Token: 0x0200044C RID: 1100
 public class CosmeticCategoryButton : CosmeticButton
 {
-	// Token: 0x06001B28 RID: 6952 RVA: 0x0008554E File Offset: 0x0008374E
+	// Token: 0x06001B28 RID: 6952 RVA: 0x0008556E File Offset: 0x0008376E
 	public void SetIcon(Sprite sprite)
 	{
 		this.equippedLeftIcon.enabled = false;
@@ -13,7 +13,7 @@ public class CosmeticCategoryButton : CosmeticButton
 		this.equippedIcon.sprite = sprite;
 	}
 
-	// Token: 0x06001B29 RID: 6953 RVA: 0x00085588 File Offset: 0x00083788
+	// Token: 0x06001B29 RID: 6953 RVA: 0x000855A8 File Offset: 0x000837A8
 	public void SetDualIcon(Sprite leftSprite, Sprite rightSprite)
 	{
 		this.equippedLeftIcon.enabled = leftSprite != null;
@@ -23,7 +23,7 @@ public class CosmeticCategoryButton : CosmeticButton
 		this.equippedRightIcon.sprite = rightSprite;
 	}
 
-	// Token: 0x06001B2A RID: 6954 RVA: 0x000855E0 File Offset: 0x000837E0
+	// Token: 0x06001B2A RID: 6954 RVA: 0x00085600 File Offset: 0x00083800
 	public override void UpdatePosition()
 	{
 		base.UpdatePosition();

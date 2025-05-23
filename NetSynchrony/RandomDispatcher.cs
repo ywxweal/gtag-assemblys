@@ -9,11 +9,11 @@ namespace NetSynchrony
 	public class RandomDispatcher : ScriptableObject
 	{
 		// Token: 0x14000094 RID: 148
-		// (add) Token: 0x06005007 RID: 20487 RVA: 0x0017D4E8 File Offset: 0x0017B6E8
-		// (remove) Token: 0x06005008 RID: 20488 RVA: 0x0017D520 File Offset: 0x0017B720
+		// (add) Token: 0x06005008 RID: 20488 RVA: 0x0017D5C0 File Offset: 0x0017B7C0
+		// (remove) Token: 0x06005009 RID: 20489 RVA: 0x0017D5F8 File Offset: 0x0017B7F8
 		public event RandomDispatcher.RandomDispatcherEvent Dispatch;
 
-		// Token: 0x06005009 RID: 20489 RVA: 0x0017D558 File Offset: 0x0017B758
+		// Token: 0x0600500A RID: 20490 RVA: 0x0017D630 File Offset: 0x0017B830
 		public void Init(double seconds)
 		{
 			seconds %= (double)(this.totalMinutes * 60f);
@@ -35,7 +35,7 @@ namespace NetSynchrony
 			Random.InitState((int)DateTime.Now.Ticks);
 		}
 
-		// Token: 0x0600500A RID: 20490 RVA: 0x0017D5FC File Offset: 0x0017B7FC
+		// Token: 0x0600500B RID: 20491 RVA: 0x0017D6D4 File Offset: 0x0017B8D4
 		public void Sync(double seconds)
 		{
 			seconds %= (double)(this.totalMinutes * 60f);
@@ -49,7 +49,7 @@ namespace NetSynchrony
 			}
 		}
 
-		// Token: 0x0600500B RID: 20491 RVA: 0x0017D650 File Offset: 0x0017B850
+		// Token: 0x0600500C RID: 20492 RVA: 0x0017D728 File Offset: 0x0017B928
 		public void Tick(double seconds)
 		{
 			seconds %= (double)(this.totalMinutes * 60f);
@@ -63,26 +63,26 @@ namespace NetSynchrony
 			}
 		}
 
-		// Token: 0x04005302 RID: 21250
+		// Token: 0x04005303 RID: 21251
 		[SerializeField]
 		private float minWaitTime = 1f;
 
-		// Token: 0x04005303 RID: 21251
+		// Token: 0x04005304 RID: 21252
 		[SerializeField]
 		private float maxWaitTime = 10f;
 
-		// Token: 0x04005304 RID: 21252
+		// Token: 0x04005305 RID: 21253
 		[SerializeField]
 		private float totalMinutes = 60f;
 
-		// Token: 0x04005305 RID: 21253
+		// Token: 0x04005306 RID: 21254
 		private List<float> dispatchTimes;
 
-		// Token: 0x04005306 RID: 21254
+		// Token: 0x04005307 RID: 21255
 		private int index = -1;
 
 		// Token: 0x02000C9C RID: 3228
-		// (Invoke) Token: 0x0600500E RID: 20494
+		// (Invoke) Token: 0x0600500F RID: 20495
 		public delegate void RandomDispatcherEvent(RandomDispatcher randomDispatcher);
 	}
 }

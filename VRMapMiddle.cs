@@ -6,7 +6,7 @@ using UnityEngine.XR;
 [Serializable]
 public class VRMapMiddle : VRMap
 {
-	// Token: 0x060017C3 RID: 6083 RVA: 0x00073D2D File Offset: 0x00071F2D
+	// Token: 0x060017C3 RID: 6083 RVA: 0x00073D4D File Offset: 0x00071F4D
 	public override void MapMyFinger(float lerpValue)
 	{
 		this.calcT = 0f;
@@ -15,7 +15,7 @@ public class VRMapMiddle : VRMap
 		this.LerpFinger(lerpValue, false);
 	}
 
-	// Token: 0x060017C4 RID: 6084 RVA: 0x00073D68 File Offset: 0x00071F68
+	// Token: 0x060017C4 RID: 6084 RVA: 0x00073D88 File Offset: 0x00071F88
 	public override void LerpFinger(float lerpValue, bool isOther)
 	{
 		if (isOther)

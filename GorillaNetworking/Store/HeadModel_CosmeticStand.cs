@@ -10,7 +10,7 @@ namespace GorillaNetworking.Store
 	public class HeadModel_CosmeticStand : HeadModel
 	{
 		// Token: 0x170007E8 RID: 2024
-		// (get) Token: 0x06004F8D RID: 20365 RVA: 0x0017B16E File Offset: 0x0017936E
+		// (get) Token: 0x06004F8E RID: 20366 RVA: 0x0017B246 File Offset: 0x00179446
 		private string mountID
 		{
 			get
@@ -19,7 +19,7 @@ namespace GorillaNetworking.Store
 			}
 		}
 
-		// Token: 0x06004F8E RID: 20366 RVA: 0x0017B18C File Offset: 0x0017938C
+		// Token: 0x06004F8F RID: 20367 RVA: 0x0017B264 File Offset: 0x00179464
 		public void LoadCosmeticParts(CosmeticSO cosmeticInfo, bool forRightSide = false)
 		{
 			this.ClearManuallySpawnedCosmeticParts();
@@ -33,7 +33,7 @@ namespace GorillaNetworking.Store
 			this.HandleLoadCosmeticParts(cosmeticInfo, forRightSide);
 		}
 
-		// Token: 0x06004F8F RID: 20367 RVA: 0x0017B1DC File Offset: 0x001793DC
+		// Token: 0x06004F90 RID: 20368 RVA: 0x0017B2B4 File Offset: 0x001794B4
 		private void HandleLoadCosmeticParts(CosmeticSO cosmeticInfo, bool forRightSide)
 		{
 			if (cosmeticInfo.info.category == CosmeticsController.CosmeticCategory.Set)
@@ -125,13 +125,13 @@ namespace GorillaNetworking.Store
 			}
 		}
 
-		// Token: 0x06004F90 RID: 20368 RVA: 0x0017B469 File Offset: 0x00179669
+		// Token: 0x06004F91 RID: 20369 RVA: 0x0017B541 File Offset: 0x00179741
 		public void SetStandType(HeadModel_CosmeticStand.BustType newBustType)
 		{
 			this.bustType = newBustType;
 		}
 
-		// Token: 0x06004F91 RID: 20369 RVA: 0x0017B474 File Offset: 0x00179674
+		// Token: 0x06004F92 RID: 20370 RVA: 0x0017B54C File Offset: 0x0017974C
 		private void PositionWardRobeItems(GameObject instantiateEdObject, HeadModel._CosmeticPartLoadInfo partLoadInfo)
 		{
 			Transform transform = instantiateEdObject.transform.FindChildRecursive(this.mountID);
@@ -154,7 +154,7 @@ namespace GorillaNetworking.Store
 			this.PositionWithWardRobeOffsets(partLoadInfo);
 		}
 
-		// Token: 0x06004F92 RID: 20370 RVA: 0x0017B548 File Offset: 0x00179748
+		// Token: 0x06004F93 RID: 20371 RVA: 0x0017B620 File Offset: 0x00179820
 		private void PositionWithWardRobeOffsets(HeadModel._CosmeticPartLoadInfo partLoadInfo)
 		{
 			Debug.Log("Dynamic Cosmetics - Mount Not Found: " + this.mountID);
@@ -163,7 +163,7 @@ namespace GorillaNetworking.Store
 			partLoadInfo.xform.localScale = partLoadInfo.attachInfo.offset.scale;
 		}
 
-		// Token: 0x06004F93 RID: 20371 RVA: 0x0017B5BC File Offset: 0x001797BC
+		// Token: 0x06004F94 RID: 20372 RVA: 0x0017B694 File Offset: 0x00179894
 		public void ClearManuallySpawnedCosmeticParts()
 		{
 			foreach (GameObject gameObject in this._manuallySpawnedCosmeticParts)
@@ -173,7 +173,7 @@ namespace GorillaNetworking.Store
 			this._manuallySpawnedCosmeticParts.Clear();
 		}
 
-		// Token: 0x06004F94 RID: 20372 RVA: 0x0017B618 File Offset: 0x00179818
+		// Token: 0x06004F95 RID: 20373 RVA: 0x0017B6F0 File Offset: 0x001798F0
 		public void ClearCosmetics()
 		{
 			for (int i = base.transform.childCount - 1; i >= 0; i--)
@@ -182,49 +182,49 @@ namespace GorillaNetworking.Store
 			}
 		}
 
-		// Token: 0x06004F95 RID: 20373 RVA: 0x00045F91 File Offset: 0x00044191
+		// Token: 0x06004F96 RID: 20374 RVA: 0x00045F91 File Offset: 0x00044191
 		private GameObject LoadAndInstantiatePrefab(GTAssetRef<GameObject> prefabAssetRef, Transform parent)
 		{
 			return null;
 		}
 
-		// Token: 0x06004F96 RID: 20374 RVA: 0x000023F4 File Offset: 0x000005F4
+		// Token: 0x06004F97 RID: 20375 RVA: 0x000023F4 File Offset: 0x000005F4
 		public void UpdateCosmeticsMountPositions(CosmeticSO findCosmeticInAllCosmeticsArraySO)
 		{
 		}
 
-		// Token: 0x040052A0 RID: 21152
+		// Token: 0x040052A1 RID: 21153
 		public HeadModel_CosmeticStand.BustType bustType = HeadModel_CosmeticStand.BustType.JewelryBox;
 
-		// Token: 0x040052A1 RID: 21153
+		// Token: 0x040052A2 RID: 21154
 		[SerializeField]
 		private List<GameObject> _manuallySpawnedCosmeticParts = new List<GameObject>();
 
-		// Token: 0x040052A2 RID: 21154
+		// Token: 0x040052A3 RID: 21155
 		public GameObject mannequin;
 
 		// Token: 0x02000C89 RID: 3209
 		public enum BustType
 		{
-			// Token: 0x040052A4 RID: 21156
-			Disabled,
 			// Token: 0x040052A5 RID: 21157
-			GorillaHead,
+			Disabled,
 			// Token: 0x040052A6 RID: 21158
-			GorillaTorso,
+			GorillaHead,
 			// Token: 0x040052A7 RID: 21159
-			GorillaTorsoPost,
+			GorillaTorso,
 			// Token: 0x040052A8 RID: 21160
-			GorillaMannequin,
+			GorillaTorsoPost,
 			// Token: 0x040052A9 RID: 21161
-			GuitarStand,
+			GorillaMannequin,
 			// Token: 0x040052AA RID: 21162
-			JewelryBox,
+			GuitarStand,
 			// Token: 0x040052AB RID: 21163
-			Table,
+			JewelryBox,
 			// Token: 0x040052AC RID: 21164
-			PinDisplay,
+			Table,
 			// Token: 0x040052AD RID: 21165
+			PinDisplay,
+			// Token: 0x040052AE RID: 21166
 			TagEffectDisplay
 		}
 	}

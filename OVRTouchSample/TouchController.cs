@@ -6,7 +6,7 @@ namespace OVRTouchSample
 	// Token: 0x02000C0A RID: 3082
 	public class TouchController : MonoBehaviour
 	{
-		// Token: 0x06004C26 RID: 19494 RVA: 0x00168BC8 File Offset: 0x00166DC8
+		// Token: 0x06004C27 RID: 19495 RVA: 0x00168CA0 File Offset: 0x00166EA0
 		private void Update()
 		{
 			this.m_animator.SetFloat("Button 1", OVRInput.Get(OVRInput.Button.One, this.m_controller) ? 1f : 0f);
@@ -19,7 +19,7 @@ namespace OVRTouchSample
 			OVRManager.InputFocusLost += this.OnInputFocusLost;
 		}
 
-		// Token: 0x06004C27 RID: 19495 RVA: 0x00168CC5 File Offset: 0x00166EC5
+		// Token: 0x06004C28 RID: 19496 RVA: 0x00168D9D File Offset: 0x00166F9D
 		private void OnInputFocusLost()
 		{
 			if (base.gameObject.activeInHierarchy)
@@ -29,7 +29,7 @@ namespace OVRTouchSample
 			}
 		}
 
-		// Token: 0x06004C28 RID: 19496 RVA: 0x00168CE7 File Offset: 0x00166EE7
+		// Token: 0x06004C29 RID: 19497 RVA: 0x00168DBF File Offset: 0x00166FBF
 		private void OnInputFocusAcquired()
 		{
 			if (this.m_restoreOnInputAcquired)
@@ -39,15 +39,15 @@ namespace OVRTouchSample
 			}
 		}
 
-		// Token: 0x04004EF8 RID: 20216
+		// Token: 0x04004EF9 RID: 20217
 		[SerializeField]
 		private OVRInput.Controller m_controller;
 
-		// Token: 0x04004EF9 RID: 20217
+		// Token: 0x04004EFA RID: 20218
 		[SerializeField]
 		private Animator m_animator;
 
-		// Token: 0x04004EFA RID: 20218
+		// Token: 0x04004EFB RID: 20219
 		private bool m_restoreOnInputAcquired;
 	}
 }

@@ -5,7 +5,7 @@ using UnityEngine.Events;
 // Token: 0x020009F6 RID: 2550
 public class TimeEvent : MonoBehaviour
 {
-	// Token: 0x06003D00 RID: 15616 RVA: 0x00121EEB File Offset: 0x001200EB
+	// Token: 0x06003D01 RID: 15617 RVA: 0x00121FC3 File Offset: 0x001201C3
 	protected void StartEvent()
 	{
 		this._ongoing = true;
@@ -17,7 +17,7 @@ public class TimeEvent : MonoBehaviour
 		unityEvent.Invoke();
 	}
 
-	// Token: 0x06003D01 RID: 15617 RVA: 0x00121F04 File Offset: 0x00120104
+	// Token: 0x06003D02 RID: 15618 RVA: 0x00121FDC File Offset: 0x001201DC
 	protected void StopEvent()
 	{
 		this._ongoing = false;
@@ -29,13 +29,13 @@ public class TimeEvent : MonoBehaviour
 		unityEvent.Invoke();
 	}
 
-	// Token: 0x040040BF RID: 16575
+	// Token: 0x040040C0 RID: 16576
 	public UnityEvent onEventStart;
 
-	// Token: 0x040040C0 RID: 16576
+	// Token: 0x040040C1 RID: 16577
 	public UnityEvent onEventStop;
 
-	// Token: 0x040040C1 RID: 16577
+	// Token: 0x040040C2 RID: 16578
 	[SerializeField]
 	protected bool _ongoing;
 }

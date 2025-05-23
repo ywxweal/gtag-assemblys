@@ -9,7 +9,7 @@ using UnityEngine.XR;
 // Token: 0x0200041A RID: 1050
 public class TransferrableBall : TransferrableObject
 {
-	// Token: 0x060019AE RID: 6574 RVA: 0x0007C738 File Offset: 0x0007A938
+	// Token: 0x060019AE RID: 6574 RVA: 0x0007C758 File Offset: 0x0007A958
 	public override void TriggeredLateUpdate()
 	{
 		base.TriggeredLateUpdate();
@@ -187,7 +187,7 @@ public class TransferrableBall : TransferrableObject
 		}
 	}
 
-	// Token: 0x060019AF RID: 6575 RVA: 0x0007D090 File Offset: 0x0007B290
+	// Token: 0x060019AF RID: 6575 RVA: 0x0007D0B0 File Offset: 0x0007B2B0
 	private void TakeOwnershipAndEnablePhysics()
 	{
 		this.currentState = TransferrableObject.PositionState.Dropped;
@@ -204,7 +204,7 @@ public class TransferrableBall : TransferrableObject
 		}
 	}
 
-	// Token: 0x060019B0 RID: 6576 RVA: 0x0007D114 File Offset: 0x0007B314
+	// Token: 0x060019B0 RID: 6576 RVA: 0x0007D134 File Offset: 0x0007B334
 	private bool CheckCollisionWithHand(Vector3 handCenter, Quaternion handRotation, Vector3 palmForward, out Vector3 hitPoint, out Vector3 hitNormal, out float penetrationDist)
 	{
 		Vector3 position = base.transform.position;
@@ -235,7 +235,7 @@ public class TransferrableBall : TransferrableObject
 		return flag;
 	}
 
-	// Token: 0x060019B1 RID: 6577 RVA: 0x0007D284 File Offset: 0x0007B484
+	// Token: 0x060019B1 RID: 6577 RVA: 0x0007D2A4 File Offset: 0x0007B4A4
 	private bool CheckCollisionWithHead(SphereCollider headCollider, out Vector3 hitPoint, out Vector3 hitNormal, out float penetrationDist)
 	{
 		Vector3 vector = base.transform.position - headCollider.transform.position;
@@ -255,7 +255,7 @@ public class TransferrableBall : TransferrableObject
 		return false;
 	}
 
-	// Token: 0x060019B2 RID: 6578 RVA: 0x0007D32C File Offset: 0x0007B52C
+	// Token: 0x060019B2 RID: 6578 RVA: 0x0007D34C File Offset: 0x0007B54C
 	private bool ApplyHit(Vector3 hitPoint, Vector3 hitDir, float hitSpeed)
 	{
 		bool flag = false;
@@ -309,7 +309,7 @@ public class TransferrableBall : TransferrableObject
 		return flag;
 	}
 
-	// Token: 0x060019B3 RID: 6579 RVA: 0x0007D580 File Offset: 0x0007B780
+	// Token: 0x060019B3 RID: 6579 RVA: 0x0007D5A0 File Offset: 0x0007B7A0
 	private void PlayHitSound(float hitSpeed)
 	{
 		float num = Mathf.InverseLerp(this.hitSpeedToAudioMinMax.x, this.hitSpeedToAudioMinMax.y, hitSpeed);
@@ -323,7 +323,7 @@ public class TransferrableBall : TransferrableObject
 		}
 	}
 
-	// Token: 0x060019B4 RID: 6580 RVA: 0x0007D630 File Offset: 0x0007B830
+	// Token: 0x060019B4 RID: 6580 RVA: 0x0007D650 File Offset: 0x0007B850
 	private void FixedUpdate()
 	{
 		this.collisionContactsCount = 0;
@@ -331,7 +331,7 @@ public class TransferrableBall : TransferrableObject
 		this.rigidbodyInstance.AddForce(-Physics.gravity * this.gravityCounterAmount, ForceMode.Acceleration);
 	}
 
-	// Token: 0x060019B5 RID: 6581 RVA: 0x0007D664 File Offset: 0x0007B864
+	// Token: 0x060019B5 RID: 6581 RVA: 0x0007D684 File Offset: 0x0007B884
 	private void OnTriggerEnter(Collider other)
 	{
 		GorillaHandClimber component = other.GetComponent<GorillaHandClimber>();
@@ -352,7 +352,7 @@ public class TransferrableBall : TransferrableObject
 		this.handClimberMap.Add(component, 1);
 	}
 
-	// Token: 0x060019B6 RID: 6582 RVA: 0x0007D6D0 File Offset: 0x0007B8D0
+	// Token: 0x060019B6 RID: 6582 RVA: 0x0007D6F0 File Offset: 0x0007B8F0
 	private void OnTriggerExit(Collider other)
 	{
 		GorillaHandClimber component = other.GetComponent<GorillaHandClimber>();
@@ -371,13 +371,13 @@ public class TransferrableBall : TransferrableObject
 		}
 	}
 
-	// Token: 0x060019B7 RID: 6583 RVA: 0x0007D728 File Offset: 0x0007B928
+	// Token: 0x060019B7 RID: 6583 RVA: 0x0007D748 File Offset: 0x0007B948
 	private void OnCollisionEnter(Collision collision)
 	{
 		this.PlayHitSound(collision.relativeVelocity.magnitude);
 	}
 
-	// Token: 0x060019B8 RID: 6584 RVA: 0x0007D74C File Offset: 0x0007B94C
+	// Token: 0x060019B8 RID: 6584 RVA: 0x0007D76C File Offset: 0x0007B96C
 	private void OnCollisionStay(Collision collision)
 	{
 		this.collisionContactsCount = collision.GetContacts(this.collisionContacts);

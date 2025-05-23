@@ -5,7 +5,7 @@ using UnityEngine;
 // Token: 0x02000773 RID: 1907
 public class ObjectGroup : MonoBehaviour
 {
-	// Token: 0x06002F86 RID: 12166 RVA: 0x000ECBB8 File Offset: 0x000EADB8
+	// Token: 0x06002F87 RID: 12167 RVA: 0x000ECC5C File Offset: 0x000EAE5C
 	private void OnEnable()
 	{
 		if (this.syncWithGroupState)
@@ -14,7 +14,7 @@ public class ObjectGroup : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06002F87 RID: 12167 RVA: 0x000ECBC9 File Offset: 0x000EADC9
+	// Token: 0x06002F88 RID: 12168 RVA: 0x000ECC6D File Offset: 0x000EAE6D
 	private void OnDisable()
 	{
 		if (this.syncWithGroupState)
@@ -23,7 +23,7 @@ public class ObjectGroup : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06002F88 RID: 12168 RVA: 0x000ECBDC File Offset: 0x000EADDC
+	// Token: 0x06002F89 RID: 12169 RVA: 0x000ECC80 File Offset: 0x000EAE80
 	public void SetObjectStates(bool active)
 	{
 		int count = this.gameObjects.Count;
@@ -64,18 +64,18 @@ public class ObjectGroup : MonoBehaviour
 		}
 	}
 
-	// Token: 0x04003610 RID: 13840
+	// Token: 0x04003612 RID: 13842
 	public List<GameObject> gameObjects = new List<GameObject>(16);
 
-	// Token: 0x04003611 RID: 13841
+	// Token: 0x04003613 RID: 13843
 	public List<Behaviour> behaviours = new List<Behaviour>(16);
 
-	// Token: 0x04003612 RID: 13842
+	// Token: 0x04003614 RID: 13844
 	public List<Renderer> renderers = new List<Renderer>(16);
 
-	// Token: 0x04003613 RID: 13843
+	// Token: 0x04003615 RID: 13845
 	public List<Collider> colliders = new List<Collider>(16);
 
-	// Token: 0x04003614 RID: 13844
+	// Token: 0x04003616 RID: 13846
 	public bool syncWithGroupState = true;
 }

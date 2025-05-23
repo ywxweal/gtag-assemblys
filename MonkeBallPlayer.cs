@@ -4,7 +4,7 @@ using UnityEngine;
 // Token: 0x020004C6 RID: 1222
 public class MonkeBallPlayer : MonoBehaviour
 {
-	// Token: 0x06001DAC RID: 7596 RVA: 0x000908BF File Offset: 0x0008EABF
+	// Token: 0x06001DAC RID: 7596 RVA: 0x000908DF File Offset: 0x0008EADF
 	private void Awake()
 	{
 		if (this.gamePlayer == null)

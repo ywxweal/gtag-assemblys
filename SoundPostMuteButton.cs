@@ -3,7 +3,7 @@
 // Token: 0x020006F4 RID: 1780
 public class SoundPostMuteButton : GorillaPressableButton
 {
-	// Token: 0x06002C56 RID: 11350 RVA: 0x000DABD4 File Offset: 0x000D8DD4
+	// Token: 0x06002C57 RID: 11351 RVA: 0x000DAC78 File Offset: 0x000D8E78
 	public override void ButtonActivation()
 	{
 		base.ButtonActivation();
@@ -14,6 +14,6 @@ public class SoundPostMuteButton : GorillaPressableButton
 		}
 	}
 
-	// Token: 0x040032A0 RID: 12960
+	// Token: 0x040032A2 RID: 12962
 	public SynchedMusicController[] musicControllers;
 }

@@ -5,7 +5,7 @@ using UnityEngine;
 // Token: 0x02000438 RID: 1080
 public class PurchaseCurrencyButton : GorillaPressableButton
 {
-	// Token: 0x06001AAA RID: 6826 RVA: 0x00082C1C File Offset: 0x00080E1C
+	// Token: 0x06001AAA RID: 6826 RVA: 0x00082C3C File Offset: 0x00080E3C
 	public override void ButtonActivation()
 	{
 		base.ButtonActivation();
@@ -13,7 +13,7 @@ public class PurchaseCurrencyButton : GorillaPressableButton
 		base.StartCoroutine(this.ButtonColorUpdate());
 	}
 
-	// Token: 0x06001AAB RID: 6827 RVA: 0x00082C43 File Offset: 0x00080E43
+	// Token: 0x06001AAB RID: 6827 RVA: 0x00082C63 File Offset: 0x00080E63
 	private IEnumerator ButtonColorUpdate()
 	{
 		this.buttonRenderer.material = this.pressedMaterial;

@@ -8,13 +8,13 @@ using UnityEngine;
 public class MoodRing : MonoBehaviour, ISpawnable
 {
 	// Token: 0x170002FB RID: 763
-	// (get) Token: 0x06001B86 RID: 7046 RVA: 0x0008721B File Offset: 0x0008541B
-	// (set) Token: 0x06001B87 RID: 7047 RVA: 0x00087223 File Offset: 0x00085423
+	// (get) Token: 0x06001B86 RID: 7046 RVA: 0x0008723B File Offset: 0x0008543B
+	// (set) Token: 0x06001B87 RID: 7047 RVA: 0x00087243 File Offset: 0x00085443
 	bool ISpawnable.IsSpawned { get; set; }
 
 	// Token: 0x170002FC RID: 764
-	// (get) Token: 0x06001B88 RID: 7048 RVA: 0x0008722C File Offset: 0x0008542C
-	// (set) Token: 0x06001B89 RID: 7049 RVA: 0x00087234 File Offset: 0x00085434
+	// (get) Token: 0x06001B88 RID: 7048 RVA: 0x0008724C File Offset: 0x0008544C
+	// (set) Token: 0x06001B89 RID: 7049 RVA: 0x00087254 File Offset: 0x00085454
 	ECosmeticSelectSide ISpawnable.CosmeticSelectedSide { get; set; }
 
 	// Token: 0x06001B8A RID: 7050 RVA: 0x000023F4 File Offset: 0x000005F4
@@ -22,13 +22,13 @@ public class MoodRing : MonoBehaviour, ISpawnable
 	{
 	}
 
-	// Token: 0x06001B8B RID: 7051 RVA: 0x0008723D File Offset: 0x0008543D
+	// Token: 0x06001B8B RID: 7051 RVA: 0x0008725D File Offset: 0x0008545D
 	void ISpawnable.OnSpawn(VRRig rig)
 	{
 		this.myRig = rig;
 	}
 
-	// Token: 0x06001B8C RID: 7052 RVA: 0x00087248 File Offset: 0x00085448
+	// Token: 0x06001B8C RID: 7052 RVA: 0x00087268 File Offset: 0x00085468
 	private void Update()
 	{
 		if ((this.attachedToLeftHand ? this.myRig.leftIndex.calcT : this.myRig.rightIndex.calcT) > 0.5f)
@@ -65,7 +65,7 @@ public class MoodRing : MonoBehaviour, ISpawnable
 		}
 	}
 
-	// Token: 0x06001B8D RID: 7053 RVA: 0x0008742C File Offset: 0x0008562C
+	// Token: 0x06001B8D RID: 7053 RVA: 0x0008744C File Offset: 0x0008564C
 	private void RainbowCycle(ref float r, ref float g, ref float b)
 	{
 		float num = this.furCycleSpeed * Time.deltaTime;

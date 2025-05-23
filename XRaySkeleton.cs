@@ -4,7 +4,7 @@ using UnityEngine;
 // Token: 0x02000475 RID: 1141
 public class XRaySkeleton : SyncToPlayerColor
 {
-	// Token: 0x06001C16 RID: 7190 RVA: 0x00089F5C File Offset: 0x0008815C
+	// Token: 0x06001C16 RID: 7190 RVA: 0x00089F7C File Offset: 0x0008817C
 	protected override void Awake()
 	{
 		base.Awake();
@@ -19,14 +19,14 @@ public class XRaySkeleton : SyncToPlayerColor
 		}
 	}
 
-	// Token: 0x06001C17 RID: 7191 RVA: 0x00089FCD File Offset: 0x000881CD
+	// Token: 0x06001C17 RID: 7191 RVA: 0x00089FED File Offset: 0x000881ED
 	public void SetMaterialIndex(int index)
 	{
 		this.renderer.sharedMaterial = this.tagMaterials[index];
 		this._lastMatIndex = index;
 	}
 
-	// Token: 0x06001C18 RID: 7192 RVA: 0x00089FE9 File Offset: 0x000881E9
+	// Token: 0x06001C18 RID: 7192 RVA: 0x0008A009 File Offset: 0x00088209
 	private void Setup()
 	{
 		this.colorPropertiesToSync = new ShaderHashId[]
@@ -36,7 +36,7 @@ public class XRaySkeleton : SyncToPlayerColor
 		};
 	}
 
-	// Token: 0x06001C19 RID: 7193 RVA: 0x0008A010 File Offset: 0x00088210
+	// Token: 0x06001C19 RID: 7193 RVA: 0x0008A030 File Offset: 0x00088230
 	public override void UpdateColor(Color color)
 	{
 		if (this._lastMatIndex != 0)

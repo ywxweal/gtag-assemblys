@@ -6,18 +6,18 @@ namespace com.AnotherAxiom.MonkeArcade.Joust
 	// Token: 0x02000CB1 RID: 3249
 	public class JoustGame : ArcadeGame
 	{
-		// Token: 0x0600504F RID: 20559 RVA: 0x0017FC8E File Offset: 0x0017DE8E
+		// Token: 0x06005050 RID: 20560 RVA: 0x0017FD66 File Offset: 0x0017DF66
 		public override byte[] GetNetworkState()
 		{
 			return new byte[0];
 		}
 
-		// Token: 0x06005050 RID: 20560 RVA: 0x000023F4 File Offset: 0x000005F4
+		// Token: 0x06005051 RID: 20561 RVA: 0x000023F4 File Offset: 0x000005F4
 		public override void SetNetworkState(byte[] obj)
 		{
 		}
 
-		// Token: 0x06005051 RID: 20561 RVA: 0x0017FC96 File Offset: 0x0017DE96
+		// Token: 0x06005052 RID: 20562 RVA: 0x0017FD6E File Offset: 0x0017DF6E
 		protected override void ButtonDown(int player, ArcadeButtons button)
 		{
 			if (button != ArcadeButtons.GRAB)
@@ -34,7 +34,7 @@ namespace com.AnotherAxiom.MonkeArcade.Joust
 			}
 		}
 
-		// Token: 0x06005052 RID: 20562 RVA: 0x0017FCC5 File Offset: 0x0017DEC5
+		// Token: 0x06005053 RID: 20563 RVA: 0x0017FD9D File Offset: 0x0017DF9D
 		protected override void ButtonUp(int player, ArcadeButtons button)
 		{
 			if (button == ArcadeButtons.GRAB)
@@ -43,7 +43,7 @@ namespace com.AnotherAxiom.MonkeArcade.Joust
 			}
 		}
 
-		// Token: 0x06005053 RID: 20563 RVA: 0x0017FCE0 File Offset: 0x0017DEE0
+		// Token: 0x06005054 RID: 20564 RVA: 0x0017FDB8 File Offset: 0x0017DFB8
 		private void Start()
 		{
 			for (int i = 0; i < this.joustPlayers.Length; i++)
@@ -52,7 +52,7 @@ namespace com.AnotherAxiom.MonkeArcade.Joust
 			}
 		}
 
-		// Token: 0x06005054 RID: 20564 RVA: 0x0017FD14 File Offset: 0x0017DF14
+		// Token: 0x06005055 RID: 20565 RVA: 0x0017FDEC File Offset: 0x0017DFEC
 		private void Update()
 		{
 			for (int i = 0; i < this.joustPlayers.Length; i++)
@@ -65,12 +65,12 @@ namespace com.AnotherAxiom.MonkeArcade.Joust
 			}
 		}
 
-		// Token: 0x06005055 RID: 20565 RVA: 0x000023F4 File Offset: 0x000005F4
+		// Token: 0x06005056 RID: 20566 RVA: 0x000023F4 File Offset: 0x000005F4
 		public override void OnTimeout()
 		{
 		}
 
-		// Token: 0x04005381 RID: 21377
+		// Token: 0x04005382 RID: 21378
 		[SerializeField]
 		private JoustPlayer[] joustPlayers;
 	}

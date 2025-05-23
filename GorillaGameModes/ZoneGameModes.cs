@@ -6,13 +6,13 @@ namespace GorillaGameModes
 	[Serializable]
 	public struct ZoneGameModes
 	{
-		// Token: 0x040044B5 RID: 17589
+		// Token: 0x040044B6 RID: 17590
 		public GTZone[] zone;
 
-		// Token: 0x040044B6 RID: 17590
+		// Token: 0x040044B7 RID: 17591
 		public GameModeType[] modes;
 
-		// Token: 0x040044B7 RID: 17591
+		// Token: 0x040044B8 RID: 17592
 		public GameModeType[] privateModes;
 	}
 }

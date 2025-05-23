@@ -6,7 +6,7 @@ namespace GorillaNetworking
 	// Token: 0x02000C28 RID: 3112
 	public class SafeAccountObjectSwapper : MonoBehaviour
 	{
-		// Token: 0x06004D12 RID: 19730 RVA: 0x0016EF52 File Offset: 0x0016D152
+		// Token: 0x06004D13 RID: 19731 RVA: 0x0016F02A File Offset: 0x0016D22A
 		public void Start()
 		{
 			if (PlayFabAuthenticator.instance.GetSafety())
@@ -17,7 +17,7 @@ namespace GorillaNetworking
 			instance.OnSafetyUpdate = (Action<bool>)Delegate.Combine(instance.OnSafetyUpdate, new Action<bool>(this.SafeAccountUpdated));
 		}
 
-		// Token: 0x06004D13 RID: 19731 RVA: 0x0016EF90 File Offset: 0x0016D190
+		// Token: 0x06004D14 RID: 19732 RVA: 0x0016F068 File Offset: 0x0016D268
 		public void SafeAccountUpdated(bool isSafety)
 		{
 			if (isSafety)
@@ -26,7 +26,7 @@ namespace GorillaNetworking
 			}
 		}
 
-		// Token: 0x06004D14 RID: 19732 RVA: 0x0016EF9C File Offset: 0x0016D19C
+		// Token: 0x06004D15 RID: 19733 RVA: 0x0016F074 File Offset: 0x0016D274
 		public void SwitchToSafeMode()
 		{
 			foreach (GameObject gameObject in this.UnSafeGameObjects)
@@ -59,16 +59,16 @@ namespace GorillaNetworking
 			}
 		}
 
-		// Token: 0x04004FFE RID: 20478
+		// Token: 0x04004FFF RID: 20479
 		public GameObject[] UnSafeGameObjects;
 
-		// Token: 0x04004FFF RID: 20479
+		// Token: 0x04005000 RID: 20480
 		public GameObject[] UnSafeTexts;
 
-		// Token: 0x04005000 RID: 20480
+		// Token: 0x04005001 RID: 20481
 		public GameObject[] SafeTexts;
 
-		// Token: 0x04005001 RID: 20481
+		// Token: 0x04005002 RID: 20482
 		public GameObject[] SafeModeObjects;
 	}
 }

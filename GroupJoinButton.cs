@@ -5,7 +5,7 @@ using Photon.Pun;
 // Token: 0x02000650 RID: 1616
 public class GroupJoinButton : GorillaPressableButton
 {
-	// Token: 0x06002856 RID: 10326 RVA: 0x000C918A File Offset: 0x000C738A
+	// Token: 0x06002857 RID: 10327 RVA: 0x000C922E File Offset: 0x000C742E
 	public override void ButtonActivation()
 	{
 		base.ButtonActivation();
@@ -15,7 +15,7 @@ public class GroupJoinButton : GorillaPressableButton
 		}
 	}
 
-	// Token: 0x06002857 RID: 10327 RVA: 0x000C91B2 File Offset: 0x000C73B2
+	// Token: 0x06002858 RID: 10328 RVA: 0x000C9256 File Offset: 0x000C7456
 	public void Update()
 	{
 		this.inPrivate = PhotonNetwork.InRoom && !PhotonNetwork.CurrentRoom.IsVisible;
@@ -25,12 +25,12 @@ public class GroupJoinButton : GorillaPressableButton
 		}
 	}
 
-	// Token: 0x04002D3A RID: 11578
+	// Token: 0x04002D3C RID: 11580
 	public int gameModeIndex;
 
-	// Token: 0x04002D3B RID: 11579
+	// Token: 0x04002D3D RID: 11581
 	public GorillaFriendCollider friendCollider;
 
-	// Token: 0x04002D3C RID: 11580
+	// Token: 0x04002D3E RID: 11582
 	public bool inPrivate;
 }

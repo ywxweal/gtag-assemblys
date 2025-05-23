@@ -5,7 +5,7 @@ using UnityEngine;
 // Token: 0x020005AF RID: 1455
 public class GRHazardousMaterial : MonoBehaviour
 {
-	// Token: 0x0600238E RID: 9102 RVA: 0x000B2F94 File Offset: 0x000B1194
+	// Token: 0x0600238E RID: 9102 RVA: 0x000B2FB4 File Offset: 0x000B11B4
 	public void OnLocalPlayerOverlap()
 	{
 		GRPlayer component = VRRig.LocalRig.GetComponent<GRPlayer>();
@@ -15,7 +15,7 @@ public class GRHazardousMaterial : MonoBehaviour
 		}
 	}
 
-	// Token: 0x0600238F RID: 9103 RVA: 0x000B2FC9 File Offset: 0x000B11C9
+	// Token: 0x0600238F RID: 9103 RVA: 0x000B2FE9 File Offset: 0x000B11E9
 	private void OnTriggerEnter(Collider collider)
 	{
 		if (collider == GTPlayer.Instance.headCollider || collider == GTPlayer.Instance.bodyCollider)
@@ -24,7 +24,7 @@ public class GRHazardousMaterial : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06002390 RID: 9104 RVA: 0x000B2FF5 File Offset: 0x000B11F5
+	// Token: 0x06002390 RID: 9104 RVA: 0x000B3015 File Offset: 0x000B1215
 	private void OnCollisionEnter(Collision collision)
 	{
 		if (collision.collider == GTPlayer.Instance.headCollider || collision.collider == GTPlayer.Instance.bodyCollider)

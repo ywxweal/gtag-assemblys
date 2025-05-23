@@ -10,7 +10,7 @@ using UnityEngine.Jobs;
 public class GorillaIKMgr : MonoBehaviour
 {
 	// Token: 0x170003AC RID: 940
-	// (get) Token: 0x060026CA RID: 9930 RVA: 0x000C0738 File Offset: 0x000BE938
+	// (get) Token: 0x060026CA RID: 9930 RVA: 0x000C0758 File Offset: 0x000BE958
 	public static GorillaIKMgr Instance
 	{
 		get
@@ -19,7 +19,7 @@ public class GorillaIKMgr : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060026CB RID: 9931 RVA: 0x000C0740 File Offset: 0x000BE940
+	// Token: 0x060026CB RID: 9931 RVA: 0x000C0760 File Offset: 0x000BE960
 	private void Awake()
 	{
 		GorillaIKMgr._instance = this;
@@ -38,7 +38,7 @@ public class GorillaIKMgr : MonoBehaviour
 		};
 	}
 
-	// Token: 0x060026CC RID: 9932 RVA: 0x000C07D4 File Offset: 0x000BE9D4
+	// Token: 0x060026CC RID: 9932 RVA: 0x000C07F4 File Offset: 0x000BE9F4
 	private void OnDestroy()
 	{
 		this.jobHandle.Complete();
@@ -50,7 +50,7 @@ public class GorillaIKMgr : MonoBehaviour
 		this.job.output.Dispose();
 	}
 
-	// Token: 0x060026CD RID: 9933 RVA: 0x000C0844 File Offset: 0x000BEA44
+	// Token: 0x060026CD RID: 9933 RVA: 0x000C0864 File Offset: 0x000BEA64
 	public void RegisterIK(GorillaIK ik)
 	{
 		this.ikList.Add(ik);
@@ -62,7 +62,7 @@ public class GorillaIKMgr : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060026CE RID: 9934 RVA: 0x000C0894 File Offset: 0x000BEA94
+	// Token: 0x060026CE RID: 9934 RVA: 0x000C08B4 File Offset: 0x000BEAB4
 	public void DeregisterIK(GorillaIK ik)
 	{
 		int num = this.ikList.FindIndex((GorillaIK curr) => curr == ik);
@@ -78,7 +78,7 @@ public class GorillaIKMgr : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060026CF RID: 9935 RVA: 0x000C0930 File Offset: 0x000BEB30
+	// Token: 0x060026CF RID: 9935 RVA: 0x000C0950 File Offset: 0x000BEB50
 	private void SetConstantData(GorillaIK ik, int index)
 	{
 		this.job.constantInput[index] = new GorillaIKMgr.IKConstantInput
@@ -93,7 +93,7 @@ public class GorillaIKMgr : MonoBehaviour
 		};
 	}
 
-	// Token: 0x060026D0 RID: 9936 RVA: 0x000C09A8 File Offset: 0x000BEBA8
+	// Token: 0x060026D0 RID: 9936 RVA: 0x000C09C8 File Offset: 0x000BEBC8
 	private void CopyInput()
 	{
 		int num = 0;
@@ -114,7 +114,7 @@ public class GorillaIKMgr : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060026D1 RID: 9937 RVA: 0x000C0A5C File Offset: 0x000BEC5C
+	// Token: 0x060026D1 RID: 9937 RVA: 0x000C0A7C File Offset: 0x000BEC7C
 	private void CopyOutput()
 	{
 		bool flag = false;
@@ -152,7 +152,7 @@ public class GorillaIKMgr : MonoBehaviour
 		this.updatedSinceLastRun = false;
 	}
 
-	// Token: 0x060026D2 RID: 9938 RVA: 0x000C0CAC File Offset: 0x000BEEAC
+	// Token: 0x060026D2 RID: 9938 RVA: 0x000C0CCC File Offset: 0x000BEECC
 	public void LateUpdate()
 	{
 		if (!this.firstFrame)
@@ -227,7 +227,7 @@ public class GorillaIKMgr : MonoBehaviour
 	// Token: 0x0200061A RID: 1562
 	private struct IKOutput
 	{
-		// Token: 0x060026D4 RID: 9940 RVA: 0x000C0D4F File Offset: 0x000BEF4F
+		// Token: 0x060026D4 RID: 9940 RVA: 0x000C0D6F File Offset: 0x000BEF6F
 		public IKOutput(Quaternion upperArmLocalRot_, Quaternion lowerArmLocalRot_)
 		{
 			this.upperArmLocalRot = upperArmLocalRot_;
@@ -245,7 +245,7 @@ public class GorillaIKMgr : MonoBehaviour
 	[BurstCompile]
 	private struct IKJob : IJobParallelFor
 	{
-		// Token: 0x060026D5 RID: 9941 RVA: 0x000C0D60 File Offset: 0x000BEF60
+		// Token: 0x060026D5 RID: 9941 RVA: 0x000C0D80 File Offset: 0x000BEF80
 		public void Execute(int i)
 		{
 			Quaternion initRotUpper = this.constantInput[i].initRotUpper;
@@ -300,7 +300,7 @@ public class GorillaIKMgr : MonoBehaviour
 	[BurstCompile]
 	private struct IKTransformJob : IJobParallelForTransform
 	{
-		// Token: 0x060026D7 RID: 9943 RVA: 0x000C1068 File Offset: 0x000BF268
+		// Token: 0x060026D7 RID: 9943 RVA: 0x000C1088 File Offset: 0x000BF288
 		public void Execute(int index, TransformAccess xform)
 		{
 			if (index % 7 <= 3)

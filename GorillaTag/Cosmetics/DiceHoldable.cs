@@ -9,7 +9,7 @@ namespace GorillaTag.Cosmetics
 	// Token: 0x02000DB1 RID: 3505
 	public class DiceHoldable : TransferrableObject
 	{
-		// Token: 0x060056CF RID: 22223 RVA: 0x001A7430 File Offset: 0x001A5630
+		// Token: 0x060056D0 RID: 22224 RVA: 0x001A7508 File Offset: 0x001A5708
 		internal override void OnEnable()
 		{
 			base.OnEnable();
@@ -32,7 +32,7 @@ namespace GorillaTag.Cosmetics
 			}
 		}
 
-		// Token: 0x060056D0 RID: 22224 RVA: 0x001A7500 File Offset: 0x001A5700
+		// Token: 0x060056D1 RID: 22225 RVA: 0x001A75D8 File Offset: 0x001A57D8
 		internal override void OnDisable()
 		{
 			base.OnDisable();
@@ -44,7 +44,7 @@ namespace GorillaTag.Cosmetics
 			}
 		}
 
-		// Token: 0x060056D1 RID: 22225 RVA: 0x001A7558 File Offset: 0x001A5758
+		// Token: 0x060056D2 RID: 22226 RVA: 0x001A7630 File Offset: 0x001A5830
 		private void OnDiceEvent(int sender, int target, object[] args, PhotonMessageInfoWrapped info)
 		{
 			GorillaNot.IncrementRPCCall(info, "OnDiceEvent");
@@ -73,7 +73,7 @@ namespace GorillaTag.Cosmetics
 			this.dicePhysics.EndThrow();
 		}
 
-		// Token: 0x060056D2 RID: 22226 RVA: 0x001A762C File Offset: 0x001A582C
+		// Token: 0x060056D3 RID: 22227 RVA: 0x001A7704 File Offset: 0x001A5904
 		public override void OnGrab(InteractionPoint pointGrabbed, GameObject grabbingHand)
 		{
 			if (this.dicePhysics.enabled)
@@ -102,7 +102,7 @@ namespace GorillaTag.Cosmetics
 			base.OnGrab(pointGrabbed, grabbingHand);
 		}
 
-		// Token: 0x060056D3 RID: 22227 RVA: 0x001A7744 File Offset: 0x001A5944
+		// Token: 0x060056D4 RID: 22228 RVA: 0x001A781C File Offset: 0x001A5A1C
 		public override bool OnRelease(DropZone zoneReleased, GameObject releasingHand)
 		{
 			if (!base.OnRelease(zoneReleased, releasingHand))
@@ -126,17 +126,17 @@ namespace GorillaTag.Cosmetics
 			return true;
 		}
 
-		// Token: 0x060056D4 RID: 22228 RVA: 0x001A786E File Offset: 0x001A5A6E
+		// Token: 0x060056D5 RID: 22229 RVA: 0x001A7946 File Offset: 0x001A5B46
 		private void ThrowDiceLocal(Vector3 startPosition, Vector3 throwVelocity, float playerScale, int landingSide, double startTime)
 		{
 			this.dicePhysics.StartThrow(this, startPosition, throwVelocity, playerScale, landingSide, startTime);
 		}
 
-		// Token: 0x04005ACA RID: 23242
+		// Token: 0x04005ACB RID: 23243
 		[SerializeField]
 		private DicePhysics dicePhysics;
 
-		// Token: 0x04005ACB RID: 23243
+		// Token: 0x04005ACC RID: 23244
 		private RubberDuckEvents _events;
 	}
 }

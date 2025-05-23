@@ -4,7 +4,7 @@ using UnityEngine;
 // Token: 0x020004BE RID: 1214
 public class MonkeBallBallEjectZone : MonoBehaviour
 {
-	// Token: 0x06001D62 RID: 7522 RVA: 0x0008EC24 File Offset: 0x0008CE24
+	// Token: 0x06001D62 RID: 7522 RVA: 0x0008EC44 File Offset: 0x0008CE44
 	private void OnCollisionEnter(Collision collision)
 	{
 		GameBall component = collision.gameObject.GetComponent<GameBall>();

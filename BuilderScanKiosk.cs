@@ -11,7 +11,7 @@ using UnityEngine.Events;
 // Token: 0x02000510 RID: 1296
 public class BuilderScanKiosk : MonoBehaviour
 {
-	// Token: 0x06001F5F RID: 8031 RVA: 0x0009D75C File Offset: 0x0009B95C
+	// Token: 0x06001F5F RID: 8031 RVA: 0x0009D77C File Offset: 0x0009B97C
 	private void Start()
 	{
 		if (this.saveButton != null)
@@ -39,7 +39,7 @@ public class BuilderScanKiosk : MonoBehaviour
 		this.LoadPlayerPrefs();
 	}
 
-	// Token: 0x06001F60 RID: 8032 RVA: 0x0009D8AC File Offset: 0x0009BAAC
+	// Token: 0x06001F60 RID: 8032 RVA: 0x0009D8CC File Offset: 0x0009BACC
 	private void OnDestroy()
 	{
 		if (this.saveButton != null)
@@ -65,7 +65,7 @@ public class BuilderScanKiosk : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001F61 RID: 8033 RVA: 0x0009D9C0 File Offset: 0x0009BBC0
+	// Token: 0x06001F61 RID: 8033 RVA: 0x0009D9E0 File Offset: 0x0009BBE0
 	private void OnNoneButtonPressed()
 	{
 		if (this.targetTable == null)
@@ -84,7 +84,7 @@ public class BuilderScanKiosk : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001F62 RID: 8034 RVA: 0x0009DA14 File Offset: 0x0009BC14
+	// Token: 0x06001F62 RID: 8034 RVA: 0x0009DA34 File Offset: 0x0009BC34
 	private void OnScanButtonPressed(GorillaPressableButton button, bool isLeft)
 	{
 		if (this.targetTable == null)
@@ -116,7 +116,7 @@ public class BuilderScanKiosk : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001F63 RID: 8035 RVA: 0x0009DA94 File Offset: 0x0009BC94
+	// Token: 0x06001F63 RID: 8035 RVA: 0x0009DAB4 File Offset: 0x0009BCB4
 	private void LoadPlayerPrefs()
 	{
 		int @int = PlayerPrefs.GetInt(BuilderScanKiosk.playerPrefKey, -1);
@@ -124,14 +124,14 @@ public class BuilderScanKiosk : MonoBehaviour
 		this.UpdateUI();
 	}
 
-	// Token: 0x06001F64 RID: 8036 RVA: 0x0009DABF File Offset: 0x0009BCBF
+	// Token: 0x06001F64 RID: 8036 RVA: 0x0009DADF File Offset: 0x0009BCDF
 	private void SavePlayerPrefs()
 	{
 		PlayerPrefs.SetInt(BuilderScanKiosk.playerPrefKey, this.targetTable.CurrentSaveSlot);
 		PlayerPrefs.Save();
 	}
 
-	// Token: 0x06001F65 RID: 8037 RVA: 0x0009DADC File Offset: 0x0009BCDC
+	// Token: 0x06001F65 RID: 8037 RVA: 0x0009DAFC File Offset: 0x0009BCFC
 	private void ToggleSaveButton(bool enabled)
 	{
 		if (enabled)
@@ -144,7 +144,7 @@ public class BuilderScanKiosk : MonoBehaviour
 		this.saveButton.buttonRenderer.material = this.saveButton.pressedMaterial;
 	}
 
-	// Token: 0x06001F66 RID: 8038 RVA: 0x0009DB3C File Offset: 0x0009BD3C
+	// Token: 0x06001F66 RID: 8038 RVA: 0x0009DB5C File Offset: 0x0009BD5C
 	private void Update()
 	{
 		if (this.isAnimating)
@@ -166,7 +166,7 @@ public class BuilderScanKiosk : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001F67 RID: 8039 RVA: 0x0009DBAC File Offset: 0x0009BDAC
+	// Token: 0x06001F67 RID: 8039 RVA: 0x0009DBCC File Offset: 0x0009BDCC
 	private void OnSavePressed()
 	{
 		if (this.targetTable == null || !this.isDirty || this.coolingDown)
@@ -205,7 +205,7 @@ public class BuilderScanKiosk : MonoBehaviour
 		this.targetTable.SaveTableForPlayer();
 	}
 
-	// Token: 0x06001F68 RID: 8040 RVA: 0x0009DCA8 File Offset: 0x0009BEA8
+	// Token: 0x06001F68 RID: 8040 RVA: 0x0009DCC8 File Offset: 0x0009BEC8
 	private string GetSavePath()
 	{
 		return string.Concat(new string[]
@@ -219,20 +219,20 @@ public class BuilderScanKiosk : MonoBehaviour
 		});
 	}
 
-	// Token: 0x06001F69 RID: 8041 RVA: 0x0009DD04 File Offset: 0x0009BF04
+	// Token: 0x06001F69 RID: 8041 RVA: 0x0009DD24 File Offset: 0x0009BF24
 	private string GetSaveFolder()
 	{
 		return Application.persistentDataPath + Path.DirectorySeparatorChar.ToString() + BuilderScanKiosk.SAVE_FOLDER;
 	}
 
-	// Token: 0x06001F6A RID: 8042 RVA: 0x0009DD1F File Offset: 0x0009BF1F
+	// Token: 0x06001F6A RID: 8042 RVA: 0x0009DD3F File Offset: 0x0009BF3F
 	private void OnSaveDirtyChanged(bool dirty)
 	{
 		this.isDirty = dirty;
 		this.UpdateUI();
 	}
 
-	// Token: 0x06001F6B RID: 8043 RVA: 0x0009DD2E File Offset: 0x0009BF2E
+	// Token: 0x06001F6B RID: 8043 RVA: 0x0009DD4E File Offset: 0x0009BF4E
 	private void OnSaveTimeUpdated()
 	{
 		this.scannerState = BuilderScanKiosk.ScannerState.IDLE;
@@ -240,7 +240,7 @@ public class BuilderScanKiosk : MonoBehaviour
 		this.UpdateUI();
 	}
 
-	// Token: 0x06001F6C RID: 8044 RVA: 0x0009DD2E File Offset: 0x0009BF2E
+	// Token: 0x06001F6C RID: 8044 RVA: 0x0009DD4E File Offset: 0x0009BF4E
 	private void OnSaveSuccess()
 	{
 		this.scannerState = BuilderScanKiosk.ScannerState.IDLE;
@@ -248,7 +248,7 @@ public class BuilderScanKiosk : MonoBehaviour
 		this.UpdateUI();
 	}
 
-	// Token: 0x06001F6D RID: 8045 RVA: 0x0009DD44 File Offset: 0x0009BF44
+	// Token: 0x06001F6D RID: 8045 RVA: 0x0009DD64 File Offset: 0x0009BF64
 	private void OnSaveFail(string errorMsg)
 	{
 		this.scannerState = BuilderScanKiosk.ScannerState.IDLE;
@@ -257,7 +257,7 @@ public class BuilderScanKiosk : MonoBehaviour
 		this.UpdateUI();
 	}
 
-	// Token: 0x06001F6E RID: 8046 RVA: 0x0009DD64 File Offset: 0x0009BF64
+	// Token: 0x06001F6E RID: 8046 RVA: 0x0009DD84 File Offset: 0x0009BF84
 	private void UpdateUI()
 	{
 		this.screenText.text = this.GetTextForScreen();
@@ -275,7 +275,7 @@ public class BuilderScanKiosk : MonoBehaviour
 		this.saveButton.myTmpText.text = "UPDATE SCAN";
 	}
 
-	// Token: 0x06001F6F RID: 8047 RVA: 0x0009DE6C File Offset: 0x0009C06C
+	// Token: 0x06001F6F RID: 8047 RVA: 0x0009DE8C File Offset: 0x0009C08C
 	private string GetTextForScreen()
 	{
 		if (this.targetTable == null)

@@ -7,8 +7,8 @@ namespace OculusSampleFramework
 	public class DistanceGrabbable : OVRGrabbable
 	{
 		// Token: 0x17000731 RID: 1841
-		// (get) Token: 0x06004A73 RID: 19059 RVA: 0x00162823 File Offset: 0x00160A23
-		// (set) Token: 0x06004A74 RID: 19060 RVA: 0x0016282B File Offset: 0x00160A2B
+		// (get) Token: 0x06004A74 RID: 19060 RVA: 0x001628FB File Offset: 0x00160AFB
+		// (set) Token: 0x06004A75 RID: 19061 RVA: 0x00162903 File Offset: 0x00160B03
 		public bool InRange
 		{
 			get
@@ -23,8 +23,8 @@ namespace OculusSampleFramework
 		}
 
 		// Token: 0x17000732 RID: 1842
-		// (get) Token: 0x06004A75 RID: 19061 RVA: 0x0016283A File Offset: 0x00160A3A
-		// (set) Token: 0x06004A76 RID: 19062 RVA: 0x00162842 File Offset: 0x00160A42
+		// (get) Token: 0x06004A76 RID: 19062 RVA: 0x00162912 File Offset: 0x00160B12
+		// (set) Token: 0x06004A77 RID: 19063 RVA: 0x0016291A File Offset: 0x00160B1A
 		public bool Targeted
 		{
 			get
@@ -38,7 +38,7 @@ namespace OculusSampleFramework
 			}
 		}
 
-		// Token: 0x06004A77 RID: 19063 RVA: 0x00162854 File Offset: 0x00160A54
+		// Token: 0x06004A78 RID: 19064 RVA: 0x0016292C File Offset: 0x00160B2C
 		protected override void Start()
 		{
 			base.Start();
@@ -50,7 +50,7 @@ namespace OculusSampleFramework
 			this.m_renderer.SetPropertyBlock(this.m_mpb);
 		}
 
-		// Token: 0x06004A78 RID: 19064 RVA: 0x001628B8 File Offset: 0x00160AB8
+		// Token: 0x06004A79 RID: 19065 RVA: 0x00162990 File Offset: 0x00160B90
 		private void RefreshCrosshair()
 		{
 			if (this.m_crosshair)
@@ -87,25 +87,25 @@ namespace OculusSampleFramework
 			}
 		}
 
-		// Token: 0x04004D2E RID: 19758
+		// Token: 0x04004D2F RID: 19759
 		public string m_materialColorField;
 
-		// Token: 0x04004D2F RID: 19759
+		// Token: 0x04004D30 RID: 19760
 		private GrabbableCrosshair m_crosshair;
 
-		// Token: 0x04004D30 RID: 19760
+		// Token: 0x04004D31 RID: 19761
 		private GrabManager m_crosshairManager;
 
-		// Token: 0x04004D31 RID: 19761
+		// Token: 0x04004D32 RID: 19762
 		private Renderer m_renderer;
 
-		// Token: 0x04004D32 RID: 19762
+		// Token: 0x04004D33 RID: 19763
 		private MaterialPropertyBlock m_mpb;
 
-		// Token: 0x04004D33 RID: 19763
+		// Token: 0x04004D34 RID: 19764
 		private bool m_inRange;
 
-		// Token: 0x04004D34 RID: 19764
+		// Token: 0x04004D35 RID: 19765
 		private bool m_targeted;
 	}
 }

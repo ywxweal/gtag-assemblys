@@ -12,7 +12,7 @@ namespace Fusion.CodeGen
 	[StructLayout(LayoutKind.Explicit)]
 	internal struct FixedStorage@1 : INetworkStruct
 	{
-		// Token: 0x0400616B RID: 24939
+		// Token: 0x0400616C RID: 24940
 		[FixedBuffer(typeof(int), 1)]
 		[WeaverGenerated]
 		[FieldOffset(0)]
@@ -26,7 +26,7 @@ namespace Fusion.CodeGen
 		[StructLayout(LayoutKind.Sequential, Size = 4)]
 		public struct <Data>e__FixedBuffer
 		{
-			// Token: 0x0400616C RID: 24940
+			// Token: 0x0400616D RID: 24941
 			[WeaverGenerated]
 			public int FixedElementField;
 		}

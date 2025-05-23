@@ -4,7 +4,7 @@ using UnityEngine;
 // Token: 0x0200040D RID: 1037
 public class TestManipulatableCube : ManipulatableObject
 {
-	// Token: 0x0600193D RID: 6461 RVA: 0x0007A25C File Offset: 0x0007845C
+	// Token: 0x0600193D RID: 6461 RVA: 0x0007A27C File Offset: 0x0007847C
 	private void Awake()
 	{
 		this.localSpace = base.transform.worldToLocalMatrix;
@@ -16,7 +16,7 @@ public class TestManipulatableCube : ManipulatableObject
 	{
 	}
 
-	// Token: 0x0600193F RID: 6463 RVA: 0x0007A280 File Offset: 0x00078480
+	// Token: 0x0600193F RID: 6463 RVA: 0x0007A2A0 File Offset: 0x000784A0
 	protected override void OnStopManipulation(GameObject releasingHand, Vector3 releaseVelocity)
 	{
 		if (this.applyReleaseVelocity)
@@ -25,7 +25,7 @@ public class TestManipulatableCube : ManipulatableObject
 		}
 	}
 
-	// Token: 0x06001940 RID: 6464 RVA: 0x0007A29C File Offset: 0x0007849C
+	// Token: 0x06001940 RID: 6464 RVA: 0x0007A2BC File Offset: 0x000784BC
 	protected override bool ShouldHandDetach(GameObject hand)
 	{
 		Vector3 position = base.transform.position;
@@ -33,7 +33,7 @@ public class TestManipulatableCube : ManipulatableObject
 		return Vector3.SqrMagnitude(position - position2) > this.breakDistance * this.breakDistance;
 	}
 
-	// Token: 0x06001941 RID: 6465 RVA: 0x0007A2DC File Offset: 0x000784DC
+	// Token: 0x06001941 RID: 6465 RVA: 0x0007A2FC File Offset: 0x000784FC
 	protected override void OnHeldUpdate(GameObject hand)
 	{
 		Vector3 vector = this.localSpace.MultiplyPoint3x4(hand.transform.position);
@@ -44,7 +44,7 @@ public class TestManipulatableCube : ManipulatableObject
 		base.transform.localPosition = vector;
 	}
 
-	// Token: 0x06001942 RID: 6466 RVA: 0x0007A374 File Offset: 0x00078574
+	// Token: 0x06001942 RID: 6466 RVA: 0x0007A394 File Offset: 0x00078594
 	protected override void OnReleasedUpdate()
 	{
 		if (this.velocity != Vector3.zero)
@@ -91,13 +91,13 @@ public class TestManipulatableCube : ManipulatableObject
 		}
 	}
 
-	// Token: 0x06001943 RID: 6467 RVA: 0x0007A525 File Offset: 0x00078725
+	// Token: 0x06001943 RID: 6467 RVA: 0x0007A545 File Offset: 0x00078745
 	public Matrix4x4 GetLocalSpace()
 	{
 		return this.localSpace;
 	}
 
-	// Token: 0x06001944 RID: 6468 RVA: 0x0007A530 File Offset: 0x00078730
+	// Token: 0x06001944 RID: 6468 RVA: 0x0007A550 File Offset: 0x00078750
 	public void SetCubeToSpecificPosition(Vector3 pos)
 	{
 		Vector3 vector = this.localSpace.MultiplyPoint3x4(pos);
@@ -108,7 +108,7 @@ public class TestManipulatableCube : ManipulatableObject
 		base.transform.localPosition = vector;
 	}
 
-	// Token: 0x06001945 RID: 6469 RVA: 0x0007A5C0 File Offset: 0x000787C0
+	// Token: 0x06001945 RID: 6469 RVA: 0x0007A5E0 File Offset: 0x000787E0
 	public void SetCubeToSpecificPosition(float x, float y, float z)
 	{
 		Vector3 vector = new Vector3(0f, 0f, 0f);

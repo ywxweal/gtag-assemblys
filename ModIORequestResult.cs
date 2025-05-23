@@ -3,7 +3,7 @@
 // Token: 0x02000714 RID: 1812
 public struct ModIORequestResult
 {
-	// Token: 0x06002D34 RID: 11572 RVA: 0x000DF8C8 File Offset: 0x000DDAC8
+	// Token: 0x06002D35 RID: 11573 RVA: 0x000DF96C File Offset: 0x000DDB6C
 	public static ModIORequestResult CreateFailureResult(string inMessage)
 	{
 		ModIORequestResult modIORequestResult;
@@ -12,7 +12,7 @@ public struct ModIORequestResult
 		return modIORequestResult;
 	}
 
-	// Token: 0x06002D35 RID: 11573 RVA: 0x000DF8E8 File Offset: 0x000DDAE8
+	// Token: 0x06002D36 RID: 11574 RVA: 0x000DF98C File Offset: 0x000DDB8C
 	public static ModIORequestResult CreateSuccessResult()
 	{
 		ModIORequestResult modIORequestResult;
@@ -21,9 +21,9 @@ public struct ModIORequestResult
 		return modIORequestResult;
 	}
 
-	// Token: 0x04003374 RID: 13172
+	// Token: 0x04003376 RID: 13174
 	public bool success;
 
-	// Token: 0x04003375 RID: 13173
+	// Token: 0x04003377 RID: 13175
 	public string message;
 }

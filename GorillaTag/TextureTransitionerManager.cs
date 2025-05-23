@@ -9,11 +9,11 @@ namespace GorillaTag
 	public class TextureTransitionerManager : MonoBehaviour
 	{
 		// Token: 0x17000860 RID: 2144
-		// (get) Token: 0x06005406 RID: 21510 RVA: 0x001973E6 File Offset: 0x001955E6
-		// (set) Token: 0x06005407 RID: 21511 RVA: 0x001973ED File Offset: 0x001955ED
+		// (get) Token: 0x06005407 RID: 21511 RVA: 0x001974BE File Offset: 0x001956BE
+		// (set) Token: 0x06005408 RID: 21512 RVA: 0x001974C5 File Offset: 0x001956C5
 		public static TextureTransitionerManager instance { get; private set; }
 
-		// Token: 0x06005408 RID: 21512 RVA: 0x001973F5 File Offset: 0x001955F5
+		// Token: 0x06005409 RID: 21513 RVA: 0x001974CD File Offset: 0x001956CD
 		protected void Awake()
 		{
 			if (TextureTransitionerManager.instance != null)
@@ -29,7 +29,7 @@ namespace GorillaTag
 			this.matPropBlock = new MaterialPropertyBlock();
 		}
 
-		// Token: 0x06005409 RID: 21513 RVA: 0x00197434 File Offset: 0x00195634
+		// Token: 0x0600540A RID: 21514 RVA: 0x0019750C File Offset: 0x0019570C
 		protected void LateUpdate()
 		{
 			foreach (TextureTransitioner textureTransitioner in TextureTransitionerManager.components)
@@ -71,7 +71,7 @@ namespace GorillaTag
 			}
 		}
 
-		// Token: 0x0600540A RID: 21514 RVA: 0x001975C4 File Offset: 0x001957C4
+		// Token: 0x0600540B RID: 21515 RVA: 0x0019769C File Offset: 0x0019589C
 		public static void EnsureInstanceIsAvailable()
 		{
 			if (TextureTransitionerManager.instance != null)
@@ -83,22 +83,22 @@ namespace GorillaTag
 			gameObject.name = "TextureTransitionerManager (Singleton)";
 		}
 
-		// Token: 0x0600540B RID: 21515 RVA: 0x001975EE File Offset: 0x001957EE
+		// Token: 0x0600540C RID: 21516 RVA: 0x001976C6 File Offset: 0x001958C6
 		public static void Register(TextureTransitioner component)
 		{
 			TextureTransitionerManager.components.Add(component);
 		}
 
-		// Token: 0x0600540C RID: 21516 RVA: 0x001975FB File Offset: 0x001957FB
+		// Token: 0x0600540D RID: 21517 RVA: 0x001976D3 File Offset: 0x001958D3
 		public static void Unregister(TextureTransitioner component)
 		{
 			TextureTransitionerManager.components.Remove(component);
 		}
 
-		// Token: 0x0400570B RID: 22283
+		// Token: 0x0400570C RID: 22284
 		public static readonly List<TextureTransitioner> components = new List<TextureTransitioner>(256);
 
-		// Token: 0x0400570C RID: 22284
+		// Token: 0x0400570D RID: 22285
 		private MaterialPropertyBlock matPropBlock;
 	}
 }

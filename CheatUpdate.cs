@@ -7,13 +7,13 @@ using UnityEngine.Networking;
 // Token: 0x02000522 RID: 1314
 public class CheatUpdate : MonoBehaviour
 {
-	// Token: 0x06001FCE RID: 8142 RVA: 0x000A0D31 File Offset: 0x0009EF31
+	// Token: 0x06001FCE RID: 8142 RVA: 0x000A0D51 File Offset: 0x0009EF51
 	private void Start()
 	{
 		base.StartCoroutine(this.UpdateNumberOfPlayers());
 	}
 
-	// Token: 0x06001FCF RID: 8143 RVA: 0x000A0D40 File Offset: 0x0009EF40
+	// Token: 0x06001FCF RID: 8143 RVA: 0x000A0D60 File Offset: 0x0009EF60
 	public IEnumerator UpdateNumberOfPlayers()
 	{
 		for (;;)
@@ -24,7 +24,7 @@ public class CheatUpdate : MonoBehaviour
 		yield break;
 	}
 
-	// Token: 0x06001FD0 RID: 8144 RVA: 0x000A0D4F File Offset: 0x0009EF4F
+	// Token: 0x06001FD0 RID: 8144 RVA: 0x000A0D6F File Offset: 0x0009EF6F
 	private IEnumerator UpdatePlayerCount()
 	{
 		WWWForm wwwform = new WWWForm();

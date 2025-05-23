@@ -6,7 +6,7 @@ using UnityEngine;
 [Serializable]
 internal class HandTransformFollowOffest
 {
-	// Token: 0x06001FF3 RID: 8179 RVA: 0x000A112C File Offset: 0x0009F32C
+	// Token: 0x06001FF3 RID: 8179 RVA: 0x000A114C File Offset: 0x0009F34C
 	internal void UpdatePositionRotation()
 	{
 		if (this.followTransform == null || this.targetTransforms == null)

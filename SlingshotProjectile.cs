@@ -11,16 +11,16 @@ using UnityEngine.Events;
 public class SlingshotProjectile : MonoBehaviour
 {
 	// Token: 0x1700026A RID: 618
-	// (get) Token: 0x060015F1 RID: 5617 RVA: 0x0006ACC8 File Offset: 0x00068EC8
-	// (set) Token: 0x060015F2 RID: 5618 RVA: 0x0006ACD0 File Offset: 0x00068ED0
+	// (get) Token: 0x060015F1 RID: 5617 RVA: 0x0006ACE8 File Offset: 0x00068EE8
+	// (set) Token: 0x060015F2 RID: 5618 RVA: 0x0006ACF0 File Offset: 0x00068EF0
 	public Vector3 launchPosition { get; private set; }
 
 	// Token: 0x14000040 RID: 64
-	// (add) Token: 0x060015F3 RID: 5619 RVA: 0x0006ACDC File Offset: 0x00068EDC
-	// (remove) Token: 0x060015F4 RID: 5620 RVA: 0x0006AD14 File Offset: 0x00068F14
+	// (add) Token: 0x060015F3 RID: 5619 RVA: 0x0006ACFC File Offset: 0x00068EFC
+	// (remove) Token: 0x060015F4 RID: 5620 RVA: 0x0006AD34 File Offset: 0x00068F34
 	public event SlingshotProjectile.ProjectileImpactEvent OnImpact;
 
-	// Token: 0x060015F5 RID: 5621 RVA: 0x0006AD4C File Offset: 0x00068F4C
+	// Token: 0x060015F5 RID: 5621 RVA: 0x0006AD6C File Offset: 0x00068F6C
 	public void Launch(Vector3 position, Vector3 velocity, NetPlayer player, bool blueTeam, bool orangeTeam, int projectileCount, float scale, bool shouldOverrideColor = false, Color overrideColor = default(Color))
 	{
 		if (this.launchSoundBankPlayer != null)
@@ -48,7 +48,7 @@ public class SlingshotProjectile : MonoBehaviour
 		this.ApplyTeamModelAndColor(blueTeam, orangeTeam, shouldOverrideColor, overrideColor);
 	}
 
-	// Token: 0x060015F6 RID: 5622 RVA: 0x0006AE60 File Offset: 0x00069060
+	// Token: 0x060015F6 RID: 5622 RVA: 0x0006AE80 File Offset: 0x00069080
 	protected void Awake()
 	{
 		if (this.playerImpactEffectPrefab == null)
@@ -62,7 +62,7 @@ public class SlingshotProjectile : MonoBehaviour
 		this.spawnWorldEffects = base.GetComponent<SpawnWorldEffects>();
 	}
 
-	// Token: 0x060015F7 RID: 5623 RVA: 0x0006AECC File Offset: 0x000690CC
+	// Token: 0x060015F7 RID: 5623 RVA: 0x0006AEEC File Offset: 0x000690EC
 	public void Deactivate()
 	{
 		base.transform.localScale = Vector3.one * this.initialScale;
@@ -76,7 +76,7 @@ public class SlingshotProjectile : MonoBehaviour
 		ObjectPools.instance.Destroy(base.gameObject);
 	}
 
-	// Token: 0x060015F8 RID: 5624 RVA: 0x0006AF58 File Offset: 0x00069158
+	// Token: 0x060015F8 RID: 5624 RVA: 0x0006AF78 File Offset: 0x00069178
 	private void SpawnImpactEffect(GameObject prefab, Vector3 position, Vector3 normal)
 	{
 		Vector3 vector = position + normal * this.impactEffectOffset;
@@ -105,7 +105,7 @@ public class SlingshotProjectile : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060015F9 RID: 5625 RVA: 0x0006B03C File Offset: 0x0006923C
+	// Token: 0x060015F9 RID: 5625 RVA: 0x0006B05C File Offset: 0x0006925C
 	public void CheckForAOEKnockback(Vector3 impactPosition, float impactSpeed)
 	{
 		if (this.aoeKnockbackConfig != null && this.aoeKnockbackConfig.Value.applyAOEKnockback)
@@ -132,7 +132,7 @@ public class SlingshotProjectile : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060015FA RID: 5626 RVA: 0x0006B1E0 File Offset: 0x000693E0
+	// Token: 0x060015FA RID: 5626 RVA: 0x0006B200 File Offset: 0x00069400
 	public void ApplyTeamModelAndColor(bool blueTeam, bool orangeTeam, bool shouldOverrideColor = false, Color overrideColor = default(Color))
 	{
 		if (shouldOverrideColor)
@@ -150,7 +150,7 @@ public class SlingshotProjectile : MonoBehaviour
 		this.ApplyColor(this.teamRenderer, (this.colorizeBalls || shouldOverrideColor) ? this.teamColor : Color.white);
 	}
 
-	// Token: 0x060015FB RID: 5627 RVA: 0x0006B28E File Offset: 0x0006948E
+	// Token: 0x060015FB RID: 5627 RVA: 0x0006B2AE File Offset: 0x000694AE
 	protected void OnEnable()
 	{
 		this.timeCreated = 0f;
@@ -158,14 +158,14 @@ public class SlingshotProjectile : MonoBehaviour
 		SlingshotProjectileManager.RegisterSP(this);
 	}
 
-	// Token: 0x060015FC RID: 5628 RVA: 0x0006B2A8 File Offset: 0x000694A8
+	// Token: 0x060015FC RID: 5628 RVA: 0x0006B2C8 File Offset: 0x000694C8
 	protected void OnDisable()
 	{
 		this.particleLaunched = false;
 		SlingshotProjectileManager.UnregisterSP(this);
 	}
 
-	// Token: 0x060015FD RID: 5629 RVA: 0x0006B2B8 File Offset: 0x000694B8
+	// Token: 0x060015FD RID: 5629 RVA: 0x0006B2D8 File Offset: 0x000694D8
 	public void InvokeUpdate()
 	{
 		if (this.particleLaunched)
@@ -185,14 +185,14 @@ public class SlingshotProjectile : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060015FE RID: 5630 RVA: 0x0006B333 File Offset: 0x00069533
+	// Token: 0x060015FE RID: 5630 RVA: 0x0006B353 File Offset: 0x00069553
 	public void DestroyAfterRelease()
 	{
 		this.SpawnImpactEffect(this.surfaceImpactEffectPrefab, base.transform.position, Vector3.up);
 		this.Deactivate();
 	}
 
-	// Token: 0x060015FF RID: 5631 RVA: 0x0006B358 File Offset: 0x00069558
+	// Token: 0x060015FF RID: 5631 RVA: 0x0006B378 File Offset: 0x00069578
 	protected void OnCollisionEnter(Collision collision)
 	{
 		if (!this.particleLaunched)
@@ -215,7 +215,7 @@ public class SlingshotProjectile : MonoBehaviour
 		this.Deactivate();
 	}
 
-	// Token: 0x06001600 RID: 5632 RVA: 0x0006B3E8 File Offset: 0x000695E8
+	// Token: 0x06001600 RID: 5632 RVA: 0x0006B408 File Offset: 0x00069608
 	protected void OnCollisionStay(Collision collision)
 	{
 		if (!this.particleLaunched)
@@ -238,7 +238,7 @@ public class SlingshotProjectile : MonoBehaviour
 		this.Deactivate();
 	}
 
-	// Token: 0x06001601 RID: 5633 RVA: 0x0006B474 File Offset: 0x00069674
+	// Token: 0x06001601 RID: 5633 RVA: 0x0006B494 File Offset: 0x00069694
 	protected void OnTriggerExit(Collider other)
 	{
 		if (!this.particleLaunched)
@@ -252,7 +252,7 @@ public class SlingshotProjectile : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001602 RID: 5634 RVA: 0x0006B4A4 File Offset: 0x000696A4
+	// Token: 0x06001602 RID: 5634 RVA: 0x0006B4C4 File Offset: 0x000696C4
 	protected void OnTriggerEnter(Collider other)
 	{
 		if (!this.particleLaunched)
@@ -320,7 +320,7 @@ public class SlingshotProjectile : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001603 RID: 5635 RVA: 0x0006B669 File Offset: 0x00069869
+	// Token: 0x06001603 RID: 5635 RVA: 0x0006B689 File Offset: 0x00069889
 	private void ApplyColor(Renderer rend, Color color)
 	{
 		if (!rend)

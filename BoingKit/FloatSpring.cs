@@ -6,28 +6,28 @@ namespace BoingKit
 	// Token: 0x02000E8E RID: 3726
 	public struct FloatSpring
 	{
-		// Token: 0x06005D39 RID: 23865 RVA: 0x001CBBA3 File Offset: 0x001C9DA3
+		// Token: 0x06005D3A RID: 23866 RVA: 0x001CBC7B File Offset: 0x001C9E7B
 		public void Reset()
 		{
 			this.Value = 0f;
 			this.Velocity = 0f;
 		}
 
-		// Token: 0x06005D3A RID: 23866 RVA: 0x001CBBBB File Offset: 0x001C9DBB
+		// Token: 0x06005D3B RID: 23867 RVA: 0x001CBC93 File Offset: 0x001C9E93
 		public void Reset(float initValue)
 		{
 			this.Value = initValue;
 			this.Velocity = 0f;
 		}
 
-		// Token: 0x06005D3B RID: 23867 RVA: 0x001CBBCF File Offset: 0x001C9DCF
+		// Token: 0x06005D3C RID: 23868 RVA: 0x001CBCA7 File Offset: 0x001C9EA7
 		public void Reset(float initValue, float initVelocity)
 		{
 			this.Value = initValue;
 			this.Velocity = initVelocity;
 		}
 
-		// Token: 0x06005D3C RID: 23868 RVA: 0x001CBBE0 File Offset: 0x001C9DE0
+		// Token: 0x06005D3D RID: 23869 RVA: 0x001CBCB8 File Offset: 0x001C9EB8
 		public float TrackDampingRatio(float targetValue, float angularFrequency, float dampingRatio, float deltaTime)
 		{
 			if (angularFrequency < MathUtil.Epsilon)
@@ -53,7 +53,7 @@ namespace BoingKit
 			return this.Value;
 		}
 
-		// Token: 0x06005D3D RID: 23869 RVA: 0x001CBCB0 File Offset: 0x001C9EB0
+		// Token: 0x06005D3E RID: 23870 RVA: 0x001CBD88 File Offset: 0x001C9F88
 		public float TrackHalfLife(float targetValue, float frequencyHz, float halfLife, float deltaTime)
 		{
 			if (halfLife < MathUtil.Epsilon)
@@ -67,7 +67,7 @@ namespace BoingKit
 			return this.TrackDampingRatio(targetValue, num, num2, deltaTime);
 		}
 
-		// Token: 0x06005D3E RID: 23870 RVA: 0x001CBCFC File Offset: 0x001C9EFC
+		// Token: 0x06005D3F RID: 23871 RVA: 0x001CBDD4 File Offset: 0x001C9FD4
 		public float TrackExponential(float targetValue, float halfLife, float deltaTime)
 		{
 			if (halfLife < MathUtil.Epsilon)
@@ -81,13 +81,13 @@ namespace BoingKit
 			return this.TrackDampingRatio(targetValue, num, num2, deltaTime);
 		}
 
-		// Token: 0x0400613A RID: 24890
+		// Token: 0x0400613B RID: 24891
 		public static readonly int Stride = 8;
 
-		// Token: 0x0400613B RID: 24891
+		// Token: 0x0400613C RID: 24892
 		public float Value;
 
-		// Token: 0x0400613C RID: 24892
+		// Token: 0x0400613D RID: 24893
 		public float Velocity;
 	}
 }

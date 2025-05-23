@@ -11,11 +11,11 @@ namespace GorillaNetworking
 	public class TitleDataFeatureFlags
 	{
 		// Token: 0x170007B9 RID: 1977
-		// (get) Token: 0x06004E53 RID: 20051 RVA: 0x00175658 File Offset: 0x00173858
-		// (set) Token: 0x06004E54 RID: 20052 RVA: 0x00175660 File Offset: 0x00173860
+		// (get) Token: 0x06004E54 RID: 20052 RVA: 0x00175730 File Offset: 0x00173930
+		// (set) Token: 0x06004E55 RID: 20053 RVA: 0x00175738 File Offset: 0x00173938
 		public bool ready { get; private set; }
 
-		// Token: 0x06004E55 RID: 20053 RVA: 0x00175669 File Offset: 0x00173869
+		// Token: 0x06004E56 RID: 20054 RVA: 0x00175741 File Offset: 0x00173941
 		public void FetchFeatureFlags()
 		{
 			PlayFabTitleDataCache.Instance.GetTitleData(this.TitleDataKey, delegate(string json)
@@ -42,7 +42,7 @@ namespace GorillaNetworking
 			});
 		}
 
-		// Token: 0x06004E56 RID: 20054 RVA: 0x00175694 File Offset: 0x00173894
+		// Token: 0x06004E57 RID: 20055 RVA: 0x0017576C File Offset: 0x0017396C
 		public bool IsEnabledForUser(string flagName)
 		{
 			string playFabPlayerId = PlayFabAuthenticator.instance.GetPlayFabPlayerId();
@@ -85,10 +85,10 @@ namespace GorillaNetworking
 			return (ulong)num2 < (ulong)((long)num);
 		}
 
-		// Token: 0x04005155 RID: 20821
+		// Token: 0x04005156 RID: 20822
 		public string TitleDataKey = "DeployFeatureFlags";
 
-		// Token: 0x04005157 RID: 20823
+		// Token: 0x04005158 RID: 20824
 		public Dictionary<string, bool> defaults = new Dictionary<string, bool>
 		{
 			{ "2024-05-ReturnCurrentVersionV2", true },
@@ -103,10 +103,10 @@ namespace GorillaNetworking
 			{ "2025-04-CosmeticsAuthenticationV2-Compat", true }
 		};
 
-		// Token: 0x04005158 RID: 20824
+		// Token: 0x04005159 RID: 20825
 		private Dictionary<string, int> flagValueByName = new Dictionary<string, int>();
 
-		// Token: 0x04005159 RID: 20825
+		// Token: 0x0400515A RID: 20826
 		private Dictionary<string, List<string>> flagValueByUser = new Dictionary<string, List<string>>();
 	}
 }

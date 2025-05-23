@@ -9,7 +9,7 @@ using UnityEngine;
 // Token: 0x02000727 RID: 1831
 public class NewMapsDisplay : MonoBehaviour
 {
-	// Token: 0x06002D93 RID: 11667 RVA: 0x000E1DA4 File Offset: 0x000DFFA4
+	// Token: 0x06002D94 RID: 11668 RVA: 0x000E1E48 File Offset: 0x000E0048
 	public void OnEnable()
 	{
 		if (ModIOManager.GetNewMapsModId() == ModId.Null)
@@ -31,7 +31,7 @@ public class NewMapsDisplay : MonoBehaviour
 		this.Initialize();
 	}
 
-	// Token: 0x06002D94 RID: 11668 RVA: 0x000E1E70 File Offset: 0x000E0070
+	// Token: 0x06002D95 RID: 11669 RVA: 0x000E1F14 File Offset: 0x000E0114
 	public void OnDisable()
 	{
 		if (this.initCoroutine != null)
@@ -53,7 +53,7 @@ public class NewMapsDisplay : MonoBehaviour
 		this.loadingText.gameObject.SetActive(true);
 	}
 
-	// Token: 0x06002D95 RID: 11669 RVA: 0x000E1F3D File Offset: 0x000E013D
+	// Token: 0x06002D96 RID: 11670 RVA: 0x000E1FE1 File Offset: 0x000E01E1
 	private IEnumerator DelayedInitialize()
 	{
 		bool flag = GorillaServer.Instance != null && GorillaServer.Instance.FeatureFlagsReady;
@@ -67,7 +67,7 @@ public class NewMapsDisplay : MonoBehaviour
 		yield break;
 	}
 
-	// Token: 0x06002D96 RID: 11670 RVA: 0x000E1F4C File Offset: 0x000E014C
+	// Token: 0x06002D97 RID: 11671 RVA: 0x000E1FF0 File Offset: 0x000E01F0
 	private void Initialize()
 	{
 		if (!this.requestingNewMapsModProfile && !this.downloadingImages)
@@ -87,7 +87,7 @@ public class NewMapsDisplay : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06002D97 RID: 11671 RVA: 0x000E1F70 File Offset: 0x000E0170
+	// Token: 0x06002D98 RID: 11672 RVA: 0x000E2014 File Offset: 0x000E0214
 	private async void OnGetNewMapsModProfile(ModIORequestResultAnd<ModProfile> resultAndProfile)
 	{
 		this.requestingNewMapsModProfile = false;
@@ -137,7 +137,7 @@ public class NewMapsDisplay : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06002D98 RID: 11672 RVA: 0x000E1FAF File Offset: 0x000E01AF
+	// Token: 0x06002D99 RID: 11673 RVA: 0x000E2053 File Offset: 0x000E0253
 	private void StartSlideshow()
 	{
 		if (this.newMapDatas.IsNullOrEmpty<NewMapsDisplay.NewMapData>())
@@ -149,7 +149,7 @@ public class NewMapsDisplay : MonoBehaviour
 		this.UpdateSlideshow();
 	}
 
-	// Token: 0x06002D99 RID: 11673 RVA: 0x000E1FD3 File Offset: 0x000E01D3
+	// Token: 0x06002D9A RID: 11674 RVA: 0x000E2077 File Offset: 0x000E0277
 	public void Update()
 	{
 		if (!this.slideshowActive || Time.time - this.lastSlideshowUpdate < this.slideshowUpdateInterval)
@@ -159,7 +159,7 @@ public class NewMapsDisplay : MonoBehaviour
 		this.UpdateSlideshow();
 	}
 
-	// Token: 0x06002D9A RID: 11674 RVA: 0x000E1FF8 File Offset: 0x000E01F8
+	// Token: 0x06002D9B RID: 11675 RVA: 0x000E209C File Offset: 0x000E029C
 	private void UpdateSlideshow()
 	{
 		this.loadingText.gameObject.SetActive(false);
@@ -186,64 +186,64 @@ public class NewMapsDisplay : MonoBehaviour
 		}
 	}
 
-	// Token: 0x040033D1 RID: 13265
+	// Token: 0x040033D3 RID: 13267
 	[SerializeField]
 	private SpriteRenderer mapImage;
 
-	// Token: 0x040033D2 RID: 13266
+	// Token: 0x040033D4 RID: 13268
 	[SerializeField]
 	private TMP_Text loadingText;
 
-	// Token: 0x040033D3 RID: 13267
+	// Token: 0x040033D5 RID: 13269
 	[SerializeField]
 	private TMP_Text modNameText;
 
-	// Token: 0x040033D4 RID: 13268
+	// Token: 0x040033D6 RID: 13270
 	[SerializeField]
 	private TMP_Text modCreatorLabelText;
 
-	// Token: 0x040033D5 RID: 13269
+	// Token: 0x040033D7 RID: 13271
 	[SerializeField]
 	private TMP_Text modCreatorText;
 
-	// Token: 0x040033D6 RID: 13270
+	// Token: 0x040033D8 RID: 13272
 	[SerializeField]
 	private float slideshowUpdateInterval = 1f;
 
-	// Token: 0x040033D7 RID: 13271
+	// Token: 0x040033D9 RID: 13273
 	private ModProfile newMapsModProfile;
 
-	// Token: 0x040033D8 RID: 13272
+	// Token: 0x040033DA RID: 13274
 	private List<NewMapsDisplay.NewMapData> newMapDatas = new List<NewMapsDisplay.NewMapData>();
 
-	// Token: 0x040033D9 RID: 13273
+	// Token: 0x040033DB RID: 13275
 	private bool slideshowActive;
 
-	// Token: 0x040033DA RID: 13274
+	// Token: 0x040033DC RID: 13276
 	private int slideshowIndex;
 
-	// Token: 0x040033DB RID: 13275
+	// Token: 0x040033DD RID: 13277
 	private float lastSlideshowUpdate;
 
-	// Token: 0x040033DC RID: 13276
+	// Token: 0x040033DE RID: 13278
 	private bool requestingNewMapsModProfile;
 
-	// Token: 0x040033DD RID: 13277
+	// Token: 0x040033DF RID: 13279
 	private bool downloadingImages;
 
-	// Token: 0x040033DE RID: 13278
+	// Token: 0x040033E0 RID: 13280
 	private Coroutine initCoroutine;
 
 	// Token: 0x02000728 RID: 1832
 	private struct NewMapData
 	{
-		// Token: 0x040033DF RID: 13279
+		// Token: 0x040033E1 RID: 13281
 		public Texture2D image;
 
-		// Token: 0x040033E0 RID: 13280
+		// Token: 0x040033E2 RID: 13282
 		public string name;
 
-		// Token: 0x040033E1 RID: 13281
+		// Token: 0x040033E3 RID: 13283
 		public string creator;
 	}
 }

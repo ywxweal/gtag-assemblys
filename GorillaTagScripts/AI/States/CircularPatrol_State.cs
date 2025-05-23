@@ -6,13 +6,13 @@ namespace GorillaTagScripts.AI.States
 	// Token: 0x02000B9D RID: 2973
 	public class CircularPatrol_State : IState
 	{
-		// Token: 0x060049B1 RID: 18865 RVA: 0x0015FFDC File Offset: 0x0015E1DC
+		// Token: 0x060049B2 RID: 18866 RVA: 0x001600B4 File Offset: 0x0015E2B4
 		public CircularPatrol_State(AIEntity entity)
 		{
 			this.entity = entity;
 		}
 
-		// Token: 0x060049B2 RID: 18866 RVA: 0x0015FFEC File Offset: 0x0015E1EC
+		// Token: 0x060049B3 RID: 18867 RVA: 0x001600C4 File Offset: 0x0015E2C4
 		public void Tick()
 		{
 			Vector3 position = this.entity.circleCenter.position;
@@ -23,20 +23,20 @@ namespace GorillaTagScripts.AI.States
 			this.angle += this.entity.angularSpeed * Time.deltaTime;
 		}
 
-		// Token: 0x060049B3 RID: 18867 RVA: 0x000023F4 File Offset: 0x000005F4
+		// Token: 0x060049B4 RID: 18868 RVA: 0x000023F4 File Offset: 0x000005F4
 		public void OnEnter()
 		{
 		}
 
-		// Token: 0x060049B4 RID: 18868 RVA: 0x000023F4 File Offset: 0x000005F4
+		// Token: 0x060049B5 RID: 18869 RVA: 0x000023F4 File Offset: 0x000005F4
 		public void OnExit()
 		{
 		}
 
-		// Token: 0x04004C89 RID: 19593
+		// Token: 0x04004C8A RID: 19594
 		private AIEntity entity;
 
-		// Token: 0x04004C8A RID: 19594
+		// Token: 0x04004C8B RID: 19595
 		private float angle;
 	}
 }

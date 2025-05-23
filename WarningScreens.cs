@@ -7,7 +7,7 @@ using UnityEngine;
 // Token: 0x02000835 RID: 2101
 public class WarningScreens : MonoBehaviour
 {
-	// Token: 0x06003360 RID: 13152 RVA: 0x000FD459 File Offset: 0x000FB659
+	// Token: 0x06003361 RID: 13153 RVA: 0x000FD531 File Offset: 0x000FB731
 	private void Awake()
 	{
 		if (WarningScreens._activeReference == null)
@@ -19,7 +19,7 @@ public class WarningScreens : MonoBehaviour
 		Object.Destroy(this);
 	}
 
-	// Token: 0x06003361 RID: 13153 RVA: 0x000FD480 File Offset: 0x000FB680
+	// Token: 0x06003362 RID: 13154 RVA: 0x000FD558 File Offset: 0x000FB758
 	private async Task<WarningButtonResult> StartWarningScreenInternal(CancellationToken cancellationToken)
 	{
 		WarningScreens._closedMessageBox = false;
@@ -69,7 +69,7 @@ public class WarningScreens : MonoBehaviour
 		return warningButtonResult;
 	}
 
-	// Token: 0x06003362 RID: 13154 RVA: 0x000FD4CC File Offset: 0x000FB6CC
+	// Token: 0x06003363 RID: 13155 RVA: 0x000FD5A4 File Offset: 0x000FB7A4
 	private async Task<WarningButtonResult> StartOptInFollowUpScreenInternal(CancellationToken cancellationToken)
 	{
 		WarningScreens._closedMessageBox = false;
@@ -111,19 +111,19 @@ public class WarningScreens : MonoBehaviour
 		return warningButtonResult;
 	}
 
-	// Token: 0x06003363 RID: 13155 RVA: 0x000FD518 File Offset: 0x000FB718
+	// Token: 0x06003364 RID: 13156 RVA: 0x000FD5F0 File Offset: 0x000FB7F0
 	public static async Task<WarningButtonResult> StartWarningScreen(CancellationToken cancellationToken)
 	{
 		return await WarningScreens._activeReference.StartWarningScreenInternal(cancellationToken);
 	}
 
-	// Token: 0x06003364 RID: 13156 RVA: 0x000FD55C File Offset: 0x000FB75C
+	// Token: 0x06003365 RID: 13157 RVA: 0x000FD634 File Offset: 0x000FB834
 	public static async Task<WarningButtonResult> StartOptInFollowUpScreen(CancellationToken cancellationToken)
 	{
 		return await WarningScreens._activeReference.StartOptInFollowUpScreenInternal(cancellationToken);
 	}
 
-	// Token: 0x06003365 RID: 13157 RVA: 0x000FD5A0 File Offset: 0x000FB7A0
+	// Token: 0x06003366 RID: 13158 RVA: 0x000FD678 File Offset: 0x000FB878
 	private static async Task WaitForResponse(CancellationToken cancellationToken)
 	{
 		while (!WarningScreens._closedMessageBox)
@@ -136,7 +136,7 @@ public class WarningScreens : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06003366 RID: 13158 RVA: 0x000FD5E3 File Offset: 0x000FB7E3
+	// Token: 0x06003367 RID: 13159 RVA: 0x000FD6BB File Offset: 0x000FB8BB
 	public static void OnLeftButtonClicked()
 	{
 		WarningScreens._result = WarningScreens._leftButtonResult;
@@ -154,7 +154,7 @@ public class WarningScreens : MonoBehaviour
 		onLeftButtonPressedAction();
 	}
 
-	// Token: 0x06003367 RID: 13159 RVA: 0x000FD60E File Offset: 0x000FB80E
+	// Token: 0x06003368 RID: 13160 RVA: 0x000FD6E6 File Offset: 0x000FB8E6
 	public static void OnRightButtonClicked()
 	{
 		WarningScreens._result = WarningScreens._rightButtonResult;
@@ -172,40 +172,40 @@ public class WarningScreens : MonoBehaviour
 		onRightButtonPressedAction();
 	}
 
-	// Token: 0x04003A30 RID: 14896
-	private static WarningScreens _activeReference;
-
 	// Token: 0x04003A31 RID: 14897
-	[SerializeField]
-	private MessageBox _messageBox;
+	private static WarningScreens _activeReference;
 
 	// Token: 0x04003A32 RID: 14898
 	[SerializeField]
-	private GameObject _imageContainer;
+	private MessageBox _messageBox;
 
 	// Token: 0x04003A33 RID: 14899
 	[SerializeField]
-	private TMP_Text _withImageText;
+	private GameObject _imageContainer;
 
 	// Token: 0x04003A34 RID: 14900
 	[SerializeField]
-	private TMP_Text _noImageText;
+	private TMP_Text _withImageText;
 
 	// Token: 0x04003A35 RID: 14901
-	private Action _onLeftButtonPressedAction;
+	[SerializeField]
+	private TMP_Text _noImageText;
 
 	// Token: 0x04003A36 RID: 14902
-	private Action _onRightButtonPressedAction;
+	private Action _onLeftButtonPressedAction;
 
 	// Token: 0x04003A37 RID: 14903
-	private static WarningButtonResult _result;
+	private Action _onRightButtonPressedAction;
 
 	// Token: 0x04003A38 RID: 14904
-	private static WarningButtonResult _leftButtonResult;
+	private static WarningButtonResult _result;
 
 	// Token: 0x04003A39 RID: 14905
-	private static WarningButtonResult _rightButtonResult;
+	private static WarningButtonResult _leftButtonResult;
 
 	// Token: 0x04003A3A RID: 14906
+	private static WarningButtonResult _rightButtonResult;
+
+	// Token: 0x04003A3B RID: 14907
 	private static bool _closedMessageBox;
 }

@@ -8,7 +8,7 @@ using UnityEngine;
 // Token: 0x020008DA RID: 2266
 public class GorillaFriendCollider : MonoBehaviour
 {
-	// Token: 0x06003720 RID: 14112 RVA: 0x0010AAE8 File Offset: 0x00108CE8
+	// Token: 0x06003721 RID: 14113 RVA: 0x0010ABC0 File Offset: 0x00108DC0
 	public void Awake()
 	{
 		this.thisCapsule = base.GetComponent<CapsuleCollider>();
@@ -17,19 +17,19 @@ public class GorillaFriendCollider : MonoBehaviour
 		this.tagAndBodyLayerMask = LayerMask.GetMask(new string[] { "Gorilla Tag Collider" }) | LayerMask.GetMask(new string[] { "Gorilla Body Collider" });
 	}
 
-	// Token: 0x06003721 RID: 14113 RVA: 0x0010AB4F File Offset: 0x00108D4F
+	// Token: 0x06003722 RID: 14114 RVA: 0x0010AC27 File Offset: 0x00108E27
 	public void OnEnable()
 	{
 		base.StartCoroutine(this.UpdatePlayersInSphere());
 	}
 
-	// Token: 0x06003722 RID: 14114 RVA: 0x0010AB5E File Offset: 0x00108D5E
+	// Token: 0x06003723 RID: 14115 RVA: 0x0010AC36 File Offset: 0x00108E36
 	public void OnDisable()
 	{
 		base.StopCoroutine(this.UpdatePlayersInSphere());
 	}
 
-	// Token: 0x06003723 RID: 14115 RVA: 0x0010AB6C File Offset: 0x00108D6C
+	// Token: 0x06003724 RID: 14116 RVA: 0x0010AC44 File Offset: 0x00108E44
 	private void AddUserID(in string userID)
 	{
 		if (this.playerIDsCurrentlyTouching.Contains(userID))
@@ -39,7 +39,7 @@ public class GorillaFriendCollider : MonoBehaviour
 		this.playerIDsCurrentlyTouching.Add(userID);
 	}
 
-	// Token: 0x06003724 RID: 14116 RVA: 0x0010AB8B File Offset: 0x00108D8B
+	// Token: 0x06003725 RID: 14117 RVA: 0x0010AC63 File Offset: 0x00108E63
 	private IEnumerator UpdatePlayersInSphere()
 	{
 		yield return new WaitForSeconds(1f + this.jiggleAmount);
@@ -121,50 +121,50 @@ public class GorillaFriendCollider : MonoBehaviour
 		yield break;
 	}
 
-	// Token: 0x04003CA7 RID: 15527
+	// Token: 0x04003CA8 RID: 15528
 	public List<string> playerIDsCurrentlyTouching = new List<string>();
 
-	// Token: 0x04003CA8 RID: 15528
+	// Token: 0x04003CA9 RID: 15529
 	private CapsuleCollider thisCapsule;
 
-	// Token: 0x04003CA9 RID: 15529
+	// Token: 0x04003CAA RID: 15530
 	private BoxCollider thisBox;
 
-	// Token: 0x04003CAA RID: 15530
+	// Token: 0x04003CAB RID: 15531
 	[Tooltip("If using a capsule collider, the player position can be checked against these minimum and maximum Y limits (world position) to make it behave more like a cylinder check")]
 	public bool applyCapsuleYLimits;
 
-	// Token: 0x04003CAB RID: 15531
+	// Token: 0x04003CAC RID: 15532
 	[Tooltip("If the player's Y world position is lower than Limits.x or higher than Limits.y, they will not be considered \"Inside\" the friend collider")]
 	public Vector2 capsuleColliderYLimits = Vector2.zero;
 
-	// Token: 0x04003CAC RID: 15532
+	// Token: 0x04003CAD RID: 15533
 	public bool runCheckWhileNotInRoom;
 
-	// Token: 0x04003CAD RID: 15533
+	// Token: 0x04003CAE RID: 15534
 	public string[] myAllowedMapsToJoin;
 
-	// Token: 0x04003CAE RID: 15534
+	// Token: 0x04003CAF RID: 15535
 	private readonly Collider[] overlapColliders = new Collider[20];
 
-	// Token: 0x04003CAF RID: 15535
+	// Token: 0x04003CB0 RID: 15536
 	private int tagAndBodyLayerMask;
 
-	// Token: 0x04003CB0 RID: 15536
+	// Token: 0x04003CB1 RID: 15537
 	private float jiggleAmount;
 
-	// Token: 0x04003CB1 RID: 15537
+	// Token: 0x04003CB2 RID: 15538
 	private Collider otherCollider;
 
-	// Token: 0x04003CB2 RID: 15538
+	// Token: 0x04003CB3 RID: 15539
 	private GameObject otherColliderGO;
 
-	// Token: 0x04003CB3 RID: 15539
+	// Token: 0x04003CB4 RID: 15540
 	private VRRig collidingRig;
 
-	// Token: 0x04003CB4 RID: 15540
+	// Token: 0x04003CB5 RID: 15541
 	private int collisions;
 
-	// Token: 0x04003CB5 RID: 15541
+	// Token: 0x04003CB6 RID: 15542
 	private WaitForSeconds wait1Sec = new WaitForSeconds(1f);
 }

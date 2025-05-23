@@ -7,7 +7,7 @@ using UnityEngine;
 // Token: 0x020008EB RID: 2283
 public class PhotonAuthenticator : MonoBehaviour
 {
-	// Token: 0x06003773 RID: 14195 RVA: 0x0010BECE File Offset: 0x0010A0CE
+	// Token: 0x06003774 RID: 14196 RVA: 0x0010BFA6 File Offset: 0x0010A1A6
 	private void Awake()
 	{
 		Debug.Log("Environment is *************** PRODUCTION PUN *******************");
@@ -15,7 +15,7 @@ public class PhotonAuthenticator : MonoBehaviour
 		PhotonNetwork.PhotonServerSettings.AppSettings.AppIdVoice = PhotonAuthenticatorSettings.VoiceAppId;
 	}
 
-	// Token: 0x06003774 RID: 14196 RVA: 0x0010BF04 File Offset: 0x0010A104
+	// Token: 0x06003775 RID: 14197 RVA: 0x0010BFDC File Offset: 0x0010A1DC
 	public void SetCustomAuthenticationParameters(Dictionary<string, object> customAuthData)
 	{
 		AuthenticationValues authenticationValues = new AuthenticationValues();

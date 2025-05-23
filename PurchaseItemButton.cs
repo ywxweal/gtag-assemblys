@@ -6,7 +6,7 @@ using UnityEngine;
 // Token: 0x0200043A RID: 1082
 public class PurchaseItemButton : GorillaPressableButton
 {
-	// Token: 0x06001AB3 RID: 6835 RVA: 0x00082CEB File Offset: 0x00080EEB
+	// Token: 0x06001AB3 RID: 6835 RVA: 0x00082D0B File Offset: 0x00080F0B
 	public override void ButtonActivationWithHand(bool isLeftHand)
 	{
 		base.ButtonActivation();
@@ -14,7 +14,7 @@ public class PurchaseItemButton : GorillaPressableButton
 		base.StartCoroutine(this.ButtonColorUpdate());
 	}
 
-	// Token: 0x06001AB4 RID: 6836 RVA: 0x00082D0E File Offset: 0x00080F0E
+	// Token: 0x06001AB4 RID: 6836 RVA: 0x00082D2E File Offset: 0x00080F2E
 	private IEnumerator ButtonColorUpdate()
 	{
 		Debug.Log("did this happen?");

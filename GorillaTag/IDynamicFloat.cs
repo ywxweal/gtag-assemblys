@@ -6,7 +6,7 @@ namespace GorillaTag
 	public interface IDynamicFloat
 	{
 		// Token: 0x1700085E RID: 2142
-		// (get) Token: 0x060053DC RID: 21468
+		// (get) Token: 0x060053DD RID: 21469
 		float floatValue { get; }
 	}
 }

@@ -5,8 +5,8 @@ using UnityEngine;
 public class CustomMapsTerminalControlButton : GorillaPressableButton
 {
 	// Token: 0x1700045A RID: 1114
-	// (get) Token: 0x06002C7B RID: 11387 RVA: 0x000D73F9 File Offset: 0x000D55F9
-	// (set) Token: 0x06002C7C RID: 11388 RVA: 0x000DB60F File Offset: 0x000D980F
+	// (get) Token: 0x06002C7C RID: 11388 RVA: 0x000D749D File Offset: 0x000D569D
+	// (set) Token: 0x06002C7D RID: 11389 RVA: 0x000DB6B3 File Offset: 0x000D98B3
 	public bool IsLocked
 	{
 		get
@@ -19,7 +19,7 @@ public class CustomMapsTerminalControlButton : GorillaPressableButton
 		}
 	}
 
-	// Token: 0x06002C7D RID: 11389 RVA: 0x000DB618 File Offset: 0x000D9818
+	// Token: 0x06002C7E RID: 11390 RVA: 0x000DB6BC File Offset: 0x000D98BC
 	public override void ButtonActivation()
 	{
 		base.ButtonActivation();
@@ -30,7 +30,7 @@ public class CustomMapsTerminalControlButton : GorillaPressableButton
 		this.mapsTerminal.HandleTerminalControlButtonPressed();
 	}
 
-	// Token: 0x06002C7E RID: 11390 RVA: 0x000DB63C File Offset: 0x000D983C
+	// Token: 0x06002C7F RID: 11391 RVA: 0x000DB6E0 File Offset: 0x000D98E0
 	public void LockTerminalControl()
 	{
 		if (this.IsLocked)
@@ -50,7 +50,7 @@ public class CustomMapsTerminalControlButton : GorillaPressableButton
 		}
 	}
 
-	// Token: 0x06002C7F RID: 11391 RVA: 0x000DB6A0 File Offset: 0x000D98A0
+	// Token: 0x06002C80 RID: 11392 RVA: 0x000DB744 File Offset: 0x000D9944
 	public void UnlockTerminalControl()
 	{
 		if (!this.IsLocked)
@@ -70,15 +70,15 @@ public class CustomMapsTerminalControlButton : GorillaPressableButton
 		}
 	}
 
-	// Token: 0x040032C7 RID: 12999
+	// Token: 0x040032C9 RID: 13001
 	[SerializeField]
 	private Color unlockedTextColor = Color.black;
 
-	// Token: 0x040032C8 RID: 13000
+	// Token: 0x040032CA RID: 13002
 	[SerializeField]
 	private Color lockedTextColor = Color.white;
 
-	// Token: 0x040032C9 RID: 13001
+	// Token: 0x040032CB RID: 13003
 	[SerializeField]
 	private CustomMapsTerminal mapsTerminal;
 }

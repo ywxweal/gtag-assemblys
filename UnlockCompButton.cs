@@ -4,13 +4,13 @@ using GorillaNetworking;
 // Token: 0x020006F5 RID: 1781
 public class UnlockCompButton : GorillaPressableButton
 {
-	// Token: 0x06002C58 RID: 11352 RVA: 0x000DAC05 File Offset: 0x000D8E05
+	// Token: 0x06002C59 RID: 11353 RVA: 0x000DACA9 File Offset: 0x000D8EA9
 	public override void Start()
 	{
 		this.initialized = false;
 	}
 
-	// Token: 0x06002C59 RID: 11353 RVA: 0x000DAC10 File Offset: 0x000D8E10
+	// Token: 0x06002C5A RID: 11354 RVA: 0x000DACB4 File Offset: 0x000D8EB4
 	public void Update()
 	{
 		if (this.testPress)
@@ -26,7 +26,7 @@ public class UnlockCompButton : GorillaPressableButton
 		}
 	}
 
-	// Token: 0x06002C5A RID: 11354 RVA: 0x000DAC68 File Offset: 0x000D8E68
+	// Token: 0x06002C5B RID: 11355 RVA: 0x000DAD0C File Offset: 0x000D8F0C
 	public override void ButtonActivation()
 	{
 		if (!this.isOn)
@@ -38,9 +38,9 @@ public class UnlockCompButton : GorillaPressableButton
 		}
 	}
 
-	// Token: 0x040032A1 RID: 12961
+	// Token: 0x040032A3 RID: 12963
 	public string gameMode;
 
-	// Token: 0x040032A2 RID: 12962
+	// Token: 0x040032A4 RID: 12964
 	private bool initialized;
 }

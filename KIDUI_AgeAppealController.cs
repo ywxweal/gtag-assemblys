@@ -7,7 +7,7 @@ using UnityEngine;
 public class KIDUI_AgeAppealController : MonoBehaviour
 {
 	// Token: 0x1700051F RID: 1311
-	// (get) Token: 0x060032A3 RID: 12963 RVA: 0x000F993C File Offset: 0x000F7B3C
+	// (get) Token: 0x060032A4 RID: 12964 RVA: 0x000F9A14 File Offset: 0x000F7C14
 	public static KIDUI_AgeAppealController Instance
 	{
 		get
@@ -16,14 +16,14 @@ public class KIDUI_AgeAppealController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060032A4 RID: 12964 RVA: 0x000F9943 File Offset: 0x000F7B43
+	// Token: 0x060032A5 RID: 12965 RVA: 0x000F9A1B File Offset: 0x000F7C1B
 	private void Awake()
 	{
 		KIDUI_AgeAppealController._instance = this;
 		Debug.LogFormat("[KID::UI::AGEAPPEALCONTROLLER] Controller Initialised", Array.Empty<object>());
 	}
 
-	// Token: 0x060032A5 RID: 12965 RVA: 0x000F995C File Offset: 0x000F7B5C
+	// Token: 0x060032A6 RID: 12966 RVA: 0x000F9A34 File Offset: 0x000F7C34
 	public void StartAgeAppealScreens(SessionStatus? sessionStatus)
 	{
 		Debug.LogFormat("[KID::UI::AGEAPPEALCONTROLLER] Showing k-ID Age Appeal Screens", Array.Empty<object>());
@@ -51,7 +51,7 @@ public class KIDUI_AgeAppealController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060032A6 RID: 12966 RVA: 0x000F9A0A File Offset: 0x000F7C0A
+	// Token: 0x060032A7 RID: 12967 RVA: 0x000F9AE2 File Offset: 0x000F7CE2
 	public void CloseKIDScreens()
 	{
 		PrivateUIRoom.RemoveUI(base.transform);
@@ -60,7 +60,7 @@ public class KIDUI_AgeAppealController : MonoBehaviour
 		Object.DestroyImmediate(base.gameObject);
 	}
 
-	// Token: 0x060032A7 RID: 12967 RVA: 0x000F9A40 File Offset: 0x000F7C40
+	// Token: 0x060032A8 RID: 12968 RVA: 0x000F9B18 File Offset: 0x000F7D18
 	public void StartTooYoungToPlayScreen()
 	{
 		Debug.LogFormat("[KID::UI::AGEAPPEALCONTROLLER] Showing k-ID Too Young to Play Screen", Array.Empty<object>());
@@ -80,20 +80,20 @@ public class KIDUI_AgeAppealController : MonoBehaviour
 		});
 	}
 
-	// Token: 0x060032A8 RID: 12968 RVA: 0x0008B8E9 File Offset: 0x00089AE9
+	// Token: 0x060032A9 RID: 12969 RVA: 0x0008B909 File Offset: 0x00089B09
 	public void OnQuitGamePressed()
 	{
 		Application.Quit();
 	}
 
-	// Token: 0x04003955 RID: 14677
+	// Token: 0x04003956 RID: 14678
 	private static KIDUI_AgeAppealController _instance;
 
-	// Token: 0x04003956 RID: 14678
+	// Token: 0x04003957 RID: 14679
 	[SerializeField]
 	private KIDUI_RestrictedAccessScreen _firstAgeAppealScreen;
 
-	// Token: 0x04003957 RID: 14679
+	// Token: 0x04003958 RID: 14680
 	[SerializeField]
 	private KIDUI_TooYoungToPlay _tooYoungToPlayScreen;
 }

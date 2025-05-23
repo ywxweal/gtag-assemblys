@@ -6,27 +6,27 @@ using UnityEngine.XR;
 // Token: 0x020005C4 RID: 1476
 public class GRToolFlash : MonoBehaviour
 {
-	// Token: 0x060023F7 RID: 9207 RVA: 0x000B506A File Offset: 0x000B326A
+	// Token: 0x060023F7 RID: 9207 RVA: 0x000B508A File Offset: 0x000B328A
 	private void Awake()
 	{
 		this.state = GRToolFlash.State.Idle;
 		this.stateTimeRemaining = -1f;
 	}
 
-	// Token: 0x060023F8 RID: 9208 RVA: 0x000B507E File Offset: 0x000B327E
+	// Token: 0x060023F8 RID: 9208 RVA: 0x000B509E File Offset: 0x000B329E
 	private void OnEnable()
 	{
 		this.StopFlash();
 		this.SetState(GRToolFlash.State.Idle);
 	}
 
-	// Token: 0x060023F9 RID: 9209 RVA: 0x000B508D File Offset: 0x000B328D
+	// Token: 0x060023F9 RID: 9209 RVA: 0x000B50AD File Offset: 0x000B32AD
 	private bool IsHeldLocal()
 	{
 		return this.item.heldByActorNumber == PhotonNetwork.LocalPlayer.ActorNumber;
 	}
 
-	// Token: 0x060023FA RID: 9210 RVA: 0x000B50A6 File Offset: 0x000B32A6
+	// Token: 0x060023FA RID: 9210 RVA: 0x000B50C6 File Offset: 0x000B32C6
 	public void OnUpdate(float dt)
 	{
 		if (this.IsHeldLocal())
@@ -37,7 +37,7 @@ public class GRToolFlash : MonoBehaviour
 		this.OnUpdateRemote(dt);
 	}
 
-	// Token: 0x060023FB RID: 9211 RVA: 0x000B50C0 File Offset: 0x000B32C0
+	// Token: 0x060023FB RID: 9211 RVA: 0x000B50E0 File Offset: 0x000B32E0
 	public void Update()
 	{
 		float deltaTime = Time.deltaTime;
@@ -49,7 +49,7 @@ public class GRToolFlash : MonoBehaviour
 		this.OnUpdateRemote(deltaTime);
 	}
 
-	// Token: 0x060023FC RID: 9212 RVA: 0x000B50F4 File Offset: 0x000B32F4
+	// Token: 0x060023FC RID: 9212 RVA: 0x000B5114 File Offset: 0x000B3314
 	private void OnUpdateAuthority(float dt)
 	{
 		switch (this.state)
@@ -100,7 +100,7 @@ public class GRToolFlash : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060023FD RID: 9213 RVA: 0x000B51DC File Offset: 0x000B33DC
+	// Token: 0x060023FD RID: 9213 RVA: 0x000B51FC File Offset: 0x000B33FC
 	private void OnUpdateRemote(float dt)
 	{
 		GRToolFlash.State state = (GRToolFlash.State)this.gameEntity.GetState();
@@ -110,14 +110,14 @@ public class GRToolFlash : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060023FE RID: 9214 RVA: 0x000B5206 File Offset: 0x000B3406
+	// Token: 0x060023FE RID: 9214 RVA: 0x000B5226 File Offset: 0x000B3426
 	private void SetStateAuthority(GRToolFlash.State newState)
 	{
 		this.SetState(newState);
 		GameEntityManager.instance.RequestState(this.gameEntity.id, (long)newState);
 	}
 
-	// Token: 0x060023FF RID: 9215 RVA: 0x000B5228 File Offset: 0x000B3428
+	// Token: 0x060023FF RID: 9215 RVA: 0x000B5248 File Offset: 0x000B3448
 	private void SetState(GRToolFlash.State newState)
 	{
 		if (!this.CanChangeState((long)newState))
@@ -147,7 +147,7 @@ public class GRToolFlash : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06002400 RID: 9216 RVA: 0x000B52AC File Offset: 0x000B34AC
+	// Token: 0x06002400 RID: 9216 RVA: 0x000B52CC File Offset: 0x000B34CC
 	private void StartCharge()
 	{
 		this.audioSource.volume = this.chargeSoundVolume;
@@ -159,7 +159,7 @@ public class GRToolFlash : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06002401 RID: 9217 RVA: 0x000B5304 File Offset: 0x000B3504
+	// Token: 0x06002401 RID: 9217 RVA: 0x000B5324 File Offset: 0x000B3524
 	private void StartFlash()
 	{
 		this.flash.SetActive(true);
@@ -197,13 +197,13 @@ public class GRToolFlash : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06002402 RID: 9218 RVA: 0x000B543E File Offset: 0x000B363E
+	// Token: 0x06002402 RID: 9218 RVA: 0x000B545E File Offset: 0x000B365E
 	private void StopFlash()
 	{
 		this.flash.SetActive(false);
 	}
 
-	// Token: 0x06002403 RID: 9219 RVA: 0x000B544C File Offset: 0x000B364C
+	// Token: 0x06002403 RID: 9219 RVA: 0x000B546C File Offset: 0x000B366C
 	private bool IsButtonHeld()
 	{
 		if (!this.IsHeldLocal())
@@ -219,7 +219,7 @@ public class GRToolFlash : MonoBehaviour
 		return num != -1 && ControllerInputPoller.TriggerFloat(GamePlayer.IsLeftHand(num) ? XRNode.LeftHand : XRNode.RightHand) > 0.25f;
 	}
 
-	// Token: 0x06002404 RID: 9220 RVA: 0x000B54B0 File Offset: 0x000B36B0
+	// Token: 0x06002404 RID: 9220 RVA: 0x000B54D0 File Offset: 0x000B36D0
 	private void PlayVibration(float strength, float duration)
 	{
 		if (!this.IsHeldLocal())
@@ -239,7 +239,7 @@ public class GRToolFlash : MonoBehaviour
 		GorillaTagger.Instance.StartVibration(GamePlayer.IsLeftHand(num), strength, duration);
 	}
 
-	// Token: 0x06002405 RID: 9221 RVA: 0x000B550A File Offset: 0x000B370A
+	// Token: 0x06002405 RID: 9221 RVA: 0x000B552A File Offset: 0x000B372A
 	public bool CanChangeState(long newStateIndex)
 	{
 		return newStateIndex >= 0L && newStateIndex < 4L && ((int)newStateIndex != 2 || Time.time > this.timeLastFlashed + this.cooldownMinimum);

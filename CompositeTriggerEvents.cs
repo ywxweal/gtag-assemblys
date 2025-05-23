@@ -6,7 +6,7 @@ using UnityEngine;
 public class CompositeTriggerEvents : MonoBehaviour
 {
 	// Token: 0x170005CD RID: 1485
-	// (get) Token: 0x06003A94 RID: 14996 RVA: 0x001186FA File Offset: 0x001168FA
+	// (get) Token: 0x06003A95 RID: 14997 RVA: 0x001187D2 File Offset: 0x001169D2
 	private Dictionary<Collider, int> CollderMasks
 	{
 		get
@@ -16,16 +16,16 @@ public class CompositeTriggerEvents : MonoBehaviour
 	}
 
 	// Token: 0x1400006E RID: 110
-	// (add) Token: 0x06003A95 RID: 14997 RVA: 0x00118704 File Offset: 0x00116904
-	// (remove) Token: 0x06003A96 RID: 14998 RVA: 0x0011873C File Offset: 0x0011693C
+	// (add) Token: 0x06003A96 RID: 14998 RVA: 0x001187DC File Offset: 0x001169DC
+	// (remove) Token: 0x06003A97 RID: 14999 RVA: 0x00118814 File Offset: 0x00116A14
 	public event CompositeTriggerEvents.TriggerEvent CompositeTriggerEnter;
 
 	// Token: 0x1400006F RID: 111
-	// (add) Token: 0x06003A97 RID: 14999 RVA: 0x00118774 File Offset: 0x00116974
-	// (remove) Token: 0x06003A98 RID: 15000 RVA: 0x001187AC File Offset: 0x001169AC
+	// (add) Token: 0x06003A98 RID: 15000 RVA: 0x0011884C File Offset: 0x00116A4C
+	// (remove) Token: 0x06003A99 RID: 15001 RVA: 0x00118884 File Offset: 0x00116A84
 	public event CompositeTriggerEvents.TriggerEvent CompositeTriggerExit;
 
-	// Token: 0x06003A99 RID: 15001 RVA: 0x001187E4 File Offset: 0x001169E4
+	// Token: 0x06003A9A RID: 15002 RVA: 0x001188BC File Offset: 0x00116ABC
 	private void Awake()
 	{
 		if (this.individualTriggerColliders.Count > 32)
@@ -42,7 +42,7 @@ public class CompositeTriggerEvents : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06003A9A RID: 15002 RVA: 0x00118884 File Offset: 0x00116A84
+	// Token: 0x06003A9B RID: 15003 RVA: 0x0011895C File Offset: 0x00116B5C
 	private void OnDestroy()
 	{
 		for (int i = 0; i < this.triggerEventNotifiers.Count; i++)
@@ -55,7 +55,7 @@ public class CompositeTriggerEvents : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06003A9B RID: 15003 RVA: 0x001188F8 File Offset: 0x00116AF8
+	// Token: 0x06003A9C RID: 15004 RVA: 0x001189D0 File Offset: 0x00116BD0
 	public void TriggerEnterReceiver(TriggerEventNotifier notifier, Collider other)
 	{
 		int num;
@@ -75,7 +75,7 @@ public class CompositeTriggerEvents : MonoBehaviour
 		compositeTriggerEnter(other);
 	}
 
-	// Token: 0x06003A9C RID: 15004 RVA: 0x00118960 File Offset: 0x00116B60
+	// Token: 0x06003A9D RID: 15005 RVA: 0x00118A38 File Offset: 0x00116C38
 	public void TriggerExitReceiver(TriggerEventNotifier notifier, Collider other)
 	{
 		int num;
@@ -100,7 +100,7 @@ public class CompositeTriggerEvents : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06003A9D RID: 15005 RVA: 0x001189BC File Offset: 0x00116BBC
+	// Token: 0x06003A9E RID: 15006 RVA: 0x00118A94 File Offset: 0x00116C94
 	public void ResetColliderMask(Collider other)
 	{
 		int num;
@@ -118,7 +118,7 @@ public class CompositeTriggerEvents : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06003A9E RID: 15006 RVA: 0x001189FB File Offset: 0x00116BFB
+	// Token: 0x06003A9F RID: 15007 RVA: 0x00118AD3 File Offset: 0x00116CD3
 	public void CompositeTriggerEnterReceiver(Collider other)
 	{
 		CompositeTriggerEvents.TriggerEvent compositeTriggerEnter = this.CompositeTriggerEnter;
@@ -129,7 +129,7 @@ public class CompositeTriggerEvents : MonoBehaviour
 		compositeTriggerEnter(other);
 	}
 
-	// Token: 0x06003A9F RID: 15007 RVA: 0x00118A0E File Offset: 0x00116C0E
+	// Token: 0x06003AA0 RID: 15008 RVA: 0x00118AE6 File Offset: 0x00116CE6
 	public void CompositeTriggerExitReceiver(Collider other)
 	{
 		CompositeTriggerEvents.TriggerEvent compositeTriggerExit = this.CompositeTriggerExit;
@@ -140,25 +140,25 @@ public class CompositeTriggerEvents : MonoBehaviour
 		compositeTriggerExit(other);
 	}
 
-	// Token: 0x06003AA0 RID: 15008 RVA: 0x00118A21 File Offset: 0x00116C21
+	// Token: 0x06003AA1 RID: 15009 RVA: 0x00118AF9 File Offset: 0x00116CF9
 	private bool TestMaskIndex(int mask, int index)
 	{
 		return (mask & (1 << index)) != 0;
 	}
 
-	// Token: 0x06003AA1 RID: 15009 RVA: 0x00118A2E File Offset: 0x00116C2E
+	// Token: 0x06003AA2 RID: 15010 RVA: 0x00118B06 File Offset: 0x00116D06
 	private int SetMaskIndexTrue(int mask, int index)
 	{
 		return mask | (1 << index);
 	}
 
-	// Token: 0x06003AA2 RID: 15010 RVA: 0x00118A38 File Offset: 0x00116C38
+	// Token: 0x06003AA3 RID: 15011 RVA: 0x00118B10 File Offset: 0x00116D10
 	private int SetMaskIndexFalse(int mask, int index)
 	{
 		return mask & ~(1 << index);
 	}
 
-	// Token: 0x06003AA3 RID: 15011 RVA: 0x00118A44 File Offset: 0x00116C44
+	// Token: 0x06003AA4 RID: 15012 RVA: 0x00118B1C File Offset: 0x00116D1C
 	private string MaskToString(int mask)
 	{
 		string text = "";
@@ -169,17 +169,17 @@ public class CompositeTriggerEvents : MonoBehaviour
 		return text;
 	}
 
-	// Token: 0x04003F77 RID: 16247
+	// Token: 0x04003F78 RID: 16248
 	[SerializeField]
 	private List<Collider> individualTriggerColliders = new List<Collider>();
 
-	// Token: 0x04003F78 RID: 16248
+	// Token: 0x04003F79 RID: 16249
 	private List<TriggerEventNotifier> triggerEventNotifiers = new List<TriggerEventNotifier>();
 
-	// Token: 0x04003F79 RID: 16249
+	// Token: 0x04003F7A RID: 16250
 	private Dictionary<Collider, int> overlapMask = new Dictionary<Collider, int>();
 
 	// Token: 0x02000986 RID: 2438
-	// (Invoke) Token: 0x06003AA6 RID: 15014
+	// (Invoke) Token: 0x06003AA7 RID: 15015
 	public delegate void TriggerEvent(Collider collider);
 }

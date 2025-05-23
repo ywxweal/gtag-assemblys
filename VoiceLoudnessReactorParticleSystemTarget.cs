@@ -6,8 +6,8 @@ using UnityEngine;
 public class VoiceLoudnessReactorParticleSystemTarget
 {
 	// Token: 0x1700060D RID: 1549
-	// (get) Token: 0x06003DFE RID: 15870 RVA: 0x00126B77 File Offset: 0x00124D77
-	// (set) Token: 0x06003DFF RID: 15871 RVA: 0x00126B7F File Offset: 0x00124D7F
+	// (get) Token: 0x06003DFF RID: 15871 RVA: 0x00126C4F File Offset: 0x00124E4F
+	// (set) Token: 0x06003E00 RID: 15872 RVA: 0x00126C57 File Offset: 0x00124E57
 	public float InitialSpeed
 	{
 		get
@@ -21,8 +21,8 @@ public class VoiceLoudnessReactorParticleSystemTarget
 	}
 
 	// Token: 0x1700060E RID: 1550
-	// (get) Token: 0x06003E00 RID: 15872 RVA: 0x00126B88 File Offset: 0x00124D88
-	// (set) Token: 0x06003E01 RID: 15873 RVA: 0x00126B90 File Offset: 0x00124D90
+	// (get) Token: 0x06003E01 RID: 15873 RVA: 0x00126C60 File Offset: 0x00124E60
+	// (set) Token: 0x06003E02 RID: 15874 RVA: 0x00126C68 File Offset: 0x00124E68
 	public float InitialRate
 	{
 		get
@@ -36,8 +36,8 @@ public class VoiceLoudnessReactorParticleSystemTarget
 	}
 
 	// Token: 0x1700060F RID: 1551
-	// (get) Token: 0x06003E02 RID: 15874 RVA: 0x00126B99 File Offset: 0x00124D99
-	// (set) Token: 0x06003E03 RID: 15875 RVA: 0x00126BA1 File Offset: 0x00124DA1
+	// (get) Token: 0x06003E03 RID: 15875 RVA: 0x00126C71 File Offset: 0x00124E71
+	// (set) Token: 0x06003E04 RID: 15876 RVA: 0x00126C79 File Offset: 0x00124E79
 	public float InitialSize
 	{
 		get
@@ -50,38 +50,38 @@ public class VoiceLoudnessReactorParticleSystemTarget
 		}
 	}
 
-	// Token: 0x04004284 RID: 17028
+	// Token: 0x04004285 RID: 17029
 	public ParticleSystem particleSystem;
 
-	// Token: 0x04004285 RID: 17029
+	// Token: 0x04004286 RID: 17030
 	public bool UseSmoothedLoudness;
 
-	// Token: 0x04004286 RID: 17030
+	// Token: 0x04004287 RID: 17031
 	public float Scale = 1f;
 
-	// Token: 0x04004287 RID: 17031
+	// Token: 0x04004288 RID: 17032
 	private float initialSpeed;
 
-	// Token: 0x04004288 RID: 17032
+	// Token: 0x04004289 RID: 17033
 	private float initialRate;
 
-	// Token: 0x04004289 RID: 17033
+	// Token: 0x0400428A RID: 17034
 	private float initialSize;
 
-	// Token: 0x0400428A RID: 17034
+	// Token: 0x0400428B RID: 17035
 	public AnimationCurve speed;
 
-	// Token: 0x0400428B RID: 17035
+	// Token: 0x0400428C RID: 17036
 	public AnimationCurve rate;
 
-	// Token: 0x0400428C RID: 17036
+	// Token: 0x0400428D RID: 17037
 	public AnimationCurve size;
 
-	// Token: 0x0400428D RID: 17037
+	// Token: 0x0400428E RID: 17038
 	[HideInInspector]
 	public ParticleSystem.MainModule Main;
 
-	// Token: 0x0400428E RID: 17038
+	// Token: 0x0400428F RID: 17039
 	[HideInInspector]
 	public ParticleSystem.EmissionModule Emission;
 }

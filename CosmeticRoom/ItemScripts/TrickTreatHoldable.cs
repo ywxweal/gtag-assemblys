@@ -6,7 +6,7 @@ namespace CosmeticRoom.ItemScripts
 	// Token: 0x02000BA2 RID: 2978
 	public class TrickTreatHoldable : TransferrableObject
 	{
-		// Token: 0x060049E0 RID: 18912 RVA: 0x0016092B File Offset: 0x0015EB2B
+		// Token: 0x060049E1 RID: 18913 RVA: 0x00160A03 File Offset: 0x0015EC03
 		protected override void LateUpdateLocal()
 		{
 			base.LateUpdateLocal();
@@ -16,7 +16,7 @@ namespace CosmeticRoom.ItemScripts
 			}
 		}
 
-		// Token: 0x04004CA8 RID: 19624
+		// Token: 0x04004CA9 RID: 19625
 		public MeshCollider candyCollider;
 	}
 }

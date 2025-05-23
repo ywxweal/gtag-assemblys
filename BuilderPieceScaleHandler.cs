@@ -6,7 +6,7 @@ using UnityEngine;
 // Token: 0x020004D4 RID: 1236
 public class BuilderPieceScaleHandler : MonoBehaviour, IBuilderPieceComponent
 {
-	// Token: 0x06001DF1 RID: 7665 RVA: 0x00091A30 File Offset: 0x0008FC30
+	// Token: 0x06001DF1 RID: 7665 RVA: 0x00091A50 File Offset: 0x0008FC50
 	public void OnPieceCreate(int pieceType, int pieceId)
 	{
 		foreach (BuilderScaleAudioRadius builderScaleAudioRadius in this.audioScalers)
@@ -19,7 +19,7 @@ public class BuilderPieceScaleHandler : MonoBehaviour, IBuilderPieceComponent
 		}
 	}
 
-	// Token: 0x06001DF2 RID: 7666 RVA: 0x00091AD8 File Offset: 0x0008FCD8
+	// Token: 0x06001DF2 RID: 7666 RVA: 0x00091AF8 File Offset: 0x0008FCF8
 	public void OnPieceDestroy()
 	{
 		foreach (BuilderScaleAudioRadius builderScaleAudioRadius in this.audioScalers)

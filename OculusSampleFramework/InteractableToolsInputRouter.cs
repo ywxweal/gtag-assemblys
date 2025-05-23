@@ -8,7 +8,7 @@ namespace OculusSampleFramework
 	public class InteractableToolsInputRouter : MonoBehaviour
 	{
 		// Token: 0x17000751 RID: 1873
-		// (get) Token: 0x06004AF6 RID: 19190 RVA: 0x00164508 File Offset: 0x00162708
+		// (get) Token: 0x06004AF7 RID: 19191 RVA: 0x001645E0 File Offset: 0x001627E0
 		public static InteractableToolsInputRouter Instance
 		{
 			get
@@ -29,7 +29,7 @@ namespace OculusSampleFramework
 			}
 		}
 
-		// Token: 0x06004AF7 RID: 19191 RVA: 0x00164554 File Offset: 0x00162754
+		// Token: 0x06004AF8 RID: 19192 RVA: 0x0016462C File Offset: 0x0016282C
 		public void RegisterInteractableTool(InteractableTool interactableTool)
 		{
 			if (interactableTool.IsRightHandedTool)
@@ -54,7 +54,7 @@ namespace OculusSampleFramework
 			}
 		}
 
-		// Token: 0x06004AF8 RID: 19192 RVA: 0x001645B0 File Offset: 0x001627B0
+		// Token: 0x06004AF9 RID: 19193 RVA: 0x00164688 File Offset: 0x00162888
 		public void UnregisterInteractableTool(InteractableTool interactableTool)
 		{
 			if (interactableTool.IsRightHandedTool)
@@ -79,7 +79,7 @@ namespace OculusSampleFramework
 			}
 		}
 
-		// Token: 0x06004AF9 RID: 19193 RVA: 0x0016460C File Offset: 0x0016280C
+		// Token: 0x06004AFA RID: 19194 RVA: 0x001646E4 File Offset: 0x001628E4
 		private void Update()
 		{
 			if (!HandsManager.Instance.IsInitialized())
@@ -96,7 +96,7 @@ namespace OculusSampleFramework
 			this.UpdateToolsAndEnableState(this._rightHandFarTools, !flag4 && flag2 && isPointerPoseValid2);
 		}
 
-		// Token: 0x06004AFA RID: 19194 RVA: 0x001646E6 File Offset: 0x001628E6
+		// Token: 0x06004AFB RID: 19195 RVA: 0x001647BE File Offset: 0x001629BE
 		private bool UpdateToolsAndEnableState(HashSet<InteractableTool> tools, bool toolsAreEnabledThisFrame)
 		{
 			bool flag = this.UpdateTools(tools, !toolsAreEnabledThisFrame);
@@ -104,7 +104,7 @@ namespace OculusSampleFramework
 			return flag;
 		}
 
-		// Token: 0x06004AFB RID: 19195 RVA: 0x001646FC File Offset: 0x001628FC
+		// Token: 0x06004AFC RID: 19196 RVA: 0x001647D4 File Offset: 0x001629D4
 		private bool UpdateTools(HashSet<InteractableTool> tools, bool resetCollisionData = false)
 		{
 			bool flag = false;
@@ -144,7 +144,7 @@ namespace OculusSampleFramework
 			return flag;
 		}
 
-		// Token: 0x06004AFC RID: 19196 RVA: 0x00164810 File Offset: 0x00162A10
+		// Token: 0x06004AFD RID: 19197 RVA: 0x001648E8 File Offset: 0x00162AE8
 		private void ToggleToolsEnableState(HashSet<InteractableTool> tools, bool enableState)
 		{
 			foreach (InteractableTool interactableTool in tools)
@@ -156,25 +156,25 @@ namespace OculusSampleFramework
 			}
 		}
 
-		// Token: 0x04004DA6 RID: 19878
+		// Token: 0x04004DA7 RID: 19879
 		private static InteractableToolsInputRouter _instance;
 
-		// Token: 0x04004DA7 RID: 19879
+		// Token: 0x04004DA8 RID: 19880
 		private bool _leftPinch;
 
-		// Token: 0x04004DA8 RID: 19880
+		// Token: 0x04004DA9 RID: 19881
 		private bool _rightPinch;
 
-		// Token: 0x04004DA9 RID: 19881
+		// Token: 0x04004DAA RID: 19882
 		private HashSet<InteractableTool> _leftHandNearTools = new HashSet<InteractableTool>();
 
-		// Token: 0x04004DAA RID: 19882
+		// Token: 0x04004DAB RID: 19883
 		private HashSet<InteractableTool> _leftHandFarTools = new HashSet<InteractableTool>();
 
-		// Token: 0x04004DAB RID: 19883
+		// Token: 0x04004DAC RID: 19884
 		private HashSet<InteractableTool> _rightHandNearTools = new HashSet<InteractableTool>();
 
-		// Token: 0x04004DAC RID: 19884
+		// Token: 0x04004DAD RID: 19885
 		private HashSet<InteractableTool> _rightHandFarTools = new HashSet<InteractableTool>();
 	}
 }

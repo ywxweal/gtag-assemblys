@@ -12,14 +12,14 @@ namespace Viveport
 	// Token: 0x02000A5A RID: 2650
 	public class IAPurchase
 	{
-		// Token: 0x06003EDF RID: 16095 RVA: 0x0012919F File Offset: 0x0012739F
+		// Token: 0x06003EE0 RID: 16096 RVA: 0x00129277 File Offset: 0x00127477
 		[MonoPInvokeCallback(typeof(IAPurchaseCallback))]
 		private static void IsReadyIl2cppCallback(int errorCode, string message)
 		{
 			IAPurchase.isReadyIl2cppCallback(errorCode, message);
 		}
 
-		// Token: 0x06003EE0 RID: 16096 RVA: 0x001291AD File Offset: 0x001273AD
+		// Token: 0x06003EE1 RID: 16097 RVA: 0x00129285 File Offset: 0x00127485
 		public static void IsReady(IAPurchase.IAPurchaseListener listener, string pchAppKey)
 		{
 			IAPurchase.isReadyIl2cppCallback = new IAPurchase.IAPHandler(listener).getIsReadyHandler();
@@ -31,14 +31,14 @@ namespace Viveport
 			IAPurchase.IsReady(new IAPurchaseCallback(IAPurchase.IsReadyIl2cppCallback), pchAppKey);
 		}
 
-		// Token: 0x06003EE1 RID: 16097 RVA: 0x001291EC File Offset: 0x001273EC
+		// Token: 0x06003EE2 RID: 16098 RVA: 0x001292C4 File Offset: 0x001274C4
 		[MonoPInvokeCallback(typeof(IAPurchaseCallback))]
 		private static void Request01Il2cppCallback(int errorCode, string message)
 		{
 			IAPurchase.request01Il2cppCallback(errorCode, message);
 		}
 
-		// Token: 0x06003EE2 RID: 16098 RVA: 0x001291FA File Offset: 0x001273FA
+		// Token: 0x06003EE3 RID: 16099 RVA: 0x001292D2 File Offset: 0x001274D2
 		public static void Request(IAPurchase.IAPurchaseListener listener, string pchPrice)
 		{
 			IAPurchase.request01Il2cppCallback = new IAPurchase.IAPHandler(listener).getRequestHandler();
@@ -50,14 +50,14 @@ namespace Viveport
 			IAPurchase.Request(new IAPurchaseCallback(IAPurchase.Request01Il2cppCallback), pchPrice);
 		}
 
-		// Token: 0x06003EE3 RID: 16099 RVA: 0x00129239 File Offset: 0x00127439
+		// Token: 0x06003EE4 RID: 16100 RVA: 0x00129311 File Offset: 0x00127511
 		[MonoPInvokeCallback(typeof(IAPurchaseCallback))]
 		private static void Request02Il2cppCallback(int errorCode, string message)
 		{
 			IAPurchase.request02Il2cppCallback(errorCode, message);
 		}
 
-		// Token: 0x06003EE4 RID: 16100 RVA: 0x00129248 File Offset: 0x00127448
+		// Token: 0x06003EE5 RID: 16101 RVA: 0x00129320 File Offset: 0x00127520
 		public static void Request(IAPurchase.IAPurchaseListener listener, string pchPrice, string pchUserData)
 		{
 			IAPurchase.request02Il2cppCallback = new IAPurchase.IAPHandler(listener).getRequestHandler();
@@ -69,14 +69,14 @@ namespace Viveport
 			IAPurchase.Request(new IAPurchaseCallback(IAPurchase.Request02Il2cppCallback), pchPrice, pchUserData);
 		}
 
-		// Token: 0x06003EE5 RID: 16101 RVA: 0x00129294 File Offset: 0x00127494
+		// Token: 0x06003EE6 RID: 16102 RVA: 0x0012936C File Offset: 0x0012756C
 		[MonoPInvokeCallback(typeof(IAPurchaseCallback))]
 		private static void PurchaseIl2cppCallback(int errorCode, string message)
 		{
 			IAPurchase.purchaseIl2cppCallback(errorCode, message);
 		}
 
-		// Token: 0x06003EE6 RID: 16102 RVA: 0x001292A2 File Offset: 0x001274A2
+		// Token: 0x06003EE7 RID: 16103 RVA: 0x0012937A File Offset: 0x0012757A
 		public static void Purchase(IAPurchase.IAPurchaseListener listener, string pchPurchaseId)
 		{
 			IAPurchase.purchaseIl2cppCallback = new IAPurchase.IAPHandler(listener).getPurchaseHandler();
@@ -88,14 +88,14 @@ namespace Viveport
 			IAPurchase.Purchase(new IAPurchaseCallback(IAPurchase.PurchaseIl2cppCallback), pchPurchaseId);
 		}
 
-		// Token: 0x06003EE7 RID: 16103 RVA: 0x001292E1 File Offset: 0x001274E1
+		// Token: 0x06003EE8 RID: 16104 RVA: 0x001293B9 File Offset: 0x001275B9
 		[MonoPInvokeCallback(typeof(IAPurchaseCallback))]
 		private static void Query01Il2cppCallback(int errorCode, string message)
 		{
 			IAPurchase.query01Il2cppCallback(errorCode, message);
 		}
 
-		// Token: 0x06003EE8 RID: 16104 RVA: 0x001292EF File Offset: 0x001274EF
+		// Token: 0x06003EE9 RID: 16105 RVA: 0x001293C7 File Offset: 0x001275C7
 		public static void Query(IAPurchase.IAPurchaseListener listener, string pchPurchaseId)
 		{
 			IAPurchase.query01Il2cppCallback = new IAPurchase.IAPHandler(listener).getQueryHandler();
@@ -107,14 +107,14 @@ namespace Viveport
 			IAPurchase.Query(new IAPurchaseCallback(IAPurchase.Query01Il2cppCallback), pchPurchaseId);
 		}
 
-		// Token: 0x06003EE9 RID: 16105 RVA: 0x0012932E File Offset: 0x0012752E
+		// Token: 0x06003EEA RID: 16106 RVA: 0x00129406 File Offset: 0x00127606
 		[MonoPInvokeCallback(typeof(IAPurchaseCallback))]
 		private static void Query02Il2cppCallback(int errorCode, string message)
 		{
 			IAPurchase.query02Il2cppCallback(errorCode, message);
 		}
 
-		// Token: 0x06003EEA RID: 16106 RVA: 0x0012933C File Offset: 0x0012753C
+		// Token: 0x06003EEB RID: 16107 RVA: 0x00129414 File Offset: 0x00127614
 		public static void Query(IAPurchase.IAPurchaseListener listener)
 		{
 			IAPurchase.query02Il2cppCallback = new IAPurchase.IAPHandler(listener).getQueryListHandler();
@@ -126,14 +126,14 @@ namespace Viveport
 			IAPurchase.Query(new IAPurchaseCallback(IAPurchase.Query02Il2cppCallback));
 		}
 
-		// Token: 0x06003EEB RID: 16107 RVA: 0x00129379 File Offset: 0x00127579
+		// Token: 0x06003EEC RID: 16108 RVA: 0x00129451 File Offset: 0x00127651
 		[MonoPInvokeCallback(typeof(IAPurchaseCallback))]
 		private static void GetBalanceIl2cppCallback(int errorCode, string message)
 		{
 			IAPurchase.getBalanceIl2cppCallback(errorCode, message);
 		}
 
-		// Token: 0x06003EEC RID: 16108 RVA: 0x00129387 File Offset: 0x00127587
+		// Token: 0x06003EED RID: 16109 RVA: 0x0012945F File Offset: 0x0012765F
 		public static void GetBalance(IAPurchase.IAPurchaseListener listener)
 		{
 			IAPurchase.getBalanceIl2cppCallback = new IAPurchase.IAPHandler(listener).getBalanceHandler();
@@ -145,14 +145,14 @@ namespace Viveport
 			IAPurchase.GetBalance(new IAPurchaseCallback(IAPurchase.GetBalanceIl2cppCallback));
 		}
 
-		// Token: 0x06003EED RID: 16109 RVA: 0x001293C4 File Offset: 0x001275C4
+		// Token: 0x06003EEE RID: 16110 RVA: 0x0012949C File Offset: 0x0012769C
 		[MonoPInvokeCallback(typeof(IAPurchaseCallback))]
 		private static void RequestSubscriptionIl2cppCallback(int errorCode, string message)
 		{
 			IAPurchase.requestSubscriptionIl2cppCallback(errorCode, message);
 		}
 
-		// Token: 0x06003EEE RID: 16110 RVA: 0x001293D4 File Offset: 0x001275D4
+		// Token: 0x06003EEF RID: 16111 RVA: 0x001294AC File Offset: 0x001276AC
 		public static void RequestSubscription(IAPurchase.IAPurchaseListener listener, string pchPrice, string pchFreeTrialType, int nFreeTrialValue, string pchChargePeriodType, int nChargePeriodValue, int nNumberOfChargePeriod, string pchPlanId)
 		{
 			IAPurchase.requestSubscriptionIl2cppCallback = new IAPurchase.IAPHandler(listener).getRequestSubscriptionHandler();
@@ -164,14 +164,14 @@ namespace Viveport
 			IAPurchase.RequestSubscription(new IAPurchaseCallback(IAPurchase.RequestSubscriptionIl2cppCallback), pchPrice, pchFreeTrialType, nFreeTrialValue, pchChargePeriodType, nChargePeriodValue, nNumberOfChargePeriod, pchPlanId);
 		}
 
-		// Token: 0x06003EEF RID: 16111 RVA: 0x00129432 File Offset: 0x00127632
+		// Token: 0x06003EF0 RID: 16112 RVA: 0x0012950A File Offset: 0x0012770A
 		[MonoPInvokeCallback(typeof(IAPurchaseCallback))]
 		private static void RequestSubscriptionWithPlanIDIl2cppCallback(int errorCode, string message)
 		{
 			IAPurchase.requestSubscriptionWithPlanIDIl2cppCallback(errorCode, message);
 		}
 
-		// Token: 0x06003EF0 RID: 16112 RVA: 0x00129440 File Offset: 0x00127640
+		// Token: 0x06003EF1 RID: 16113 RVA: 0x00129518 File Offset: 0x00127718
 		public static void RequestSubscriptionWithPlanID(IAPurchase.IAPurchaseListener listener, string pchPlanId)
 		{
 			IAPurchase.requestSubscriptionWithPlanIDIl2cppCallback = new IAPurchase.IAPHandler(listener).getRequestSubscriptionWithPlanIDHandler();
@@ -183,14 +183,14 @@ namespace Viveport
 			IAPurchase.RequestSubscriptionWithPlanID(new IAPurchaseCallback(IAPurchase.RequestSubscriptionWithPlanIDIl2cppCallback), pchPlanId);
 		}
 
-		// Token: 0x06003EF1 RID: 16113 RVA: 0x0012947F File Offset: 0x0012767F
+		// Token: 0x06003EF2 RID: 16114 RVA: 0x00129557 File Offset: 0x00127757
 		[MonoPInvokeCallback(typeof(IAPurchaseCallback))]
 		private static void SubscribeIl2cppCallback(int errorCode, string message)
 		{
 			IAPurchase.subscribeIl2cppCallback(errorCode, message);
 		}
 
-		// Token: 0x06003EF2 RID: 16114 RVA: 0x0012948D File Offset: 0x0012768D
+		// Token: 0x06003EF3 RID: 16115 RVA: 0x00129565 File Offset: 0x00127765
 		public static void Subscribe(IAPurchase.IAPurchaseListener listener, string pchSubscriptionId)
 		{
 			IAPurchase.subscribeIl2cppCallback = new IAPurchase.IAPHandler(listener).getSubscribeHandler();
@@ -202,14 +202,14 @@ namespace Viveport
 			IAPurchase.Subscribe(new IAPurchaseCallback(IAPurchase.SubscribeIl2cppCallback), pchSubscriptionId);
 		}
 
-		// Token: 0x06003EF3 RID: 16115 RVA: 0x001294CC File Offset: 0x001276CC
+		// Token: 0x06003EF4 RID: 16116 RVA: 0x001295A4 File Offset: 0x001277A4
 		[MonoPInvokeCallback(typeof(IAPurchaseCallback))]
 		private static void QuerySubscriptionIl2cppCallback(int errorCode, string message)
 		{
 			IAPurchase.querySubscriptionIl2cppCallback(errorCode, message);
 		}
 
-		// Token: 0x06003EF4 RID: 16116 RVA: 0x001294DA File Offset: 0x001276DA
+		// Token: 0x06003EF5 RID: 16117 RVA: 0x001295B2 File Offset: 0x001277B2
 		public static void QuerySubscription(IAPurchase.IAPurchaseListener listener, string pchSubscriptionId)
 		{
 			IAPurchase.querySubscriptionIl2cppCallback = new IAPurchase.IAPHandler(listener).getQuerySubscriptionHandler();
@@ -221,14 +221,14 @@ namespace Viveport
 			IAPurchase.QuerySubscription(new IAPurchaseCallback(IAPurchase.QuerySubscriptionIl2cppCallback), pchSubscriptionId);
 		}
 
-		// Token: 0x06003EF5 RID: 16117 RVA: 0x00129519 File Offset: 0x00127719
+		// Token: 0x06003EF6 RID: 16118 RVA: 0x001295F1 File Offset: 0x001277F1
 		[MonoPInvokeCallback(typeof(IAPurchaseCallback))]
 		private static void QuerySubscriptionListIl2cppCallback(int errorCode, string message)
 		{
 			IAPurchase.querySubscriptionListIl2cppCallback(errorCode, message);
 		}
 
-		// Token: 0x06003EF6 RID: 16118 RVA: 0x00129527 File Offset: 0x00127727
+		// Token: 0x06003EF7 RID: 16119 RVA: 0x001295FF File Offset: 0x001277FF
 		public static void QuerySubscriptionList(IAPurchase.IAPurchaseListener listener)
 		{
 			IAPurchase.querySubscriptionListIl2cppCallback = new IAPurchase.IAPHandler(listener).getQuerySubscriptionListHandler();
@@ -240,14 +240,14 @@ namespace Viveport
 			IAPurchase.QuerySubscriptionList(new IAPurchaseCallback(IAPurchase.QuerySubscriptionListIl2cppCallback));
 		}
 
-		// Token: 0x06003EF7 RID: 16119 RVA: 0x00129564 File Offset: 0x00127764
+		// Token: 0x06003EF8 RID: 16120 RVA: 0x0012963C File Offset: 0x0012783C
 		[MonoPInvokeCallback(typeof(IAPurchaseCallback))]
 		private static void CancelSubscriptionIl2cppCallback(int errorCode, string message)
 		{
 			IAPurchase.cancelSubscriptionIl2cppCallback(errorCode, message);
 		}
 
-		// Token: 0x06003EF8 RID: 16120 RVA: 0x00129572 File Offset: 0x00127772
+		// Token: 0x06003EF9 RID: 16121 RVA: 0x0012964A File Offset: 0x0012784A
 		public static void CancelSubscription(IAPurchase.IAPurchaseListener listener, string pchSubscriptionId)
 		{
 			IAPurchase.cancelSubscriptionIl2cppCallback = new IAPurchase.IAPHandler(listener).getCancelSubscriptionHandler();
@@ -259,61 +259,61 @@ namespace Viveport
 			IAPurchase.CancelSubscription(new IAPurchaseCallback(IAPurchase.CancelSubscriptionIl2cppCallback), pchSubscriptionId);
 		}
 
-		// Token: 0x0400434E RID: 17230
+		// Token: 0x0400434F RID: 17231
 		private static IAPurchaseCallback isReadyIl2cppCallback;
 
-		// Token: 0x0400434F RID: 17231
+		// Token: 0x04004350 RID: 17232
 		private static IAPurchaseCallback request01Il2cppCallback;
 
-		// Token: 0x04004350 RID: 17232
+		// Token: 0x04004351 RID: 17233
 		private static IAPurchaseCallback request02Il2cppCallback;
 
-		// Token: 0x04004351 RID: 17233
+		// Token: 0x04004352 RID: 17234
 		private static IAPurchaseCallback purchaseIl2cppCallback;
 
-		// Token: 0x04004352 RID: 17234
+		// Token: 0x04004353 RID: 17235
 		private static IAPurchaseCallback query01Il2cppCallback;
 
-		// Token: 0x04004353 RID: 17235
+		// Token: 0x04004354 RID: 17236
 		private static IAPurchaseCallback query02Il2cppCallback;
 
-		// Token: 0x04004354 RID: 17236
+		// Token: 0x04004355 RID: 17237
 		private static IAPurchaseCallback getBalanceIl2cppCallback;
 
-		// Token: 0x04004355 RID: 17237
+		// Token: 0x04004356 RID: 17238
 		private static IAPurchaseCallback requestSubscriptionIl2cppCallback;
 
-		// Token: 0x04004356 RID: 17238
+		// Token: 0x04004357 RID: 17239
 		private static IAPurchaseCallback requestSubscriptionWithPlanIDIl2cppCallback;
 
-		// Token: 0x04004357 RID: 17239
+		// Token: 0x04004358 RID: 17240
 		private static IAPurchaseCallback subscribeIl2cppCallback;
 
-		// Token: 0x04004358 RID: 17240
+		// Token: 0x04004359 RID: 17241
 		private static IAPurchaseCallback querySubscriptionIl2cppCallback;
 
-		// Token: 0x04004359 RID: 17241
+		// Token: 0x0400435A RID: 17242
 		private static IAPurchaseCallback querySubscriptionListIl2cppCallback;
 
-		// Token: 0x0400435A RID: 17242
+		// Token: 0x0400435B RID: 17243
 		private static IAPurchaseCallback cancelSubscriptionIl2cppCallback;
 
 		// Token: 0x02000A5B RID: 2651
 		private class IAPHandler : IAPurchase.BaseHandler
 		{
-			// Token: 0x06003EFA RID: 16122 RVA: 0x001295B1 File Offset: 0x001277B1
+			// Token: 0x06003EFB RID: 16123 RVA: 0x00129689 File Offset: 0x00127889
 			public IAPHandler(IAPurchase.IAPurchaseListener cb)
 			{
 				IAPurchase.IAPHandler.listener = cb;
 			}
 
-			// Token: 0x06003EFB RID: 16123 RVA: 0x001295BF File Offset: 0x001277BF
+			// Token: 0x06003EFC RID: 16124 RVA: 0x00129697 File Offset: 0x00127897
 			public IAPurchaseCallback getIsReadyHandler()
 			{
 				return new IAPurchaseCallback(this.IsReadyHandler);
 			}
 
-			// Token: 0x06003EFC RID: 16124 RVA: 0x001295D0 File Offset: 0x001277D0
+			// Token: 0x06003EFD RID: 16125 RVA: 0x001296A8 File Offset: 0x001278A8
 			protected override void IsReadyHandler(int code, [MarshalAs(UnmanagedType.LPStr)] string message)
 			{
 				Logger.Log("[IsReadyHandler] message=" + message);
@@ -369,13 +369,13 @@ namespace Viveport
 				}
 			}
 
-			// Token: 0x06003EFD RID: 16125 RVA: 0x00129700 File Offset: 0x00127900
+			// Token: 0x06003EFE RID: 16126 RVA: 0x001297D8 File Offset: 0x001279D8
 			public IAPurchaseCallback getRequestHandler()
 			{
 				return new IAPurchaseCallback(this.RequestHandler);
 			}
 
-			// Token: 0x06003EFE RID: 16126 RVA: 0x00129710 File Offset: 0x00127910
+			// Token: 0x06003EFF RID: 16127 RVA: 0x001297E8 File Offset: 0x001279E8
 			protected override void RequestHandler(int code, [MarshalAs(UnmanagedType.LPStr)] string message)
 			{
 				Logger.Log("[RequestHandler] message=" + message);
@@ -431,13 +431,13 @@ namespace Viveport
 				}
 			}
 
-			// Token: 0x06003EFF RID: 16127 RVA: 0x00129840 File Offset: 0x00127A40
+			// Token: 0x06003F00 RID: 16128 RVA: 0x00129918 File Offset: 0x00127B18
 			public IAPurchaseCallback getPurchaseHandler()
 			{
 				return new IAPurchaseCallback(this.PurchaseHandler);
 			}
 
-			// Token: 0x06003F00 RID: 16128 RVA: 0x00129850 File Offset: 0x00127A50
+			// Token: 0x06003F01 RID: 16129 RVA: 0x00129928 File Offset: 0x00127B28
 			protected override void PurchaseHandler(int code, [MarshalAs(UnmanagedType.LPStr)] string message)
 			{
 				Logger.Log("[PurchaseHandler] message=" + message);
@@ -495,13 +495,13 @@ namespace Viveport
 				}
 			}
 
-			// Token: 0x06003F01 RID: 16129 RVA: 0x001299A0 File Offset: 0x00127BA0
+			// Token: 0x06003F02 RID: 16130 RVA: 0x00129A78 File Offset: 0x00127C78
 			public IAPurchaseCallback getQueryHandler()
 			{
 				return new IAPurchaseCallback(this.QueryHandler);
 			}
 
-			// Token: 0x06003F02 RID: 16130 RVA: 0x001299B0 File Offset: 0x00127BB0
+			// Token: 0x06003F03 RID: 16131 RVA: 0x00129A88 File Offset: 0x00127C88
 			protected override void QueryHandler(int code, [MarshalAs(UnmanagedType.LPStr)] string message)
 			{
 				Logger.Log("[QueryHandler] message=" + message);
@@ -583,13 +583,13 @@ namespace Viveport
 				}
 			}
 
-			// Token: 0x06003F03 RID: 16131 RVA: 0x00129BFC File Offset: 0x00127DFC
+			// Token: 0x06003F04 RID: 16132 RVA: 0x00129CD4 File Offset: 0x00127ED4
 			public IAPurchaseCallback getQueryListHandler()
 			{
 				return new IAPurchaseCallback(this.QueryListHandler);
 			}
 
-			// Token: 0x06003F04 RID: 16132 RVA: 0x00129C0C File Offset: 0x00127E0C
+			// Token: 0x06003F05 RID: 16133 RVA: 0x00129CE4 File Offset: 0x00127EE4
 			protected override void QueryListHandler(int code, [MarshalAs(UnmanagedType.LPStr)] string message)
 			{
 				Logger.Log("[QueryListHandler] message=" + message);
@@ -681,13 +681,13 @@ namespace Viveport
 				}
 			}
 
-			// Token: 0x06003F05 RID: 16133 RVA: 0x00129F94 File Offset: 0x00128194
+			// Token: 0x06003F06 RID: 16134 RVA: 0x0012A06C File Offset: 0x0012826C
 			public IAPurchaseCallback getBalanceHandler()
 			{
 				return new IAPurchaseCallback(this.BalanceHandler);
 			}
 
-			// Token: 0x06003F06 RID: 16134 RVA: 0x00129FA4 File Offset: 0x001281A4
+			// Token: 0x06003F07 RID: 16135 RVA: 0x0012A07C File Offset: 0x0012827C
 			protected override void BalanceHandler(int code, [MarshalAs(UnmanagedType.LPStr)] string message)
 			{
 				Logger.Log("[BalanceHandler] code=" + code.ToString() + ",message= " + message);
@@ -745,13 +745,13 @@ namespace Viveport
 				}
 			}
 
-			// Token: 0x06003F07 RID: 16135 RVA: 0x0012A100 File Offset: 0x00128300
+			// Token: 0x06003F08 RID: 16136 RVA: 0x0012A1D8 File Offset: 0x001283D8
 			public IAPurchaseCallback getRequestSubscriptionHandler()
 			{
 				return new IAPurchaseCallback(this.RequestSubscriptionHandler);
 			}
 
-			// Token: 0x06003F08 RID: 16136 RVA: 0x0012A110 File Offset: 0x00128310
+			// Token: 0x06003F09 RID: 16137 RVA: 0x0012A1E8 File Offset: 0x001283E8
 			protected override void RequestSubscriptionHandler(int code, [MarshalAs(UnmanagedType.LPStr)] string message)
 			{
 				Logger.Log("[RequestSubscriptionHandler] message=" + message);
@@ -804,13 +804,13 @@ namespace Viveport
 				}
 			}
 
-			// Token: 0x06003F09 RID: 16137 RVA: 0x0012A238 File Offset: 0x00128438
+			// Token: 0x06003F0A RID: 16138 RVA: 0x0012A310 File Offset: 0x00128510
 			public IAPurchaseCallback getRequestSubscriptionWithPlanIDHandler()
 			{
 				return new IAPurchaseCallback(this.RequestSubscriptionWithPlanIDHandler);
 			}
 
-			// Token: 0x06003F0A RID: 16138 RVA: 0x0012A248 File Offset: 0x00128448
+			// Token: 0x06003F0B RID: 16139 RVA: 0x0012A320 File Offset: 0x00128520
 			protected override void RequestSubscriptionWithPlanIDHandler(int code, [MarshalAs(UnmanagedType.LPStr)] string message)
 			{
 				Logger.Log("[RequestSubscriptionWithPlanIDHandler] message=" + message);
@@ -863,13 +863,13 @@ namespace Viveport
 				}
 			}
 
-			// Token: 0x06003F0B RID: 16139 RVA: 0x0012A370 File Offset: 0x00128570
+			// Token: 0x06003F0C RID: 16140 RVA: 0x0012A448 File Offset: 0x00128648
 			public IAPurchaseCallback getSubscribeHandler()
 			{
 				return new IAPurchaseCallback(this.SubscribeHandler);
 			}
 
-			// Token: 0x06003F0C RID: 16140 RVA: 0x0012A380 File Offset: 0x00128580
+			// Token: 0x06003F0D RID: 16141 RVA: 0x0012A458 File Offset: 0x00128658
 			protected override void SubscribeHandler(int code, [MarshalAs(UnmanagedType.LPStr)] string message)
 			{
 				Logger.Log("[SubscribeHandler] message=" + message);
@@ -934,13 +934,13 @@ namespace Viveport
 				}
 			}
 
-			// Token: 0x06003F0D RID: 16141 RVA: 0x0012A508 File Offset: 0x00128708
+			// Token: 0x06003F0E RID: 16142 RVA: 0x0012A5E0 File Offset: 0x001287E0
 			public IAPurchaseCallback getQuerySubscriptionHandler()
 			{
 				return new IAPurchaseCallback(this.QuerySubscriptionHandler);
 			}
 
-			// Token: 0x06003F0E RID: 16142 RVA: 0x0012A518 File Offset: 0x00128718
+			// Token: 0x06003F0F RID: 16143 RVA: 0x0012A5F0 File Offset: 0x001287F0
 			protected override void QuerySubscriptionHandler(int code, [MarshalAs(UnmanagedType.LPStr)] string message)
 			{
 				Logger.Log("[QuerySubscriptionHandler] message=" + message);
@@ -995,13 +995,13 @@ namespace Viveport
 				}
 			}
 
-			// Token: 0x06003F0F RID: 16143 RVA: 0x0012A640 File Offset: 0x00128840
+			// Token: 0x06003F10 RID: 16144 RVA: 0x0012A718 File Offset: 0x00128918
 			public IAPurchaseCallback getQuerySubscriptionListHandler()
 			{
 				return new IAPurchaseCallback(this.QuerySubscriptionListHandler);
 			}
 
-			// Token: 0x06003F10 RID: 16144 RVA: 0x0012A650 File Offset: 0x00128850
+			// Token: 0x06003F11 RID: 16145 RVA: 0x0012A728 File Offset: 0x00128928
 			protected override void QuerySubscriptionListHandler(int code, [MarshalAs(UnmanagedType.LPStr)] string message)
 			{
 				Logger.Log("[QuerySubscriptionListHandler] message=" + message);
@@ -1056,13 +1056,13 @@ namespace Viveport
 				}
 			}
 
-			// Token: 0x06003F11 RID: 16145 RVA: 0x0012A778 File Offset: 0x00128978
+			// Token: 0x06003F12 RID: 16146 RVA: 0x0012A850 File Offset: 0x00128A50
 			public IAPurchaseCallback getCancelSubscriptionHandler()
 			{
 				return new IAPurchaseCallback(this.CancelSubscriptionHandler);
 			}
 
-			// Token: 0x06003F12 RID: 16146 RVA: 0x0012A788 File Offset: 0x00128988
+			// Token: 0x06003F13 RID: 16147 RVA: 0x0012A860 File Offset: 0x00128A60
 			protected override void CancelSubscriptionHandler(int code, [MarshalAs(UnmanagedType.LPStr)] string message)
 			{
 				Logger.Log("[CancelSubscriptionHandler] message=" + message);
@@ -1109,114 +1109,114 @@ namespace Viveport
 				}
 			}
 
-			// Token: 0x0400435B RID: 17243
+			// Token: 0x0400435C RID: 17244
 			private static IAPurchase.IAPurchaseListener listener;
 		}
 
 		// Token: 0x02000A5C RID: 2652
 		private abstract class BaseHandler
 		{
-			// Token: 0x06003F13 RID: 16147
+			// Token: 0x06003F14 RID: 16148
 			protected abstract void IsReadyHandler(int code, [MarshalAs(UnmanagedType.LPStr)] string message);
 
-			// Token: 0x06003F14 RID: 16148
+			// Token: 0x06003F15 RID: 16149
 			protected abstract void RequestHandler(int code, [MarshalAs(UnmanagedType.LPStr)] string message);
 
-			// Token: 0x06003F15 RID: 16149
+			// Token: 0x06003F16 RID: 16150
 			protected abstract void PurchaseHandler(int code, [MarshalAs(UnmanagedType.LPStr)] string message);
 
-			// Token: 0x06003F16 RID: 16150
+			// Token: 0x06003F17 RID: 16151
 			protected abstract void QueryHandler(int code, [MarshalAs(UnmanagedType.LPStr)] string message);
 
-			// Token: 0x06003F17 RID: 16151
+			// Token: 0x06003F18 RID: 16152
 			protected abstract void QueryListHandler(int code, [MarshalAs(UnmanagedType.LPStr)] string message);
 
-			// Token: 0x06003F18 RID: 16152
+			// Token: 0x06003F19 RID: 16153
 			protected abstract void BalanceHandler(int code, [MarshalAs(UnmanagedType.LPStr)] string message);
 
-			// Token: 0x06003F19 RID: 16153
+			// Token: 0x06003F1A RID: 16154
 			protected abstract void RequestSubscriptionHandler(int code, [MarshalAs(UnmanagedType.LPStr)] string message);
 
-			// Token: 0x06003F1A RID: 16154
+			// Token: 0x06003F1B RID: 16155
 			protected abstract void RequestSubscriptionWithPlanIDHandler(int code, [MarshalAs(UnmanagedType.LPStr)] string message);
 
-			// Token: 0x06003F1B RID: 16155
+			// Token: 0x06003F1C RID: 16156
 			protected abstract void SubscribeHandler(int code, [MarshalAs(UnmanagedType.LPStr)] string message);
 
-			// Token: 0x06003F1C RID: 16156
+			// Token: 0x06003F1D RID: 16157
 			protected abstract void QuerySubscriptionHandler(int code, [MarshalAs(UnmanagedType.LPStr)] string message);
 
-			// Token: 0x06003F1D RID: 16157
+			// Token: 0x06003F1E RID: 16158
 			protected abstract void QuerySubscriptionListHandler(int code, [MarshalAs(UnmanagedType.LPStr)] string message);
 
-			// Token: 0x06003F1E RID: 16158
+			// Token: 0x06003F1F RID: 16159
 			protected abstract void CancelSubscriptionHandler(int code, [MarshalAs(UnmanagedType.LPStr)] string message);
 		}
 
 		// Token: 0x02000A5D RID: 2653
 		public class IAPurchaseListener
 		{
-			// Token: 0x06003F20 RID: 16160 RVA: 0x000023F4 File Offset: 0x000005F4
+			// Token: 0x06003F21 RID: 16161 RVA: 0x000023F4 File Offset: 0x000005F4
 			public virtual void OnSuccess(string pchCurrencyName)
 			{
 			}
 
-			// Token: 0x06003F21 RID: 16161 RVA: 0x000023F4 File Offset: 0x000005F4
+			// Token: 0x06003F22 RID: 16162 RVA: 0x000023F4 File Offset: 0x000005F4
 			public virtual void OnRequestSuccess(string pchPurchaseId)
 			{
 			}
 
-			// Token: 0x06003F22 RID: 16162 RVA: 0x000023F4 File Offset: 0x000005F4
+			// Token: 0x06003F23 RID: 16163 RVA: 0x000023F4 File Offset: 0x000005F4
 			public virtual void OnPurchaseSuccess(string pchPurchaseId)
 			{
 			}
 
-			// Token: 0x06003F23 RID: 16163 RVA: 0x000023F4 File Offset: 0x000005F4
+			// Token: 0x06003F24 RID: 16164 RVA: 0x000023F4 File Offset: 0x000005F4
 			public virtual void OnQuerySuccess(IAPurchase.QueryResponse response)
 			{
 			}
 
-			// Token: 0x06003F24 RID: 16164 RVA: 0x000023F4 File Offset: 0x000005F4
+			// Token: 0x06003F25 RID: 16165 RVA: 0x000023F4 File Offset: 0x000005F4
 			public virtual void OnQuerySuccess(IAPurchase.QueryListResponse response)
 			{
 			}
 
-			// Token: 0x06003F25 RID: 16165 RVA: 0x000023F4 File Offset: 0x000005F4
+			// Token: 0x06003F26 RID: 16166 RVA: 0x000023F4 File Offset: 0x000005F4
 			public virtual void OnBalanceSuccess(string pchBalance)
 			{
 			}
 
-			// Token: 0x06003F26 RID: 16166 RVA: 0x000023F4 File Offset: 0x000005F4
+			// Token: 0x06003F27 RID: 16167 RVA: 0x000023F4 File Offset: 0x000005F4
 			public virtual void OnFailure(int nCode, string pchMessage)
 			{
 			}
 
-			// Token: 0x06003F27 RID: 16167 RVA: 0x000023F4 File Offset: 0x000005F4
+			// Token: 0x06003F28 RID: 16168 RVA: 0x000023F4 File Offset: 0x000005F4
 			public virtual void OnRequestSubscriptionSuccess(string pchSubscriptionId)
 			{
 			}
 
-			// Token: 0x06003F28 RID: 16168 RVA: 0x000023F4 File Offset: 0x000005F4
+			// Token: 0x06003F29 RID: 16169 RVA: 0x000023F4 File Offset: 0x000005F4
 			public virtual void OnRequestSubscriptionWithPlanIDSuccess(string pchSubscriptionId)
 			{
 			}
 
-			// Token: 0x06003F29 RID: 16169 RVA: 0x000023F4 File Offset: 0x000005F4
+			// Token: 0x06003F2A RID: 16170 RVA: 0x000023F4 File Offset: 0x000005F4
 			public virtual void OnSubscribeSuccess(string pchSubscriptionId)
 			{
 			}
 
-			// Token: 0x06003F2A RID: 16170 RVA: 0x000023F4 File Offset: 0x000005F4
+			// Token: 0x06003F2B RID: 16171 RVA: 0x000023F4 File Offset: 0x000005F4
 			public virtual void OnQuerySubscriptionSuccess(IAPurchase.Subscription[] subscriptionlist)
 			{
 			}
 
-			// Token: 0x06003F2B RID: 16171 RVA: 0x000023F4 File Offset: 0x000005F4
+			// Token: 0x06003F2C RID: 16172 RVA: 0x000023F4 File Offset: 0x000005F4
 			public virtual void OnQuerySubscriptionListSuccess(IAPurchase.Subscription[] subscriptionlist)
 			{
 			}
 
-			// Token: 0x06003F2C RID: 16172 RVA: 0x000023F4 File Offset: 0x000005F4
+			// Token: 0x06003F2D RID: 16173 RVA: 0x000023F4 File Offset: 0x000005F4
 			public virtual void OnCancelSubscriptionSuccess(bool bCanceled)
 			{
 			}
@@ -1226,33 +1226,33 @@ namespace Viveport
 		public class QueryResponse
 		{
 			// Token: 0x1700062F RID: 1583
-			// (get) Token: 0x06003F2E RID: 16174 RVA: 0x0012A878 File Offset: 0x00128A78
-			// (set) Token: 0x06003F2F RID: 16175 RVA: 0x0012A880 File Offset: 0x00128A80
+			// (get) Token: 0x06003F2F RID: 16175 RVA: 0x0012A950 File Offset: 0x00128B50
+			// (set) Token: 0x06003F30 RID: 16176 RVA: 0x0012A958 File Offset: 0x00128B58
 			public string order_id { get; set; }
 
 			// Token: 0x17000630 RID: 1584
-			// (get) Token: 0x06003F30 RID: 16176 RVA: 0x0012A889 File Offset: 0x00128A89
-			// (set) Token: 0x06003F31 RID: 16177 RVA: 0x0012A891 File Offset: 0x00128A91
+			// (get) Token: 0x06003F31 RID: 16177 RVA: 0x0012A961 File Offset: 0x00128B61
+			// (set) Token: 0x06003F32 RID: 16178 RVA: 0x0012A969 File Offset: 0x00128B69
 			public string purchase_id { get; set; }
 
 			// Token: 0x17000631 RID: 1585
-			// (get) Token: 0x06003F32 RID: 16178 RVA: 0x0012A89A File Offset: 0x00128A9A
-			// (set) Token: 0x06003F33 RID: 16179 RVA: 0x0012A8A2 File Offset: 0x00128AA2
+			// (get) Token: 0x06003F33 RID: 16179 RVA: 0x0012A972 File Offset: 0x00128B72
+			// (set) Token: 0x06003F34 RID: 16180 RVA: 0x0012A97A File Offset: 0x00128B7A
 			public string status { get; set; }
 
 			// Token: 0x17000632 RID: 1586
-			// (get) Token: 0x06003F34 RID: 16180 RVA: 0x0012A8AB File Offset: 0x00128AAB
-			// (set) Token: 0x06003F35 RID: 16181 RVA: 0x0012A8B3 File Offset: 0x00128AB3
+			// (get) Token: 0x06003F35 RID: 16181 RVA: 0x0012A983 File Offset: 0x00128B83
+			// (set) Token: 0x06003F36 RID: 16182 RVA: 0x0012A98B File Offset: 0x00128B8B
 			public string price { get; set; }
 
 			// Token: 0x17000633 RID: 1587
-			// (get) Token: 0x06003F36 RID: 16182 RVA: 0x0012A8BC File Offset: 0x00128ABC
-			// (set) Token: 0x06003F37 RID: 16183 RVA: 0x0012A8C4 File Offset: 0x00128AC4
+			// (get) Token: 0x06003F37 RID: 16183 RVA: 0x0012A994 File Offset: 0x00128B94
+			// (set) Token: 0x06003F38 RID: 16184 RVA: 0x0012A99C File Offset: 0x00128B9C
 			public string currency { get; set; }
 
 			// Token: 0x17000634 RID: 1588
-			// (get) Token: 0x06003F38 RID: 16184 RVA: 0x0012A8CD File Offset: 0x00128ACD
-			// (set) Token: 0x06003F39 RID: 16185 RVA: 0x0012A8D5 File Offset: 0x00128AD5
+			// (get) Token: 0x06003F39 RID: 16185 RVA: 0x0012A9A5 File Offset: 0x00128BA5
+			// (set) Token: 0x06003F3A RID: 16186 RVA: 0x0012A9AD File Offset: 0x00128BAD
 			public long paid_timestamp { get; set; }
 		}
 
@@ -1260,38 +1260,38 @@ namespace Viveport
 		public class QueryResponse2
 		{
 			// Token: 0x17000635 RID: 1589
-			// (get) Token: 0x06003F3B RID: 16187 RVA: 0x0012A8DE File Offset: 0x00128ADE
-			// (set) Token: 0x06003F3C RID: 16188 RVA: 0x0012A8E6 File Offset: 0x00128AE6
+			// (get) Token: 0x06003F3C RID: 16188 RVA: 0x0012A9B6 File Offset: 0x00128BB6
+			// (set) Token: 0x06003F3D RID: 16189 RVA: 0x0012A9BE File Offset: 0x00128BBE
 			public string order_id { get; set; }
 
 			// Token: 0x17000636 RID: 1590
-			// (get) Token: 0x06003F3D RID: 16189 RVA: 0x0012A8EF File Offset: 0x00128AEF
-			// (set) Token: 0x06003F3E RID: 16190 RVA: 0x0012A8F7 File Offset: 0x00128AF7
+			// (get) Token: 0x06003F3E RID: 16190 RVA: 0x0012A9C7 File Offset: 0x00128BC7
+			// (set) Token: 0x06003F3F RID: 16191 RVA: 0x0012A9CF File Offset: 0x00128BCF
 			public string app_id { get; set; }
 
 			// Token: 0x17000637 RID: 1591
-			// (get) Token: 0x06003F3F RID: 16191 RVA: 0x0012A900 File Offset: 0x00128B00
-			// (set) Token: 0x06003F40 RID: 16192 RVA: 0x0012A908 File Offset: 0x00128B08
+			// (get) Token: 0x06003F40 RID: 16192 RVA: 0x0012A9D8 File Offset: 0x00128BD8
+			// (set) Token: 0x06003F41 RID: 16193 RVA: 0x0012A9E0 File Offset: 0x00128BE0
 			public string purchase_id { get; set; }
 
 			// Token: 0x17000638 RID: 1592
-			// (get) Token: 0x06003F41 RID: 16193 RVA: 0x0012A911 File Offset: 0x00128B11
-			// (set) Token: 0x06003F42 RID: 16194 RVA: 0x0012A919 File Offset: 0x00128B19
+			// (get) Token: 0x06003F42 RID: 16194 RVA: 0x0012A9E9 File Offset: 0x00128BE9
+			// (set) Token: 0x06003F43 RID: 16195 RVA: 0x0012A9F1 File Offset: 0x00128BF1
 			public string user_data { get; set; }
 
 			// Token: 0x17000639 RID: 1593
-			// (get) Token: 0x06003F43 RID: 16195 RVA: 0x0012A922 File Offset: 0x00128B22
-			// (set) Token: 0x06003F44 RID: 16196 RVA: 0x0012A92A File Offset: 0x00128B2A
+			// (get) Token: 0x06003F44 RID: 16196 RVA: 0x0012A9FA File Offset: 0x00128BFA
+			// (set) Token: 0x06003F45 RID: 16197 RVA: 0x0012AA02 File Offset: 0x00128C02
 			public string price { get; set; }
 
 			// Token: 0x1700063A RID: 1594
-			// (get) Token: 0x06003F45 RID: 16197 RVA: 0x0012A933 File Offset: 0x00128B33
-			// (set) Token: 0x06003F46 RID: 16198 RVA: 0x0012A93B File Offset: 0x00128B3B
+			// (get) Token: 0x06003F46 RID: 16198 RVA: 0x0012AA0B File Offset: 0x00128C0B
+			// (set) Token: 0x06003F47 RID: 16199 RVA: 0x0012AA13 File Offset: 0x00128C13
 			public string currency { get; set; }
 
 			// Token: 0x1700063B RID: 1595
-			// (get) Token: 0x06003F47 RID: 16199 RVA: 0x0012A944 File Offset: 0x00128B44
-			// (set) Token: 0x06003F48 RID: 16200 RVA: 0x0012A94C File Offset: 0x00128B4C
+			// (get) Token: 0x06003F48 RID: 16200 RVA: 0x0012AA1C File Offset: 0x00128C1C
+			// (set) Token: 0x06003F49 RID: 16201 RVA: 0x0012AA24 File Offset: 0x00128C24
 			public long paid_timestamp { get; set; }
 		}
 
@@ -1299,21 +1299,21 @@ namespace Viveport
 		public class QueryListResponse
 		{
 			// Token: 0x1700063C RID: 1596
-			// (get) Token: 0x06003F4A RID: 16202 RVA: 0x0012A955 File Offset: 0x00128B55
-			// (set) Token: 0x06003F4B RID: 16203 RVA: 0x0012A95D File Offset: 0x00128B5D
+			// (get) Token: 0x06003F4B RID: 16203 RVA: 0x0012AA2D File Offset: 0x00128C2D
+			// (set) Token: 0x06003F4C RID: 16204 RVA: 0x0012AA35 File Offset: 0x00128C35
 			public int total { get; set; }
 
 			// Token: 0x1700063D RID: 1597
-			// (get) Token: 0x06003F4C RID: 16204 RVA: 0x0012A966 File Offset: 0x00128B66
-			// (set) Token: 0x06003F4D RID: 16205 RVA: 0x0012A96E File Offset: 0x00128B6E
+			// (get) Token: 0x06003F4D RID: 16205 RVA: 0x0012AA3E File Offset: 0x00128C3E
+			// (set) Token: 0x06003F4E RID: 16206 RVA: 0x0012AA46 File Offset: 0x00128C46
 			public int from { get; set; }
 
 			// Token: 0x1700063E RID: 1598
-			// (get) Token: 0x06003F4E RID: 16206 RVA: 0x0012A977 File Offset: 0x00128B77
-			// (set) Token: 0x06003F4F RID: 16207 RVA: 0x0012A97F File Offset: 0x00128B7F
+			// (get) Token: 0x06003F4F RID: 16207 RVA: 0x0012AA4F File Offset: 0x00128C4F
+			// (set) Token: 0x06003F50 RID: 16208 RVA: 0x0012AA57 File Offset: 0x00128C57
 			public int to { get; set; }
 
-			// Token: 0x0400436C RID: 17260
+			// Token: 0x0400436D RID: 17261
 			public List<IAPurchase.QueryResponse2> purchaseList;
 		}
 
@@ -1321,18 +1321,18 @@ namespace Viveport
 		public class StatusDetailTransaction
 		{
 			// Token: 0x1700063F RID: 1599
-			// (get) Token: 0x06003F51 RID: 16209 RVA: 0x0012A988 File Offset: 0x00128B88
-			// (set) Token: 0x06003F52 RID: 16210 RVA: 0x0012A990 File Offset: 0x00128B90
+			// (get) Token: 0x06003F52 RID: 16210 RVA: 0x0012AA60 File Offset: 0x00128C60
+			// (set) Token: 0x06003F53 RID: 16211 RVA: 0x0012AA68 File Offset: 0x00128C68
 			public long create_time { get; set; }
 
 			// Token: 0x17000640 RID: 1600
-			// (get) Token: 0x06003F53 RID: 16211 RVA: 0x0012A999 File Offset: 0x00128B99
-			// (set) Token: 0x06003F54 RID: 16212 RVA: 0x0012A9A1 File Offset: 0x00128BA1
+			// (get) Token: 0x06003F54 RID: 16212 RVA: 0x0012AA71 File Offset: 0x00128C71
+			// (set) Token: 0x06003F55 RID: 16213 RVA: 0x0012AA79 File Offset: 0x00128C79
 			public string payment_method { get; set; }
 
 			// Token: 0x17000641 RID: 1601
-			// (get) Token: 0x06003F55 RID: 16213 RVA: 0x0012A9AA File Offset: 0x00128BAA
-			// (set) Token: 0x06003F56 RID: 16214 RVA: 0x0012A9B2 File Offset: 0x00128BB2
+			// (get) Token: 0x06003F56 RID: 16214 RVA: 0x0012AA82 File Offset: 0x00128C82
+			// (set) Token: 0x06003F57 RID: 16215 RVA: 0x0012AA8A File Offset: 0x00128C8A
 			public string status { get; set; }
 		}
 
@@ -1340,18 +1340,18 @@ namespace Viveport
 		public class StatusDetail
 		{
 			// Token: 0x17000642 RID: 1602
-			// (get) Token: 0x06003F58 RID: 16216 RVA: 0x0012A9BB File Offset: 0x00128BBB
-			// (set) Token: 0x06003F59 RID: 16217 RVA: 0x0012A9C3 File Offset: 0x00128BC3
+			// (get) Token: 0x06003F59 RID: 16217 RVA: 0x0012AA93 File Offset: 0x00128C93
+			// (set) Token: 0x06003F5A RID: 16218 RVA: 0x0012AA9B File Offset: 0x00128C9B
 			public long date_next_charge { get; set; }
 
 			// Token: 0x17000643 RID: 1603
-			// (get) Token: 0x06003F5A RID: 16218 RVA: 0x0012A9CC File Offset: 0x00128BCC
-			// (set) Token: 0x06003F5B RID: 16219 RVA: 0x0012A9D4 File Offset: 0x00128BD4
+			// (get) Token: 0x06003F5B RID: 16219 RVA: 0x0012AAA4 File Offset: 0x00128CA4
+			// (set) Token: 0x06003F5C RID: 16220 RVA: 0x0012AAAC File Offset: 0x00128CAC
 			public IAPurchase.StatusDetailTransaction[] transactions { get; set; }
 
 			// Token: 0x17000644 RID: 1604
-			// (get) Token: 0x06003F5C RID: 16220 RVA: 0x0012A9DD File Offset: 0x00128BDD
-			// (set) Token: 0x06003F5D RID: 16221 RVA: 0x0012A9E5 File Offset: 0x00128BE5
+			// (get) Token: 0x06003F5D RID: 16221 RVA: 0x0012AAB5 File Offset: 0x00128CB5
+			// (set) Token: 0x06003F5E RID: 16222 RVA: 0x0012AABD File Offset: 0x00128CBD
 			public string cancel_reason { get; set; }
 		}
 
@@ -1359,13 +1359,13 @@ namespace Viveport
 		public class TimePeriod
 		{
 			// Token: 0x17000645 RID: 1605
-			// (get) Token: 0x06003F5F RID: 16223 RVA: 0x0012A9EE File Offset: 0x00128BEE
-			// (set) Token: 0x06003F60 RID: 16224 RVA: 0x0012A9F6 File Offset: 0x00128BF6
+			// (get) Token: 0x06003F60 RID: 16224 RVA: 0x0012AAC6 File Offset: 0x00128CC6
+			// (set) Token: 0x06003F61 RID: 16225 RVA: 0x0012AACE File Offset: 0x00128CCE
 			public string time_type { get; set; }
 
 			// Token: 0x17000646 RID: 1606
-			// (get) Token: 0x06003F61 RID: 16225 RVA: 0x0012A9FF File Offset: 0x00128BFF
-			// (set) Token: 0x06003F62 RID: 16226 RVA: 0x0012AA07 File Offset: 0x00128C07
+			// (get) Token: 0x06003F62 RID: 16226 RVA: 0x0012AAD7 File Offset: 0x00128CD7
+			// (set) Token: 0x06003F63 RID: 16227 RVA: 0x0012AADF File Offset: 0x00128CDF
 			public int value { get; set; }
 		}
 
@@ -1373,68 +1373,68 @@ namespace Viveport
 		public class Subscription
 		{
 			// Token: 0x17000647 RID: 1607
-			// (get) Token: 0x06003F64 RID: 16228 RVA: 0x0012AA10 File Offset: 0x00128C10
-			// (set) Token: 0x06003F65 RID: 16229 RVA: 0x0012AA18 File Offset: 0x00128C18
+			// (get) Token: 0x06003F65 RID: 16229 RVA: 0x0012AAE8 File Offset: 0x00128CE8
+			// (set) Token: 0x06003F66 RID: 16230 RVA: 0x0012AAF0 File Offset: 0x00128CF0
 			public string app_id { get; set; }
 
 			// Token: 0x17000648 RID: 1608
-			// (get) Token: 0x06003F66 RID: 16230 RVA: 0x0012AA21 File Offset: 0x00128C21
-			// (set) Token: 0x06003F67 RID: 16231 RVA: 0x0012AA29 File Offset: 0x00128C29
+			// (get) Token: 0x06003F67 RID: 16231 RVA: 0x0012AAF9 File Offset: 0x00128CF9
+			// (set) Token: 0x06003F68 RID: 16232 RVA: 0x0012AB01 File Offset: 0x00128D01
 			public string order_id { get; set; }
 
 			// Token: 0x17000649 RID: 1609
-			// (get) Token: 0x06003F68 RID: 16232 RVA: 0x0012AA32 File Offset: 0x00128C32
-			// (set) Token: 0x06003F69 RID: 16233 RVA: 0x0012AA3A File Offset: 0x00128C3A
+			// (get) Token: 0x06003F69 RID: 16233 RVA: 0x0012AB0A File Offset: 0x00128D0A
+			// (set) Token: 0x06003F6A RID: 16234 RVA: 0x0012AB12 File Offset: 0x00128D12
 			public string subscription_id { get; set; }
 
 			// Token: 0x1700064A RID: 1610
-			// (get) Token: 0x06003F6A RID: 16234 RVA: 0x0012AA43 File Offset: 0x00128C43
-			// (set) Token: 0x06003F6B RID: 16235 RVA: 0x0012AA4B File Offset: 0x00128C4B
+			// (get) Token: 0x06003F6B RID: 16235 RVA: 0x0012AB1B File Offset: 0x00128D1B
+			// (set) Token: 0x06003F6C RID: 16236 RVA: 0x0012AB23 File Offset: 0x00128D23
 			public string price { get; set; }
 
 			// Token: 0x1700064B RID: 1611
-			// (get) Token: 0x06003F6C RID: 16236 RVA: 0x0012AA54 File Offset: 0x00128C54
-			// (set) Token: 0x06003F6D RID: 16237 RVA: 0x0012AA5C File Offset: 0x00128C5C
+			// (get) Token: 0x06003F6D RID: 16237 RVA: 0x0012AB2C File Offset: 0x00128D2C
+			// (set) Token: 0x06003F6E RID: 16238 RVA: 0x0012AB34 File Offset: 0x00128D34
 			public string currency { get; set; }
 
 			// Token: 0x1700064C RID: 1612
-			// (get) Token: 0x06003F6E RID: 16238 RVA: 0x0012AA65 File Offset: 0x00128C65
-			// (set) Token: 0x06003F6F RID: 16239 RVA: 0x0012AA6D File Offset: 0x00128C6D
+			// (get) Token: 0x06003F6F RID: 16239 RVA: 0x0012AB3D File Offset: 0x00128D3D
+			// (set) Token: 0x06003F70 RID: 16240 RVA: 0x0012AB45 File Offset: 0x00128D45
 			public long subscribed_timestamp { get; set; }
 
 			// Token: 0x1700064D RID: 1613
-			// (get) Token: 0x06003F70 RID: 16240 RVA: 0x0012AA76 File Offset: 0x00128C76
-			// (set) Token: 0x06003F71 RID: 16241 RVA: 0x0012AA7E File Offset: 0x00128C7E
+			// (get) Token: 0x06003F71 RID: 16241 RVA: 0x0012AB4E File Offset: 0x00128D4E
+			// (set) Token: 0x06003F72 RID: 16242 RVA: 0x0012AB56 File Offset: 0x00128D56
 			public IAPurchase.TimePeriod free_trial_period { get; set; }
 
 			// Token: 0x1700064E RID: 1614
-			// (get) Token: 0x06003F72 RID: 16242 RVA: 0x0012AA87 File Offset: 0x00128C87
-			// (set) Token: 0x06003F73 RID: 16243 RVA: 0x0012AA8F File Offset: 0x00128C8F
+			// (get) Token: 0x06003F73 RID: 16243 RVA: 0x0012AB5F File Offset: 0x00128D5F
+			// (set) Token: 0x06003F74 RID: 16244 RVA: 0x0012AB67 File Offset: 0x00128D67
 			public IAPurchase.TimePeriod charge_period { get; set; }
 
 			// Token: 0x1700064F RID: 1615
-			// (get) Token: 0x06003F74 RID: 16244 RVA: 0x0012AA98 File Offset: 0x00128C98
-			// (set) Token: 0x06003F75 RID: 16245 RVA: 0x0012AAA0 File Offset: 0x00128CA0
+			// (get) Token: 0x06003F75 RID: 16245 RVA: 0x0012AB70 File Offset: 0x00128D70
+			// (set) Token: 0x06003F76 RID: 16246 RVA: 0x0012AB78 File Offset: 0x00128D78
 			public int number_of_charge_period { get; set; }
 
 			// Token: 0x17000650 RID: 1616
-			// (get) Token: 0x06003F76 RID: 16246 RVA: 0x0012AAA9 File Offset: 0x00128CA9
-			// (set) Token: 0x06003F77 RID: 16247 RVA: 0x0012AAB1 File Offset: 0x00128CB1
+			// (get) Token: 0x06003F77 RID: 16247 RVA: 0x0012AB81 File Offset: 0x00128D81
+			// (set) Token: 0x06003F78 RID: 16248 RVA: 0x0012AB89 File Offset: 0x00128D89
 			public string plan_id { get; set; }
 
 			// Token: 0x17000651 RID: 1617
-			// (get) Token: 0x06003F78 RID: 16248 RVA: 0x0012AABA File Offset: 0x00128CBA
-			// (set) Token: 0x06003F79 RID: 16249 RVA: 0x0012AAC2 File Offset: 0x00128CC2
+			// (get) Token: 0x06003F79 RID: 16249 RVA: 0x0012AB92 File Offset: 0x00128D92
+			// (set) Token: 0x06003F7A RID: 16250 RVA: 0x0012AB9A File Offset: 0x00128D9A
 			public string plan_name { get; set; }
 
 			// Token: 0x17000652 RID: 1618
-			// (get) Token: 0x06003F7A RID: 16250 RVA: 0x0012AACB File Offset: 0x00128CCB
-			// (set) Token: 0x06003F7B RID: 16251 RVA: 0x0012AAD3 File Offset: 0x00128CD3
+			// (get) Token: 0x06003F7B RID: 16251 RVA: 0x0012ABA3 File Offset: 0x00128DA3
+			// (set) Token: 0x06003F7C RID: 16252 RVA: 0x0012ABAB File Offset: 0x00128DAB
 			public string status { get; set; }
 
 			// Token: 0x17000653 RID: 1619
-			// (get) Token: 0x06003F7C RID: 16252 RVA: 0x0012AADC File Offset: 0x00128CDC
-			// (set) Token: 0x06003F7D RID: 16253 RVA: 0x0012AAE4 File Offset: 0x00128CE4
+			// (get) Token: 0x06003F7D RID: 16253 RVA: 0x0012ABB4 File Offset: 0x00128DB4
+			// (set) Token: 0x06003F7E RID: 16254 RVA: 0x0012ABBC File Offset: 0x00128DBC
 			public IAPurchase.StatusDetail status_detail { get; set; }
 		}
 
@@ -1442,18 +1442,18 @@ namespace Viveport
 		public class QuerySubscritionResponse
 		{
 			// Token: 0x17000654 RID: 1620
-			// (get) Token: 0x06003F7F RID: 16255 RVA: 0x0012AAED File Offset: 0x00128CED
-			// (set) Token: 0x06003F80 RID: 16256 RVA: 0x0012AAF5 File Offset: 0x00128CF5
+			// (get) Token: 0x06003F80 RID: 16256 RVA: 0x0012ABC5 File Offset: 0x00128DC5
+			// (set) Token: 0x06003F81 RID: 16257 RVA: 0x0012ABCD File Offset: 0x00128DCD
 			public int statusCode { get; set; }
 
 			// Token: 0x17000655 RID: 1621
-			// (get) Token: 0x06003F81 RID: 16257 RVA: 0x0012AAFE File Offset: 0x00128CFE
-			// (set) Token: 0x06003F82 RID: 16258 RVA: 0x0012AB06 File Offset: 0x00128D06
+			// (get) Token: 0x06003F82 RID: 16258 RVA: 0x0012ABD6 File Offset: 0x00128DD6
+			// (set) Token: 0x06003F83 RID: 16259 RVA: 0x0012ABDE File Offset: 0x00128DDE
 			public string message { get; set; }
 
 			// Token: 0x17000656 RID: 1622
-			// (get) Token: 0x06003F83 RID: 16259 RVA: 0x0012AB0F File Offset: 0x00128D0F
-			// (set) Token: 0x06003F84 RID: 16260 RVA: 0x0012AB17 File Offset: 0x00128D17
+			// (get) Token: 0x06003F84 RID: 16260 RVA: 0x0012ABE7 File Offset: 0x00128DE7
+			// (set) Token: 0x06003F85 RID: 16261 RVA: 0x0012ABEF File Offset: 0x00128DEF
 			public List<IAPurchase.Subscription> subscriptions { get; set; }
 		}
 	}

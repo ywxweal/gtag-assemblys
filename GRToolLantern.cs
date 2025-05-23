@@ -6,14 +6,14 @@ using UnityEngine;
 [RequireComponent(typeof(GameEntity))]
 public class GRToolLantern : MonoBehaviour
 {
-	// Token: 0x06002407 RID: 9223 RVA: 0x000B558E File Offset: 0x000B378E
+	// Token: 0x06002407 RID: 9223 RVA: 0x000B55AE File Offset: 0x000B37AE
 	private void Awake()
 	{
 		this.state = GRToolLantern.State.Off;
 		this.gameEntity.OnStateChanged += this.OnStateChanged;
 	}
 
-	// Token: 0x06002408 RID: 9224 RVA: 0x000B55AE File Offset: 0x000B37AE
+	// Token: 0x06002408 RID: 9224 RVA: 0x000B55CE File Offset: 0x000B37CE
 	private void OnEnable()
 	{
 		this.TurnOff();
@@ -25,7 +25,7 @@ public class GRToolLantern : MonoBehaviour
 	{
 	}
 
-	// Token: 0x0600240A RID: 9226 RVA: 0x000B55C0 File Offset: 0x000B37C0
+	// Token: 0x0600240A RID: 9226 RVA: 0x000B55E0 File Offset: 0x000B37E0
 	public void Update()
 	{
 		float deltaTime = Time.deltaTime;
@@ -37,7 +37,7 @@ public class GRToolLantern : MonoBehaviour
 		this.OnUpdateRemote(deltaTime);
 	}
 
-	// Token: 0x0600240B RID: 9227 RVA: 0x000B55F8 File Offset: 0x000B37F8
+	// Token: 0x0600240B RID: 9227 RVA: 0x000B5618 File Offset: 0x000B3818
 	private void OnUpdateAuthority(float dt)
 	{
 		GRToolLantern.State state = this.state;
@@ -67,7 +67,7 @@ public class GRToolLantern : MonoBehaviour
 		}
 	}
 
-	// Token: 0x0600240C RID: 9228 RVA: 0x000B56C0 File Offset: 0x000B38C0
+	// Token: 0x0600240C RID: 9228 RVA: 0x000B56E0 File Offset: 0x000B38E0
 	private void TryConsumeEnergy()
 	{
 		int num = Mathf.Min(this.tool.energy, this.minEnergyPerUse);
@@ -78,7 +78,7 @@ public class GRToolLantern : MonoBehaviour
 		}
 	}
 
-	// Token: 0x0600240D RID: 9229 RVA: 0x000B571C File Offset: 0x000B391C
+	// Token: 0x0600240D RID: 9229 RVA: 0x000B573C File Offset: 0x000B393C
 	private void OnUpdateRemote(float dt)
 	{
 		GRToolLantern.State state = (GRToolLantern.State)this.gameEntity.GetState();
@@ -88,7 +88,7 @@ public class GRToolLantern : MonoBehaviour
 		}
 	}
 
-	// Token: 0x0600240E RID: 9230 RVA: 0x000B5748 File Offset: 0x000B3948
+	// Token: 0x0600240E RID: 9230 RVA: 0x000B5768 File Offset: 0x000B3968
 	private void SetState(GRToolLantern.State newState)
 	{
 		if (this.state == newState)
@@ -115,7 +115,7 @@ public class GRToolLantern : MonoBehaviour
 		}
 	}
 
-	// Token: 0x0600240F RID: 9231 RVA: 0x000B578C File Offset: 0x000B398C
+	// Token: 0x0600240F RID: 9231 RVA: 0x000B57AC File Offset: 0x000B39AC
 	private void TurnOn()
 	{
 		this.gameLight.gameObject.SetActive(true);
@@ -124,20 +124,20 @@ public class GRToolLantern : MonoBehaviour
 		this.timeLastTurnedOn = Time.time;
 	}
 
-	// Token: 0x06002410 RID: 9232 RVA: 0x000B57DD File Offset: 0x000B39DD
+	// Token: 0x06002410 RID: 9232 RVA: 0x000B57FD File Offset: 0x000B39FD
 	private void TurnOff()
 	{
 		this.gameLight.gameObject.SetActive(false);
 		this.meshRenderer.material = this.offMaterial;
 	}
 
-	// Token: 0x06002411 RID: 9233 RVA: 0x000B5801 File Offset: 0x000B3A01
+	// Token: 0x06002411 RID: 9233 RVA: 0x000B5821 File Offset: 0x000B3A21
 	private bool IsHeldLocal()
 	{
 		return this.gameEntity.heldByActorNumber == PhotonNetwork.LocalPlayer.ActorNumber;
 	}
 
-	// Token: 0x06002412 RID: 9234 RVA: 0x000B581C File Offset: 0x000B3A1C
+	// Token: 0x06002412 RID: 9234 RVA: 0x000B583C File Offset: 0x000B3A3C
 	private bool IsButtonHeld()
 	{
 		GamePlayer gamePlayer = GamePlayer.GetGamePlayer(this.gameEntity.heldByActorNumber);
@@ -162,7 +162,7 @@ public class GRToolLantern : MonoBehaviour
 	{
 	}
 
-	// Token: 0x06002414 RID: 9236 RVA: 0x000B5894 File Offset: 0x000B3A94
+	// Token: 0x06002414 RID: 9236 RVA: 0x000B58B4 File Offset: 0x000B3AB4
 	public bool CanChangeState(long newStateIndex)
 	{
 		if (newStateIndex < 0L || newStateIndex >= 2L)

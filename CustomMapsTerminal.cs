@@ -11,7 +11,7 @@ using UnityEngine.Events;
 public class CustomMapsTerminal : MonoBehaviour
 {
 	// Token: 0x17000484 RID: 1156
-	// (get) Token: 0x06002DFC RID: 11772 RVA: 0x000E57B6 File Offset: 0x000E39B6
+	// (get) Token: 0x06002DFD RID: 11773 RVA: 0x000E585A File Offset: 0x000E3A5A
 	public static int LocalPlayerID
 	{
 		get
@@ -21,7 +21,7 @@ public class CustomMapsTerminal : MonoBehaviour
 	}
 
 	// Token: 0x17000485 RID: 1157
-	// (get) Token: 0x06002DFD RID: 11773 RVA: 0x000E57C7 File Offset: 0x000E39C7
+	// (get) Token: 0x06002DFE RID: 11774 RVA: 0x000E586B File Offset: 0x000E3A6B
 	public static bool IsDriver
 	{
 		get
@@ -30,14 +30,14 @@ public class CustomMapsTerminal : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06002DFE RID: 11774 RVA: 0x000E57D5 File Offset: 0x000E39D5
+	// Token: 0x06002DFF RID: 11775 RVA: 0x000E5879 File Offset: 0x000E3A79
 	private void Awake()
 	{
 		CustomMapsTerminal.instance = this;
 		CustomMapsTerminal.hasInstance = true;
 	}
 
-	// Token: 0x06002DFF RID: 11775 RVA: 0x000E57E4 File Offset: 0x000E39E4
+	// Token: 0x06002E00 RID: 11776 RVA: 0x000E5888 File Offset: 0x000E3A88
 	private void Start()
 	{
 		CustomMapsTerminal.localDriverID = -2;
@@ -55,7 +55,7 @@ public class CustomMapsTerminal : MonoBehaviour
 		NetworkSystem.Instance.OnReturnedToSinglePlayer += this.OnReturnedToSinglePlayer;
 	}
 
-	// Token: 0x06002E00 RID: 11776 RVA: 0x000E58BC File Offset: 0x000E3ABC
+	// Token: 0x06002E01 RID: 11777 RVA: 0x000E5960 File Offset: 0x000E3B60
 	private void LateUpdate()
 	{
 		if (CustomMapsTerminal.localDriverID == -2)
@@ -74,7 +74,7 @@ public class CustomMapsTerminal : MonoBehaviour
 		CustomMapsTerminal.RefreshDriverNickName();
 	}
 
-	// Token: 0x06002E01 RID: 11777 RVA: 0x000E5910 File Offset: 0x000E3B10
+	// Token: 0x06002E02 RID: 11778 RVA: 0x000E59B4 File Offset: 0x000E3BB4
 	private void OnDestroy()
 	{
 		GameEvents.OnModIOLoggedIn.RemoveListener(new UnityAction(this.OnModIOLoggedIn));
@@ -83,7 +83,7 @@ public class CustomMapsTerminal : MonoBehaviour
 		NetworkSystem.Instance.OnReturnedToSinglePlayer -= this.OnReturnedToSinglePlayer;
 	}
 
-	// Token: 0x06002E02 RID: 11778 RVA: 0x000E5978 File Offset: 0x000E3B78
+	// Token: 0x06002E03 RID: 11779 RVA: 0x000E5A1C File Offset: 0x000E3C1C
 	public static CustomMapsTerminal.TerminalStatus UpdateAndRetrieveLocalStatus()
 	{
 		CustomMapsTerminal.localStatus.sortType = CustomMapsTerminal.instance.modListScreen.SortType;
@@ -109,7 +109,7 @@ public class CustomMapsTerminal : MonoBehaviour
 		return CustomMapsTerminal.localStatus;
 	}
 
-	// Token: 0x06002E03 RID: 11779 RVA: 0x000E5A73 File Offset: 0x000E3C73
+	// Token: 0x06002E04 RID: 11780 RVA: 0x000E5B17 File Offset: 0x000E3D17
 	public static void UpdateListScreenState(CustomMapsListScreen.ListScreenState screenState)
 	{
 		CustomMapsTerminal.localStatus.previousScreen = CustomMapsTerminal.localStatus.currentScreen;
@@ -117,7 +117,7 @@ public class CustomMapsTerminal : MonoBehaviour
 		CustomMapsTerminal.UpdateSubscriptionButtonStatus(screenState);
 	}
 
-	// Token: 0x06002E04 RID: 11780 RVA: 0x000E5AA0 File Offset: 0x000E3CA0
+	// Token: 0x06002E05 RID: 11781 RVA: 0x000E5B44 File Offset: 0x000E3D44
 	public static void ShowDetailsScreen(ModProfile profile)
 	{
 		CustomMapsTerminal.localStatus.previousScreen = CustomMapsTerminal.localStatus.currentScreen;
@@ -129,7 +129,7 @@ public class CustomMapsTerminal : MonoBehaviour
 		CustomMapsTerminal.SendTerminalStatus(false, false);
 	}
 
-	// Token: 0x06002E05 RID: 11781 RVA: 0x000E5B10 File Offset: 0x000E3D10
+	// Token: 0x06002E06 RID: 11782 RVA: 0x000E5BB4 File Offset: 0x000E3DB4
 	public static void ReturnFromDetailsScreen()
 	{
 		CustomMapsTerminal.ScreenType previousScreen = CustomMapsTerminal.localStatus.previousScreen;
@@ -167,7 +167,7 @@ public class CustomMapsTerminal : MonoBehaviour
 		CustomMapsTerminal.SendTerminalStatus(CustomMapsTerminal.localStatus.currentScreen == CustomMapsTerminal.ScreenType.SubscribedMods, false);
 	}
 
-	// Token: 0x06002E06 RID: 11782 RVA: 0x000E5C68 File Offset: 0x000E3E68
+	// Token: 0x06002E07 RID: 11783 RVA: 0x000E5D0C File Offset: 0x000E3F0C
 	public static bool SetTagButtonStatus(short tagIndex, out string tagText)
 	{
 		if (!CustomMapsTerminal.hasInstance)
@@ -195,7 +195,7 @@ public class CustomMapsTerminal : MonoBehaviour
 		return flag;
 	}
 
-	// Token: 0x06002E07 RID: 11783 RVA: 0x000E5D0E File Offset: 0x000E3F0E
+	// Token: 0x06002E08 RID: 11784 RVA: 0x000E5DB2 File Offset: 0x000E3FB2
 	public static void SendTerminalStatus(bool sendFullModList = false, bool forceSearch = false)
 	{
 		if (!CustomMapsTerminal.hasInstance)
@@ -205,7 +205,7 @@ public class CustomMapsTerminal : MonoBehaviour
 		CustomMapsTerminal.instance.mapTerminalNetworkObject.SendTerminalStatus(sendFullModList, forceSearch);
 	}
 
-	// Token: 0x06002E08 RID: 11784 RVA: 0x000E5D29 File Offset: 0x000E3F29
+	// Token: 0x06002E09 RID: 11785 RVA: 0x000E5DCD File Offset: 0x000E3FCD
 	public static void ResetTerminalControl()
 	{
 		CustomMapsTerminal.localDriverID = -2;
@@ -213,7 +213,7 @@ public class CustomMapsTerminal : MonoBehaviour
 		CustomMapsTerminal.ShowTerminalControlScreen();
 	}
 
-	// Token: 0x06002E09 RID: 11785 RVA: 0x000E5D46 File Offset: 0x000E3F46
+	// Token: 0x06002E0A RID: 11786 RVA: 0x000E5DEA File Offset: 0x000E3FEA
 	public static void HandleTerminalControlStatusChangeRequest(bool lockedStatus, int playerID)
 	{
 		if (lockedStatus && playerID == -2)
@@ -234,7 +234,7 @@ public class CustomMapsTerminal : MonoBehaviour
 		CustomMapsTerminal.SetTerminalControlStatus(lockedStatus, playerID, true);
 	}
 
-	// Token: 0x06002E0A RID: 11786 RVA: 0x000E5D70 File Offset: 0x000E3F70
+	// Token: 0x06002E0B RID: 11787 RVA: 0x000E5E14 File Offset: 0x000E4014
 	public static void SetTerminalControlStatus(bool isLocked, int driverID = -2, bool sendRPC = false)
 	{
 		if (!ModIOManager.IsLoggedIn())
@@ -259,7 +259,7 @@ public class CustomMapsTerminal : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06002E0B RID: 11787 RVA: 0x000E5DE4 File Offset: 0x000E3FE4
+	// Token: 0x06002E0C RID: 11788 RVA: 0x000E5E88 File Offset: 0x000E4088
 	public static void UpdateStatusFromDriver(long[] data, int driverID, bool forceSearch = false)
 	{
 		if (!CustomMapsTerminal.hasInstance)
@@ -280,14 +280,14 @@ public class CustomMapsTerminal : MonoBehaviour
 		CustomMapsTerminal.instance.UpdateScreenToMatchStatus(forceSearch);
 	}
 
-	// Token: 0x06002E0C RID: 11788 RVA: 0x000E5E36 File Offset: 0x000E4036
+	// Token: 0x06002E0D RID: 11789 RVA: 0x000E5EDA File Offset: 0x000E40DA
 	public static void ClearTags()
 	{
 		CustomMapsTerminal.localTagStatus = 0;
 		CustomMapsTerminal.instance.modListScreen.ClearTags(true);
 	}
 
-	// Token: 0x06002E0D RID: 11789 RVA: 0x000E5E50 File Offset: 0x000E4050
+	// Token: 0x06002E0E RID: 11790 RVA: 0x000E5EF4 File Offset: 0x000E40F4
 	private void UpdateTagsAndSortFromDriver()
 	{
 		CustomMapsTerminal.instance.modListScreen.SortType = CustomMapsTerminal.localStatus.sortType;
@@ -313,7 +313,7 @@ public class CustomMapsTerminal : MonoBehaviour
 		CustomMapsTerminal.instance.modListScreen.UpdateTagsFromDriver(list);
 	}
 
-	// Token: 0x06002E0E RID: 11790 RVA: 0x000E5F20 File Offset: 0x000E4120
+	// Token: 0x06002E0F RID: 11791 RVA: 0x000E5FC4 File Offset: 0x000E41C4
 	private void UpdateScreenToMatchStatus(bool forceSearch = false)
 	{
 		if (CustomMapsTerminal.localDriverID == -2)
@@ -378,7 +378,7 @@ public class CustomMapsTerminal : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06002E0F RID: 11791 RVA: 0x000E60E4 File Offset: 0x000E42E4
+	// Token: 0x06002E10 RID: 11792 RVA: 0x000E6188 File Offset: 0x000E4388
 	private void ValidateLocalStatus()
 	{
 		if (!ModIOManager.IsLoggedIn() || CustomMapsTerminal.localDriverID == -2)
@@ -407,7 +407,7 @@ public class CustomMapsTerminal : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06002E10 RID: 11792 RVA: 0x000E6190 File Offset: 0x000E4390
+	// Token: 0x06002E11 RID: 11793 RVA: 0x000E6234 File Offset: 0x000E4434
 	private void OnModIOLoggedIn()
 	{
 		if (CustomMapsTerminal.localStatus.currentScreen == CustomMapsTerminal.ScreenType.Access)
@@ -430,7 +430,7 @@ public class CustomMapsTerminal : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06002E11 RID: 11793 RVA: 0x000E6209 File Offset: 0x000E4409
+	// Token: 0x06002E12 RID: 11794 RVA: 0x000E62AD File Offset: 0x000E44AD
 	private void OnModIOLoggedOut()
 	{
 		CustomMapsTerminal.ResetTerminalControl();
@@ -440,7 +440,7 @@ public class CustomMapsTerminal : MonoBehaviour
 		this.UpdateScreenToMatchStatus(false);
 	}
 
-	// Token: 0x06002E12 RID: 11794 RVA: 0x000E6238 File Offset: 0x000E4438
+	// Token: 0x06002E13 RID: 11795 RVA: 0x000E62DC File Offset: 0x000E44DC
 	public void HandleTerminalControlButtonPressed()
 	{
 		if (!ModIOManager.IsLoggedIn())
@@ -465,7 +465,7 @@ public class CustomMapsTerminal : MonoBehaviour
 		this.mapTerminalNetworkObject.RequestTerminalControlStatusChange(!this.terminalControlButton.IsLocked);
 	}
 
-	// Token: 0x06002E13 RID: 11795 RVA: 0x000E62D3 File Offset: 0x000E44D3
+	// Token: 0x06002E14 RID: 11796 RVA: 0x000E6377 File Offset: 0x000E4577
 	private static void UpdateSubscriptionButtonStatus(CustomMapsListScreen.ListScreenState screenState)
 	{
 		if (CustomMapsTerminal.hasInstance && CustomMapsTerminal.instance.subscribedOnlyButton != null)
@@ -474,7 +474,7 @@ public class CustomMapsTerminal : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06002E14 RID: 11796 RVA: 0x000E6304 File Offset: 0x000E4504
+	// Token: 0x06002E15 RID: 11797 RVA: 0x000E63A8 File Offset: 0x000E45A8
 	private static void ShowTerminalControlScreen()
 	{
 		if (!CustomMapsTerminal.hasInstance)
@@ -499,7 +499,7 @@ public class CustomMapsTerminal : MonoBehaviour
 		CustomMapsTerminal.instance.UpdateScreenToMatchStatus(false);
 	}
 
-	// Token: 0x06002E15 RID: 11797 RVA: 0x000E6390 File Offset: 0x000E4590
+	// Token: 0x06002E16 RID: 11798 RVA: 0x000E6434 File Offset: 0x000E4634
 	private static void HideTerminalControlScreen()
 	{
 		if (!CustomMapsTerminal.hasInstance || !ModIOManager.IsLoggedIn())
@@ -542,7 +542,7 @@ public class CustomMapsTerminal : MonoBehaviour
 		CustomMapsTerminal.instance.UpdateScreenToMatchStatus(false);
 	}
 
-	// Token: 0x06002E16 RID: 11798 RVA: 0x000E64ED File Offset: 0x000E46ED
+	// Token: 0x06002E17 RID: 11799 RVA: 0x000E6591 File Offset: 0x000E4791
 	public static void RequestDriverNickNameRefresh()
 	{
 		if (!CustomMapsTerminal.hasInstance)
@@ -557,7 +557,7 @@ public class CustomMapsTerminal : MonoBehaviour
 		CustomMapsTerminal.instance.mapTerminalNetworkObject.RefreshDriverNickName();
 	}
 
-	// Token: 0x06002E17 RID: 11799 RVA: 0x000E6514 File Offset: 0x000E4714
+	// Token: 0x06002E18 RID: 11800 RVA: 0x000E65B8 File Offset: 0x000E47B8
 	public static void RefreshDriverNickName()
 	{
 		if (!CustomMapsTerminal.hasInstance)
@@ -591,7 +591,7 @@ public class CustomMapsTerminal : MonoBehaviour
 		CustomMapsTerminal.instance.modListScreen.RefreshDriverNickname(CustomMapsTerminal.instance.terminalControllerText.text);
 	}
 
-	// Token: 0x06002E18 RID: 11800 RVA: 0x000E6637 File Offset: 0x000E4837
+	// Token: 0x06002E19 RID: 11801 RVA: 0x000E66DB File Offset: 0x000E48DB
 	private void OnReturnedToSinglePlayer()
 	{
 		if (CustomMapsTerminal.localDriverID != CustomMapsTerminal.cachedLocalPlayerID)
@@ -605,26 +605,26 @@ public class CustomMapsTerminal : MonoBehaviour
 		CustomMapsTerminal.cachedLocalPlayerID = -1;
 	}
 
-	// Token: 0x06002E19 RID: 11801 RVA: 0x000E665C File Offset: 0x000E485C
+	// Token: 0x06002E1A RID: 11802 RVA: 0x000E6700 File Offset: 0x000E4900
 	private void OnJoinedRoom()
 	{
 		CustomMapsTerminal.cachedLocalPlayerID = CustomMapsTerminal.LocalPlayerID;
 		CustomMapsTerminal.ResetTerminalControl();
 	}
 
-	// Token: 0x06002E1A RID: 11802 RVA: 0x000E666D File Offset: 0x000E486D
+	// Token: 0x06002E1B RID: 11803 RVA: 0x000E6711 File Offset: 0x000E4911
 	public static bool IsLocked()
 	{
 		return CustomMapsTerminal.localDriverID != -2;
 	}
 
-	// Token: 0x06002E1B RID: 11803 RVA: 0x000E667B File Offset: 0x000E487B
+	// Token: 0x06002E1C RID: 11804 RVA: 0x000E671F File Offset: 0x000E491F
 	public static int GetDriverID()
 	{
 		return CustomMapsTerminal.localDriverID;
 	}
 
-	// Token: 0x06002E1C RID: 11804 RVA: 0x000E6682 File Offset: 0x000E4882
+	// Token: 0x06002E1D RID: 11805 RVA: 0x000E6726 File Offset: 0x000E4926
 	public static string GetDriverNickname()
 	{
 		if (!CustomMapsTerminal.hasInstance)
@@ -634,93 +634,93 @@ public class CustomMapsTerminal : MonoBehaviour
 		return CustomMapsTerminal.instance.terminalControllerText.text;
 	}
 
-	// Token: 0x04003469 RID: 13417
+	// Token: 0x0400346B RID: 13419
 	[SerializeField]
 	private CustomMapsAccessScreen accessScreen;
 
-	// Token: 0x0400346A RID: 13418
+	// Token: 0x0400346C RID: 13420
 	[SerializeField]
 	private CustomMapsListScreen modListScreen;
 
-	// Token: 0x0400346B RID: 13419
+	// Token: 0x0400346D RID: 13421
 	[SerializeField]
 	private CustomMapsDetailsScreen modDetailsScreen;
 
-	// Token: 0x0400346C RID: 13420
+	// Token: 0x0400346E RID: 13422
 	[SerializeField]
 	private VirtualStumpSerializer mapTerminalNetworkObject;
 
-	// Token: 0x0400346D RID: 13421
+	// Token: 0x0400346F RID: 13423
 	[SerializeField]
 	private CustomMapsTerminalControlButton terminalControlButton;
 
-	// Token: 0x0400346E RID: 13422
+	// Token: 0x04003470 RID: 13424
 	[SerializeField]
 	private TMP_Text terminalControllerLabelText;
 
-	// Token: 0x0400346F RID: 13423
+	// Token: 0x04003471 RID: 13425
 	[SerializeField]
 	private TMP_Text terminalControllerText;
 
-	// Token: 0x04003470 RID: 13424
+	// Token: 0x04003472 RID: 13426
 	[SerializeField]
 	private List<CustomMapsTerminalTagButton> tagButtons = new List<CustomMapsTerminalTagButton>();
 
-	// Token: 0x04003471 RID: 13425
+	// Token: 0x04003473 RID: 13427
 	[SerializeField]
 	private CustomMapsTerminalToggleButton subscribedOnlyButton;
 
-	// Token: 0x04003472 RID: 13426
+	// Token: 0x04003474 RID: 13428
 	public const int NO_DRIVER_ID = -2;
 
-	// Token: 0x04003473 RID: 13427
+	// Token: 0x04003475 RID: 13429
 	private const short NUM_OF_TAGS = 8;
 
-	// Token: 0x04003474 RID: 13428
+	// Token: 0x04003476 RID: 13430
 	private static CustomMapsTerminal instance;
 
-	// Token: 0x04003475 RID: 13429
+	// Token: 0x04003477 RID: 13431
 	private static bool hasInstance;
 
-	// Token: 0x04003476 RID: 13430
+	// Token: 0x04003478 RID: 13432
 	private static CustomMapsTerminal.TerminalStatus localStatus = new CustomMapsTerminal.TerminalStatus();
 
-	// Token: 0x04003477 RID: 13431
+	// Token: 0x04003479 RID: 13433
 	private static CustomMapsTerminal.TerminalStatus cachedNetStatus = new CustomMapsTerminal.TerminalStatus();
 
-	// Token: 0x04003478 RID: 13432
+	// Token: 0x0400347A RID: 13434
 	private static int localDriverID = -1;
 
-	// Token: 0x04003479 RID: 13433
+	// Token: 0x0400347B RID: 13435
 	private static int cachedLocalPlayerID = -1;
 
-	// Token: 0x0400347A RID: 13434
+	// Token: 0x0400347C RID: 13436
 	private static bool useNametags;
 
-	// Token: 0x0400347B RID: 13435
+	// Token: 0x0400347D RID: 13437
 	private static short localTagStatus = 0;
 
 	// Token: 0x02000733 RID: 1843
 	public enum ScreenType
 	{
-		// Token: 0x0400347D RID: 13437
-		Invalid = -1,
-		// Token: 0x0400347E RID: 13438
-		Access,
 		// Token: 0x0400347F RID: 13439
-		TerminalControlPrompt,
+		Invalid = -1,
 		// Token: 0x04003480 RID: 13440
-		AvailableMods,
+		Access,
 		// Token: 0x04003481 RID: 13441
-		SubscribedMods,
+		TerminalControlPrompt,
 		// Token: 0x04003482 RID: 13442
+		AvailableMods,
+		// Token: 0x04003483 RID: 13443
+		SubscribedMods,
+		// Token: 0x04003484 RID: 13444
 		ModDetails
 	}
 
 	// Token: 0x02000734 RID: 1844
 	public class TerminalStatus
 	{
-		// Token: 0x06002E1F RID: 11807 RVA: 0x000E66DC File Offset: 0x000E48DC
+		// Token: 0x06002E20 RID: 11808 RVA: 0x000E6780 File Offset: 0x000E4980
 		public long[] PackData(bool packModList)
 		{
 			long[] array;
@@ -747,7 +747,7 @@ public class CustomMapsTerminal : MonoBehaviour
 			return array;
 		}
 
-		// Token: 0x06002E20 RID: 11808 RVA: 0x000E67B8 File Offset: 0x000E49B8
+		// Token: 0x06002E21 RID: 11809 RVA: 0x000E685C File Offset: 0x000E4A5C
 		public void UnpackData(long[] data)
 		{
 			if (data.Length < 3 || data.Length > 3 + this.modsPerPage)
@@ -779,7 +779,7 @@ public class CustomMapsTerminal : MonoBehaviour
 			}
 		}
 
-		// Token: 0x06002E21 RID: 11809 RVA: 0x000E6914 File Offset: 0x000E4B14
+		// Token: 0x06002E22 RID: 11810 RVA: 0x000E69B8 File Offset: 0x000E4BB8
 		public void Copy(CustomMapsTerminal.TerminalStatus other)
 		{
 			this.currentScreen = other.currentScreen;
@@ -793,37 +793,37 @@ public class CustomMapsTerminal : MonoBehaviour
 			this.sortType = other.sortType;
 		}
 
-		// Token: 0x04003483 RID: 13443
+		// Token: 0x04003485 RID: 13445
 		public CustomMapsTerminal.ScreenType currentScreen = CustomMapsTerminal.ScreenType.Invalid;
 
-		// Token: 0x04003484 RID: 13444
+		// Token: 0x04003486 RID: 13446
 		public CustomMapsTerminal.ScreenType previousScreen = CustomMapsTerminal.ScreenType.Invalid;
 
-		// Token: 0x04003485 RID: 13445
+		// Token: 0x04003487 RID: 13447
 		public int modIndex;
 
-		// Token: 0x04003486 RID: 13446
+		// Token: 0x04003488 RID: 13448
 		public int pageIndex;
 
-		// Token: 0x04003487 RID: 13447
+		// Token: 0x04003489 RID: 13449
 		public long modDetailsID;
 
-		// Token: 0x04003488 RID: 13448
+		// Token: 0x0400348A RID: 13450
 		public long[] modList;
 
-		// Token: 0x04003489 RID: 13449
+		// Token: 0x0400348B RID: 13451
 		public int numModPages = -1;
 
-		// Token: 0x0400348A RID: 13450
+		// Token: 0x0400348C RID: 13452
 		public short tagFlags = 128;
 
-		// Token: 0x0400348B RID: 13451
+		// Token: 0x0400348D RID: 13453
 		public SortModsBy sortType = SortModsBy.Popular;
 
-		// Token: 0x0400348C RID: 13452
+		// Token: 0x0400348E RID: 13454
 		private const int MINIMUM_ARRAY_LENGTH = 3;
 
-		// Token: 0x0400348D RID: 13453
+		// Token: 0x0400348F RID: 13455
 		public int modsPerPage;
 	}
 }

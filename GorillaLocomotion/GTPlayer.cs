@@ -20,7 +20,7 @@ namespace GorillaLocomotion
 	public class GTPlayer : MonoBehaviour
 	{
 		// Token: 0x17000818 RID: 2072
-		// (get) Token: 0x060050AD RID: 20653 RVA: 0x00180E26 File Offset: 0x0017F026
+		// (get) Token: 0x060050AE RID: 20654 RVA: 0x00180EFE File Offset: 0x0017F0FE
 		public static GTPlayer Instance
 		{
 			get
@@ -30,7 +30,7 @@ namespace GorillaLocomotion
 		}
 
 		// Token: 0x17000819 RID: 2073
-		// (get) Token: 0x060050AE RID: 20654 RVA: 0x00180E2D File Offset: 0x0017F02D
+		// (get) Token: 0x060050AF RID: 20655 RVA: 0x00180F05 File Offset: 0x0017F105
 		public Vector3 InstantaneousVelocity
 		{
 			get
@@ -40,7 +40,7 @@ namespace GorillaLocomotion
 		}
 
 		// Token: 0x1700081A RID: 2074
-		// (get) Token: 0x060050AF RID: 20655 RVA: 0x00180E35 File Offset: 0x0017F035
+		// (get) Token: 0x060050B0 RID: 20656 RVA: 0x00180F0D File Offset: 0x0017F10D
 		public Vector3 AveragedVelocity
 		{
 			get
@@ -50,7 +50,7 @@ namespace GorillaLocomotion
 		}
 
 		// Token: 0x1700081B RID: 2075
-		// (get) Token: 0x060050B0 RID: 20656 RVA: 0x00180E3D File Offset: 0x0017F03D
+		// (get) Token: 0x060050B1 RID: 20657 RVA: 0x00180F15 File Offset: 0x0017F115
 		public Transform CosmeticsHeadTarget
 		{
 			get
@@ -60,7 +60,7 @@ namespace GorillaLocomotion
 		}
 
 		// Token: 0x1700081C RID: 2076
-		// (get) Token: 0x060050B1 RID: 20657 RVA: 0x00180E45 File Offset: 0x0017F045
+		// (get) Token: 0x060050B2 RID: 20658 RVA: 0x00180F1D File Offset: 0x0017F11D
 		public float scale
 		{
 			get
@@ -70,7 +70,7 @@ namespace GorillaLocomotion
 		}
 
 		// Token: 0x1700081D RID: 2077
-		// (get) Token: 0x060050B2 RID: 20658 RVA: 0x00180E54 File Offset: 0x0017F054
+		// (get) Token: 0x060050B3 RID: 20659 RVA: 0x00180F2C File Offset: 0x0017F12C
 		public float NativeScale
 		{
 			get
@@ -80,7 +80,7 @@ namespace GorillaLocomotion
 		}
 
 		// Token: 0x1700081E RID: 2078
-		// (get) Token: 0x060050B3 RID: 20659 RVA: 0x00180E5C File Offset: 0x0017F05C
+		// (get) Token: 0x060050B4 RID: 20660 RVA: 0x00180F34 File Offset: 0x0017F134
 		public float ScaleMultiplier
 		{
 			get
@@ -89,13 +89,13 @@ namespace GorillaLocomotion
 			}
 		}
 
-		// Token: 0x060050B4 RID: 20660 RVA: 0x00180E64 File Offset: 0x0017F064
+		// Token: 0x060050B5 RID: 20661 RVA: 0x00180F3C File Offset: 0x0017F13C
 		public void SetScaleMultiplier(float s)
 		{
 			this.scaleMultiplier = s;
 		}
 
-		// Token: 0x060050B5 RID: 20661 RVA: 0x00180E70 File Offset: 0x0017F070
+		// Token: 0x060050B6 RID: 20662 RVA: 0x00180F48 File Offset: 0x0017F148
 		public void SetNativeScale(NativeSizeChangerSettings s)
 		{
 			float num = this.nativeScale;
@@ -122,7 +122,7 @@ namespace GorillaLocomotion
 		}
 
 		// Token: 0x1700081F RID: 2079
-		// (get) Token: 0x060050B6 RID: 20662 RVA: 0x00180EFB File Offset: 0x0017F0FB
+		// (get) Token: 0x060050B7 RID: 20663 RVA: 0x00180FD3 File Offset: 0x0017F1D3
 		public bool IsDefaultScale
 		{
 			get
@@ -132,7 +132,7 @@ namespace GorillaLocomotion
 		}
 
 		// Token: 0x17000820 RID: 2080
-		// (get) Token: 0x060050B7 RID: 20663 RVA: 0x00180F15 File Offset: 0x0017F115
+		// (get) Token: 0x060050B8 RID: 20664 RVA: 0x00180FED File Offset: 0x0017F1ED
 		public bool turnedThisFrame
 		{
 			get
@@ -142,7 +142,7 @@ namespace GorillaLocomotion
 		}
 
 		// Token: 0x17000821 RID: 2081
-		// (get) Token: 0x060050B8 RID: 20664 RVA: 0x00180F27 File Offset: 0x0017F127
+		// (get) Token: 0x060050B9 RID: 20665 RVA: 0x00180FFF File Offset: 0x0017F1FF
 		public List<GTPlayer.MaterialData> materialData
 		{
 			get
@@ -152,12 +152,12 @@ namespace GorillaLocomotion
 		}
 
 		// Token: 0x17000822 RID: 2082
-		// (get) Token: 0x060050B9 RID: 20665 RVA: 0x00180F34 File Offset: 0x0017F134
-		// (set) Token: 0x060050BA RID: 20666 RVA: 0x00180F3C File Offset: 0x0017F13C
+		// (get) Token: 0x060050BA RID: 20666 RVA: 0x0018100C File Offset: 0x0017F20C
+		// (set) Token: 0x060050BB RID: 20667 RVA: 0x00181014 File Offset: 0x0017F214
 		protected bool IsFrozen { get; set; }
 
 		// Token: 0x17000823 RID: 2083
-		// (get) Token: 0x060050BB RID: 20667 RVA: 0x00180F45 File Offset: 0x0017F145
+		// (get) Token: 0x060050BC RID: 20668 RVA: 0x0018101D File Offset: 0x0017F21D
 		public List<WaterVolume> HeadOverlappingWaterVolumes
 		{
 			get
@@ -167,7 +167,7 @@ namespace GorillaLocomotion
 		}
 
 		// Token: 0x17000824 RID: 2084
-		// (get) Token: 0x060050BC RID: 20668 RVA: 0x00180F4D File Offset: 0x0017F14D
+		// (get) Token: 0x060050BD RID: 20669 RVA: 0x00181025 File Offset: 0x0017F225
 		public bool InWater
 		{
 			get
@@ -177,7 +177,7 @@ namespace GorillaLocomotion
 		}
 
 		// Token: 0x17000825 RID: 2085
-		// (get) Token: 0x060050BD RID: 20669 RVA: 0x00180F55 File Offset: 0x0017F155
+		// (get) Token: 0x060050BE RID: 20670 RVA: 0x0018102D File Offset: 0x0017F22D
 		public bool HeadInWater
 		{
 			get
@@ -187,7 +187,7 @@ namespace GorillaLocomotion
 		}
 
 		// Token: 0x17000826 RID: 2086
-		// (get) Token: 0x060050BE RID: 20670 RVA: 0x00180F5D File Offset: 0x0017F15D
+		// (get) Token: 0x060050BF RID: 20671 RVA: 0x00181035 File Offset: 0x0017F235
 		public WaterVolume CurrentWaterVolume
 		{
 			get
@@ -201,7 +201,7 @@ namespace GorillaLocomotion
 		}
 
 		// Token: 0x17000827 RID: 2087
-		// (get) Token: 0x060050BF RID: 20671 RVA: 0x00180F7B File Offset: 0x0017F17B
+		// (get) Token: 0x060050C0 RID: 20672 RVA: 0x00181053 File Offset: 0x0017F253
 		public WaterVolume.SurfaceQuery WaterSurfaceForHead
 		{
 			get
@@ -211,7 +211,7 @@ namespace GorillaLocomotion
 		}
 
 		// Token: 0x17000828 RID: 2088
-		// (get) Token: 0x060050C0 RID: 20672 RVA: 0x00180F83 File Offset: 0x0017F183
+		// (get) Token: 0x060050C1 RID: 20673 RVA: 0x0018105B File Offset: 0x0017F25B
 		public WaterVolume LeftHandWaterVolume
 		{
 			get
@@ -221,7 +221,7 @@ namespace GorillaLocomotion
 		}
 
 		// Token: 0x17000829 RID: 2089
-		// (get) Token: 0x060050C1 RID: 20673 RVA: 0x00180F8B File Offset: 0x0017F18B
+		// (get) Token: 0x060050C2 RID: 20674 RVA: 0x00181063 File Offset: 0x0017F263
 		public WaterVolume RightHandWaterVolume
 		{
 			get
@@ -231,7 +231,7 @@ namespace GorillaLocomotion
 		}
 
 		// Token: 0x1700082A RID: 2090
-		// (get) Token: 0x060050C2 RID: 20674 RVA: 0x00180F93 File Offset: 0x0017F193
+		// (get) Token: 0x060050C3 RID: 20675 RVA: 0x0018106B File Offset: 0x0017F26B
 		public WaterVolume.SurfaceQuery LeftHandWaterSurface
 		{
 			get
@@ -241,7 +241,7 @@ namespace GorillaLocomotion
 		}
 
 		// Token: 0x1700082B RID: 2091
-		// (get) Token: 0x060050C3 RID: 20675 RVA: 0x00180F9B File Offset: 0x0017F19B
+		// (get) Token: 0x060050C4 RID: 20676 RVA: 0x00181073 File Offset: 0x0017F273
 		public WaterVolume.SurfaceQuery RightHandWaterSurface
 		{
 			get
@@ -251,7 +251,7 @@ namespace GorillaLocomotion
 		}
 
 		// Token: 0x1700082C RID: 2092
-		// (get) Token: 0x060050C4 RID: 20676 RVA: 0x00180FA3 File Offset: 0x0017F1A3
+		// (get) Token: 0x060050C5 RID: 20677 RVA: 0x0018107B File Offset: 0x0017F27B
 		public Vector3 LastLeftHandPosition
 		{
 			get
@@ -261,7 +261,7 @@ namespace GorillaLocomotion
 		}
 
 		// Token: 0x1700082D RID: 2093
-		// (get) Token: 0x060050C5 RID: 20677 RVA: 0x00180FAB File Offset: 0x0017F1AB
+		// (get) Token: 0x060050C6 RID: 20678 RVA: 0x00181083 File Offset: 0x0017F283
 		public Vector3 LastRightHandPosition
 		{
 			get
@@ -271,7 +271,7 @@ namespace GorillaLocomotion
 		}
 
 		// Token: 0x1700082E RID: 2094
-		// (get) Token: 0x060050C6 RID: 20678 RVA: 0x00180FB3 File Offset: 0x0017F1B3
+		// (get) Token: 0x060050C7 RID: 20679 RVA: 0x0018108B File Offset: 0x0017F28B
 		public Vector3 RigidbodyVelocity
 		{
 			get
@@ -281,7 +281,7 @@ namespace GorillaLocomotion
 		}
 
 		// Token: 0x1700082F RID: 2095
-		// (get) Token: 0x060050C7 RID: 20679 RVA: 0x00180FC0 File Offset: 0x0017F1C0
+		// (get) Token: 0x060050C8 RID: 20680 RVA: 0x00181098 File Offset: 0x0017F298
 		public Vector3 HeadCenterPosition
 		{
 			get
@@ -291,7 +291,7 @@ namespace GorillaLocomotion
 		}
 
 		// Token: 0x17000830 RID: 2096
-		// (get) Token: 0x060050C8 RID: 20680 RVA: 0x00181000 File Offset: 0x0017F200
+		// (get) Token: 0x060050C9 RID: 20681 RVA: 0x001810D8 File Offset: 0x0017F2D8
 		public bool HandContactingSurface
 		{
 			get
@@ -301,7 +301,7 @@ namespace GorillaLocomotion
 		}
 
 		// Token: 0x17000831 RID: 2097
-		// (get) Token: 0x060050C9 RID: 20681 RVA: 0x00181012 File Offset: 0x0017F212
+		// (get) Token: 0x060050CA RID: 20682 RVA: 0x001810EA File Offset: 0x0017F2EA
 		public bool BodyOnGround
 		{
 			get
@@ -311,7 +311,7 @@ namespace GorillaLocomotion
 		}
 
 		// Token: 0x17000832 RID: 2098
-		// (set) Token: 0x060050CA RID: 20682 RVA: 0x0018102A File Offset: 0x0017F22A
+		// (set) Token: 0x060050CB RID: 20683 RVA: 0x00181102 File Offset: 0x0017F302
 		public Quaternion PlayerRotationOverride
 		{
 			set
@@ -322,12 +322,12 @@ namespace GorillaLocomotion
 		}
 
 		// Token: 0x17000833 RID: 2099
-		// (get) Token: 0x060050CB RID: 20683 RVA: 0x0018103E File Offset: 0x0017F23E
-		// (set) Token: 0x060050CC RID: 20684 RVA: 0x00181046 File Offset: 0x0017F246
+		// (get) Token: 0x060050CC RID: 20684 RVA: 0x00181116 File Offset: 0x0017F316
+		// (set) Token: 0x060050CD RID: 20685 RVA: 0x0018111E File Offset: 0x0017F31E
 		public bool IsBodySliding { get; set; }
 
 		// Token: 0x17000834 RID: 2100
-		// (get) Token: 0x060050CD RID: 20685 RVA: 0x0018104F File Offset: 0x0017F24F
+		// (get) Token: 0x060050CE RID: 20686 RVA: 0x00181127 File Offset: 0x0017F327
 		public GorillaClimbable CurrentClimbable
 		{
 			get
@@ -337,7 +337,7 @@ namespace GorillaLocomotion
 		}
 
 		// Token: 0x17000835 RID: 2101
-		// (get) Token: 0x060050CE RID: 20686 RVA: 0x00181057 File Offset: 0x0017F257
+		// (get) Token: 0x060050CF RID: 20687 RVA: 0x0018112F File Offset: 0x0017F32F
 		public GorillaHandClimber CurrentClimber
 		{
 			get
@@ -347,8 +347,8 @@ namespace GorillaLocomotion
 		}
 
 		// Token: 0x17000836 RID: 2102
-		// (get) Token: 0x060050CF RID: 20687 RVA: 0x0018105F File Offset: 0x0017F25F
-		// (set) Token: 0x060050D0 RID: 20688 RVA: 0x00181067 File Offset: 0x0017F267
+		// (get) Token: 0x060050D0 RID: 20688 RVA: 0x00181137 File Offset: 0x0017F337
+		// (set) Token: 0x060050D1 RID: 20689 RVA: 0x0018113F File Offset: 0x0017F33F
 		public float jumpMultiplier
 		{
 			get
@@ -361,7 +361,7 @@ namespace GorillaLocomotion
 			}
 		}
 
-		// Token: 0x060050D1 RID: 20689 RVA: 0x00181070 File Offset: 0x0017F270
+		// Token: 0x060050D2 RID: 20690 RVA: 0x00181148 File Offset: 0x0017F348
 		private void Awake()
 		{
 			if (GTPlayer._instance != null && GTPlayer._instance != this)
@@ -396,7 +396,7 @@ namespace GorillaLocomotion
 			this.bodyTouchedSurfaces = new Dictionary<GameObject, PhysicMaterial>();
 		}
 
-		// Token: 0x060050D2 RID: 20690 RVA: 0x001811DC File Offset: 0x0017F3DC
+		// Token: 0x060050D3 RID: 20691 RVA: 0x001812B4 File Offset: 0x0017F4B4
 		protected void Start()
 		{
 			if (this.mainCamera == null)
@@ -410,7 +410,7 @@ namespace GorillaLocomotion
 			this.Turn(num);
 		}
 
-		// Token: 0x060050D3 RID: 20691 RVA: 0x00181279 File Offset: 0x0017F479
+		// Token: 0x060050D4 RID: 20692 RVA: 0x00181351 File Offset: 0x0017F551
 		protected void OnDestroy()
 		{
 			if (GTPlayer._instance == this)
@@ -424,7 +424,7 @@ namespace GorillaLocomotion
 			}
 		}
 
-		// Token: 0x060050D4 RID: 20692 RVA: 0x001812B4 File Offset: 0x0017F4B4
+		// Token: 0x060050D5 RID: 20693 RVA: 0x0018138C File Offset: 0x0017F58C
 		public void InitializeValues()
 		{
 			Physics.SyncTransforms();
@@ -453,7 +453,7 @@ namespace GorillaLocomotion
 			this.bodyCollider.transform.eulerAngles = new Vector3(0f, this.headCollider.transform.eulerAngles.y, 0f);
 		}
 
-		// Token: 0x060050D5 RID: 20693 RVA: 0x00181464 File Offset: 0x0017F664
+		// Token: 0x060050D6 RID: 20694 RVA: 0x0018153C File Offset: 0x0017F73C
 		public void SetHalloweenLevitation(float levitateStrength, float levitateDuration, float levitateBlendOutDuration, float levitateBonusStrength, float levitateBonusOffAtYSpeed, float levitateBonusFullAtYSpeed)
 		{
 			this.halloweenLevitationStrength = levitateStrength;
@@ -464,13 +464,13 @@ namespace GorillaLocomotion
 			this.halloweenLevitationBonusStrength = levitateBonusStrength;
 		}
 
-		// Token: 0x060050D6 RID: 20694 RVA: 0x00181495 File Offset: 0x0017F695
+		// Token: 0x060050D7 RID: 20695 RVA: 0x0018156D File Offset: 0x0017F76D
 		public void TeleportToTrain(bool enable)
 		{
 			this.teleportToTrain = enable;
 		}
 
-		// Token: 0x060050D7 RID: 20695 RVA: 0x001814A0 File Offset: 0x0017F6A0
+		// Token: 0x060050D8 RID: 20696 RVA: 0x00181578 File Offset: 0x0017F778
 		public void TeleportTo(Vector3 position, Quaternion rotation)
 		{
 			Rigidbody component = base.GetComponent<Rigidbody>();
@@ -495,7 +495,7 @@ namespace GorillaLocomotion
 			GorillaTagger.Instance.offlineVRRig.transform.position = position;
 		}
 
-		// Token: 0x060050D8 RID: 20696 RVA: 0x001815C0 File Offset: 0x0017F7C0
+		// Token: 0x060050D9 RID: 20697 RVA: 0x00181698 File Offset: 0x0017F898
 		public void TeleportTo(Transform destination, bool matchDestinationRotation = true, bool maintainVelocity = true)
 		{
 			Vector3 position = base.transform.position;
@@ -523,13 +523,13 @@ namespace GorillaLocomotion
 			}
 		}
 
-		// Token: 0x060050D9 RID: 20697 RVA: 0x00181699 File Offset: 0x0017F899
+		// Token: 0x060050DA RID: 20698 RVA: 0x00181771 File Offset: 0x0017F971
 		public void AddForce(Vector3 force, ForceMode mode)
 		{
 			this.playerRigidBody.AddForce(force, mode);
 		}
 
-		// Token: 0x060050DA RID: 20698 RVA: 0x001816A8 File Offset: 0x0017F8A8
+		// Token: 0x060050DB RID: 20699 RVA: 0x00181780 File Offset: 0x0017F980
 		public void SetPlayerVelocity(Vector3 newVelocity)
 		{
 			for (int i = 0; i < this.velocityHistory.Length; i++)
@@ -539,7 +539,7 @@ namespace GorillaLocomotion
 			this.playerRigidBody.AddForce(newVelocity - this.playerRigidBody.velocity, ForceMode.VelocityChange);
 		}
 
-		// Token: 0x060050DB RID: 20699 RVA: 0x001816F2 File Offset: 0x0017F8F2
+		// Token: 0x060050DC RID: 20700 RVA: 0x001817CA File Offset: 0x0017F9CA
 		public void SetGravityOverride(Object caller, Action<GTPlayer> gravityFunction)
 		{
 			if (!this.gravityOverrides.ContainsKey(caller))
@@ -550,13 +550,13 @@ namespace GorillaLocomotion
 			this.gravityOverrides[caller] = gravityFunction;
 		}
 
-		// Token: 0x060050DC RID: 20700 RVA: 0x0018171D File Offset: 0x0017F91D
+		// Token: 0x060050DD RID: 20701 RVA: 0x001817F5 File Offset: 0x0017F9F5
 		public void UnsetGravityOverride(Object caller)
 		{
 			this.gravityOverrides.Remove(caller);
 		}
 
-		// Token: 0x060050DD RID: 20701 RVA: 0x0018172C File Offset: 0x0017F92C
+		// Token: 0x060050DE RID: 20702 RVA: 0x00181804 File Offset: 0x0017FA04
 		private void ApplyGravityOverrides()
 		{
 			foreach (KeyValuePair<Object, Action<GTPlayer>> keyValuePair in this.gravityOverrides)
@@ -565,7 +565,7 @@ namespace GorillaLocomotion
 			}
 		}
 
-		// Token: 0x060050DE RID: 20702 RVA: 0x00181788 File Offset: 0x0017F988
+		// Token: 0x060050DF RID: 20703 RVA: 0x00181860 File Offset: 0x0017FA60
 		public void ApplyKnockback(Vector3 direction, float speed, bool forceOffTheGround = false)
 		{
 			if (forceOffTheGround)
@@ -592,7 +592,7 @@ namespace GorillaLocomotion
 			}
 		}
 
-		// Token: 0x060050DF RID: 20703 RVA: 0x00181864 File Offset: 0x0017FA64
+		// Token: 0x060050E0 RID: 20704 RVA: 0x0018193C File Offset: 0x0017FB3C
 		public void FixedUpdate()
 		{
 			this.AntiTeleportTechnology();
@@ -848,23 +848,23 @@ namespace GorillaLocomotion
 		}
 
 		// Token: 0x17000837 RID: 2103
-		// (get) Token: 0x060050E0 RID: 20704 RVA: 0x001826AF File Offset: 0x001808AF
-		// (set) Token: 0x060050E1 RID: 20705 RVA: 0x001826B7 File Offset: 0x001808B7
+		// (get) Token: 0x060050E1 RID: 20705 RVA: 0x00182787 File Offset: 0x00180987
+		// (set) Token: 0x060050E2 RID: 20706 RVA: 0x0018278F File Offset: 0x0018098F
 		public bool isHoverAllowed { get; private set; }
 
 		// Token: 0x17000838 RID: 2104
-		// (get) Token: 0x060050E2 RID: 20706 RVA: 0x001826C0 File Offset: 0x001808C0
-		// (set) Token: 0x060050E3 RID: 20707 RVA: 0x001826C8 File Offset: 0x001808C8
+		// (get) Token: 0x060050E3 RID: 20707 RVA: 0x00182798 File Offset: 0x00180998
+		// (set) Token: 0x060050E4 RID: 20708 RVA: 0x001827A0 File Offset: 0x001809A0
 		public bool enableHoverMode { get; private set; }
 
-		// Token: 0x060050E4 RID: 20708 RVA: 0x001826D1 File Offset: 0x001808D1
+		// Token: 0x060050E5 RID: 20709 RVA: 0x001827A9 File Offset: 0x001809A9
 		public void SetHoverboardPosRot(Vector3 worldPos, Quaternion worldRot)
 		{
 			this.hoverboardPlayerLocalPos = this.headCollider.transform.InverseTransformPoint(worldPos);
 			this.hoverboardPlayerLocalRot = this.headCollider.transform.InverseTransformRotation(worldRot);
 		}
 
-		// Token: 0x060050E5 RID: 20709 RVA: 0x00182704 File Offset: 0x00180904
+		// Token: 0x060050E6 RID: 20710 RVA: 0x001827DC File Offset: 0x001809DC
 		private void HoverboardLateUpdate()
 		{
 			Vector3 eulerAngles = this.headCollider.transform.eulerAngles;
@@ -897,7 +897,7 @@ namespace GorillaLocomotion
 			this.bodyCollider.enabled = (this.bodyCollider.transform.position - this.hoverboardVisual.transform.TransformPoint(Vector3.up * this.hoverBodyCollisionRadiusUpOffset)).IsLongerThan(this.hoverBodyHasCollisionsOutsideRadius);
 		}
 
-		// Token: 0x060050E6 RID: 20710 RVA: 0x0018284C File Offset: 0x00180A4C
+		// Token: 0x060050E7 RID: 20711 RVA: 0x00182924 File Offset: 0x00180B24
 		private Vector3 HoverboardFixedUpdate(Vector3 velocity)
 		{
 			this.hoverboardVisual.transform.position = this.headCollider.transform.TransformPoint(this.hoverboardPlayerLocalPos);
@@ -996,7 +996,7 @@ namespace GorillaLocomotion
 			return velocity;
 		}
 
-		// Token: 0x060050E7 RID: 20711 RVA: 0x00182DA8 File Offset: 0x00180FA8
+		// Token: 0x060050E8 RID: 20712 RVA: 0x00182E80 File Offset: 0x00181080
 		public void GrabPersonalHoverboard(bool isLeftHand, Vector3 pos, Quaternion rot, Color col)
 		{
 			if (this.hoverboardVisual.IsHeld)
@@ -1008,7 +1008,7 @@ namespace GorillaLocomotion
 			FreeHoverboardManager.instance.PreserveMaxHoverboardsConstraint(NetworkSystem.Instance.LocalPlayer.ActorNumber);
 		}
 
-		// Token: 0x060050E8 RID: 20712 RVA: 0x00182E04 File Offset: 0x00181004
+		// Token: 0x060050E9 RID: 20713 RVA: 0x00182EDC File Offset: 0x001810DC
 		public void SetHoverAllowed(bool allowed, bool force = false)
 		{
 			if (allowed)
@@ -1029,7 +1029,7 @@ namespace GorillaLocomotion
 			}
 		}
 
-		// Token: 0x060050E9 RID: 20713 RVA: 0x00182E7C File Offset: 0x0018107C
+		// Token: 0x060050EA RID: 20714 RVA: 0x00182F54 File Offset: 0x00181154
 		public void SetHoverActive(bool enable)
 		{
 			if (enable && !this.isHoverAllowed)
@@ -1050,7 +1050,7 @@ namespace GorillaLocomotion
 			}
 		}
 
-		// Token: 0x060050EA RID: 20714 RVA: 0x00182EEC File Offset: 0x001810EC
+		// Token: 0x060050EB RID: 20715 RVA: 0x00182FC4 File Offset: 0x001811C4
 		private void BodyCollider()
 		{
 			if (this.MaxSphereSizeForNoOverlap(this.bodyInitialRadius * this.scale, this.PositionWithOffset(this.headCollider.transform, this.bodyOffset), false, out this.bodyMaxRadius))
@@ -1083,7 +1083,7 @@ namespace GorillaLocomotion
 			this.bodyCollider.transform.eulerAngles = new Vector3(0f, this.headCollider.transform.eulerAngles.y, 0f);
 		}
 
-		// Token: 0x060050EB RID: 20715 RVA: 0x001830F4 File Offset: 0x001812F4
+		// Token: 0x060050EC RID: 20716 RVA: 0x001831CC File Offset: 0x001813CC
 		private Vector3 GetCurrentHandPosition(Transform handTransform, Vector3 handOffset)
 		{
 			if (this.inOverlay)
@@ -1097,19 +1097,19 @@ namespace GorillaLocomotion
 			return this.headCollider.transform.position + (this.PositionWithOffset(handTransform, handOffset) - this.headCollider.transform.position).normalized * this.maxArmLength * this.scale;
 		}
 
-		// Token: 0x060050EC RID: 20716 RVA: 0x001831D1 File Offset: 0x001813D1
+		// Token: 0x060050ED RID: 20717 RVA: 0x001832A9 File Offset: 0x001814A9
 		private Vector3 GetLastLeftHandPosition()
 		{
 			return this.lastLeftHandPosition + this.MovingSurfaceMovement();
 		}
 
-		// Token: 0x060050ED RID: 20717 RVA: 0x001831E4 File Offset: 0x001813E4
+		// Token: 0x060050EE RID: 20718 RVA: 0x001832BC File Offset: 0x001814BC
 		private Vector3 GetLastRightHandPosition()
 		{
 			return this.lastRightHandPosition + this.MovingSurfaceMovement();
 		}
 
-		// Token: 0x060050EE RID: 20718 RVA: 0x001831F8 File Offset: 0x001813F8
+		// Token: 0x060050EF RID: 20719 RVA: 0x001832D0 File Offset: 0x001814D0
 		private Vector3 GetCurrentLeftHandPosition()
 		{
 			if (this.inOverlay)
@@ -1123,7 +1123,7 @@ namespace GorillaLocomotion
 			return this.headCollider.transform.position + (this.PositionWithOffset(this.leftControllerTransform, this.leftHandOffset) - this.headCollider.transform.position).normalized * this.maxArmLength * this.scale;
 		}
 
-		// Token: 0x060050EF RID: 20719 RVA: 0x001832F4 File Offset: 0x001814F4
+		// Token: 0x060050F0 RID: 20720 RVA: 0x001833CC File Offset: 0x001815CC
 		private Vector3 GetCurrentRightHandPosition()
 		{
 			if (this.inOverlay)
@@ -1137,13 +1137,13 @@ namespace GorillaLocomotion
 			return this.headCollider.transform.position + (this.PositionWithOffset(this.rightControllerTransform, this.rightHandOffset) - this.headCollider.transform.position).normalized * this.maxArmLength * this.scale;
 		}
 
-		// Token: 0x060050F0 RID: 20720 RVA: 0x001833EF File Offset: 0x001815EF
+		// Token: 0x060050F1 RID: 20721 RVA: 0x001834C7 File Offset: 0x001816C7
 		private Vector3 PositionWithOffset(Transform transformToModify, Vector3 offsetVector)
 		{
 			return transformToModify.position + transformToModify.rotation * offsetVector * this.scale;
 		}
 
-		// Token: 0x060050F1 RID: 20721 RVA: 0x00183414 File Offset: 0x00181614
+		// Token: 0x060050F2 RID: 20722 RVA: 0x001834EC File Offset: 0x001816EC
 		public void ScaleAwayFromPoint(float oldScale, float newScale, Vector3 scaleCenter)
 		{
 			if (oldScale < newScale)
@@ -1154,7 +1154,7 @@ namespace GorillaLocomotion
 			}
 		}
 
-		// Token: 0x060050F2 RID: 20722 RVA: 0x00183478 File Offset: 0x00181678
+		// Token: 0x060050F3 RID: 20723 RVA: 0x00183550 File Offset: 0x00181750
 		private static Vector3 ScalePointAwayFromCenter(Vector3 point, float baseRadius, float oldScale, float newScale, Vector3 scaleCenter)
 		{
 			float magnitude = (point - scaleCenter).magnitude;
@@ -1162,7 +1162,7 @@ namespace GorillaLocomotion
 			return scaleCenter + (point - scaleCenter) * num / magnitude;
 		}
 
-		// Token: 0x060050F3 RID: 20723 RVA: 0x001834C0 File Offset: 0x001816C0
+		// Token: 0x060050F4 RID: 20724 RVA: 0x00183598 File Offset: 0x00181798
 		private void LateUpdate()
 		{
 			if (this.playerRigidBody.isKinematic)
@@ -1802,7 +1802,7 @@ namespace GorillaLocomotion
 			}
 		}
 
-		// Token: 0x060050F4 RID: 20724 RVA: 0x00185368 File Offset: 0x00183568
+		// Token: 0x060050F5 RID: 20725 RVA: 0x00185440 File Offset: 0x00183640
 		private float ApplyNativeScaleAdjustment(float adjustedMagnitude)
 		{
 			if (this.nativeScale > 0f && this.nativeScale != 1f)
@@ -1812,7 +1812,7 @@ namespace GorillaLocomotion
 			return adjustedMagnitude;
 		}
 
-		// Token: 0x060050F5 RID: 20725 RVA: 0x0018539C File Offset: 0x0018359C
+		// Token: 0x060050F6 RID: 20726 RVA: 0x00185474 File Offset: 0x00183674
 		private float RotateWithSurface(Quaternion rotationDelta, Vector3 pivot)
 		{
 			Quaternion quaternion;
@@ -1835,14 +1835,14 @@ namespace GorillaLocomotion
 			return 0f;
 		}
 
-		// Token: 0x060050F6 RID: 20726 RVA: 0x00185420 File Offset: 0x00183620
+		// Token: 0x060050F7 RID: 20727 RVA: 0x001854F8 File Offset: 0x001836F8
 		private void stuckHandsCheckFixedUpdate()
 		{
 			this.stuckLeft = !this.controllerState.LeftValid || (this.isLeftHandColliding && (this.GetCurrentLeftHandPosition() - this.GetLastLeftHandPosition()).magnitude > this.unStickDistance * this.scale && !Physics.Raycast(this.headCollider.transform.position, (this.GetCurrentLeftHandPosition() - this.headCollider.transform.position).normalized, (this.GetCurrentLeftHandPosition() - this.headCollider.transform.position).magnitude, this.locomotionEnabledLayers.value));
 			this.stuckRight = !this.controllerState.RightValid || (this.isRightHandColliding && (this.GetCurrentRightHandPosition() - this.GetLastRightHandPosition()).magnitude > this.unStickDistance * this.scale && !Physics.Raycast(this.headCollider.transform.position, (this.GetCurrentRightHandPosition() - this.headCollider.transform.position).normalized, (this.GetCurrentRightHandPosition() - this.headCollider.transform.position).magnitude, this.locomotionEnabledLayers.value));
 		}
 
-		// Token: 0x060050F7 RID: 20727 RVA: 0x001855A0 File Offset: 0x001837A0
+		// Token: 0x060050F8 RID: 20728 RVA: 0x00185678 File Offset: 0x00183878
 		private void stuckHandsCheckLateUpdate(ref Vector3 finalLeftHandPosition, ref Vector3 finalRightHandPosition)
 		{
 			if (this.stuckLeft)
@@ -1857,7 +1857,7 @@ namespace GorillaLocomotion
 			}
 		}
 
-		// Token: 0x060050F8 RID: 20728 RVA: 0x001855F8 File Offset: 0x001837F8
+		// Token: 0x060050F9 RID: 20729 RVA: 0x001856D0 File Offset: 0x001838D0
 		private void handleClimbing(float deltaTime)
 		{
 			if (this.isClimbing && (this.inOverlay || this.climbHelper == null || this.currentClimbable == null || !this.currentClimbable.isActiveAndEnabled))
@@ -1889,7 +1889,7 @@ namespace GorillaLocomotion
 			}
 		}
 
-		// Token: 0x060050F9 RID: 20729 RVA: 0x001857B8 File Offset: 0x001839B8
+		// Token: 0x060050FA RID: 20730 RVA: 0x00185890 File Offset: 0x00183A90
 		private Vector3 FirstHandIteration(Transform handTransform, Vector3 handOffset, Vector3 lastHandPosition, Vector3 boostVector, bool wasHandSlide, bool wasHandTouching, bool fullSlideOverride, out Vector3 pushDisplacement, ref float handSlipPercentage, ref bool handSlide, ref Vector3 slideNormal, ref bool handColliding, ref int materialTouchIndex, ref GorillaSurfaceOverride touchedOverride, bool skipCollisionChecks, bool hitMovingSurface)
 		{
 			Vector3 vector = this.GetCurrentHandPosition(handTransform, handOffset) + this.movingSurfaceOffset;
@@ -1957,7 +1957,7 @@ namespace GorillaLocomotion
 			return vector2;
 		}
 
-		// Token: 0x060050FA RID: 20730 RVA: 0x00185A30 File Offset: 0x00183C30
+		// Token: 0x060050FB RID: 20731 RVA: 0x00185B08 File Offset: 0x00183D08
 		private Vector3 FinalHandPosition(Transform handTransform, Vector3 handOffset, Vector3 lastHandPosition, Vector3 boostVector, bool bothTouching, bool isHandTouching, out bool handColliding, bool isHandSlide, out bool handSlide, int currentMaterialTouchIndex, out int materialTouchIndex, GorillaSurfaceOverride currentSurface, out GorillaSurfaceOverride touchedOverride, bool skipCollisionChecks, ref RaycastHit hitInfoCopy)
 		{
 			handColliding = isHandTouching;
@@ -1985,7 +1985,7 @@ namespace GorillaLocomotion
 			return this.GetCurrentHandPosition(handTransform, handOffset);
 		}
 
-		// Token: 0x060050FB RID: 20731 RVA: 0x00185B14 File Offset: 0x00183D14
+		// Token: 0x060050FC RID: 20732 RVA: 0x00185BEC File Offset: 0x00183DEC
 		private bool IterativeCollisionSphereCast(Vector3 startPosition, float sphereRadius, Vector3 movementVector, Vector3 boostVector, out Vector3 endPosition, bool singleHand, out float slipPercentage, out RaycastHit iterativeHitInfo, bool fullSlide)
 		{
 			slipPercentage = this.defaultSlideFactor;
@@ -2026,7 +2026,7 @@ namespace GorillaLocomotion
 			return false;
 		}
 
-		// Token: 0x060050FC RID: 20732 RVA: 0x00185CD0 File Offset: 0x00183ED0
+		// Token: 0x060050FD RID: 20733 RVA: 0x00185DA8 File Offset: 0x00183FA8
 		private bool CollisionsSphereCast(Vector3 startPosition, float sphereRadius, Vector3 movementVector, out Vector3 finalPosition, out RaycastHit collisionsHitInfo)
 		{
 			this.MaxSphereSizeForNoOverlap(sphereRadius, startPosition, false, out this.maxSphereSize1);
@@ -2117,7 +2117,7 @@ namespace GorillaLocomotion
 			return false;
 		}
 
-		// Token: 0x060050FD RID: 20733 RVA: 0x0018618E File Offset: 0x0018438E
+		// Token: 0x060050FE RID: 20734 RVA: 0x00186266 File Offset: 0x00184466
 		public bool IsHandTouching(bool forLeftHand)
 		{
 			if (forLeftHand)
@@ -2127,7 +2127,7 @@ namespace GorillaLocomotion
 			return this.wasRightHandColliding;
 		}
 
-		// Token: 0x060050FE RID: 20734 RVA: 0x001861A0 File Offset: 0x001843A0
+		// Token: 0x060050FF RID: 20735 RVA: 0x00186278 File Offset: 0x00184478
 		public bool IsHandSliding(bool forLeftHand)
 		{
 			if (forLeftHand)
@@ -2137,7 +2137,7 @@ namespace GorillaLocomotion
 			return this.wasRightHandSliding || this.isRightHandSliding;
 		}
 
-		// Token: 0x060050FF RID: 20735 RVA: 0x001861C8 File Offset: 0x001843C8
+		// Token: 0x06005100 RID: 20736 RVA: 0x001862A0 File Offset: 0x001844A0
 		public float GetSlidePercentage(RaycastHit raycastHit)
 		{
 			this.currentOverride = raycastHit.collider.gameObject.GetComponent<GorillaSurfaceOverride>();
@@ -2256,7 +2256,7 @@ namespace GorillaLocomotion
 			}
 		}
 
-		// Token: 0x06005100 RID: 20736 RVA: 0x00186624 File Offset: 0x00184824
+		// Token: 0x06005101 RID: 20737 RVA: 0x001866FC File Offset: 0x001848FC
 		public bool IsTouchingMovingSurface(Vector3 rayOrigin, RaycastHit raycastHit, out int movingSurfaceId, out bool sideTouch, out bool isMonkeBlock)
 		{
 			movingSurfaceId = -1;
@@ -2298,7 +2298,7 @@ namespace GorillaLocomotion
 			return false;
 		}
 
-		// Token: 0x06005101 RID: 20737 RVA: 0x001866E0 File Offset: 0x001848E0
+		// Token: 0x06005102 RID: 20738 RVA: 0x001867B8 File Offset: 0x001849B8
 		public void Turn(float degrees)
 		{
 			Vector3 vector = this.headCollider.transform.position;
@@ -2323,7 +2323,7 @@ namespace GorillaLocomotion
 			this.averagedVelocity /= (float)this.velocityHistorySize;
 		}
 
-		// Token: 0x06005102 RID: 20738 RVA: 0x001867F4 File Offset: 0x001849F4
+		// Token: 0x06005103 RID: 20739 RVA: 0x001868CC File Offset: 0x00184ACC
 		public void BeginClimbing(GorillaClimbable climbable, GorillaHandClimber hand, GorillaClimbableRef climbableRef = null)
 		{
 			if (this.currentClimber != null)
@@ -2411,7 +2411,7 @@ namespace GorillaLocomotion
 			}
 		}
 
-		// Token: 0x06005103 RID: 20739 RVA: 0x00186A60 File Offset: 0x00184C60
+		// Token: 0x06005104 RID: 20740 RVA: 0x00186B38 File Offset: 0x00184D38
 		private void VerifyClimbHelper()
 		{
 			if (this.climbHelper == null || this.climbHelper.gameObject == null)
@@ -2420,7 +2420,7 @@ namespace GorillaLocomotion
 			}
 		}
 
-		// Token: 0x06005104 RID: 20740 RVA: 0x00186A98 File Offset: 0x00184C98
+		// Token: 0x06005105 RID: 20741 RVA: 0x00186B70 File Offset: 0x00184D70
 		public GorillaVelocityTracker GetInteractPointVelocityTracker(bool isRightHand)
 		{
 			if (!isRightHand)
@@ -2430,7 +2430,7 @@ namespace GorillaLocomotion
 			return this.rightInteractPointVelocityTracker;
 		}
 
-		// Token: 0x06005105 RID: 20741 RVA: 0x00186AAC File Offset: 0x00184CAC
+		// Token: 0x06005106 RID: 20742 RVA: 0x00186B84 File Offset: 0x00184D84
 		public void EndClimbing(GorillaHandClimber hand, bool startingNewClimb, bool doDontReclimb = false)
 		{
 			if (hand != this.currentClimber)
@@ -2507,19 +2507,19 @@ namespace GorillaLocomotion
 			this.isClimbing = false;
 		}
 
-		// Token: 0x06005106 RID: 20742 RVA: 0x00186D44 File Offset: 0x00184F44
+		// Token: 0x06005107 RID: 20743 RVA: 0x00186E1C File Offset: 0x0018501C
 		private void enablePlayerGravity(bool useGravity)
 		{
 			this.playerRigidBody.useGravity = useGravity;
 		}
 
-		// Token: 0x06005107 RID: 20743 RVA: 0x00186D52 File Offset: 0x00184F52
+		// Token: 0x06005108 RID: 20744 RVA: 0x00186E2A File Offset: 0x0018502A
 		public void SetVelocity(Vector3 velocity)
 		{
 			this.playerRigidBody.velocity = velocity;
 		}
 
-		// Token: 0x06005108 RID: 20744 RVA: 0x00186D60 File Offset: 0x00184F60
+		// Token: 0x06005109 RID: 20745 RVA: 0x00186E38 File Offset: 0x00185038
 		private void StoreVelocities()
 		{
 			this.velocityIndex = (this.velocityIndex + 1) % this.velocityHistorySize;
@@ -2534,7 +2534,7 @@ namespace GorillaLocomotion
 			this.lastPosition = base.transform.position;
 		}
 
-		// Token: 0x06005109 RID: 20745 RVA: 0x00186E30 File Offset: 0x00185030
+		// Token: 0x0600510A RID: 20746 RVA: 0x00186F08 File Offset: 0x00185108
 		private void AntiTeleportTechnology()
 		{
 			if ((this.headCollider.transform.position - this.lastHeadPosition).magnitude >= this.teleportThresholdNoVel + this.playerRigidBody.velocity.magnitude * this.calcDeltaTime)
@@ -2543,7 +2543,7 @@ namespace GorillaLocomotion
 			}
 		}
 
-		// Token: 0x0600510A RID: 20746 RVA: 0x00186EBC File Offset: 0x001850BC
+		// Token: 0x0600510B RID: 20747 RVA: 0x00186F94 File Offset: 0x00185194
 		private bool MaxSphereSizeForNoOverlap(float testRadius, Vector3 checkPosition, bool ignoreOneWay, out float overlapRadiusTest)
 		{
 			overlapRadiusTest = testRadius;
@@ -2579,7 +2579,7 @@ namespace GorillaLocomotion
 			return false;
 		}
 
-		// Token: 0x0600510B RID: 20747 RVA: 0x00186F9C File Offset: 0x0018519C
+		// Token: 0x0600510C RID: 20748 RVA: 0x00187074 File Offset: 0x00185274
 		private bool CrazyCheck2(float sphereSize, Vector3 startPosition)
 		{
 			for (int i = 0; i < this.crazyCheckVectors.Length; i++)
@@ -2592,7 +2592,7 @@ namespace GorillaLocomotion
 			return true;
 		}
 
-		// Token: 0x0600510C RID: 20748 RVA: 0x00186FE4 File Offset: 0x001851E4
+		// Token: 0x0600510D RID: 20749 RVA: 0x001870BC File Offset: 0x001852BC
 		private int NonAllocRaycast(Vector3 startPosition, Vector3 endPosition)
 		{
 			Vector3 vector = endPosition - startPosition;
@@ -2608,7 +2608,7 @@ namespace GorillaLocomotion
 			return num2;
 		}
 
-		// Token: 0x0600510D RID: 20749 RVA: 0x00187050 File Offset: 0x00185250
+		// Token: 0x0600510E RID: 20750 RVA: 0x00187128 File Offset: 0x00185328
 		private void ClearColliderBuffer(ref Collider[] colliders)
 		{
 			for (int i = 0; i < colliders.Length; i++)
@@ -2617,7 +2617,7 @@ namespace GorillaLocomotion
 			}
 		}
 
-		// Token: 0x0600510E RID: 20750 RVA: 0x00187074 File Offset: 0x00185274
+		// Token: 0x0600510F RID: 20751 RVA: 0x0018714C File Offset: 0x0018534C
 		private void ClearRaycasthitBuffer(ref RaycastHit[] raycastHits)
 		{
 			for (int i = 0; i < raycastHits.Length; i++)
@@ -2626,13 +2626,13 @@ namespace GorillaLocomotion
 			}
 		}
 
-		// Token: 0x0600510F RID: 20751 RVA: 0x0018709E File Offset: 0x0018529E
+		// Token: 0x06005110 RID: 20752 RVA: 0x00187176 File Offset: 0x00185376
 		private Vector3 MovingSurfaceMovement()
 		{
 			return this.refMovement + this.movingSurfaceOffset;
 		}
 
-		// Token: 0x06005110 RID: 20752 RVA: 0x001870B4 File Offset: 0x001852B4
+		// Token: 0x06005111 RID: 20753 RVA: 0x0018718C File Offset: 0x0018538C
 		private static bool ComputeLocalHitPoint(RaycastHit hit, out Vector3 localHitPoint)
 		{
 			if (hit.collider == null || hit.point.sqrMagnitude < 0.001f)
@@ -2644,7 +2644,7 @@ namespace GorillaLocomotion
 			return true;
 		}
 
-		// Token: 0x06005111 RID: 20753 RVA: 0x00187112 File Offset: 0x00185312
+		// Token: 0x06005112 RID: 20754 RVA: 0x001871EA File Offset: 0x001853EA
 		private static bool ComputeWorldHitPoint(RaycastHit hit, Vector3 localPoint, out Vector3 worldHitPoint)
 		{
 			if (hit.collider == null)
@@ -2656,7 +2656,7 @@ namespace GorillaLocomotion
 			return true;
 		}
 
-		// Token: 0x06005112 RID: 20754 RVA: 0x0018714C File Offset: 0x0018534C
+		// Token: 0x06005113 RID: 20755 RVA: 0x00187224 File Offset: 0x00185424
 		private float ExtraVelMultiplier()
 		{
 			float num = 1f;
@@ -2671,7 +2671,7 @@ namespace GorillaLocomotion
 			return num;
 		}
 
-		// Token: 0x06005113 RID: 20755 RVA: 0x001871A0 File Offset: 0x001853A0
+		// Token: 0x06005114 RID: 20756 RVA: 0x00187278 File Offset: 0x00185478
 		private float ExtraVelMaxMultiplier()
 		{
 			float num = 1f;
@@ -2686,38 +2686,38 @@ namespace GorillaLocomotion
 			return num * this.scale;
 		}
 
-		// Token: 0x06005114 RID: 20756 RVA: 0x001871FD File Offset: 0x001853FD
+		// Token: 0x06005115 RID: 20757 RVA: 0x001872D5 File Offset: 0x001854D5
 		public void SetMaximumSlipThisFrame()
 		{
 			this.leftSlipSetToMaxFrameIdx = Time.frameCount;
 			this.rightSlipSetToMaxFrameIdx = Time.frameCount;
 		}
 
-		// Token: 0x06005115 RID: 20757 RVA: 0x00187215 File Offset: 0x00185415
+		// Token: 0x06005116 RID: 20758 RVA: 0x001872ED File Offset: 0x001854ED
 		public void SetLeftMaximumSlipThisFrame()
 		{
 			this.leftSlipSetToMaxFrameIdx = Time.frameCount;
 		}
 
-		// Token: 0x06005116 RID: 20758 RVA: 0x00187222 File Offset: 0x00185422
+		// Token: 0x06005117 RID: 20759 RVA: 0x001872FA File Offset: 0x001854FA
 		public void SetRightMaximumSlipThisFrame()
 		{
 			this.rightSlipSetToMaxFrameIdx = Time.frameCount;
 		}
 
-		// Token: 0x06005117 RID: 20759 RVA: 0x0018722F File Offset: 0x0018542F
+		// Token: 0x06005118 RID: 20760 RVA: 0x00187307 File Offset: 0x00185507
 		public bool LeftSlipOverriddenToMax()
 		{
 			return this.leftSlipSetToMaxFrameIdx == Time.frameCount;
 		}
 
-		// Token: 0x06005118 RID: 20760 RVA: 0x0018723E File Offset: 0x0018543E
+		// Token: 0x06005119 RID: 20761 RVA: 0x00187316 File Offset: 0x00185516
 		public bool RightSlipOverriddenToMax()
 		{
 			return this.rightSlipSetToMaxFrameIdx == Time.frameCount;
 		}
 
-		// Token: 0x06005119 RID: 20761 RVA: 0x0018724D File Offset: 0x0018544D
+		// Token: 0x0600511A RID: 20762 RVA: 0x00187325 File Offset: 0x00185525
 		public void ChangeLayer(string layerName)
 		{
 			if (this.layerChanger != null)
@@ -2726,7 +2726,7 @@ namespace GorillaLocomotion
 			}
 		}
 
-		// Token: 0x0600511A RID: 20762 RVA: 0x00187274 File Offset: 0x00185474
+		// Token: 0x0600511B RID: 20763 RVA: 0x0018734C File Offset: 0x0018554C
 		public void RestoreLayer()
 		{
 			if (this.layerChanger != null)
@@ -2735,7 +2735,7 @@ namespace GorillaLocomotion
 			}
 		}
 
-		// Token: 0x0600511B RID: 20763 RVA: 0x00187290 File Offset: 0x00185490
+		// Token: 0x0600511C RID: 20764 RVA: 0x00187368 File Offset: 0x00185568
 		public void OnEnterWaterVolume(Collider playerCollider, WaterVolume volume)
 		{
 			if (this.activeSizeChangerSettings != null && this.activeSizeChangerSettings.ExpireInWater)
@@ -2756,7 +2756,7 @@ namespace GorillaLocomotion
 			}
 		}
 
-		// Token: 0x0600511C RID: 20764 RVA: 0x0018730A File Offset: 0x0018550A
+		// Token: 0x0600511D RID: 20765 RVA: 0x001873E2 File Offset: 0x001855E2
 		public void OnExitWaterVolume(Collider playerCollider, WaterVolume volume)
 		{
 			if (playerCollider == this.headCollider)
@@ -2770,7 +2770,7 @@ namespace GorillaLocomotion
 			}
 		}
 
-		// Token: 0x0600511D RID: 20765 RVA: 0x00187344 File Offset: 0x00185544
+		// Token: 0x0600511E RID: 20766 RVA: 0x0018741C File Offset: 0x0018561C
 		private bool GetSwimmingVelocityForHand(Vector3 startingHandPosition, Vector3 endingHandPosition, Vector3 palmForwardDirection, float dt, ref WaterVolume contactingWaterVolume, ref WaterVolume.SurfaceQuery waterSurface, out Vector3 swimmingVelocityChange)
 		{
 			contactingWaterVolume = null;
@@ -2844,7 +2844,7 @@ namespace GorillaLocomotion
 			return false;
 		}
 
-		// Token: 0x0600511E RID: 20766 RVA: 0x00187600 File Offset: 0x00185800
+		// Token: 0x0600511F RID: 20767 RVA: 0x001876D8 File Offset: 0x001858D8
 		private bool CheckWaterSurfaceJump(Vector3 startingHandPosition, Vector3 endingHandPosition, Vector3 palmForwardDirection, Vector3 handAvgVelocity, PlayerSwimmingParameters parameters, WaterVolume contactingWaterVolume, WaterVolume.SurfaceQuery waterSurface, out Vector3 jumpVelocity)
 		{
 			if (contactingWaterVolume != null)
@@ -2865,7 +2865,7 @@ namespace GorillaLocomotion
 			return false;
 		}
 
-		// Token: 0x0600511F RID: 20767 RVA: 0x001876F9 File Offset: 0x001858F9
+		// Token: 0x06005120 RID: 20768 RVA: 0x001877D1 File Offset: 0x001859D1
 		private bool TryNormalize(Vector3 input, out Vector3 normalized, out float magnitude, float eps = 0.0001f)
 		{
 			magnitude = input.magnitude;
@@ -2878,7 +2878,7 @@ namespace GorillaLocomotion
 			return false;
 		}
 
-		// Token: 0x06005120 RID: 20768 RVA: 0x00187726 File Offset: 0x00185926
+		// Token: 0x06005121 RID: 20769 RVA: 0x001877FE File Offset: 0x001859FE
 		private bool TryNormalizeDown(Vector3 input, out Vector3 normalized, out float magnitude, float eps = 0.0001f)
 		{
 			magnitude = input.magnitude;
@@ -2896,7 +2896,7 @@ namespace GorillaLocomotion
 			return false;
 		}
 
-		// Token: 0x06005121 RID: 20769 RVA: 0x00187768 File Offset: 0x00185968
+		// Token: 0x06005122 RID: 20770 RVA: 0x00187840 File Offset: 0x00185A40
 		private float FreezeTagSlidePercentage()
 		{
 			if (this.materialData[this.currentMaterialIndex].overrideSlidePercent && this.materialData[this.currentMaterialIndex].slidePercent > this.freezeTagHandSlidePercent)
@@ -2906,7 +2906,7 @@ namespace GorillaLocomotion
 			return this.freezeTagHandSlidePercent;
 		}
 
-		// Token: 0x06005122 RID: 20770 RVA: 0x001877C8 File Offset: 0x001859C8
+		// Token: 0x06005123 RID: 20771 RVA: 0x001878A0 File Offset: 0x00185AA0
 		private void OnCollisionStay(global::UnityEngine.Collision collision)
 		{
 			this.bodyCollisionContactsCount = collision.GetContacts(this.bodyCollisionContacts);
@@ -2927,7 +2927,7 @@ namespace GorillaLocomotion
 			}
 		}
 
-		// Token: 0x06005123 RID: 20771 RVA: 0x00187850 File Offset: 0x00185A50
+		// Token: 0x06005124 RID: 20772 RVA: 0x00187928 File Offset: 0x00185B28
 		public async void DoLaunch(Vector3 velocity)
 		{
 			if (this.isClimbing)
@@ -2940,13 +2940,13 @@ namespace GorillaLocomotion
 			this.disableMovement = false;
 		}
 
-		// Token: 0x06005124 RID: 20772 RVA: 0x0018788F File Offset: 0x00185A8F
+		// Token: 0x06005125 RID: 20773 RVA: 0x00187967 File Offset: 0x00185B67
 		private void OnEnable()
 		{
 			RoomSystem.JoinedRoomEvent = (Action)Delegate.Combine(RoomSystem.JoinedRoomEvent, new Action(this.OnJoinedRoom));
 		}
 
-		// Token: 0x06005125 RID: 20773 RVA: 0x001878B1 File Offset: 0x00185AB1
+		// Token: 0x06005126 RID: 20774 RVA: 0x00187989 File Offset: 0x00185B89
 		private void OnJoinedRoom()
 		{
 			if (this.activeSizeChangerSettings != null && this.activeSizeChangerSettings.ExpireOnRoomJoin)
@@ -2955,13 +2955,13 @@ namespace GorillaLocomotion
 			}
 		}
 
-		// Token: 0x06005126 RID: 20774 RVA: 0x001878CF File Offset: 0x00185ACF
+		// Token: 0x06005127 RID: 20775 RVA: 0x001879A7 File Offset: 0x00185BA7
 		private void OnDisable()
 		{
 			RoomSystem.JoinedRoomEvent = (Action)Delegate.Remove(RoomSystem.JoinedRoomEvent, new Action(this.OnJoinedRoom));
 		}
 
-		// Token: 0x06005127 RID: 20775 RVA: 0x001878F4 File Offset: 0x00185AF4
+		// Token: 0x06005128 RID: 20776 RVA: 0x001879CC File Offset: 0x00185BCC
 		internal void AddHandHold(Transform objectHeld, Vector3 localPositionHeld, GorillaGrabber grabber, bool rightHand, bool rotatePlayerWhenHeld, out Vector3 grabbedVelocity)
 		{
 			if (!this.leftHandHolding && !this.rightHandHolding)
@@ -2994,7 +2994,7 @@ namespace GorillaLocomotion
 			this.OnChangeActiveHandhold();
 		}
 
-		// Token: 0x06005128 RID: 20776 RVA: 0x001879E4 File Offset: 0x00185BE4
+		// Token: 0x06005129 RID: 20777 RVA: 0x00187ABC File Offset: 0x00185CBC
 		internal void RemoveHandHold(GorillaGrabber grabber, bool rightHand)
 		{
 			this.activeHandHold.objectHeld == grabber;
@@ -3014,7 +3014,7 @@ namespace GorillaLocomotion
 			this.OnChangeActiveHandhold();
 		}
 
-		// Token: 0x06005129 RID: 20777 RVA: 0x00187A4C File Offset: 0x00185C4C
+		// Token: 0x0600512A RID: 20778 RVA: 0x00187B24 File Offset: 0x00185D24
 		private void OnChangeActiveHandhold()
 		{
 			if (this.activeHandHold.objectHeld != null)
@@ -3052,7 +3052,7 @@ namespace GorillaLocomotion
 			VRRig.DetachLocalPlayerFromPhotonView();
 		}
 
-		// Token: 0x0600512A RID: 20778 RVA: 0x00187B5C File Offset: 0x00185D5C
+		// Token: 0x0600512B RID: 20779 RVA: 0x00187C34 File Offset: 0x00185E34
 		private void FixedUpdate_HandHolds(float timeDelta)
 		{
 			if (this.activeHandHold.objectHeld == null)
@@ -3088,7 +3088,7 @@ namespace GorillaLocomotion
 			}
 		}
 
-		// Token: 0x06005130 RID: 20784 RVA: 0x00188115 File Offset: 0x00186315
+		// Token: 0x06005131 RID: 20785 RVA: 0x001881ED File Offset: 0x001863ED
 		[CompilerGenerated]
 		internal static void <BeginClimbing>g__SnapAxis|380_0(ref float val, float maxDist)
 		{
@@ -3103,785 +3103,785 @@ namespace GorillaLocomotion
 			}
 		}
 
-		// Token: 0x040053C9 RID: 21449
+		// Token: 0x040053CA RID: 21450
 		private static GTPlayer _instance;
 
-		// Token: 0x040053CA RID: 21450
+		// Token: 0x040053CB RID: 21451
 		public static bool hasInstance;
 
-		// Token: 0x040053CB RID: 21451
+		// Token: 0x040053CC RID: 21452
 		public SphereCollider headCollider;
 
-		// Token: 0x040053CC RID: 21452
+		// Token: 0x040053CD RID: 21453
 		public CapsuleCollider bodyCollider;
 
-		// Token: 0x040053CD RID: 21453
+		// Token: 0x040053CE RID: 21454
 		private float bodyInitialRadius;
 
-		// Token: 0x040053CE RID: 21454
+		// Token: 0x040053CF RID: 21455
 		private float bodyInitialHeight;
 
-		// Token: 0x040053CF RID: 21455
+		// Token: 0x040053D0 RID: 21456
 		private RaycastHit bodyHitInfo;
 
-		// Token: 0x040053D0 RID: 21456
+		// Token: 0x040053D1 RID: 21457
 		private RaycastHit lastHitInfoHand;
 
-		// Token: 0x040053D1 RID: 21457
+		// Token: 0x040053D2 RID: 21458
 		public Transform leftHandFollower;
 
-		// Token: 0x040053D2 RID: 21458
+		// Token: 0x040053D3 RID: 21459
 		public Transform rightHandFollower;
 
-		// Token: 0x040053D3 RID: 21459
+		// Token: 0x040053D4 RID: 21460
 		public Transform rightControllerTransform;
 
-		// Token: 0x040053D4 RID: 21460
+		// Token: 0x040053D5 RID: 21461
 		public Transform leftControllerTransform;
 
-		// Token: 0x040053D5 RID: 21461
+		// Token: 0x040053D6 RID: 21462
 		public GorillaVelocityTracker rightHandCenterVelocityTracker;
 
-		// Token: 0x040053D6 RID: 21462
+		// Token: 0x040053D7 RID: 21463
 		public GorillaVelocityTracker leftHandCenterVelocityTracker;
 
-		// Token: 0x040053D7 RID: 21463
+		// Token: 0x040053D8 RID: 21464
 		public GorillaVelocityTracker rightInteractPointVelocityTracker;
 
-		// Token: 0x040053D8 RID: 21464
+		// Token: 0x040053D9 RID: 21465
 		public GorillaVelocityTracker leftInteractPointVelocityTracker;
 
-		// Token: 0x040053D9 RID: 21465
+		// Token: 0x040053DA RID: 21466
 		public GorillaVelocityTracker bodyVelocityTracker;
 
-		// Token: 0x040053DA RID: 21466
+		// Token: 0x040053DB RID: 21467
 		public PlayerAudioManager audioManager;
 
-		// Token: 0x040053DB RID: 21467
+		// Token: 0x040053DC RID: 21468
 		private Vector3 lastLeftHandPosition;
 
-		// Token: 0x040053DC RID: 21468
+		// Token: 0x040053DD RID: 21469
 		private Vector3 lastRightHandPosition;
 
-		// Token: 0x040053DD RID: 21469
+		// Token: 0x040053DE RID: 21470
 		public Vector3 lastHeadPosition;
 
-		// Token: 0x040053DE RID: 21470
+		// Token: 0x040053DF RID: 21471
 		private Vector3 lastRigidbodyPosition;
 
-		// Token: 0x040053DF RID: 21471
+		// Token: 0x040053E0 RID: 21472
 		private Rigidbody playerRigidBody;
 
-		// Token: 0x040053E0 RID: 21472
+		// Token: 0x040053E1 RID: 21473
 		private Camera mainCamera;
 
-		// Token: 0x040053E1 RID: 21473
+		// Token: 0x040053E2 RID: 21474
 		public int velocityHistorySize;
 
-		// Token: 0x040053E2 RID: 21474
+		// Token: 0x040053E3 RID: 21475
 		public float maxArmLength = 1f;
 
-		// Token: 0x040053E3 RID: 21475
+		// Token: 0x040053E4 RID: 21476
 		public float unStickDistance = 1f;
 
-		// Token: 0x040053E4 RID: 21476
+		// Token: 0x040053E5 RID: 21477
 		public float velocityLimit;
 
-		// Token: 0x040053E5 RID: 21477
+		// Token: 0x040053E6 RID: 21478
 		public float slideVelocityLimit;
 
-		// Token: 0x040053E6 RID: 21478
+		// Token: 0x040053E7 RID: 21479
 		public float maxJumpSpeed;
 
-		// Token: 0x040053E7 RID: 21479
+		// Token: 0x040053E8 RID: 21480
 		private float _jumpMultiplier;
 
-		// Token: 0x040053E8 RID: 21480
+		// Token: 0x040053E9 RID: 21481
 		public float minimumRaycastDistance = 0.05f;
 
-		// Token: 0x040053E9 RID: 21481
+		// Token: 0x040053EA RID: 21482
 		public float defaultSlideFactor = 0.03f;
 
-		// Token: 0x040053EA RID: 21482
+		// Token: 0x040053EB RID: 21483
 		public float slidingMinimum = 0.9f;
 
-		// Token: 0x040053EB RID: 21483
+		// Token: 0x040053EC RID: 21484
 		public float defaultPrecision = 0.995f;
 
-		// Token: 0x040053EC RID: 21484
+		// Token: 0x040053ED RID: 21485
 		public float teleportThresholdNoVel = 1f;
 
-		// Token: 0x040053ED RID: 21485
+		// Token: 0x040053EE RID: 21486
 		public float frictionConstant = 1f;
 
-		// Token: 0x040053EE RID: 21486
+		// Token: 0x040053EF RID: 21487
 		public float slideControl = 0.00425f;
 
-		// Token: 0x040053EF RID: 21487
+		// Token: 0x040053F0 RID: 21488
 		public float stickDepth = 0.01f;
 
-		// Token: 0x040053F0 RID: 21488
+		// Token: 0x040053F1 RID: 21489
 		private Vector3[] velocityHistory;
 
-		// Token: 0x040053F1 RID: 21489
+		// Token: 0x040053F2 RID: 21490
 		private Vector3[] slideAverageHistory;
 
-		// Token: 0x040053F2 RID: 21490
+		// Token: 0x040053F3 RID: 21491
 		private int velocityIndex;
 
-		// Token: 0x040053F3 RID: 21491
+		// Token: 0x040053F4 RID: 21492
 		private Vector3 currentVelocity;
 
-		// Token: 0x040053F4 RID: 21492
+		// Token: 0x040053F5 RID: 21493
 		private Vector3 averagedVelocity;
 
-		// Token: 0x040053F5 RID: 21493
+		// Token: 0x040053F6 RID: 21494
 		private Vector3 lastPosition;
 
-		// Token: 0x040053F6 RID: 21494
+		// Token: 0x040053F7 RID: 21495
 		public Vector3 rightHandOffset;
 
-		// Token: 0x040053F7 RID: 21495
+		// Token: 0x040053F8 RID: 21496
 		public Vector3 leftHandOffset;
 
-		// Token: 0x040053F8 RID: 21496
+		// Token: 0x040053F9 RID: 21497
 		public Quaternion rightHandRotOffset = Quaternion.identity;
 
-		// Token: 0x040053F9 RID: 21497
+		// Token: 0x040053FA RID: 21498
 		public Quaternion leftHandRotOffset = Quaternion.identity;
 
-		// Token: 0x040053FA RID: 21498
+		// Token: 0x040053FB RID: 21499
 		public Vector3 bodyOffset;
 
-		// Token: 0x040053FB RID: 21499
+		// Token: 0x040053FC RID: 21500
 		public LayerMask locomotionEnabledLayers;
 
-		// Token: 0x040053FC RID: 21500
+		// Token: 0x040053FD RID: 21501
 		public LayerMask waterLayer;
 
-		// Token: 0x040053FD RID: 21501
+		// Token: 0x040053FE RID: 21502
 		public bool wasLeftHandColliding;
 
-		// Token: 0x040053FE RID: 21502
+		// Token: 0x040053FF RID: 21503
 		public bool wasRightHandColliding;
 
-		// Token: 0x040053FF RID: 21503
+		// Token: 0x04005400 RID: 21504
 		public bool wasHeadTouching;
 
-		// Token: 0x04005400 RID: 21504
+		// Token: 0x04005401 RID: 21505
 		public int currentMaterialIndex;
 
-		// Token: 0x04005401 RID: 21505
+		// Token: 0x04005402 RID: 21506
 		public bool isLeftHandSliding;
 
-		// Token: 0x04005402 RID: 21506
+		// Token: 0x04005403 RID: 21507
 		public Vector3 leftHandSlideNormal;
 
-		// Token: 0x04005403 RID: 21507
+		// Token: 0x04005404 RID: 21508
 		public bool isRightHandSliding;
 
-		// Token: 0x04005404 RID: 21508
+		// Token: 0x04005405 RID: 21509
 		public Vector3 rightHandSlideNormal;
 
-		// Token: 0x04005405 RID: 21509
+		// Token: 0x04005406 RID: 21510
 		public Vector3 headSlideNormal;
 
-		// Token: 0x04005406 RID: 21510
+		// Token: 0x04005407 RID: 21511
 		public float rightHandSlipPercentage;
 
-		// Token: 0x04005407 RID: 21511
+		// Token: 0x04005408 RID: 21512
 		public float leftHandSlipPercentage;
 
-		// Token: 0x04005408 RID: 21512
+		// Token: 0x04005409 RID: 21513
 		public float headSlipPercentage;
 
-		// Token: 0x04005409 RID: 21513
+		// Token: 0x0400540A RID: 21514
 		public bool wasLeftHandSliding;
 
-		// Token: 0x0400540A RID: 21514
+		// Token: 0x0400540B RID: 21515
 		public bool wasRightHandSliding;
 
-		// Token: 0x0400540B RID: 21515
+		// Token: 0x0400540C RID: 21516
 		public Vector3 rightHandHitPoint;
 
-		// Token: 0x0400540C RID: 21516
-		public Vector3 leftHandHitPoint;
-
 		// Token: 0x0400540D RID: 21517
-		[SerializeField]
-		private Transform cosmeticsHeadTarget;
+		public Vector3 leftHandHitPoint;
 
 		// Token: 0x0400540E RID: 21518
 		[SerializeField]
-		private float nativeScale = 1f;
+		private Transform cosmeticsHeadTarget;
 
 		// Token: 0x0400540F RID: 21519
 		[SerializeField]
-		private float scaleMultiplier = 1f;
+		private float nativeScale = 1f;
 
 		// Token: 0x04005410 RID: 21520
-		private NativeSizeChangerSettings activeSizeChangerSettings;
+		[SerializeField]
+		private float scaleMultiplier = 1f;
 
 		// Token: 0x04005411 RID: 21521
-		public bool debugMovement;
+		private NativeSizeChangerSettings activeSizeChangerSettings;
 
 		// Token: 0x04005412 RID: 21522
-		public bool disableMovement;
+		public bool debugMovement;
 
 		// Token: 0x04005413 RID: 21523
-		[NonSerialized]
-		public bool inOverlay;
+		public bool disableMovement;
 
 		// Token: 0x04005414 RID: 21524
 		[NonSerialized]
-		public bool isUserPresent;
+		public bool inOverlay;
 
 		// Token: 0x04005415 RID: 21525
-		public GameObject turnParent;
+		[NonSerialized]
+		public bool isUserPresent;
 
 		// Token: 0x04005416 RID: 21526
-		public int leftHandMaterialTouchIndex;
+		public GameObject turnParent;
 
 		// Token: 0x04005417 RID: 21527
-		public GorillaSurfaceOverride leftHandSurfaceOverride;
+		public int leftHandMaterialTouchIndex;
 
 		// Token: 0x04005418 RID: 21528
-		public RaycastHit leftHandHitInfo;
+		public GorillaSurfaceOverride leftHandSurfaceOverride;
 
 		// Token: 0x04005419 RID: 21529
-		public int rightHandMaterialTouchIndex;
+		public RaycastHit leftHandHitInfo;
 
 		// Token: 0x0400541A RID: 21530
-		public GorillaSurfaceOverride rightHandSurfaceOverride;
+		public int rightHandMaterialTouchIndex;
 
 		// Token: 0x0400541B RID: 21531
-		public RaycastHit rightHandHitInfo;
+		public GorillaSurfaceOverride rightHandSurfaceOverride;
 
 		// Token: 0x0400541C RID: 21532
-		public GorillaSurfaceOverride currentOverride;
+		public RaycastHit rightHandHitInfo;
 
 		// Token: 0x0400541D RID: 21533
-		public MaterialDatasSO materialDatasSO;
+		public GorillaSurfaceOverride currentOverride;
 
 		// Token: 0x0400541E RID: 21534
-		private bool isLeftHandColliding;
+		public MaterialDatasSO materialDatasSO;
 
 		// Token: 0x0400541F RID: 21535
-		private bool isRightHandColliding;
+		private bool isLeftHandColliding;
 
 		// Token: 0x04005420 RID: 21536
-		private float degreesTurnedThisFrame;
+		private bool isRightHandColliding;
 
 		// Token: 0x04005421 RID: 21537
-		private Vector3 bodyOffsetVector;
+		private float degreesTurnedThisFrame;
 
 		// Token: 0x04005422 RID: 21538
-		private Vector3 movementToProjectedAboveCollisionPlane;
+		private Vector3 bodyOffsetVector;
 
 		// Token: 0x04005423 RID: 21539
-		private MeshCollider meshCollider;
+		private Vector3 movementToProjectedAboveCollisionPlane;
 
 		// Token: 0x04005424 RID: 21540
-		private Mesh collidedMesh;
+		private MeshCollider meshCollider;
 
 		// Token: 0x04005425 RID: 21541
-		private GTPlayer.MaterialData foundMatData;
+		private Mesh collidedMesh;
 
 		// Token: 0x04005426 RID: 21542
-		private string findMatName;
+		private GTPlayer.MaterialData foundMatData;
 
 		// Token: 0x04005427 RID: 21543
-		private int vertex1;
+		private string findMatName;
 
 		// Token: 0x04005428 RID: 21544
-		private int vertex2;
+		private int vertex1;
 
 		// Token: 0x04005429 RID: 21545
-		private int vertex3;
+		private int vertex2;
 
 		// Token: 0x0400542A RID: 21546
-		private List<int> trianglesList = new List<int>(1000000);
+		private int vertex3;
 
 		// Token: 0x0400542B RID: 21547
-		private Dictionary<Mesh, int[]> meshTrianglesDict = new Dictionary<Mesh, int[]>(128);
+		private List<int> trianglesList = new List<int>(1000000);
 
 		// Token: 0x0400542C RID: 21548
-		private int[] sharedMeshTris;
+		private Dictionary<Mesh, int[]> meshTrianglesDict = new Dictionary<Mesh, int[]>(128);
 
 		// Token: 0x0400542D RID: 21549
-		private float lastRealTime;
+		private int[] sharedMeshTris;
 
 		// Token: 0x0400542E RID: 21550
-		private float calcDeltaTime;
+		private float lastRealTime;
 
 		// Token: 0x0400542F RID: 21551
-		private float tempRealTime;
+		private float calcDeltaTime;
 
 		// Token: 0x04005430 RID: 21552
-		private Vector3 slideVelocity;
+		private float tempRealTime;
 
 		// Token: 0x04005431 RID: 21553
-		private Vector3 slideAverageNormal;
+		private Vector3 slideVelocity;
 
 		// Token: 0x04005432 RID: 21554
-		private RaycastHit tempHitInfo;
+		private Vector3 slideAverageNormal;
 
 		// Token: 0x04005433 RID: 21555
-		private RaycastHit junkHit;
+		private RaycastHit tempHitInfo;
 
 		// Token: 0x04005434 RID: 21556
-		private Vector3 firstPosition;
+		private RaycastHit junkHit;
 
 		// Token: 0x04005435 RID: 21557
-		private RaycastHit tempIterativeHit;
+		private Vector3 firstPosition;
 
 		// Token: 0x04005436 RID: 21558
-		private float maxSphereSize1;
+		private RaycastHit tempIterativeHit;
 
 		// Token: 0x04005437 RID: 21559
-		private float maxSphereSize2;
+		private float maxSphereSize1;
 
 		// Token: 0x04005438 RID: 21560
-		private Collider[] overlapColliders = new Collider[10];
+		private float maxSphereSize2;
 
 		// Token: 0x04005439 RID: 21561
-		private int overlapAttempts;
+		private Collider[] overlapColliders = new Collider[10];
 
 		// Token: 0x0400543A RID: 21562
-		private int touchPoints;
+		private int overlapAttempts;
 
 		// Token: 0x0400543B RID: 21563
-		private float averageSlipPercentage;
+		private int touchPoints;
 
 		// Token: 0x0400543C RID: 21564
-		private Vector3 surfaceDirection;
+		private float averageSlipPercentage;
 
 		// Token: 0x0400543D RID: 21565
-		public float iceThreshold = 0.9f;
+		private Vector3 surfaceDirection;
 
 		// Token: 0x0400543E RID: 21566
-		private float bodyMaxRadius;
+		public float iceThreshold = 0.9f;
 
 		// Token: 0x0400543F RID: 21567
-		public float bodyLerp = 0.17f;
+		private float bodyMaxRadius;
 
 		// Token: 0x04005440 RID: 21568
-		private bool areBothTouching;
+		public float bodyLerp = 0.17f;
 
 		// Token: 0x04005441 RID: 21569
-		private float slideFactor;
+		private bool areBothTouching;
 
 		// Token: 0x04005442 RID: 21570
+		private float slideFactor;
+
+		// Token: 0x04005443 RID: 21571
 		[DebugOption]
 		public bool didAJump;
 
-		// Token: 0x04005443 RID: 21571
+		// Token: 0x04005444 RID: 21572
 		private Renderer slideRenderer;
 
-		// Token: 0x04005444 RID: 21572
+		// Token: 0x04005445 RID: 21573
 		private RaycastHit[] rayCastNonAllocColliders;
 
-		// Token: 0x04005445 RID: 21573
+		// Token: 0x04005446 RID: 21574
 		private Vector3[] crazyCheckVectors;
 
-		// Token: 0x04005446 RID: 21574
+		// Token: 0x04005447 RID: 21575
 		private RaycastHit emptyHit;
 
-		// Token: 0x04005447 RID: 21575
+		// Token: 0x04005448 RID: 21576
 		private int bufferCount;
 
-		// Token: 0x04005448 RID: 21576
+		// Token: 0x04005449 RID: 21577
 		private Vector3 lastOpenHeadPosition;
 
-		// Token: 0x04005449 RID: 21577
+		// Token: 0x0400544A RID: 21578
 		private List<Material> tempMaterialArray = new List<Material>(16);
 
-		// Token: 0x0400544A RID: 21578
+		// Token: 0x0400544B RID: 21579
 		private int leftSlipSetToMaxFrameIdx = -1;
 
-		// Token: 0x0400544B RID: 21579
+		// Token: 0x0400544C RID: 21580
 		private int rightSlipSetToMaxFrameIdx = -1;
 
-		// Token: 0x0400544C RID: 21580
+		// Token: 0x0400544D RID: 21581
 		private const float CameraFarClipDefault = 500f;
 
-		// Token: 0x0400544D RID: 21581
+		// Token: 0x0400544E RID: 21582
 		private const float CameraNearClipDefault = 0.01f;
 
-		// Token: 0x0400544E RID: 21582
+		// Token: 0x0400544F RID: 21583
 		private const float CameraNearClipTiny = 0.002f;
 
-		// Token: 0x0400544F RID: 21583
+		// Token: 0x04005450 RID: 21584
 		private Dictionary<GameObject, PhysicMaterial> bodyTouchedSurfaces;
 
-		// Token: 0x04005450 RID: 21584
+		// Token: 0x04005451 RID: 21585
 		private bool primaryButtonPressed = true;
 
-		// Token: 0x04005451 RID: 21585
+		// Token: 0x04005452 RID: 21586
 		[Header("Swimming")]
 		public PlayerSwimmingParameters swimmingParams;
 
-		// Token: 0x04005452 RID: 21586
+		// Token: 0x04005453 RID: 21587
 		public WaterParameters waterParams;
 
-		// Token: 0x04005453 RID: 21587
+		// Token: 0x04005454 RID: 21588
 		public List<GTPlayer.LiquidProperties> liquidPropertiesList = new List<GTPlayer.LiquidProperties>(16);
 
-		// Token: 0x04005454 RID: 21588
+		// Token: 0x04005455 RID: 21589
 		public bool debugDrawSwimming;
 
-		// Token: 0x04005455 RID: 21589
+		// Token: 0x04005456 RID: 21590
 		[Header("Slam/Hit effects")]
 		public GameObject wizardStaffSlamEffects;
 
-		// Token: 0x04005456 RID: 21590
+		// Token: 0x04005457 RID: 21591
 		public GameObject geodeHitEffects;
 
-		// Token: 0x04005457 RID: 21591
+		// Token: 0x04005458 RID: 21592
 		[Header("Freeze Tag")]
 		public float freezeTagHandSlidePercent = 0.88f;
 
-		// Token: 0x04005458 RID: 21592
+		// Token: 0x04005459 RID: 21593
 		public bool debugFreezeTag;
 
-		// Token: 0x04005459 RID: 21593
+		// Token: 0x0400545A RID: 21594
 		public float frozenBodyBuoyancyFactor = 1.5f;
 
-		// Token: 0x0400545B RID: 21595
+		// Token: 0x0400545C RID: 21596
 		[Space]
 		private WaterVolume leftHandWaterVolume;
 
-		// Token: 0x0400545C RID: 21596
+		// Token: 0x0400545D RID: 21597
 		private WaterVolume rightHandWaterVolume;
 
-		// Token: 0x0400545D RID: 21597
+		// Token: 0x0400545E RID: 21598
 		private WaterVolume.SurfaceQuery leftHandWaterSurface;
 
-		// Token: 0x0400545E RID: 21598
+		// Token: 0x0400545F RID: 21599
 		private WaterVolume.SurfaceQuery rightHandWaterSurface;
 
-		// Token: 0x0400545F RID: 21599
+		// Token: 0x04005460 RID: 21600
 		private Vector3 swimmingVelocity = Vector3.zero;
 
-		// Token: 0x04005460 RID: 21600
+		// Token: 0x04005461 RID: 21601
 		private WaterVolume.SurfaceQuery waterSurfaceForHead;
 
-		// Token: 0x04005461 RID: 21601
+		// Token: 0x04005462 RID: 21602
 		private bool bodyInWater;
 
-		// Token: 0x04005462 RID: 21602
+		// Token: 0x04005463 RID: 21603
 		private bool headInWater;
 
-		// Token: 0x04005463 RID: 21603
+		// Token: 0x04005464 RID: 21604
 		private bool audioSetToUnderwater;
 
-		// Token: 0x04005464 RID: 21604
+		// Token: 0x04005465 RID: 21605
 		private float buoyancyExtension;
 
-		// Token: 0x04005465 RID: 21605
+		// Token: 0x04005466 RID: 21606
 		private float lastWaterSurfaceJumpTimeLeft = -1f;
 
-		// Token: 0x04005466 RID: 21606
+		// Token: 0x04005467 RID: 21607
 		private float lastWaterSurfaceJumpTimeRight = -1f;
 
-		// Token: 0x04005467 RID: 21607
+		// Token: 0x04005468 RID: 21608
 		private float waterSurfaceJumpCooldown = 0.1f;
 
-		// Token: 0x04005468 RID: 21608
+		// Token: 0x04005469 RID: 21609
 		private float leftHandNonDiveHapticsAmount;
 
-		// Token: 0x04005469 RID: 21609
+		// Token: 0x0400546A RID: 21610
 		private float rightHandNonDiveHapticsAmount;
 
-		// Token: 0x0400546A RID: 21610
+		// Token: 0x0400546B RID: 21611
 		private List<WaterVolume> headOverlappingWaterVolumes = new List<WaterVolume>(16);
 
-		// Token: 0x0400546B RID: 21611
+		// Token: 0x0400546C RID: 21612
 		private List<WaterVolume> bodyOverlappingWaterVolumes = new List<WaterVolume>(16);
 
-		// Token: 0x0400546C RID: 21612
+		// Token: 0x0400546D RID: 21613
 		private List<WaterCurrent> activeWaterCurrents = new List<WaterCurrent>(16);
 
-		// Token: 0x0400546D RID: 21613
+		// Token: 0x0400546E RID: 21614
 		private Quaternion playerRotationOverride;
 
-		// Token: 0x0400546E RID: 21614
+		// Token: 0x0400546F RID: 21615
 		private int playerRotationOverrideFrame = -1;
 
-		// Token: 0x0400546F RID: 21615
+		// Token: 0x04005470 RID: 21616
 		private float playerRotationOverrideDecayRate = Mathf.Exp(1.5f);
 
-		// Token: 0x04005471 RID: 21617
+		// Token: 0x04005472 RID: 21618
 		private ContactPoint[] bodyCollisionContacts = new ContactPoint[8];
 
-		// Token: 0x04005472 RID: 21618
+		// Token: 0x04005473 RID: 21619
 		private int bodyCollisionContactsCount;
 
-		// Token: 0x04005473 RID: 21619
+		// Token: 0x04005474 RID: 21620
 		private ContactPoint bodyGroundContact;
 
-		// Token: 0x04005474 RID: 21620
+		// Token: 0x04005475 RID: 21621
 		private float bodyGroundContactTime;
 
-		// Token: 0x04005475 RID: 21621
+		// Token: 0x04005476 RID: 21622
 		private const float movingSurfaceVelocityLimit = 40f;
 
-		// Token: 0x04005476 RID: 21622
+		// Token: 0x04005477 RID: 21623
 		private bool exitMovingSurface;
 
-		// Token: 0x04005477 RID: 21623
+		// Token: 0x04005478 RID: 21624
 		private float exitMovingSurfaceThreshold = 6f;
 
-		// Token: 0x04005478 RID: 21624
+		// Token: 0x04005479 RID: 21625
 		private bool isClimbableMoving;
 
-		// Token: 0x04005479 RID: 21625
+		// Token: 0x0400547A RID: 21626
 		private Quaternion lastClimbableRotation;
 
-		// Token: 0x0400547A RID: 21626
+		// Token: 0x0400547B RID: 21627
 		private int lastAttachedToMovingSurfaceFrame;
 
-		// Token: 0x0400547B RID: 21627
+		// Token: 0x0400547C RID: 21628
 		private const int MIN_FRAMES_OFF_SURFACE_TO_DETACH = 3;
 
-		// Token: 0x0400547C RID: 21628
+		// Token: 0x0400547D RID: 21629
 		private bool isHandHoldMoving;
 
-		// Token: 0x0400547D RID: 21629
+		// Token: 0x0400547E RID: 21630
 		private Quaternion lastHandHoldRotation;
 
-		// Token: 0x0400547E RID: 21630
+		// Token: 0x0400547F RID: 21631
 		private Vector3 movingHandHoldReleaseVelocity;
 
-		// Token: 0x0400547F RID: 21631
+		// Token: 0x04005480 RID: 21632
 		private GTPlayer.MovingSurfaceContactPoint lastMovingSurfaceContact;
 
-		// Token: 0x04005480 RID: 21632
+		// Token: 0x04005481 RID: 21633
 		private int lastMovingSurfaceID = -1;
 
-		// Token: 0x04005481 RID: 21633
+		// Token: 0x04005482 RID: 21634
 		private BuilderPiece lastMonkeBlock;
 
-		// Token: 0x04005482 RID: 21634
+		// Token: 0x04005483 RID: 21635
 		private Quaternion lastMovingSurfaceRot;
 
-		// Token: 0x04005483 RID: 21635
+		// Token: 0x04005484 RID: 21636
 		private RaycastHit lastMovingSurfaceHit;
 
-		// Token: 0x04005484 RID: 21636
+		// Token: 0x04005485 RID: 21637
 		private Vector3 lastMovingSurfaceTouchLocal;
 
-		// Token: 0x04005485 RID: 21637
+		// Token: 0x04005486 RID: 21638
 		private Vector3 lastMovingSurfaceTouchWorld;
 
-		// Token: 0x04005486 RID: 21638
+		// Token: 0x04005487 RID: 21639
 		private Vector3 movingSurfaceOffset;
 
-		// Token: 0x04005487 RID: 21639
+		// Token: 0x04005488 RID: 21640
 		private bool wasMovingSurfaceMonkeBlock;
 
-		// Token: 0x04005488 RID: 21640
+		// Token: 0x04005489 RID: 21641
 		private Vector3 lastMovingSurfaceVelocity;
 
-		// Token: 0x04005489 RID: 21641
+		// Token: 0x0400548A RID: 21642
 		private bool wasBodyOnGround;
 
-		// Token: 0x0400548A RID: 21642
+		// Token: 0x0400548B RID: 21643
 		private BasePlatform currentPlatform;
 
-		// Token: 0x0400548B RID: 21643
+		// Token: 0x0400548C RID: 21644
 		private BasePlatform lastPlatformTouched;
 
-		// Token: 0x0400548C RID: 21644
+		// Token: 0x0400548D RID: 21645
 		private Vector3 lastFrameTouchPosLocal;
 
-		// Token: 0x0400548D RID: 21645
+		// Token: 0x0400548E RID: 21646
 		private Vector3 lastFrameTouchPosWorld;
 
-		// Token: 0x0400548E RID: 21646
+		// Token: 0x0400548F RID: 21647
 		private bool lastFrameHasValidTouchPos;
 
-		// Token: 0x0400548F RID: 21647
+		// Token: 0x04005490 RID: 21648
 		private Vector3 refMovement = Vector3.zero;
 
-		// Token: 0x04005490 RID: 21648
+		// Token: 0x04005491 RID: 21649
 		private Vector3 platformTouchOffset;
 
-		// Token: 0x04005491 RID: 21649
+		// Token: 0x04005492 RID: 21650
 		private Vector3 debugLastRightHandPosition;
 
-		// Token: 0x04005492 RID: 21650
+		// Token: 0x04005493 RID: 21651
 		private Vector3 debugPlatformDeltaPosition;
 
-		// Token: 0x04005493 RID: 21651
+		// Token: 0x04005494 RID: 21652
 		private const float climbingMaxThrowSpeed = 5.5f;
 
-		// Token: 0x04005494 RID: 21652
+		// Token: 0x04005495 RID: 21653
 		private const float climbHelperSmoothSnapSpeed = 12f;
 
-		// Token: 0x04005495 RID: 21653
+		// Token: 0x04005496 RID: 21654
 		[NonSerialized]
 		public bool isClimbing;
 
-		// Token: 0x04005496 RID: 21654
+		// Token: 0x04005497 RID: 21655
 		private GorillaClimbable currentClimbable;
 
-		// Token: 0x04005497 RID: 21655
+		// Token: 0x04005498 RID: 21656
 		private GorillaHandClimber currentClimber;
 
-		// Token: 0x04005498 RID: 21656
+		// Token: 0x04005499 RID: 21657
 		private Vector3 climbHelperTargetPos = Vector3.zero;
 
-		// Token: 0x04005499 RID: 21657
+		// Token: 0x0400549A RID: 21658
 		private Transform climbHelper;
 
-		// Token: 0x0400549A RID: 21658
+		// Token: 0x0400549B RID: 21659
 		private GorillaRopeSwing currentSwing;
 
-		// Token: 0x0400549B RID: 21659
+		// Token: 0x0400549C RID: 21660
 		private GorillaZipline currentZipline;
 
-		// Token: 0x0400549C RID: 21660
+		// Token: 0x0400549D RID: 21661
 		[SerializeField]
 		private ConnectedControllerHandler controllerState;
 
-		// Token: 0x0400549D RID: 21661
+		// Token: 0x0400549E RID: 21662
 		public int sizeLayerMask;
 
-		// Token: 0x0400549E RID: 21662
+		// Token: 0x0400549F RID: 21663
 		public bool InReportMenu;
 
-		// Token: 0x0400549F RID: 21663
+		// Token: 0x040054A0 RID: 21664
 		private LayerChanger layerChanger;
 
-		// Token: 0x040054A0 RID: 21664
+		// Token: 0x040054A1 RID: 21665
 		private float halloweenLevitationStrength;
 
-		// Token: 0x040054A1 RID: 21665
+		// Token: 0x040054A2 RID: 21666
 		private float halloweenLevitationFullStrengthDuration;
 
-		// Token: 0x040054A2 RID: 21666
+		// Token: 0x040054A3 RID: 21667
 		private float halloweenLevitationTotalDuration = 1f;
 
-		// Token: 0x040054A3 RID: 21667
+		// Token: 0x040054A4 RID: 21668
 		private float halloweenLevitationBonusStrength;
 
-		// Token: 0x040054A4 RID: 21668
+		// Token: 0x040054A5 RID: 21669
 		private float halloweenLevitateBonusOffAtYSpeed;
 
-		// Token: 0x040054A5 RID: 21669
+		// Token: 0x040054A6 RID: 21670
 		private float halloweenLevitateBonusFullAtYSpeed = 1f;
 
-		// Token: 0x040054A6 RID: 21670
+		// Token: 0x040054A7 RID: 21671
 		private float lastTouchedGroundTimestamp;
 
-		// Token: 0x040054A7 RID: 21671
+		// Token: 0x040054A8 RID: 21672
 		private bool teleportToTrain;
 
-		// Token: 0x040054A8 RID: 21672
+		// Token: 0x040054A9 RID: 21673
 		public bool isAttachedToTrain;
 
-		// Token: 0x040054A9 RID: 21673
+		// Token: 0x040054AA RID: 21674
 		private bool stuckLeft;
 
-		// Token: 0x040054AA RID: 21674
+		// Token: 0x040054AB RID: 21675
 		private bool stuckRight;
 
-		// Token: 0x040054AB RID: 21675
+		// Token: 0x040054AC RID: 21676
 		private float lastScale;
 
-		// Token: 0x040054AC RID: 21676
+		// Token: 0x040054AD RID: 21677
 		private Vector3 currentSlopDirection;
 
-		// Token: 0x040054AD RID: 21677
+		// Token: 0x040054AE RID: 21678
 		private Vector3 lastSlopeDirection = Vector3.zero;
 
-		// Token: 0x040054AE RID: 21678
+		// Token: 0x040054AF RID: 21679
 		private Dictionary<Object, Action<GTPlayer>> gravityOverrides = new Dictionary<Object, Action<GTPlayer>>();
 
-		// Token: 0x040054B1 RID: 21681
+		// Token: 0x040054B2 RID: 21682
 		private int hoverAllowedCount;
 
-		// Token: 0x040054B2 RID: 21682
+		// Token: 0x040054B3 RID: 21683
 		[Header("Hoverboard Proto")]
 		[SerializeField]
 		private float hoverIdealHeight = 0.5f;
 
-		// Token: 0x040054B3 RID: 21683
+		// Token: 0x040054B4 RID: 21684
 		[SerializeField]
 		private float hoverCarveSidewaysSpeedLossFactor = 1f;
 
-		// Token: 0x040054B4 RID: 21684
+		// Token: 0x040054B5 RID: 21685
 		[SerializeField]
 		private AnimationCurve hoverCarveAngleResponsiveness;
 
-		// Token: 0x040054B5 RID: 21685
+		// Token: 0x040054B6 RID: 21686
 		[SerializeField]
 		private HoverboardVisual hoverboardVisual;
 
-		// Token: 0x040054B6 RID: 21686
+		// Token: 0x040054B7 RID: 21687
 		[SerializeField]
 		private float sidewaysDrag = 0.1f;
 
-		// Token: 0x040054B7 RID: 21687
+		// Token: 0x040054B8 RID: 21688
 		[SerializeField]
 		private float hoveringSlowSpeed = 0.1f;
 
-		// Token: 0x040054B8 RID: 21688
+		// Token: 0x040054B9 RID: 21689
 		[SerializeField]
 		private float hoveringSlowStoppingFactor = 0.95f;
 
-		// Token: 0x040054B9 RID: 21689
+		// Token: 0x040054BA RID: 21690
 		[SerializeField]
 		private float hoverboardPaddleBoostMultiplier = 0.1f;
 
-		// Token: 0x040054BA RID: 21690
+		// Token: 0x040054BB RID: 21691
 		[SerializeField]
 		private float hoverboardPaddleBoostMax = 10f;
 
-		// Token: 0x040054BB RID: 21691
+		// Token: 0x040054BC RID: 21692
 		[SerializeField]
 		private float hoverboardBoostGracePeriod = 1f;
 
-		// Token: 0x040054BC RID: 21692
+		// Token: 0x040054BD RID: 21693
 		[SerializeField]
 		private float hoverBodyHasCollisionsOutsideRadius = 0.5f;
 
-		// Token: 0x040054BD RID: 21693
+		// Token: 0x040054BE RID: 21694
 		[SerializeField]
 		private float hoverBodyCollisionRadiusUpOffset = 0.2f;
 
-		// Token: 0x040054BE RID: 21694
+		// Token: 0x040054BF RID: 21695
 		[SerializeField]
 		private float hoverGeneralUpwardForce = 8f;
 
-		// Token: 0x040054BF RID: 21695
+		// Token: 0x040054C0 RID: 21696
 		[SerializeField]
 		private float hoverTiltAdjustsForwardFactor = 0.2f;
 
-		// Token: 0x040054C0 RID: 21696
+		// Token: 0x040054C1 RID: 21697
 		[SerializeField]
 		private float hoverMinGrindSpeed = 1f;
 
-		// Token: 0x040054C1 RID: 21697
+		// Token: 0x040054C2 RID: 21698
 		[SerializeField]
 		private float hoverSlamJumpStrengthFactor = 25f;
 
-		// Token: 0x040054C2 RID: 21698
+		// Token: 0x040054C3 RID: 21699
 		[SerializeField]
 		private float hoverMaxPaddleSpeed = 35f;
 
-		// Token: 0x040054C3 RID: 21699
+		// Token: 0x040054C4 RID: 21700
 		[SerializeField]
 		private HoverboardAudio hoverboardAudio;
 
-		// Token: 0x040054C4 RID: 21700
+		// Token: 0x040054C5 RID: 21701
 		private bool hasHoverPoint;
 
-		// Token: 0x040054C5 RID: 21701
+		// Token: 0x040054C6 RID: 21702
 		private float boostEnabledUntilTimestamp;
 
-		// Token: 0x040054C6 RID: 21702
+		// Token: 0x040054C7 RID: 21703
 		private GTPlayer.HoverBoardCast[] hoverboardCasts = new GTPlayer.HoverBoardCast[]
 		{
 			new GTPlayer.HoverBoardCast
@@ -3912,40 +3912,40 @@ namespace GorillaLocomotion
 			}
 		};
 
-		// Token: 0x040054C7 RID: 21703
+		// Token: 0x040054C8 RID: 21704
 		private Vector3 hoverboardPlayerLocalPos;
 
-		// Token: 0x040054C8 RID: 21704
+		// Token: 0x040054C9 RID: 21705
 		private Quaternion hoverboardPlayerLocalRot;
 
-		// Token: 0x040054C9 RID: 21705
+		// Token: 0x040054CA RID: 21706
 		private bool didHoverLastFrame;
 
-		// Token: 0x040054CA RID: 21706
+		// Token: 0x040054CB RID: 21707
 		private GTPlayer.HandHoldState activeHandHold;
 
-		// Token: 0x040054CB RID: 21707
+		// Token: 0x040054CC RID: 21708
 		private GTPlayer.HandHoldState secondaryHandHold;
 
-		// Token: 0x040054CC RID: 21708
+		// Token: 0x040054CD RID: 21709
 		private bool rightHandHolding;
 
-		// Token: 0x040054CD RID: 21709
+		// Token: 0x040054CE RID: 21710
 		private bool leftHandHolding;
 
-		// Token: 0x040054CE RID: 21710
+		// Token: 0x040054CF RID: 21711
 		public PhysicMaterial slipperyMaterial;
 
-		// Token: 0x040054CF RID: 21711
+		// Token: 0x040054D0 RID: 21712
 		private bool wasHoldingHandhold;
 
-		// Token: 0x040054D0 RID: 21712
+		// Token: 0x040054D1 RID: 21713
 		private Vector3 secondLastPreHandholdVelocity;
 
-		// Token: 0x040054D1 RID: 21713
+		// Token: 0x040054D2 RID: 21714
 		private Vector3 lastPreHandholdVelocity;
 
-		// Token: 0x040054D2 RID: 21714
+		// Token: 0x040054D3 RID: 21715
 		[Header("Native Scale Adjustment")]
 		[SerializeField]
 		private AnimationCurve nativeScaleMagnitudeAdjustmentFactor;
@@ -3953,13 +3953,13 @@ namespace GorillaLocomotion
 		// Token: 0x02000CC2 RID: 3266
 		private enum MovingSurfaceContactPoint
 		{
-			// Token: 0x040054D4 RID: 21716
-			NONE,
 			// Token: 0x040054D5 RID: 21717
-			RIGHT,
+			NONE,
 			// Token: 0x040054D6 RID: 21718
-			LEFT,
+			RIGHT,
 			// Token: 0x040054D7 RID: 21719
+			LEFT,
+			// Token: 0x040054D8 RID: 21720
 			BODY
 		}
 
@@ -3967,22 +3967,22 @@ namespace GorillaLocomotion
 		[Serializable]
 		public struct MaterialData
 		{
-			// Token: 0x040054D8 RID: 21720
+			// Token: 0x040054D9 RID: 21721
 			public string matName;
 
-			// Token: 0x040054D9 RID: 21721
+			// Token: 0x040054DA RID: 21722
 			public bool overrideAudio;
 
-			// Token: 0x040054DA RID: 21722
+			// Token: 0x040054DB RID: 21723
 			public AudioClip audio;
 
-			// Token: 0x040054DB RID: 21723
+			// Token: 0x040054DC RID: 21724
 			public bool overrideSlidePercent;
 
-			// Token: 0x040054DC RID: 21724
+			// Token: 0x040054DD RID: 21725
 			public float slidePercent;
 
-			// Token: 0x040054DD RID: 21725
+			// Token: 0x040054DE RID: 21726
 			public int surfaceEffectIndex;
 		}
 
@@ -3990,22 +3990,22 @@ namespace GorillaLocomotion
 		[Serializable]
 		public struct LiquidProperties
 		{
-			// Token: 0x040054DE RID: 21726
+			// Token: 0x040054DF RID: 21727
 			[Range(0f, 2f)]
 			[Tooltip("0: no resistance just like air, 1: full resistance like solid geometry")]
 			public float resistance;
 
-			// Token: 0x040054DF RID: 21727
+			// Token: 0x040054E0 RID: 21728
 			[Range(0f, 3f)]
 			[Tooltip("0: no buoyancy. 1: Fully compensates gravity. 2: net force is upwards equal to gravity")]
 			public float buoyancy;
 
-			// Token: 0x040054E0 RID: 21728
+			// Token: 0x040054E1 RID: 21729
 			[Range(0f, 3f)]
 			[Tooltip("Damping Half-life Multiplier")]
 			public float dampingFactor;
 
-			// Token: 0x040054E1 RID: 21729
+			// Token: 0x040054E2 RID: 21730
 			[Range(0f, 1f)]
 			public float surfaceJumpFactor;
 		}
@@ -4013,59 +4013,59 @@ namespace GorillaLocomotion
 		// Token: 0x02000CC5 RID: 3269
 		public enum LiquidType
 		{
-			// Token: 0x040054E3 RID: 21731
-			Water,
 			// Token: 0x040054E4 RID: 21732
+			Water,
+			// Token: 0x040054E5 RID: 21733
 			Lava
 		}
 
 		// Token: 0x02000CC6 RID: 3270
 		private struct HoverBoardCast
 		{
-			// Token: 0x040054E5 RID: 21733
+			// Token: 0x040054E6 RID: 21734
 			public Vector3 localOrigin;
 
-			// Token: 0x040054E6 RID: 21734
+			// Token: 0x040054E7 RID: 21735
 			public Vector3 localDirection;
 
-			// Token: 0x040054E7 RID: 21735
+			// Token: 0x040054E8 RID: 21736
 			public float sphereRadius;
 
-			// Token: 0x040054E8 RID: 21736
+			// Token: 0x040054E9 RID: 21737
 			public float distance;
 
-			// Token: 0x040054E9 RID: 21737
+			// Token: 0x040054EA RID: 21738
 			public float intersectToVelocityCap;
 
-			// Token: 0x040054EA RID: 21738
+			// Token: 0x040054EB RID: 21739
 			public bool isSolid;
 
-			// Token: 0x040054EB RID: 21739
+			// Token: 0x040054EC RID: 21740
 			public bool didHit;
 
-			// Token: 0x040054EC RID: 21740
+			// Token: 0x040054ED RID: 21741
 			public Vector3 pointHit;
 
-			// Token: 0x040054ED RID: 21741
+			// Token: 0x040054EE RID: 21742
 			public Vector3 normalHit;
 		}
 
 		// Token: 0x02000CC7 RID: 3271
 		private struct HandHoldState
 		{
-			// Token: 0x040054EE RID: 21742
+			// Token: 0x040054EF RID: 21743
 			public GorillaGrabber grabber;
 
-			// Token: 0x040054EF RID: 21743
+			// Token: 0x040054F0 RID: 21744
 			public Transform objectHeld;
 
-			// Token: 0x040054F0 RID: 21744
+			// Token: 0x040054F1 RID: 21745
 			public Vector3 localPositionHeld;
 
-			// Token: 0x040054F1 RID: 21745
+			// Token: 0x040054F2 RID: 21746
 			public float localRotationalOffset;
 
-			// Token: 0x040054F2 RID: 21746
+			// Token: 0x040054F3 RID: 21747
 			public bool applyRotation;
 		}
 	}

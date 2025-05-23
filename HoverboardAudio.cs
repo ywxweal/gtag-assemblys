@@ -4,13 +4,13 @@ using UnityEngine;
 // Token: 0x0200066A RID: 1642
 public class HoverboardAudio : MonoBehaviour
 {
-	// Token: 0x0600290A RID: 10506 RVA: 0x000CC747 File Offset: 0x000CA947
+	// Token: 0x0600290B RID: 10507 RVA: 0x000CC7EB File Offset: 0x000CA9EB
 	private void Start()
 	{
 		this.Stop();
 	}
 
-	// Token: 0x0600290B RID: 10507 RVA: 0x000CC74F File Offset: 0x000CA94F
+	// Token: 0x0600290C RID: 10508 RVA: 0x000CC7F3 File Offset: 0x000CA9F3
 	public void PlayTurnSound(float angle)
 	{
 		if (Time.time > this.turnSoundCooldownUntilTimestamp && angle > this.minAngleDeltaForTurnSound)
@@ -20,7 +20,7 @@ public class HoverboardAudio : MonoBehaviour
 		}
 	}
 
-	// Token: 0x0600290C RID: 10508 RVA: 0x000CC784 File Offset: 0x000CA984
+	// Token: 0x0600290D RID: 10509 RVA: 0x000CC828 File Offset: 0x000CAA28
 	public void UpdateAudioLoop(float speed, float airspeed, float strainLevel, float grindLevel)
 	{
 		this.motorAnimator.UpdateValue(speed, false);
@@ -42,7 +42,7 @@ public class HoverboardAudio : MonoBehaviour
 		this.hum1.volume = Mathf.MoveTowards(this.hum1.volume, this.hum1BaseVolume * strainLevel, this.fadeSpeed * Time.deltaTime);
 	}
 
-	// Token: 0x0600290D RID: 10509 RVA: 0x000CC840 File Offset: 0x000CAA40
+	// Token: 0x0600290E RID: 10510 RVA: 0x000CC8E4 File Offset: 0x000CAAE4
 	public void Stop()
 	{
 		if (!this.didInitHum1BaseVolume)
@@ -56,44 +56,44 @@ public class HoverboardAudio : MonoBehaviour
 		this.grindAnimator.UpdateValue(0f, true);
 	}
 
-	// Token: 0x04002E15 RID: 11797
+	// Token: 0x04002E17 RID: 11799
 	[SerializeField]
 	private AudioSource hum1;
 
-	// Token: 0x04002E16 RID: 11798
+	// Token: 0x04002E18 RID: 11800
 	[SerializeField]
 	private SoundBankPlayer turnSounds;
 
-	// Token: 0x04002E17 RID: 11799
+	// Token: 0x04002E19 RID: 11801
 	private bool didInitHum1BaseVolume;
 
-	// Token: 0x04002E18 RID: 11800
-	private float hum1BaseVolume;
-
-	// Token: 0x04002E19 RID: 11801
-	[SerializeField]
-	private float fadeSpeed;
-
 	// Token: 0x04002E1A RID: 11802
-	[SerializeField]
-	private AudioAnimator windRushAnimator;
+	private float hum1BaseVolume;
 
 	// Token: 0x04002E1B RID: 11803
 	[SerializeField]
-	private AudioAnimator motorAnimator;
+	private float fadeSpeed;
 
 	// Token: 0x04002E1C RID: 11804
 	[SerializeField]
-	private AudioAnimator grindAnimator;
+	private AudioAnimator windRushAnimator;
 
 	// Token: 0x04002E1D RID: 11805
 	[SerializeField]
-	private float turnSoundCooldownDuration;
+	private AudioAnimator motorAnimator;
 
 	// Token: 0x04002E1E RID: 11806
 	[SerializeField]
-	private float minAngleDeltaForTurnSound;
+	private AudioAnimator grindAnimator;
 
 	// Token: 0x04002E1F RID: 11807
+	[SerializeField]
+	private float turnSoundCooldownDuration;
+
+	// Token: 0x04002E20 RID: 11808
+	[SerializeField]
+	private float minAngleDeltaForTurnSound;
+
+	// Token: 0x04002E21 RID: 11809
 	private float turnSoundCooldownUntilTimestamp;
 }

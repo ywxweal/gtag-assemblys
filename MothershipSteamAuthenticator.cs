@@ -6,7 +6,7 @@ using UnityEngine;
 // Token: 0x020008E4 RID: 2276
 public class MothershipSteamAuthenticator : MonoBehaviour
 {
-	// Token: 0x06003756 RID: 14166 RVA: 0x0010B9B9 File Offset: 0x00109BB9
+	// Token: 0x06003757 RID: 14167 RVA: 0x0010BA91 File Offset: 0x00109C91
 	public void StartSteamLogIn()
 	{
 		MothershipClientApiUnity.StartLoginWithSteam(delegate(PlayerSteamBeginLoginResponse resp)
@@ -30,7 +30,7 @@ public class MothershipSteamAuthenticator : MonoBehaviour
 		});
 	}
 
-	// Token: 0x06003757 RID: 14167 RVA: 0x0010B9EC File Offset: 0x00109BEC
+	// Token: 0x06003758 RID: 14168 RVA: 0x0010BAC4 File Offset: 0x00109CC4
 	public HAuthTicket GetAuthTicket(Action<string> successCallback, Action<EResult> failureCallback)
 	{
 		HAuthTicket ticketHandle = HAuthTicket.Invalid;
@@ -84,7 +84,7 @@ public class MothershipSteamAuthenticator : MonoBehaviour
 		return ticketHandle;
 	}
 
-	// Token: 0x06003758 RID: 14168 RVA: 0x0010BAA0 File Offset: 0x00109CA0
+	// Token: 0x06003759 RID: 14169 RVA: 0x0010BB78 File Offset: 0x00109D78
 	public HAuthTicket GetAuthTicketForWebApi(string authenticatorId, Action<string> successCallback, Action<EResult> failureCallback)
 	{
 		HAuthTicket ticketHandle = HAuthTicket.Invalid;

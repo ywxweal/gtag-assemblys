@@ -7,12 +7,12 @@ namespace GorillaTag.GuidedRefs
 	public interface IGuidedRefTargetMono : IGuidedRefMonoBehaviour, IGuidedRefObject
 	{
 		// Token: 0x17000895 RID: 2197
-		// (get) Token: 0x060055BC RID: 21948
-		// (set) Token: 0x060055BD RID: 21949
+		// (get) Token: 0x060055BD RID: 21949
+		// (set) Token: 0x060055BE RID: 21950
 		GuidedRefBasicTargetInfo GRefTargetInfo { get; set; }
 
 		// Token: 0x17000896 RID: 2198
-		// (get) Token: 0x060055BE RID: 21950
+		// (get) Token: 0x060055BF RID: 21951
 		Object GuidedRefTargetObject { get; }
 	}
 }

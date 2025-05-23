@@ -4,7 +4,7 @@ using UnityEngine;
 // Token: 0x020005CC RID: 1484
 public class GRTransformLook : MonoBehaviour
 {
-	// Token: 0x06002433 RID: 9267 RVA: 0x000B63CD File Offset: 0x000B45CD
+	// Token: 0x06002433 RID: 9267 RVA: 0x000B63ED File Offset: 0x000B45ED
 	private void Awake()
 	{
 		if (this.followPlayer)
@@ -13,7 +13,7 @@ public class GRTransformLook : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06002434 RID: 9268 RVA: 0x000B63E7 File Offset: 0x000B45E7
+	// Token: 0x06002434 RID: 9268 RVA: 0x000B6407 File Offset: 0x000B4607
 	private void LateUpdate()
 	{
 		base.transform.LookAt(this.lookTarget);

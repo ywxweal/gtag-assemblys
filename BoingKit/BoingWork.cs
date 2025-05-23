@@ -7,7 +7,7 @@ namespace BoingKit
 	// Token: 0x02000E77 RID: 3703
 	public static class BoingWork
 	{
-		// Token: 0x06005C98 RID: 23704 RVA: 0x001C7F40 File Offset: 0x001C6140
+		// Token: 0x06005C99 RID: 23705 RVA: 0x001C8018 File Offset: 0x001C6218
 		internal static Vector3 ComputeTranslationalResults(Transform t, Vector3 src, Vector3 dst, BoingBehavior b)
 		{
 			if (!b.LockTranslationX && !b.LockTranslationY && !b.LockTranslationZ)
@@ -55,36 +55,36 @@ namespace BoingKit
 		// Token: 0x02000E78 RID: 3704
 		public enum EffectorFlags
 		{
-			// Token: 0x040060B6 RID: 24758
+			// Token: 0x040060B7 RID: 24759
 			ContinuousMotion
 		}
 
 		// Token: 0x02000E79 RID: 3705
 		public enum ReactorFlags
 		{
-			// Token: 0x040060B8 RID: 24760
-			TwoDDistanceCheck,
 			// Token: 0x040060B9 RID: 24761
-			TwoDPositionInfluence,
+			TwoDDistanceCheck,
 			// Token: 0x040060BA RID: 24762
-			TwoDRotationInfluence,
+			TwoDPositionInfluence,
 			// Token: 0x040060BB RID: 24763
-			EnablePositionEffect,
+			TwoDRotationInfluence,
 			// Token: 0x040060BC RID: 24764
-			EnableRotationEffect,
+			EnablePositionEffect,
 			// Token: 0x040060BD RID: 24765
-			EnableScaleEffect,
+			EnableRotationEffect,
 			// Token: 0x040060BE RID: 24766
-			GlobalReactionUpVector,
+			EnableScaleEffect,
 			// Token: 0x040060BF RID: 24767
-			EnablePropagation,
+			GlobalReactionUpVector,
 			// Token: 0x040060C0 RID: 24768
-			AnchorPropagationAtBorder,
+			EnablePropagation,
 			// Token: 0x040060C1 RID: 24769
-			FixedUpdate,
+			AnchorPropagationAtBorder,
 			// Token: 0x040060C2 RID: 24770
-			EarlyUpdate,
+			FixedUpdate,
 			// Token: 0x040060C3 RID: 24771
+			EarlyUpdate,
+			// Token: 0x040060C4 RID: 24772
 			LateUpdate
 		}
 
@@ -92,7 +92,7 @@ namespace BoingKit
 		[Serializable]
 		public struct Params
 		{
-			// Token: 0x06005C99 RID: 23705 RVA: 0x001C8018 File Offset: 0x001C6218
+			// Token: 0x06005C9A RID: 23706 RVA: 0x001C80F0 File Offset: 0x001C62F0
 			public static void Copy(ref BoingWork.Params from, ref BoingWork.Params to)
 			{
 				to.PositionParameterMode = from.PositionParameterMode;
@@ -115,7 +115,7 @@ namespace BoingKit
 				to.ScaleOscillationDampingRatio = from.ScaleOscillationDampingRatio;
 			}
 
-			// Token: 0x06005C9A RID: 23706 RVA: 0x001C8100 File Offset: 0x001C6300
+			// Token: 0x06005C9B RID: 23707 RVA: 0x001C81D8 File Offset: 0x001C63D8
 			public void Init()
 			{
 				this.InstanceID = -1;
@@ -143,25 +143,25 @@ namespace BoingKit
 				this.Instance.Reset();
 			}
 
-			// Token: 0x06005C9B RID: 23707 RVA: 0x001C81F6 File Offset: 0x001C63F6
+			// Token: 0x06005C9C RID: 23708 RVA: 0x001C82CE File Offset: 0x001C64CE
 			public void AccumulateTarget(ref BoingEffector.Params effector, float dt)
 			{
 				this.Instance.AccumulateTarget(ref this, ref effector, dt);
 			}
 
-			// Token: 0x06005C9C RID: 23708 RVA: 0x001C8206 File Offset: 0x001C6406
+			// Token: 0x06005C9D RID: 23709 RVA: 0x001C82DE File Offset: 0x001C64DE
 			public void EndAccumulateTargets()
 			{
 				this.Instance.EndAccumulateTargets(ref this);
 			}
 
-			// Token: 0x06005C9D RID: 23709 RVA: 0x001C8214 File Offset: 0x001C6414
+			// Token: 0x06005C9E RID: 23710 RVA: 0x001C82EC File Offset: 0x001C64EC
 			public void Execute(float dt)
 			{
 				this.Instance.Execute(ref this, dt);
 			}
 
-			// Token: 0x06005C9E RID: 23710 RVA: 0x001C8224 File Offset: 0x001C6424
+			// Token: 0x06005C9F RID: 23711 RVA: 0x001C82FC File Offset: 0x001C64FC
 			public void Execute(BoingBones bones, float dt)
 			{
 				float num = bones.MaxCollisionResolutionSpeed * dt;
@@ -307,13 +307,13 @@ namespace BoingKit
 				}
 			}
 
-			// Token: 0x06005C9F RID: 23711 RVA: 0x001C8A01 File Offset: 0x001C6C01
+			// Token: 0x06005CA0 RID: 23712 RVA: 0x001C8AD9 File Offset: 0x001C6CD9
 			public void PullResults(BoingBones bones)
 			{
 				this.Instance.PullResults(bones);
 			}
 
-			// Token: 0x06005CA0 RID: 23712 RVA: 0x001C8A0F File Offset: 0x001C6C0F
+			// Token: 0x06005CA1 RID: 23713 RVA: 0x001C8AE7 File Offset: 0x001C6CE7
 			private void SuppressWarnings()
 			{
 				this.m_padding0 = 0;
@@ -324,110 +324,110 @@ namespace BoingKit
 				this.m_padding2 = (float)this.m_padding0;
 			}
 
-			// Token: 0x040060C4 RID: 24772
+			// Token: 0x040060C5 RID: 24773
 			public static readonly int Stride = 112 + BoingWork.Params.InstanceData.Stride;
 
-			// Token: 0x040060C5 RID: 24773
+			// Token: 0x040060C6 RID: 24774
 			public int InstanceID;
 
-			// Token: 0x040060C6 RID: 24774
+			// Token: 0x040060C7 RID: 24775
 			public Bits32 Bits;
 
-			// Token: 0x040060C7 RID: 24775
+			// Token: 0x040060C8 RID: 24776
 			public TwoDPlaneEnum TwoDPlane;
 
-			// Token: 0x040060C8 RID: 24776
+			// Token: 0x040060C9 RID: 24777
 			private int m_padding0;
 
-			// Token: 0x040060C9 RID: 24777
+			// Token: 0x040060CA RID: 24778
 			public ParameterMode PositionParameterMode;
 
-			// Token: 0x040060CA RID: 24778
+			// Token: 0x040060CB RID: 24779
 			public ParameterMode RotationParameterMode;
 
-			// Token: 0x040060CB RID: 24779
+			// Token: 0x040060CC RID: 24780
 			public ParameterMode ScaleParameterMode;
 
-			// Token: 0x040060CC RID: 24780
-			private int m_padding1;
-
 			// Token: 0x040060CD RID: 24781
-			[Range(0f, 5f)]
-			public float PositionExponentialHalfLife;
+			private int m_padding1;
 
 			// Token: 0x040060CE RID: 24782
 			[Range(0f, 5f)]
-			public float PositionOscillationHalfLife;
+			public float PositionExponentialHalfLife;
 
 			// Token: 0x040060CF RID: 24783
+			[Range(0f, 5f)]
+			public float PositionOscillationHalfLife;
+
+			// Token: 0x040060D0 RID: 24784
 			[Range(0f, 10f)]
 			public float PositionOscillationFrequency;
 
-			// Token: 0x040060D0 RID: 24784
+			// Token: 0x040060D1 RID: 24785
 			[Range(0f, 1f)]
 			public float PositionOscillationDampingRatio;
 
-			// Token: 0x040060D1 RID: 24785
+			// Token: 0x040060D2 RID: 24786
 			[Range(0f, 10f)]
 			public float MoveReactionMultiplier;
 
-			// Token: 0x040060D2 RID: 24786
+			// Token: 0x040060D3 RID: 24787
 			[Range(0f, 10f)]
 			public float LinearImpulseMultiplier;
 
-			// Token: 0x040060D3 RID: 24787
+			// Token: 0x040060D4 RID: 24788
 			[Range(0f, 5f)]
 			public float RotationExponentialHalfLife;
 
-			// Token: 0x040060D4 RID: 24788
+			// Token: 0x040060D5 RID: 24789
 			[Range(0f, 5f)]
 			public float RotationOscillationHalfLife;
 
-			// Token: 0x040060D5 RID: 24789
+			// Token: 0x040060D6 RID: 24790
 			[Range(0f, 10f)]
 			public float RotationOscillationFrequency;
 
-			// Token: 0x040060D6 RID: 24790
+			// Token: 0x040060D7 RID: 24791
 			[Range(0f, 1f)]
 			public float RotationOscillationDampingRatio;
 
-			// Token: 0x040060D7 RID: 24791
+			// Token: 0x040060D8 RID: 24792
 			[Range(0f, 10f)]
 			public float RotationReactionMultiplier;
 
-			// Token: 0x040060D8 RID: 24792
+			// Token: 0x040060D9 RID: 24793
 			[Range(0f, 10f)]
 			public float AngularImpulseMultiplier;
 
-			// Token: 0x040060D9 RID: 24793
+			// Token: 0x040060DA RID: 24794
 			[Range(0f, 5f)]
 			public float ScaleExponentialHalfLife;
 
-			// Token: 0x040060DA RID: 24794
+			// Token: 0x040060DB RID: 24795
 			[Range(0f, 5f)]
 			public float ScaleOscillationHalfLife;
 
-			// Token: 0x040060DB RID: 24795
+			// Token: 0x040060DC RID: 24796
 			[Range(0f, 10f)]
 			public float ScaleOscillationFrequency;
 
-			// Token: 0x040060DC RID: 24796
+			// Token: 0x040060DD RID: 24797
 			[Range(0f, 1f)]
 			public float ScaleOscillationDampingRatio;
 
-			// Token: 0x040060DD RID: 24797
+			// Token: 0x040060DE RID: 24798
 			public Vector3 RotationReactionUp;
 
-			// Token: 0x040060DE RID: 24798
+			// Token: 0x040060DF RID: 24799
 			private float m_padding2;
 
-			// Token: 0x040060DF RID: 24799
+			// Token: 0x040060E0 RID: 24800
 			public BoingWork.Params.InstanceData Instance;
 
 			// Token: 0x02000E7B RID: 3707
 			public struct InstanceData
 			{
-				// Token: 0x06005CA2 RID: 23714 RVA: 0x001C8A60 File Offset: 0x001C6C60
+				// Token: 0x06005CA3 RID: 23715 RVA: 0x001C8B38 File Offset: 0x001C6D38
 				public void Reset()
 				{
 					this.PositionSpring.Reset();
@@ -437,7 +437,7 @@ namespace BoingKit
 					this.RotationPropagationWorkData = Vector3.zero;
 				}
 
-				// Token: 0x06005CA3 RID: 23715 RVA: 0x001C8AB4 File Offset: 0x001C6CB4
+				// Token: 0x06005CA4 RID: 23716 RVA: 0x001C8B8C File Offset: 0x001C6D8C
 				public void Reset(Vector3 position, bool instantAccumulation)
 				{
 					this.PositionSpring.Reset(position);
@@ -448,7 +448,7 @@ namespace BoingKit
 					this.m_instantAccumulation = (instantAccumulation ? 1 : 0);
 				}
 
-				// Token: 0x06005CA4 RID: 23716 RVA: 0x001C8B18 File Offset: 0x001C6D18
+				// Token: 0x06005CA5 RID: 23717 RVA: 0x001C8BF0 File Offset: 0x001C6DF0
 				public void PrepareExecute(ref BoingWork.Params p, Vector3 position, Quaternion rotation, Vector3 scale, bool accumulateEffectors)
 				{
 					this.PositionOrigin = position;
@@ -468,7 +468,7 @@ namespace BoingKit
 					this.m_upWs = Vector3.zero;
 				}
 
-				// Token: 0x06005CA5 RID: 23717 RVA: 0x001C8BD4 File Offset: 0x001C6DD4
+				// Token: 0x06005CA6 RID: 23718 RVA: 0x001C8CAC File Offset: 0x001C6EAC
 				public void PrepareExecute(ref BoingWork.Params p, Vector3 gridCenter, Quaternion gridRotation, Vector3 cellOffset)
 				{
 					this.PositionOrigin = gridCenter + cellOffset;
@@ -480,7 +480,7 @@ namespace BoingKit
 					this.m_minScale = 1f;
 				}
 
-				// Token: 0x06005CA6 RID: 23718 RVA: 0x001C8C68 File Offset: 0x001C6E68
+				// Token: 0x06005CA7 RID: 23719 RVA: 0x001C8D40 File Offset: 0x001C6F40
 				public void AccumulateTarget(ref BoingWork.Params p, ref BoingEffector.Params effector, float dt)
 				{
 					Vector3 vector = (effector.Bits.IsBitSet(0) ? VectorUtil.GetClosestPointOnSegment(this.PositionOrigin, effector.PrevPosition, effector.CurrPosition) : effector.CurrPosition);
@@ -606,7 +606,7 @@ namespace BoingKit
 					this.m_numEffectors++;
 				}
 
-				// Token: 0x06005CA7 RID: 23719 RVA: 0x001C9110 File Offset: 0x001C7310
+				// Token: 0x06005CA8 RID: 23720 RVA: 0x001C91E8 File Offset: 0x001C73E8
 				public void EndAccumulateTargets(ref BoingWork.Params p)
 				{
 					if (this.m_numEffectors > 0)
@@ -621,7 +621,7 @@ namespace BoingKit
 					this.RotationTarget = this.RotationOrigin;
 				}
 
-				// Token: 0x06005CA8 RID: 23720 RVA: 0x001C91B8 File Offset: 0x001C73B8
+				// Token: 0x06005CA9 RID: 23721 RVA: 0x001C9290 File Offset: 0x001C7490
 				public void Execute(ref BoingWork.Params p, float dt)
 				{
 					bool flag = this.m_numEffectors >= 0;
@@ -735,7 +735,7 @@ namespace BoingKit
 					}
 				}
 
-				// Token: 0x06005CA9 RID: 23721 RVA: 0x001C9568 File Offset: 0x001C7768
+				// Token: 0x06005CAA RID: 23722 RVA: 0x001C9640 File Offset: 0x001C7840
 				public void PullResults(BoingBones bones)
 				{
 					for (int i = 0; i < bones.BoneData.Length; i++)
@@ -837,7 +837,7 @@ namespace BoingKit
 					}
 				}
 
-				// Token: 0x06005CAA RID: 23722 RVA: 0x001C9968 File Offset: 0x001C7B68
+				// Token: 0x06005CAB RID: 23723 RVA: 0x001C9A40 File Offset: 0x001C7C40
 				private void SuppressWarnings()
 				{
 					this.m_padding0 = 0f;
@@ -854,67 +854,67 @@ namespace BoingKit
 					this.m_padding5 = this.m_padding0;
 				}
 
-				// Token: 0x040060E0 RID: 24800
+				// Token: 0x040060E1 RID: 24801
 				public static readonly int Stride = 144 + 2 * Vector3Spring.Stride + QuaternionSpring.Stride;
 
-				// Token: 0x040060E1 RID: 24801
+				// Token: 0x040060E2 RID: 24802
 				public Vector3 PositionTarget;
 
-				// Token: 0x040060E2 RID: 24802
+				// Token: 0x040060E3 RID: 24803
 				private float m_padding0;
 
-				// Token: 0x040060E3 RID: 24803
+				// Token: 0x040060E4 RID: 24804
 				public Vector3 PositionOrigin;
 
-				// Token: 0x040060E4 RID: 24804
+				// Token: 0x040060E5 RID: 24805
 				private float m_padding1;
 
-				// Token: 0x040060E5 RID: 24805
+				// Token: 0x040060E6 RID: 24806
 				public Vector4 RotationTarget;
 
-				// Token: 0x040060E6 RID: 24806
+				// Token: 0x040060E7 RID: 24807
 				public Vector4 RotationOrigin;
 
-				// Token: 0x040060E7 RID: 24807
+				// Token: 0x040060E8 RID: 24808
 				public Vector3 ScaleTarget;
 
-				// Token: 0x040060E8 RID: 24808
+				// Token: 0x040060E9 RID: 24809
 				private float m_padding2;
 
-				// Token: 0x040060E9 RID: 24809
+				// Token: 0x040060EA RID: 24810
 				private int m_numEffectors;
 
-				// Token: 0x040060EA RID: 24810
+				// Token: 0x040060EB RID: 24811
 				private int m_instantAccumulation;
 
-				// Token: 0x040060EB RID: 24811
+				// Token: 0x040060EC RID: 24812
 				private int m_padding3;
 
-				// Token: 0x040060EC RID: 24812
+				// Token: 0x040060ED RID: 24813
 				private int m_padding4;
 
-				// Token: 0x040060ED RID: 24813
+				// Token: 0x040060EE RID: 24814
 				private Vector3 m_upWs;
 
-				// Token: 0x040060EE RID: 24814
+				// Token: 0x040060EF RID: 24815
 				private float m_minScale;
 
-				// Token: 0x040060EF RID: 24815
+				// Token: 0x040060F0 RID: 24816
 				public Vector3Spring PositionSpring;
 
-				// Token: 0x040060F0 RID: 24816
+				// Token: 0x040060F1 RID: 24817
 				public QuaternionSpring RotationSpring;
 
-				// Token: 0x040060F1 RID: 24817
+				// Token: 0x040060F2 RID: 24818
 				public Vector3Spring ScaleSpring;
 
-				// Token: 0x040060F2 RID: 24818
+				// Token: 0x040060F3 RID: 24819
 				public Vector3 PositionPropagationWorkData;
 
-				// Token: 0x040060F3 RID: 24819
+				// Token: 0x040060F4 RID: 24820
 				private float m_padding5;
 
-				// Token: 0x040060F4 RID: 24820
+				// Token: 0x040060F5 RID: 24821
 				public Vector4 RotationPropagationWorkData;
 			}
 		}
@@ -922,7 +922,7 @@ namespace BoingKit
 		// Token: 0x02000E7C RID: 3708
 		public struct Output
 		{
-			// Token: 0x06005CAC RID: 23724 RVA: 0x001C9A14 File Offset: 0x001C7C14
+			// Token: 0x06005CAD RID: 23725 RVA: 0x001C9AEC File Offset: 0x001C7CEC
 			public Output(int instanceID, ref Vector3Spring positionSpring, ref QuaternionSpring rotationSpring, ref Vector3Spring scaleSpring)
 			{
 				this.InstanceID = instanceID;
@@ -932,7 +932,7 @@ namespace BoingKit
 				this.ScaleSpring = scaleSpring;
 			}
 
-			// Token: 0x06005CAD RID: 23725 RVA: 0x001C9A68 File Offset: 0x001C7C68
+			// Token: 0x06005CAE RID: 23726 RVA: 0x001C9B40 File Offset: 0x001C7D40
 			public void GatherOutput(Dictionary<int, BoingBehavior> behaviorMap, BoingManager.UpdateMode updateMode)
 			{
 				BoingBehavior boingBehavior;
@@ -951,7 +951,7 @@ namespace BoingKit
 				boingBehavior.GatherOutput(ref this);
 			}
 
-			// Token: 0x06005CAE RID: 23726 RVA: 0x001C9AA0 File Offset: 0x001C7CA0
+			// Token: 0x06005CAF RID: 23727 RVA: 0x001C9B78 File Offset: 0x001C7D78
 			public void GatherOutput(Dictionary<int, BoingReactor> reactorMap, BoingManager.UpdateMode updateMode)
 			{
 				BoingReactor boingReactor;
@@ -970,7 +970,7 @@ namespace BoingKit
 				boingReactor.GatherOutput(ref this);
 			}
 
-			// Token: 0x06005CAF RID: 23727 RVA: 0x001C9AD8 File Offset: 0x001C7CD8
+			// Token: 0x06005CB0 RID: 23728 RVA: 0x001C9BB0 File Offset: 0x001C7DB0
 			private void SuppressWarnings()
 			{
 				this.m_padding0 = 0;
@@ -981,28 +981,28 @@ namespace BoingKit
 				this.m_padding2 = this.m_padding0;
 			}
 
-			// Token: 0x040060F5 RID: 24821
+			// Token: 0x040060F6 RID: 24822
 			public static readonly int Stride = 16 + Vector3Spring.Stride + QuaternionSpring.Stride;
 
-			// Token: 0x040060F6 RID: 24822
+			// Token: 0x040060F7 RID: 24823
 			public int InstanceID;
 
-			// Token: 0x040060F7 RID: 24823
+			// Token: 0x040060F8 RID: 24824
 			public int m_padding0;
 
-			// Token: 0x040060F8 RID: 24824
+			// Token: 0x040060F9 RID: 24825
 			public int m_padding1;
 
-			// Token: 0x040060F9 RID: 24825
+			// Token: 0x040060FA RID: 24826
 			public int m_padding2;
 
-			// Token: 0x040060FA RID: 24826
+			// Token: 0x040060FB RID: 24827
 			public Vector3Spring PositionSpring;
 
-			// Token: 0x040060FB RID: 24827
+			// Token: 0x040060FC RID: 24828
 			public QuaternionSpring RotationSpring;
 
-			// Token: 0x040060FC RID: 24828
+			// Token: 0x040060FD RID: 24829
 			public Vector3Spring ScaleSpring;
 		}
 	}

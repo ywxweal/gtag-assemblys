@@ -21,7 +21,7 @@ namespace GorillaNetworking
 	public class PlayFabAuthenticator : MonoBehaviour
 	{
 		// Token: 0x170007C0 RID: 1984
-		// (get) Token: 0x06004E8A RID: 20106 RVA: 0x00176CBA File Offset: 0x00174EBA
+		// (get) Token: 0x06004E8B RID: 20107 RVA: 0x00176D92 File Offset: 0x00174F92
 		public GorillaComputer gorillaComputer
 		{
 			get
@@ -31,16 +31,16 @@ namespace GorillaNetworking
 		}
 
 		// Token: 0x170007C1 RID: 1985
-		// (get) Token: 0x06004E8B RID: 20107 RVA: 0x00176CC3 File Offset: 0x00174EC3
-		// (set) Token: 0x06004E8C RID: 20108 RVA: 0x00176CCB File Offset: 0x00174ECB
+		// (get) Token: 0x06004E8C RID: 20108 RVA: 0x00176D9B File Offset: 0x00174F9B
+		// (set) Token: 0x06004E8D RID: 20109 RVA: 0x00176DA3 File Offset: 0x00174FA3
 		public bool IsReturningPlayer { get; private set; }
 
 		// Token: 0x170007C2 RID: 1986
-		// (get) Token: 0x06004E8D RID: 20109 RVA: 0x00176CD4 File Offset: 0x00174ED4
-		// (set) Token: 0x06004E8E RID: 20110 RVA: 0x00176CDC File Offset: 0x00174EDC
+		// (get) Token: 0x06004E8E RID: 20110 RVA: 0x00176DAC File Offset: 0x00174FAC
+		// (set) Token: 0x06004E8F RID: 20111 RVA: 0x00176DB4 File Offset: 0x00174FB4
 		public bool postAuthSetSafety { get; private set; }
 
-		// Token: 0x06004E8F RID: 20111 RVA: 0x00176CE8 File Offset: 0x00174EE8
+		// Token: 0x06004E90 RID: 20112 RVA: 0x00176DC0 File Offset: 0x00174FC0
 		private void Awake()
 		{
 			if (PlayFabAuthenticator.instance == null)
@@ -73,7 +73,7 @@ namespace GorillaNetworking
 			this.BeginLoginFlow();
 		}
 
-		// Token: 0x06004E90 RID: 20112 RVA: 0x00176DEC File Offset: 0x00174FEC
+		// Token: 0x06004E91 RID: 20113 RVA: 0x00176EC4 File Offset: 0x001750C4
 		public void BeginLoginFlow()
 		{
 			if (!MothershipClientApiUnity.IsEnabled())
@@ -101,18 +101,18 @@ namespace GorillaNetworking
 			}
 		}
 
-		// Token: 0x06004E91 RID: 20113 RVA: 0x000023F4 File Offset: 0x000005F4
+		// Token: 0x06004E92 RID: 20114 RVA: 0x000023F4 File Offset: 0x000005F4
 		private void Start()
 		{
 		}
 
-		// Token: 0x06004E92 RID: 20114 RVA: 0x00176ED7 File Offset: 0x001750D7
+		// Token: 0x06004E93 RID: 20115 RVA: 0x00176FAF File Offset: 0x001751AF
 		private void OnEnable()
 		{
 			NetworkSystem.Instance.OnCustomAuthenticationResponse += this.OnCustomAuthenticationResponse;
 		}
 
-		// Token: 0x06004E93 RID: 20115 RVA: 0x00176EEF File Offset: 0x001750EF
+		// Token: 0x06004E94 RID: 20116 RVA: 0x00176FC7 File Offset: 0x001751C7
 		private void OnDisable()
 		{
 			NetworkSystem.Instance.OnCustomAuthenticationResponse -= this.OnCustomAuthenticationResponse;
@@ -129,7 +129,7 @@ namespace GorillaNetworking
 			steamAuthTicket2.Dispose();
 		}
 
-		// Token: 0x06004E94 RID: 20116 RVA: 0x00176F28 File Offset: 0x00175128
+		// Token: 0x06004E95 RID: 20117 RVA: 0x00177000 File Offset: 0x00175200
 		public void RefreshSteamAuthTicketForPhoton(Action<string> successCallback, Action<EResult> failureCallback)
 		{
 			SteamAuthTicket steamAuthTicket = this.steamAuthTicketForPhoton;
@@ -140,7 +140,7 @@ namespace GorillaNetworking
 			this.steamAuthTicketForPhoton = this.steamAuthenticator.GetAuthTicketForWebApi(this.steamAuthIdForPhoton, successCallback, failureCallback);
 		}
 
-		// Token: 0x06004E95 RID: 20117 RVA: 0x00176F5C File Offset: 0x0017515C
+		// Token: 0x06004E96 RID: 20118 RVA: 0x00177034 File Offset: 0x00175234
 		private void OnCustomAuthenticationResponse(Dictionary<string, object> response)
 		{
 			SteamAuthTicket steamAuthTicket = this.steamAuthTicketForPhoton;
@@ -161,7 +161,7 @@ namespace GorillaNetworking
 			this.steamAuthIdForPhoton = null;
 		}
 
-		// Token: 0x06004E96 RID: 20118 RVA: 0x00176FA4 File Offset: 0x001751A4
+		// Token: 0x06004E97 RID: 20119 RVA: 0x0017707C File Offset: 0x0017527C
 		public void AuthenticateWithPlayFab()
 		{
 			Debug.Log("authenticating with playFab!");
@@ -199,7 +199,7 @@ namespace GorillaNetworking
 			base.StartCoroutine(this.DisplayGeneralFailureMessageOnGorillaComputerAfter1Frame());
 		}
 
-		// Token: 0x06004E97 RID: 20119 RVA: 0x00177056 File Offset: 0x00175256
+		// Token: 0x06004E98 RID: 20120 RVA: 0x0017712E File Offset: 0x0017532E
 		private IEnumerator VerifyKidAuthenticated(DateTime accountCreationDateTime)
 		{
 			Task<DateTime?> getNewPlayerDateTimeTask = KIDManager.CheckKIDNewPlayerDateTime();
@@ -212,7 +212,7 @@ namespace GorillaNetworking
 			yield break;
 		}
 
-		// Token: 0x06004E98 RID: 20120 RVA: 0x0017706C File Offset: 0x0017526C
+		// Token: 0x06004E99 RID: 20121 RVA: 0x00177144 File Offset: 0x00175344
 		private IEnumerator DisplayGeneralFailureMessageOnGorillaComputerAfter1Frame()
 		{
 			yield return null;
@@ -229,7 +229,7 @@ namespace GorillaNetworking
 			yield break;
 		}
 
-		// Token: 0x06004E99 RID: 20121 RVA: 0x0017707C File Offset: 0x0017527C
+		// Token: 0x06004E9A RID: 20122 RVA: 0x00177154 File Offset: 0x00175354
 		private void OnLoginWithSteamResponse(LoginResult obj)
 		{
 			this._playFabPlayerIdCache = obj.PlayFabId;
@@ -246,7 +246,7 @@ namespace GorillaNetworking
 			}, new Action<PlayFabAuthenticator.CachePlayFabIdResponse>(this.OnCachePlayFabIdRequest)));
 		}
 
-		// Token: 0x06004E9A RID: 20122 RVA: 0x00177114 File Offset: 0x00175314
+		// Token: 0x06004E9B RID: 20123 RVA: 0x001771EC File Offset: 0x001753EC
 		private void OnCachePlayFabIdRequest([CanBeNull] PlayFabAuthenticator.CachePlayFabIdResponse response)
 		{
 			if (response != null)
@@ -264,7 +264,7 @@ namespace GorillaNetworking
 			Debug.LogError("Could not cache PlayFab Id.  Cannot continue.");
 		}
 
-		// Token: 0x06004E9B RID: 20123 RVA: 0x00177172 File Offset: 0x00175372
+		// Token: 0x06004E9C RID: 20124 RVA: 0x0017724A File Offset: 0x0017544A
 		private void AdvanceLogin()
 		{
 			this.LogMessage("PlayFab authenticated ... Getting Nonce");
@@ -280,7 +280,7 @@ namespace GorillaNetworking
 			});
 		}
 
-		// Token: 0x06004E9C RID: 20124 RVA: 0x001771A0 File Offset: 0x001753A0
+		// Token: 0x06004E9D RID: 20125 RVA: 0x00177278 File Offset: 0x00175478
 		private void AuthenticateWithPhoton()
 		{
 			this.photonAuthenticator.SetCustomAuthenticationParameters(new Dictionary<string, object>
@@ -341,7 +341,7 @@ namespace GorillaNetworking
 			}
 		}
 
-		// Token: 0x06004E9D RID: 20125 RVA: 0x001772EE File Offset: 0x001754EE
+		// Token: 0x06004E9E RID: 20126 RVA: 0x001773C6 File Offset: 0x001755C6
 		private IEnumerator ComputerOnConnectedToMaster()
 		{
 			WaitForEndOfFrame frameYield = new WaitForEndOfFrame();
@@ -353,7 +353,7 @@ namespace GorillaNetworking
 			yield break;
 		}
 
-		// Token: 0x06004E9E RID: 20126 RVA: 0x00177300 File Offset: 0x00175500
+		// Token: 0x06004E9F RID: 20127 RVA: 0x001773D8 File Offset: 0x001755D8
 		private void OnPlayFabError(PlayFabError obj)
 		{
 			this.LogMessage(obj.ErrorMessage);
@@ -401,12 +401,12 @@ namespace GorillaNetworking
 			}
 		}
 
-		// Token: 0x06004E9F RID: 20127 RVA: 0x000023F4 File Offset: 0x000005F4
+		// Token: 0x06004EA0 RID: 20128 RVA: 0x000023F4 File Offset: 0x000005F4
 		private void LogMessage(string message)
 		{
 		}
 
-		// Token: 0x06004EA0 RID: 20128 RVA: 0x00177538 File Offset: 0x00175738
+		// Token: 0x06004EA1 RID: 20129 RVA: 0x00177610 File Offset: 0x00175810
 		private void GetPlayerDisplayName(string playFabId)
 		{
 			GetPlayerProfileRequest getPlayerProfileRequest = new GetPlayerProfileRequest();
@@ -424,7 +424,7 @@ namespace GorillaNetworking
 			}, null, null);
 		}
 
-		// Token: 0x06004EA1 RID: 20129 RVA: 0x00177598 File Offset: 0x00175798
+		// Token: 0x06004EA2 RID: 20130 RVA: 0x00177670 File Offset: 0x00175870
 		public void SetDisplayName(string playerName)
 		{
 			if (this._displayName == null || (this._displayName.Length > 4 && this._displayName.Substring(0, this._displayName.Length - 4) != playerName))
@@ -441,7 +441,7 @@ namespace GorillaNetworking
 			}
 		}
 
-		// Token: 0x06004EA2 RID: 20130 RVA: 0x00177638 File Offset: 0x00175838
+		// Token: 0x06004EA3 RID: 20131 RVA: 0x00177710 File Offset: 0x00175910
 		public void ScreenDebug(string debugString)
 		{
 			Debug.Log(debugString);
@@ -452,13 +452,13 @@ namespace GorillaNetworking
 			}
 		}
 
-		// Token: 0x06004EA3 RID: 20131 RVA: 0x00177664 File Offset: 0x00175864
+		// Token: 0x06004EA4 RID: 20132 RVA: 0x0017773C File Offset: 0x0017593C
 		public void ScreenDebugClear()
 		{
 			this.debugText.text = "";
 		}
 
-		// Token: 0x06004EA4 RID: 20132 RVA: 0x00177676 File Offset: 0x00175876
+		// Token: 0x06004EA5 RID: 20133 RVA: 0x0017774E File Offset: 0x0017594E
 		public IEnumerator PlayfabAuthenticate(PlayFabAuthenticator.PlayfabAuthRequestData data, Action<PlayFabAuthenticator.PlayfabAuthResponseData> callback)
 		{
 			UnityWebRequest request = new UnityWebRequest(PlayFabAuthenticatorSettings.AuthApiBaseUrl + "/api/PlayFabAuthentication", "POST");
@@ -517,7 +517,7 @@ namespace GorillaNetworking
 			yield break;
 		}
 
-		// Token: 0x06004EA5 RID: 20133 RVA: 0x00177694 File Offset: 0x00175894
+		// Token: 0x06004EA6 RID: 20134 RVA: 0x0017776C File Offset: 0x0017596C
 		private void ShowBanMessage(PlayFabAuthenticator.BanInfo banInfo)
 		{
 			try
@@ -539,7 +539,7 @@ namespace GorillaNetworking
 			}
 		}
 
-		// Token: 0x06004EA6 RID: 20134 RVA: 0x00177748 File Offset: 0x00175948
+		// Token: 0x06004EA7 RID: 20135 RVA: 0x00177820 File Offset: 0x00175A20
 		public IEnumerator CachePlayFabId(PlayFabAuthenticator.CachePlayFabIdRequest data, Action<PlayFabAuthenticator.CachePlayFabIdResponse> callback)
 		{
 			Debug.Log("Trying to cache playfab Id");
@@ -596,14 +596,14 @@ namespace GorillaNetworking
 			yield break;
 		}
 
-		// Token: 0x06004EA7 RID: 20135 RVA: 0x00177765 File Offset: 0x00175965
+		// Token: 0x06004EA8 RID: 20136 RVA: 0x0017783D File Offset: 0x00175A3D
 		public void DefaultSafetiesByAgeCategory()
 		{
 			Debug.Log("[KID::PLAYFAB_AUTHENTICATOR] Defaulting Safety Settings to Disabled because age category data unavailable on this platform");
 			this.SetSafety(false, true, false);
 		}
 
-		// Token: 0x06004EA8 RID: 20136 RVA: 0x0017777C File Offset: 0x0017597C
+		// Token: 0x06004EA9 RID: 20137 RVA: 0x00177854 File Offset: 0x00175A54
 		public void SetSafety(bool isSafety, bool isAutoSet, bool setPlayfab = false)
 		{
 			this.postAuthSetSafety = false;
@@ -638,133 +638,133 @@ namespace GorillaNetworking
 			this.safetyType = PlayFabAuthenticator.SafetyType.OptIn;
 		}
 
-		// Token: 0x06004EA9 RID: 20137 RVA: 0x00177817 File Offset: 0x00175A17
+		// Token: 0x06004EAA RID: 20138 RVA: 0x001778EF File Offset: 0x00175AEF
 		public string GetPlayFabSessionTicket()
 		{
 			return this._sessionTicket;
 		}
 
-		// Token: 0x06004EAA RID: 20138 RVA: 0x0017781F File Offset: 0x00175A1F
+		// Token: 0x06004EAB RID: 20139 RVA: 0x001778F7 File Offset: 0x00175AF7
 		public string GetPlayFabPlayerId()
 		{
 			return this._playFabPlayerIdCache;
 		}
 
-		// Token: 0x06004EAB RID: 20139 RVA: 0x00177827 File Offset: 0x00175A27
+		// Token: 0x06004EAC RID: 20140 RVA: 0x001778FF File Offset: 0x00175AFF
 		public bool GetSafety()
 		{
 			return this.isSafeAccount;
 		}
 
-		// Token: 0x06004EAC RID: 20140 RVA: 0x0017782F File Offset: 0x00175A2F
+		// Token: 0x06004EAD RID: 20141 RVA: 0x00177907 File Offset: 0x00175B07
 		public PlayFabAuthenticator.SafetyType GetSafetyType()
 		{
 			return this.safetyType;
 		}
 
-		// Token: 0x06004EAD RID: 20141 RVA: 0x00177837 File Offset: 0x00175A37
+		// Token: 0x06004EAE RID: 20142 RVA: 0x0017790F File Offset: 0x00175B0F
 		public string GetUserID()
 		{
 			return this.userID;
 		}
 
-		// Token: 0x040051AA RID: 20906
+		// Token: 0x040051AB RID: 20907
 		public static volatile PlayFabAuthenticator instance;
 
-		// Token: 0x040051AB RID: 20907
+		// Token: 0x040051AC RID: 20908
 		private string _playFabPlayerIdCache;
 
-		// Token: 0x040051AC RID: 20908
+		// Token: 0x040051AD RID: 20909
 		private string _sessionTicket;
 
-		// Token: 0x040051AD RID: 20909
+		// Token: 0x040051AE RID: 20910
 		private string _displayName;
 
-		// Token: 0x040051AE RID: 20910
+		// Token: 0x040051AF RID: 20911
 		private string _nonce;
 
-		// Token: 0x040051AF RID: 20911
+		// Token: 0x040051B0 RID: 20912
 		public string userID;
 
-		// Token: 0x040051B0 RID: 20912
+		// Token: 0x040051B1 RID: 20913
 		private string userToken;
 
-		// Token: 0x040051B1 RID: 20913
+		// Token: 0x040051B2 RID: 20914
 		public PlatformTagJoin platform;
 
-		// Token: 0x040051B2 RID: 20914
+		// Token: 0x040051B3 RID: 20915
 		private bool isSafeAccount;
 
-		// Token: 0x040051B3 RID: 20915
+		// Token: 0x040051B4 RID: 20916
 		public Action<bool> OnSafetyUpdate;
 
-		// Token: 0x040051B4 RID: 20916
+		// Token: 0x040051B5 RID: 20917
 		private PlayFabAuthenticator.SafetyType safetyType;
 
-		// Token: 0x040051B5 RID: 20917
+		// Token: 0x040051B6 RID: 20918
 		private byte[] m_Ticket;
 
-		// Token: 0x040051B6 RID: 20918
+		// Token: 0x040051B7 RID: 20919
 		private uint m_pcbTicket;
 
-		// Token: 0x040051B7 RID: 20919
+		// Token: 0x040051B8 RID: 20920
 		public Text debugText;
 
-		// Token: 0x040051B8 RID: 20920
+		// Token: 0x040051B9 RID: 20921
 		public bool screenDebugMode;
 
-		// Token: 0x040051B9 RID: 20921
+		// Token: 0x040051BA RID: 20922
 		public bool loginFailed;
 
-		// Token: 0x040051BA RID: 20922
+		// Token: 0x040051BB RID: 20923
 		[FormerlySerializedAs("loginDisplayID")]
 		public GameObject emptyObject;
 
-		// Token: 0x040051BB RID: 20923
+		// Token: 0x040051BC RID: 20924
 		private int playFabAuthRetryCount;
 
-		// Token: 0x040051BC RID: 20924
+		// Token: 0x040051BD RID: 20925
 		private int playFabMaxRetries = 5;
 
-		// Token: 0x040051BD RID: 20925
+		// Token: 0x040051BE RID: 20926
 		private int playFabCacheRetryCount;
 
-		// Token: 0x040051BE RID: 20926
+		// Token: 0x040051BF RID: 20927
 		private int playFabCacheMaxRetries = 5;
 
-		// Token: 0x040051BF RID: 20927
+		// Token: 0x040051C0 RID: 20928
 		public MetaAuthenticator metaAuthenticator;
 
-		// Token: 0x040051C0 RID: 20928
+		// Token: 0x040051C1 RID: 20929
 		public SteamAuthenticator steamAuthenticator;
 
-		// Token: 0x040051C1 RID: 20929
+		// Token: 0x040051C2 RID: 20930
 		public MothershipAuthenticator mothershipAuthenticator;
 
-		// Token: 0x040051C2 RID: 20930
+		// Token: 0x040051C3 RID: 20931
 		public PhotonAuthenticator photonAuthenticator;
 
-		// Token: 0x040051C3 RID: 20931
+		// Token: 0x040051C4 RID: 20932
 		[SerializeField]
 		private bool dbg_isReturningPlayer;
 
-		// Token: 0x040051C5 RID: 20933
+		// Token: 0x040051C6 RID: 20934
 		private SteamAuthTicket steamAuthTicketForPlayFab;
 
-		// Token: 0x040051C6 RID: 20934
+		// Token: 0x040051C7 RID: 20935
 		private SteamAuthTicket steamAuthTicketForPhoton;
 
-		// Token: 0x040051C7 RID: 20935
+		// Token: 0x040051C8 RID: 20936
 		private string steamAuthIdForPhoton;
 
 		// Token: 0x02000C5E RID: 3166
 		public enum SafetyType
 		{
-			// Token: 0x040051CA RID: 20938
-			None,
 			// Token: 0x040051CB RID: 20939
-			Auto,
+			None,
 			// Token: 0x040051CC RID: 20940
+			Auto,
+			// Token: 0x040051CD RID: 20941
 			OptIn
 		}
 
@@ -772,25 +772,25 @@ namespace GorillaNetworking
 		[Serializable]
 		public class CachePlayFabIdRequest
 		{
-			// Token: 0x040051CD RID: 20941
+			// Token: 0x040051CE RID: 20942
 			public string Platform;
 
-			// Token: 0x040051CE RID: 20942
+			// Token: 0x040051CF RID: 20943
 			public string SessionTicket;
 
-			// Token: 0x040051CF RID: 20943
+			// Token: 0x040051D0 RID: 20944
 			public string PlayFabId;
 
-			// Token: 0x040051D0 RID: 20944
+			// Token: 0x040051D1 RID: 20945
 			public string TitleId;
 
-			// Token: 0x040051D1 RID: 20945
+			// Token: 0x040051D2 RID: 20946
 			public string MothershipEnvId;
 
-			// Token: 0x040051D2 RID: 20946
+			// Token: 0x040051D3 RID: 20947
 			public string MothershipToken;
 
-			// Token: 0x040051D3 RID: 20947
+			// Token: 0x040051D4 RID: 20948
 			public string MothershipId;
 		}
 
@@ -798,28 +798,28 @@ namespace GorillaNetworking
 		[Serializable]
 		public class PlayfabAuthRequestData
 		{
-			// Token: 0x040051D4 RID: 20948
+			// Token: 0x040051D5 RID: 20949
 			public string AppId;
 
-			// Token: 0x040051D5 RID: 20949
+			// Token: 0x040051D6 RID: 20950
 			public string Nonce;
 
-			// Token: 0x040051D6 RID: 20950
+			// Token: 0x040051D7 RID: 20951
 			public string OculusId;
 
-			// Token: 0x040051D7 RID: 20951
+			// Token: 0x040051D8 RID: 20952
 			public string Platform;
 
-			// Token: 0x040051D8 RID: 20952
+			// Token: 0x040051D9 RID: 20953
 			public string AgeCategory;
 
-			// Token: 0x040051D9 RID: 20953
+			// Token: 0x040051DA RID: 20954
 			public string MothershipEnvId;
 
-			// Token: 0x040051DA RID: 20954
+			// Token: 0x040051DB RID: 20955
 			public string MothershipToken;
 
-			// Token: 0x040051DB RID: 20955
+			// Token: 0x040051DC RID: 20956
 			public string MothershipId;
 		}
 
@@ -827,22 +827,22 @@ namespace GorillaNetworking
 		[Serializable]
 		public class PlayfabAuthResponseData
 		{
-			// Token: 0x040051DC RID: 20956
+			// Token: 0x040051DD RID: 20957
 			public string SessionTicket;
 
-			// Token: 0x040051DD RID: 20957
+			// Token: 0x040051DE RID: 20958
 			public string EntityToken;
 
-			// Token: 0x040051DE RID: 20958
+			// Token: 0x040051DF RID: 20959
 			public string PlayFabId;
 
-			// Token: 0x040051DF RID: 20959
+			// Token: 0x040051E0 RID: 20960
 			public string EntityId;
 
-			// Token: 0x040051E0 RID: 20960
+			// Token: 0x040051E1 RID: 20961
 			public string EntityType;
 
-			// Token: 0x040051E1 RID: 20961
+			// Token: 0x040051E2 RID: 20962
 			public string AccountCreationIsoTimestamp;
 		}
 
@@ -850,23 +850,23 @@ namespace GorillaNetworking
 		[Serializable]
 		public class CachePlayFabIdResponse
 		{
-			// Token: 0x040051E2 RID: 20962
+			// Token: 0x040051E3 RID: 20963
 			public string PlayFabId;
 
-			// Token: 0x040051E3 RID: 20963
+			// Token: 0x040051E4 RID: 20964
 			public string SteamAuthIdForPhoton;
 
-			// Token: 0x040051E4 RID: 20964
+			// Token: 0x040051E5 RID: 20965
 			public string AccountCreationIsoTimestamp;
 		}
 
 		// Token: 0x02000C63 RID: 3171
 		public class BanInfo
 		{
-			// Token: 0x040051E5 RID: 20965
+			// Token: 0x040051E6 RID: 20966
 			public string BanMessage;
 
-			// Token: 0x040051E6 RID: 20966
+			// Token: 0x040051E7 RID: 20967
 			public string BanExpirationTime;
 		}
 	}

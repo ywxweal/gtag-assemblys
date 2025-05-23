@@ -17,7 +17,7 @@ namespace GorillaTagScripts
 	[NetworkBehaviourWeaved(210)]
 	public class WhackAMole : NetworkComponent
 	{
-		// Token: 0x06004295 RID: 17045 RVA: 0x001336C4 File Offset: 0x001318C4
+		// Token: 0x06004296 RID: 17046 RVA: 0x0013379C File Offset: 0x0013199C
 		private void UpdateMeshRendererList()
 		{
 			List<MeshRenderer> list = new List<MeshRenderer>();
@@ -35,7 +35,7 @@ namespace GorillaTagScripts
 			this.zoneBasedMeshRenderers = list.ToArray();
 		}
 
-		// Token: 0x06004296 RID: 17046 RVA: 0x0013372C File Offset: 0x0013192C
+		// Token: 0x06004297 RID: 17047 RVA: 0x00133804 File Offset: 0x00131A04
 		protected override void Awake()
 		{
 			base.Awake();
@@ -87,7 +87,7 @@ namespace GorillaTagScripts
 			this.victoryParticles = this.victoryFX.GetComponentsInChildren<ParticleSystem>();
 		}
 
-		// Token: 0x06004297 RID: 17047 RVA: 0x001338FC File Offset: 0x00131AFC
+		// Token: 0x06004298 RID: 17048 RVA: 0x001339D4 File Offset: 0x00131BD4
 		protected override void Start()
 		{
 			base.Start();
@@ -98,7 +98,7 @@ namespace GorillaTagScripts
 			}
 		}
 
-		// Token: 0x06004298 RID: 17048 RVA: 0x00133924 File Offset: 0x00131B24
+		// Token: 0x06004299 RID: 17049 RVA: 0x001339FC File Offset: 0x00131BFC
 		private void OnDestroy()
 		{
 			NetworkBehaviourUtils.InternalOnDestroy(this);
@@ -113,7 +113,7 @@ namespace GorillaTagScripts
 			this.molesList.Clear();
 		}
 
-		// Token: 0x06004299 RID: 17049 RVA: 0x001339A8 File Offset: 0x00131BA8
+		// Token: 0x0600429A RID: 17050 RVA: 0x00133A80 File Offset: 0x00131C80
 		public void InvokeUpdate()
 		{
 			bool isMasterClient = NetworkSystem.Instance.IsMasterClient;
@@ -211,7 +211,7 @@ namespace GorillaTagScripts
 			}
 		}
 
-		// Token: 0x0600429A RID: 17050 RVA: 0x00133C84 File Offset: 0x00131E84
+		// Token: 0x0600429B RID: 17051 RVA: 0x00133D5C File Offset: 0x00131F5C
 		private void SwitchState(WhackAMole.GameState state)
 		{
 			this.lastState = this.currentState;
@@ -302,7 +302,7 @@ namespace GorillaTagScripts
 			this.UpdateScreenData();
 		}
 
-		// Token: 0x0600429B RID: 17051 RVA: 0x0013404C File Offset: 0x0013224C
+		// Token: 0x0600429C RID: 17052 RVA: 0x00134124 File Offset: 0x00132324
 		private void UpdateScreenData()
 		{
 			switch (this.currentState)
@@ -349,7 +349,7 @@ namespace GorillaTagScripts
 			}
 		}
 
-		// Token: 0x0600429C RID: 17052 RVA: 0x00134184 File Offset: 0x00132384
+		// Token: 0x0600429D RID: 17053 RVA: 0x0013425C File Offset: 0x0013245C
 		public static int CreateNewGameID()
 		{
 			int num = (int)((DateTime.Now - WhackAMole.epoch).TotalSeconds * 8.0 % 2147483646.0) + 1;
@@ -362,7 +362,7 @@ namespace GorillaTagScripts
 			return num;
 		}
 
-		// Token: 0x0600429D RID: 17053 RVA: 0x001341E4 File Offset: 0x001323E4
+		// Token: 0x0600429E RID: 17054 RVA: 0x001342BC File Offset: 0x001324BC
 		private void OnMoleTapped(MoleTypes moleType, Vector3 position, bool isLocalTap, bool isLeftHand)
 		{
 			WhackAMole.GameState gameState = this.currentState;
@@ -398,14 +398,14 @@ namespace GorillaTagScripts
 			moleType.MoleContainerParent.HideMole(true);
 		}
 
-		// Token: 0x0600429E RID: 17054 RVA: 0x00134308 File Offset: 0x00132508
+		// Token: 0x0600429F RID: 17055 RVA: 0x001343E0 File Offset: 0x001325E0
 		public void HandleOnTimerStopped()
 		{
 			this.gameEndedTime = Time.time;
 			this.SwitchState(WhackAMole.GameState.TimesUp);
 		}
 
-		// Token: 0x0600429F RID: 17055 RVA: 0x0013431C File Offset: 0x0013251C
+		// Token: 0x060042A0 RID: 17056 RVA: 0x001343F4 File Offset: 0x001325F4
 		private IEnumerator PlayHazardAudio(AudioClip clip)
 		{
 			this.audioSource.clip = clip;
@@ -416,7 +416,7 @@ namespace GorillaTagScripts
 			yield break;
 		}
 
-		// Token: 0x060042A0 RID: 17056 RVA: 0x00134334 File Offset: 0x00132534
+		// Token: 0x060042A1 RID: 17057 RVA: 0x0013440C File Offset: 0x0013260C
 		private bool PickMoles()
 		{
 			WhackAMole.<>c__DisplayClass85_0 CS$<>8__locals1;
@@ -444,7 +444,7 @@ namespace GorillaTagScripts
 			return this.pickedMolesIndex.Count != 0;
 		}
 
-		// Token: 0x060042A1 RID: 17057 RVA: 0x00134460 File Offset: 0x00132660
+		// Token: 0x060042A2 RID: 17058 RVA: 0x00134538 File Offset: 0x00132738
 		private void LoadNextLevel()
 		{
 			if (this.currentLevel != null)
@@ -487,7 +487,7 @@ namespace GorillaTagScripts
 			}
 		}
 
-		// Token: 0x060042A2 RID: 17058 RVA: 0x00134590 File Offset: 0x00132790
+		// Token: 0x060042A3 RID: 17059 RVA: 0x00134668 File Offset: 0x00132868
 		private bool PickSingleMole(int randomMoleIndex, float hazardMoleChance)
 		{
 			bool flag = hazardMoleChance > 0f && Random.value <= hazardMoleChance;
@@ -505,7 +505,7 @@ namespace GorillaTagScripts
 			return flag;
 		}
 
-		// Token: 0x060042A3 RID: 17059 RVA: 0x00134614 File Offset: 0x00132814
+		// Token: 0x060042A4 RID: 17060 RVA: 0x001346EC File Offset: 0x001328EC
 		private void ResetGame()
 		{
 			foreach (Mole mole in this.molesList)
@@ -514,7 +514,7 @@ namespace GorillaTagScripts
 			}
 		}
 
-		// Token: 0x060042A4 RID: 17060 RVA: 0x00134664 File Offset: 0x00132864
+		// Token: 0x060042A5 RID: 17061 RVA: 0x0013473C File Offset: 0x0013293C
 		private void UpdateScoreUI(int totalScore, int _leftPlayerScore, int _rightPlayerScore)
 		{
 			if (this.currentLevel != null)
@@ -525,14 +525,14 @@ namespace GorillaTagScripts
 			}
 		}
 
-		// Token: 0x060042A5 RID: 17061 RVA: 0x001346D4 File Offset: 0x001328D4
+		// Token: 0x060042A6 RID: 17062 RVA: 0x001347AC File Offset: 0x001329AC
 		private void UpdateLevelUI(int levelNumber)
 		{
 			this.arrowTargetRotation = Quaternion.Euler(0f, 0f, (float)(18 * (levelNumber - 1)));
 			this.arrowRotationNeedsUpdate = true;
 		}
 
-		// Token: 0x060042A6 RID: 17062 RVA: 0x001346FC File Offset: 0x001328FC
+		// Token: 0x060042A7 RID: 17063 RVA: 0x001347D4 File Offset: 0x001329D4
 		private void UpdateArrowRotation()
 		{
 			Quaternion quaternion = Quaternion.Slerp(this.levelArrow.transform.localRotation, this.arrowTargetRotation, Time.deltaTime * 5f);
@@ -544,7 +544,7 @@ namespace GorillaTagScripts
 			this.levelArrow.transform.localRotation = quaternion;
 		}
 
-		// Token: 0x060042A7 RID: 17063 RVA: 0x00134762 File Offset: 0x00132962
+		// Token: 0x060042A8 RID: 17064 RVA: 0x0013483A File Offset: 0x00132A3A
 		private void UpdateTimerUI(int time)
 		{
 			if (time == this.previousTime)
@@ -555,7 +555,7 @@ namespace GorillaTagScripts
 			this.previousTime = time;
 		}
 
-		// Token: 0x060042A8 RID: 17064 RVA: 0x00134791 File Offset: 0x00132991
+		// Token: 0x060042A9 RID: 17065 RVA: 0x00134869 File Offset: 0x00132A69
 		private void UpdateResultUI(WhackAMole.GameResult gameResult)
 		{
 			if (gameResult == WhackAMole.GameResult.LevelComplete)
@@ -574,7 +574,7 @@ namespace GorillaTagScripts
 			}
 		}
 
-		// Token: 0x060042A9 RID: 17065 RVA: 0x001347D0 File Offset: 0x001329D0
+		// Token: 0x060042AA RID: 17066 RVA: 0x001348A8 File Offset: 0x00132AA8
 		public void OnStartButtonPressed()
 		{
 			WhackAMole.GameState gameState = this.currentState;
@@ -584,14 +584,14 @@ namespace GorillaTagScripts
 			}
 		}
 
-		// Token: 0x060042AA RID: 17066 RVA: 0x00134801 File Offset: 0x00132A01
+		// Token: 0x060042AB RID: 17067 RVA: 0x001348D9 File Offset: 0x00132AD9
 		[PunRPC]
 		private void WhackAMoleButtonPressed(PhotonMessageInfo info)
 		{
 			this.WhackAMoleButtonPressedShared(info);
 		}
 
-		// Token: 0x060042AB RID: 17067 RVA: 0x00134810 File Offset: 0x00132A10
+		// Token: 0x060042AC RID: 17068 RVA: 0x001348E8 File Offset: 0x00132AE8
 		[Rpc]
 		private unsafe void RPC_WhackAMoleButtonPressed(RpcInfo info = default(RpcInfo))
 		{
@@ -630,7 +630,7 @@ namespace GorillaTagScripts
 			this.WhackAMoleButtonPressedShared(info);
 		}
 
-		// Token: 0x060042AC RID: 17068 RVA: 0x00134930 File Offset: 0x00132B30
+		// Token: 0x060042AD RID: 17069 RVA: 0x00134A08 File Offset: 0x00132C08
 		private void WhackAMoleButtonPressedShared(PhotonMessageInfoWrapped info)
 		{
 			GorillaNot.IncrementRPCCall(info, "WhackAMoleButtonPressedShared");
@@ -650,7 +650,7 @@ namespace GorillaTagScripts
 			this.SwitchState(WhackAMole.GameState.ContinuePressed);
 		}
 
-		// Token: 0x060042AD RID: 17069 RVA: 0x001349B0 File Offset: 0x00132BB0
+		// Token: 0x060042AE RID: 17070 RVA: 0x00134A88 File Offset: 0x00132C88
 		private WhackAMole.GameResult GetGameResult()
 		{
 			if (this.currentScore < this.currentLevel.GetMinScore(this.isMultiplayer))
@@ -664,7 +664,7 @@ namespace GorillaTagScripts
 			return WhackAMole.GameResult.LevelComplete;
 		}
 
-		// Token: 0x060042AE RID: 17070 RVA: 0x001349E2 File Offset: 0x00132BE2
+		// Token: 0x060042AF RID: 17071 RVA: 0x00134ABA File Offset: 0x00132CBA
 		public int GetCurrentLevel()
 		{
 			if (this.currentLevel != null)
@@ -674,7 +674,7 @@ namespace GorillaTagScripts
 			return 0;
 		}
 
-		// Token: 0x060042AF RID: 17071 RVA: 0x001349FF File Offset: 0x00132BFF
+		// Token: 0x060042B0 RID: 17072 RVA: 0x00134AD7 File Offset: 0x00132CD7
 		public int GetTotalLevelNumbers()
 		{
 			if (this.allLevels != null)
@@ -685,8 +685,8 @@ namespace GorillaTagScripts
 		}
 
 		// Token: 0x170006A3 RID: 1699
-		// (get) Token: 0x060042B0 RID: 17072 RVA: 0x00134A13 File Offset: 0x00132C13
-		// (set) Token: 0x060042B1 RID: 17073 RVA: 0x00134A3D File Offset: 0x00132C3D
+		// (get) Token: 0x060042B1 RID: 17073 RVA: 0x00134AEB File Offset: 0x00132CEB
+		// (set) Token: 0x060042B2 RID: 17074 RVA: 0x00134B15 File Offset: 0x00132D15
 		[Networked]
 		[NetworkedWeaved(0, 210)]
 		public unsafe WhackAMole.WhackAMoleData Data
@@ -709,14 +709,14 @@ namespace GorillaTagScripts
 			}
 		}
 
-		// Token: 0x060042B2 RID: 17074 RVA: 0x00134A68 File Offset: 0x00132C68
+		// Token: 0x060042B3 RID: 17075 RVA: 0x00134B40 File Offset: 0x00132D40
 		public override void WriteDataFusion()
 		{
 			this.Data = new WhackAMole.WhackAMoleData(this.currentState, this.currentLevelIndex, this.currentScore, this.totalScore, this.bestScore, this.rightPlayerScore, this.highScorePlayerName, this.timer.GetRemainingTime(), this.gameEndedTime, this.gameId, this.pickedMolesIndex);
 			this.pickedMolesIndex.Clear();
 		}
 
-		// Token: 0x060042B3 RID: 17075 RVA: 0x00134AD4 File Offset: 0x00132CD4
+		// Token: 0x060042B4 RID: 17076 RVA: 0x00134BAC File Offset: 0x00132DAC
 		public override void ReadDataFusion()
 		{
 			this.ReadDataShared(this.Data.CurrentState, this.Data.CurrentLevelIndex, this.Data.CurrentScore, this.Data.TotalScore, this.Data.BestScore, this.Data.RightPlayerScore, this.Data.HighScorePlayerName.Value, this.Data.RemainingTime, this.Data.GameEndedTime, this.Data.GameId);
@@ -730,7 +730,7 @@ namespace GorillaTagScripts
 			}
 		}
 
-		// Token: 0x060042B4 RID: 17076 RVA: 0x00134BEC File Offset: 0x00132DEC
+		// Token: 0x060042B5 RID: 17077 RVA: 0x00134CC4 File Offset: 0x00132EC4
 		protected override void WriteDataPUN(PhotonStream stream, PhotonMessageInfo info)
 		{
 			if (info.Sender != PhotonNetwork.MasterClient)
@@ -756,7 +756,7 @@ namespace GorillaTagScripts
 			this.pickedMolesIndex.Clear();
 		}
 
-		// Token: 0x060042B5 RID: 17077 RVA: 0x00134D38 File Offset: 0x00132F38
+		// Token: 0x060042B6 RID: 17078 RVA: 0x00134E10 File Offset: 0x00133010
 		protected override void ReadDataPUN(PhotonStream stream, PhotonMessageInfo info)
 		{
 			if (info.Sender != PhotonNetwork.MasterClient)
@@ -786,7 +786,7 @@ namespace GorillaTagScripts
 			}
 		}
 
-		// Token: 0x060042B6 RID: 17078 RVA: 0x00134E60 File Offset: 0x00133060
+		// Token: 0x060042B7 RID: 17079 RVA: 0x00134F38 File Offset: 0x00133138
 		private void ReadDataShared(WhackAMole.GameState _currentState, int _currentLevelIndex, int cScore, int tScore, int bScore, int rPScore, string hScorePName, float _remainingTime, float endedTime, int _gameId)
 		{
 			WhackAMole.GameState gameState = this.currentState;
@@ -820,7 +820,7 @@ namespace GorillaTagScripts
 			this.gameId = _gameId;
 		}
 
-		// Token: 0x060042B7 RID: 17079 RVA: 0x00134FB4 File Offset: 0x001331B4
+		// Token: 0x060042B8 RID: 17080 RVA: 0x0013508C File Offset: 0x0013328C
 		protected override void OnOwnerSwitched(NetPlayer newOwningPlayer)
 		{
 			base.OnOwnerSwitched(newOwningPlayer);
@@ -837,7 +837,7 @@ namespace GorillaTagScripts
 			}
 		}
 
-		// Token: 0x060042BA RID: 17082 RVA: 0x001350B8 File Offset: 0x001332B8
+		// Token: 0x060042BB RID: 17083 RVA: 0x00135190 File Offset: 0x00133390
 		[CompilerGenerated]
 		private void <PickMoles>g__PickMolesFrom|85_0(List<Mole> moles, ref WhackAMole.<>c__DisplayClass85_0 A_2)
 		{
@@ -864,7 +864,7 @@ namespace GorillaTagScripts
 			}
 		}
 
-		// Token: 0x060042BB RID: 17083 RVA: 0x001351C4 File Offset: 0x001333C4
+		// Token: 0x060042BC RID: 17084 RVA: 0x0013529C File Offset: 0x0013349C
 		[WeaverGenerated]
 		public override void CopyBackingFieldsToState(bool A_1)
 		{
@@ -872,7 +872,7 @@ namespace GorillaTagScripts
 			this.Data = this._Data;
 		}
 
-		// Token: 0x060042BC RID: 17084 RVA: 0x001351DC File Offset: 0x001333DC
+		// Token: 0x060042BD RID: 17085 RVA: 0x001352B4 File Offset: 0x001334B4
 		[WeaverGenerated]
 		public override void CopyStateToBackingFields()
 		{
@@ -880,7 +880,7 @@ namespace GorillaTagScripts
 			this._Data = this.Data;
 		}
 
-		// Token: 0x060042BD RID: 17085 RVA: 0x001351F0 File Offset: 0x001333F0
+		// Token: 0x060042BE RID: 17086 RVA: 0x001352C8 File Offset: 0x001334C8
 		[NetworkRpcWeavedInvoker(1, 7, 7)]
 		[Preserve]
 		[WeaverGenerated]
@@ -893,232 +893,232 @@ namespace GorillaTagScripts
 			((WhackAMole)behaviour).RPC_WhackAMoleButtonPressed(rpcInfo);
 		}
 
-		// Token: 0x040044FE RID: 17662
+		// Token: 0x040044FF RID: 17663
 		public string machineId = "default";
 
-		// Token: 0x040044FF RID: 17663
+		// Token: 0x04004500 RID: 17664
 		public GameObject molesContainerRight;
 
-		// Token: 0x04004500 RID: 17664
+		// Token: 0x04004501 RID: 17665
 		[Tooltip("Only for co-op version")]
 		public GameObject molesContainerLeft;
 
-		// Token: 0x04004501 RID: 17665
+		// Token: 0x04004502 RID: 17666
 		public int betweenLevelPauseDuration = 3;
 
-		// Token: 0x04004502 RID: 17666
+		// Token: 0x04004503 RID: 17667
 		public int countdownDuration = 5;
 
-		// Token: 0x04004503 RID: 17667
-		public WhackAMoleLevelSO[] allLevels;
-
 		// Token: 0x04004504 RID: 17668
-		[SerializeField]
-		private GorillaTimer timer;
+		public WhackAMoleLevelSO[] allLevels;
 
 		// Token: 0x04004505 RID: 17669
 		[SerializeField]
-		private AudioSource audioSource;
+		private GorillaTimer timer;
 
 		// Token: 0x04004506 RID: 17670
-		public GameObject levelArrow;
+		[SerializeField]
+		private AudioSource audioSource;
 
 		// Token: 0x04004507 RID: 17671
-		public GameObject victoryFX;
+		public GameObject levelArrow;
 
 		// Token: 0x04004508 RID: 17672
-		public ZoneBasedObject[] zoneBasedVisuals;
+		public GameObject victoryFX;
 
 		// Token: 0x04004509 RID: 17673
+		public ZoneBasedObject[] zoneBasedVisuals;
+
+		// Token: 0x0400450A RID: 17674
 		[SerializeField]
 		private MeshRenderer[] zoneBasedMeshRenderers;
 
-		// Token: 0x0400450A RID: 17674
+		// Token: 0x0400450B RID: 17675
 		[Space]
 		public AudioClip backgroundLoop;
 
-		// Token: 0x0400450B RID: 17675
+		// Token: 0x0400450C RID: 17676
 		public AudioClip errorClip;
 
-		// Token: 0x0400450C RID: 17676
+		// Token: 0x0400450D RID: 17677
 		public AudioClip counterClip;
 
-		// Token: 0x0400450D RID: 17677
+		// Token: 0x0400450E RID: 17678
 		public AudioClip levelCompleteClip;
 
-		// Token: 0x0400450E RID: 17678
+		// Token: 0x0400450F RID: 17679
 		public AudioClip winClip;
 
-		// Token: 0x0400450F RID: 17679
+		// Token: 0x04004510 RID: 17680
 		public AudioClip gameOverClip;
 
-		// Token: 0x04004510 RID: 17680
+		// Token: 0x04004511 RID: 17681
 		public AudioClip[] whackHazardClips;
 
-		// Token: 0x04004511 RID: 17681
+		// Token: 0x04004512 RID: 17682
 		public AudioClip[] whackMonkeClips;
 
-		// Token: 0x04004512 RID: 17682
+		// Token: 0x04004513 RID: 17683
 		[Space]
 		public GameObject welcomeUI;
 
-		// Token: 0x04004513 RID: 17683
+		// Token: 0x04004514 RID: 17684
 		public GameObject ongoingGameUI;
 
-		// Token: 0x04004514 RID: 17684
+		// Token: 0x04004515 RID: 17685
 		public GameObject levelEndedUI;
 
-		// Token: 0x04004515 RID: 17685
+		// Token: 0x04004516 RID: 17686
 		public GameObject ContinuePressedUI;
 
-		// Token: 0x04004516 RID: 17686
+		// Token: 0x04004517 RID: 17687
 		public GameObject multiplyareScoresUI;
 
-		// Token: 0x04004517 RID: 17687
+		// Token: 0x04004518 RID: 17688
 		[Space]
 		public TextMeshPro scoreText;
 
-		// Token: 0x04004518 RID: 17688
-		public TextMeshPro bestScoreText;
-
 		// Token: 0x04004519 RID: 17689
-		[Tooltip("Only for co-op version")]
-		public TextMeshPro rightPlayerScoreText;
+		public TextMeshPro bestScoreText;
 
 		// Token: 0x0400451A RID: 17690
 		[Tooltip("Only for co-op version")]
-		public TextMeshPro leftPlayerScoreText;
+		public TextMeshPro rightPlayerScoreText;
 
 		// Token: 0x0400451B RID: 17691
-		public TextMeshPro timeText;
+		[Tooltip("Only for co-op version")]
+		public TextMeshPro leftPlayerScoreText;
 
 		// Token: 0x0400451C RID: 17692
-		public TextMeshPro counterText;
+		public TextMeshPro timeText;
 
 		// Token: 0x0400451D RID: 17693
-		public TextMeshPro resultText;
+		public TextMeshPro counterText;
 
 		// Token: 0x0400451E RID: 17694
-		public TextMeshPro levelEndedOptionsText;
+		public TextMeshPro resultText;
 
 		// Token: 0x0400451F RID: 17695
-		public TextMeshPro levelEndedCountdownText;
+		public TextMeshPro levelEndedOptionsText;
 
 		// Token: 0x04004520 RID: 17696
-		public TextMeshPro levelEndedTotalScoreText;
+		public TextMeshPro levelEndedCountdownText;
 
 		// Token: 0x04004521 RID: 17697
-		public TextMeshPro levelEndedCurrentScoreText;
+		public TextMeshPro levelEndedTotalScoreText;
 
 		// Token: 0x04004522 RID: 17698
-		private List<Mole> rightMolesList;
+		public TextMeshPro levelEndedCurrentScoreText;
 
 		// Token: 0x04004523 RID: 17699
-		private List<Mole> leftMolesList;
+		private List<Mole> rightMolesList;
 
 		// Token: 0x04004524 RID: 17700
-		private List<Mole> molesList = new List<Mole>();
+		private List<Mole> leftMolesList;
 
 		// Token: 0x04004525 RID: 17701
-		private WhackAMoleLevelSO currentLevel;
+		private List<Mole> molesList = new List<Mole>();
 
 		// Token: 0x04004526 RID: 17702
-		private int currentScore;
+		private WhackAMoleLevelSO currentLevel;
 
 		// Token: 0x04004527 RID: 17703
-		private int totalScore;
+		private int currentScore;
 
 		// Token: 0x04004528 RID: 17704
-		private int leftPlayerScore;
+		private int totalScore;
 
 		// Token: 0x04004529 RID: 17705
-		private int rightPlayerScore;
+		private int leftPlayerScore;
 
 		// Token: 0x0400452A RID: 17706
-		private int bestScore;
+		private int rightPlayerScore;
 
 		// Token: 0x0400452B RID: 17707
-		private float curentTime;
+		private int bestScore;
 
 		// Token: 0x0400452C RID: 17708
-		private int currentLevelIndex;
+		private float curentTime;
 
 		// Token: 0x0400452D RID: 17709
-		private float continuePressedTime;
+		private int currentLevelIndex;
 
 		// Token: 0x0400452E RID: 17710
-		private bool resetToFirstLevel;
+		private float continuePressedTime;
 
 		// Token: 0x0400452F RID: 17711
-		private Quaternion arrowTargetRotation;
+		private bool resetToFirstLevel;
 
 		// Token: 0x04004530 RID: 17712
-		private bool arrowRotationNeedsUpdate;
+		private Quaternion arrowTargetRotation;
 
 		// Token: 0x04004531 RID: 17713
-		private List<Mole> potentialMoles = new List<Mole>();
+		private bool arrowRotationNeedsUpdate;
 
 		// Token: 0x04004532 RID: 17714
-		private Dictionary<int, int> pickedMolesIndex = new Dictionary<int, int>();
+		private List<Mole> potentialMoles = new List<Mole>();
 
 		// Token: 0x04004533 RID: 17715
-		private WhackAMole.GameState currentState;
+		private Dictionary<int, int> pickedMolesIndex = new Dictionary<int, int>();
 
 		// Token: 0x04004534 RID: 17716
-		private WhackAMole.GameState lastState;
+		private WhackAMole.GameState currentState;
 
 		// Token: 0x04004535 RID: 17717
-		private float remainingTime;
+		private WhackAMole.GameState lastState;
 
 		// Token: 0x04004536 RID: 17718
-		private int previousTime = -1;
+		private float remainingTime;
 
 		// Token: 0x04004537 RID: 17719
-		private bool isMultiplayer;
+		private int previousTime = -1;
 
 		// Token: 0x04004538 RID: 17720
-		private float gameEndedTime;
+		private bool isMultiplayer;
 
 		// Token: 0x04004539 RID: 17721
-		private WhackAMole.GameResult curentGameResult;
+		private float gameEndedTime;
 
 		// Token: 0x0400453A RID: 17722
-		private string playerName = string.Empty;
+		private WhackAMole.GameResult curentGameResult;
 
 		// Token: 0x0400453B RID: 17723
-		private string highScorePlayerName = string.Empty;
+		private string playerName = string.Empty;
 
 		// Token: 0x0400453C RID: 17724
-		private ParticleSystem[] victoryParticles;
+		private string highScorePlayerName = string.Empty;
 
 		// Token: 0x0400453D RID: 17725
-		private int levelHazardMolesPicked;
+		private ParticleSystem[] victoryParticles;
 
 		// Token: 0x0400453E RID: 17726
-		private int levelGoodMolesPicked;
+		private int levelHazardMolesPicked;
 
 		// Token: 0x0400453F RID: 17727
-		private string playerId;
+		private int levelGoodMolesPicked;
 
 		// Token: 0x04004540 RID: 17728
-		private int gameId;
+		private string playerId;
 
 		// Token: 0x04004541 RID: 17729
-		private int levelHazardMolesHit;
+		private int gameId;
 
 		// Token: 0x04004542 RID: 17730
-		private static DateTime epoch = new DateTime(2024, 1, 1);
+		private int levelHazardMolesHit;
 
 		// Token: 0x04004543 RID: 17731
-		private static int lastAssignedID;
+		private static DateTime epoch = new DateTime(2024, 1, 1);
 
 		// Token: 0x04004544 RID: 17732
-		private bool wasMasterClient;
+		private static int lastAssignedID;
 
 		// Token: 0x04004545 RID: 17733
-		private bool wasLocalPlayerInZone = true;
+		private bool wasMasterClient;
 
 		// Token: 0x04004546 RID: 17734
+		private bool wasLocalPlayerInZone = true;
+
+		// Token: 0x04004547 RID: 17735
 		[WeaverGenerated]
 		[SerializeField]
 		[DefaultForProperty("Data", 0, 210)]
@@ -1128,30 +1128,30 @@ namespace GorillaTagScripts
 		// Token: 0x02000AC8 RID: 2760
 		public enum GameState
 		{
-			// Token: 0x04004548 RID: 17736
-			Off,
 			// Token: 0x04004549 RID: 17737
-			ContinuePressed,
+			Off,
 			// Token: 0x0400454A RID: 17738
-			Ongoing,
+			ContinuePressed,
 			// Token: 0x0400454B RID: 17739
-			PickMoles,
+			Ongoing,
 			// Token: 0x0400454C RID: 17740
-			TimesUp,
+			PickMoles,
 			// Token: 0x0400454D RID: 17741
+			TimesUp,
+			// Token: 0x0400454E RID: 17742
 			LevelStarted
 		}
 
 		// Token: 0x02000AC9 RID: 2761
 		private enum GameResult
 		{
-			// Token: 0x0400454F RID: 17743
-			GameOver,
 			// Token: 0x04004550 RID: 17744
-			Win,
+			GameOver,
 			// Token: 0x04004551 RID: 17745
-			LevelComplete,
+			Win,
 			// Token: 0x04004552 RID: 17746
+			LevelComplete,
+			// Token: 0x04004553 RID: 17747
 			Unknown
 		}
 
@@ -1161,38 +1161,38 @@ namespace GorillaTagScripts
 		public struct WhackAMoleData : INetworkStruct
 		{
 			// Token: 0x170006A4 RID: 1700
-			// (get) Token: 0x060042BE RID: 17086 RVA: 0x00135243 File Offset: 0x00133443
-			// (set) Token: 0x060042BF RID: 17087 RVA: 0x0013524B File Offset: 0x0013344B
+			// (get) Token: 0x060042BF RID: 17087 RVA: 0x0013531B File Offset: 0x0013351B
+			// (set) Token: 0x060042C0 RID: 17088 RVA: 0x00135323 File Offset: 0x00133523
 			public WhackAMole.GameState CurrentState { readonly get; set; }
 
 			// Token: 0x170006A5 RID: 1701
-			// (get) Token: 0x060042C0 RID: 17088 RVA: 0x00135254 File Offset: 0x00133454
-			// (set) Token: 0x060042C1 RID: 17089 RVA: 0x0013525C File Offset: 0x0013345C
+			// (get) Token: 0x060042C1 RID: 17089 RVA: 0x0013532C File Offset: 0x0013352C
+			// (set) Token: 0x060042C2 RID: 17090 RVA: 0x00135334 File Offset: 0x00133534
 			public int CurrentLevelIndex { readonly get; set; }
 
 			// Token: 0x170006A6 RID: 1702
-			// (get) Token: 0x060042C2 RID: 17090 RVA: 0x00135265 File Offset: 0x00133465
-			// (set) Token: 0x060042C3 RID: 17091 RVA: 0x0013526D File Offset: 0x0013346D
+			// (get) Token: 0x060042C3 RID: 17091 RVA: 0x0013533D File Offset: 0x0013353D
+			// (set) Token: 0x060042C4 RID: 17092 RVA: 0x00135345 File Offset: 0x00133545
 			public int CurrentScore { readonly get; set; }
 
 			// Token: 0x170006A7 RID: 1703
-			// (get) Token: 0x060042C4 RID: 17092 RVA: 0x00135276 File Offset: 0x00133476
-			// (set) Token: 0x060042C5 RID: 17093 RVA: 0x0013527E File Offset: 0x0013347E
+			// (get) Token: 0x060042C5 RID: 17093 RVA: 0x0013534E File Offset: 0x0013354E
+			// (set) Token: 0x060042C6 RID: 17094 RVA: 0x00135356 File Offset: 0x00133556
 			public int TotalScore { readonly get; set; }
 
 			// Token: 0x170006A8 RID: 1704
-			// (get) Token: 0x060042C6 RID: 17094 RVA: 0x00135287 File Offset: 0x00133487
-			// (set) Token: 0x060042C7 RID: 17095 RVA: 0x0013528F File Offset: 0x0013348F
+			// (get) Token: 0x060042C7 RID: 17095 RVA: 0x0013535F File Offset: 0x0013355F
+			// (set) Token: 0x060042C8 RID: 17096 RVA: 0x00135367 File Offset: 0x00133567
 			public int BestScore { readonly get; set; }
 
 			// Token: 0x170006A9 RID: 1705
-			// (get) Token: 0x060042C8 RID: 17096 RVA: 0x00135298 File Offset: 0x00133498
-			// (set) Token: 0x060042C9 RID: 17097 RVA: 0x001352A0 File Offset: 0x001334A0
+			// (get) Token: 0x060042C9 RID: 17097 RVA: 0x00135370 File Offset: 0x00133570
+			// (set) Token: 0x060042CA RID: 17098 RVA: 0x00135378 File Offset: 0x00133578
 			public int RightPlayerScore { readonly get; set; }
 
 			// Token: 0x170006AA RID: 1706
-			// (get) Token: 0x060042CA RID: 17098 RVA: 0x001352A9 File Offset: 0x001334A9
-			// (set) Token: 0x060042CB RID: 17099 RVA: 0x001352BB File Offset: 0x001334BB
+			// (get) Token: 0x060042CB RID: 17099 RVA: 0x00135381 File Offset: 0x00133581
+			// (set) Token: 0x060042CC RID: 17100 RVA: 0x00135393 File Offset: 0x00133593
 			[Networked]
 			public unsafe NetworkString<_128> HighScorePlayerName
 			{
@@ -1207,27 +1207,27 @@ namespace GorillaTagScripts
 			}
 
 			// Token: 0x170006AB RID: 1707
-			// (get) Token: 0x060042CC RID: 17100 RVA: 0x001352CE File Offset: 0x001334CE
-			// (set) Token: 0x060042CD RID: 17101 RVA: 0x001352D6 File Offset: 0x001334D6
+			// (get) Token: 0x060042CD RID: 17101 RVA: 0x001353A6 File Offset: 0x001335A6
+			// (set) Token: 0x060042CE RID: 17102 RVA: 0x001353AE File Offset: 0x001335AE
 			public float RemainingTime { readonly get; set; }
 
 			// Token: 0x170006AC RID: 1708
-			// (get) Token: 0x060042CE RID: 17102 RVA: 0x001352DF File Offset: 0x001334DF
-			// (set) Token: 0x060042CF RID: 17103 RVA: 0x001352E7 File Offset: 0x001334E7
+			// (get) Token: 0x060042CF RID: 17103 RVA: 0x001353B7 File Offset: 0x001335B7
+			// (set) Token: 0x060042D0 RID: 17104 RVA: 0x001353BF File Offset: 0x001335BF
 			public float GameEndedTime { readonly get; set; }
 
 			// Token: 0x170006AD RID: 1709
-			// (get) Token: 0x060042D0 RID: 17104 RVA: 0x001352F0 File Offset: 0x001334F0
-			// (set) Token: 0x060042D1 RID: 17105 RVA: 0x001352F8 File Offset: 0x001334F8
+			// (get) Token: 0x060042D1 RID: 17105 RVA: 0x001353C8 File Offset: 0x001335C8
+			// (set) Token: 0x060042D2 RID: 17106 RVA: 0x001353D0 File Offset: 0x001335D0
 			public int GameId { readonly get; set; }
 
 			// Token: 0x170006AE RID: 1710
-			// (get) Token: 0x060042D2 RID: 17106 RVA: 0x00135301 File Offset: 0x00133501
-			// (set) Token: 0x060042D3 RID: 17107 RVA: 0x00135309 File Offset: 0x00133509
+			// (get) Token: 0x060042D3 RID: 17107 RVA: 0x001353D9 File Offset: 0x001335D9
+			// (set) Token: 0x060042D4 RID: 17108 RVA: 0x001353E1 File Offset: 0x001335E1
 			public int PickedMolesIndexCount { readonly get; set; }
 
 			// Token: 0x170006AF RID: 1711
-			// (get) Token: 0x060042D4 RID: 17108 RVA: 0x00135314 File Offset: 0x00133514
+			// (get) Token: 0x060042D5 RID: 17109 RVA: 0x001353EC File Offset: 0x001335EC
 			[Networked]
 			[Capacity(10)]
 			public unsafe NetworkDictionary<int, int> PickedMolesIndex
@@ -1238,7 +1238,7 @@ namespace GorillaTagScripts
 				}
 			}
 
-			// Token: 0x060042D5 RID: 17109 RVA: 0x00135340 File Offset: 0x00133540
+			// Token: 0x060042D6 RID: 17110 RVA: 0x00135418 File Offset: 0x00133618
 			public WhackAMoleData(WhackAMole.GameState state, int currentLevelIndex, int cScore, int tScore, int bScore, int rPScore, string hScorePName, float remainingTime, float endedTime, int gameId, Dictionary<int, int> moleIndexs)
 			{
 				this.CurrentState = state;
@@ -1258,14 +1258,14 @@ namespace GorillaTagScripts
 				}
 			}
 
-			// Token: 0x04004559 RID: 17753
+			// Token: 0x0400455A RID: 17754
 			[FixedBufferProperty(typeof(NetworkString<_128>), typeof(UnityValueSurrogate@ReaderWriter@Fusion_NetworkString), 0, order = -2147483647)]
 			[WeaverGenerated]
 			[SerializeField]
 			[FieldOffset(24)]
 			private FixedStorage@129 _HighScorePlayerName;
 
-			// Token: 0x0400455E RID: 17758
+			// Token: 0x0400455F RID: 17759
 			[FixedBufferProperty(typeof(NetworkDictionary<int, int>), typeof(UnityDictionarySurrogate@ReaderWriter@System_Int32@ReaderWriter@System_Int32), 17, order = -2147483647)]
 			[WeaverGenerated]
 			[SerializeField]

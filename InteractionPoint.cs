@@ -9,17 +9,17 @@ using UnityEngine.Serialization;
 public class InteractionPoint : MonoBehaviour, ISpawnable, IBuildValidation
 {
 	// Token: 0x17000262 RID: 610
-	// (get) Token: 0x060015A1 RID: 5537 RVA: 0x00069A36 File Offset: 0x00067C36
-	// (set) Token: 0x060015A2 RID: 5538 RVA: 0x00069A3E File Offset: 0x00067C3E
+	// (get) Token: 0x060015A1 RID: 5537 RVA: 0x00069A56 File Offset: 0x00067C56
+	// (set) Token: 0x060015A2 RID: 5538 RVA: 0x00069A5E File Offset: 0x00067C5E
 	public bool ignoreLeftHand { get; private set; }
 
 	// Token: 0x17000263 RID: 611
-	// (get) Token: 0x060015A3 RID: 5539 RVA: 0x00069A47 File Offset: 0x00067C47
-	// (set) Token: 0x060015A4 RID: 5540 RVA: 0x00069A4F File Offset: 0x00067C4F
+	// (get) Token: 0x060015A3 RID: 5539 RVA: 0x00069A67 File Offset: 0x00067C67
+	// (set) Token: 0x060015A4 RID: 5540 RVA: 0x00069A6F File Offset: 0x00067C6F
 	public bool ignoreRightHand { get; private set; }
 
 	// Token: 0x17000264 RID: 612
-	// (get) Token: 0x060015A5 RID: 5541 RVA: 0x00069A58 File Offset: 0x00067C58
+	// (get) Token: 0x060015A5 RID: 5541 RVA: 0x00069A78 File Offset: 0x00067C78
 	public IHoldableObject Holdable
 	{
 		get
@@ -29,16 +29,16 @@ public class InteractionPoint : MonoBehaviour, ISpawnable, IBuildValidation
 	}
 
 	// Token: 0x17000265 RID: 613
-	// (get) Token: 0x060015A6 RID: 5542 RVA: 0x00069A60 File Offset: 0x00067C60
-	// (set) Token: 0x060015A7 RID: 5543 RVA: 0x00069A68 File Offset: 0x00067C68
+	// (get) Token: 0x060015A6 RID: 5542 RVA: 0x00069A80 File Offset: 0x00067C80
+	// (set) Token: 0x060015A7 RID: 5543 RVA: 0x00069A88 File Offset: 0x00067C88
 	public bool IsSpawned { get; set; }
 
 	// Token: 0x17000266 RID: 614
-	// (get) Token: 0x060015A8 RID: 5544 RVA: 0x00069A71 File Offset: 0x00067C71
-	// (set) Token: 0x060015A9 RID: 5545 RVA: 0x00069A79 File Offset: 0x00067C79
+	// (get) Token: 0x060015A8 RID: 5544 RVA: 0x00069A91 File Offset: 0x00067C91
+	// (set) Token: 0x060015A9 RID: 5545 RVA: 0x00069A99 File Offset: 0x00067C99
 	public ECosmeticSelectSide CosmeticSelectedSide { get; set; }
 
-	// Token: 0x060015AA RID: 5546 RVA: 0x00069A84 File Offset: 0x00067C84
+	// Token: 0x060015AA RID: 5546 RVA: 0x00069AA4 File Offset: 0x00067CA4
 	public void OnSpawn(VRRig rig)
 	{
 		this.interactor = EquipmentInteractor.instance;
@@ -71,7 +71,7 @@ public class InteractionPoint : MonoBehaviour, ISpawnable, IBuildValidation
 	{
 	}
 
-	// Token: 0x060015AC RID: 5548 RVA: 0x00069B62 File Offset: 0x00067D62
+	// Token: 0x060015AC RID: 5548 RVA: 0x00069B82 File Offset: 0x00067D82
 	private void Awake()
 	{
 		if (this.isNonSpawnedObject)
@@ -80,14 +80,14 @@ public class InteractionPoint : MonoBehaviour, ISpawnable, IBuildValidation
 		}
 	}
 
-	// Token: 0x060015AD RID: 5549 RVA: 0x00069B73 File Offset: 0x00067D73
+	// Token: 0x060015AD RID: 5549 RVA: 0x00069B93 File Offset: 0x00067D93
 	private void OnEnable()
 	{
 		this.wasInLeft = false;
 		this.wasInRight = false;
 	}
 
-	// Token: 0x060015AE RID: 5550 RVA: 0x00069B83 File Offset: 0x00067D83
+	// Token: 0x060015AE RID: 5550 RVA: 0x00069BA3 File Offset: 0x00067DA3
 	public void OnDisable()
 	{
 		if (!this.forLocalPlayer || this.interactor == null)
@@ -97,7 +97,7 @@ public class InteractionPoint : MonoBehaviour, ISpawnable, IBuildValidation
 		this.interactor.InteractionPointDisabled(this);
 	}
 
-	// Token: 0x060015AF RID: 5551 RVA: 0x00069BA8 File Offset: 0x00067DA8
+	// Token: 0x060015AF RID: 5551 RVA: 0x00069BC8 File Offset: 0x00067DC8
 	protected void LateUpdate()
 	{
 		if (!this.forLocalPlayer)
@@ -143,7 +143,7 @@ public class InteractionPoint : MonoBehaviour, ISpawnable, IBuildValidation
 		}
 	}
 
-	// Token: 0x060015B0 RID: 5552 RVA: 0x00069D38 File Offset: 0x00067F38
+	// Token: 0x060015B0 RID: 5552 RVA: 0x00069D58 File Offset: 0x00067F58
 	private bool OverlapCheck(Vector3 point)
 	{
 		if (this.interactionRadius > 0f)

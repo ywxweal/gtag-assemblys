@@ -5,7 +5,7 @@ using UnityEngine;
 // Token: 0x02000693 RID: 1683
 public class TappableSystem : GTSystem<Tappable>
 {
-	// Token: 0x06002A28 RID: 10792 RVA: 0x000D06A8 File Offset: 0x000CE8A8
+	// Token: 0x06002A29 RID: 10793 RVA: 0x000D074C File Offset: 0x000CE94C
 	[PunRPC]
 	public void SendOnTapRPC(int key, float tapStrength, PhotonMessageInfo info)
 	{

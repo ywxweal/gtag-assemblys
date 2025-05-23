@@ -5,7 +5,7 @@ namespace UniLabs.Time
 	// Token: 0x02000AAA RID: 2730
 	public static class TimeUnitExtensions
 	{
-		// Token: 0x060041B4 RID: 16820 RVA: 0x001302B8 File Offset: 0x0012E4B8
+		// Token: 0x060041B5 RID: 16821 RVA: 0x00130390 File Offset: 0x0012E590
 		public static string ToShortString(this TimeUnit timeUnit)
 		{
 			string text;
@@ -35,7 +35,7 @@ namespace UniLabs.Time
 			return text;
 		}
 
-		// Token: 0x060041B5 RID: 16821 RVA: 0x00130328 File Offset: 0x0012E528
+		// Token: 0x060041B6 RID: 16822 RVA: 0x00130400 File Offset: 0x0012E600
 		public static string ToSeparatorString(this TimeUnit timeUnit)
 		{
 			string text;
@@ -65,7 +65,7 @@ namespace UniLabs.Time
 			return text;
 		}
 
-		// Token: 0x060041B6 RID: 16822 RVA: 0x00130398 File Offset: 0x0012E598
+		// Token: 0x060041B7 RID: 16823 RVA: 0x00130470 File Offset: 0x0012E670
 		public static double GetUnitValue(this TimeSpan timeSpan, TimeUnit timeUnit)
 		{
 			int num;
@@ -95,7 +95,7 @@ namespace UniLabs.Time
 			return (double)num;
 		}
 
-		// Token: 0x060041B7 RID: 16823 RVA: 0x00130410 File Offset: 0x0012E610
+		// Token: 0x060041B8 RID: 16824 RVA: 0x001304E8 File Offset: 0x0012E6E8
 		public static TimeSpan WithUnitValue(this TimeSpan timeSpan, TimeUnit timeUnit, double value)
 		{
 			TimeSpan timeSpan2;
@@ -125,7 +125,7 @@ namespace UniLabs.Time
 			return timeSpan2;
 		}
 
-		// Token: 0x060041B8 RID: 16824 RVA: 0x001304D4 File Offset: 0x0012E6D4
+		// Token: 0x060041B9 RID: 16825 RVA: 0x001305AC File Offset: 0x0012E7AC
 		public static double GetLowestUnitValue(this TimeSpan timeSpan, TimeUnit timeUnit)
 		{
 			double num;
@@ -155,7 +155,7 @@ namespace UniLabs.Time
 			return num;
 		}
 
-		// Token: 0x060041B9 RID: 16825 RVA: 0x001305B0 File Offset: 0x0012E7B0
+		// Token: 0x060041BA RID: 16826 RVA: 0x00130688 File Offset: 0x0012E888
 		public static TimeSpan WithLowestUnitValue(this TimeSpan timeSpan, TimeUnit timeUnit, double value)
 		{
 			TimeSpan timeSpan2;
@@ -185,7 +185,7 @@ namespace UniLabs.Time
 			return timeSpan2;
 		}
 
-		// Token: 0x060041BA RID: 16826 RVA: 0x0013069C File Offset: 0x0012E89C
+		// Token: 0x060041BB RID: 16827 RVA: 0x00130774 File Offset: 0x0012E974
 		public static double GetHighestUnitValue(this TimeSpan timeSpan, TimeUnit timeUnit)
 		{
 			double num;
@@ -215,7 +215,7 @@ namespace UniLabs.Time
 			return num;
 		}
 
-		// Token: 0x060041BB RID: 16827 RVA: 0x00130778 File Offset: 0x0012E978
+		// Token: 0x060041BC RID: 16828 RVA: 0x00130850 File Offset: 0x0012EA50
 		public static TimeSpan WithHighestUnitValue(this TimeSpan timeSpan, TimeUnit timeUnit, double value)
 		{
 			TimeSpan timeSpan2;
@@ -245,7 +245,7 @@ namespace UniLabs.Time
 			return timeSpan2;
 		}
 
-		// Token: 0x060041BC RID: 16828 RVA: 0x00130878 File Offset: 0x0012EA78
+		// Token: 0x060041BD RID: 16829 RVA: 0x00130950 File Offset: 0x0012EB50
 		public static double GetSingleUnitValue(this TimeSpan timeSpan, TimeUnit timeUnit)
 		{
 			double num;
@@ -272,7 +272,7 @@ namespace UniLabs.Time
 			return num;
 		}
 
-		// Token: 0x060041BD RID: 16829 RVA: 0x001308E8 File Offset: 0x0012EAE8
+		// Token: 0x060041BE RID: 16830 RVA: 0x001309C0 File Offset: 0x0012EBC0
 		public static TimeSpan FromSingleUnitValue(this TimeSpan timeSpan, TimeUnit timeUnit, double value)
 		{
 			TimeSpan timeSpan2;
@@ -302,7 +302,7 @@ namespace UniLabs.Time
 			return timeSpan2;
 		}
 
-		// Token: 0x060041BE RID: 16830 RVA: 0x00130960 File Offset: 0x0012EB60
+		// Token: 0x060041BF RID: 16831 RVA: 0x00130A38 File Offset: 0x0012EC38
 		public static TimeSpan SnapToUnit(this TimeSpan timeSpan, TimeUnit timeUnit)
 		{
 			TimeSpan timeSpan2;
@@ -333,11 +333,11 @@ namespace UniLabs.Time
 		}
 
 		// Token: 0x02000AAB RID: 2731
-		// (Invoke) Token: 0x060041C0 RID: 16832
+		// (Invoke) Token: 0x060041C1 RID: 16833
 		public delegate TimeSpan WithUnitValueDelegate(TimeSpan timeSpan, TimeUnit timeUnit, double value);
 
 		// Token: 0x02000AAC RID: 2732
-		// (Invoke) Token: 0x060041C4 RID: 16836
+		// (Invoke) Token: 0x060041C5 RID: 16837
 		public delegate double GetUnitValueDelegate(TimeSpan timeSpan, TimeUnit timeUnit);
 	}
 }

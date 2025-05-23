@@ -8,14 +8,14 @@ namespace GorillaTag.Cosmetics
 	// Token: 0x02000DD2 RID: 3538
 	public class ChickenSword : MonoBehaviour
 	{
-		// Token: 0x060057C1 RID: 22465 RVA: 0x001AF705 File Offset: 0x001AD905
+		// Token: 0x060057C2 RID: 22466 RVA: 0x001AF7DD File Offset: 0x001AD9DD
 		private void Awake()
 		{
 			this.lastHitTime = float.PositiveInfinity;
 			this.SwitchState(ChickenSword.SwordState.Ready);
 		}
 
-		// Token: 0x060057C2 RID: 22466 RVA: 0x001AF71C File Offset: 0x001AD91C
+		// Token: 0x060057C3 RID: 22467 RVA: 0x001AF7F4 File Offset: 0x001AD9F4
 		private void Update()
 		{
 			ChickenSword.SwordState swordState = this.currentState;
@@ -68,7 +68,7 @@ namespace GorillaTag.Cosmetics
 			}
 		}
 
-		// Token: 0x060057C3 RID: 22467 RVA: 0x001AF818 File Offset: 0x001ADA18
+		// Token: 0x060057C4 RID: 22468 RVA: 0x001AF8F0 File Offset: 0x001ADAF0
 		public void OnHitTargetSync(VRRig playerRig)
 		{
 			if (this.velocityTracker == null)
@@ -97,63 +97,63 @@ namespace GorillaTag.Cosmetics
 			}
 		}
 
-		// Token: 0x060057C4 RID: 22468 RVA: 0x001AF8AE File Offset: 0x001ADAAE
+		// Token: 0x060057C5 RID: 22469 RVA: 0x001AF986 File Offset: 0x001ADB86
 		private void SwitchState(ChickenSword.SwordState newState)
 		{
 			this.currentState = newState;
 		}
 
-		// Token: 0x04005C7F RID: 23679
+		// Token: 0x04005C80 RID: 23680
 		[SerializeField]
 		private float rechargeCooldown;
 
-		// Token: 0x04005C80 RID: 23680
+		// Token: 0x04005C81 RID: 23681
 		[SerializeField]
 		private GorillaVelocityTracker velocityTracker;
 
-		// Token: 0x04005C81 RID: 23681
+		// Token: 0x04005C82 RID: 23682
 		[SerializeField]
 		private float hitVelocityThreshold;
 
-		// Token: 0x04005C82 RID: 23682
+		// Token: 0x04005C83 RID: 23683
 		[SerializeField]
 		private TransferrableObject transferrableObject;
 
-		// Token: 0x04005C83 RID: 23683
+		// Token: 0x04005C84 RID: 23684
 		[Space]
 		[Space]
 		public UnityEvent OnDeflatedShared;
 
-		// Token: 0x04005C84 RID: 23684
+		// Token: 0x04005C85 RID: 23685
 		public UnityEvent<bool> OnDeflatedLocal;
 
-		// Token: 0x04005C85 RID: 23685
+		// Token: 0x04005C86 RID: 23686
 		public UnityEvent OnRechargedShared;
 
-		// Token: 0x04005C86 RID: 23686
+		// Token: 0x04005C87 RID: 23687
 		public UnityEvent<bool> OnRechargedLocal;
 
-		// Token: 0x04005C87 RID: 23687
+		// Token: 0x04005C88 RID: 23688
 		public UnityEvent<VRRig> OnHitTargetShared;
 
-		// Token: 0x04005C88 RID: 23688
+		// Token: 0x04005C89 RID: 23689
 		public UnityEvent<bool> OnHitTargetLocal;
 
-		// Token: 0x04005C89 RID: 23689
+		// Token: 0x04005C8A RID: 23690
 		private float lastHitTime;
 
-		// Token: 0x04005C8A RID: 23690
+		// Token: 0x04005C8B RID: 23691
 		private ChickenSword.SwordState currentState;
 
-		// Token: 0x04005C8B RID: 23691
+		// Token: 0x04005C8C RID: 23692
 		private bool hitReceievd;
 
 		// Token: 0x02000DD3 RID: 3539
 		private enum SwordState
 		{
-			// Token: 0x04005C8D RID: 23693
-			Ready,
 			// Token: 0x04005C8E RID: 23694
+			Ready,
+			// Token: 0x04005C8F RID: 23695
 			Deflated
 		}
 	}

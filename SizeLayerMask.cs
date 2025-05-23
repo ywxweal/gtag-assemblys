@@ -6,7 +6,7 @@ using UnityEngine;
 public class SizeLayerMask
 {
 	// Token: 0x1700040D RID: 1037
-	// (get) Token: 0x060029EB RID: 10731 RVA: 0x000CF4FC File Offset: 0x000CD6FC
+	// (get) Token: 0x060029EC RID: 10732 RVA: 0x000CF5A0 File Offset: 0x000CD7A0
 	public int Mask
 	{
 		get
@@ -32,19 +32,19 @@ public class SizeLayerMask
 		}
 	}
 
-	// Token: 0x04002F06 RID: 12038
+	// Token: 0x04002F08 RID: 12040
 	[SerializeField]
 	private bool affectLayerA = true;
 
-	// Token: 0x04002F07 RID: 12039
+	// Token: 0x04002F09 RID: 12041
 	[SerializeField]
 	private bool affectLayerB = true;
 
-	// Token: 0x04002F08 RID: 12040
+	// Token: 0x04002F0A RID: 12042
 	[SerializeField]
 	private bool affectLayerC = true;
 
-	// Token: 0x04002F09 RID: 12041
+	// Token: 0x04002F0B RID: 12043
 	[SerializeField]
 	private bool affectLayerD = true;
 }

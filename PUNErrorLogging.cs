@@ -8,7 +8,7 @@ using UnityEngine;
 // Token: 0x0200091A RID: 2330
 public class PUNErrorLogging : MonoBehaviour
 {
-	// Token: 0x060038DA RID: 14554 RVA: 0x0011235C File Offset: 0x0011055C
+	// Token: 0x060038DB RID: 14555 RVA: 0x00112434 File Offset: 0x00110634
 	private void Start()
 	{
 		PhotonNetwork.InternalEventError = (Action<EventData, Exception>)Delegate.Combine(PhotonNetwork.InternalEventError, new Action<EventData, Exception>(this.PUNError));
@@ -33,7 +33,7 @@ public class PUNErrorLogging : MonoBehaviour
 		});
 	}
 
-	// Token: 0x060038DB RID: 14555 RVA: 0x001123C4 File Offset: 0x001105C4
+	// Token: 0x060038DC RID: 14556 RVA: 0x0011249C File Offset: 0x0011069C
 	private void PUNError(EventData data, Exception exception)
 	{
 		NetworkSystem.Instance.GetPlayer(data.Sender);
@@ -81,7 +81,7 @@ public class PUNErrorLogging : MonoBehaviour
 		this.PrintException(exception, true);
 	}
 
-	// Token: 0x060038DC RID: 14556 RVA: 0x001124B2 File Offset: 0x001106B2
+	// Token: 0x060038DD RID: 14557 RVA: 0x0011258A File Offset: 0x0011078A
 	private void PrintException(Exception e, bool print)
 	{
 		if (print)
@@ -90,35 +90,35 @@ public class PUNErrorLogging : MonoBehaviour
 		}
 	}
 
-	// Token: 0x04003E06 RID: 15878
+	// Token: 0x04003E07 RID: 15879
 	[SerializeField]
 	private bool m_logSerializeView = true;
 
-	// Token: 0x04003E07 RID: 15879
+	// Token: 0x04003E08 RID: 15880
 	[SerializeField]
 	private bool m_logOwnershipTransfer = true;
 
-	// Token: 0x04003E08 RID: 15880
+	// Token: 0x04003E09 RID: 15881
 	[SerializeField]
 	private bool m_logOwnershipRequest = true;
 
-	// Token: 0x04003E09 RID: 15881
+	// Token: 0x04003E0A RID: 15882
 	[SerializeField]
 	private bool m_logOwnershipUpdate = true;
 
-	// Token: 0x04003E0A RID: 15882
+	// Token: 0x04003E0B RID: 15883
 	[SerializeField]
 	private bool m_logRPC = true;
 
-	// Token: 0x04003E0B RID: 15883
+	// Token: 0x04003E0C RID: 15884
 	[SerializeField]
 	private bool m_logInstantiate = true;
 
-	// Token: 0x04003E0C RID: 15884
+	// Token: 0x04003E0D RID: 15885
 	[SerializeField]
 	private bool m_logDestroy = true;
 
-	// Token: 0x04003E0D RID: 15885
+	// Token: 0x04003E0E RID: 15886
 	[SerializeField]
 	private bool m_logDestroyPlayer = true;
 
@@ -126,21 +126,21 @@ public class PUNErrorLogging : MonoBehaviour
 	[Flags]
 	private enum LogFlags
 	{
-		// Token: 0x04003E0F RID: 15887
-		SerializeView = 1,
 		// Token: 0x04003E10 RID: 15888
-		OwnershipTransfer = 2,
+		SerializeView = 1,
 		// Token: 0x04003E11 RID: 15889
-		OwnershipRequest = 4,
+		OwnershipTransfer = 2,
 		// Token: 0x04003E12 RID: 15890
-		OwnershipUpdate = 8,
+		OwnershipRequest = 4,
 		// Token: 0x04003E13 RID: 15891
-		RPC = 16,
+		OwnershipUpdate = 8,
 		// Token: 0x04003E14 RID: 15892
-		Instantiate = 32,
+		RPC = 16,
 		// Token: 0x04003E15 RID: 15893
-		Destroy = 64,
+		Instantiate = 32,
 		// Token: 0x04003E16 RID: 15894
+		Destroy = 64,
+		// Token: 0x04003E17 RID: 15895
 		DestroyPlayer = 128
 	}
 }

@@ -4,14 +4,14 @@ using GorillaNetworking.Store;
 // Token: 0x02000447 RID: 1095
 public class TryOnBundleButton : GorillaPressableButton
 {
-	// Token: 0x06001AFB RID: 6907 RVA: 0x0008475F File Offset: 0x0008295F
+	// Token: 0x06001AFB RID: 6907 RVA: 0x0008477F File Offset: 0x0008297F
 	public override void ButtonActivationWithHand(bool isLeftHand)
 	{
 		base.ButtonActivationWithHand(isLeftHand);
 		BundleManager.instance.PressTryOnBundleButton(this, isLeftHand);
 	}
 
-	// Token: 0x06001AFC RID: 6908 RVA: 0x00084778 File Offset: 0x00082978
+	// Token: 0x06001AFC RID: 6908 RVA: 0x00084798 File Offset: 0x00082998
 	public override void UpdateColor()
 	{
 		if (this.playfabBundleID == "NULL")

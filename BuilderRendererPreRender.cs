@@ -9,7 +9,7 @@ public class BuilderRendererPreRender : MonoBehaviour
 	{
 	}
 
-	// Token: 0x06001DFD RID: 7677 RVA: 0x00091C71 File Offset: 0x0008FE71
+	// Token: 0x06001DFD RID: 7677 RVA: 0x00091C91 File Offset: 0x0008FE91
 	private void LateUpdate()
 	{
 		if (this.builderRenderer != null)

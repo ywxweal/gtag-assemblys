@@ -7,13 +7,13 @@ using UnityEngine.Events;
 // Token: 0x020003BD RID: 957
 public class TransferrableObjectHoldablePart_Crank : TransferrableObjectHoldablePart
 {
-	// Token: 0x06001644 RID: 5700 RVA: 0x0006BF37 File Offset: 0x0006A137
+	// Token: 0x06001644 RID: 5700 RVA: 0x0006BF57 File Offset: 0x0006A157
 	public void SetOnCrankedCallback(Action<float> onCrankedCallback)
 	{
 		this.onCrankedCallback = onCrankedCallback;
 	}
 
-	// Token: 0x06001645 RID: 5701 RVA: 0x0006BF40 File Offset: 0x0006A140
+	// Token: 0x06001645 RID: 5701 RVA: 0x0006BF60 File Offset: 0x0006A160
 	private void Awake()
 	{
 		if (this.rotatingPart == null)
@@ -35,7 +35,7 @@ public class TransferrableObjectHoldablePart_Crank : TransferrableObjectHoldable
 		}
 	}
 
-	// Token: 0x06001646 RID: 5702 RVA: 0x0006C028 File Offset: 0x0006A228
+	// Token: 0x06001646 RID: 5702 RVA: 0x0006C048 File Offset: 0x0006A248
 	protected override void UpdateHeld(VRRig rig, bool isHeldLeftHand)
 	{
 		Vector3 vector4;
@@ -77,7 +77,7 @@ public class TransferrableObjectHoldablePart_Crank : TransferrableObjectHoldable
 		this.rotatingPart.localRotation = this.baseLocalAngle * Quaternion.AngleAxis(num - this.crankAngleOffset, Vector3.forward);
 	}
 
-	// Token: 0x06001647 RID: 5703 RVA: 0x0006C244 File Offset: 0x0006A444
+	// Token: 0x06001647 RID: 5703 RVA: 0x0006C264 File Offset: 0x0006A464
 	private void OnDrawGizmosSelected()
 	{
 		Transform transform = ((this.rotatingPart != null) ? this.rotatingPart : base.transform);
@@ -135,7 +135,7 @@ public class TransferrableObjectHoldablePart_Crank : TransferrableObjectHoldable
 	[Serializable]
 	private struct CrankThreshold
 	{
-		// Token: 0x06001649 RID: 5705 RVA: 0x0006C2BF File Offset: 0x0006A4BF
+		// Token: 0x06001649 RID: 5705 RVA: 0x0006C2DF File Offset: 0x0006A4DF
 		public void OnCranked(float deltaAngle)
 		{
 			this.currentAngle += deltaAngle;

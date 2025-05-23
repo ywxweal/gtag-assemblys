@@ -8,7 +8,7 @@ namespace GorillaTagScripts
 	// Token: 0x02000B1A RID: 2842
 	public class LayerChanger : MonoBehaviour
 	{
-		// Token: 0x060045E9 RID: 17897 RVA: 0x0014BE71 File Offset: 0x0014A071
+		// Token: 0x060045EA RID: 17898 RVA: 0x0014BF49 File Offset: 0x0014A149
 		public void InitializeLayers(Transform parent)
 		{
 			if (!this.layersStored)
@@ -18,7 +18,7 @@ namespace GorillaTagScripts
 			}
 		}
 
-		// Token: 0x060045EA RID: 17898 RVA: 0x0014BE8C File Offset: 0x0014A08C
+		// Token: 0x060045EB RID: 17899 RVA: 0x0014BF64 File Offset: 0x0014A164
 		private void StoreOriginalLayers(Transform parent)
 		{
 			if (!this.includeChildren)
@@ -34,7 +34,7 @@ namespace GorillaTagScripts
 			}
 		}
 
-		// Token: 0x060045EB RID: 17899 RVA: 0x0014BF08 File Offset: 0x0014A108
+		// Token: 0x060045EC RID: 17900 RVA: 0x0014BFE0 File Offset: 0x0014A1E0
 		public void ChangeLayer(Transform parent, string newLayer)
 		{
 			if (!this.layersStored)
@@ -45,7 +45,7 @@ namespace GorillaTagScripts
 			this.ChangeLayers(parent, LayerMask.NameToLayer(newLayer));
 		}
 
-		// Token: 0x060045EC RID: 17900 RVA: 0x0014BF2C File Offset: 0x0014A12C
+		// Token: 0x060045ED RID: 17901 RVA: 0x0014C004 File Offset: 0x0014A204
 		private void ChangeLayers(Transform parent, int newLayer)
 		{
 			if (!this.includeChildren)
@@ -67,7 +67,7 @@ namespace GorillaTagScripts
 			}
 		}
 
-		// Token: 0x060045ED RID: 17901 RVA: 0x0014BFD4 File Offset: 0x0014A1D4
+		// Token: 0x060045EE RID: 17902 RVA: 0x0014C0AC File Offset: 0x0014A2AC
 		public void RestoreOriginalLayers()
 		{
 			if (!this.layersStored)
@@ -81,16 +81,16 @@ namespace GorillaTagScripts
 			}
 		}
 
-		// Token: 0x04004872 RID: 18546
+		// Token: 0x04004873 RID: 18547
 		public LayerMask restrictedLayers;
 
-		// Token: 0x04004873 RID: 18547
+		// Token: 0x04004874 RID: 18548
 		public bool includeChildren = true;
 
-		// Token: 0x04004874 RID: 18548
+		// Token: 0x04004875 RID: 18549
 		private Dictionary<Transform, int> originalLayers = new Dictionary<Transform, int>();
 
-		// Token: 0x04004875 RID: 18549
+		// Token: 0x04004876 RID: 18550
 		private bool layersStored;
 	}
 }

@@ -8,17 +8,17 @@ namespace OculusSampleFramework
 	public class WindmillBladesController : MonoBehaviour
 	{
 		// Token: 0x17000787 RID: 1927
-		// (get) Token: 0x06004BE2 RID: 19426 RVA: 0x00167A6A File Offset: 0x00165C6A
-		// (set) Token: 0x06004BE3 RID: 19427 RVA: 0x00167A72 File Offset: 0x00165C72
+		// (get) Token: 0x06004BE3 RID: 19427 RVA: 0x00167B42 File Offset: 0x00165D42
+		// (set) Token: 0x06004BE4 RID: 19428 RVA: 0x00167B4A File Offset: 0x00165D4A
 		public bool IsMoving { get; private set; }
 
-		// Token: 0x06004BE4 RID: 19428 RVA: 0x00167A7B File Offset: 0x00165C7B
+		// Token: 0x06004BE5 RID: 19429 RVA: 0x00167B53 File Offset: 0x00165D53
 		private void Start()
 		{
 			this._originalRotation = base.transform.localRotation;
 		}
 
-		// Token: 0x06004BE5 RID: 19429 RVA: 0x00167A90 File Offset: 0x00165C90
+		// Token: 0x06004BE6 RID: 19430 RVA: 0x00167B68 File Offset: 0x00165D68
 		private void Update()
 		{
 			this._rotAngle += this._currentSpeed * Time.deltaTime;
@@ -29,7 +29,7 @@ namespace OculusSampleFramework
 			base.transform.localRotation = this._originalRotation * Quaternion.AngleAxis(this._rotAngle, Vector3.forward);
 		}
 
-		// Token: 0x06004BE6 RID: 19430 RVA: 0x00167AF4 File Offset: 0x00165CF4
+		// Token: 0x06004BE7 RID: 19431 RVA: 0x00167BCC File Offset: 0x00165DCC
 		public void SetMoveState(bool newMoveState, float goalSpeed)
 		{
 			this.IsMoving = newMoveState;
@@ -40,7 +40,7 @@ namespace OculusSampleFramework
 			this._lerpSpeedCoroutine = base.StartCoroutine(this.LerpToSpeed(goalSpeed));
 		}
 
-		// Token: 0x06004BE7 RID: 19431 RVA: 0x00167B24 File Offset: 0x00165D24
+		// Token: 0x06004BE8 RID: 19432 RVA: 0x00167BFC File Offset: 0x00165DFC
 		private IEnumerator LerpToSpeed(float goalSpeed)
 		{
 			float totalTime = 0f;
@@ -67,7 +67,7 @@ namespace OculusSampleFramework
 			yield break;
 		}
 
-		// Token: 0x06004BE8 RID: 19432 RVA: 0x00167B3A File Offset: 0x00165D3A
+		// Token: 0x06004BE9 RID: 19433 RVA: 0x00167C12 File Offset: 0x00165E12
 		private IEnumerator PlaySoundDelayed(AudioClip initial, AudioClip clip, float timeDelayAfterInitial)
 		{
 			this.PlaySound(initial, false);
@@ -76,7 +76,7 @@ namespace OculusSampleFramework
 			yield break;
 		}
 
-		// Token: 0x06004BE9 RID: 19433 RVA: 0x00167B5E File Offset: 0x00165D5E
+		// Token: 0x06004BEA RID: 19434 RVA: 0x00167C36 File Offset: 0x00165E36
 		private void PlaySound(AudioClip clip, bool loop = false)
 		{
 			this._audioSource.loop = loop;
@@ -85,38 +85,38 @@ namespace OculusSampleFramework
 			this._audioSource.Play();
 		}
 
-		// Token: 0x04004E96 RID: 20118
-		private const float MAX_TIME = 1f;
-
 		// Token: 0x04004E97 RID: 20119
-		[SerializeField]
-		private AudioSource _audioSource;
+		private const float MAX_TIME = 1f;
 
 		// Token: 0x04004E98 RID: 20120
 		[SerializeField]
-		private AudioClip _windMillRotationSound;
+		private AudioSource _audioSource;
 
 		// Token: 0x04004E99 RID: 20121
 		[SerializeField]
-		private AudioClip _windMillStartSound;
+		private AudioClip _windMillRotationSound;
 
 		// Token: 0x04004E9A RID: 20122
 		[SerializeField]
+		private AudioClip _windMillStartSound;
+
+		// Token: 0x04004E9B RID: 20123
+		[SerializeField]
 		private AudioClip _windMillStopSound;
 
-		// Token: 0x04004E9C RID: 20124
+		// Token: 0x04004E9D RID: 20125
 		private float _currentSpeed;
 
-		// Token: 0x04004E9D RID: 20125
+		// Token: 0x04004E9E RID: 20126
 		private Coroutine _lerpSpeedCoroutine;
 
-		// Token: 0x04004E9E RID: 20126
+		// Token: 0x04004E9F RID: 20127
 		private Coroutine _audioChangeCr;
 
-		// Token: 0x04004E9F RID: 20127
+		// Token: 0x04004EA0 RID: 20128
 		private Quaternion _originalRotation;
 
-		// Token: 0x04004EA0 RID: 20128
+		// Token: 0x04004EA1 RID: 20129
 		private float _rotAngle;
 	}
 }

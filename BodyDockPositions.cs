@@ -9,8 +9,8 @@ using UnityEngine.Serialization;
 public class BodyDockPositions : MonoBehaviour
 {
 	// Token: 0x170002B6 RID: 694
-	// (get) Token: 0x06001853 RID: 6227 RVA: 0x00076174 File Offset: 0x00074374
-	// (set) Token: 0x06001854 RID: 6228 RVA: 0x0007617C File Offset: 0x0007437C
+	// (get) Token: 0x06001853 RID: 6227 RVA: 0x00076194 File Offset: 0x00074394
+	// (set) Token: 0x06001854 RID: 6228 RVA: 0x0007619C File Offset: 0x0007439C
 	public TransferrableObject[] allObjects
 	{
 		get
@@ -23,14 +23,14 @@ public class BodyDockPositions : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001855 RID: 6229 RVA: 0x00076188 File Offset: 0x00074388
+	// Token: 0x06001855 RID: 6229 RVA: 0x000761A8 File Offset: 0x000743A8
 	public void Awake()
 	{
 		RoomSystem.LeftRoomEvent = (Action)Delegate.Combine(RoomSystem.LeftRoomEvent, new Action(this.OnLeftRoom));
 		RoomSystem.PlayerLeftEvent = (Action<NetPlayer>)Delegate.Combine(RoomSystem.PlayerLeftEvent, new Action<NetPlayer>(this.OnPlayerLeftRoom));
 	}
 
-	// Token: 0x06001856 RID: 6230 RVA: 0x000761D5 File Offset: 0x000743D5
+	// Token: 0x06001856 RID: 6230 RVA: 0x000761F5 File Offset: 0x000743F5
 	public void OnPlayerLeftRoom(NetPlayer otherPlayer)
 	{
 		if (object.Equals(this.myRig.creator, otherPlayer))
@@ -39,13 +39,13 @@ public class BodyDockPositions : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001857 RID: 6231 RVA: 0x000761F0 File Offset: 0x000743F0
+	// Token: 0x06001857 RID: 6231 RVA: 0x00076210 File Offset: 0x00074410
 	public void OnLeftRoom()
 	{
 		this.DeallocateSharableInstances();
 	}
 
-	// Token: 0x06001858 RID: 6232 RVA: 0x000761F8 File Offset: 0x000743F8
+	// Token: 0x06001858 RID: 6232 RVA: 0x00076218 File Offset: 0x00074418
 	public WorldShareableItem AllocateSharableInstance(BodyDockPositions.DropPositions position, NetPlayer owner)
 	{
 		switch (position)
@@ -86,7 +86,7 @@ public class BodyDockPositions : MonoBehaviour
 		throw new ArgumentOutOfRangeException("position", position, null);
 	}
 
-	// Token: 0x06001859 RID: 6233 RVA: 0x000762F4 File Offset: 0x000744F4
+	// Token: 0x06001859 RID: 6233 RVA: 0x00076314 File Offset: 0x00074514
 	public void DeallocateSharableInstance(WorldShareableItem worldShareable)
 	{
 		if (worldShareable == null)
@@ -115,7 +115,7 @@ public class BodyDockPositions : MonoBehaviour
 		}
 	}
 
-	// Token: 0x0600185A RID: 6234 RVA: 0x00076388 File Offset: 0x00074588
+	// Token: 0x0600185A RID: 6234 RVA: 0x000763A8 File Offset: 0x000745A8
 	public void DeallocateSharableInstances()
 	{
 		if (ApplicationQuittingState.IsQuitting)
@@ -136,13 +136,13 @@ public class BodyDockPositions : MonoBehaviour
 		this.rightBackShareableItem = null;
 	}
 
-	// Token: 0x0600185B RID: 6235 RVA: 0x000763FB File Offset: 0x000745FB
+	// Token: 0x0600185B RID: 6235 RVA: 0x0007641B File Offset: 0x0007461B
 	public static bool IsPositionLeft(BodyDockPositions.DropPositions pos)
 	{
 		return pos == BodyDockPositions.DropPositions.LeftArm || pos == BodyDockPositions.DropPositions.LeftBack;
 	}
 
-	// Token: 0x0600185C RID: 6236 RVA: 0x00076408 File Offset: 0x00074608
+	// Token: 0x0600185C RID: 6236 RVA: 0x00076428 File Offset: 0x00074628
 	public int DropZoneStorageUsed(BodyDockPositions.DropPositions dropPosition)
 	{
 		if (this.myRig == null)
@@ -165,7 +165,7 @@ public class BodyDockPositions : MonoBehaviour
 		return -1;
 	}
 
-	// Token: 0x0600185D RID: 6237 RVA: 0x000764C4 File Offset: 0x000746C4
+	// Token: 0x0600185D RID: 6237 RVA: 0x000764E4 File Offset: 0x000746E4
 	public TransferrableObject ItemPositionInUse(BodyDockPositions.DropPositions dropPosition)
 	{
 		TransferrableObject.PositionState positionState = this.MapDropPositionToState(dropPosition);
@@ -189,7 +189,7 @@ public class BodyDockPositions : MonoBehaviour
 		return null;
 	}
 
-	// Token: 0x0600185E RID: 6238 RVA: 0x0007658C File Offset: 0x0007478C
+	// Token: 0x0600185E RID: 6238 RVA: 0x000765AC File Offset: 0x000747AC
 	private int EnableTransferrableItem(int allItemsIndex, BodyDockPositions.DropPositions startingPosition, TransferrableObject.PositionState startingState)
 	{
 		if (allItemsIndex < 0 || allItemsIndex >= this.allObjects.Length)
@@ -225,7 +225,7 @@ public class BodyDockPositions : MonoBehaviour
 		return -1;
 	}
 
-	// Token: 0x0600185F RID: 6239 RVA: 0x0007668C File Offset: 0x0007488C
+	// Token: 0x0600185F RID: 6239 RVA: 0x000766AC File Offset: 0x000748AC
 	public BodyDockPositions.DropPositions ItemActive(int allItemsIndex)
 	{
 		if (!this.allObjects[allItemsIndex].gameObject.activeSelf)
@@ -235,7 +235,7 @@ public class BodyDockPositions : MonoBehaviour
 		return this.allObjects[allItemsIndex].storedZone;
 	}
 
-	// Token: 0x06001860 RID: 6240 RVA: 0x000766B4 File Offset: 0x000748B4
+	// Token: 0x06001860 RID: 6240 RVA: 0x000766D4 File Offset: 0x000748D4
 	public static BodyDockPositions.DropPositions OfflineItemActive(int allItemsIndex)
 	{
 		if (GorillaTagger.Instance == null || GorillaTagger.Instance.offlineVRRig == null)
@@ -254,7 +254,7 @@ public class BodyDockPositions : MonoBehaviour
 		return component.allObjects[allItemsIndex].storedZone;
 	}
 
-	// Token: 0x06001861 RID: 6241 RVA: 0x00076724 File Offset: 0x00074924
+	// Token: 0x06001861 RID: 6241 RVA: 0x00076744 File Offset: 0x00074944
 	public void DisableTransferrableItem(int index)
 	{
 		TransferrableObject transferrableObject = this.allObjects[index];
@@ -275,7 +275,7 @@ public class BodyDockPositions : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001862 RID: 6242 RVA: 0x00076798 File Offset: 0x00074998
+	// Token: 0x06001862 RID: 6242 RVA: 0x000767B8 File Offset: 0x000749B8
 	public void DisableAllTransferableItems()
 	{
 		if (!CosmeticsV2Spawner_Dirty.allPartsInstantiated)
@@ -298,19 +298,19 @@ public class BodyDockPositions : MonoBehaviour
 		this.DeallocateSharableInstances();
 	}
 
-	// Token: 0x06001863 RID: 6243 RVA: 0x00076825 File Offset: 0x00074A25
+	// Token: 0x06001863 RID: 6243 RVA: 0x00076845 File Offset: 0x00074A45
 	private bool AllItemsIndexValid(int allItemsIndex)
 	{
 		return allItemsIndex != -1 && allItemsIndex < this.allObjects.Length;
 	}
 
-	// Token: 0x06001864 RID: 6244 RVA: 0x00076838 File Offset: 0x00074A38
+	// Token: 0x06001864 RID: 6244 RVA: 0x00076858 File Offset: 0x00074A58
 	public bool PositionAvailable(int allItemIndex, BodyDockPositions.DropPositions startPos)
 	{
 		return (this.allObjects[allItemIndex].dockPositions & startPos) > BodyDockPositions.DropPositions.None;
 	}
 
-	// Token: 0x06001865 RID: 6245 RVA: 0x0007684C File Offset: 0x00074A4C
+	// Token: 0x06001865 RID: 6245 RVA: 0x0007686C File Offset: 0x00074A6C
 	public BodyDockPositions.DropPositions FirstAvailablePosition(int allItemIndex)
 	{
 		for (int i = 0; i < 5; i++)
@@ -324,7 +324,7 @@ public class BodyDockPositions : MonoBehaviour
 		return BodyDockPositions.DropPositions.None;
 	}
 
-	// Token: 0x06001866 RID: 6246 RVA: 0x00076880 File Offset: 0x00074A80
+	// Token: 0x06001866 RID: 6246 RVA: 0x000768A0 File Offset: 0x00074AA0
 	public int TransferrableItemDisable(int allItemsIndex)
 	{
 		if (BodyDockPositions.OfflineItemActive(allItemsIndex) != BodyDockPositions.DropPositions.None)
@@ -334,7 +334,7 @@ public class BodyDockPositions : MonoBehaviour
 		return 0;
 	}
 
-	// Token: 0x06001867 RID: 6247 RVA: 0x00076894 File Offset: 0x00074A94
+	// Token: 0x06001867 RID: 6247 RVA: 0x000768B4 File Offset: 0x00074AB4
 	public void TransferrableItemDisableAtPosition(BodyDockPositions.DropPositions dropPositions)
 	{
 		int num = this.DropZoneStorageUsed(dropPositions);
@@ -344,7 +344,7 @@ public class BodyDockPositions : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001868 RID: 6248 RVA: 0x000768B8 File Offset: 0x00074AB8
+	// Token: 0x06001868 RID: 6248 RVA: 0x000768D8 File Offset: 0x00074AD8
 	public void TransferrableItemEnableAtPosition(string itemName, BodyDockPositions.DropPositions dropPosition)
 	{
 		if (this.DropZoneStorageUsed(dropPosition) >= 0)
@@ -366,7 +366,7 @@ public class BodyDockPositions : MonoBehaviour
 		this.EnableTransferrableItem(num, dropPosition, positionState);
 	}
 
-	// Token: 0x06001869 RID: 6249 RVA: 0x00076928 File Offset: 0x00074B28
+	// Token: 0x06001869 RID: 6249 RVA: 0x00076948 File Offset: 0x00074B48
 	public bool TransferrableItemActive(string transferrableItemName)
 	{
 		List<int> list = this.TransferrableObjectIndexFromName(transferrableItemName);
@@ -384,7 +384,7 @@ public class BodyDockPositions : MonoBehaviour
 		return false;
 	}
 
-	// Token: 0x0600186A RID: 6250 RVA: 0x00076994 File Offset: 0x00074B94
+	// Token: 0x0600186A RID: 6250 RVA: 0x000769B4 File Offset: 0x00074BB4
 	public bool TransferrableItemActiveAtPos(string transferrableItemName, BodyDockPositions.DropPositions dropPosition)
 	{
 		List<int> list = this.TransferrableObjectIndexFromName(transferrableItemName);
@@ -403,25 +403,25 @@ public class BodyDockPositions : MonoBehaviour
 		return false;
 	}
 
-	// Token: 0x0600186B RID: 6251 RVA: 0x00076A08 File Offset: 0x00074C08
+	// Token: 0x0600186B RID: 6251 RVA: 0x00076A28 File Offset: 0x00074C28
 	public bool TransferrableItemActive(int allItemsIndex)
 	{
 		return this.ItemActive(allItemsIndex) > BodyDockPositions.DropPositions.None;
 	}
 
-	// Token: 0x0600186C RID: 6252 RVA: 0x00076A14 File Offset: 0x00074C14
+	// Token: 0x0600186C RID: 6252 RVA: 0x00076A34 File Offset: 0x00074C34
 	public TransferrableObject TransferrableItem(int allItemsIndex)
 	{
 		return this.allObjects[allItemsIndex];
 	}
 
-	// Token: 0x0600186D RID: 6253 RVA: 0x00076A1E File Offset: 0x00074C1E
+	// Token: 0x0600186D RID: 6253 RVA: 0x00076A3E File Offset: 0x00074C3E
 	public BodyDockPositions.DropPositions TransferrableItemPosition(int allItemsIndex)
 	{
 		return this.ItemActive(allItemsIndex);
 	}
 
-	// Token: 0x0600186E RID: 6254 RVA: 0x00076A28 File Offset: 0x00074C28
+	// Token: 0x0600186E RID: 6254 RVA: 0x00076A48 File Offset: 0x00074C48
 	public bool DisableTransferrableItem(string transferrableItemName)
 	{
 		List<int> list = this.TransferrableObjectIndexFromName(transferrableItemName);
@@ -436,7 +436,7 @@ public class BodyDockPositions : MonoBehaviour
 		return true;
 	}
 
-	// Token: 0x0600186F RID: 6255 RVA: 0x00076A8C File Offset: 0x00074C8C
+	// Token: 0x0600186F RID: 6255 RVA: 0x00076AAC File Offset: 0x00074CAC
 	public BodyDockPositions.DropPositions OppositePosition(BodyDockPositions.DropPositions pos)
 	{
 		if (pos == BodyDockPositions.DropPositions.LeftArm)
@@ -458,7 +458,7 @@ public class BodyDockPositions : MonoBehaviour
 		return pos;
 	}
 
-	// Token: 0x06001870 RID: 6256 RVA: 0x00076AAC File Offset: 0x00074CAC
+	// Token: 0x06001870 RID: 6256 RVA: 0x00076ACC File Offset: 0x00074CCC
 	public BodyDockPositions.DockingResult ToggleWithHandedness(string transferrableItemName, bool isLeftHand, bool bothHands)
 	{
 		List<int> list = this.TransferrableObjectIndexFromName(transferrableItemName);
@@ -482,7 +482,7 @@ public class BodyDockPositions : MonoBehaviour
 		return this.ToggleTransferrableItem(transferrableItemName, dropPositions, bothHands);
 	}
 
-	// Token: 0x06001871 RID: 6257 RVA: 0x00076B2C File Offset: 0x00074D2C
+	// Token: 0x06001871 RID: 6257 RVA: 0x00076B4C File Offset: 0x00074D4C
 	public BodyDockPositions.DockingResult ToggleTransferrableItem(string transferrableItemName, BodyDockPositions.DropPositions startingPos, bool bothHands)
 	{
 		BodyDockPositions.DockingResult dockingResult = new BodyDockPositions.DockingResult();
@@ -549,7 +549,7 @@ public class BodyDockPositions : MonoBehaviour
 		return dockingResult;
 	}
 
-	// Token: 0x06001872 RID: 6258 RVA: 0x00076C73 File Offset: 0x00074E73
+	// Token: 0x06001872 RID: 6258 RVA: 0x00076C93 File Offset: 0x00074E93
 	private void MoveTransferableItem(int allItemsIndex, BodyDockPositions.DropPositions newPosition, TransferrableObject.PositionState newPositionState)
 	{
 		this.allObjects[allItemsIndex].storedZone = newPosition;
@@ -557,7 +557,7 @@ public class BodyDockPositions : MonoBehaviour
 		this.allObjects[allItemsIndex].ResetToDefaultState();
 	}
 
-	// Token: 0x06001873 RID: 6259 RVA: 0x00076CA0 File Offset: 0x00074EA0
+	// Token: 0x06001873 RID: 6259 RVA: 0x00076CC0 File Offset: 0x00074EC0
 	public void EnableTransferrableGameObject(int allItemsIndex, BodyDockPositions.DropPositions dropZone, TransferrableObject.PositionState startingPosition)
 	{
 		GameObject gameObject = this.allObjects[allItemsIndex].gameObject;
@@ -576,7 +576,7 @@ public class BodyDockPositions : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001874 RID: 6260 RVA: 0x00076D04 File Offset: 0x00074F04
+	// Token: 0x06001874 RID: 6260 RVA: 0x00076D24 File Offset: 0x00074F24
 	public void RefreshTransferrableItems()
 	{
 		if (!this.myRig)
@@ -645,7 +645,7 @@ public class BodyDockPositions : MonoBehaviour
 		this.UpdateHandState();
 	}
 
-	// Token: 0x06001875 RID: 6261 RVA: 0x00076FD0 File Offset: 0x000751D0
+	// Token: 0x06001875 RID: 6261 RVA: 0x00076FF0 File Offset: 0x000751F0
 	public int ReturnTransferrableItemIndex(int allItemsIndex)
 	{
 		for (int i = 0; i < this.myRig.ActiveTransferrableObjectIndexLength(); i++)
@@ -658,7 +658,7 @@ public class BodyDockPositions : MonoBehaviour
 		return -1;
 	}
 
-	// Token: 0x06001876 RID: 6262 RVA: 0x00077008 File Offset: 0x00075208
+	// Token: 0x06001876 RID: 6262 RVA: 0x00077028 File Offset: 0x00075228
 	public List<int> TransferrableObjectIndexFromName(string transObjectName)
 	{
 		List<int> list = new List<int>();
@@ -672,7 +672,7 @@ public class BodyDockPositions : MonoBehaviour
 		return list;
 	}
 
-	// Token: 0x06001877 RID: 6263 RVA: 0x00077060 File Offset: 0x00075260
+	// Token: 0x06001877 RID: 6263 RVA: 0x00077080 File Offset: 0x00075280
 	private TransferrableObject.PositionState MapDropPositionToState(BodyDockPositions.DropPositions pos)
 	{
 		if (pos == BodyDockPositions.DropPositions.RightArm)
@@ -695,7 +695,7 @@ public class BodyDockPositions : MonoBehaviour
 	}
 
 	// Token: 0x170002B7 RID: 695
-	// (get) Token: 0x06001878 RID: 6264 RVA: 0x0007707F File Offset: 0x0007527F
+	// (get) Token: 0x06001878 RID: 6264 RVA: 0x0007709F File Offset: 0x0007529F
 	internal int PreviousLeftHandThrowableIndex
 	{
 		get
@@ -705,7 +705,7 @@ public class BodyDockPositions : MonoBehaviour
 	}
 
 	// Token: 0x170002B8 RID: 696
-	// (get) Token: 0x06001879 RID: 6265 RVA: 0x00077089 File Offset: 0x00075289
+	// (get) Token: 0x06001879 RID: 6265 RVA: 0x000770A9 File Offset: 0x000752A9
 	internal int PreviousRightHandThrowableIndex
 	{
 		get
@@ -715,7 +715,7 @@ public class BodyDockPositions : MonoBehaviour
 	}
 
 	// Token: 0x170002B9 RID: 697
-	// (get) Token: 0x0600187A RID: 6266 RVA: 0x00077093 File Offset: 0x00075293
+	// (get) Token: 0x0600187A RID: 6266 RVA: 0x000770B3 File Offset: 0x000752B3
 	internal float PreviousLeftHandThrowableDisabledTime
 	{
 		get
@@ -725,7 +725,7 @@ public class BodyDockPositions : MonoBehaviour
 	}
 
 	// Token: 0x170002BA RID: 698
-	// (get) Token: 0x0600187B RID: 6267 RVA: 0x0007709D File Offset: 0x0007529D
+	// (get) Token: 0x0600187B RID: 6267 RVA: 0x000770BD File Offset: 0x000752BD
 	internal float PreviousRightHandThrowableDisabledTime
 	{
 		get
@@ -734,7 +734,7 @@ public class BodyDockPositions : MonoBehaviour
 		}
 	}
 
-	// Token: 0x0600187C RID: 6268 RVA: 0x000770A8 File Offset: 0x000752A8
+	// Token: 0x0600187C RID: 6268 RVA: 0x000770C8 File Offset: 0x000752C8
 	private void UpdateHandState()
 	{
 		for (int i = 0; i < 2; i++)
@@ -755,13 +755,13 @@ public class BodyDockPositions : MonoBehaviour
 		}
 	}
 
-	// Token: 0x0600187D RID: 6269 RVA: 0x00077137 File Offset: 0x00075337
+	// Token: 0x0600187D RID: 6269 RVA: 0x00077157 File Offset: 0x00075357
 	internal GameObject GetLeftHandThrowable()
 	{
 		return this.GetLeftHandThrowable(this.myRig.LeftThrowableProjectileIndex);
 	}
 
-	// Token: 0x0600187E RID: 6270 RVA: 0x0007714A File Offset: 0x0007534A
+	// Token: 0x0600187E RID: 6270 RVA: 0x0007716A File Offset: 0x0007536A
 	internal GameObject GetLeftHandThrowable(int throwableIndex)
 	{
 		if (throwableIndex < 0 || throwableIndex >= this.leftHandThrowables.Length)
@@ -775,13 +775,13 @@ public class BodyDockPositions : MonoBehaviour
 		return this.leftHandThrowables[throwableIndex];
 	}
 
-	// Token: 0x0600187F RID: 6271 RVA: 0x00077189 File Offset: 0x00075389
+	// Token: 0x0600187F RID: 6271 RVA: 0x000771A9 File Offset: 0x000753A9
 	internal GameObject GetRightHandThrowable()
 	{
 		return this.GetRightHandThrowable(this.myRig.RightThrowableProjectileIndex);
 	}
 
-	// Token: 0x06001880 RID: 6272 RVA: 0x0007719C File Offset: 0x0007539C
+	// Token: 0x06001880 RID: 6272 RVA: 0x000771BC File Offset: 0x000753BC
 	internal GameObject GetRightHandThrowable(int throwableIndex)
 	{
 		if (throwableIndex < 0 || throwableIndex >= this.rightHandThrowables.Length)
@@ -875,7 +875,7 @@ public class BodyDockPositions : MonoBehaviour
 	// Token: 0x020003F8 RID: 1016
 	public class DockingResult
 	{
-		// Token: 0x06001882 RID: 6274 RVA: 0x00077219 File Offset: 0x00075419
+		// Token: 0x06001882 RID: 6274 RVA: 0x00077239 File Offset: 0x00075439
 		public DockingResult()
 		{
 			this.dockedPosition = new List<BodyDockPositions.DropPositions>(2);

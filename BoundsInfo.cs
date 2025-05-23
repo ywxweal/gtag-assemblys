@@ -7,7 +7,7 @@ using UnityEngine;
 public struct BoundsInfo
 {
 	// Token: 0x17000610 RID: 1552
-	// (get) Token: 0x06003E0E RID: 15886 RVA: 0x00126DE7 File Offset: 0x00124FE7
+	// (get) Token: 0x06003E0F RID: 15887 RVA: 0x00126EBF File Offset: 0x001250BF
 	public Vector3 sizeComputed
 	{
 		get
@@ -17,7 +17,7 @@ public struct BoundsInfo
 	}
 
 	// Token: 0x17000611 RID: 1553
-	// (get) Token: 0x06003E0F RID: 15887 RVA: 0x00126E05 File Offset: 0x00125005
+	// (get) Token: 0x06003E10 RID: 15888 RVA: 0x00126EDD File Offset: 0x001250DD
 	public Vector3 sizeComputedAA
 	{
 		get
@@ -26,7 +26,7 @@ public struct BoundsInfo
 		}
 	}
 
-	// Token: 0x06003E10 RID: 15888 RVA: 0x00126E24 File Offset: 0x00125024
+	// Token: 0x06003E11 RID: 15889 RVA: 0x00126EFC File Offset: 0x001250FC
 	public static BoundsInfo ComputeBounds(Vector3[] vertices)
 	{
 		if (vertices.Length == 0)
@@ -52,7 +52,7 @@ public struct BoundsInfo
 		return boundsInfo;
 	}
 
-	// Token: 0x06003E11 RID: 15889 RVA: 0x00126F28 File Offset: 0x00125128
+	// Token: 0x06003E12 RID: 15890 RVA: 0x00127000 File Offset: 0x00125200
 	public static BoxCollider CreateBoxCollider(BoundsInfo bounds)
 	{
 		int hashCode = bounds.center.QuantizedId128().GetHashCode();
@@ -67,7 +67,7 @@ public struct BoundsInfo
 		return boxCollider;
 	}
 
-	// Token: 0x06003E12 RID: 15890 RVA: 0x00126FD4 File Offset: 0x001251D4
+	// Token: 0x06003E13 RID: 15891 RVA: 0x001270AC File Offset: 0x001252AC
 	public static BoxCollider CreateBoxColliderAA(BoundsInfo bounds)
 	{
 		int hashCode = bounds.center.QuantizedId128().GetHashCode();
@@ -80,31 +80,31 @@ public struct BoundsInfo
 		return boxCollider;
 	}
 
-	// Token: 0x0400429F RID: 17055
+	// Token: 0x040042A0 RID: 17056
 	public Vector3 center;
 
-	// Token: 0x040042A0 RID: 17056
+	// Token: 0x040042A1 RID: 17057
 	public Vector3 size;
 
-	// Token: 0x040042A1 RID: 17057
+	// Token: 0x040042A2 RID: 17058
 	public Quaternion rotation;
 
-	// Token: 0x040042A2 RID: 17058
+	// Token: 0x040042A3 RID: 17059
 	public Vector3 scale;
 
-	// Token: 0x040042A3 RID: 17059
+	// Token: 0x040042A4 RID: 17060
 	public float inflate;
 
-	// Token: 0x040042A4 RID: 17060
+	// Token: 0x040042A5 RID: 17061
 	[Space]
 	public Vector3 centerAA;
 
-	// Token: 0x040042A5 RID: 17061
+	// Token: 0x040042A6 RID: 17062
 	public Vector3 sizeAA;
 
-	// Token: 0x040042A6 RID: 17062
+	// Token: 0x040042A7 RID: 17063
 	public Vector3 scaleAA;
 
-	// Token: 0x040042A7 RID: 17063
+	// Token: 0x040042A8 RID: 17064
 	public float inflateAA;
 }

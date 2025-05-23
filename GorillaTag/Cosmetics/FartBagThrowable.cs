@@ -9,16 +9,16 @@ namespace GorillaTag.Cosmetics
 	public class FartBagThrowable : MonoBehaviour, IProjectile
 	{
 		// Token: 0x170008C4 RID: 2244
-		// (get) Token: 0x060057FA RID: 22522 RVA: 0x001B1571 File Offset: 0x001AF771
-		// (set) Token: 0x060057FB RID: 22523 RVA: 0x001B1579 File Offset: 0x001AF779
+		// (get) Token: 0x060057FB RID: 22523 RVA: 0x001B1649 File Offset: 0x001AF849
+		// (set) Token: 0x060057FC RID: 22524 RVA: 0x001B1651 File Offset: 0x001AF851
 		public TransferrableObject ParentTransferable { get; set; }
 
 		// Token: 0x1400009A RID: 154
-		// (add) Token: 0x060057FC RID: 22524 RVA: 0x001B1584 File Offset: 0x001AF784
-		// (remove) Token: 0x060057FD RID: 22525 RVA: 0x001B15BC File Offset: 0x001AF7BC
+		// (add) Token: 0x060057FD RID: 22525 RVA: 0x001B165C File Offset: 0x001AF85C
+		// (remove) Token: 0x060057FE RID: 22526 RVA: 0x001B1694 File Offset: 0x001AF894
 		public event Action<IProjectile> OnDeflated;
 
-		// Token: 0x060057FE RID: 22526 RVA: 0x001B15F4 File Offset: 0x001AF7F4
+		// Token: 0x060057FF RID: 22527 RVA: 0x001B16CC File Offset: 0x001AF8CC
 		private void OnEnable()
 		{
 			this.placedOnFloor = false;
@@ -33,7 +33,7 @@ namespace GorillaTag.Cosmetics
 			}
 		}
 
-		// Token: 0x060057FF RID: 22527 RVA: 0x001B1653 File Offset: 0x001AF853
+		// Token: 0x06005800 RID: 22528 RVA: 0x001B172B File Offset: 0x001AF92B
 		private void Update()
 		{
 			if (Time.time - this.timeCreated > this.forceDestroyAfterSec)
@@ -42,7 +42,7 @@ namespace GorillaTag.Cosmetics
 			}
 		}
 
-		// Token: 0x06005800 RID: 22528 RVA: 0x001B1670 File Offset: 0x001AF870
+		// Token: 0x06005801 RID: 22529 RVA: 0x001B1748 File Offset: 0x001AF948
 		public void Launch(Vector3 startPosition, Quaternion startRotation, Vector3 velocity, float scale)
 		{
 			base.transform.position = startPosition;
@@ -53,7 +53,7 @@ namespace GorillaTag.Cosmetics
 			this.InitialPhotonEvent();
 		}
 
-		// Token: 0x06005801 RID: 22529 RVA: 0x001B16CC File Offset: 0x001AF8CC
+		// Token: 0x06005802 RID: 22530 RVA: 0x001B17A4 File Offset: 0x001AF9A4
 		private void InitialPhotonEvent()
 		{
 			this._events = base.gameObject.GetOrAddComponent<RubberDuckEvents>();
@@ -71,7 +71,7 @@ namespace GorillaTag.Cosmetics
 			}
 		}
 
-		// Token: 0x06005802 RID: 22530 RVA: 0x001B17A0 File Offset: 0x001AF9A0
+		// Token: 0x06005803 RID: 22531 RVA: 0x001B1878 File Offset: 0x001AFA78
 		private void OnTriggerEnter(Collider other)
 		{
 			if ((this.handLayerMask.value & (1 << other.gameObject.layer)) != 0)
@@ -89,7 +89,7 @@ namespace GorillaTag.Cosmetics
 			}
 		}
 
-		// Token: 0x06005803 RID: 22531 RVA: 0x001B1828 File Offset: 0x001AFA28
+		// Token: 0x06005804 RID: 22532 RVA: 0x001B1900 File Offset: 0x001AFB00
 		private void OnCollisionEnter(Collision other)
 		{
 			if ((this.floorLayerMask.value & (1 << other.gameObject.layer)) != 0)
@@ -103,7 +103,7 @@ namespace GorillaTag.Cosmetics
 			}
 		}
 
-		// Token: 0x06005804 RID: 22532 RVA: 0x001B18D0 File Offset: 0x001AFAD0
+		// Token: 0x06005805 RID: 22533 RVA: 0x001B19A8 File Offset: 0x001AFBA8
 		private void Deflate()
 		{
 			if (PhotonNetwork.InRoom && this._events != null && this._events.Activate != null)
@@ -113,7 +113,7 @@ namespace GorillaTag.Cosmetics
 			this.DeflateLocal();
 		}
 
-		// Token: 0x06005805 RID: 22533 RVA: 0x001B1940 File Offset: 0x001AFB40
+		// Token: 0x06005806 RID: 22534 RVA: 0x001B1A18 File Offset: 0x001AFC18
 		private void DeflateEvent(int sender, int target, object[] args, PhotonMessageInfoWrapped info)
 		{
 			if (sender != target)
@@ -154,7 +154,7 @@ namespace GorillaTag.Cosmetics
 			}
 		}
 
-		// Token: 0x06005806 RID: 22534 RVA: 0x001B19F0 File Offset: 0x001AFBF0
+		// Token: 0x06005807 RID: 22535 RVA: 0x001B1AC8 File Offset: 0x001AFCC8
 		private void DeflateLocal()
 		{
 			if (this.deflated)
@@ -179,7 +179,7 @@ namespace GorillaTag.Cosmetics
 			base.Invoke("DisableObject", this.destroyWhenDeflateDelay);
 		}
 
-		// Token: 0x06005807 RID: 22535 RVA: 0x001B1A9F File Offset: 0x001AFC9F
+		// Token: 0x06005808 RID: 22536 RVA: 0x001B1B77 File Offset: 0x001AFD77
 		private void DisableObject()
 		{
 			Action<IProjectile> onDeflated = this.OnDeflated;
@@ -190,7 +190,7 @@ namespace GorillaTag.Cosmetics
 			this.deflated = false;
 		}
 
-		// Token: 0x06005808 RID: 22536 RVA: 0x001B1ABC File Offset: 0x001AFCBC
+		// Token: 0x06005809 RID: 22537 RVA: 0x001B1B94 File Offset: 0x001AFD94
 		private void OnDestroy()
 		{
 			if (this._events != null)
@@ -201,60 +201,60 @@ namespace GorillaTag.Cosmetics
 			}
 		}
 
-		// Token: 0x04005D23 RID: 23843
+		// Token: 0x04005D24 RID: 23844
 		[SerializeField]
 		private GameObject deflationEffect;
 
-		// Token: 0x04005D24 RID: 23844
+		// Token: 0x04005D25 RID: 23845
 		[SerializeField]
 		private float destroyWhenDeflateDelay = 3f;
 
-		// Token: 0x04005D25 RID: 23845
+		// Token: 0x04005D26 RID: 23846
 		[SerializeField]
 		private float forceDestroyAfterSec = 10f;
 
-		// Token: 0x04005D26 RID: 23846
+		// Token: 0x04005D27 RID: 23847
 		[SerializeField]
 		private float placementOffset = 0.2f;
 
-		// Token: 0x04005D27 RID: 23847
+		// Token: 0x04005D28 RID: 23848
 		[SerializeField]
 		private UpdateBlendShapeCosmetic updateBlendShapeCosmetic;
 
-		// Token: 0x04005D28 RID: 23848
+		// Token: 0x04005D29 RID: 23849
 		[SerializeField]
 		private LayerMask floorLayerMask;
 
-		// Token: 0x04005D29 RID: 23849
+		// Token: 0x04005D2A RID: 23850
 		[SerializeField]
 		private LayerMask handLayerMask;
 
-		// Token: 0x04005D2A RID: 23850
+		// Token: 0x04005D2B RID: 23851
 		[SerializeField]
 		private Rigidbody rigidbody;
 
-		// Token: 0x04005D2B RID: 23851
+		// Token: 0x04005D2C RID: 23852
 		private bool placedOnFloor;
 
-		// Token: 0x04005D2C RID: 23852
+		// Token: 0x04005D2D RID: 23853
 		private float placedOnFloorTime;
 
-		// Token: 0x04005D2D RID: 23853
+		// Token: 0x04005D2E RID: 23854
 		private float timeCreated;
 
-		// Token: 0x04005D2E RID: 23854
+		// Token: 0x04005D2F RID: 23855
 		private bool deflated;
 
-		// Token: 0x04005D2F RID: 23855
+		// Token: 0x04005D30 RID: 23856
 		private Vector3 handContactPoint;
 
-		// Token: 0x04005D30 RID: 23856
+		// Token: 0x04005D31 RID: 23857
 		private Vector3 handNormalVector;
 
-		// Token: 0x04005D31 RID: 23857
+		// Token: 0x04005D32 RID: 23858
 		private CallLimiter callLimiter = new CallLimiter(10, 2f, 0.5f);
 
-		// Token: 0x04005D34 RID: 23860
+		// Token: 0x04005D35 RID: 23861
 		private RubberDuckEvents _events;
 	}
 }

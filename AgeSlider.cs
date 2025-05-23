@@ -7,8 +7,8 @@ using UnityEngine.Events;
 public class AgeSlider : MonoBehaviour, IBuildValidation
 {
 	// Token: 0x170004CF RID: 1231
-	// (get) Token: 0x06003049 RID: 12361 RVA: 0x000EEA4D File Offset: 0x000ECC4D
-	// (set) Token: 0x0600304A RID: 12362 RVA: 0x000EEA55 File Offset: 0x000ECC55
+	// (get) Token: 0x0600304A RID: 12362 RVA: 0x000EEAF1 File Offset: 0x000ECCF1
+	// (set) Token: 0x0600304B RID: 12363 RVA: 0x000EEAF9 File Offset: 0x000ECCF9
 	public AgeSlider.SliderHeldEvent onHoldComplete
 	{
 		get
@@ -21,25 +21,25 @@ public class AgeSlider : MonoBehaviour, IBuildValidation
 		}
 	}
 
-	// Token: 0x0600304B RID: 12363 RVA: 0x000EEA5E File Offset: 0x000ECC5E
+	// Token: 0x0600304C RID: 12364 RVA: 0x000EEB02 File Offset: 0x000ECD02
 	private void Awake()
 	{
 		this.controllerBehaviour = base.GetComponentInChildren<ControllerBehaviour>(true);
 	}
 
-	// Token: 0x0600304C RID: 12364 RVA: 0x000EEA6D File Offset: 0x000ECC6D
+	// Token: 0x0600304D RID: 12365 RVA: 0x000EEB11 File Offset: 0x000ECD11
 	private void OnEnable()
 	{
 		this.controllerBehaviour.OnAction += this.PostUpdate;
 	}
 
-	// Token: 0x0600304D RID: 12365 RVA: 0x000EEA86 File Offset: 0x000ECC86
+	// Token: 0x0600304E RID: 12366 RVA: 0x000EEB2A File Offset: 0x000ECD2A
 	private void OnDisable()
 	{
 		this.controllerBehaviour.OnAction -= this.PostUpdate;
 	}
 
-	// Token: 0x0600304E RID: 12366 RVA: 0x000EEAA0 File Offset: 0x000ECCA0
+	// Token: 0x0600304F RID: 12367 RVA: 0x000EEB44 File Offset: 0x000ECD44
 	protected void Update()
 	{
 		if (!AgeSlider._ageGateActive)
@@ -65,7 +65,7 @@ public class AgeSlider : MonoBehaviour, IBuildValidation
 		}
 	}
 
-	// Token: 0x0600304F RID: 12367 RVA: 0x000EEBAC File Offset: 0x000ECDAC
+	// Token: 0x06003050 RID: 12368 RVA: 0x000EEC50 File Offset: 0x000ECE50
 	private void PostUpdate()
 	{
 		if (!AgeSlider._ageGateActive)
@@ -86,13 +86,13 @@ public class AgeSlider : MonoBehaviour, IBuildValidation
 		}
 	}
 
-	// Token: 0x06003050 RID: 12368 RVA: 0x000EEC9D File Offset: 0x000ECE9D
+	// Token: 0x06003051 RID: 12369 RVA: 0x000EED41 File Offset: 0x000ECF41
 	public static void ToggleAgeGate(bool state)
 	{
 		AgeSlider._ageGateActive = state;
 	}
 
-	// Token: 0x06003051 RID: 12369 RVA: 0x000EECA5 File Offset: 0x000ECEA5
+	// Token: 0x06003052 RID: 12370 RVA: 0x000EED49 File Offset: 0x000ECF49
 	public bool BuildValidationCheck()
 	{
 		if (this._confirmButton == null)
@@ -103,43 +103,43 @@ public class AgeSlider : MonoBehaviour, IBuildValidation
 		return true;
 	}
 
-	// Token: 0x04003676 RID: 13942
-	private const int MIN_AGE = 13;
-
-	// Token: 0x04003677 RID: 13943
-	[SerializeField]
-	private AgeSlider.SliderHeldEvent m_OnHoldComplete = new AgeSlider.SliderHeldEvent();
-
 	// Token: 0x04003678 RID: 13944
-	[SerializeField]
-	private int _maxAge = 99;
+	private const int MIN_AGE = 13;
 
 	// Token: 0x04003679 RID: 13945
 	[SerializeField]
-	private TMP_Text _ageValueTxt;
+	private AgeSlider.SliderHeldEvent m_OnHoldComplete = new AgeSlider.SliderHeldEvent();
 
 	// Token: 0x0400367A RID: 13946
 	[SerializeField]
-	private GameObject _confirmButton;
+	private int _maxAge = 99;
 
 	// Token: 0x0400367B RID: 13947
 	[SerializeField]
-	private float holdTime = 5f;
+	private TMP_Text _ageValueTxt;
 
 	// Token: 0x0400367C RID: 13948
 	[SerializeField]
-	private LineRenderer progressBar;
+	private GameObject _confirmButton;
 
 	// Token: 0x0400367D RID: 13949
-	private int _currentAge;
+	[SerializeField]
+	private float holdTime = 5f;
 
 	// Token: 0x0400367E RID: 13950
-	private static bool _ageGateActive;
+	[SerializeField]
+	private LineRenderer progressBar;
 
 	// Token: 0x0400367F RID: 13951
-	private float progress;
+	private int _currentAge;
 
 	// Token: 0x04003680 RID: 13952
+	private static bool _ageGateActive;
+
+	// Token: 0x04003681 RID: 13953
+	private float progress;
+
+	// Token: 0x04003682 RID: 13954
 	private ControllerBehaviour controllerBehaviour;
 
 	// Token: 0x02000788 RID: 1928

@@ -9,7 +9,7 @@ namespace GorillaTag.Reactions
 	// Token: 0x02000D4C RID: 3404
 	public class FlameThrowerParticleCollisionHandler : MonoBehaviour
 	{
-		// Token: 0x0600553D RID: 21821 RVA: 0x0019F09C File Offset: 0x0019D29C
+		// Token: 0x0600553E RID: 21822 RVA: 0x0019F174 File Offset: 0x0019D374
 		protected void OnEnable()
 		{
 			if (GorillaComputer.instance == null)
@@ -52,7 +52,7 @@ namespace GorillaTag.Reactions
 			}
 		}
 
-		// Token: 0x0600553E RID: 21822 RVA: 0x0019F214 File Offset: 0x0019D414
+		// Token: 0x0600553F RID: 21823 RVA: 0x0019F2EC File Offset: 0x0019D4EC
 		protected void OnParticleCollision(GameObject other)
 		{
 			if (this._maxParticleHitReactionRate < 1E-05f || !FireManager.hasInstance)
@@ -80,36 +80,36 @@ namespace GorillaTag.Reactions
 			this._lastCollisionTime = num;
 		}
 
-		// Token: 0x04005886 RID: 22662
+		// Token: 0x04005887 RID: 22663
 		[Tooltip("The defaults are numbers for the flamethrower hair dryer.")]
 		private readonly float _maxParticleHitReactionRate = 2f;
 
-		// Token: 0x04005887 RID: 22663
+		// Token: 0x04005888 RID: 22664
 		[Tooltip("Must be in the global object pool and have a tag.")]
 		[SerializeField]
 		private GameObject _prefabToSpawn;
 
-		// Token: 0x04005888 RID: 22664
+		// Token: 0x04005889 RID: 22665
 		[Tooltip("How much to extinguish any hit fire by.")]
 		[SerializeField]
 		private float _extinguishAmount;
 
-		// Token: 0x04005889 RID: 22665
+		// Token: 0x0400588A RID: 22666
 		private ParticleSystem _particleSystem;
 
-		// Token: 0x0400588A RID: 22666
+		// Token: 0x0400588B RID: 22667
 		private List<ParticleCollisionEvent> _collisionEvents;
 
-		// Token: 0x0400588B RID: 22667
+		// Token: 0x0400588C RID: 22668
 		private bool _hasPrefabToSpawn;
 
-		// Token: 0x0400588C RID: 22668
+		// Token: 0x0400588D RID: 22669
 		private bool _isPrefabInPool;
 
-		// Token: 0x0400588D RID: 22669
+		// Token: 0x0400588E RID: 22670
 		private double _lastCollisionTime;
 
-		// Token: 0x0400588E RID: 22670
+		// Token: 0x0400588F RID: 22671
 		private SinglePool _pool;
 	}
 }

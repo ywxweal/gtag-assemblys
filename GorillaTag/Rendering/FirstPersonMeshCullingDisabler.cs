@@ -6,7 +6,7 @@ namespace GorillaTag.Rendering
 	// Token: 0x02000D9A RID: 3482
 	public class FirstPersonMeshCullingDisabler : MonoBehaviour
 	{
-		// Token: 0x06005669 RID: 22121 RVA: 0x001A4CA8 File Offset: 0x001A2EA8
+		// Token: 0x0600566A RID: 22122 RVA: 0x001A4D80 File Offset: 0x001A2F80
 		protected void Awake()
 		{
 			MeshFilter[] componentsInChildren = base.GetComponentsInChildren<MeshFilter>();
@@ -23,7 +23,7 @@ namespace GorillaTag.Rendering
 			}
 		}
 
-		// Token: 0x0600566A RID: 22122 RVA: 0x001A4D0C File Offset: 0x001A2F0C
+		// Token: 0x0600566B RID: 22123 RVA: 0x001A4DE4 File Offset: 0x001A2FE4
 		protected void OnEnable()
 		{
 			Camera main = Camera.main;
@@ -44,10 +44,10 @@ namespace GorillaTag.Rendering
 			}
 		}
 
-		// Token: 0x04005A32 RID: 23090
+		// Token: 0x04005A33 RID: 23091
 		private Mesh[] meshes;
 
-		// Token: 0x04005A33 RID: 23091
+		// Token: 0x04005A34 RID: 23092
 		private Transform[] xforms;
 	}
 }

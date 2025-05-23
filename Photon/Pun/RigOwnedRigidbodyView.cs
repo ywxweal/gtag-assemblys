@@ -9,17 +9,17 @@ namespace Photon.Pun
 	public class RigOwnedRigidbodyView : MonoBehaviourPun, IPunObservable
 	{
 		// Token: 0x1700069E RID: 1694
-		// (get) Token: 0x06004265 RID: 16997 RVA: 0x001328A0 File Offset: 0x00130AA0
-		// (set) Token: 0x06004266 RID: 16998 RVA: 0x001328A8 File Offset: 0x00130AA8
+		// (get) Token: 0x06004266 RID: 16998 RVA: 0x00132978 File Offset: 0x00130B78
+		// (set) Token: 0x06004267 RID: 16999 RVA: 0x00132980 File Offset: 0x00130B80
 		public bool IsMine { get; private set; }
 
-		// Token: 0x06004267 RID: 16999 RVA: 0x001328B1 File Offset: 0x00130AB1
+		// Token: 0x06004268 RID: 17000 RVA: 0x00132989 File Offset: 0x00130B89
 		public void SetIsMine(bool isMine)
 		{
 			this.IsMine = isMine;
 		}
 
-		// Token: 0x06004268 RID: 17000 RVA: 0x001328BA File Offset: 0x00130ABA
+		// Token: 0x06004269 RID: 17001 RVA: 0x00132992 File Offset: 0x00130B92
 		public void Awake()
 		{
 			this.m_Body = base.GetComponent<Rigidbody>();
@@ -27,7 +27,7 @@ namespace Photon.Pun
 			this.m_NetworkRotation = default(Quaternion);
 		}
 
-		// Token: 0x06004269 RID: 17001 RVA: 0x001328E0 File Offset: 0x00130AE0
+		// Token: 0x0600426A RID: 17002 RVA: 0x001329B8 File Offset: 0x00130BB8
 		public void FixedUpdate()
 		{
 			if (!this.IsMine)
@@ -37,7 +37,7 @@ namespace Photon.Pun
 			}
 		}
 
-		// Token: 0x0600426A RID: 17002 RVA: 0x00132960 File Offset: 0x00130B60
+		// Token: 0x0600426B RID: 17003 RVA: 0x00132A38 File Offset: 0x00130C38
 		public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
 		{
 			if (info.Sender != info.photonView.Owner)
@@ -104,31 +104,31 @@ namespace Photon.Pun
 			}
 		}
 
-		// Token: 0x040044BE RID: 17598
+		// Token: 0x040044BF RID: 17599
 		private float m_Distance;
 
-		// Token: 0x040044BF RID: 17599
+		// Token: 0x040044C0 RID: 17600
 		private float m_Angle;
 
-		// Token: 0x040044C0 RID: 17600
+		// Token: 0x040044C1 RID: 17601
 		private Rigidbody m_Body;
 
-		// Token: 0x040044C1 RID: 17601
+		// Token: 0x040044C2 RID: 17602
 		private Vector3 m_NetworkPosition;
 
-		// Token: 0x040044C2 RID: 17602
+		// Token: 0x040044C3 RID: 17603
 		private Quaternion m_NetworkRotation;
 
-		// Token: 0x040044C3 RID: 17603
+		// Token: 0x040044C4 RID: 17604
 		public bool m_SynchronizeVelocity = true;
 
-		// Token: 0x040044C4 RID: 17604
+		// Token: 0x040044C5 RID: 17605
 		public bool m_SynchronizeAngularVelocity;
 
-		// Token: 0x040044C5 RID: 17605
+		// Token: 0x040044C6 RID: 17606
 		public bool m_TeleportEnabled;
 
-		// Token: 0x040044C6 RID: 17606
+		// Token: 0x040044C7 RID: 17607
 		public float m_TeleportIfDistanceGreaterThan = 3f;
 	}
 }

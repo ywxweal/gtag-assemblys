@@ -7,7 +7,7 @@ namespace GorillaTagScripts
 	// Token: 0x02000AD1 RID: 2769
 	public class BucketThrowable : MonoBehaviour
 	{
-		// Token: 0x060042F0 RID: 17136 RVA: 0x001356A0 File Offset: 0x001338A0
+		// Token: 0x060042F1 RID: 17137 RVA: 0x00135778 File Offset: 0x00133978
 		private void OnTriggerEnter(Collider other)
 		{
 			if (other.gameObject.layer == LayerMask.NameToLayer("Gorilla Head"))
@@ -20,7 +20,7 @@ namespace GorillaTagScripts
 			}
 		}
 
-		// Token: 0x060042F1 RID: 17137 RVA: 0x00135704 File Offset: 0x00133904
+		// Token: 0x060042F2 RID: 17138 RVA: 0x001357DC File Offset: 0x001339DC
 		private void TriggerEvent()
 		{
 			UnityAction<bool> onTriggerEntered = this.OnTriggerEntered;
@@ -31,26 +31,26 @@ namespace GorillaTagScripts
 			onTriggerEntered(false);
 		}
 
-		// Token: 0x04004576 RID: 17782
+		// Token: 0x04004577 RID: 17783
 		public GameObject projectilePrefab;
 
-		// Token: 0x04004577 RID: 17783
+		// Token: 0x04004578 RID: 17784
 		[Range(0f, 1f)]
 		public float weightedChance = 1f;
 
-		// Token: 0x04004578 RID: 17784
+		// Token: 0x04004579 RID: 17785
 		public AudioSource audioSource;
 
-		// Token: 0x04004579 RID: 17785
+		// Token: 0x0400457A RID: 17786
 		public AudioClip triggerClip;
 
-		// Token: 0x0400457A RID: 17786
+		// Token: 0x0400457B RID: 17787
 		public bool destroyAfterRelease;
 
-		// Token: 0x0400457B RID: 17787
+		// Token: 0x0400457C RID: 17788
 		public float destroyAfterSeconds = -1f;
 
-		// Token: 0x0400457C RID: 17788
+		// Token: 0x0400457D RID: 17789
 		public UnityAction<bool> OnTriggerEntered;
 	}
 }

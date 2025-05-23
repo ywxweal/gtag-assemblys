@@ -5,7 +5,7 @@ using UnityEngine;
 // Token: 0x0200051F RID: 1311
 public class BuilderTriggerEnable : MonoBehaviour
 {
-	// Token: 0x06001FC0 RID: 8128 RVA: 0x000A05A0 File Offset: 0x0009E7A0
+	// Token: 0x06001FC0 RID: 8128 RVA: 0x000A05C0 File Offset: 0x0009E7C0
 	private void OnTriggerEnter(Collider other)
 	{
 		if (other.attachedRigidbody == null)
@@ -43,7 +43,7 @@ public class BuilderTriggerEnable : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001FC1 RID: 8129 RVA: 0x000A0678 File Offset: 0x0009E878
+	// Token: 0x06001FC1 RID: 8129 RVA: 0x000A0698 File Offset: 0x0009E898
 	private void OnTriggerExit(Collider other)
 	{
 		if (other.attachedRigidbody == null)

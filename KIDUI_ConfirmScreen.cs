@@ -9,7 +9,7 @@ using UnityEngine;
 // Token: 0x0200081E RID: 2078
 public class KIDUI_ConfirmScreen : MonoBehaviour
 {
-	// Token: 0x060032E2 RID: 13026 RVA: 0x000FAC88 File Offset: 0x000F8E88
+	// Token: 0x060032E3 RID: 13027 RVA: 0x000FAD60 File Offset: 0x000F8F60
 	private void Awake()
 	{
 		if (this._emailToConfirmTxt == null)
@@ -30,14 +30,14 @@ public class KIDUI_ConfirmScreen : MonoBehaviour
 		this._cancellationTokenSource = new CancellationTokenSource();
 	}
 
-	// Token: 0x060032E3 RID: 13027 RVA: 0x000FACFA File Offset: 0x000F8EFA
+	// Token: 0x060032E4 RID: 13028 RVA: 0x000FADD2 File Offset: 0x000F8FD2
 	private void OnEnable()
 	{
 		this._confirmButton.interactable = true;
 		this._backButton.interactable = true;
 	}
 
-	// Token: 0x060032E4 RID: 13028 RVA: 0x000FAD14 File Offset: 0x000F8F14
+	// Token: 0x060032E5 RID: 13029 RVA: 0x000FADEC File Offset: 0x000F8FEC
 	public void OnEmailSubmitted(string emailAddress)
 	{
 		this._submittedEmailAddress = emailAddress;
@@ -45,7 +45,7 @@ public class KIDUI_ConfirmScreen : MonoBehaviour
 		base.gameObject.SetActive(true);
 	}
 
-	// Token: 0x060032E5 RID: 13029 RVA: 0x000FAD3C File Offset: 0x000F8F3C
+	// Token: 0x060032E6 RID: 13030 RVA: 0x000FAE14 File Offset: 0x000F9014
 	public void OnConfirmPressed()
 	{
 		KIDUI_ConfirmScreen.<OnConfirmPressed>d__16 <OnConfirmPressed>d__;
@@ -55,7 +55,7 @@ public class KIDUI_ConfirmScreen : MonoBehaviour
 		<OnConfirmPressed>d__.<>t__builder.Start<KIDUI_ConfirmScreen.<OnConfirmPressed>d__16>(ref <OnConfirmPressed>d__);
 	}
 
-	// Token: 0x060032E6 RID: 13030 RVA: 0x000FAD74 File Offset: 0x000F8F74
+	// Token: 0x060032E7 RID: 13031 RVA: 0x000FAE4C File Offset: 0x000F904C
 	public async void OnBackPressed()
 	{
 		GorillaTelemetry.SendMothershipAnalytics(new KIDTelemetryData
@@ -75,14 +75,14 @@ public class KIDUI_ConfirmScreen : MonoBehaviour
 		this._setupScreen.OnStartSetup();
 	}
 
-	// Token: 0x060032E7 RID: 13031 RVA: 0x000FADAB File Offset: 0x000F8FAB
+	// Token: 0x060032E8 RID: 13032 RVA: 0x000FAE83 File Offset: 0x000F9083
 	public void NotifyOfResult(bool success)
 	{
 		this._hasCompletedSendEmailRequest = true;
 		this._emailRequestResult = success;
 	}
 
-	// Token: 0x060032E8 RID: 13032 RVA: 0x000FADBC File Offset: 0x000F8FBC
+	// Token: 0x060032E9 RID: 13033 RVA: 0x000FAE94 File Offset: 0x000F9094
 	private async void ShowErrorScreen()
 	{
 		new StringBuilder();
@@ -93,51 +93,51 @@ public class KIDUI_ConfirmScreen : MonoBehaviour
 		this._errorScreen.ShowErrorScreen("Confirmation Error", this._submittedEmailAddress);
 	}
 
-	// Token: 0x040039A9 RID: 14761
+	// Token: 0x040039AA RID: 14762
 	[SerializeField]
 	private TMP_Text _emailToConfirmTxt;
 
-	// Token: 0x040039AA RID: 14762
+	// Token: 0x040039AB RID: 14763
 	[SerializeField]
 	private KIDUI_MainScreen _mainScreen;
 
-	// Token: 0x040039AB RID: 14763
+	// Token: 0x040039AC RID: 14764
 	[SerializeField]
 	private KIDUI_SetupScreen _setupScreen;
 
-	// Token: 0x040039AC RID: 14764
+	// Token: 0x040039AD RID: 14765
 	[SerializeField]
 	private KIDUI_ErrorScreen _errorScreen;
 
-	// Token: 0x040039AD RID: 14765
+	// Token: 0x040039AE RID: 14766
 	[SerializeField]
 	private KIDUI_EmailSuccess _successScreen;
 
-	// Token: 0x040039AE RID: 14766
+	// Token: 0x040039AF RID: 14767
 	[SerializeField]
 	private KIDUI_AnimatedEllipsis _animatedEllipsis;
 
-	// Token: 0x040039AF RID: 14767
+	// Token: 0x040039B0 RID: 14768
 	[SerializeField]
 	private KIDUIButton _confirmButton;
 
-	// Token: 0x040039B0 RID: 14768
+	// Token: 0x040039B1 RID: 14769
 	[SerializeField]
 	private KIDUIButton _backButton;
 
-	// Token: 0x040039B1 RID: 14769
+	// Token: 0x040039B2 RID: 14770
 	[SerializeField]
 	private int _minimumDelay = 1000;
 
-	// Token: 0x040039B2 RID: 14770
+	// Token: 0x040039B3 RID: 14771
 	private string _submittedEmailAddress;
 
-	// Token: 0x040039B3 RID: 14771
+	// Token: 0x040039B4 RID: 14772
 	private CancellationTokenSource _cancellationTokenSource;
 
-	// Token: 0x040039B4 RID: 14772
+	// Token: 0x040039B5 RID: 14773
 	private bool _hasCompletedSendEmailRequest;
 
-	// Token: 0x040039B5 RID: 14773
+	// Token: 0x040039B6 RID: 14774
 	private bool _emailRequestResult;
 }

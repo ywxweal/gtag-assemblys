@@ -5,7 +5,7 @@ using UnityEngine;
 // Token: 0x020006BA RID: 1722
 public class SyncRigidBodyToMovement : MonoBehaviour
 {
-	// Token: 0x06002AFA RID: 11002 RVA: 0x000D382A File Offset: 0x000D1A2A
+	// Token: 0x06002AFB RID: 11003 RVA: 0x000D38CE File Offset: 0x000D1ACE
 	private void Awake()
 	{
 		this.targetParent = this.targetRigidbody.transform.parent;
@@ -13,7 +13,7 @@ public class SyncRigidBodyToMovement : MonoBehaviour
 		this.targetRigidbody.gameObject.SetActive(false);
 	}
 
-	// Token: 0x06002AFB RID: 11003 RVA: 0x000D3864 File Offset: 0x000D1A64
+	// Token: 0x06002AFC RID: 11004 RVA: 0x000D3908 File Offset: 0x000D1B08
 	private void OnEnable()
 	{
 		this.targetRigidbody.gameObject.SetActive(true);
@@ -21,23 +21,23 @@ public class SyncRigidBodyToMovement : MonoBehaviour
 		this.targetRigidbody.transform.rotation = base.transform.rotation;
 	}
 
-	// Token: 0x06002AFC RID: 11004 RVA: 0x000D38B8 File Offset: 0x000D1AB8
+	// Token: 0x06002AFD RID: 11005 RVA: 0x000D395C File Offset: 0x000D1B5C
 	private void OnDisable()
 	{
 		this.targetRigidbody.gameObject.SetActive(false);
 	}
 
-	// Token: 0x06002AFD RID: 11005 RVA: 0x000D38CC File Offset: 0x000D1ACC
+	// Token: 0x06002AFE RID: 11006 RVA: 0x000D3970 File Offset: 0x000D1B70
 	private void FixedUpdate()
 	{
 		this.targetRigidbody.velocity = (base.transform.position - this.targetRigidbody.position) / Time.fixedDeltaTime;
 		this.targetRigidbody.angularVelocity = QuaternionUtil.ToAngularVector(Quaternion.Inverse(this.targetRigidbody.rotation) * base.transform.rotation) / Time.fixedDeltaTime;
 	}
 
-	// Token: 0x04002FF2 RID: 12274
+	// Token: 0x04002FF4 RID: 12276
 	[SerializeField]
 	private Rigidbody targetRigidbody;
 
-	// Token: 0x04002FF3 RID: 12275
+	// Token: 0x04002FF5 RID: 12277
 	private Transform targetParent;
 }

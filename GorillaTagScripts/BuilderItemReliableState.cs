@@ -9,7 +9,7 @@ namespace GorillaTagScripts
 	// Token: 0x02000ADD RID: 2781
 	public class BuilderItemReliableState : MonoBehaviour, IPunObservable
 	{
-		// Token: 0x0600435F RID: 17247 RVA: 0x001378DC File Offset: 0x00135ADC
+		// Token: 0x06004360 RID: 17248 RVA: 0x001379B4 File Offset: 0x00135BB4
 		public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
 		{
 			if (stream.IsWriting)
@@ -45,19 +45,19 @@ namespace GorillaTagScripts
 			this.dirty = true;
 		}
 
-		// Token: 0x040045E4 RID: 17892
+		// Token: 0x040045E5 RID: 17893
 		public Vector3 rightHandAttachPos = Vector3.zero;
 
-		// Token: 0x040045E5 RID: 17893
+		// Token: 0x040045E6 RID: 17894
 		public Quaternion rightHandAttachRot = Quaternion.identity;
 
-		// Token: 0x040045E6 RID: 17894
+		// Token: 0x040045E7 RID: 17895
 		public Vector3 leftHandAttachPos = Vector3.zero;
 
-		// Token: 0x040045E7 RID: 17895
+		// Token: 0x040045E8 RID: 17896
 		public Quaternion leftHandAttachRot = Quaternion.identity;
 
-		// Token: 0x040045E8 RID: 17896
+		// Token: 0x040045E9 RID: 17897
 		public bool dirty;
 	}
 }

@@ -8,7 +8,7 @@ namespace OculusSampleFramework
 	public class InteractableRegistry : MonoBehaviour
 	{
 		// Token: 0x1700074E RID: 1870
-		// (get) Token: 0x06004AE6 RID: 19174 RVA: 0x00164224 File Offset: 0x00162424
+		// (get) Token: 0x06004AE7 RID: 19175 RVA: 0x001642FC File Offset: 0x001624FC
 		public static HashSet<Interactable> Interactables
 		{
 			get
@@ -17,19 +17,19 @@ namespace OculusSampleFramework
 			}
 		}
 
-		// Token: 0x06004AE7 RID: 19175 RVA: 0x0016422B File Offset: 0x0016242B
+		// Token: 0x06004AE8 RID: 19176 RVA: 0x00164303 File Offset: 0x00162503
 		public static void RegisterInteractable(Interactable interactable)
 		{
 			InteractableRegistry.Interactables.Add(interactable);
 		}
 
-		// Token: 0x06004AE8 RID: 19176 RVA: 0x00164239 File Offset: 0x00162439
+		// Token: 0x06004AE9 RID: 19177 RVA: 0x00164311 File Offset: 0x00162511
 		public static void UnregisterInteractable(Interactable interactable)
 		{
 			InteractableRegistry.Interactables.Remove(interactable);
 		}
 
-		// Token: 0x04004D9A RID: 19866
+		// Token: 0x04004D9B RID: 19867
 		public static HashSet<Interactable> _interactables = new HashSet<Interactable>();
 	}
 }

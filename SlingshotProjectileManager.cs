@@ -5,7 +5,7 @@ using UnityEngine;
 // Token: 0x020003B2 RID: 946
 public class SlingshotProjectileManager : MonoBehaviour
 {
-	// Token: 0x06001628 RID: 5672 RVA: 0x0006BA13 File Offset: 0x00069C13
+	// Token: 0x06001628 RID: 5672 RVA: 0x0006BA33 File Offset: 0x00069C33
 	protected void Awake()
 	{
 		if (SlingshotProjectileManager.hasInstance && SlingshotProjectileManager.instance != this)
@@ -16,13 +16,13 @@ public class SlingshotProjectileManager : MonoBehaviour
 		SlingshotProjectileManager.SetInstance(this);
 	}
 
-	// Token: 0x06001629 RID: 5673 RVA: 0x0006BA36 File Offset: 0x00069C36
+	// Token: 0x06001629 RID: 5673 RVA: 0x0006BA56 File Offset: 0x00069C56
 	public static void CreateManager()
 	{
 		SlingshotProjectileManager.SetInstance(new GameObject("SlingshotProjectileManager").AddComponent<SlingshotProjectileManager>());
 	}
 
-	// Token: 0x0600162A RID: 5674 RVA: 0x0006BA4C File Offset: 0x00069C4C
+	// Token: 0x0600162A RID: 5674 RVA: 0x0006BA6C File Offset: 0x00069C6C
 	private static void SetInstance(SlingshotProjectileManager manager)
 	{
 		SlingshotProjectileManager.instance = manager;
@@ -33,7 +33,7 @@ public class SlingshotProjectileManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x0600162B RID: 5675 RVA: 0x0006BA67 File Offset: 0x00069C67
+	// Token: 0x0600162B RID: 5675 RVA: 0x0006BA87 File Offset: 0x00069C87
 	public static void RegisterSP(SlingshotProjectile sP)
 	{
 		if (!SlingshotProjectileManager.hasInstance)
@@ -46,7 +46,7 @@ public class SlingshotProjectileManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x0600162C RID: 5676 RVA: 0x0006BA8D File Offset: 0x00069C8D
+	// Token: 0x0600162C RID: 5676 RVA: 0x0006BAAD File Offset: 0x00069CAD
 	public static void UnregisterSP(SlingshotProjectile sP)
 	{
 		if (!SlingshotProjectileManager.hasInstance)
@@ -59,7 +59,7 @@ public class SlingshotProjectileManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x0600162D RID: 5677 RVA: 0x0006BAB4 File Offset: 0x00069CB4
+	// Token: 0x0600162D RID: 5677 RVA: 0x0006BAD4 File Offset: 0x00069CD4
 	public void Update()
 	{
 		for (int i = 0; i < SlingshotProjectileManager.allsP.Count; i++)

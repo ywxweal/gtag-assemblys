@@ -6,7 +6,7 @@ using Photon.Pun;
 // Token: 0x02000484 RID: 1156
 public class CasualGameMode : GorillaGameManager
 {
-	// Token: 0x06001C4E RID: 7246 RVA: 0x0008AF4B File Offset: 0x0008914B
+	// Token: 0x06001C4E RID: 7246 RVA: 0x0008AF6B File Offset: 0x0008916B
 	public override int MyMatIndex(NetPlayer player)
 	{
 		if (this.GetMyMaterial == null)
@@ -43,13 +43,13 @@ public class CasualGameMode : GorillaGameManager
 		return GameModeType.Casual;
 	}
 
-	// Token: 0x06001C54 RID: 7252 RVA: 0x0008AF63 File Offset: 0x00089163
+	// Token: 0x06001C54 RID: 7252 RVA: 0x0008AF83 File Offset: 0x00089183
 	public override void AddFusionDataBehaviour(NetworkObject behaviour)
 	{
 		behaviour.AddBehaviour<CasualGameModeData>();
 	}
 
-	// Token: 0x06001C55 RID: 7253 RVA: 0x0008AF6C File Offset: 0x0008916C
+	// Token: 0x06001C55 RID: 7253 RVA: 0x0008AF8C File Offset: 0x0008918C
 	public override string GameModeName()
 	{
 		return "CASUAL";

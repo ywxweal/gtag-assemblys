@@ -11,7 +11,7 @@ using UnityEngine;
 public class KIDMessagingController : MonoBehaviour
 {
 	// Token: 0x17000516 RID: 1302
-	// (get) Token: 0x06003224 RID: 12836 RVA: 0x000F7A6F File Offset: 0x000F5C6F
+	// (get) Token: 0x06003225 RID: 12837 RVA: 0x000F7B47 File Offset: 0x000F5D47
 	private static string HasShownConfirmationScreenPlayerPref
 	{
 		get
@@ -20,13 +20,13 @@ public class KIDMessagingController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06003225 RID: 12837 RVA: 0x000F7A87 File Offset: 0x000F5C87
+	// Token: 0x06003226 RID: 12838 RVA: 0x000F7B5F File Offset: 0x000F5D5F
 	public void OnConfirmPressed()
 	{
 		this._closeMessageBox = true;
 	}
 
-	// Token: 0x06003226 RID: 12838 RVA: 0x000F7A90 File Offset: 0x000F5C90
+	// Token: 0x06003227 RID: 12839 RVA: 0x000F7B68 File Offset: 0x000F5D68
 	private void Awake()
 	{
 		if (KIDMessagingController.instance != null)
@@ -38,13 +38,13 @@ public class KIDMessagingController : MonoBehaviour
 		KIDMessagingController.instance = this;
 	}
 
-	// Token: 0x06003227 RID: 12839 RVA: 0x000F7AB6 File Offset: 0x000F5CB6
+	// Token: 0x06003228 RID: 12840 RVA: 0x000F7B8E File Offset: 0x000F5D8E
 	private bool ShouldShowConfirmationScreen()
 	{
 		return !KIDManager.CurrentSession.IsDefault && PlayerPrefs.GetInt(KIDMessagingController.HasShownConfirmationScreenPlayerPref, 0) != 1;
 	}
 
-	// Token: 0x06003228 RID: 12840 RVA: 0x000F7AD8 File Offset: 0x000F5CD8
+	// Token: 0x06003229 RID: 12841 RVA: 0x000F7BB0 File Offset: 0x000F5DB0
 	private async Task StartKIDConfirmationScreenInternal(CancellationToken token)
 	{
 		if (this._confirmationMessageBox == null)
@@ -81,7 +81,7 @@ public class KIDMessagingController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06003229 RID: 12841 RVA: 0x000F7B24 File Offset: 0x000F5D24
+	// Token: 0x0600322A RID: 12842 RVA: 0x000F7BFC File Offset: 0x000F5DFC
 	public static async Task StartKIDConfirmationScreen(CancellationToken token)
 	{
 		KIDMessagingController kidmessagingController = KIDMessagingController.instance;
@@ -109,7 +109,7 @@ public class KIDMessagingController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x0600322A RID: 12842 RVA: 0x000F7B68 File Offset: 0x000F5D68
+	// Token: 0x0600322B RID: 12843 RVA: 0x000F7C40 File Offset: 0x000F5E40
 	private static async Task<string> GetSetupConfirmationMessage()
 	{
 		int state = 0;
@@ -131,7 +131,7 @@ public class KIDMessagingController : MonoBehaviour
 		return bodyText;
 	}
 
-	// Token: 0x0600322B RID: 12843 RVA: 0x000F7BA4 File Offset: 0x000F5DA4
+	// Token: 0x0600322C RID: 12844 RVA: 0x000F7C7C File Offset: 0x000F5E7C
 	private static string GetConfirmMessageFromTitleDataJson(string jsonTxt)
 	{
 		if (string.IsNullOrEmpty(jsonTxt))
@@ -153,25 +153,25 @@ public class KIDMessagingController : MonoBehaviour
 		return kidmessagingTitleData.KIDSetupConfirmation;
 	}
 
-	// Token: 0x040038D8 RID: 14552
+	// Token: 0x040038D9 RID: 14553
 	private const string SHOWN_CONFIRMATION_SCREEN_PREFIX = "hasShownKIDConfirmationScreen-";
 
-	// Token: 0x040038D9 RID: 14553
+	// Token: 0x040038DA RID: 14554
 	private const string CONFIRMATION_HEADER = "Thank you";
 
-	// Token: 0x040038DA RID: 14554
+	// Token: 0x040038DB RID: 14555
 	private const string CONFIRMATION_BODY = "k-ID setup is now complete. Thanks and have fun in Gorilla World!";
 
-	// Token: 0x040038DB RID: 14555
+	// Token: 0x040038DC RID: 14556
 	private const string CONFIRMATION_BUTTON = "Continue";
 
-	// Token: 0x040038DC RID: 14556
+	// Token: 0x040038DD RID: 14557
 	private static KIDMessagingController instance;
 
-	// Token: 0x040038DD RID: 14557
+	// Token: 0x040038DE RID: 14558
 	[SerializeField]
 	private MessageBox _confirmationMessageBox;
 
-	// Token: 0x040038DE RID: 14558
+	// Token: 0x040038DF RID: 14559
 	private bool _closeMessageBox;
 }

@@ -7,10 +7,10 @@ namespace GorillaTagScripts.ModIO
 	[Serializable]
 	public class ZoneEjectLocations
 	{
-		// Token: 0x04004948 RID: 18760
+		// Token: 0x04004949 RID: 18761
 		public GTZone ejectZone = GTZone.none;
 
-		// Token: 0x04004949 RID: 18761
+		// Token: 0x0400494A RID: 18762
 		public GameObject[] ejectLocations;
 	}
 }

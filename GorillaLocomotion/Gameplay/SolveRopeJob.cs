@@ -10,7 +10,7 @@ namespace GorillaLocomotion.Gameplay
 	[BurstCompile]
 	public struct SolveRopeJob : IJob
 	{
-		// Token: 0x06005191 RID: 20881 RVA: 0x0018BDCC File Offset: 0x00189FCC
+		// Token: 0x06005192 RID: 20882 RVA: 0x0018BEA4 File Offset: 0x0018A0A4
 		public void Execute()
 		{
 			this.Simulate();
@@ -20,7 +20,7 @@ namespace GorillaLocomotion.Gameplay
 			}
 		}
 
-		// Token: 0x06005192 RID: 20882 RVA: 0x0018BDF4 File Offset: 0x00189FF4
+		// Token: 0x06005193 RID: 20883 RVA: 0x0018BECC File Offset: 0x0018A0CC
 		private void Simulate()
 		{
 			for (int i = 0; i < this.nodes.Length; i++)
@@ -35,7 +35,7 @@ namespace GorillaLocomotion.Gameplay
 			}
 		}
 
-		// Token: 0x06005193 RID: 20883 RVA: 0x0018BE80 File Offset: 0x0018A080
+		// Token: 0x06005194 RID: 20884 RVA: 0x0018BF58 File Offset: 0x0018A158
 		private void ApplyConstraint()
 		{
 			BurstRopeNode burstRopeNode = this.nodes[0];
@@ -64,23 +64,23 @@ namespace GorillaLocomotion.Gameplay
 			}
 		}
 
-		// Token: 0x040055B5 RID: 21941
+		// Token: 0x040055B6 RID: 21942
 		[ReadOnly]
 		public float fixedDeltaTime;
 
-		// Token: 0x040055B6 RID: 21942
+		// Token: 0x040055B7 RID: 21943
 		[WriteOnly]
 		public NativeArray<BurstRopeNode> nodes;
 
-		// Token: 0x040055B7 RID: 21943
+		// Token: 0x040055B8 RID: 21944
 		[ReadOnly]
 		public Vector3 gravity;
 
-		// Token: 0x040055B8 RID: 21944
+		// Token: 0x040055B9 RID: 21945
 		[ReadOnly]
 		public Vector3 rootPos;
 
-		// Token: 0x040055B9 RID: 21945
+		// Token: 0x040055BA RID: 21946
 		[ReadOnly]
 		public float nodeDistance;
 	}

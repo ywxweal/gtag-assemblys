@@ -6,7 +6,7 @@ namespace GorillaTag.Audio
 	// Token: 0x02000D94 RID: 3476
 	public class LoudSpeakerActivator : MonoBehaviour
 	{
-		// Token: 0x06005647 RID: 22087 RVA: 0x001A40F7 File Offset: 0x001A22F7
+		// Token: 0x06005648 RID: 22088 RVA: 0x001A41CF File Offset: 0x001A23CF
 		private void Awake()
 		{
 			this._isLocal = this.IsParentedToLocalRig();
@@ -16,7 +16,7 @@ namespace GorillaTag.Audio
 			}
 		}
 
-		// Token: 0x06005648 RID: 22088 RVA: 0x001A4124 File Offset: 0x001A2324
+		// Token: 0x06005649 RID: 22089 RVA: 0x001A41FC File Offset: 0x001A23FC
 		private bool IsParentedToLocalRig()
 		{
 			if (VRRigCache.Instance.localRig == null)
@@ -35,13 +35,13 @@ namespace GorillaTag.Audio
 			return false;
 		}
 
-		// Token: 0x06005649 RID: 22089 RVA: 0x001A417D File Offset: 0x001A237D
+		// Token: 0x0600564A RID: 22090 RVA: 0x001A4255 File Offset: 0x001A2455
 		public void SetRecorder(GTRecorder recorder)
 		{
 			this._recorder = recorder;
 		}
 
-		// Token: 0x0600564A RID: 22090 RVA: 0x001A4188 File Offset: 0x001A2388
+		// Token: 0x0600564B RID: 22091 RVA: 0x001A4260 File Offset: 0x001A2460
 		public void StartLocalBroadcast()
 		{
 			if (!this._isLocal)
@@ -71,7 +71,7 @@ namespace GorillaTag.Audio
 			}
 		}
 
-		// Token: 0x0600564B RID: 22091 RVA: 0x001A4280 File Offset: 0x001A2480
+		// Token: 0x0600564C RID: 22092 RVA: 0x001A4358 File Offset: 0x001A2558
 		public void StopLocalBroadcast()
 		{
 			if (!this._isLocal)
@@ -101,27 +101,27 @@ namespace GorillaTag.Audio
 			}
 		}
 
-		// Token: 0x04005A17 RID: 23063
+		// Token: 0x04005A18 RID: 23064
 		public float PitchAdjustment = 1f;
 
-		// Token: 0x04005A18 RID: 23064
+		// Token: 0x04005A19 RID: 23065
 		public float VolumeAdjustment = 2.5f;
 
-		// Token: 0x04005A19 RID: 23065
-		public bool IsBroadcasting;
-
 		// Token: 0x04005A1A RID: 23066
-		[SerializeField]
-		private LoudSpeakerNetwork _network;
+		public bool IsBroadcasting;
 
 		// Token: 0x04005A1B RID: 23067
 		[SerializeField]
-		private GTRecorder _recorder;
+		private LoudSpeakerNetwork _network;
 
 		// Token: 0x04005A1C RID: 23068
-		private bool _isLocal;
+		[SerializeField]
+		private GTRecorder _recorder;
 
 		// Token: 0x04005A1D RID: 23069
+		private bool _isLocal;
+
+		// Token: 0x04005A1E RID: 23070
 		private VRRig _nonlocalRig;
 	}
 }

@@ -6,7 +6,7 @@ using UnityEngine;
 public class GRCollectibleDispenser : MonoBehaviour
 {
 	// Token: 0x17000362 RID: 866
-	// (get) Token: 0x0600230D RID: 8973 RVA: 0x000AF5B8 File Offset: 0x000AD7B8
+	// (get) Token: 0x0600230D RID: 8973 RVA: 0x000AF5D8 File Offset: 0x000AD7D8
 	public bool CollectibleAlreadySpawned
 	{
 		get
@@ -16,7 +16,7 @@ public class GRCollectibleDispenser : MonoBehaviour
 	}
 
 	// Token: 0x17000363 RID: 867
-	// (get) Token: 0x0600230E RID: 8974 RVA: 0x000AF5C8 File Offset: 0x000AD7C8
+	// (get) Token: 0x0600230E RID: 8974 RVA: 0x000AF5E8 File Offset: 0x000AD7E8
 	public bool ReadyToDispenseNewCollectible
 	{
 		get
@@ -27,7 +27,7 @@ public class GRCollectibleDispenser : MonoBehaviour
 		}
 	}
 
-	// Token: 0x0600230F RID: 8975 RVA: 0x000AF632 File Offset: 0x000AD832
+	// Token: 0x0600230F RID: 8975 RVA: 0x000AF652 File Offset: 0x000AD852
 	private void OnEnable()
 	{
 		if (GhostReactor.instance != null)
@@ -36,7 +36,7 @@ public class GRCollectibleDispenser : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06002310 RID: 8976 RVA: 0x000AF651 File Offset: 0x000AD851
+	// Token: 0x06002310 RID: 8976 RVA: 0x000AF671 File Offset: 0x000AD871
 	private void OnDisable()
 	{
 		if (GhostReactor.instance != null)
@@ -45,7 +45,7 @@ public class GRCollectibleDispenser : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06002311 RID: 8977 RVA: 0x000AF674 File Offset: 0x000AD874
+	// Token: 0x06002311 RID: 8977 RVA: 0x000AF694 File Offset: 0x000AD894
 	public void RequestDispenseCollectible()
 	{
 		if (this.ReadyToDispenseNewCollectible)
@@ -59,7 +59,7 @@ public class GRCollectibleDispenser : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06002312 RID: 8978 RVA: 0x000AF6FC File Offset: 0x000AD8FC
+	// Token: 0x06002312 RID: 8978 RVA: 0x000AF71C File Offset: 0x000AD91C
 	public void OnCollectibleConsumed()
 	{
 		if (this.currentCollectible != null && this.currentCollectible.IsNotNull())
@@ -83,7 +83,7 @@ public class GRCollectibleDispenser : MonoBehaviour
 		this.audioSource.PlayOneShot(this.collectibleTakenClip, this.collectibleTakenVolume);
 	}
 
-	// Token: 0x06002313 RID: 8979 RVA: 0x000AF800 File Offset: 0x000ADA00
+	// Token: 0x06002313 RID: 8979 RVA: 0x000AF820 File Offset: 0x000ADA20
 	public void GetSpawnedCollectible(GRCollectible collectible)
 	{
 		this.currentCollectible = collectible;

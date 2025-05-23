@@ -7,7 +7,7 @@ using UnityEngine;
 // Token: 0x020007B2 RID: 1970
 public class KIDAgeAppeal : MonoBehaviour
 {
-	// Token: 0x060030C6 RID: 12486 RVA: 0x000EFCD0 File Offset: 0x000EDED0
+	// Token: 0x060030C7 RID: 12487 RVA: 0x000EFD74 File Offset: 0x000EDF74
 	public void ShowAgeAppealScreen()
 	{
 		this._ageSlider = base.GetComponentInChildren<AgeSliderWithProgressBar>(true);
@@ -17,7 +17,7 @@ public class KIDAgeAppeal : MonoBehaviour
 		this._monkeLoader.SetActive(false);
 	}
 
-	// Token: 0x060030C7 RID: 12487 RVA: 0x000EFD10 File Offset: 0x000EDF10
+	// Token: 0x060030C8 RID: 12488 RVA: 0x000EFDB4 File Offset: 0x000EDFB4
 	public async void OnNewAgeConfirmed()
 	{
 		this._inputsContainer.SetActive(false);
@@ -55,22 +55,22 @@ public class KIDAgeAppeal : MonoBehaviour
 		}
 	}
 
-	// Token: 0x04003722 RID: 14114
+	// Token: 0x04003723 RID: 14115
 	[SerializeField]
 	private TMP_Text _ageText;
 
-	// Token: 0x04003723 RID: 14115
+	// Token: 0x04003724 RID: 14116
 	[SerializeField]
 	private KIDUI_AgeAppealEmailScreen _ageAppealEmailScreen;
 
-	// Token: 0x04003724 RID: 14116
+	// Token: 0x04003725 RID: 14117
 	[SerializeField]
 	private GameObject _inputsContainer;
 
-	// Token: 0x04003725 RID: 14117
+	// Token: 0x04003726 RID: 14118
 	[SerializeField]
 	private GameObject _monkeLoader;
 
-	// Token: 0x04003726 RID: 14118
+	// Token: 0x04003727 RID: 14119
 	private AgeSliderWithProgressBar _ageSlider;
 }

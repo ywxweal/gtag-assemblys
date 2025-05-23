@@ -9,13 +9,13 @@ using UnityEngine.Events;
 // Token: 0x020004FB RID: 1275
 public class BuilderPiecePrivatePlot : MonoBehaviour
 {
-	// Token: 0x06001F06 RID: 7942 RVA: 0x00099EB6 File Offset: 0x000980B6
+	// Token: 0x06001F06 RID: 7942 RVA: 0x00099ED6 File Offset: 0x000980D6
 	private void Awake()
 	{
 		this.Init();
 	}
 
-	// Token: 0x06001F07 RID: 7943 RVA: 0x00099EC0 File Offset: 0x000980C0
+	// Token: 0x06001F07 RID: 7943 RVA: 0x00099EE0 File Offset: 0x000980E0
 	private void Init()
 	{
 		if (this.initDone)
@@ -36,7 +36,7 @@ public class BuilderPiecePrivatePlot : MonoBehaviour
 		this.privatePlotIndex = -1;
 	}
 
-	// Token: 0x06001F08 RID: 7944 RVA: 0x00099F48 File Offset: 0x00098148
+	// Token: 0x06001F08 RID: 7944 RVA: 0x00099F68 File Offset: 0x00098168
 	private void Start()
 	{
 		if (this.piece != null && this.piece.GetTable() != null)
@@ -68,7 +68,7 @@ public class BuilderPiecePrivatePlot : MonoBehaviour
 		this.OnZoneChanged();
 	}
 
-	// Token: 0x06001F09 RID: 7945 RVA: 0x0009A104 File Offset: 0x00098304
+	// Token: 0x06001F09 RID: 7945 RVA: 0x0009A124 File Offset: 0x00098324
 	private void OnDestroy()
 	{
 		if (this.piece != null && this.piece.GetTable() != null)
@@ -82,7 +82,7 @@ public class BuilderPiecePrivatePlot : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001F0A RID: 7946 RVA: 0x0009A188 File Offset: 0x00098388
+	// Token: 0x06001F0A RID: 7946 RVA: 0x0009A1A8 File Offset: 0x000983A8
 	private void OnZoneChanged()
 	{
 		bool flag = ZoneManagement.instance.IsZoneActive(this.piece.GetTable().tableZone);
@@ -109,14 +109,14 @@ public class BuilderPiecePrivatePlot : MonoBehaviour
 		this.inBuilderZone = flag;
 	}
 
-	// Token: 0x06001F0B RID: 7947 RVA: 0x0009A254 File Offset: 0x00098454
+	// Token: 0x06001F0B RID: 7947 RVA: 0x0009A274 File Offset: 0x00098474
 	private void OnLocalPlayerClaimedPlot(bool claim)
 	{
 		this.doesLocalPlayerOwnAPlot = claim;
 		this.UpdateVisuals();
 	}
 
-	// Token: 0x06001F0C RID: 7948 RVA: 0x0009A264 File Offset: 0x00098464
+	// Token: 0x06001F0C RID: 7948 RVA: 0x0009A284 File Offset: 0x00098484
 	public void UpdatePlot()
 	{
 		if (BuilderPieceInteractor.instance == null || BuilderPieceInteractor.instance.heldChainLength == null || BuilderPieceInteractor.instance.heldChainLength.Length < 2)
@@ -179,7 +179,7 @@ public class BuilderPiecePrivatePlot : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001F0D RID: 7949 RVA: 0x0009A49C File Offset: 0x0009869C
+	// Token: 0x06001F0D RID: 7949 RVA: 0x0009A4BC File Offset: 0x000986BC
 	public void RecountPlotCost()
 	{
 		this.Init();
@@ -187,28 +187,28 @@ public class BuilderPiecePrivatePlot : MonoBehaviour
 		this.UpdateVisuals();
 	}
 
-	// Token: 0x06001F0E RID: 7950 RVA: 0x0009A4BB File Offset: 0x000986BB
+	// Token: 0x06001F0E RID: 7950 RVA: 0x0009A4DB File Offset: 0x000986DB
 	public void OnPieceAttachedToPlot(BuilderPiece attachPiece)
 	{
 		this.AddChainResourcesToCount(attachPiece, true);
 		this.UpdateVisuals();
 	}
 
-	// Token: 0x06001F0F RID: 7951 RVA: 0x0009A4CB File Offset: 0x000986CB
+	// Token: 0x06001F0F RID: 7951 RVA: 0x0009A4EB File Offset: 0x000986EB
 	public void OnPieceDetachedFromPlot(BuilderPiece detachPiece)
 	{
 		this.AddChainResourcesToCount(detachPiece, false);
 		this.UpdateVisuals();
 	}
 
-	// Token: 0x06001F10 RID: 7952 RVA: 0x0009A4DB File Offset: 0x000986DB
+	// Token: 0x06001F10 RID: 7952 RVA: 0x0009A4FB File Offset: 0x000986FB
 	public void ChangeAttachedPieceCount(int delta)
 	{
 		this.attachedPieceCount += delta;
 		this.UpdateVisuals();
 	}
 
-	// Token: 0x06001F11 RID: 7953 RVA: 0x0009A4F4 File Offset: 0x000986F4
+	// Token: 0x06001F11 RID: 7953 RVA: 0x0009A514 File Offset: 0x00098714
 	public void AddChainResourcesToCount(BuilderPiece chain, bool attach)
 	{
 		if (chain == null)
@@ -251,20 +251,20 @@ public class BuilderPiecePrivatePlot : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001F12 RID: 7954 RVA: 0x0009A5F5 File Offset: 0x000987F5
+	// Token: 0x06001F12 RID: 7954 RVA: 0x0009A615 File Offset: 0x00098815
 	public void ClaimPlotForPlayerNumber(int player)
 	{
 		this.owningPlayerActorNumber = player;
 		this.SetPlotState(BuilderPiecePrivatePlot.PlotState.Occupied);
 	}
 
-	// Token: 0x06001F13 RID: 7955 RVA: 0x0009A605 File Offset: 0x00098805
+	// Token: 0x06001F13 RID: 7955 RVA: 0x0009A625 File Offset: 0x00098825
 	public int GetOwnerActorNumber()
 	{
 		return this.owningPlayerActorNumber;
 	}
 
-	// Token: 0x06001F14 RID: 7956 RVA: 0x0009A610 File Offset: 0x00098810
+	// Token: 0x06001F14 RID: 7956 RVA: 0x0009A630 File Offset: 0x00098830
 	public void ClearPlot()
 	{
 		this.Init();
@@ -276,19 +276,19 @@ public class BuilderPiecePrivatePlot : MonoBehaviour
 		this.SetPlotState(BuilderPiecePrivatePlot.PlotState.Vacant);
 	}
 
-	// Token: 0x06001F15 RID: 7957 RVA: 0x0009A64D File Offset: 0x0009884D
+	// Token: 0x06001F15 RID: 7957 RVA: 0x0009A66D File Offset: 0x0009886D
 	public void FreePlot()
 	{
 		this.SetPlotState(BuilderPiecePrivatePlot.PlotState.Vacant);
 	}
 
-	// Token: 0x06001F16 RID: 7958 RVA: 0x0009A656 File Offset: 0x00098856
+	// Token: 0x06001F16 RID: 7958 RVA: 0x0009A676 File Offset: 0x00098876
 	public bool IsPlotClaimed()
 	{
 		return this.plotState > BuilderPiecePrivatePlot.PlotState.Vacant;
 	}
 
-	// Token: 0x06001F17 RID: 7959 RVA: 0x0009A664 File Offset: 0x00098864
+	// Token: 0x06001F17 RID: 7959 RVA: 0x0009A684 File Offset: 0x00098884
 	public bool IsChainUnderCapacity(BuilderPiece chain)
 	{
 		if (chain == null)
@@ -321,7 +321,7 @@ public class BuilderPiecePrivatePlot : MonoBehaviour
 		return true;
 	}
 
-	// Token: 0x06001F18 RID: 7960 RVA: 0x0009A718 File Offset: 0x00098918
+	// Token: 0x06001F18 RID: 7960 RVA: 0x0009A738 File Offset: 0x00098938
 	public bool AddPieceCostToArray(BuilderPiece addedPiece, int[] array)
 	{
 		if (addedPiece == null)
@@ -346,13 +346,13 @@ public class BuilderPiecePrivatePlot : MonoBehaviour
 		return true;
 	}
 
-	// Token: 0x06001F19 RID: 7961 RVA: 0x0009A7D4 File Offset: 0x000989D4
+	// Token: 0x06001F19 RID: 7961 RVA: 0x0009A7F4 File Offset: 0x000989F4
 	public bool CanPlayerAttachToPlot(int actorNumber)
 	{
 		return (this.plotState == BuilderPiecePrivatePlot.PlotState.Occupied && this.owningPlayerActorNumber == actorNumber) || (this.plotState == BuilderPiecePrivatePlot.PlotState.Vacant && !this.piece.GetTable().DoesPlayerOwnPlot(actorNumber));
 	}
 
-	// Token: 0x06001F1A RID: 7962 RVA: 0x0009A808 File Offset: 0x00098A08
+	// Token: 0x06001F1A RID: 7962 RVA: 0x0009A828 File Offset: 0x00098A28
 	public bool CanPlayerGrabFromPlot(int actorNumber, Vector3 worldPosition)
 	{
 		if (this.owningPlayerActorNumber == actorNumber || this.plotState == BuilderPiecePrivatePlot.PlotState.Vacant)
@@ -372,7 +372,7 @@ public class BuilderPiecePrivatePlot : MonoBehaviour
 		return false;
 	}
 
-	// Token: 0x06001F1B RID: 7963 RVA: 0x0009A870 File Offset: 0x00098A70
+	// Token: 0x06001F1B RID: 7963 RVA: 0x0009A890 File Offset: 0x00098A90
 	private void SetPlotState(BuilderPiecePrivatePlot.PlotState newState)
 	{
 		this.plotState = newState;
@@ -416,7 +416,7 @@ public class BuilderPiecePrivatePlot : MonoBehaviour
 		this.UpdateVisuals();
 	}
 
-	// Token: 0x06001F1C RID: 7964 RVA: 0x0009A9C4 File Offset: 0x00098BC4
+	// Token: 0x06001F1C RID: 7964 RVA: 0x0009A9E4 File Offset: 0x00098BE4
 	public bool IsLocationWithinPlotExtents(Vector3 worldPosition)
 	{
 		if (!this.buildAreaBounds.Contains(worldPosition))
@@ -429,13 +429,13 @@ public class BuilderPiecePrivatePlot : MonoBehaviour
 		return vector.x >= vector3.x && vector.x <= vector2.x && vector.y >= vector3.y && vector.y <= vector2.y && vector.z >= vector3.z && vector.z <= vector2.z;
 	}
 
-	// Token: 0x06001F1D RID: 7965 RVA: 0x0009AA98 File Offset: 0x00098C98
+	// Token: 0x06001F1D RID: 7965 RVA: 0x0009AAB8 File Offset: 0x00098CB8
 	public void OnAvailableResourceChange()
 	{
 		this.UpdateVisuals();
 	}
 
-	// Token: 0x06001F1E RID: 7966 RVA: 0x0009AAA0 File Offset: 0x00098CA0
+	// Token: 0x06001F1E RID: 7966 RVA: 0x0009AAC0 File Offset: 0x00098CC0
 	private void UpdateVisuals()
 	{
 		if (this.usedResources == null || this.piece.GetTable() == null)
@@ -490,7 +490,7 @@ public class BuilderPiecePrivatePlot : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001F1F RID: 7967 RVA: 0x0009ABBC File Offset: 0x00098DBC
+	// Token: 0x06001F1F RID: 7967 RVA: 0x0009ABDC File Offset: 0x00098DDC
 	private void UpdateVisualsForOwner()
 	{
 		bool flag = true;
@@ -531,7 +531,7 @@ public class BuilderPiecePrivatePlot : MonoBehaviour
 		this.SetBorderColor(this.placementAllowedColor);
 	}
 
-	// Token: 0x06001F20 RID: 7968 RVA: 0x0009ACA8 File Offset: 0x00098EA8
+	// Token: 0x06001F20 RID: 7968 RVA: 0x0009ACC8 File Offset: 0x00098EC8
 	private void SetBorderColor(Color color)
 	{
 		this.borderMeshes[0].GetPropertyBlock(this.materialProps);

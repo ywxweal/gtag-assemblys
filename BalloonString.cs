@@ -5,7 +5,7 @@ using UnityEngine;
 // Token: 0x02000397 RID: 919
 public class BalloonString : MonoBehaviour, IGorillaSliceableSimple
 {
-	// Token: 0x0600155C RID: 5468 RVA: 0x000686E4 File Offset: 0x000668E4
+	// Token: 0x0600155C RID: 5468 RVA: 0x00068704 File Offset: 0x00066904
 	private void Awake()
 	{
 		this.lineRenderer = base.GetComponent<LineRenderer>();
@@ -24,14 +24,14 @@ public class BalloonString : MonoBehaviour, IGorillaSliceableSimple
 		}
 	}
 
-	// Token: 0x0600155D RID: 5469 RVA: 0x000687B4 File Offset: 0x000669B4
+	// Token: 0x0600155D RID: 5469 RVA: 0x000687D4 File Offset: 0x000669D4
 	private void UpdateDynamics()
 	{
 		this.vertices[0] = this.startPositionXf.position;
 		this.vertices[this.vertices.Count - 1] = this.endPositionXf.position;
 	}
 
-	// Token: 0x0600155E RID: 5470 RVA: 0x000687F0 File Offset: 0x000669F0
+	// Token: 0x0600155E RID: 5470 RVA: 0x00068810 File Offset: 0x00066A10
 	private void UpdateRenderPositions()
 	{
 		this.lineRenderer.SetPosition(0, this.startPositionXf.transform.position);
@@ -50,7 +50,7 @@ public class BalloonString : MonoBehaviour, IGorillaSliceableSimple
 		GorillaSlicerSimpleManager.UnregisterSliceable(this, GorillaSlicerSimpleManager.UpdateStep.LateUpdate);
 	}
 
-	// Token: 0x06001561 RID: 5473 RVA: 0x0006882A File Offset: 0x00066A2A
+	// Token: 0x06001561 RID: 5473 RVA: 0x0006884A File Offset: 0x00066A4A
 	public void SliceUpdate()
 	{
 		if (this.startPositionXf != null && this.endPositionXf != null)

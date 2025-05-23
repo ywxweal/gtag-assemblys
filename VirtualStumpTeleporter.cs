@@ -7,7 +7,7 @@ using UnityEngine;
 // Token: 0x0200073D RID: 1853
 public class VirtualStumpTeleporter : MonoBehaviour, IBuildValidation
 {
-	// Token: 0x06002E50 RID: 11856 RVA: 0x000E74B5 File Offset: 0x000E56B5
+	// Token: 0x06002E51 RID: 11857 RVA: 0x000E7559 File Offset: 0x000E5759
 	public bool BuildValidationCheck()
 	{
 		if (this.mySerializer == null && base.transform.parent.parent.GetComponentInChildren<VirtualStumpTeleporterSerializer>() == null)
@@ -18,7 +18,7 @@ public class VirtualStumpTeleporter : MonoBehaviour, IBuildValidation
 		return true;
 	}
 
-	// Token: 0x06002E51 RID: 11857 RVA: 0x000E74F0 File Offset: 0x000E56F0
+	// Token: 0x06002E52 RID: 11858 RVA: 0x000E7594 File Offset: 0x000E5794
 	public void OnEnable()
 	{
 		if (this.mySerializer == null)
@@ -37,26 +37,26 @@ public class VirtualStumpTeleporter : MonoBehaviour, IBuildValidation
 		UGCPermissionManager.SubscribeToUGCDisabled(new Action(this.OnUGCDisabled));
 	}
 
-	// Token: 0x06002E52 RID: 11858 RVA: 0x000E755D File Offset: 0x000E575D
+	// Token: 0x06002E53 RID: 11859 RVA: 0x000E7601 File Offset: 0x000E5801
 	public void OnDisable()
 	{
 		UGCPermissionManager.UnsubscribeFromUGCEnabled(new Action(this.OnUGCEnabled));
 		UGCPermissionManager.UnsubscribeFromUGCDisabled(new Action(this.OnUGCDisabled));
 	}
 
-	// Token: 0x06002E53 RID: 11859 RVA: 0x000E7581 File Offset: 0x000E5781
+	// Token: 0x06002E54 RID: 11860 RVA: 0x000E7625 File Offset: 0x000E5825
 	private void OnUGCEnabled()
 	{
 		this.ShowHandHolds();
 	}
 
-	// Token: 0x06002E54 RID: 11860 RVA: 0x000E7589 File Offset: 0x000E5789
+	// Token: 0x06002E55 RID: 11861 RVA: 0x000E762D File Offset: 0x000E582D
 	private void OnUGCDisabled()
 	{
 		this.HideHandHolds();
 	}
 
-	// Token: 0x06002E55 RID: 11861 RVA: 0x000E7594 File Offset: 0x000E5794
+	// Token: 0x06002E56 RID: 11862 RVA: 0x000E7638 File Offset: 0x000E5838
 	public void OnTriggerEnter(Collider other)
 	{
 		if (UGCPermissionManager.IsUGCDisabled || this.teleporting || CustomMapManager.WaitingForRoomJoin || CustomMapManager.WaitingForDisconnect)
@@ -70,7 +70,7 @@ public class VirtualStumpTeleporter : MonoBehaviour, IBuildValidation
 		}
 	}
 
-	// Token: 0x06002E56 RID: 11862 RVA: 0x000E75EC File Offset: 0x000E57EC
+	// Token: 0x06002E57 RID: 11863 RVA: 0x000E7690 File Offset: 0x000E5890
 	public void OnTriggerStay(Collider other)
 	{
 		if (UGCPermissionManager.IsUGCDisabled)
@@ -88,7 +88,7 @@ public class VirtualStumpTeleporter : MonoBehaviour, IBuildValidation
 		}
 	}
 
-	// Token: 0x06002E57 RID: 11863 RVA: 0x000E7658 File Offset: 0x000E5858
+	// Token: 0x06002E58 RID: 11864 RVA: 0x000E76FC File Offset: 0x000E58FC
 	public void OnTriggerExit(Collider other)
 	{
 		if (UGCPermissionManager.IsUGCDisabled)
@@ -102,7 +102,7 @@ public class VirtualStumpTeleporter : MonoBehaviour, IBuildValidation
 		}
 	}
 
-	// Token: 0x06002E58 RID: 11864 RVA: 0x000E7690 File Offset: 0x000E5890
+	// Token: 0x06002E59 RID: 11865 RVA: 0x000E7734 File Offset: 0x000E5934
 	private void ShowCountdownText()
 	{
 		if (UGCPermissionManager.IsUGCDisabled)
@@ -123,7 +123,7 @@ public class VirtualStumpTeleporter : MonoBehaviour, IBuildValidation
 		}
 	}
 
-	// Token: 0x06002E59 RID: 11865 RVA: 0x000E770C File Offset: 0x000E590C
+	// Token: 0x06002E5A RID: 11866 RVA: 0x000E77B0 File Offset: 0x000E59B0
 	private void HideCountdownText()
 	{
 		if (!this.countdownTexts.IsNullOrEmpty<TMP_Text>())
@@ -139,7 +139,7 @@ public class VirtualStumpTeleporter : MonoBehaviour, IBuildValidation
 		}
 	}
 
-	// Token: 0x06002E5A RID: 11866 RVA: 0x000E7770 File Offset: 0x000E5970
+	// Token: 0x06002E5B RID: 11867 RVA: 0x000E7814 File Offset: 0x000E5A14
 	private void UpdateCountdownText()
 	{
 		if (UGCPermissionManager.IsUGCDisabled)
@@ -160,7 +160,7 @@ public class VirtualStumpTeleporter : MonoBehaviour, IBuildValidation
 		}
 	}
 
-	// Token: 0x06002E5B RID: 11867 RVA: 0x000E77E8 File Offset: 0x000E59E8
+	// Token: 0x06002E5C RID: 11868 RVA: 0x000E788C File Offset: 0x000E5A8C
 	public void TeleportPlayer()
 	{
 		if (UGCPermissionManager.IsUGCDisabled)
@@ -174,7 +174,7 @@ public class VirtualStumpTeleporter : MonoBehaviour, IBuildValidation
 		}
 	}
 
-	// Token: 0x06002E5C RID: 11868 RVA: 0x000E7836 File Offset: 0x000E5A36
+	// Token: 0x06002E5D RID: 11869 RVA: 0x000E78DA File Offset: 0x000E5ADA
 	private void FinishTeleport(bool success = true)
 	{
 		if (this.teleporting)
@@ -184,7 +184,7 @@ public class VirtualStumpTeleporter : MonoBehaviour, IBuildValidation
 		}
 	}
 
-	// Token: 0x06002E5D RID: 11869 RVA: 0x000E7854 File Offset: 0x000E5A54
+	// Token: 0x06002E5E RID: 11870 RVA: 0x000E78F8 File Offset: 0x000E5AF8
 	private void HideHandHolds()
 	{
 		foreach (GameObject gameObject in this.handHoldObjects)
@@ -196,7 +196,7 @@ public class VirtualStumpTeleporter : MonoBehaviour, IBuildValidation
 		}
 	}
 
-	// Token: 0x06002E5E RID: 11870 RVA: 0x000E788C File Offset: 0x000E5A8C
+	// Token: 0x06002E5F RID: 11871 RVA: 0x000E7930 File Offset: 0x000E5B30
 	private void ShowHandHolds()
 	{
 		if (UGCPermissionManager.IsUGCDisabled)
@@ -212,31 +212,31 @@ public class VirtualStumpTeleporter : MonoBehaviour, IBuildValidation
 		}
 	}
 
-	// Token: 0x040034D3 RID: 13523
+	// Token: 0x040034D5 RID: 13525
 	[SerializeField]
 	private short teleporterIndex;
 
-	// Token: 0x040034D4 RID: 13524
+	// Token: 0x040034D6 RID: 13526
 	[SerializeField]
 	private float stayInTriggerDuration = 3f;
 
-	// Token: 0x040034D5 RID: 13525
+	// Token: 0x040034D7 RID: 13527
 	[SerializeField]
 	private TMP_Text[] countdownTexts;
 
-	// Token: 0x040034D6 RID: 13526
+	// Token: 0x040034D8 RID: 13528
 	[SerializeField]
 	private GameObject[] handHoldObjects;
 
-	// Token: 0x040034D7 RID: 13527
+	// Token: 0x040034D9 RID: 13529
 	private VirtualStumpTeleporterSerializer mySerializer;
 
-	// Token: 0x040034D8 RID: 13528
+	// Token: 0x040034DA RID: 13530
 	private bool teleporting;
 
-	// Token: 0x040034D9 RID: 13529
+	// Token: 0x040034DB RID: 13531
 	private float triggerEntryTime = -1f;
 
-	// Token: 0x040034DA RID: 13530
+	// Token: 0x040034DC RID: 13532
 	public GTZone entrancePoint = GTZone.arcade;
 }

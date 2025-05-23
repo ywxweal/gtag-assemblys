@@ -4,7 +4,7 @@ using UnityEngine;
 // Token: 0x020009A2 RID: 2466
 public static class MatrixUtils
 {
-	// Token: 0x06003B29 RID: 15145 RVA: 0x0011AA80 File Offset: 0x00118C80
+	// Token: 0x06003B2A RID: 15146 RVA: 0x0011AB58 File Offset: 0x00118D58
 	public static void MultiplyXYZ3x4(ref Matrix4x4 m, ref Vector4 point)
 	{
 		float x = point.x;
@@ -15,7 +15,7 @@ public static class MatrixUtils
 		point.z = (float)((double)m.m20 * (double)x + (double)m.m21 * (double)y + (double)m.m22 * (double)z) + m.m23;
 	}
 
-	// Token: 0x06003B2A RID: 15146 RVA: 0x0011AB2C File Offset: 0x00118D2C
+	// Token: 0x06003B2B RID: 15147 RVA: 0x0011AC04 File Offset: 0x00118E04
 	public static void MultiplyXYZ(ref Matrix4x4 m, ref Vector4 point)
 	{
 		float x = point.x;
@@ -30,7 +30,7 @@ public static class MatrixUtils
 		point.z *= num;
 	}
 
-	// Token: 0x06003B2B RID: 15147 RVA: 0x0011AC38 File Offset: 0x00118E38
+	// Token: 0x06003B2C RID: 15148 RVA: 0x0011AD10 File Offset: 0x00118F10
 	public static void Clear(ref Matrix4x4 m)
 	{
 		m.m00 = 0f;
@@ -51,7 +51,7 @@ public static class MatrixUtils
 		m.m33 = 0f;
 	}
 
-	// Token: 0x06003B2C RID: 15148 RVA: 0x0011ACF8 File Offset: 0x00118EF8
+	// Token: 0x06003B2D RID: 15149 RVA: 0x0011ADD0 File Offset: 0x00118FD0
 	public static void Copy(ref Matrix4x4 from, ref Matrix4x4 to)
 	{
 		to.m00 = from.m00;

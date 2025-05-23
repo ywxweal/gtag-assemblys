@@ -9,7 +9,7 @@ using UnityEngine;
 public class GhostReactorShiftManager : MonoBehaviour
 {
 	// Token: 0x1700035C RID: 860
-	// (get) Token: 0x060022C5 RID: 8901 RVA: 0x000AE5E2 File Offset: 0x000AC7E2
+	// (get) Token: 0x060022C5 RID: 8901 RVA: 0x000AE602 File Offset: 0x000AC802
 	public bool ShiftActive
 	{
 		get
@@ -19,7 +19,7 @@ public class GhostReactorShiftManager : MonoBehaviour
 	}
 
 	// Token: 0x1700035D RID: 861
-	// (get) Token: 0x060022C6 RID: 8902 RVA: 0x000AE5EA File Offset: 0x000AC7EA
+	// (get) Token: 0x060022C6 RID: 8902 RVA: 0x000AE60A File Offset: 0x000AC80A
 	public double ShiftStartNetworkTime
 	{
 		get
@@ -29,7 +29,7 @@ public class GhostReactorShiftManager : MonoBehaviour
 	}
 
 	// Token: 0x1700035E RID: 862
-	// (get) Token: 0x060022C7 RID: 8903 RVA: 0x000AE5F2 File Offset: 0x000AC7F2
+	// (get) Token: 0x060022C7 RID: 8903 RVA: 0x000AE612 File Offset: 0x000AC812
 	public bool LocalPlayerInside
 	{
 		get
@@ -38,7 +38,7 @@ public class GhostReactorShiftManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060022C8 RID: 8904 RVA: 0x000AE5FC File Offset: 0x000AC7FC
+	// Token: 0x060022C8 RID: 8904 RVA: 0x000AE61C File Offset: 0x000AC81C
 	public void RefreshShiftStatsDisplay()
 	{
 		this.shiftStatsText.text = string.Concat(new string[]
@@ -52,31 +52,31 @@ public class GhostReactorShiftManager : MonoBehaviour
 		});
 	}
 
-	// Token: 0x060022C9 RID: 8905 RVA: 0x000AE670 File Offset: 0x000AC870
+	// Token: 0x060022C9 RID: 8905 RVA: 0x000AE690 File Offset: 0x000AC890
 	public void StartShiftButtonPressed()
 	{
 		this.RequestShiftStart();
 	}
 
-	// Token: 0x060022CA RID: 8906 RVA: 0x000AE678 File Offset: 0x000AC878
+	// Token: 0x060022CA RID: 8906 RVA: 0x000AE698 File Offset: 0x000AC898
 	public void RequestShiftStart()
 	{
 		GhostReactorManager.instance.RequestShiftStart();
 	}
 
-	// Token: 0x060022CB RID: 8907 RVA: 0x000AE684 File Offset: 0x000AC884
+	// Token: 0x060022CB RID: 8907 RVA: 0x000AE6A4 File Offset: 0x000AC8A4
 	public void EndShift()
 	{
 		GhostReactorManager.instance.RequestShiftEnd();
 	}
 
-	// Token: 0x060022CC RID: 8908 RVA: 0x000AE690 File Offset: 0x000AC890
+	// Token: 0x060022CC RID: 8908 RVA: 0x000AE6B0 File Offset: 0x000AC8B0
 	public void ClearEntities()
 	{
 		Debug.LogError("Need to re-implement whatever this was doing");
 	}
 
-	// Token: 0x060022CD RID: 8909 RVA: 0x000AE69C File Offset: 0x000AC89C
+	// Token: 0x060022CD RID: 8909 RVA: 0x000AE6BC File Offset: 0x000AC8BC
 	public void OnShiftStarted(double shiftStartTime)
 	{
 		this.shiftStarted = true;
@@ -87,7 +87,7 @@ public class GhostReactorShiftManager : MonoBehaviour
 		this.prevCountDownTotal = this.shiftDurationMinutes * 60f;
 	}
 
-	// Token: 0x060022CE RID: 8910 RVA: 0x000AE6F8 File Offset: 0x000AC8F8
+	// Token: 0x060022CE RID: 8910 RVA: 0x000AE718 File Offset: 0x000AC918
 	public void OnShiftEnded()
 	{
 		this.shiftStarted = false;
@@ -100,7 +100,7 @@ public class GhostReactorShiftManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060022CF RID: 8911 RVA: 0x000AE764 File Offset: 0x000AC964
+	// Token: 0x060022CF RID: 8911 RVA: 0x000AE784 File Offset: 0x000AC984
 	private void Update()
 	{
 		double num = PhotonNetwork.Time - this.shiftStartNetworkTime;
@@ -114,7 +114,7 @@ public class GhostReactorShiftManager : MonoBehaviour
 		this.prevCountDownTotal = num2;
 	}
 
-	// Token: 0x060022D0 RID: 8912 RVA: 0x000AE7C9 File Offset: 0x000AC9C9
+	// Token: 0x060022D0 RID: 8912 RVA: 0x000AE7E9 File Offset: 0x000AC9E9
 	private void AuthorityUpdate(float countDownTotal)
 	{
 		if (PhotonNetwork.InRoom && GameEntityManager.instance.IsAuthority() && this.shiftStarted && countDownTotal <= 0f)
@@ -123,7 +123,7 @@ public class GhostReactorShiftManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060022D1 RID: 8913 RVA: 0x000AE7FC File Offset: 0x000AC9FC
+	// Token: 0x060022D1 RID: 8913 RVA: 0x000AE81C File Offset: 0x000ACA1C
 	private void SharedUpdate(float countDownTotal)
 	{
 		if (this.shiftStarted)
@@ -166,7 +166,7 @@ public class GhostReactorShiftManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060022D2 RID: 8914 RVA: 0x000AE9A3 File Offset: 0x000ACBA3
+	// Token: 0x060022D2 RID: 8914 RVA: 0x000AE9C3 File Offset: 0x000ACBC3
 	private void LocalPlayerOutOfBounds()
 	{
 		if (this.localPlayerInside)
@@ -178,7 +178,7 @@ public class GhostReactorShiftManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060022D3 RID: 8915 RVA: 0x000AE9E0 File Offset: 0x000ACBE0
+	// Token: 0x060022D3 RID: 8915 RVA: 0x000AEA00 File Offset: 0x000ACC00
 	public void RevealJudgment(int evaluation)
 	{
 		if (evaluation <= 0)
@@ -207,14 +207,14 @@ public class GhostReactorShiftManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060022D4 RID: 8916 RVA: 0x000AEA7C File Offset: 0x000ACC7C
+	// Token: 0x060022D4 RID: 8916 RVA: 0x000AEA9C File Offset: 0x000ACC9C
 	public void ResetJudgment()
 	{
 		this.shiftJugmentText.text = "";
 		this.wrongStumpGoo.SetActive(false);
 	}
 
-	// Token: 0x060022D5 RID: 8917 RVA: 0x000AEA9A File Offset: 0x000ACC9A
+	// Token: 0x060022D5 RID: 8917 RVA: 0x000AEABA File Offset: 0x000ACCBA
 	private void OnTriggerEnter(Collider other)
 	{
 		if (other == GTPlayer.Instance.headCollider)
@@ -223,7 +223,7 @@ public class GhostReactorShiftManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060022D6 RID: 8918 RVA: 0x000AEAB8 File Offset: 0x000ACCB8
+	// Token: 0x060022D6 RID: 8918 RVA: 0x000AEAD8 File Offset: 0x000ACCD8
 	private void OnTriggerExit(Collider other)
 	{
 		if (other == GTPlayer.Instance.headCollider)

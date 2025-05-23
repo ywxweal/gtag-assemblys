@@ -8,7 +8,7 @@ namespace BuildSafe
 	public static class Reflection
 	{
 		// Token: 0x17000727 RID: 1831
-		// (get) Token: 0x06004A28 RID: 18984 RVA: 0x00161AE4 File Offset: 0x0015FCE4
+		// (get) Token: 0x06004A29 RID: 18985 RVA: 0x00161BBC File Offset: 0x0015FDBC
 		public static Assembly[] AllAssemblies
 		{
 			get
@@ -18,7 +18,7 @@ namespace BuildSafe
 		}
 
 		// Token: 0x17000728 RID: 1832
-		// (get) Token: 0x06004A29 RID: 18985 RVA: 0x00161AEB File Offset: 0x0015FCEB
+		// (get) Token: 0x06004A2A RID: 18986 RVA: 0x00161BC3 File Offset: 0x0015FDC3
 		public static Type[] AllTypes
 		{
 			get
@@ -27,14 +27,14 @@ namespace BuildSafe
 			}
 		}
 
-		// Token: 0x06004A2A RID: 18986 RVA: 0x00161AF2 File Offset: 0x0015FCF2
+		// Token: 0x06004A2B RID: 18987 RVA: 0x00161BCA File Offset: 0x0015FDCA
 		static Reflection()
 		{
 			Reflection.PreFetchAllAssemblies();
 			Reflection.PreFetchAllTypes();
 		}
 
-		// Token: 0x06004A2B RID: 18987 RVA: 0x00161B00 File Offset: 0x0015FD00
+		// Token: 0x06004A2C RID: 18988 RVA: 0x00161BD8 File Offset: 0x0015FDD8
 		private static Assembly[] PreFetchAllAssemblies()
 		{
 			if (Reflection.gAssemblyCache != null)
@@ -46,7 +46,7 @@ namespace BuildSafe
 				select a).ToArray<Assembly>();
 		}
 
-		// Token: 0x06004A2C RID: 18988 RVA: 0x00161B54 File Offset: 0x0015FD54
+		// Token: 0x06004A2D RID: 18989 RVA: 0x00161C2C File Offset: 0x0015FE2C
 		private static Type[] PreFetchAllTypes()
 		{
 			if (Reflection.gTypeCache != null)
@@ -58,7 +58,7 @@ namespace BuildSafe
 				select t).ToArray<Type>();
 		}
 
-		// Token: 0x06004A2D RID: 18989 RVA: 0x00161BC8 File Offset: 0x0015FDC8
+		// Token: 0x06004A2E RID: 18990 RVA: 0x00161CA0 File Offset: 0x0015FEA0
 		public static MethodInfo[] GetMethodsWithAttribute<T>() where T : Attribute
 		{
 			return (from m in Reflection.AllTypes.SelectMany((Type t) => t.GetRuntimeMethods())
@@ -66,10 +66,10 @@ namespace BuildSafe
 				select m).ToArray<MethodInfo>();
 		}
 
-		// Token: 0x04004D04 RID: 19716
+		// Token: 0x04004D05 RID: 19717
 		private static Assembly[] gAssemblyCache;
 
-		// Token: 0x04004D05 RID: 19717
+		// Token: 0x04004D06 RID: 19718
 		private static Type[] gTypeCache;
 	}
 }

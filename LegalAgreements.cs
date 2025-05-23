@@ -15,11 +15,11 @@ using UnityEngine.UI;
 public class LegalAgreements : MonoBehaviour
 {
 	// Token: 0x17000533 RID: 1331
-	// (get) Token: 0x06003397 RID: 13207 RVA: 0x000FE6CE File Offset: 0x000FC8CE
-	// (set) Token: 0x06003398 RID: 13208 RVA: 0x000FE6D5 File Offset: 0x000FC8D5
+	// (get) Token: 0x06003398 RID: 13208 RVA: 0x000FE7A6 File Offset: 0x000FC9A6
+	// (set) Token: 0x06003399 RID: 13209 RVA: 0x000FE7AD File Offset: 0x000FC9AD
 	public static LegalAgreements instance { get; private set; }
 
-	// Token: 0x06003399 RID: 13209 RVA: 0x000FE6E0 File Offset: 0x000FC8E0
+	// Token: 0x0600339A RID: 13210 RVA: 0x000FE7B8 File Offset: 0x000FC9B8
 	private void Awake()
 	{
 		if (LegalAgreements.instance != null)
@@ -35,7 +35,7 @@ public class LegalAgreements : MonoBehaviour
 		base.enabled = false;
 	}
 
-	// Token: 0x0600339A RID: 13210 RVA: 0x000FE744 File Offset: 0x000FC944
+	// Token: 0x0600339B RID: 13211 RVA: 0x000FE81C File Offset: 0x000FCA1C
 	private void Update()
 	{
 		if (!this.legalAgreementsStarted)
@@ -78,7 +78,7 @@ public class LegalAgreements : MonoBehaviour
 		}
 	}
 
-	// Token: 0x0600339B RID: 13211 RVA: 0x000FE8FC File Offset: 0x000FCAFC
+	// Token: 0x0600339C RID: 13212 RVA: 0x000FE9D4 File Offset: 0x000FCBD4
 	public async Task StartLegalAgreements()
 	{
 		if (!this.legalAgreementsStarted)
@@ -151,13 +151,13 @@ public class LegalAgreements : MonoBehaviour
 		}
 	}
 
-	// Token: 0x0600339C RID: 13212 RVA: 0x000FE93F File Offset: 0x000FCB3F
+	// Token: 0x0600339D RID: 13213 RVA: 0x000FEA17 File Offset: 0x000FCC17
 	public void OnAccepted(int currentAge)
 	{
 		this._accepted = true;
 	}
 
-	// Token: 0x0600339D RID: 13213 RVA: 0x000FE948 File Offset: 0x000FCB48
+	// Token: 0x0600339E RID: 13214 RVA: 0x000FEA20 File Offset: 0x000FCC20
 	private async Task WaitForAcknowledgement()
 	{
 		this._accepted = false;
@@ -168,7 +168,7 @@ public class LegalAgreements : MonoBehaviour
 		this._accepted = false;
 	}
 
-	// Token: 0x0600339E RID: 13214 RVA: 0x000FE98C File Offset: 0x000FCB8C
+	// Token: 0x0600339F RID: 13215 RVA: 0x000FEA64 File Offset: 0x000FCC64
 	private async Task<bool> UpdateText(LegalAgreementTextAsset asset, string version)
 	{
 		this.optional = asset.optional;
@@ -183,7 +183,7 @@ public class LegalAgreements : MonoBehaviour
 		return flag;
 	}
 
-	// Token: 0x0600339F RID: 13215 RVA: 0x000FE9E0 File Offset: 0x000FCBE0
+	// Token: 0x060033A0 RID: 13216 RVA: 0x000FEAB8 File Offset: 0x000FCCB8
 	public async Task<bool> UpdateTextFromPlayFabTitleData(string key, string version, TMP_Text target)
 	{
 		string text = key + "_" + version;
@@ -206,20 +206,20 @@ public class LegalAgreements : MonoBehaviour
 		return flag;
 	}
 
-	// Token: 0x060033A0 RID: 13216 RVA: 0x000FEA3B File Offset: 0x000FCC3B
+	// Token: 0x060033A1 RID: 13217 RVA: 0x000FEB13 File Offset: 0x000FCD13
 	private void OnPlayFabError(PlayFabError error)
 	{
 		this.state = -1;
 	}
 
-	// Token: 0x060033A1 RID: 13217 RVA: 0x000FEA44 File Offset: 0x000FCC44
+	// Token: 0x060033A2 RID: 13218 RVA: 0x000FEB1C File Offset: 0x000FCD1C
 	private void OnTitleDataReceived(string obj)
 	{
 		this.cachedText = obj;
 		this.state = 1;
 	}
 
-	// Token: 0x060033A2 RID: 13218 RVA: 0x000FEA54 File Offset: 0x000FCC54
+	// Token: 0x060033A3 RID: 13219 RVA: 0x000FEB2C File Offset: 0x000FCD2C
 	private async Task<string> GetTitleDataAsync(string key)
 	{
 		int state = 0;
@@ -241,7 +241,7 @@ public class LegalAgreements : MonoBehaviour
 		return (state == 1) ? result : null;
 	}
 
-	// Token: 0x060033A3 RID: 13219 RVA: 0x000FEA98 File Offset: 0x000FCC98
+	// Token: 0x060033A4 RID: 13220 RVA: 0x000FEB70 File Offset: 0x000FCD70
 	private async Task<Dictionary<string, string>> GetAcceptedAgreements(LegalAgreementTextAsset[] agreements)
 	{
 		int state = 0;
@@ -266,7 +266,7 @@ public class LegalAgreements : MonoBehaviour
 		return returnValue;
 	}
 
-	// Token: 0x060033A4 RID: 13220 RVA: 0x000FEADC File Offset: 0x000FCCDC
+	// Token: 0x060033A5 RID: 13221 RVA: 0x000FEBB4 File Offset: 0x000FCDB4
 	private async Task SubmitAcceptedAgreements(Dictionary<string, string> agreements)
 	{
 		int state = 0;
@@ -286,89 +286,89 @@ public class LegalAgreements : MonoBehaviour
 		}
 	}
 
-	// Token: 0x04003A8A RID: 14986
+	// Token: 0x04003A8B RID: 14987
 	private static string SCROLL_TO_END_MESSAGE = "<b>Scroll to the bottom</b> to continue.";
 
-	// Token: 0x04003A8B RID: 14987
+	// Token: 0x04003A8C RID: 14988
 	[Header("Scroll Behavior")]
 	[SerializeField]
 	private float _minScrollSpeed = 0.02f;
 
-	// Token: 0x04003A8C RID: 14988
+	// Token: 0x04003A8D RID: 14989
 	[SerializeField]
 	private float _maxScrollSpeed = 3f;
 
-	// Token: 0x04003A8D RID: 14989
+	// Token: 0x04003A8E RID: 14990
 	[SerializeField]
 	private float _scrollInterpTime = 3f;
 
-	// Token: 0x04003A8E RID: 14990
+	// Token: 0x04003A8F RID: 14991
 	[SerializeField]
 	private AnimationCurve _scrollInterpCurve = AnimationCurve.Linear(0f, 0f, 1f, 1f);
 
-	// Token: 0x04003A8F RID: 14991
+	// Token: 0x04003A90 RID: 14992
 	private ControllerBehaviour controllerBehaviour;
-
-	// Token: 0x04003A91 RID: 14993
-	[SerializeField]
-	private Transform uiParent;
 
 	// Token: 0x04003A92 RID: 14994
 	[SerializeField]
-	private TMP_Text tmpBody;
+	private Transform uiParent;
 
 	// Token: 0x04003A93 RID: 14995
 	[SerializeField]
-	private TMP_Text tmpTitle;
+	private TMP_Text tmpBody;
 
 	// Token: 0x04003A94 RID: 14996
 	[SerializeField]
-	private Scrollbar scrollBar;
+	private TMP_Text tmpTitle;
 
 	// Token: 0x04003A95 RID: 14997
 	[SerializeField]
-	private LegalAgreementTextAsset[] legalAgreementScreens;
+	private Scrollbar scrollBar;
 
 	// Token: 0x04003A96 RID: 14998
 	[SerializeField]
-	private KIDUIButton _pressAndHoldToConfirmButton;
+	private LegalAgreementTextAsset[] legalAgreementScreens;
 
 	// Token: 0x04003A97 RID: 14999
 	[SerializeField]
-	private TMP_Text _scrollToBottomText;
+	private KIDUIButton _pressAndHoldToConfirmButton;
 
 	// Token: 0x04003A98 RID: 15000
 	[SerializeField]
-	private float _stickVibrationStrength = 0.1f;
+	private TMP_Text _scrollToBottomText;
 
 	// Token: 0x04003A99 RID: 15001
 	[SerializeField]
-	private float _stickVibrationDuration = 0.05f;
+	private float _stickVibrationStrength = 0.1f;
 
 	// Token: 0x04003A9A RID: 15002
-	private float stickHeldDuration;
+	[SerializeField]
+	private float _stickVibrationDuration = 0.05f;
 
 	// Token: 0x04003A9B RID: 15003
-	private float scrollSpeed;
+	private float stickHeldDuration;
 
 	// Token: 0x04003A9C RID: 15004
-	private float scrollTime;
+	private float scrollSpeed;
 
 	// Token: 0x04003A9D RID: 15005
-	private bool legalAgreementsStarted;
+	private float scrollTime;
 
 	// Token: 0x04003A9E RID: 15006
-	private bool _accepted;
+	private bool legalAgreementsStarted;
 
 	// Token: 0x04003A9F RID: 15007
-	private string cachedText;
+	private bool _accepted;
 
 	// Token: 0x04003AA0 RID: 15008
-	private int state;
+	private string cachedText;
 
 	// Token: 0x04003AA1 RID: 15009
-	private bool optIn;
+	private int state;
 
 	// Token: 0x04003AA2 RID: 15010
+	private bool optIn;
+
+	// Token: 0x04003AA3 RID: 15011
 	private bool optional;
 }

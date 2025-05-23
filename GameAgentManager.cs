@@ -10,7 +10,7 @@ using UnityEngine;
 [NetworkBehaviourWeaved(0)]
 public class GameAgentManager : NetworkComponent
 {
-	// Token: 0x06002148 RID: 8520 RVA: 0x000A6940 File Offset: 0x000A4B40
+	// Token: 0x06002148 RID: 8520 RVA: 0x000A6960 File Offset: 0x000A4B60
 	protected override void Awake()
 	{
 		GameAgentManager.instance = this;
@@ -24,25 +24,25 @@ public class GameAgentManager : NetworkComponent
 		this.nextAgentIndexUpdate = 0;
 	}
 
-	// Token: 0x06002149 RID: 8521 RVA: 0x000A69AE File Offset: 0x000A4BAE
+	// Token: 0x06002149 RID: 8521 RVA: 0x000A69CE File Offset: 0x000A4BCE
 	public void AddGameAgent(GameAgent gameAgent)
 	{
 		this.agents.Add(gameAgent);
 	}
 
-	// Token: 0x0600214A RID: 8522 RVA: 0x000A69BC File Offset: 0x000A4BBC
+	// Token: 0x0600214A RID: 8522 RVA: 0x000A69DC File Offset: 0x000A4BDC
 	public void RemoveGameAgent(GameAgent gameAgent)
 	{
 		this.agents.Remove(gameAgent);
 	}
 
-	// Token: 0x0600214B RID: 8523 RVA: 0x000A69CB File Offset: 0x000A4BCB
+	// Token: 0x0600214B RID: 8523 RVA: 0x000A69EB File Offset: 0x000A4BEB
 	public GameAgent GetGameAgent(GameEntityId id)
 	{
 		return this.entityManager.GetGameEntity(id).GetComponent<GameAgent>();
 	}
 
-	// Token: 0x0600214C RID: 8524 RVA: 0x000A69E0 File Offset: 0x000A4BE0
+	// Token: 0x0600214C RID: 8524 RVA: 0x000A6A00 File Offset: 0x000A4C00
 	public void Update()
 	{
 		for (int i = 0; i < this.agents.Count; i++)
@@ -90,91 +90,91 @@ public class GameAgentManager : NetworkComponent
 		}
 	}
 
-	// Token: 0x0600214D RID: 8525 RVA: 0x000A6B86 File Offset: 0x000A4D86
+	// Token: 0x0600214D RID: 8525 RVA: 0x000A6BA6 File Offset: 0x000A4DA6
 	public bool IsAuthority()
 	{
 		return this.entityManager.IsAuthority();
 	}
 
-	// Token: 0x0600214E RID: 8526 RVA: 0x000A6B93 File Offset: 0x000A4D93
+	// Token: 0x0600214E RID: 8526 RVA: 0x000A6BB3 File Offset: 0x000A4DB3
 	public bool IsAuthorityPlayer(NetPlayer player)
 	{
 		return this.entityManager.IsAuthorityPlayer(player);
 	}
 
-	// Token: 0x0600214F RID: 8527 RVA: 0x000A6BA1 File Offset: 0x000A4DA1
+	// Token: 0x0600214F RID: 8527 RVA: 0x000A6BC1 File Offset: 0x000A4DC1
 	public bool IsAuthorityPlayer(Player player)
 	{
 		return this.entityManager.IsAuthorityPlayer(player);
 	}
 
-	// Token: 0x06002150 RID: 8528 RVA: 0x000A6BAF File Offset: 0x000A4DAF
+	// Token: 0x06002150 RID: 8528 RVA: 0x000A6BCF File Offset: 0x000A4DCF
 	public Player GetAuthorityPlayer()
 	{
 		return this.entityManager.GetAuthorityPlayer();
 	}
 
-	// Token: 0x06002151 RID: 8529 RVA: 0x000A6BBC File Offset: 0x000A4DBC
+	// Token: 0x06002151 RID: 8529 RVA: 0x000A6BDC File Offset: 0x000A4DDC
 	public bool IsZoneActive()
 	{
 		return this.entityManager.IsZoneActive();
 	}
 
-	// Token: 0x06002152 RID: 8530 RVA: 0x000A6BC9 File Offset: 0x000A4DC9
+	// Token: 0x06002152 RID: 8530 RVA: 0x000A6BE9 File Offset: 0x000A4DE9
 	public bool IsPositionInZone(Vector3 pos)
 	{
 		return this.entityManager.IsPositionInZone(pos);
 	}
 
-	// Token: 0x06002153 RID: 8531 RVA: 0x000A6BD7 File Offset: 0x000A4DD7
+	// Token: 0x06002153 RID: 8531 RVA: 0x000A6BF7 File Offset: 0x000A4DF7
 	public bool IsValidClientRPC(Player sender)
 	{
 		return this.entityManager.IsValidClientRPC(sender);
 	}
 
-	// Token: 0x06002154 RID: 8532 RVA: 0x000A6BE5 File Offset: 0x000A4DE5
+	// Token: 0x06002154 RID: 8532 RVA: 0x000A6C05 File Offset: 0x000A4E05
 	public bool IsValidClientRPC(Player sender, int entityNetId)
 	{
 		return this.entityManager.IsValidClientRPC(sender, entityNetId);
 	}
 
-	// Token: 0x06002155 RID: 8533 RVA: 0x000A6BF4 File Offset: 0x000A4DF4
+	// Token: 0x06002155 RID: 8533 RVA: 0x000A6C14 File Offset: 0x000A4E14
 	public bool IsValidClientRPC(Player sender, int entityNetId, Vector3 pos)
 	{
 		return this.entityManager.IsValidClientRPC(sender, entityNetId, pos);
 	}
 
-	// Token: 0x06002156 RID: 8534 RVA: 0x000A6C04 File Offset: 0x000A4E04
+	// Token: 0x06002156 RID: 8534 RVA: 0x000A6C24 File Offset: 0x000A4E24
 	public bool IsValidClientRPC(Player sender, Vector3 pos)
 	{
 		return this.entityManager.IsValidClientRPC(sender, pos);
 	}
 
-	// Token: 0x06002157 RID: 8535 RVA: 0x000A6C13 File Offset: 0x000A4E13
+	// Token: 0x06002157 RID: 8535 RVA: 0x000A6C33 File Offset: 0x000A4E33
 	public bool IsValidAuthorityRPC()
 	{
 		return this.entityManager.IsValidAuthorityRPC();
 	}
 
-	// Token: 0x06002158 RID: 8536 RVA: 0x000A6C20 File Offset: 0x000A4E20
+	// Token: 0x06002158 RID: 8536 RVA: 0x000A6C40 File Offset: 0x000A4E40
 	public bool IsValidAuthorityRPC(int entityNetId)
 	{
 		return this.entityManager.IsValidAuthorityRPC(entityNetId);
 	}
 
-	// Token: 0x06002159 RID: 8537 RVA: 0x000A6C2E File Offset: 0x000A4E2E
+	// Token: 0x06002159 RID: 8537 RVA: 0x000A6C4E File Offset: 0x000A4E4E
 	public bool IsValidAuthorityRPC(int entityNetId, Vector3 pos)
 	{
 		return this.entityManager.IsValidAuthorityRPC(entityNetId, pos);
 	}
 
-	// Token: 0x0600215A RID: 8538 RVA: 0x000A6C3D File Offset: 0x000A4E3D
+	// Token: 0x0600215A RID: 8538 RVA: 0x000A6C5D File Offset: 0x000A4E5D
 	public bool IsValidAuthorityRPC(Vector3 pos)
 	{
 		return this.entityManager.IsValidAuthorityRPC(pos);
 	}
 
-	// Token: 0x0600215B RID: 8539 RVA: 0x000A6C4C File Offset: 0x000A4E4C
+	// Token: 0x0600215B RID: 8539 RVA: 0x000A6C6C File Offset: 0x000A4E6C
 	public void RequestDestination(GameAgent agent, Vector3 dest)
 	{
 		if (!this.IsAuthority())
@@ -192,7 +192,7 @@ public class GameAgentManager : NetworkComponent
 		this.destinationsForDestination.Add(dest);
 	}
 
-	// Token: 0x0600215C RID: 8540 RVA: 0x000A6CBC File Offset: 0x000A4EBC
+	// Token: 0x0600215C RID: 8540 RVA: 0x000A6CDC File Offset: 0x000A4EDC
 	[PunRPC]
 	public void ApplyDestinationRPC(int[] netEntityId, Vector3[] dest, PhotonMessageInfo info)
 	{
@@ -235,7 +235,7 @@ public class GameAgentManager : NetworkComponent
 		}
 	}
 
-	// Token: 0x0600215D RID: 8541 RVA: 0x000A6D74 File Offset: 0x000A4F74
+	// Token: 0x0600215D RID: 8541 RVA: 0x000A6D94 File Offset: 0x000A4F94
 	public void RequestState(GameAgent agent, byte state)
 	{
 		if (!this.IsAuthority())
@@ -252,7 +252,7 @@ public class GameAgentManager : NetworkComponent
 		this.statesForState.Add(state);
 	}
 
-	// Token: 0x0600215E RID: 8542 RVA: 0x000A6DDC File Offset: 0x000A4FDC
+	// Token: 0x0600215E RID: 8542 RVA: 0x000A6DFC File Offset: 0x000A4FFC
 	[PunRPC]
 	public void ApplyStateRPC(int[] netEntityId, byte[] state, PhotonMessageInfo info)
 	{
@@ -280,7 +280,7 @@ public class GameAgentManager : NetworkComponent
 		}
 	}
 
-	// Token: 0x0600215F RID: 8543 RVA: 0x000A6E58 File Offset: 0x000A5058
+	// Token: 0x0600215F RID: 8543 RVA: 0x000A6E78 File Offset: 0x000A5078
 	public void RequestBehavior(GameAgent agent, byte behavior)
 	{
 		if (!this.IsAuthority())
@@ -297,7 +297,7 @@ public class GameAgentManager : NetworkComponent
 		this.behaviorsForBehavior.Add(behavior);
 	}
 
-	// Token: 0x06002160 RID: 8544 RVA: 0x000A6EC0 File Offset: 0x000A50C0
+	// Token: 0x06002160 RID: 8544 RVA: 0x000A6EE0 File Offset: 0x000A50E0
 	[PunRPC]
 	public void ApplyBehaviorRPC(int[] netEntityId, byte[] behavior, PhotonMessageInfo info)
 	{
@@ -324,7 +324,7 @@ public class GameAgentManager : NetworkComponent
 		}
 	}
 
-	// Token: 0x06002161 RID: 8545 RVA: 0x000A6F3C File Offset: 0x000A513C
+	// Token: 0x06002161 RID: 8545 RVA: 0x000A6F5C File Offset: 0x000A515C
 	public void RequestImpact(GameEntity target, GRTool tool, Vector3 startPos, Vector3 impulse, byte impulseData)
 	{
 		GREnemyChaser component = target.GetComponent<GREnemyChaser>();
@@ -353,7 +353,7 @@ public class GameAgentManager : NetworkComponent
 		});
 	}
 
-	// Token: 0x06002162 RID: 8546 RVA: 0x000A7014 File Offset: 0x000A5214
+	// Token: 0x06002162 RID: 8546 RVA: 0x000A7034 File Offset: 0x000A5234
 	[PunRPC]
 	public void RequestImpactRPC(int enemyNetId, int toolNetId, Vector3 startPos, Vector3 impulse, byte impulseData, PhotonMessageInfo info)
 	{
@@ -374,7 +374,7 @@ public class GameAgentManager : NetworkComponent
 		}
 	}
 
-	// Token: 0x06002163 RID: 8547 RVA: 0x000A70C4 File Offset: 0x000A52C4
+	// Token: 0x06002163 RID: 8547 RVA: 0x000A70E4 File Offset: 0x000A52E4
 	[PunRPC]
 	public void ApplyImpactRPC(int enemyNetId, int toolNetId, Vector3 startPos, Vector3 impulse, byte impulseData, Player player, PhotonMessageInfo info)
 	{
@@ -431,7 +431,7 @@ public class GameAgentManager : NetworkComponent
 	{
 	}
 
-	// Token: 0x06002166 RID: 8550 RVA: 0x000A71D4 File Offset: 0x000A53D4
+	// Token: 0x06002166 RID: 8550 RVA: 0x000A71F4 File Offset: 0x000A53F4
 	protected override void WriteDataPUN(PhotonStream stream, PhotonMessageInfo info)
 	{
 		int num = Mathf.Min(4, this.agents.Count);
@@ -451,7 +451,7 @@ public class GameAgentManager : NetworkComponent
 		}
 	}
 
-	// Token: 0x06002167 RID: 8551 RVA: 0x000A72C0 File Offset: 0x000A54C0
+	// Token: 0x06002167 RID: 8551 RVA: 0x000A72E0 File Offset: 0x000A54E0
 	protected override void ReadDataPUN(PhotonStream stream, PhotonMessageInfo info)
 	{
 		if (!this.IsValidClientRPC(info.Sender))

@@ -7,7 +7,7 @@ namespace DynamicSceneManagerHelper
 	// Token: 0x02000BC2 RID: 3010
 	internal class UnityObjectUpdater
 	{
-		// Token: 0x06004A65 RID: 19045 RVA: 0x001623A4 File Offset: 0x001605A4
+		// Token: 0x06004A66 RID: 19046 RVA: 0x0016247C File Offset: 0x0016067C
 		public async Task<GameObject> CreateUnityObject(OVRAnchor anchor, GameObject parent)
 		{
 			OVRRoomLayout ovrroomLayout;
@@ -57,7 +57,7 @@ namespace DynamicSceneManagerHelper
 			return gameObject;
 		}
 
-		// Token: 0x06004A66 RID: 19046 RVA: 0x001623F0 File Offset: 0x001605F0
+		// Token: 0x06004A67 RID: 19047 RVA: 0x001624C8 File Offset: 0x001606C8
 		public void UpdateUnityObject(OVRAnchor anchor, GameObject gameObject)
 		{
 			SceneManagerHelper sceneManagerHelper = new SceneManagerHelper(gameObject);

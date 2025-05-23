@@ -6,23 +6,23 @@ using UnityEngine;
 public class ObjectPools : MonoBehaviour, IBuildValidation
 {
 	// Token: 0x170005D9 RID: 1497
-	// (get) Token: 0x06003B3D RID: 15165 RVA: 0x0011B1B6 File Offset: 0x001193B6
-	// (set) Token: 0x06003B3E RID: 15166 RVA: 0x0011B1BE File Offset: 0x001193BE
+	// (get) Token: 0x06003B3E RID: 15166 RVA: 0x0011B28E File Offset: 0x0011948E
+	// (set) Token: 0x06003B3F RID: 15167 RVA: 0x0011B296 File Offset: 0x00119496
 	public bool initialized { get; private set; }
 
-	// Token: 0x06003B3F RID: 15167 RVA: 0x0011B1C7 File Offset: 0x001193C7
+	// Token: 0x06003B40 RID: 15168 RVA: 0x0011B29F File Offset: 0x0011949F
 	protected void Awake()
 	{
 		ObjectPools.instance = this;
 	}
 
-	// Token: 0x06003B40 RID: 15168 RVA: 0x0011B1CF File Offset: 0x001193CF
+	// Token: 0x06003B41 RID: 15169 RVA: 0x0011B2A7 File Offset: 0x001194A7
 	protected void Start()
 	{
 		this.InitializePools();
 	}
 
-	// Token: 0x06003B41 RID: 15169 RVA: 0x0011B1D8 File Offset: 0x001193D8
+	// Token: 0x06003B42 RID: 15170 RVA: 0x0011B2B0 File Offset: 0x001194B0
 	public void InitializePools()
 	{
 		if (this.initialized)
@@ -55,44 +55,44 @@ public class ObjectPools : MonoBehaviour, IBuildValidation
 		this.initialized = true;
 	}
 
-	// Token: 0x06003B42 RID: 15170 RVA: 0x0011B30C File Offset: 0x0011950C
+	// Token: 0x06003B43 RID: 15171 RVA: 0x0011B3E4 File Offset: 0x001195E4
 	public bool DoesPoolExist(GameObject obj)
 	{
 		return this.DoesPoolExist(PoolUtils.GameObjHashCode(obj));
 	}
 
-	// Token: 0x06003B43 RID: 15171 RVA: 0x0011B31A File Offset: 0x0011951A
+	// Token: 0x06003B44 RID: 15172 RVA: 0x0011B3F2 File Offset: 0x001195F2
 	public bool DoesPoolExist(int hash)
 	{
 		return this.lookUp.ContainsKey(hash);
 	}
 
-	// Token: 0x06003B44 RID: 15172 RVA: 0x0011B328 File Offset: 0x00119528
+	// Token: 0x06003B45 RID: 15173 RVA: 0x0011B400 File Offset: 0x00119600
 	public SinglePool GetPoolByHash(int hash)
 	{
 		return this.lookUp[hash];
 	}
 
-	// Token: 0x06003B45 RID: 15173 RVA: 0x0011B338 File Offset: 0x00119538
+	// Token: 0x06003B46 RID: 15174 RVA: 0x0011B410 File Offset: 0x00119610
 	public SinglePool GetPoolByObjectType(GameObject obj)
 	{
 		int num = PoolUtils.GameObjHashCode(obj);
 		return this.GetPoolByHash(num);
 	}
 
-	// Token: 0x06003B46 RID: 15174 RVA: 0x0011B353 File Offset: 0x00119553
+	// Token: 0x06003B47 RID: 15175 RVA: 0x0011B42B File Offset: 0x0011962B
 	public GameObject Instantiate(GameObject obj, bool setActive = true)
 	{
 		return this.GetPoolByObjectType(obj).Instantiate(setActive);
 	}
 
-	// Token: 0x06003B47 RID: 15175 RVA: 0x0011B362 File Offset: 0x00119562
+	// Token: 0x06003B48 RID: 15176 RVA: 0x0011B43A File Offset: 0x0011963A
 	public GameObject Instantiate(int hash, bool setActive = true)
 	{
 		return this.GetPoolByHash(hash).Instantiate(setActive);
 	}
 
-	// Token: 0x06003B48 RID: 15176 RVA: 0x0011B371 File Offset: 0x00119571
+	// Token: 0x06003B49 RID: 15177 RVA: 0x0011B449 File Offset: 0x00119649
 	public GameObject Instantiate(int hash, Vector3 position, bool setActive = true)
 	{
 		GameObject gameObject = this.Instantiate(hash, setActive);
@@ -100,7 +100,7 @@ public class ObjectPools : MonoBehaviour, IBuildValidation
 		return gameObject;
 	}
 
-	// Token: 0x06003B49 RID: 15177 RVA: 0x0011B387 File Offset: 0x00119587
+	// Token: 0x06003B4A RID: 15178 RVA: 0x0011B45F File Offset: 0x0011965F
 	public GameObject Instantiate(int hash, Vector3 position, Quaternion rotation, bool setActive = true)
 	{
 		GameObject gameObject = this.Instantiate(hash, setActive);
@@ -108,7 +108,7 @@ public class ObjectPools : MonoBehaviour, IBuildValidation
 		return gameObject;
 	}
 
-	// Token: 0x06003B4A RID: 15178 RVA: 0x0011B39F File Offset: 0x0011959F
+	// Token: 0x06003B4B RID: 15179 RVA: 0x0011B477 File Offset: 0x00119677
 	public GameObject Instantiate(GameObject obj, Vector3 position, bool setActive = true)
 	{
 		GameObject gameObject = this.Instantiate(obj, setActive);
@@ -116,7 +116,7 @@ public class ObjectPools : MonoBehaviour, IBuildValidation
 		return gameObject;
 	}
 
-	// Token: 0x06003B4B RID: 15179 RVA: 0x0011B3B5 File Offset: 0x001195B5
+	// Token: 0x06003B4C RID: 15180 RVA: 0x0011B48D File Offset: 0x0011968D
 	public GameObject Instantiate(GameObject obj, Vector3 position, Quaternion rotation, bool setActive = true)
 	{
 		GameObject gameObject = this.Instantiate(obj, setActive);
@@ -124,7 +124,7 @@ public class ObjectPools : MonoBehaviour, IBuildValidation
 		return gameObject;
 	}
 
-	// Token: 0x06003B4C RID: 15180 RVA: 0x0011B3CD File Offset: 0x001195CD
+	// Token: 0x06003B4D RID: 15181 RVA: 0x0011B4A5 File Offset: 0x001196A5
 	public GameObject Instantiate(GameObject obj, Vector3 position, Quaternion rotation, float scale, bool setActive = true)
 	{
 		GameObject gameObject = this.Instantiate(obj, setActive);
@@ -133,13 +133,13 @@ public class ObjectPools : MonoBehaviour, IBuildValidation
 		return gameObject;
 	}
 
-	// Token: 0x06003B4D RID: 15181 RVA: 0x0011B3FC File Offset: 0x001195FC
+	// Token: 0x06003B4E RID: 15182 RVA: 0x0011B4D4 File Offset: 0x001196D4
 	public void Destroy(GameObject obj)
 	{
 		this.GetPoolByObjectType(obj).Destroy(obj);
 	}
 
-	// Token: 0x06003B4E RID: 15182 RVA: 0x0011B40C File Offset: 0x0011960C
+	// Token: 0x06003B4F RID: 15183 RVA: 0x0011B4E4 File Offset: 0x001196E4
 	public bool BuildValidationCheck()
 	{
 		using (List<SinglePool>.Enumerator enumerator = this.pools.GetEnumerator())
@@ -156,13 +156,13 @@ public class ObjectPools : MonoBehaviour, IBuildValidation
 		return true;
 	}
 
-	// Token: 0x04003FD4 RID: 16340
+	// Token: 0x04003FD5 RID: 16341
 	public static ObjectPools instance;
 
-	// Token: 0x04003FD6 RID: 16342
+	// Token: 0x04003FD7 RID: 16343
 	[SerializeField]
 	private List<SinglePool> pools;
 
-	// Token: 0x04003FD7 RID: 16343
+	// Token: 0x04003FD8 RID: 16344
 	private Dictionary<int, SinglePool> lookUp;
 }

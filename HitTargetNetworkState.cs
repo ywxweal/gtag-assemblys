@@ -9,7 +9,7 @@ using UnityEngine;
 [NetworkBehaviourWeaved(1)]
 public class HitTargetNetworkState : NetworkComponent
 {
-	// Token: 0x06001576 RID: 5494 RVA: 0x00068FCC File Offset: 0x000671CC
+	// Token: 0x06001576 RID: 5494 RVA: 0x00068FEC File Offset: 0x000671EC
 	protected override void Awake()
 	{
 		base.Awake();
@@ -24,14 +24,14 @@ public class HitTargetNetworkState : NetworkComponent
 		Debug.LogError("Needs SlingshotProjectileHitNotifier added to this GameObject to increment score");
 	}
 
-	// Token: 0x06001577 RID: 5495 RVA: 0x0006902A File Offset: 0x0006722A
+	// Token: 0x06001577 RID: 5495 RVA: 0x0006904A File Offset: 0x0006724A
 	protected override void Start()
 	{
 		base.Start();
 		RoomSystem.LeftRoomEvent = (Action)Delegate.Combine(RoomSystem.LeftRoomEvent, new Action(this.OnLeftRoom));
 	}
 
-	// Token: 0x06001578 RID: 5496 RVA: 0x00069052 File Offset: 0x00067252
+	// Token: 0x06001578 RID: 5496 RVA: 0x00069072 File Offset: 0x00067272
 	private void SetInitialState()
 	{
 		this.networkedScore.Value = 0;
@@ -39,13 +39,13 @@ public class HitTargetNetworkState : NetworkComponent
 		this.audioPlayer.GTStop();
 	}
 
-	// Token: 0x06001579 RID: 5497 RVA: 0x00069076 File Offset: 0x00067276
+	// Token: 0x06001579 RID: 5497 RVA: 0x00069096 File Offset: 0x00067296
 	public void OnLeftRoom()
 	{
 		this.SetInitialState();
 	}
 
-	// Token: 0x0600157A RID: 5498 RVA: 0x0006907E File Offset: 0x0006727E
+	// Token: 0x0600157A RID: 5498 RVA: 0x0006909E File Offset: 0x0006729E
 	internal override void OnEnable()
 	{
 		NetworkBehaviourUtils.InternalOnEnable(this);
@@ -57,7 +57,7 @@ public class HitTargetNetworkState : NetworkComponent
 		this.SetInitialState();
 	}
 
-	// Token: 0x0600157B RID: 5499 RVA: 0x000690A6 File Offset: 0x000672A6
+	// Token: 0x0600157B RID: 5499 RVA: 0x000690C6 File Offset: 0x000672C6
 	private IEnumerator TestPressCheck()
 	{
 		for (;;)
@@ -72,13 +72,13 @@ public class HitTargetNetworkState : NetworkComponent
 		yield break;
 	}
 
-	// Token: 0x0600157C RID: 5500 RVA: 0x000690B5 File Offset: 0x000672B5
+	// Token: 0x0600157C RID: 5500 RVA: 0x000690D5 File Offset: 0x000672D5
 	private void ProjectileHitReciever(SlingshotProjectile projectile, Collision collision)
 	{
 		this.TargetHit(projectile.launchPosition, collision.contacts[0].point);
 	}
 
-	// Token: 0x0600157D RID: 5501 RVA: 0x000690D4 File Offset: 0x000672D4
+	// Token: 0x0600157D RID: 5501 RVA: 0x000690F4 File Offset: 0x000672F4
 	public void TargetHit(Vector3 launchPoint, Vector3 impactPoint)
 	{
 		if (!NetworkSystem.Instance.IsMasterClient)
@@ -118,8 +118,8 @@ public class HitTargetNetworkState : NetworkComponent
 	}
 
 	// Token: 0x1700025B RID: 603
-	// (get) Token: 0x0600157E RID: 5502 RVA: 0x000691AC File Offset: 0x000673AC
-	// (set) Token: 0x0600157F RID: 5503 RVA: 0x000691D2 File Offset: 0x000673D2
+	// (get) Token: 0x0600157E RID: 5502 RVA: 0x000691CC File Offset: 0x000673CC
+	// (set) Token: 0x0600157F RID: 5503 RVA: 0x000691F2 File Offset: 0x000673F2
 	[Networked]
 	[NetworkedWeaved(0, 1)]
 	public unsafe int Data
@@ -142,13 +142,13 @@ public class HitTargetNetworkState : NetworkComponent
 		}
 	}
 
-	// Token: 0x06001580 RID: 5504 RVA: 0x000691F9 File Offset: 0x000673F9
+	// Token: 0x06001580 RID: 5504 RVA: 0x00069219 File Offset: 0x00067419
 	public override void WriteDataFusion()
 	{
 		this.Data = this.networkedScore.Value;
 	}
 
-	// Token: 0x06001581 RID: 5505 RVA: 0x0006920C File Offset: 0x0006740C
+	// Token: 0x06001581 RID: 5505 RVA: 0x0006922C File Offset: 0x0006742C
 	public override void ReadDataFusion()
 	{
 		int data = this.Data;
@@ -159,7 +159,7 @@ public class HitTargetNetworkState : NetworkComponent
 		this.networkedScore.Value = data;
 	}
 
-	// Token: 0x06001582 RID: 5506 RVA: 0x0006924C File Offset: 0x0006744C
+	// Token: 0x06001582 RID: 5506 RVA: 0x0006926C File Offset: 0x0006746C
 	protected override void WriteDataPUN(PhotonStream stream, PhotonMessageInfo info)
 	{
 		if (!info.Sender.IsMasterClient)
@@ -169,7 +169,7 @@ public class HitTargetNetworkState : NetworkComponent
 		stream.SendNext(this.networkedScore.Value);
 	}
 
-	// Token: 0x06001583 RID: 5507 RVA: 0x00069274 File Offset: 0x00067474
+	// Token: 0x06001583 RID: 5507 RVA: 0x00069294 File Offset: 0x00067494
 	protected override void ReadDataPUN(PhotonStream stream, PhotonMessageInfo info)
 	{
 		if (!info.Sender.IsMasterClient)
@@ -184,7 +184,7 @@ public class HitTargetNetworkState : NetworkComponent
 		this.networkedScore.Value = num;
 	}
 
-	// Token: 0x06001584 RID: 5508 RVA: 0x000692C7 File Offset: 0x000674C7
+	// Token: 0x06001584 RID: 5508 RVA: 0x000692E7 File Offset: 0x000674E7
 	public void PlayAudio(int oldScore, int newScore)
 	{
 		if (oldScore > newScore && !this.scoreIsDistance)
@@ -195,7 +195,7 @@ public class HitTargetNetworkState : NetworkComponent
 		this.audioPlayer.GTPlayOneShot(this.audioClips[0], 1f);
 	}
 
-	// Token: 0x06001585 RID: 5509 RVA: 0x00069306 File Offset: 0x00067506
+	// Token: 0x06001585 RID: 5509 RVA: 0x00069326 File Offset: 0x00067526
 	private IEnumerator ResetCo()
 	{
 		while (Time.time < this.resetAtTimestamp)
@@ -208,7 +208,7 @@ public class HitTargetNetworkState : NetworkComponent
 		yield break;
 	}
 
-	// Token: 0x06001587 RID: 5511 RVA: 0x00069324 File Offset: 0x00067524
+	// Token: 0x06001587 RID: 5511 RVA: 0x00069344 File Offset: 0x00067544
 	[WeaverGenerated]
 	public override void CopyBackingFieldsToState(bool A_1)
 	{
@@ -216,7 +216,7 @@ public class HitTargetNetworkState : NetworkComponent
 		this.Data = this._Data;
 	}
 
-	// Token: 0x06001588 RID: 5512 RVA: 0x0006933C File Offset: 0x0006753C
+	// Token: 0x06001588 RID: 5512 RVA: 0x0006935C File Offset: 0x0006755C
 	[WeaverGenerated]
 	public override void CopyStateToBackingFields()
 	{

@@ -6,7 +6,7 @@ using UnityEngine;
 // Token: 0x020003E9 RID: 1001
 public class CosmeticsControllerUpdateStand : MonoBehaviour
 {
-	// Token: 0x06001813 RID: 6163 RVA: 0x0007542C File Offset: 0x0007362C
+	// Token: 0x06001813 RID: 6163 RVA: 0x0007544C File Offset: 0x0007364C
 	public GameObject ReturnChildWithCosmeticNameMatch(Transform parentTransform)
 	{
 		GameObject gameObject = null;

@@ -4,7 +4,7 @@ using UnityEngine;
 // Token: 0x020009C5 RID: 2501
 public class SplineDecorator : MonoBehaviour
 {
-	// Token: 0x06003BD4 RID: 15316 RVA: 0x0011E7F4 File Offset: 0x0011C9F4
+	// Token: 0x06003BD5 RID: 15317 RVA: 0x0011E8CC File Offset: 0x0011CACC
 	private void Awake()
 	{
 		if (this.frequency <= 0 || this.items == null || this.items.Length == 0)
@@ -40,15 +40,15 @@ public class SplineDecorator : MonoBehaviour
 		}
 	}
 
-	// Token: 0x04004020 RID: 16416
+	// Token: 0x04004021 RID: 16417
 	public BezierSpline spline;
 
-	// Token: 0x04004021 RID: 16417
+	// Token: 0x04004022 RID: 16418
 	public int frequency;
 
-	// Token: 0x04004022 RID: 16418
+	// Token: 0x04004023 RID: 16419
 	public bool lookForward;
 
-	// Token: 0x04004023 RID: 16419
+	// Token: 0x04004024 RID: 16420
 	public Transform[] items;
 }

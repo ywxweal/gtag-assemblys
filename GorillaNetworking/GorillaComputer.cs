@@ -25,14 +25,14 @@ namespace GorillaNetworking
 	// Token: 0x02000C2E RID: 3118
 	public class GorillaComputer : MonoBehaviour, IMatchmakingCallbacks, IGorillaSliceableSimple
 	{
-		// Token: 0x06004D2B RID: 19755 RVA: 0x0016F4BF File Offset: 0x0016D6BF
+		// Token: 0x06004D2C RID: 19756 RVA: 0x0016F597 File Offset: 0x0016D797
 		public DateTime GetServerTime()
 		{
 			return this.startupTime + TimeSpan.FromSeconds((double)Time.realtimeSinceStartup);
 		}
 
 		// Token: 0x170007AB RID: 1963
-		// (get) Token: 0x06004D2C RID: 19756 RVA: 0x0016F4D7 File Offset: 0x0016D6D7
+		// (get) Token: 0x06004D2D RID: 19757 RVA: 0x0016F5AF File Offset: 0x0016D7AF
 		public string VStumpRoomPrepend
 		{
 			get
@@ -42,7 +42,7 @@ namespace GorillaNetworking
 		}
 
 		// Token: 0x170007AC RID: 1964
-		// (get) Token: 0x06004D2D RID: 19757 RVA: 0x0016F4E0 File Offset: 0x0016D6E0
+		// (get) Token: 0x06004D2E RID: 19758 RVA: 0x0016F5B8 File Offset: 0x0016D7B8
 		public GorillaComputer.ComputerState currentState
 		{
 			get
@@ -54,7 +54,7 @@ namespace GorillaNetworking
 		}
 
 		// Token: 0x170007AD RID: 1965
-		// (get) Token: 0x06004D2E RID: 19758 RVA: 0x0016F4FC File Offset: 0x0016D6FC
+		// (get) Token: 0x06004D2F RID: 19759 RVA: 0x0016F5D4 File Offset: 0x0016D7D4
 		public string NameTagPlayerPref
 		{
 			get
@@ -69,13 +69,13 @@ namespace GorillaNetworking
 		}
 
 		// Token: 0x170007AE RID: 1966
-		// (get) Token: 0x06004D2F RID: 19759 RVA: 0x0016F533 File Offset: 0x0016D733
-		// (set) Token: 0x06004D30 RID: 19760 RVA: 0x0016F53B File Offset: 0x0016D73B
+		// (get) Token: 0x06004D30 RID: 19760 RVA: 0x0016F60B File Offset: 0x0016D80B
+		// (set) Token: 0x06004D31 RID: 19761 RVA: 0x0016F613 File Offset: 0x0016D813
 		public bool NametagsEnabled { get; private set; }
 
 		// Token: 0x170007AF RID: 1967
-		// (get) Token: 0x06004D31 RID: 19761 RVA: 0x0016F544 File Offset: 0x0016D744
-		// (set) Token: 0x06004D32 RID: 19762 RVA: 0x0016F54C File Offset: 0x0016D74C
+		// (get) Token: 0x06004D32 RID: 19762 RVA: 0x0016F61C File Offset: 0x0016D81C
+		// (set) Token: 0x06004D33 RID: 19763 RVA: 0x0016F624 File Offset: 0x0016D824
 		public GorillaComputer.RedemptionResult RedemptionStatus
 		{
 			get
@@ -90,8 +90,8 @@ namespace GorillaNetworking
 		}
 
 		// Token: 0x170007B0 RID: 1968
-		// (get) Token: 0x06004D33 RID: 19763 RVA: 0x0016F55B File Offset: 0x0016D75B
-		// (set) Token: 0x06004D34 RID: 19764 RVA: 0x0016F563 File Offset: 0x0016D763
+		// (get) Token: 0x06004D34 RID: 19764 RVA: 0x0016F633 File Offset: 0x0016D833
+		// (set) Token: 0x06004D35 RID: 19765 RVA: 0x0016F63B File Offset: 0x0016D83B
 		public string RedemptionCode
 		{
 			get
@@ -104,7 +104,7 @@ namespace GorillaNetworking
 			}
 		}
 
-		// Token: 0x06004D35 RID: 19765 RVA: 0x0016F56C File Offset: 0x0016D76C
+		// Token: 0x06004D36 RID: 19766 RVA: 0x0016F644 File Offset: 0x0016D844
 		private void Awake()
 		{
 			if (GorillaComputer.instance == null)
@@ -119,14 +119,14 @@ namespace GorillaNetworking
 			this._activeOrderList = this.OrderList;
 		}
 
-		// Token: 0x06004D36 RID: 19766 RVA: 0x0016F5BE File Offset: 0x0016D7BE
+		// Token: 0x06004D37 RID: 19767 RVA: 0x0016F696 File Offset: 0x0016D896
 		private void Start()
 		{
 			Debug.Log("Computer Init");
 			this.Initialise();
 		}
 
-		// Token: 0x06004D37 RID: 19767 RVA: 0x0016F5D0 File Offset: 0x0016D7D0
+		// Token: 0x06004D38 RID: 19768 RVA: 0x0016F6A8 File Offset: 0x0016D8A8
 		public void OnEnable()
 		{
 			KIDManager.RegisterSessionUpdatedCallback_VoiceChat(new Action<bool, Permission.ManagedByEnum>(this.SetVoiceChatBySafety));
@@ -134,7 +134,7 @@ namespace GorillaNetworking
 			GorillaSlicerSimpleManager.RegisterSliceable(this, GorillaSlicerSimpleManager.UpdateStep.Update);
 		}
 
-		// Token: 0x06004D38 RID: 19768 RVA: 0x0016F5FB File Offset: 0x0016D7FB
+		// Token: 0x06004D39 RID: 19769 RVA: 0x0016F6D3 File Offset: 0x0016D8D3
 		public void OnDisable()
 		{
 			KIDManager.UnregisterSessionUpdatedCallback_VoiceChat(new Action<bool, Permission.ManagedByEnum>(this.SetVoiceChatBySafety));
@@ -142,7 +142,7 @@ namespace GorillaNetworking
 			GorillaSlicerSimpleManager.UnregisterSliceable(this, GorillaSlicerSimpleManager.UpdateStep.Update);
 		}
 
-		// Token: 0x06004D39 RID: 19769 RVA: 0x0016F626 File Offset: 0x0016D826
+		// Token: 0x06004D3A RID: 19770 RVA: 0x0016F6FE File Offset: 0x0016D8FE
 		protected void OnDestroy()
 		{
 			if (GorillaComputer.instance == this)
@@ -153,7 +153,7 @@ namespace GorillaNetworking
 			KIDManager.UnregisterSessionUpdateCallback_AnyPermission(new Action(this.OnSessionUpdate_GorillaComputer));
 		}
 
-		// Token: 0x06004D3A RID: 19770 RVA: 0x0016F658 File Offset: 0x0016D858
+		// Token: 0x06004D3B RID: 19771 RVA: 0x0016F730 File Offset: 0x0016D930
 		public void SliceUpdate()
 		{
 			if ((this.internetFailure && Time.time < this.lastCheckedWifi + this.checkIfConnectedSeconds) || (!this.internetFailure && Time.time < this.lastCheckedWifi + this.checkIfDisconnectedSeconds))
@@ -190,7 +190,7 @@ namespace GorillaNetworking
 			}
 		}
 
-		// Token: 0x06004D3B RID: 19771 RVA: 0x0016F754 File Offset: 0x0016D954
+		// Token: 0x06004D3C RID: 19772 RVA: 0x0016F82C File Offset: 0x0016DA2C
 		private void Initialise()
 		{
 			GameEvents.OnGorrillaKeyboardButtonPressedEvent.AddListener(new UnityAction<GorillaKeyboardBindings>(this.PressButton));
@@ -207,14 +207,14 @@ namespace GorillaNetworking
 			this.initialized = true;
 		}
 
-		// Token: 0x06004D3C RID: 19772 RVA: 0x0016F838 File Offset: 0x0016DA38
+		// Token: 0x06004D3D RID: 19773 RVA: 0x0016F910 File Offset: 0x0016DB10
 		private void InitialiseRoomScreens()
 		{
 			this.screenText.Initialize(this.computerScreenRenderer.materials, this.wrongVersionMaterial, GameEvents.ScreenTextChangedEvent, GameEvents.ScreenTextMaterialsEvent);
 			this.functionSelectText.Initialize(this.computerScreenRenderer.materials, this.wrongVersionMaterial, GameEvents.FunctionSelectTextChangedEvent, null);
 		}
 
-		// Token: 0x06004D3D RID: 19773 RVA: 0x0016F890 File Offset: 0x0016DA90
+		// Token: 0x06004D3E RID: 19774 RVA: 0x0016F968 File Offset: 0x0016DB68
 		private void InitialiseStrings()
 		{
 			this.roomToJoin = "";
@@ -225,7 +225,7 @@ namespace GorillaNetworking
 			this.savedName = "";
 		}
 
-		// Token: 0x06004D3E RID: 19774 RVA: 0x0016F8E0 File Offset: 0x0016DAE0
+		// Token: 0x06004D3F RID: 19775 RVA: 0x0016F9B8 File Offset: 0x0016DBB8
 		private void InitialiseAllRoomStates()
 		{
 			this.SwitchState(GorillaComputer.ComputerState.Startup, true);
@@ -249,17 +249,17 @@ namespace GorillaNetworking
 			this.InitializeRedeemState();
 		}
 
-		// Token: 0x06004D3F RID: 19775 RVA: 0x000023F4 File Offset: 0x000005F4
+		// Token: 0x06004D40 RID: 19776 RVA: 0x000023F4 File Offset: 0x000005F4
 		private void InitializeStartupState()
 		{
 		}
 
-		// Token: 0x06004D40 RID: 19776 RVA: 0x000023F4 File Offset: 0x000005F4
+		// Token: 0x06004D41 RID: 19777 RVA: 0x000023F4 File Offset: 0x000005F4
 		private void InitializeRoomState()
 		{
 		}
 
-		// Token: 0x06004D41 RID: 19777 RVA: 0x0016F964 File Offset: 0x0016DB64
+		// Token: 0x06004D42 RID: 19778 RVA: 0x0016FA3C File Offset: 0x0016DC3C
 		private void InitializeColorState()
 		{
 			this.redValue = PlayerPrefs.GetFloat("redValue", 0f);
@@ -272,7 +272,7 @@ namespace GorillaNetworking
 			GorillaTagger.Instance.UpdateColor(this.redValue, this.greenValue, this.blueValue);
 		}
 
-		// Token: 0x06004D42 RID: 19778 RVA: 0x0016FA30 File Offset: 0x0016DC30
+		// Token: 0x06004D43 RID: 19779 RVA: 0x0016FB08 File Offset: 0x0016DD08
 		private void InitializeNameState()
 		{
 			int @int = PlayerPrefs.GetInt("nameTagsOn", -1);
@@ -317,19 +317,19 @@ namespace GorillaNetworking
 			}
 		}
 
-		// Token: 0x06004D43 RID: 19779 RVA: 0x0016FBFC File Offset: 0x0016DDFC
+		// Token: 0x06004D44 RID: 19780 RVA: 0x0016FCD4 File Offset: 0x0016DED4
 		private void InitializeTurnState()
 		{
 			GorillaSnapTurn.LoadSettingsFromPlayerPrefs();
 		}
 
-		// Token: 0x06004D44 RID: 19780 RVA: 0x0016FC03 File Offset: 0x0016DE03
+		// Token: 0x06004D45 RID: 19781 RVA: 0x0016FCDB File Offset: 0x0016DEDB
 		private void InitializeMicState()
 		{
 			this.pttType = PlayerPrefs.GetString("pttType", "ALL CHAT");
 		}
 
-		// Token: 0x06004D45 RID: 19781 RVA: 0x0016FC1C File Offset: 0x0016DE1C
+		// Token: 0x06004D46 RID: 19782 RVA: 0x0016FCF4 File Offset: 0x0016DEF4
 		private void InitializeAutoMuteState()
 		{
 			int @int = PlayerPrefs.GetInt("autoMute", 1);
@@ -349,7 +349,7 @@ namespace GorillaNetworking
 			}
 		}
 
-		// Token: 0x06004D46 RID: 19782 RVA: 0x0016FC64 File Offset: 0x0016DE64
+		// Token: 0x06004D47 RID: 19783 RVA: 0x0016FD3C File Offset: 0x0016DF3C
 		private void InitializeQueueState()
 		{
 			this.currentQueue = PlayerPrefs.GetString("currentQueue", "DEFAULT");
@@ -362,7 +362,7 @@ namespace GorillaNetworking
 			}
 		}
 
-		// Token: 0x06004D47 RID: 19783 RVA: 0x0016FCD3 File Offset: 0x0016DED3
+		// Token: 0x06004D48 RID: 19784 RVA: 0x0016FDAB File Offset: 0x0016DFAB
 		private void InitializeGroupState()
 		{
 			this.groupMapJoin = PlayerPrefs.GetString("groupMapJoin", "FOREST");
@@ -370,7 +370,7 @@ namespace GorillaNetworking
 			this.allowedMapsToJoin = this.friendJoinCollider.myAllowedMapsToJoin;
 		}
 
-		// Token: 0x06004D48 RID: 19784 RVA: 0x0016FD0C File Offset: 0x0016DF0C
+		// Token: 0x06004D49 RID: 19785 RVA: 0x0016FDE4 File Offset: 0x0016DFE4
 		private void InitializeTroopState()
 		{
 			bool flag = false;
@@ -394,7 +394,7 @@ namespace GorillaNetworking
 			}
 		}
 
-		// Token: 0x06004D49 RID: 19785 RVA: 0x0016FDBA File Offset: 0x0016DFBA
+		// Token: 0x06004D4A RID: 19786 RVA: 0x0016FE92 File Offset: 0x0016E092
 		private IEnumerator HandleInitialTroopQueueState()
 		{
 			Debug.Log("HandleInitialTroopQueueState()");
@@ -415,7 +415,7 @@ namespace GorillaNetworking
 			yield break;
 		}
 
-		// Token: 0x06004D4A RID: 19786 RVA: 0x0016FDCC File Offset: 0x0016DFCC
+		// Token: 0x06004D4B RID: 19787 RVA: 0x0016FEA4 File Offset: 0x0016E0A4
 		private void InitializeVoiceState()
 		{
 			Permission permissionDataByFeature = KIDManager.GetPermissionDataByFeature(EKIDFeatures.Voice_Chat);
@@ -451,7 +451,7 @@ namespace GorillaNetworking
 			this.voiceChatOn = PlayerPrefs.GetString("voiceChatOn", text2);
 		}
 
-		// Token: 0x06004D4B RID: 19787 RVA: 0x0016FE74 File Offset: 0x0016E074
+		// Token: 0x06004D4C RID: 19788 RVA: 0x0016FF4C File Offset: 0x0016E14C
 		private void InitializeGameMode()
 		{
 			string text = PlayerPrefs.GetString("currentGameMode", GameModeType.Infection.ToString());
@@ -476,24 +476,24 @@ namespace GorillaNetworking
 			GameModePages.SetSelectedGameModeShared(text);
 		}
 
-		// Token: 0x06004D4C RID: 19788 RVA: 0x000023F4 File Offset: 0x000005F4
+		// Token: 0x06004D4D RID: 19789 RVA: 0x000023F4 File Offset: 0x000005F4
 		private void InitializeCreditsState()
 		{
 		}
 
-		// Token: 0x06004D4D RID: 19789 RVA: 0x0016FF34 File Offset: 0x0016E134
+		// Token: 0x06004D4E RID: 19790 RVA: 0x0017000C File Offset: 0x0016E20C
 		private void InitializeTimeState()
 		{
 			BetterDayNightManager.instance.currentSetting = TimeSettings.Normal;
 		}
 
-		// Token: 0x06004D4E RID: 19790 RVA: 0x0016FF43 File Offset: 0x0016E143
+		// Token: 0x06004D4F RID: 19791 RVA: 0x0017001B File Offset: 0x0016E21B
 		private void InitializeSupportState()
 		{
 			this.displaySupport = false;
 		}
 
-		// Token: 0x06004D4F RID: 19791 RVA: 0x0016FF4C File Offset: 0x0016E14C
+		// Token: 0x06004D50 RID: 19792 RVA: 0x00170024 File Offset: 0x0016E224
 		private void InitializeVisualsState()
 		{
 			this.disableParticles = PlayerPrefs.GetString("disableParticles", "FALSE") == "TRUE";
@@ -501,19 +501,19 @@ namespace GorillaNetworking
 			this.instrumentVolume = PlayerPrefs.GetFloat("instrumentVolume", 0.1f);
 		}
 
-		// Token: 0x06004D50 RID: 19792 RVA: 0x0016FFA0 File Offset: 0x0016E1A0
+		// Token: 0x06004D51 RID: 19793 RVA: 0x00170078 File Offset: 0x0016E278
 		private void InitializeRedeemState()
 		{
 			this.RedemptionStatus = GorillaComputer.RedemptionResult.Empty;
 		}
 
-		// Token: 0x06004D51 RID: 19793 RVA: 0x0016FFA9 File Offset: 0x0016E1A9
+		// Token: 0x06004D52 RID: 19794 RVA: 0x00170081 File Offset: 0x0016E281
 		private bool CheckInternetConnection()
 		{
 			return Application.internetReachability > NetworkReachability.NotReachable;
 		}
 
-		// Token: 0x06004D52 RID: 19794 RVA: 0x0016FFB4 File Offset: 0x0016E1B4
+		// Token: 0x06004D53 RID: 19795 RVA: 0x0017008C File Offset: 0x0016E28C
 		public void OnConnectedToMasterStuff()
 		{
 			if (!this.isConnectedToMaster)
@@ -544,7 +544,7 @@ namespace GorillaNetworking
 			}
 		}
 
-		// Token: 0x06004D53 RID: 19795 RVA: 0x00170074 File Offset: 0x0016E274
+		// Token: 0x06004D54 RID: 19796 RVA: 0x0017014C File Offset: 0x0016E34C
 		private void OnReturnCurrentVersion(ExecuteFunctionResult result)
 		{
 			JsonObject jsonObject = (JsonObject)result.FunctionResult;
@@ -583,7 +583,7 @@ namespace GorillaNetworking
 			this.UpdateScreen();
 		}
 
-		// Token: 0x06004D54 RID: 19796 RVA: 0x001701B0 File Offset: 0x0016E3B0
+		// Token: 0x06004D55 RID: 19797 RVA: 0x00170288 File Offset: 0x0016E488
 		public void SaveModAccountData()
 		{
 			string path = Application.persistentDataPath + "/DoNotShareWithAnyoneEVERNoMatterWhatTheySay.txt";
@@ -614,7 +614,7 @@ namespace GorillaNetworking
 			});
 		}
 
-		// Token: 0x06004D55 RID: 19797 RVA: 0x00170220 File Offset: 0x0016E420
+		// Token: 0x06004D56 RID: 19798 RVA: 0x001702F8 File Offset: 0x0016E4F8
 		public void PressButton(GorillaKeyboardBindings buttonPressed)
 		{
 			if (this.currentState == GorillaComputer.ComputerState.Startup)
@@ -692,7 +692,7 @@ namespace GorillaNetworking
 			this.UpdateScreen();
 		}
 
-		// Token: 0x06004D56 RID: 19798 RVA: 0x00170364 File Offset: 0x0016E564
+		// Token: 0x06004D57 RID: 19799 RVA: 0x0017043C File Offset: 0x0016E63C
 		public void OnModeSelectButtonPress(string gameMode, bool leftHand)
 		{
 			this.lastPressedGameMode = gameMode;
@@ -711,7 +711,7 @@ namespace GorillaNetworking
 			this.SetGameModeWithoutButton(gameMode);
 		}
 
-		// Token: 0x06004D57 RID: 19799 RVA: 0x001703C8 File Offset: 0x0016E5C8
+		// Token: 0x06004D58 RID: 19800 RVA: 0x001704A0 File Offset: 0x0016E6A0
 		public void SetGameModeWithoutButton(string gameMode)
 		{
 			this.currentGameMode.Value = gameMode;
@@ -719,13 +719,13 @@ namespace GorillaNetworking
 			PhotonNetworkController.Instance.UpdateTriggerScreens();
 		}
 
-		// Token: 0x06004D58 RID: 19800 RVA: 0x001703E8 File Offset: 0x0016E5E8
+		// Token: 0x06004D59 RID: 19801 RVA: 0x001704C0 File Offset: 0x0016E6C0
 		public void RegisterPrimaryJoinTrigger(GorillaNetworkJoinTrigger trigger)
 		{
 			this.primaryTriggersByZone[trigger.networkZone] = trigger;
 		}
 
-		// Token: 0x06004D59 RID: 19801 RVA: 0x001703FC File Offset: 0x0016E5FC
+		// Token: 0x06004D5A RID: 19802 RVA: 0x001704D4 File Offset: 0x0016E6D4
 		private GorillaNetworkJoinTrigger GetSelectedMapJoinTrigger()
 		{
 			GorillaNetworkJoinTrigger gorillaNetworkJoinTrigger;
@@ -733,7 +733,7 @@ namespace GorillaNetworking
 			return gorillaNetworkJoinTrigger;
 		}
 
-		// Token: 0x06004D5A RID: 19802 RVA: 0x00170434 File Offset: 0x0016E634
+		// Token: 0x06004D5B RID: 19803 RVA: 0x0017050C File Offset: 0x0016E70C
 		public GorillaNetworkJoinTrigger GetJoinTriggerForZone(string zone)
 		{
 			GorillaNetworkJoinTrigger gorillaNetworkJoinTrigger;
@@ -741,7 +741,7 @@ namespace GorillaNetworking
 			return gorillaNetworkJoinTrigger;
 		}
 
-		// Token: 0x06004D5B RID: 19803 RVA: 0x00170454 File Offset: 0x0016E654
+		// Token: 0x06004D5C RID: 19804 RVA: 0x0017052C File Offset: 0x0016E72C
 		public GorillaNetworkJoinTrigger GetJoinTriggerFromFullGameModeString(string gameModeString)
 		{
 			foreach (KeyValuePair<string, GorillaNetworkJoinTrigger> keyValuePair in this.primaryTriggersByZone)
@@ -754,7 +754,7 @@ namespace GorillaNetworking
 			return null;
 		}
 
-		// Token: 0x06004D5C RID: 19804 RVA: 0x001704BC File Offset: 0x0016E6BC
+		// Token: 0x06004D5D RID: 19805 RVA: 0x00170594 File Offset: 0x0016E794
 		public void OnGroupJoinButtonPress(int mapJoinIndex, GorillaFriendCollider chosenFriendJoinCollider)
 		{
 			Debug.Log("On Group button press. Map:" + mapJoinIndex.ToString() + " - collider: " + chosenFriendJoinCollider.name);
@@ -795,7 +795,7 @@ namespace GorillaNetworking
 			this.UpdateScreen();
 		}
 
-		// Token: 0x06004D5D RID: 19805 RVA: 0x001706AC File Offset: 0x0016E8AC
+		// Token: 0x06004D5E RID: 19806 RVA: 0x00170784 File Offset: 0x0016E984
 		public void CompQueueUnlockButtonPress()
 		{
 			this.allowedInCompetitive = true;
@@ -803,7 +803,7 @@ namespace GorillaNetworking
 			PlayerPrefs.Save();
 		}
 
-		// Token: 0x06004D5E RID: 19806 RVA: 0x001706C8 File Offset: 0x0016E8C8
+		// Token: 0x06004D5F RID: 19807 RVA: 0x001707A0 File Offset: 0x0016E9A0
 		private void SwitchState(GorillaComputer.ComputerState newState, bool clearStack = true)
 		{
 			if (this.previousComputerState != this.currentComputerState)
@@ -822,7 +822,7 @@ namespace GorillaNetworking
 			this.stateStack.Push(newState);
 		}
 
-		// Token: 0x06004D5F RID: 19807 RVA: 0x00170724 File Offset: 0x0016E924
+		// Token: 0x06004D60 RID: 19808 RVA: 0x001707FC File Offset: 0x0016E9FC
 		private void PopState()
 		{
 			this.currentComputerState = this.previousComputerState;
@@ -835,26 +835,26 @@ namespace GorillaNetworking
 			this.UpdateScreen();
 		}
 
-		// Token: 0x06004D60 RID: 19808 RVA: 0x0017075D File Offset: 0x0016E95D
+		// Token: 0x06004D61 RID: 19809 RVA: 0x00170835 File Offset: 0x0016EA35
 		private void SwitchToWarningState()
 		{
 			this.warningConfirmationInputString = string.Empty;
 			this.SwitchState(GorillaComputer.ComputerState.NameWarning, false);
 		}
 
-		// Token: 0x06004D61 RID: 19809 RVA: 0x00170773 File Offset: 0x0016E973
+		// Token: 0x06004D62 RID: 19810 RVA: 0x0017084B File Offset: 0x0016EA4B
 		private void SwitchToLoadingState()
 		{
 			this.SwitchState(GorillaComputer.ComputerState.Loading, false);
 		}
 
-		// Token: 0x06004D62 RID: 19810 RVA: 0x0017077E File Offset: 0x0016E97E
+		// Token: 0x06004D63 RID: 19811 RVA: 0x00170856 File Offset: 0x0016EA56
 		private void ProcessStartupState(GorillaKeyboardBindings buttonPressed)
 		{
 			this.SwitchState(this.GetState(this.currentStateIndex), true);
 		}
 
-		// Token: 0x06004D63 RID: 19811 RVA: 0x00170794 File Offset: 0x0016E994
+		// Token: 0x06004D64 RID: 19812 RVA: 0x0017086C File Offset: 0x0016EA6C
 		private void ProcessColorState(GorillaKeyboardBindings buttonPressed)
 		{
 			switch (buttonPressed)
@@ -905,7 +905,7 @@ namespace GorillaNetworking
 			}
 		}
 
-		// Token: 0x06004D64 RID: 19812 RVA: 0x001708F4 File Offset: 0x0016EAF4
+		// Token: 0x06004D65 RID: 19813 RVA: 0x001709CC File Offset: 0x0016EBCC
 		public void ProcessNameState(GorillaKeyboardBindings buttonPressed)
 		{
 			if (KIDManager.HasPermissionToUseFeature(EKIDFeatures.Custom_Nametags))
@@ -973,7 +973,7 @@ namespace GorillaNetworking
 			}
 		}
 
-		// Token: 0x06004D65 RID: 19813 RVA: 0x00170A38 File Offset: 0x0016EC38
+		// Token: 0x06004D66 RID: 19814 RVA: 0x00170B10 File Offset: 0x0016ED10
 		private void ProcessRoomState(GorillaKeyboardBindings buttonPressed)
 		{
 			bool flag = KIDManager.HasPermissionToUseFeature(EKIDFeatures.Groups);
@@ -1037,14 +1037,14 @@ namespace GorillaNetworking
 			}
 		}
 
-		// Token: 0x06004D66 RID: 19814 RVA: 0x00170BA0 File Offset: 0x0016EDA0
+		// Token: 0x06004D67 RID: 19815 RVA: 0x00170C78 File Offset: 0x0016EE78
 		private async void DisconnectAfterDelay(float seconds)
 		{
 			await Task.Delay((int)(1000f * seconds));
 			await NetworkSystem.Instance.ReturnToSinglePlayer();
 		}
 
-		// Token: 0x06004D67 RID: 19815 RVA: 0x00170BD8 File Offset: 0x0016EDD8
+		// Token: 0x06004D68 RID: 19816 RVA: 0x00170CB0 File Offset: 0x0016EEB0
 		private void ProcessTurnState(GorillaKeyboardBindings buttonPressed)
 		{
 			if (buttonPressed < GorillaKeyboardBindings.up)
@@ -1071,7 +1071,7 @@ namespace GorillaNetworking
 			}
 		}
 
-		// Token: 0x06004D68 RID: 19816 RVA: 0x00170C38 File Offset: 0x0016EE38
+		// Token: 0x06004D69 RID: 19817 RVA: 0x00170D10 File Offset: 0x0016EF10
 		private void ProcessMicState(GorillaKeyboardBindings buttonPressed)
 		{
 			switch (buttonPressed)
@@ -1096,7 +1096,7 @@ namespace GorillaNetworking
 			}
 		}
 
-		// Token: 0x06004D69 RID: 19817 RVA: 0x00170CC0 File Offset: 0x0016EEC0
+		// Token: 0x06004D6A RID: 19818 RVA: 0x00170D98 File Offset: 0x0016EF98
 		private void ProcessQueueState(GorillaKeyboardBindings buttonPressed)
 		{
 			switch (buttonPressed)
@@ -1118,7 +1118,7 @@ namespace GorillaNetworking
 			}
 		}
 
-		// Token: 0x06004D6A RID: 19818 RVA: 0x00170D14 File Offset: 0x0016EF14
+		// Token: 0x06004D6B RID: 19819 RVA: 0x00170DEC File Offset: 0x0016EFEC
 		public void JoinTroop(string newTroopName)
 		{
 			if (this.IsValidTroopName(newTroopName))
@@ -1136,7 +1136,7 @@ namespace GorillaNetworking
 			}
 		}
 
-		// Token: 0x06004D6B RID: 19819 RVA: 0x00170D7D File Offset: 0x0016EF7D
+		// Token: 0x06004D6C RID: 19820 RVA: 0x00170E55 File Offset: 0x0016F055
 		public void JoinTroopQueue()
 		{
 			if (this.IsValidTroopName(this.troopName))
@@ -1147,7 +1147,7 @@ namespace GorillaNetworking
 			}
 		}
 
-		// Token: 0x06004D6C RID: 19820 RVA: 0x00170DB0 File Offset: 0x0016EFB0
+		// Token: 0x06004D6D RID: 19821 RVA: 0x00170E88 File Offset: 0x0016F088
 		private void RequestTroopPopulation(bool forceUpdate = false)
 		{
 			if (!PlayFabCloudScriptAPI.IsEntityLoggedIn())
@@ -1190,13 +1190,13 @@ namespace GorillaNetworking
 			}
 		}
 
-		// Token: 0x06004D6D RID: 19821 RVA: 0x00170E2E File Offset: 0x0016F02E
+		// Token: 0x06004D6E RID: 19822 RVA: 0x00170F06 File Offset: 0x0016F106
 		public void JoinDefaultQueue()
 		{
 			this.JoinQueue("DEFAULT", false);
 		}
 
-		// Token: 0x06004D6E RID: 19822 RVA: 0x00170E3C File Offset: 0x0016F03C
+		// Token: 0x06004D6F RID: 19823 RVA: 0x00170F14 File Offset: 0x0016F114
 		public void LeaveTroop()
 		{
 			if (this.IsValidTroopName(this.troopName))
@@ -1213,7 +1213,7 @@ namespace GorillaNetworking
 			PlayerPrefs.Save();
 		}
 
-		// Token: 0x06004D6F RID: 19823 RVA: 0x00170E98 File Offset: 0x0016F098
+		// Token: 0x06004D70 RID: 19824 RVA: 0x00170F70 File Offset: 0x0016F170
 		public string GetCurrentTroop()
 		{
 			if (this.troopQueueActive)
@@ -1223,7 +1223,7 @@ namespace GorillaNetworking
 			return this.currentQueue;
 		}
 
-		// Token: 0x06004D70 RID: 19824 RVA: 0x00170EAF File Offset: 0x0016F0AF
+		// Token: 0x06004D71 RID: 19825 RVA: 0x00170F87 File Offset: 0x0016F187
 		public int GetCurrentTroopPopulation()
 		{
 			if (this.troopQueueActive)
@@ -1233,7 +1233,7 @@ namespace GorillaNetworking
 			return -1;
 		}
 
-		// Token: 0x06004D71 RID: 19825 RVA: 0x00170EC4 File Offset: 0x0016F0C4
+		// Token: 0x06004D72 RID: 19826 RVA: 0x00170F9C File Offset: 0x0016F19C
 		private void JoinQueue(string queueName, bool isTroopQueue = false)
 		{
 			this.currentQueue = queueName;
@@ -1244,7 +1244,7 @@ namespace GorillaNetworking
 			PlayerPrefs.Save();
 		}
 
-		// Token: 0x06004D72 RID: 19826 RVA: 0x00170F14 File Offset: 0x0016F114
+		// Token: 0x06004D73 RID: 19827 RVA: 0x00170FEC File Offset: 0x0016F1EC
 		private void ProcessGroupState(GorillaKeyboardBindings buttonPressed)
 		{
 			switch (buttonPressed)
@@ -1294,7 +1294,7 @@ namespace GorillaNetworking
 			this.roomFull = false;
 		}
 
-		// Token: 0x06004D73 RID: 19827 RVA: 0x00171098 File Offset: 0x0016F298
+		// Token: 0x06004D74 RID: 19828 RVA: 0x00171170 File Offset: 0x0016F370
 		private void ProcessTroopState(GorillaKeyboardBindings buttonPressed)
 		{
 			bool flag = KIDManager.HasPermissionToUseFeature(EKIDFeatures.Groups);
@@ -1373,19 +1373,19 @@ namespace GorillaNetworking
 			}
 		}
 
-		// Token: 0x06004D74 RID: 19828 RVA: 0x001711B8 File Offset: 0x0016F3B8
+		// Token: 0x06004D75 RID: 19829 RVA: 0x00171290 File Offset: 0x0016F490
 		private bool IsValidTroopName(string troop)
 		{
 			return !string.IsNullOrEmpty(troop) && troop.Length <= 12 && (this.allowedInCompetitive || troop != "COMPETITIVE");
 		}
 
-		// Token: 0x06004D75 RID: 19829 RVA: 0x0006D17B File Offset: 0x0006B37B
+		// Token: 0x06004D76 RID: 19830 RVA: 0x0006D19B File Offset: 0x0006B39B
 		private string GetQueueNameForTroop(string troop)
 		{
 			return troop;
 		}
 
-		// Token: 0x06004D76 RID: 19830 RVA: 0x001711E4 File Offset: 0x0016F3E4
+		// Token: 0x06004D77 RID: 19831 RVA: 0x001712BC File Offset: 0x0016F4BC
 		private void ProcessVoiceState(GorillaKeyboardBindings buttonPressed)
 		{
 			if (KIDManager.HasPermissionToUseFeature(EKIDFeatures.Voice_Chat))
@@ -1424,7 +1424,7 @@ namespace GorillaNetworking
 			RigContainer.RefreshAllRigVoices();
 		}
 
-		// Token: 0x06004D77 RID: 19831 RVA: 0x00171254 File Offset: 0x0016F454
+		// Token: 0x06004D78 RID: 19832 RVA: 0x0017132C File Offset: 0x0016F52C
 		private void ProcessAutoMuteState(GorillaKeyboardBindings buttonPressed)
 		{
 			switch (buttonPressed)
@@ -1451,7 +1451,7 @@ namespace GorillaNetworking
 			this.UpdateScreen();
 		}
 
-		// Token: 0x06004D78 RID: 19832 RVA: 0x001712E4 File Offset: 0x0016F4E4
+		// Token: 0x06004D79 RID: 19833 RVA: 0x001713BC File Offset: 0x0016F5BC
 		private void ProcessVisualsState(GorillaKeyboardBindings buttonPressed)
 		{
 			if (buttonPressed < GorillaKeyboardBindings.up)
@@ -1479,7 +1479,7 @@ namespace GorillaNetworking
 			GorillaTagger.Instance.ShowCosmeticParticles(!this.disableParticles);
 		}
 
-		// Token: 0x06004D79 RID: 19833 RVA: 0x00171384 File Offset: 0x0016F584
+		// Token: 0x06004D7A RID: 19834 RVA: 0x0017145C File Offset: 0x0016F65C
 		private void ProcessCreditsState(GorillaKeyboardBindings buttonPressed)
 		{
 			if (buttonPressed == GorillaKeyboardBindings.enter)
@@ -1488,7 +1488,7 @@ namespace GorillaNetworking
 			}
 		}
 
-		// Token: 0x06004D7A RID: 19834 RVA: 0x00171397 File Offset: 0x0016F597
+		// Token: 0x06004D7B RID: 19835 RVA: 0x0017146F File Offset: 0x0016F66F
 		private void ProcessSupportState(GorillaKeyboardBindings buttonPressed)
 		{
 			if (buttonPressed == GorillaKeyboardBindings.enter)
@@ -1497,7 +1497,7 @@ namespace GorillaNetworking
 			}
 		}
 
-		// Token: 0x06004D7B RID: 19835 RVA: 0x001713A8 File Offset: 0x0016F5A8
+		// Token: 0x06004D7C RID: 19836 RVA: 0x00171480 File Offset: 0x0016F680
 		private void ProcessRedemptionState(GorillaKeyboardBindings buttonPressed)
 		{
 			if (this.RedemptionStatus == GorillaComputer.RedemptionResult.Checking)
@@ -1548,7 +1548,7 @@ namespace GorillaNetworking
 			}
 		}
 
-		// Token: 0x06004D7C RID: 19836 RVA: 0x00171494 File Offset: 0x0016F694
+		// Token: 0x06004D7D RID: 19837 RVA: 0x0017156C File Offset: 0x0016F76C
 		private void ProcessNameWarningState(GorillaKeyboardBindings buttonPressed)
 		{
 			if (this.warningConfirmationInputString.ToLower() == "yes")
@@ -1570,7 +1570,7 @@ namespace GorillaNetworking
 			}
 		}
 
-		// Token: 0x06004D7D RID: 19837 RVA: 0x00171520 File Offset: 0x0016F720
+		// Token: 0x06004D7E RID: 19838 RVA: 0x001715F8 File Offset: 0x0016F7F8
 		public void UpdateScreen()
 		{
 			if (NetworkSystem.Instance != null && !NetworkSystem.Instance.WrongVersion)
@@ -1640,14 +1640,14 @@ namespace GorillaNetworking
 			this.UpdateGameModeText();
 		}
 
-		// Token: 0x06004D7E RID: 19838 RVA: 0x00171652 File Offset: 0x0016F852
+		// Token: 0x06004D7F RID: 19839 RVA: 0x0017172A File Offset: 0x0016F92A
 		private void LoadingScreen()
 		{
 			this.screenText.Text = "LOADING";
 			this.LoadingRoutine = base.StartCoroutine(this.<LoadingScreen>g__LoadingScreenLocal|193_0());
 		}
 
-		// Token: 0x06004D7F RID: 19839 RVA: 0x00171678 File Offset: 0x0016F878
+		// Token: 0x06004D80 RID: 19840 RVA: 0x00171750 File Offset: 0x0016F950
 		private void NameWarningScreen()
 		{
 			this.screenText.Text = "<color=red>WARNING: PLEASE CHOOSE A BETTER NAME\n\nENTERING ANOTHER BAD NAME WILL RESULT IN A BAN</color>";
@@ -1661,7 +1661,7 @@ namespace GorillaNetworking
 			gorillaText2.Text = gorillaText2.Text + "\n\nTYPE 'YES' TO CONFIRM: " + this.warningConfirmationInputString;
 		}
 
-		// Token: 0x06004D80 RID: 19840 RVA: 0x001716EC File Offset: 0x0016F8EC
+		// Token: 0x06004D81 RID: 19841 RVA: 0x001717C4 File Offset: 0x0016F9C4
 		private void SupportScreen()
 		{
 			if (this.displaySupport)
@@ -1700,7 +1700,7 @@ namespace GorillaNetworking
 			gorillaText3.Text += "THAN ANOTHER AXIOM SUPPORT</color>";
 		}
 
-		// Token: 0x06004D81 RID: 19841 RVA: 0x00171800 File Offset: 0x0016FA00
+		// Token: 0x06004D82 RID: 19842 RVA: 0x001718D8 File Offset: 0x0016FAD8
 		private void TimeScreen()
 		{
 			this.screenText.Text = string.Concat(new string[]
@@ -1713,19 +1713,19 @@ namespace GorillaNetworking
 			});
 		}
 
-		// Token: 0x06004D82 RID: 19842 RVA: 0x0017186E File Offset: 0x0016FA6E
+		// Token: 0x06004D83 RID: 19843 RVA: 0x00171946 File Offset: 0x0016FB46
 		private void CreditsScreen()
 		{
 			this.screenText.Text = this.creditsView.GetScreenText();
 		}
 
-		// Token: 0x06004D83 RID: 19843 RVA: 0x00171888 File Offset: 0x0016FA88
+		// Token: 0x06004D84 RID: 19844 RVA: 0x00171960 File Offset: 0x0016FB60
 		private void VisualsScreen()
 		{
 			this.screenText.Text = "UPDATE ITEMS SETTINGS. PRESS OPTION 1 TO ENABLE ITEM PARTICLES. PRESS OPTION 2 TO DISABLE ITEM PARTICLES. PRESS 1-10 TO CHANGE INSTRUMENT VOLUME FOR OTHER PLAYERS.\n\nITEM PARTICLES ON: " + (this.disableParticles ? "FALSE" : "TRUE") + "\nINSTRUMENT VOLUME: " + Mathf.CeilToInt(this.instrumentVolume * 50f).ToString();
 		}
 
-		// Token: 0x06004D84 RID: 19844 RVA: 0x001718DC File Offset: 0x0016FADC
+		// Token: 0x06004D85 RID: 19845 RVA: 0x001719B4 File Offset: 0x0016FBB4
 		private void VoiceScreen()
 		{
 			Permission permissionDataByFeature = KIDManager.GetPermissionDataByFeature(EKIDFeatures.Voice_Chat);
@@ -1742,13 +1742,13 @@ namespace GorillaNetworking
 			this.VoiceScreen_Permission();
 		}
 
-		// Token: 0x06004D85 RID: 19845 RVA: 0x0017195B File Offset: 0x0016FB5B
+		// Token: 0x06004D86 RID: 19846 RVA: 0x00171A33 File Offset: 0x0016FC33
 		private void AutomuteScreen()
 		{
 			this.screenText.Text = "AUTOMOD AUTOMATICALLY MUTES PLAYERS WHEN THEY JOIN YOUR ROOM IF A LOT OF OTHER PLAYERS HAVE MUTED THEM\nPRESS OPTION 1 FOR AGGRESSIVE MUTING\nPRESS OPTION 2 FOR MODERATE MUTING\nPRESS OPTION 3 TO TURN AUTOMOD OFF\n\nCURRENT AUTOMOD LEVEL: " + this.autoMuteType;
 		}
 
-		// Token: 0x06004D86 RID: 19846 RVA: 0x00171978 File Offset: 0x0016FB78
+		// Token: 0x06004D87 RID: 19847 RVA: 0x00171A50 File Offset: 0x0016FC50
 		private void GroupScreen()
 		{
 			string text = ((this.allowedMapsToJoin.Length > 1) ? this.groupMapJoin : this.allowedMapsToJoin[0].ToUpper());
@@ -1762,7 +1762,7 @@ namespace GorillaNetworking
 			this.screenText.Text = "PRESS ENTER TO JOIN A PUBLIC GAME AND BRING EVERYONE IN THIS ROOM WITH YOU.\n\nACTIVE ZONE WILL BE: " + text + text2;
 		}
 
-		// Token: 0x06004D87 RID: 19847 RVA: 0x00171A14 File Offset: 0x0016FC14
+		// Token: 0x06004D88 RID: 19848 RVA: 0x00171AEC File Offset: 0x0016FCEC
 		private void MicScreen()
 		{
 			if (KIDManager.GetPermissionDataByFeature(EKIDFeatures.Voice_Chat).ManagedBy == Permission.ManagedByEnum.PROHIBITED)
@@ -1773,7 +1773,7 @@ namespace GorillaNetworking
 			this.screenText.Text = "PRESS OPTION 1 = ALL CHAT.\nPRESS OPTION 2 = PUSH TO TALK.\nPRESS OPTION 3 = PUSH TO MUTE.\n\nCURRENT MIC SETTING: " + this.pttType + "\n\nPUSH TO TALK AND PUSH TO MUTE WORK WITH ANY FACE BUTTON";
 		}
 
-		// Token: 0x06004D88 RID: 19848 RVA: 0x00171A4C File Offset: 0x0016FC4C
+		// Token: 0x06004D89 RID: 19849 RVA: 0x00171B24 File Offset: 0x0016FD24
 		private void QueueScreen()
 		{
 			if (this.allowedInCompetitive)
@@ -1788,7 +1788,7 @@ namespace GorillaNetworking
 			gorillaText.Text = gorillaText.Text + "\n\nCURRENT QUEUE: " + this.currentQueue;
 		}
 
-		// Token: 0x06004D89 RID: 19849 RVA: 0x00171AA4 File Offset: 0x0016FCA4
+		// Token: 0x06004D8A RID: 19850 RVA: 0x00171B7C File Offset: 0x0016FD7C
 		private void TroopScreen()
 		{
 			Permission permissionDataByFeature = KIDManager.GetPermissionDataByFeature(EKIDFeatures.Groups);
@@ -1867,13 +1867,13 @@ namespace GorillaNetworking
 			}
 		}
 
-		// Token: 0x06004D8A RID: 19850 RVA: 0x00171CDC File Offset: 0x0016FEDC
+		// Token: 0x06004D8B RID: 19851 RVA: 0x00171DB4 File Offset: 0x0016FFB4
 		private void TurnScreen()
 		{
 			this.screenText.Text = "PRESS OPTION 1 TO USE SNAP TURN. PRESS OPTION 2 TO USE SMOOTH TURN. PRESS OPTION 3 TO USE NO ARTIFICIAL TURNING. PRESS THE NUMBER KEYS TO CHOOSE A TURNING SPEED.\n CURRENT TURN TYPE: " + GorillaSnapTurn.CachedSnapTurnRef.turnType + "\nCURRENT TURN SPEED: " + GorillaSnapTurn.CachedSnapTurnRef.turnFactor.ToString();
 		}
 
-		// Token: 0x06004D8B RID: 19851 RVA: 0x00171D20 File Offset: 0x0016FF20
+		// Token: 0x06004D8C RID: 19852 RVA: 0x00171DF8 File Offset: 0x0016FFF8
 		private void NameScreen()
 		{
 			Permission permissionDataByFeature = KIDManager.GetPermissionDataByFeature(EKIDFeatures.Custom_Nametags);
@@ -1897,7 +1897,7 @@ namespace GorillaNetworking
 			this.NameScreen_Permission();
 		}
 
-		// Token: 0x06004D8C RID: 19852 RVA: 0x00171DC8 File Offset: 0x0016FFC8
+		// Token: 0x06004D8D RID: 19853 RVA: 0x00171EA0 File Offset: 0x001700A0
 		private void StartupScreen()
 		{
 			string text = string.Empty;
@@ -1919,7 +1919,7 @@ namespace GorillaNetworking
 			});
 		}
 
-		// Token: 0x06004D8D RID: 19853 RVA: 0x00171E50 File Offset: 0x00170050
+		// Token: 0x06004D8E RID: 19854 RVA: 0x00171F28 File Offset: 0x00170128
 		private void ColourScreen()
 		{
 			this.screenText.Text = "USE THE OPTIONS BUTTONS TO SELECT THE COLOR TO UPDATE, THEN PRESS 0-9 TO SET A NEW VALUE.";
@@ -1931,7 +1931,7 @@ namespace GorillaNetworking
 			gorillaText3.Text = gorillaText3.Text + "\n\n BLUE: " + Mathf.FloorToInt(this.blueValue * 9f).ToString() + ((this.colorCursorLine == 2) ? "<--" : "");
 		}
 
-		// Token: 0x06004D8E RID: 19854 RVA: 0x00171F48 File Offset: 0x00170148
+		// Token: 0x06004D8F RID: 19855 RVA: 0x00172020 File Offset: 0x00170220
 		private void RoomScreen()
 		{
 			Permission permissionDataByFeature = KIDManager.GetPermissionDataByFeature(EKIDFeatures.Groups);
@@ -2013,7 +2013,7 @@ namespace GorillaNetworking
 			}
 		}
 
-		// Token: 0x06004D8F RID: 19855 RVA: 0x001721B4 File Offset: 0x001703B4
+		// Token: 0x06004D90 RID: 19856 RVA: 0x0017228C File Offset: 0x0017048C
 		private void RedemptionScreen()
 		{
 			this.screenText.Text = "TYPE REDEMPTION CODE AND PRESS ENTER";
@@ -2052,7 +2052,7 @@ namespace GorillaNetworking
 			}
 		}
 
-		// Token: 0x06004D90 RID: 19856 RVA: 0x00172284 File Offset: 0x00170484
+		// Token: 0x06004D91 RID: 19857 RVA: 0x0017235C File Offset: 0x0017055C
 		private void UpdateGameModeText()
 		{
 			if (NetworkSystem.Instance.InRoom)
@@ -2066,27 +2066,27 @@ namespace GorillaNetworking
 			}
 		}
 
-		// Token: 0x06004D91 RID: 19857 RVA: 0x001722DA File Offset: 0x001704DA
+		// Token: 0x06004D92 RID: 19858 RVA: 0x001723B2 File Offset: 0x001705B2
 		private void UpdateFunctionScreen()
 		{
 			this.functionSelectText.Text = this.GetOrderListForScreen(this.currentState);
 		}
 
-		// Token: 0x06004D92 RID: 19858 RVA: 0x001722F3 File Offset: 0x001704F3
+		// Token: 0x06004D93 RID: 19859 RVA: 0x001723CB File Offset: 0x001705CB
 		private void CheckAutoBanListForRoomName(string nameToCheck)
 		{
 			this.SwitchToLoadingState();
 			this.AutoBanPlayfabFunction(nameToCheck, true, new Action<ExecuteFunctionResult>(this.OnRoomNameChecked));
 		}
 
-		// Token: 0x06004D93 RID: 19859 RVA: 0x0017230F File Offset: 0x0017050F
+		// Token: 0x06004D94 RID: 19860 RVA: 0x001723E7 File Offset: 0x001705E7
 		private void CheckAutoBanListForPlayerName(string nameToCheck)
 		{
 			this.SwitchToLoadingState();
 			this.AutoBanPlayfabFunction(nameToCheck, false, new Action<ExecuteFunctionResult>(this.OnPlayerNameChecked));
 		}
 
-		// Token: 0x06004D94 RID: 19860 RVA: 0x0017232B File Offset: 0x0017052B
+		// Token: 0x06004D95 RID: 19861 RVA: 0x00172403 File Offset: 0x00170603
 		private void CheckAutoBanListForTroopName(string nameToCheck)
 		{
 			if (this.IsValidTroopName(this.troopToJoin))
@@ -2096,7 +2096,7 @@ namespace GorillaNetworking
 			}
 		}
 
-		// Token: 0x06004D95 RID: 19861 RVA: 0x00172355 File Offset: 0x00170555
+		// Token: 0x06004D96 RID: 19862 RVA: 0x0017242D File Offset: 0x0017062D
 		private void AutoBanPlayfabFunction(string nameToCheck, bool forRoom, Action<ExecuteFunctionResult> resultCallback)
 		{
 			GorillaServer.Instance.CheckForBadName(new CheckForBadNameRequest
@@ -2106,7 +2106,7 @@ namespace GorillaNetworking
 			}, resultCallback, new Action<PlayFabError>(this.OnErrorNameCheck));
 		}
 
-		// Token: 0x06004D96 RID: 19862 RVA: 0x00172384 File Offset: 0x00170584
+		// Token: 0x06004D97 RID: 19863 RVA: 0x0017245C File Offset: 0x0017065C
 		private void OnRoomNameChecked(ExecuteFunctionResult result)
 		{
 			object obj;
@@ -2143,7 +2143,7 @@ namespace GorillaNetworking
 			}
 		}
 
-		// Token: 0x06004D97 RID: 19863 RVA: 0x001724AC File Offset: 0x001706AC
+		// Token: 0x06004D98 RID: 19864 RVA: 0x00172584 File Offset: 0x00170784
 		private void OnPlayerNameChecked(ExecuteFunctionResult result)
 		{
 			object obj;
@@ -2183,7 +2183,7 @@ namespace GorillaNetworking
 			}
 		}
 
-		// Token: 0x06004D98 RID: 19864 RVA: 0x001725E8 File Offset: 0x001707E8
+		// Token: 0x06004D99 RID: 19865 RVA: 0x001726C0 File Offset: 0x001708C0
 		private void OnTroopNameChecked(ExecuteFunctionResult result)
 		{
 			object obj;
@@ -2210,7 +2210,7 @@ namespace GorillaNetworking
 			}
 		}
 
-		// Token: 0x06004D99 RID: 19865 RVA: 0x0017266F File Offset: 0x0017086F
+		// Token: 0x06004D9A RID: 19866 RVA: 0x00172747 File Offset: 0x00170947
 		private void OnErrorNameCheck(PlayFabError error)
 		{
 			if (this.currentState == GorillaComputer.ComputerState.Loading)
@@ -2220,7 +2220,7 @@ namespace GorillaNetworking
 			GorillaComputer.OnErrorShared(error);
 		}
 
-		// Token: 0x06004D9A RID: 19866 RVA: 0x00172688 File Offset: 0x00170888
+		// Token: 0x06004D9B RID: 19867 RVA: 0x00172760 File Offset: 0x00170960
 		public bool CheckAutoBanListForName(string nameToCheck)
 		{
 			nameToCheck = nameToCheck.ToLower();
@@ -2250,7 +2250,7 @@ namespace GorillaNetworking
 			return true;
 		}
 
-		// Token: 0x06004D9B RID: 19867 RVA: 0x00172748 File Offset: 0x00170948
+		// Token: 0x06004D9C RID: 19868 RVA: 0x00172820 File Offset: 0x00170A20
 		public void UpdateColor(float red, float green, float blue)
 		{
 			this.redValue = Mathf.Clamp(red, 0f, 1f);
@@ -2258,7 +2258,7 @@ namespace GorillaNetworking
 			this.blueValue = Mathf.Clamp(blue, 0f, 1f);
 		}
 
-		// Token: 0x06004D9C RID: 19868 RVA: 0x00172797 File Offset: 0x00170997
+		// Token: 0x06004D9D RID: 19869 RVA: 0x0017286F File Offset: 0x00170A6F
 		public void UpdateFailureText(string failMessage)
 		{
 			GorillaScoreboardTotalUpdater.instance.SetOfflineFailureText(failMessage);
@@ -2267,7 +2267,7 @@ namespace GorillaNetworking
 			this.functionSelectText.EnableFailedState(failMessage);
 		}
 
-		// Token: 0x06004D9D RID: 19869 RVA: 0x001727C8 File Offset: 0x001709C8
+		// Token: 0x06004D9E RID: 19870 RVA: 0x001728A0 File Offset: 0x00170AA0
 		private void RestoreFromFailureState()
 		{
 			GorillaScoreboardTotalUpdater.instance.ClearOfflineFailureText();
@@ -2276,7 +2276,7 @@ namespace GorillaNetworking
 			this.functionSelectText.DisableFailedState();
 		}
 
-		// Token: 0x06004D9E RID: 19870 RVA: 0x001727F6 File Offset: 0x001709F6
+		// Token: 0x06004D9F RID: 19871 RVA: 0x001728CE File Offset: 0x00170ACE
 		public void GeneralFailureMessage(string failMessage)
 		{
 			this.isConnectedToMaster = false;
@@ -2285,7 +2285,7 @@ namespace GorillaNetworking
 			this.UpdateScreen();
 		}
 
-		// Token: 0x06004D9F RID: 19871 RVA: 0x00172818 File Offset: 0x00170A18
+		// Token: 0x06004DA0 RID: 19872 RVA: 0x001728F0 File Offset: 0x00170AF0
 		private static void OnErrorShared(PlayFabError error)
 		{
 			if (error.Error == PlayFabErrorCode.NotAuthenticated)
@@ -2342,7 +2342,7 @@ namespace GorillaNetworking
 			}
 		}
 
-		// Token: 0x06004DA0 RID: 19872 RVA: 0x00172A70 File Offset: 0x00170C70
+		// Token: 0x06004DA1 RID: 19873 RVA: 0x00172B48 File Offset: 0x00170D48
 		private void DecreaseState()
 		{
 			this.currentStateIndex--;
@@ -2357,7 +2357,7 @@ namespace GorillaNetworking
 			this.SwitchState(this.GetState(this.currentStateIndex), true);
 		}
 
-		// Token: 0x06004DA1 RID: 19873 RVA: 0x00172AD4 File Offset: 0x00170CD4
+		// Token: 0x06004DA2 RID: 19874 RVA: 0x00172BAC File Offset: 0x00170DAC
 		private void IncreaseState()
 		{
 			this.currentStateIndex++;
@@ -2372,7 +2372,7 @@ namespace GorillaNetworking
 			this.SwitchState(this.GetState(this.currentStateIndex), true);
 		}
 
-		// Token: 0x06004DA2 RID: 19874 RVA: 0x00172B38 File Offset: 0x00170D38
+		// Token: 0x06004DA3 RID: 19875 RVA: 0x00172C10 File Offset: 0x00170E10
 		public GorillaComputer.ComputerState GetState(int index)
 		{
 			GorillaComputer.ComputerState computerState;
@@ -2387,13 +2387,13 @@ namespace GorillaNetworking
 			return computerState;
 		}
 
-		// Token: 0x06004DA3 RID: 19875 RVA: 0x00172B80 File Offset: 0x00170D80
+		// Token: 0x06004DA4 RID: 19876 RVA: 0x00172C58 File Offset: 0x00170E58
 		public int GetStateIndex(GorillaComputer.ComputerState state)
 		{
 			return this._activeOrderList.FindIndex((GorillaComputer.StateOrderItem s) => s.State == state);
 		}
 
-		// Token: 0x06004DA4 RID: 19876 RVA: 0x00172BB4 File Offset: 0x00170DB4
+		// Token: 0x06004DA5 RID: 19877 RVA: 0x00172C8C File Offset: 0x00170E8C
 		public string GetOrderListForScreen(GorillaComputer.ComputerState currentState)
 		{
 			StringBuilder stringBuilder = new StringBuilder();
@@ -2413,14 +2413,14 @@ namespace GorillaNetworking
 			return stringBuilder.ToString();
 		}
 
-		// Token: 0x06004DA5 RID: 19877 RVA: 0x00172C21 File Offset: 0x00170E21
+		// Token: 0x06004DA6 RID: 19878 RVA: 0x00172CF9 File Offset: 0x00170EF9
 		private void GetCurrentTime()
 		{
 			this.tryGetTimeAgain = true;
 			PlayFabClientAPI.GetTime(new GetTimeRequest(), new Action<GetTimeResult>(this.OnGetTimeSuccess), new Action<PlayFabError>(this.OnGetTimeFailure), null, null);
 		}
 
-		// Token: 0x06004DA6 RID: 19878 RVA: 0x00172C50 File Offset: 0x00170E50
+		// Token: 0x06004DA7 RID: 19879 RVA: 0x00172D28 File Offset: 0x00170F28
 		private void OnGetTimeSuccess(GetTimeResult result)
 		{
 			this.startupMillis = (long)(TimeSpan.FromTicks(result.Time.Ticks).TotalMilliseconds - (double)(Time.realtimeSinceStartup * 1000f));
@@ -2433,7 +2433,7 @@ namespace GorillaNetworking
 			onServerTimeUpdated();
 		}
 
-		// Token: 0x06004DA7 RID: 19879 RVA: 0x00172CB8 File Offset: 0x00170EB8
+		// Token: 0x06004DA8 RID: 19880 RVA: 0x00172D90 File Offset: 0x00170F90
 		private void OnGetTimeFailure(PlayFabError error)
 		{
 			this.startupMillis = (long)(TimeSpan.FromTicks(DateTime.UtcNow.Ticks).TotalMilliseconds - (double)(Time.realtimeSinceStartup * 1000f));
@@ -2454,13 +2454,13 @@ namespace GorillaNetworking
 			}
 		}
 
-		// Token: 0x06004DA8 RID: 19880 RVA: 0x00172D4B File Offset: 0x00170F4B
+		// Token: 0x06004DA9 RID: 19881 RVA: 0x00172E23 File Offset: 0x00171023
 		private void PlayerCountChangedCallback(NetPlayer player)
 		{
 			this.UpdateScreen();
 		}
 
-		// Token: 0x06004DA9 RID: 19881 RVA: 0x00172D54 File Offset: 0x00170F54
+		// Token: 0x06004DAA RID: 19882 RVA: 0x00172E2C File Offset: 0x0017102C
 		public void SetNameBySafety(bool isSafety)
 		{
 			if (!isSafety)
@@ -2480,13 +2480,13 @@ namespace GorillaNetworking
 			}
 		}
 
-		// Token: 0x06004DAA RID: 19882 RVA: 0x00172E2E File Offset: 0x0017102E
+		// Token: 0x06004DAB RID: 19883 RVA: 0x00172F06 File Offset: 0x00171106
 		public void SetLocalNameTagText(string newName)
 		{
 			VRRig.LocalRig.SetNameTagText(newName);
 		}
 
-		// Token: 0x06004DAB RID: 19883 RVA: 0x00172E3C File Offset: 0x0017103C
+		// Token: 0x06004DAC RID: 19884 RVA: 0x00172F14 File Offset: 0x00171114
 		public void SetComputerSettingsBySafety(bool isSafety, GorillaComputer.ComputerState[] toFilterOut, bool shouldHide)
 		{
 			this._activeOrderList = this.OrderList;
@@ -2553,7 +2553,7 @@ namespace GorillaNetworking
 			this.UpdateScreen();
 		}
 
-		// Token: 0x06004DAC RID: 19884 RVA: 0x00172FD0 File Offset: 0x001711D0
+		// Token: 0x06004DAD RID: 19885 RVA: 0x001730A8 File Offset: 0x001712A8
 		public void KID_SetVoiceChatSettingOnStart(bool voiceChatEnabled, Permission.ManagedByEnum managedBy, bool hasOptedInPreviously)
 		{
 			if (managedBy == Permission.ManagedByEnum.PROHIBITED)
@@ -2571,7 +2571,7 @@ namespace GorillaNetworking
 			this.SetVoice(voiceChatEnabled, !hasOptedInPreviously && voiceChatEnabled);
 		}
 
-		// Token: 0x06004DAD RID: 19885 RVA: 0x00173049 File Offset: 0x00171249
+		// Token: 0x06004DAE RID: 19886 RVA: 0x00173121 File Offset: 0x00171321
 		private void SetVoice(bool setting, bool saveSetting = true)
 		{
 			this.voiceChatOn = (setting ? "TRUE" : "FALSE");
@@ -2587,13 +2587,13 @@ namespace GorillaNetworking
 			PlayerPrefs.Save();
 		}
 
-		// Token: 0x06004DAE RID: 19886 RVA: 0x00173083 File Offset: 0x00171283
+		// Token: 0x06004DAF RID: 19887 RVA: 0x0017315B File Offset: 0x0017135B
 		public bool CheckVoiceChatEnabled()
 		{
 			return this.voiceChatOn == "TRUE";
 		}
 
-		// Token: 0x06004DAF RID: 19887 RVA: 0x00173098 File Offset: 0x00171298
+		// Token: 0x06004DB0 RID: 19888 RVA: 0x00173170 File Offset: 0x00171370
 		private void SetVoiceChatBySafety(bool voiceChatEnabled, Permission.ManagedByEnum managedBy)
 		{
 			bool flag = !voiceChatEnabled;
@@ -2657,7 +2657,7 @@ namespace GorillaNetworking
 			Debug.Log("[KID] On Session Update - Voice Chat Permission changed - Has enabled voiceChat? [" + voiceChatEnabled.ToString() + "]");
 		}
 
-		// Token: 0x06004DB0 RID: 19888 RVA: 0x001731C4 File Offset: 0x001713C4
+		// Token: 0x06004DB1 RID: 19889 RVA: 0x0017329C File Offset: 0x0017149C
 		public void SetNametagSetting(bool setting, Permission.ManagedByEnum managedBy, bool hasOptedInPreviously)
 		{
 			if (managedBy == Permission.ManagedByEnum.PROHIBITED)
@@ -2675,19 +2675,19 @@ namespace GorillaNetworking
 			this.UpdateNametagSetting(setting, !hasOptedInPreviously && setting);
 		}
 
-		// Token: 0x06004DB1 RID: 19889 RVA: 0x00173220 File Offset: 0x00171420
+		// Token: 0x06004DB2 RID: 19890 RVA: 0x001732F8 File Offset: 0x001714F8
 		public static void RegisterOnNametagSettingChanged(Action<bool> callback)
 		{
 			GorillaComputer.onNametagSettingChangedAction = (Action<bool>)Delegate.Combine(GorillaComputer.onNametagSettingChangedAction, callback);
 		}
 
-		// Token: 0x06004DB2 RID: 19890 RVA: 0x00173237 File Offset: 0x00171437
+		// Token: 0x06004DB3 RID: 19891 RVA: 0x0017330F File Offset: 0x0017150F
 		public static void UnregisterOnNametagSettingChanged(Action<bool> callback)
 		{
 			GorillaComputer.onNametagSettingChangedAction = (Action<bool>)Delegate.Remove(GorillaComputer.onNametagSettingChangedAction, callback);
 		}
 
-		// Token: 0x06004DB3 RID: 19891 RVA: 0x00173250 File Offset: 0x00171450
+		// Token: 0x06004DB4 RID: 19892 RVA: 0x00173328 File Offset: 0x00171528
 		private void UpdateNametagSetting(bool newSettingValue, bool saveSetting = true)
 		{
 			if (newSettingValue)
@@ -2713,42 +2713,42 @@ namespace GorillaNetworking
 			PlayerPrefs.Save();
 		}
 
-		// Token: 0x06004DB4 RID: 19892 RVA: 0x000023F4 File Offset: 0x000005F4
+		// Token: 0x06004DB5 RID: 19893 RVA: 0x000023F4 File Offset: 0x000005F4
 		void IMatchmakingCallbacks.OnFriendListUpdate(List<Photon.Realtime.FriendInfo> friendList)
 		{
 		}
 
-		// Token: 0x06004DB5 RID: 19893 RVA: 0x000023F4 File Offset: 0x000005F4
+		// Token: 0x06004DB6 RID: 19894 RVA: 0x000023F4 File Offset: 0x000005F4
 		void IMatchmakingCallbacks.OnCreatedRoom()
 		{
 		}
 
-		// Token: 0x06004DB6 RID: 19894 RVA: 0x000023F4 File Offset: 0x000005F4
+		// Token: 0x06004DB7 RID: 19895 RVA: 0x000023F4 File Offset: 0x000005F4
 		void IMatchmakingCallbacks.OnCreateRoomFailed(short returnCode, string message)
 		{
 		}
 
-		// Token: 0x06004DB7 RID: 19895 RVA: 0x000023F4 File Offset: 0x000005F4
+		// Token: 0x06004DB8 RID: 19896 RVA: 0x000023F4 File Offset: 0x000005F4
 		void IMatchmakingCallbacks.OnJoinedRoom()
 		{
 		}
 
-		// Token: 0x06004DB8 RID: 19896 RVA: 0x000023F4 File Offset: 0x000005F4
+		// Token: 0x06004DB9 RID: 19897 RVA: 0x000023F4 File Offset: 0x000005F4
 		void IMatchmakingCallbacks.OnJoinRandomFailed(short returnCode, string message)
 		{
 		}
 
-		// Token: 0x06004DB9 RID: 19897 RVA: 0x000023F4 File Offset: 0x000005F4
+		// Token: 0x06004DBA RID: 19898 RVA: 0x000023F4 File Offset: 0x000005F4
 		void IMatchmakingCallbacks.OnLeftRoom()
 		{
 		}
 
-		// Token: 0x06004DBA RID: 19898 RVA: 0x000023F4 File Offset: 0x000005F4
+		// Token: 0x06004DBB RID: 19899 RVA: 0x000023F4 File Offset: 0x000005F4
 		void IMatchmakingCallbacks.OnPreLeavingRoom()
 		{
 		}
 
-		// Token: 0x06004DBB RID: 19899 RVA: 0x001732BE File Offset: 0x001714BE
+		// Token: 0x06004DBC RID: 19900 RVA: 0x00173396 File Offset: 0x00171596
 		void IMatchmakingCallbacks.OnJoinRoomFailed(short returnCode, string message)
 		{
 			if (returnCode == 32765)
@@ -2757,32 +2757,32 @@ namespace GorillaNetworking
 			}
 		}
 
-		// Token: 0x06004DBC RID: 19900 RVA: 0x001732CF File Offset: 0x001714CF
+		// Token: 0x06004DBD RID: 19901 RVA: 0x001733A7 File Offset: 0x001715A7
 		public void SetInVirtualStump(bool inVirtualStump)
 		{
 			this.playerInVirtualStump = inVirtualStump;
 			this.roomToJoin = (this.playerInVirtualStump ? (this.virtualStumpRoomPrepend + this.roomToJoin) : this.roomToJoin.RemoveAll(this.virtualStumpRoomPrepend, StringComparison.OrdinalIgnoreCase));
 		}
 
-		// Token: 0x06004DBD RID: 19901 RVA: 0x0017330B File Offset: 0x0017150B
+		// Token: 0x06004DBE RID: 19902 RVA: 0x001733E3 File Offset: 0x001715E3
 		public bool IsPlayerInVirtualStump()
 		{
 			return this.playerInVirtualStump;
 		}
 
-		// Token: 0x06004DBE RID: 19902 RVA: 0x00173313 File Offset: 0x00171513
+		// Token: 0x06004DBF RID: 19903 RVA: 0x001733EB File Offset: 0x001715EB
 		private void InitializeKIdState()
 		{
 			KIDManager.RegisterSessionUpdateCallback_AnyPermission(new Action(this.OnSessionUpdate_GorillaComputer));
 		}
 
-		// Token: 0x06004DBF RID: 19903 RVA: 0x00173326 File Offset: 0x00171526
+		// Token: 0x06004DC0 RID: 19904 RVA: 0x001733FE File Offset: 0x001715FE
 		private void UpdateKidState()
 		{
 			this._currentScreentState = GorillaComputer.EKidScreenState.Ready;
 		}
 
-		// Token: 0x06004DC0 RID: 19904 RVA: 0x0017332F File Offset: 0x0017152F
+		// Token: 0x06004DC1 RID: 19905 RVA: 0x00173407 File Offset: 0x00171607
 		private void RequestUpdatedPermissions()
 		{
 			if (!KIDManager.KidEnabledAndReady)
@@ -2801,7 +2801,7 @@ namespace GorillaNetworking
 			this.UpdateSession();
 		}
 
-		// Token: 0x06004DC1 RID: 19905 RVA: 0x00173360 File Offset: 0x00171560
+		// Token: 0x06004DC2 RID: 19906 RVA: 0x00173438 File Offset: 0x00171638
 		private async void UpdateSession()
 		{
 			this._nextUpdateAttemptTime = Time.time + this._updateAttemptCooldown;
@@ -2809,14 +2809,14 @@ namespace GorillaNetworking
 			this._waitingForUpdatedSession = false;
 		}
 
-		// Token: 0x06004DC2 RID: 19906 RVA: 0x00173397 File Offset: 0x00171597
+		// Token: 0x06004DC3 RID: 19907 RVA: 0x0017346F File Offset: 0x0017166F
 		private void OnSessionUpdate_GorillaComputer()
 		{
 			this.UpdateKidState();
 			this.UpdateScreen();
 		}
 
-		// Token: 0x06004DC3 RID: 19907 RVA: 0x001733A5 File Offset: 0x001715A5
+		// Token: 0x06004DC4 RID: 19908 RVA: 0x0017347D File Offset: 0x0017167D
 		private void ProcessScreen_SetupKID()
 		{
 			if (!KIDManager.KidEnabledAndReady)
@@ -2826,7 +2826,7 @@ namespace GorillaNetworking
 			}
 		}
 
-		// Token: 0x06004DC4 RID: 19908 RVA: 0x001733BC File Offset: 0x001715BC
+		// Token: 0x06004DC5 RID: 19909 RVA: 0x00173494 File Offset: 0x00171694
 		private bool GuardianConsentMessage(string setupKIDButtonName, string featureDescription)
 		{
 			GorillaText gorillaText = this.screenText;
@@ -2850,7 +2850,7 @@ namespace GorillaNetworking
 			return false;
 		}
 
-		// Token: 0x06004DC5 RID: 19909 RVA: 0x00173474 File Offset: 0x00171674
+		// Token: 0x06004DC6 RID: 19910 RVA: 0x0017354C File Offset: 0x0017174C
 		private void ProhibitedMessage(string verb)
 		{
 			this.screenText.Text = "";
@@ -2858,7 +2858,7 @@ namespace GorillaNetworking
 			gorillaText.Text = gorillaText.Text + "\n\nYOU ARE NOT ALLOWED TO " + verb + " IN YOUR JURISDICTION.";
 		}
 
-		// Token: 0x06004DC6 RID: 19910 RVA: 0x001734A7 File Offset: 0x001716A7
+		// Token: 0x06004DC7 RID: 19911 RVA: 0x0017357F File Offset: 0x0017177F
 		private void RoomScreen_Permission()
 		{
 			if (!KIDManager.KidEnabled)
@@ -2870,13 +2870,13 @@ namespace GorillaNetworking
 			this.GuardianConsentMessage("OPTION 3", "JOIN PRIVATE ROOMS");
 		}
 
-		// Token: 0x06004DC7 RID: 19911 RVA: 0x001734E2 File Offset: 0x001716E2
+		// Token: 0x06004DC8 RID: 19912 RVA: 0x001735BA File Offset: 0x001717BA
 		private void RoomScreen_KIdProhibited()
 		{
 			this.ProhibitedMessage("CREATE OR JOIN PRIVATE ROOMS");
 		}
 
-		// Token: 0x06004DC8 RID: 19912 RVA: 0x001734F0 File Offset: 0x001716F0
+		// Token: 0x06004DC9 RID: 19913 RVA: 0x001735C8 File Offset: 0x001717C8
 		private void VoiceScreen_Permission()
 		{
 			this.screenText.Text = "VOICE TYPE: \"MONKE\"\n\n";
@@ -2889,26 +2889,26 @@ namespace GorillaNetworking
 			this.GuardianConsentMessage("OPTION 3", "ENABLE HUMAN VOICE CHAT");
 		}
 
-		// Token: 0x06004DC9 RID: 19913 RVA: 0x00173541 File Offset: 0x00171741
+		// Token: 0x06004DCA RID: 19914 RVA: 0x00173619 File Offset: 0x00171819
 		private void VoiceScreen_KIdProhibited()
 		{
 			this.ProhibitedMessage("USE THE VOICE CHAT");
 		}
 
-		// Token: 0x06004DCA RID: 19914 RVA: 0x0017354E File Offset: 0x0017174E
+		// Token: 0x06004DCB RID: 19915 RVA: 0x00173626 File Offset: 0x00171826
 		private void MicScreen_Permission()
 		{
 			this.screenText.Text = "";
 			this.GuardianConsentMessage("OPTION 3", "ENABLE HUMAN VOICE CHAT");
 		}
 
-		// Token: 0x06004DCB RID: 19915 RVA: 0x00173571 File Offset: 0x00171771
+		// Token: 0x06004DCC RID: 19916 RVA: 0x00173649 File Offset: 0x00171849
 		private void MicScreen_KIdProhibited()
 		{
 			this.VoiceScreen_KIdProhibited();
 		}
 
-		// Token: 0x06004DCC RID: 19916 RVA: 0x00173579 File Offset: 0x00171779
+		// Token: 0x06004DCD RID: 19917 RVA: 0x00173651 File Offset: 0x00171851
 		private void NameScreen_Permission()
 		{
 			if (!KIDManager.KidEnabled)
@@ -2920,13 +2920,13 @@ namespace GorillaNetworking
 			this.GuardianConsentMessage("OPTION 3", "SET CUSTOM NICKNAMES");
 		}
 
-		// Token: 0x06004DCD RID: 19917 RVA: 0x001735B4 File Offset: 0x001717B4
+		// Token: 0x06004DCE RID: 19918 RVA: 0x0017368C File Offset: 0x0017188C
 		private void NameScreen_KIdProhibited()
 		{
 			this.ProhibitedMessage("SET CUSTOM NICKNAMES");
 		}
 
-		// Token: 0x06004DCE RID: 19918 RVA: 0x001735C4 File Offset: 0x001717C4
+		// Token: 0x06004DCF RID: 19919 RVA: 0x0017369C File Offset: 0x0017189C
 		private void OnKIDSessionUpdated_CustomNicknames(bool showCustomNames, Permission.ManagedByEnum managedBy)
 		{
 			bool flag = (showCustomNames || managedBy == Permission.ManagedByEnum.PLAYER) && managedBy != Permission.ManagedByEnum.PROHIBITED;
@@ -2964,7 +2964,7 @@ namespace GorillaNetworking
 			action(this.NametagsEnabled);
 		}
 
-		// Token: 0x06004DCF RID: 19919 RVA: 0x00173690 File Offset: 0x00171890
+		// Token: 0x06004DD0 RID: 19920 RVA: 0x00173768 File Offset: 0x00171968
 		private void TroopScreen_Permission()
 		{
 			this.screenText.Text = "";
@@ -2977,13 +2977,13 @@ namespace GorillaNetworking
 			this.GuardianConsentMessage("OPTION 3", "JOIN TROOPS");
 		}
 
-		// Token: 0x06004DD0 RID: 19920 RVA: 0x001736E1 File Offset: 0x001718E1
+		// Token: 0x06004DD1 RID: 19921 RVA: 0x001737B9 File Offset: 0x001719B9
 		private void TroopScreen_KIdProhibited()
 		{
 			this.ProhibitedMessage("CREATE OR JOIN TROOPS");
 		}
 
-		// Token: 0x06004DD1 RID: 19921 RVA: 0x001736EE File Offset: 0x001718EE
+		// Token: 0x06004DD2 RID: 19922 RVA: 0x001737C6 File Offset: 0x001719C6
 		private void ProcessKIdState(GorillaKeyboardBindings buttonPressed)
 		{
 			if (buttonPressed == GorillaKeyboardBindings.option1 && this._currentScreentState == GorillaComputer.EKidScreenState.Ready)
@@ -2992,7 +2992,7 @@ namespace GorillaNetworking
 			}
 		}
 
-		// Token: 0x06004DD2 RID: 19922 RVA: 0x00173703 File Offset: 0x00171903
+		// Token: 0x06004DD3 RID: 19923 RVA: 0x001737DB File Offset: 0x001719DB
 		private void KIdScreen()
 		{
 			if (!KIDManager.KidEnabledAndReady)
@@ -3007,7 +3007,7 @@ namespace GorillaNetworking
 			this.KIdScreen_DisplayPermissions();
 		}
 
-		// Token: 0x06004DD3 RID: 19923 RVA: 0x0017372C File Offset: 0x0017192C
+		// Token: 0x06004DD4 RID: 19924 RVA: 0x00173804 File Offset: 0x00171A04
 		private void KIdScreen_DisplayPermissions()
 		{
 			AgeStatusType activeAccountStatus = KIDManager.GetActiveAccountStatus();
@@ -3051,13 +3051,13 @@ namespace GorillaNetworking
 			this.screenText.Text = stringBuilder.ToString();
 		}
 
-		// Token: 0x06004DD5 RID: 19925 RVA: 0x00011040 File Offset: 0x0000F240
+		// Token: 0x06004DD6 RID: 19926 RVA: 0x00011040 File Offset: 0x0000F240
 		bool IGorillaSliceableSimple.get_isActiveAndEnabled()
 		{
 			return base.isActiveAndEnabled;
 		}
 
-		// Token: 0x06004DD8 RID: 19928 RVA: 0x00173ACD File Offset: 0x00171CCD
+		// Token: 0x06004DD9 RID: 19929 RVA: 0x00173BA5 File Offset: 0x00171DA5
 		[CompilerGenerated]
 		private IEnumerator <LoadingScreen>g__LoadingScreenLocal|193_0()
 		{
@@ -3081,113 +3081,113 @@ namespace GorillaNetworking
 			yield break;
 		}
 
-		// Token: 0x04005030 RID: 20528
+		// Token: 0x04005031 RID: 20529
 		private const bool HIDE_SCREENS = false;
 
-		// Token: 0x04005031 RID: 20529
+		// Token: 0x04005032 RID: 20530
 		public const string NAMETAG_PLAYER_PREF_KEY = "nameTagsOn";
 
-		// Token: 0x04005032 RID: 20530
+		// Token: 0x04005033 RID: 20531
 		[OnEnterPlay_SetNull]
 		public static volatile GorillaComputer instance;
 
-		// Token: 0x04005033 RID: 20531
+		// Token: 0x04005034 RID: 20532
 		[OnEnterPlay_Set(false)]
 		public static bool hasInstance;
 
-		// Token: 0x04005034 RID: 20532
+		// Token: 0x04005035 RID: 20533
 		[OnEnterPlay_SetNull]
 		private static Action<bool> onNametagSettingChangedAction;
 
-		// Token: 0x04005035 RID: 20533
+		// Token: 0x04005036 RID: 20534
 		public bool tryGetTimeAgain;
 
-		// Token: 0x04005036 RID: 20534
+		// Token: 0x04005037 RID: 20535
 		public Material unpressedMaterial;
 
-		// Token: 0x04005037 RID: 20535
+		// Token: 0x04005038 RID: 20536
 		public Material pressedMaterial;
 
-		// Token: 0x04005038 RID: 20536
+		// Token: 0x04005039 RID: 20537
 		public string currentTextField;
 
-		// Token: 0x04005039 RID: 20537
+		// Token: 0x0400503A RID: 20538
 		public float buttonFadeTime;
 
-		// Token: 0x0400503A RID: 20538
+		// Token: 0x0400503B RID: 20539
 		public string offlineTextInitialString;
 
-		// Token: 0x0400503B RID: 20539
+		// Token: 0x0400503C RID: 20540
 		public GorillaText screenText;
 
-		// Token: 0x0400503C RID: 20540
+		// Token: 0x0400503D RID: 20541
 		public GorillaText functionSelectText;
 
-		// Token: 0x0400503D RID: 20541
+		// Token: 0x0400503E RID: 20542
 		public GorillaText wallScreenText;
 
-		// Token: 0x0400503E RID: 20542
+		// Token: 0x0400503F RID: 20543
 		public string versionMismatch = "PLEASE UPDATE TO THE LATEST VERSION OF GORILLA TAG. YOU'RE ON AN OLD VERSION. FEEL FREE TO RUN AROUND, BUT YOU WON'T BE ABLE TO PLAY WITH ANYONE ELSE.";
 
-		// Token: 0x0400503F RID: 20543
+		// Token: 0x04005040 RID: 20544
 		public string unableToConnect = "UNABLE TO CONNECT TO THE INTERNET. PLEASE CHECK YOUR CONNECTION AND RESTART THE GAME.";
 
-		// Token: 0x04005040 RID: 20544
+		// Token: 0x04005041 RID: 20545
 		public Material wrongVersionMaterial;
 
-		// Token: 0x04005041 RID: 20545
+		// Token: 0x04005042 RID: 20546
 		public MeshRenderer wallScreenRenderer;
 
-		// Token: 0x04005042 RID: 20546
+		// Token: 0x04005043 RID: 20547
 		public MeshRenderer computerScreenRenderer;
 
-		// Token: 0x04005043 RID: 20547
+		// Token: 0x04005044 RID: 20548
 		public long startupMillis;
 
-		// Token: 0x04005044 RID: 20548
+		// Token: 0x04005045 RID: 20549
 		public DateTime startupTime;
 
-		// Token: 0x04005045 RID: 20549
+		// Token: 0x04005046 RID: 20550
 		public string lastPressedGameMode;
 
-		// Token: 0x04005046 RID: 20550
+		// Token: 0x04005047 RID: 20551
 		public WatchableStringSO currentGameMode;
 
-		// Token: 0x04005047 RID: 20551
+		// Token: 0x04005048 RID: 20552
 		public WatchableStringSO currentGameModeText;
 
-		// Token: 0x04005048 RID: 20552
+		// Token: 0x04005049 RID: 20553
 		public int includeUpdatedServerSynchTest;
 
-		// Token: 0x04005049 RID: 20553
+		// Token: 0x0400504A RID: 20554
 		public PhotonNetworkController networkController;
 
-		// Token: 0x0400504A RID: 20554
+		// Token: 0x0400504B RID: 20555
 		public float updateCooldown = 1f;
 
-		// Token: 0x0400504B RID: 20555
+		// Token: 0x0400504C RID: 20556
 		public float lastUpdateTime;
 
-		// Token: 0x0400504C RID: 20556
+		// Token: 0x0400504D RID: 20557
 		public bool isConnectedToMaster;
 
-		// Token: 0x0400504D RID: 20557
+		// Token: 0x0400504E RID: 20558
 		public bool internetFailure;
 
-		// Token: 0x0400504E RID: 20558
+		// Token: 0x0400504F RID: 20559
 		public string[] allowedMapsToJoin;
 
-		// Token: 0x0400504F RID: 20559
+		// Token: 0x04005050 RID: 20560
 		[Header("State vars")]
 		public bool stateUpdated;
 
-		// Token: 0x04005050 RID: 20560
+		// Token: 0x04005051 RID: 20561
 		public bool screenChanged;
 
-		// Token: 0x04005051 RID: 20561
+		// Token: 0x04005052 RID: 20562
 		public bool initialized;
 
-		// Token: 0x04005052 RID: 20562
+		// Token: 0x04005053 RID: 20563
 		public List<GorillaComputer.StateOrderItem> OrderList = new List<GorillaComputer.StateOrderItem>
 		{
 			new GorillaComputer.StateOrderItem(GorillaComputer.ComputerState.Room),
@@ -3205,306 +3205,306 @@ namespace GorillaNetworking
 			new GorillaComputer.StateOrderItem(GorillaComputer.ComputerState.Support)
 		};
 
-		// Token: 0x04005053 RID: 20563
+		// Token: 0x04005054 RID: 20564
 		public string Pointer = "<-";
 
-		// Token: 0x04005054 RID: 20564
+		// Token: 0x04005055 RID: 20565
 		public int highestCharacterCount;
 
-		// Token: 0x04005055 RID: 20565
+		// Token: 0x04005056 RID: 20566
 		public List<string> FunctionNames = new List<string>();
 
-		// Token: 0x04005056 RID: 20566
+		// Token: 0x04005057 RID: 20567
 		public int FunctionsCount;
 
-		// Token: 0x04005057 RID: 20567
+		// Token: 0x04005058 RID: 20568
 		[Header("Room vars")]
 		public string roomToJoin;
 
-		// Token: 0x04005058 RID: 20568
+		// Token: 0x04005059 RID: 20569
 		public bool roomFull;
 
-		// Token: 0x04005059 RID: 20569
+		// Token: 0x0400505A RID: 20570
 		public bool roomNotAllowed;
 
-		// Token: 0x0400505A RID: 20570
+		// Token: 0x0400505B RID: 20571
 		[Header("Mic vars")]
 		public string pttType;
 
-		// Token: 0x0400505B RID: 20571
+		// Token: 0x0400505C RID: 20572
 		[Header("Automute vars")]
 		public string autoMuteType;
 
-		// Token: 0x0400505C RID: 20572
+		// Token: 0x0400505D RID: 20573
 		[Header("Queue vars")]
 		public string currentQueue;
 
-		// Token: 0x0400505D RID: 20573
+		// Token: 0x0400505E RID: 20574
 		public bool allowedInCompetitive;
 
-		// Token: 0x0400505E RID: 20574
+		// Token: 0x0400505F RID: 20575
 		[Header("Group Vars")]
 		public string groupMapJoin;
 
-		// Token: 0x0400505F RID: 20575
+		// Token: 0x04005060 RID: 20576
 		public int groupMapJoinIndex;
 
-		// Token: 0x04005060 RID: 20576
+		// Token: 0x04005061 RID: 20577
 		public GorillaFriendCollider friendJoinCollider;
 
-		// Token: 0x04005061 RID: 20577
+		// Token: 0x04005062 RID: 20578
 		[Header("Troop vars")]
 		public string troopName;
 
-		// Token: 0x04005062 RID: 20578
+		// Token: 0x04005063 RID: 20579
 		public bool troopQueueActive;
 
-		// Token: 0x04005063 RID: 20579
+		// Token: 0x04005064 RID: 20580
 		public string troopToJoin;
 
-		// Token: 0x04005064 RID: 20580
+		// Token: 0x04005065 RID: 20581
 		[Header("Join Triggers")]
 		public Dictionary<string, GorillaNetworkJoinTrigger> primaryTriggersByZone = new Dictionary<string, GorillaNetworkJoinTrigger>();
 
-		// Token: 0x04005065 RID: 20581
+		// Token: 0x04005066 RID: 20582
 		public string voiceChatOn;
 
-		// Token: 0x04005066 RID: 20582
+		// Token: 0x04005067 RID: 20583
 		[Header("Mode select vars")]
 		public ModeSelectButton[] modeSelectButtons;
 
-		// Token: 0x04005067 RID: 20583
+		// Token: 0x04005068 RID: 20584
 		public string version;
 
-		// Token: 0x04005068 RID: 20584
+		// Token: 0x04005069 RID: 20585
 		public string buildDate;
 
-		// Token: 0x04005069 RID: 20585
+		// Token: 0x0400506A RID: 20586
 		public string buildCode;
 
-		// Token: 0x0400506A RID: 20586
+		// Token: 0x0400506B RID: 20587
 		[Header("Cosmetics")]
 		public bool disableParticles;
 
-		// Token: 0x0400506B RID: 20587
+		// Token: 0x0400506C RID: 20588
 		public float instrumentVolume;
 
-		// Token: 0x0400506C RID: 20588
+		// Token: 0x0400506D RID: 20589
 		[Header("Credits")]
 		public CreditsView creditsView;
 
-		// Token: 0x0400506D RID: 20589
+		// Token: 0x0400506E RID: 20590
 		[Header("Handedness")]
 		public bool leftHanded;
 
-		// Token: 0x0400506E RID: 20590
+		// Token: 0x0400506F RID: 20591
 		[Header("Name state vars")]
 		public string savedName;
 
-		// Token: 0x0400506F RID: 20591
+		// Token: 0x04005070 RID: 20592
 		public string currentName;
 
-		// Token: 0x04005070 RID: 20592
+		// Token: 0x04005071 RID: 20593
 		public TextAsset exactOneWeekFile;
 
-		// Token: 0x04005071 RID: 20593
+		// Token: 0x04005072 RID: 20594
 		public TextAsset anywhereOneWeekFile;
 
-		// Token: 0x04005072 RID: 20594
+		// Token: 0x04005073 RID: 20595
 		public TextAsset anywhereTwoWeekFile;
 
-		// Token: 0x04005073 RID: 20595
+		// Token: 0x04005074 RID: 20596
 		private List<GorillaComputer.ComputerState> _filteredStates = new List<GorillaComputer.ComputerState>();
 
-		// Token: 0x04005074 RID: 20596
+		// Token: 0x04005075 RID: 20597
 		private List<GorillaComputer.StateOrderItem> _activeOrderList = new List<GorillaComputer.StateOrderItem>();
 
-		// Token: 0x04005075 RID: 20597
+		// Token: 0x04005076 RID: 20598
 		private Stack<GorillaComputer.ComputerState> stateStack = new Stack<GorillaComputer.ComputerState>();
 
-		// Token: 0x04005076 RID: 20598
+		// Token: 0x04005077 RID: 20599
 		private GorillaComputer.ComputerState currentComputerState;
 
-		// Token: 0x04005077 RID: 20599
+		// Token: 0x04005078 RID: 20600
 		private GorillaComputer.ComputerState previousComputerState;
 
-		// Token: 0x04005078 RID: 20600
+		// Token: 0x04005079 RID: 20601
 		private int currentStateIndex;
 
-		// Token: 0x04005079 RID: 20601
+		// Token: 0x0400507A RID: 20602
 		private int usersBanned;
 
-		// Token: 0x0400507A RID: 20602
+		// Token: 0x0400507B RID: 20603
 		private float redValue;
 
-		// Token: 0x0400507B RID: 20603
+		// Token: 0x0400507C RID: 20604
 		private string redText;
 
-		// Token: 0x0400507C RID: 20604
+		// Token: 0x0400507D RID: 20605
 		private float blueValue;
 
-		// Token: 0x0400507D RID: 20605
+		// Token: 0x0400507E RID: 20606
 		private string blueText;
 
-		// Token: 0x0400507E RID: 20606
+		// Token: 0x0400507F RID: 20607
 		private float greenValue;
 
-		// Token: 0x0400507F RID: 20607
+		// Token: 0x04005080 RID: 20608
 		private string greenText;
 
-		// Token: 0x04005080 RID: 20608
+		// Token: 0x04005081 RID: 20609
 		private int colorCursorLine;
 
-		// Token: 0x04005081 RID: 20609
+		// Token: 0x04005082 RID: 20610
 		private string warningConfirmationInputString = string.Empty;
 
-		// Token: 0x04005082 RID: 20610
+		// Token: 0x04005083 RID: 20611
 		private bool displaySupport;
 
-		// Token: 0x04005083 RID: 20611
+		// Token: 0x04005084 RID: 20612
 		private string[] exactOneWeek;
 
-		// Token: 0x04005084 RID: 20612
+		// Token: 0x04005085 RID: 20613
 		private string[] anywhereOneWeek;
 
-		// Token: 0x04005085 RID: 20613
+		// Token: 0x04005086 RID: 20614
 		private string[] anywhereTwoWeek;
 
-		// Token: 0x04005086 RID: 20614
+		// Token: 0x04005087 RID: 20615
 		private GorillaComputer.RedemptionResult redemptionResult;
 
-		// Token: 0x04005087 RID: 20615
+		// Token: 0x04005088 RID: 20616
 		private string redemptionCode = "";
 
-		// Token: 0x04005088 RID: 20616
+		// Token: 0x04005089 RID: 20617
 		private bool playerInVirtualStump;
 
-		// Token: 0x04005089 RID: 20617
+		// Token: 0x0400508A RID: 20618
 		private string virtualStumpRoomPrepend = "";
 
-		// Token: 0x0400508A RID: 20618
+		// Token: 0x0400508B RID: 20619
 		private WaitForSeconds waitOneSecond = new WaitForSeconds(1f);
 
-		// Token: 0x0400508B RID: 20619
+		// Token: 0x0400508C RID: 20620
 		private Coroutine LoadingRoutine;
 
-		// Token: 0x0400508C RID: 20620
+		// Token: 0x0400508D RID: 20621
 		private List<string> topTroops = new List<string>();
 
-		// Token: 0x0400508D RID: 20621
+		// Token: 0x0400508E RID: 20622
 		private bool hasRequestedInitialTroopPopulation;
 
-		// Token: 0x0400508E RID: 20622
+		// Token: 0x0400508F RID: 20623
 		private int currentTroopPopulation = -1;
 
-		// Token: 0x04005090 RID: 20624
+		// Token: 0x04005091 RID: 20625
 		private float lastCheckedWifi;
 
-		// Token: 0x04005091 RID: 20625
+		// Token: 0x04005092 RID: 20626
 		private float checkIfDisconnectedSeconds = 10f;
 
-		// Token: 0x04005092 RID: 20626
+		// Token: 0x04005093 RID: 20627
 		private float checkIfConnectedSeconds = 1f;
 
-		// Token: 0x04005093 RID: 20627
+		// Token: 0x04005094 RID: 20628
 		private float troopPopulationCheckCooldown = 3f;
 
-		// Token: 0x04005094 RID: 20628
+		// Token: 0x04005095 RID: 20629
 		private float nextPopulationCheckTime;
 
-		// Token: 0x04005095 RID: 20629
+		// Token: 0x04005096 RID: 20630
 		public Action OnServerTimeUpdated;
 
-		// Token: 0x04005096 RID: 20630
+		// Token: 0x04005097 RID: 20631
 		private const string ENABLED_COLOUR = "#85ffa5";
 
-		// Token: 0x04005097 RID: 20631
+		// Token: 0x04005098 RID: 20632
 		private const string DISABLED_COLOUR = "\"RED\"";
 
-		// Token: 0x04005098 RID: 20632
+		// Token: 0x04005099 RID: 20633
 		private const string FAMILY_PORTAL_URL = "k-id.com/code";
 
-		// Token: 0x04005099 RID: 20633
+		// Token: 0x0400509A RID: 20634
 		private float _updateAttemptCooldown = 60f;
 
-		// Token: 0x0400509A RID: 20634
+		// Token: 0x0400509B RID: 20635
 		private float _nextUpdateAttemptTime;
 
-		// Token: 0x0400509B RID: 20635
+		// Token: 0x0400509C RID: 20636
 		private bool _waitingForUpdatedSession;
 
-		// Token: 0x0400509C RID: 20636
+		// Token: 0x0400509D RID: 20637
 		private GorillaComputer.EKidScreenState _currentScreentState = GorillaComputer.EKidScreenState.Show_OTP;
 
-		// Token: 0x0400509D RID: 20637
+		// Token: 0x0400509E RID: 20638
 		private string[] _interestedPermissionNames = new string[] { "custom-username", "voice-chat", "join-groups" };
 
 		// Token: 0x02000C2F RID: 3119
 		public enum ComputerState
 		{
-			// Token: 0x0400509F RID: 20639
-			Startup,
 			// Token: 0x040050A0 RID: 20640
-			Color,
+			Startup,
 			// Token: 0x040050A1 RID: 20641
-			Name,
+			Color,
 			// Token: 0x040050A2 RID: 20642
-			Turn,
+			Name,
 			// Token: 0x040050A3 RID: 20643
-			Mic,
+			Turn,
 			// Token: 0x040050A4 RID: 20644
-			Room,
+			Mic,
 			// Token: 0x040050A5 RID: 20645
-			Queue,
+			Room,
 			// Token: 0x040050A6 RID: 20646
-			Group,
+			Queue,
 			// Token: 0x040050A7 RID: 20647
-			Voice,
+			Group,
 			// Token: 0x040050A8 RID: 20648
-			AutoMute,
+			Voice,
 			// Token: 0x040050A9 RID: 20649
-			Credits,
+			AutoMute,
 			// Token: 0x040050AA RID: 20650
-			Visuals,
+			Credits,
 			// Token: 0x040050AB RID: 20651
-			Time,
+			Visuals,
 			// Token: 0x040050AC RID: 20652
-			NameWarning,
+			Time,
 			// Token: 0x040050AD RID: 20653
-			Loading,
+			NameWarning,
 			// Token: 0x040050AE RID: 20654
-			Support,
+			Loading,
 			// Token: 0x040050AF RID: 20655
-			Troop,
+			Support,
 			// Token: 0x040050B0 RID: 20656
-			KID,
+			Troop,
 			// Token: 0x040050B1 RID: 20657
+			KID,
+			// Token: 0x040050B2 RID: 20658
 			Redemption
 		}
 
 		// Token: 0x02000C30 RID: 3120
 		private enum NameCheckResult
 		{
-			// Token: 0x040050B3 RID: 20659
-			Success,
 			// Token: 0x040050B4 RID: 20660
-			Warning,
+			Success,
 			// Token: 0x040050B5 RID: 20661
+			Warning,
+			// Token: 0x040050B6 RID: 20662
 			Ban
 		}
 
 		// Token: 0x02000C31 RID: 3121
 		public enum RedemptionResult
 		{
-			// Token: 0x040050B7 RID: 20663
-			Empty,
 			// Token: 0x040050B8 RID: 20664
-			Invalid,
+			Empty,
 			// Token: 0x040050B9 RID: 20665
-			Checking,
+			Invalid,
 			// Token: 0x040050BA RID: 20666
-			AlreadyUsed,
+			Checking,
 			// Token: 0x040050BB RID: 20667
+			AlreadyUsed,
+			// Token: 0x040050BC RID: 20668
 			Success
 		}
 
@@ -3512,25 +3512,25 @@ namespace GorillaNetworking
 		[Serializable]
 		public class StateOrderItem
 		{
-			// Token: 0x06004DDA RID: 19930 RVA: 0x00173B16 File Offset: 0x00171D16
+			// Token: 0x06004DDB RID: 19931 RVA: 0x00173BEE File Offset: 0x00171DEE
 			public StateOrderItem()
 			{
 			}
 
-			// Token: 0x06004DDB RID: 19931 RVA: 0x00173B29 File Offset: 0x00171D29
+			// Token: 0x06004DDC RID: 19932 RVA: 0x00173C01 File Offset: 0x00171E01
 			public StateOrderItem(GorillaComputer.ComputerState state)
 			{
 				this.State = state;
 			}
 
-			// Token: 0x06004DDC RID: 19932 RVA: 0x00173B43 File Offset: 0x00171D43
+			// Token: 0x06004DDD RID: 19933 RVA: 0x00173C1B File Offset: 0x00171E1B
 			public StateOrderItem(GorillaComputer.ComputerState state, string overrideName)
 			{
 				this.State = state;
 				this.OverrideName = overrideName;
 			}
 
-			// Token: 0x06004DDD RID: 19933 RVA: 0x00173B64 File Offset: 0x00171D64
+			// Token: 0x06004DDE RID: 19934 RVA: 0x00173C3C File Offset: 0x00171E3C
 			public string GetName()
 			{
 				if (!string.IsNullOrEmpty(this.OverrideName))
@@ -3540,10 +3540,10 @@ namespace GorillaNetworking
 				return this.State.ToString().ToUpper();
 			}
 
-			// Token: 0x040050BC RID: 20668
+			// Token: 0x040050BD RID: 20669
 			public GorillaComputer.ComputerState State;
 
-			// Token: 0x040050BD RID: 20669
+			// Token: 0x040050BE RID: 20670
 			[Tooltip("Case not important - ToUpper applied at runtime")]
 			public string OverrideName = "";
 		}
@@ -3551,11 +3551,11 @@ namespace GorillaNetworking
 		// Token: 0x02000C33 RID: 3123
 		private enum EKidScreenState
 		{
-			// Token: 0x040050BF RID: 20671
-			Ready,
 			// Token: 0x040050C0 RID: 20672
-			Show_OTP,
+			Ready,
 			// Token: 0x040050C1 RID: 20673
+			Show_OTP,
+			// Token: 0x040050C2 RID: 20674
 			Show_Setup_Screen
 		}
 	}

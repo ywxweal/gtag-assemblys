@@ -4,13 +4,13 @@ using UnityEngine;
 // Token: 0x020004A9 RID: 1193
 public class SetStateConditional : StateMachineBehaviour
 {
-	// Token: 0x06001CCF RID: 7375 RVA: 0x0008BFBF File Offset: 0x0008A1BF
+	// Token: 0x06001CCF RID: 7375 RVA: 0x0008BFDF File Offset: 0x0008A1DF
 	private void OnValidate()
 	{
 		this._setToID = this.setToState;
 	}
 
-	// Token: 0x06001CD0 RID: 7376 RVA: 0x0008BFD2 File Offset: 0x0008A1D2
+	// Token: 0x06001CD0 RID: 7376 RVA: 0x0008BFF2 File Offset: 0x0008A1F2
 	public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
 	{
 		if (!this._didSetup)
@@ -22,7 +22,7 @@ public class SetStateConditional : StateMachineBehaviour
 		this._sinceEnter = TimeSince.Now();
 	}
 
-	// Token: 0x06001CD1 RID: 7377 RVA: 0x0008C000 File Offset: 0x0008A200
+	// Token: 0x06001CD1 RID: 7377 RVA: 0x0008C020 File Offset: 0x0008A220
 	public override void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
 	{
 		if (this.delay > 0f && !this._sinceEnter.HasElapsed(this.delay, true))

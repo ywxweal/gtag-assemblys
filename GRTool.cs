@@ -7,11 +7,11 @@ using UnityEngine;
 public class GRTool : MonoBehaviour
 {
 	// Token: 0x14000051 RID: 81
-	// (add) Token: 0x060023C3 RID: 9155 RVA: 0x000B3F64 File Offset: 0x000B2164
-	// (remove) Token: 0x060023C4 RID: 9156 RVA: 0x000B3F9C File Offset: 0x000B219C
+	// (add) Token: 0x060023C3 RID: 9155 RVA: 0x000B3F84 File Offset: 0x000B2184
+	// (remove) Token: 0x060023C4 RID: 9156 RVA: 0x000B3FBC File Offset: 0x000B21BC
 	public event GRTool.EnergyChangeEvent OnEnergyChange;
 
-	// Token: 0x060023C5 RID: 9157 RVA: 0x000B3FD1 File Offset: 0x000B21D1
+	// Token: 0x060023C5 RID: 9157 RVA: 0x000B3FF1 File Offset: 0x000B21F1
 	private void Awake()
 	{
 		this.energy = this.startEnergy;
@@ -22,43 +22,43 @@ public class GRTool : MonoBehaviour
 		this.RefreshMeters();
 	}
 
-	// Token: 0x060023C6 RID: 9158 RVA: 0x000B3FFF File Offset: 0x000B21FF
+	// Token: 0x060023C6 RID: 9158 RVA: 0x000B401F File Offset: 0x000B221F
 	public void RefillEnergy(int count)
 	{
 		this.SetEnergyInternal(this.energy + count);
 	}
 
-	// Token: 0x060023C7 RID: 9159 RVA: 0x000B400F File Offset: 0x000B220F
+	// Token: 0x060023C7 RID: 9159 RVA: 0x000B402F File Offset: 0x000B222F
 	public void RefillEnergy()
 	{
 		this.SetEnergyInternal(this.maxEnergy);
 	}
 
-	// Token: 0x060023C8 RID: 9160 RVA: 0x000B401D File Offset: 0x000B221D
+	// Token: 0x060023C8 RID: 9160 RVA: 0x000B403D File Offset: 0x000B223D
 	public void UseEnergy()
 	{
 		this.SetEnergyInternal(this.energy - this.useCost);
 	}
 
-	// Token: 0x060023C9 RID: 9161 RVA: 0x000B4032 File Offset: 0x000B2232
+	// Token: 0x060023C9 RID: 9161 RVA: 0x000B4052 File Offset: 0x000B2252
 	public bool HasEnoughEnergy()
 	{
 		return this.energy >= this.useCost;
 	}
 
-	// Token: 0x060023CA RID: 9162 RVA: 0x000B4045 File Offset: 0x000B2245
+	// Token: 0x060023CA RID: 9162 RVA: 0x000B4065 File Offset: 0x000B2265
 	public void SetEnergy(int newEnergy)
 	{
 		this.SetEnergyInternal(newEnergy);
 	}
 
-	// Token: 0x060023CB RID: 9163 RVA: 0x000B404E File Offset: 0x000B224E
+	// Token: 0x060023CB RID: 9163 RVA: 0x000B406E File Offset: 0x000B226E
 	public bool IsEnergyFull()
 	{
 		return this.energy >= this.maxEnergy;
 	}
 
-	// Token: 0x060023CC RID: 9164 RVA: 0x000B4064 File Offset: 0x000B2264
+	// Token: 0x060023CC RID: 9164 RVA: 0x000B4084 File Offset: 0x000B2284
 	private void SetEnergyInternal(int value)
 	{
 		int num = this.energy;
@@ -72,7 +72,7 @@ public class GRTool : MonoBehaviour
 		this.RefreshMeters();
 	}
 
-	// Token: 0x060023CD RID: 9165 RVA: 0x000B40B0 File Offset: 0x000B22B0
+	// Token: 0x060023CD RID: 9165 RVA: 0x000B40D0 File Offset: 0x000B22D0
 	public void RefreshMeters()
 	{
 		for (int i = 0; i < this.energyMeters.Count; i++)

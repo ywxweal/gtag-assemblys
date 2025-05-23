@@ -5,14 +5,14 @@ using UnityEngine;
 // Token: 0x02000A01 RID: 2561
 public class RandomLocalColliders : MonoBehaviour
 {
-	// Token: 0x06003D33 RID: 15667 RVA: 0x001228CB File Offset: 0x00120ACB
+	// Token: 0x06003D34 RID: 15668 RVA: 0x001229A3 File Offset: 0x00120BA3
 	private void Start()
 	{
 		this.colliders = new List<Collider>();
 		this.seekFreq = RandomLocalColliders.rand.NextFloat(this.minseekFreq, this.maxseekFreq);
 	}
 
-	// Token: 0x06003D34 RID: 15668 RVA: 0x001228F4 File Offset: 0x00120AF4
+	// Token: 0x06003D35 RID: 15669 RVA: 0x001229CC File Offset: 0x00120BCC
 	private void Update()
 	{
 		this.timeSinceSeek += Time.deltaTime;
@@ -24,7 +24,7 @@ public class RandomLocalColliders : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06003D35 RID: 15669 RVA: 0x00122950 File Offset: 0x00120B50
+	// Token: 0x06003D36 RID: 15670 RVA: 0x00122A28 File Offset: 0x00120C28
 	private void seek()
 	{
 		float num = Mathf.Max(new float[]
@@ -46,35 +46,35 @@ public class RandomLocalColliders : MonoBehaviour
 		}
 	}
 
-	// Token: 0x040040EA RID: 16618
-	private static SRand rand = new SRand("RandomLocalColliders");
-
 	// Token: 0x040040EB RID: 16619
-	[SerializeField]
-	private float minseekFreq = 3f;
+	private static SRand rand = new SRand("RandomLocalColliders");
 
 	// Token: 0x040040EC RID: 16620
 	[SerializeField]
-	private float maxseekFreq = 6f;
+	private float minseekFreq = 3f;
 
 	// Token: 0x040040ED RID: 16621
 	[SerializeField]
-	private float minRadias = 1f;
+	private float maxseekFreq = 6f;
 
 	// Token: 0x040040EE RID: 16622
 	[SerializeField]
-	private float maxRadias = 10f;
+	private float minRadias = 1f;
 
 	// Token: 0x040040EF RID: 16623
 	[SerializeField]
-	private LightningDispatcherEvent colliderFound;
+	private float maxRadias = 10f;
 
 	// Token: 0x040040F0 RID: 16624
-	private List<Collider> colliders;
+	[SerializeField]
+	private LightningDispatcherEvent colliderFound;
 
 	// Token: 0x040040F1 RID: 16625
-	private float timeSinceSeek;
+	private List<Collider> colliders;
 
 	// Token: 0x040040F2 RID: 16626
+	private float timeSinceSeek;
+
+	// Token: 0x040040F3 RID: 16627
 	private float seekFreq;
 }

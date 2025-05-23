@@ -12,7 +12,7 @@ using UnityEngine;
 public class CustomMapsListScreen : CustomMapsTerminalScreen
 {
 	// Token: 0x17000480 RID: 1152
-	// (get) Token: 0x06002DD1 RID: 11729 RVA: 0x000E3D11 File Offset: 0x000E1F11
+	// (get) Token: 0x06002DD2 RID: 11730 RVA: 0x000E3DB5 File Offset: 0x000E1FB5
 	public int CurrentModPage
 	{
 		get
@@ -22,7 +22,7 @@ public class CustomMapsListScreen : CustomMapsTerminalScreen
 	}
 
 	// Token: 0x17000481 RID: 1153
-	// (get) Token: 0x06002DD2 RID: 11730 RVA: 0x000E3D19 File Offset: 0x000E1F19
+	// (get) Token: 0x06002DD3 RID: 11731 RVA: 0x000E3DBD File Offset: 0x000E1FBD
 	public int SelectedModIndex
 	{
 		get
@@ -32,7 +32,7 @@ public class CustomMapsListScreen : CustomMapsTerminalScreen
 	}
 
 	// Token: 0x17000482 RID: 1154
-	// (get) Token: 0x06002DD3 RID: 11731 RVA: 0x000E3D21 File Offset: 0x000E1F21
+	// (get) Token: 0x06002DD4 RID: 11732 RVA: 0x000E3DC5 File Offset: 0x000E1FC5
 	public int ModsPerPage
 	{
 		get
@@ -42,8 +42,8 @@ public class CustomMapsListScreen : CustomMapsTerminalScreen
 	}
 
 	// Token: 0x17000483 RID: 1155
-	// (get) Token: 0x06002DD4 RID: 11732 RVA: 0x000E3D29 File Offset: 0x000E1F29
-	// (set) Token: 0x06002DD5 RID: 11733 RVA: 0x000E3D34 File Offset: 0x000E1F34
+	// (get) Token: 0x06002DD5 RID: 11733 RVA: 0x000E3DCD File Offset: 0x000E1FCD
+	// (set) Token: 0x06002DD6 RID: 11734 RVA: 0x000E3DD8 File Offset: 0x000E1FD8
 	public SortModsBy SortType
 	{
 		get
@@ -85,12 +85,12 @@ public class CustomMapsListScreen : CustomMapsTerminalScreen
 		}
 	}
 
-	// Token: 0x06002DD6 RID: 11734 RVA: 0x000023F4 File Offset: 0x000005F4
+	// Token: 0x06002DD7 RID: 11735 RVA: 0x000023F4 File Offset: 0x000005F4
 	public override void Initialize()
 	{
 	}
 
-	// Token: 0x06002DD7 RID: 11735 RVA: 0x000E3DB4 File Offset: 0x000E1FB4
+	// Token: 0x06002DD8 RID: 11736 RVA: 0x000E3E58 File Offset: 0x000E2058
 	public override void Show()
 	{
 		base.Show();
@@ -109,7 +109,7 @@ public class CustomMapsListScreen : CustomMapsTerminalScreen
 		this.RefreshScreenState();
 	}
 
-	// Token: 0x06002DD8 RID: 11736 RVA: 0x000E3E08 File Offset: 0x000E2008
+	// Token: 0x06002DD9 RID: 11737 RVA: 0x000E3EAC File Offset: 0x000E20AC
 	protected override void PressButton(CustomMapsTerminalButton.ModIOKeyboardBindings buttonPressed)
 	{
 		if (!CustomMapsTerminal.IsDriver)
@@ -201,7 +201,7 @@ public class CustomMapsListScreen : CustomMapsTerminalScreen
 		}
 	}
 
-	// Token: 0x06002DD9 RID: 11737 RVA: 0x000E3FFE File Offset: 0x000E21FE
+	// Token: 0x06002DDA RID: 11738 RVA: 0x000E40A2 File Offset: 0x000E22A2
 	public void ClearTags(bool clearModLists = false)
 	{
 		this.searchTags.Clear();
@@ -212,7 +212,7 @@ public class CustomMapsListScreen : CustomMapsTerminalScreen
 		}
 	}
 
-	// Token: 0x06002DDA RID: 11738 RVA: 0x000E4024 File Offset: 0x000E2224
+	// Token: 0x06002DDB RID: 11739 RVA: 0x000E40C8 File Offset: 0x000E22C8
 	public void UpdateTagsFromDriver(List<string> tags)
 	{
 		this.currentAvailableModsRequestPage = 0;
@@ -224,7 +224,7 @@ public class CustomMapsListScreen : CustomMapsTerminalScreen
 		this.searchTags.AddRange(tags);
 	}
 
-	// Token: 0x06002DDB RID: 11739 RVA: 0x000E4050 File Offset: 0x000E2250
+	// Token: 0x06002DDC RID: 11740 RVA: 0x000E40F4 File Offset: 0x000E22F4
 	private bool CheckTags(CustomMapsTerminalButton.ModIOKeyboardBindings buttonPressed)
 	{
 		bool flag = false;
@@ -248,7 +248,7 @@ public class CustomMapsListScreen : CustomMapsTerminalScreen
 		return flag;
 	}
 
-	// Token: 0x06002DDC RID: 11740 RVA: 0x000E40B0 File Offset: 0x000E22B0
+	// Token: 0x06002DDD RID: 11741 RVA: 0x000E4154 File Offset: 0x000E2354
 	private void SetSortType()
 	{
 		this.currentAvailableModsRequestPage = 0;
@@ -291,7 +291,7 @@ public class CustomMapsListScreen : CustomMapsTerminalScreen
 		}
 	}
 
-	// Token: 0x06002DDD RID: 11741 RVA: 0x000E4178 File Offset: 0x000E2378
+	// Token: 0x06002DDE RID: 11742 RVA: 0x000E421C File Offset: 0x000E241C
 	private void SwapListDisplay()
 	{
 		if (this.currentState == CustomMapsListScreen.ListScreenState.AvailableMods)
@@ -309,7 +309,7 @@ public class CustomMapsListScreen : CustomMapsTerminalScreen
 		this.RefreshScreenState();
 	}
 
-	// Token: 0x06002DDE RID: 11742 RVA: 0x000E41D4 File Offset: 0x000E23D4
+	// Token: 0x06002DDF RID: 11743 RVA: 0x000E4278 File Offset: 0x000E2478
 	public void Refresh(long[] customModListIds = null)
 	{
 		if (this.loadingAvailableMods || this.loadingFeaturedMods || this.loadingCustomModList)
@@ -340,7 +340,7 @@ public class CustomMapsListScreen : CustomMapsTerminalScreen
 		this.RetrieveCustomModList();
 	}
 
-	// Token: 0x06002DDF RID: 11743 RVA: 0x000E42A0 File Offset: 0x000E24A0
+	// Token: 0x06002DE0 RID: 11744 RVA: 0x000E4344 File Offset: 0x000E2544
 	private void RetrieveFeaturedMods()
 	{
 		if (this.loadingFeaturedMods || this.featuredMods.Count > 0)
@@ -355,7 +355,7 @@ public class CustomMapsListScreen : CustomMapsTerminalScreen
 		});
 	}
 
-	// Token: 0x06002DE0 RID: 11744 RVA: 0x000E42F4 File Offset: 0x000E24F4
+	// Token: 0x06002DE1 RID: 11745 RVA: 0x000E4398 File Offset: 0x000E2598
 	private async void OnGetFeaturedModsTitleData(string data)
 	{
 		if (data.IsNullOrEmpty())
@@ -401,7 +401,7 @@ public class CustomMapsListScreen : CustomMapsTerminalScreen
 		}
 	}
 
-	// Token: 0x06002DE1 RID: 11745 RVA: 0x000E4334 File Offset: 0x000E2534
+	// Token: 0x06002DE2 RID: 11746 RVA: 0x000E43D8 File Offset: 0x000E25D8
 	private void RetrieveAvailableMods()
 	{
 		if (this.loadingAvailableMods)
@@ -427,7 +427,7 @@ public class CustomMapsListScreen : CustomMapsTerminalScreen
 		ModIOUnity.GetMods(searchFilter, new Action<ResultAnd<ModPage>>(this.OnAvailableModsRetrieved));
 	}
 
-	// Token: 0x06002DE2 RID: 11746 RVA: 0x000E43D4 File Offset: 0x000E25D4
+	// Token: 0x06002DE3 RID: 11747 RVA: 0x000E4478 File Offset: 0x000E2678
 	private void OnAvailableModsRetrieved(ResultAnd<ModPage> result)
 	{
 		if (result.result.Succeeded())
@@ -452,7 +452,7 @@ public class CustomMapsListScreen : CustomMapsTerminalScreen
 		this.RefreshScreenState();
 	}
 
-	// Token: 0x06002DE3 RID: 11747 RVA: 0x000E4470 File Offset: 0x000E2670
+	// Token: 0x06002DE4 RID: 11748 RVA: 0x000E4514 File Offset: 0x000E2714
 	private void FilterAvailableMods()
 	{
 		if (this.availableMods.IsNullOrEmpty<ModProfile>())
@@ -473,7 +473,7 @@ public class CustomMapsListScreen : CustomMapsTerminalScreen
 		}
 	}
 
-	// Token: 0x06002DE4 RID: 11748 RVA: 0x000E453C File Offset: 0x000E273C
+	// Token: 0x06002DE5 RID: 11749 RVA: 0x000E45E0 File Offset: 0x000E27E0
 	private void RetrieveSubscribedMods()
 	{
 		this.subscribedMods = ModIOManager.GetSubscribedMods();
@@ -482,7 +482,7 @@ public class CustomMapsListScreen : CustomMapsTerminalScreen
 		this.RefreshScreenState();
 	}
 
-	// Token: 0x06002DE5 RID: 11749 RVA: 0x000E4568 File Offset: 0x000E2768
+	// Token: 0x06002DE6 RID: 11750 RVA: 0x000E460C File Offset: 0x000E280C
 	private void FilterSubscribedMods()
 	{
 		if (this.subscribedMods.IsNullOrEmpty<SubscribedMod>())
@@ -499,7 +499,7 @@ public class CustomMapsListScreen : CustomMapsTerminalScreen
 		}
 	}
 
-	// Token: 0x06002DE6 RID: 11750 RVA: 0x000E45D0 File Offset: 0x000E27D0
+	// Token: 0x06002DE7 RID: 11751 RVA: 0x000E4674 File Offset: 0x000E2874
 	public void ShowCustomModList(long[] modIds)
 	{
 		if (modIds == null || modIds.Length == 0)
@@ -539,7 +539,7 @@ public class CustomMapsListScreen : CustomMapsTerminalScreen
 		this.RetrieveCustomModList();
 	}
 
-	// Token: 0x06002DE7 RID: 11751 RVA: 0x000E46BC File Offset: 0x000E28BC
+	// Token: 0x06002DE8 RID: 11752 RVA: 0x000E4760 File Offset: 0x000E2960
 	private void RetrieveCustomModList()
 	{
 		if (this.restartCustomModListRetrieval || this.customModListModIds.Count == 0)
@@ -549,7 +549,7 @@ public class CustomMapsListScreen : CustomMapsTerminalScreen
 		ModIOManager.GetModProfile(new ModId(this.customModListModIds[this.customModList.Count]), new Action<ModIORequestResultAnd<ModProfile>>(this.OnModProfileReceived));
 	}
 
-	// Token: 0x06002DE8 RID: 11752 RVA: 0x000E470C File Offset: 0x000E290C
+	// Token: 0x06002DE9 RID: 11753 RVA: 0x000E47B0 File Offset: 0x000E29B0
 	private void OnModProfileReceived(ModIORequestResultAnd<ModProfile> requestResult)
 	{
 		if (this.restartCustomModListRetrieval)
@@ -575,7 +575,7 @@ public class CustomMapsListScreen : CustomMapsTerminalScreen
 		this.RefreshScreenState();
 	}
 
-	// Token: 0x06002DE9 RID: 11753 RVA: 0x000E47B4 File Offset: 0x000E29B4
+	// Token: 0x06002DEA RID: 11754 RVA: 0x000E4858 File Offset: 0x000E2A58
 	public bool DoesModListMatchDisplay(long[] modIds)
 	{
 		if (this.displayedModProfiles.IsNullOrEmpty<ModProfile>() || this.displayedModProfiles.Count != modIds.Length)
@@ -592,7 +592,7 @@ public class CustomMapsListScreen : CustomMapsTerminalScreen
 		return true;
 	}
 
-	// Token: 0x06002DEA RID: 11754 RVA: 0x000E4814 File Offset: 0x000E2A14
+	// Token: 0x06002DEB RID: 11755 RVA: 0x000E48B8 File Offset: 0x000E2AB8
 	public ModProfile GetProfile()
 	{
 		if (this.displayedModProfiles == null)
@@ -606,7 +606,7 @@ public class CustomMapsListScreen : CustomMapsTerminalScreen
 		return this.displayedModProfiles[this.selectedModIndex];
 	}
 
-	// Token: 0x06002DEB RID: 11755 RVA: 0x000E486C File Offset: 0x000E2A6C
+	// Token: 0x06002DEC RID: 11756 RVA: 0x000E4910 File Offset: 0x000E2B10
 	public void GetModList(out long[] modList)
 	{
 		if (this.displayedModProfiles == null)
@@ -621,7 +621,7 @@ public class CustomMapsListScreen : CustomMapsTerminalScreen
 		}
 	}
 
-	// Token: 0x06002DEC RID: 11756 RVA: 0x000E48CC File Offset: 0x000E2ACC
+	// Token: 0x06002DED RID: 11757 RVA: 0x000E4970 File Offset: 0x000E2B70
 	private void RefreshScreenState()
 	{
 		this.displayedModProfiles.Clear();
@@ -744,7 +744,7 @@ public class CustomMapsListScreen : CustomMapsTerminalScreen
 		}
 	}
 
-	// Token: 0x06002DED RID: 11757 RVA: 0x000E4D00 File Offset: 0x000E2F00
+	// Token: 0x06002DEE RID: 11758 RVA: 0x000E4DA4 File Offset: 0x000E2FA4
 	public void UpdateModListSelection()
 	{
 		if (this.displayedModProfiles.IsNullOrEmpty<ModProfile>())
@@ -836,7 +836,7 @@ public class CustomMapsListScreen : CustomMapsTerminalScreen
 		this.modListText.text = stringBuilder.ToString();
 	}
 
-	// Token: 0x06002DEE RID: 11758 RVA: 0x000E5124 File Offset: 0x000E3324
+	// Token: 0x06002DEF RID: 11759 RVA: 0x000E51C8 File Offset: 0x000E33C8
 	private string TruncateModName(string modname)
 	{
 		if (modname.Length <= this.maxModListItemLength)
@@ -846,7 +846,7 @@ public class CustomMapsListScreen : CustomMapsTerminalScreen
 		return modname.Substring(0, this.maxModListItemLength) + "\n";
 	}
 
-	// Token: 0x06002DEF RID: 11759 RVA: 0x000E5158 File Offset: 0x000E3358
+	// Token: 0x06002DF0 RID: 11760 RVA: 0x000E51FC File Offset: 0x000E33FC
 	private void DownloadThumbnail(DownloadReference thumbnail)
 	{
 		this.mapScreenshotImage.gameObject.SetActive(false);
@@ -860,7 +860,7 @@ public class CustomMapsListScreen : CustomMapsTerminalScreen
 		ModIOUnity.DownloadTexture(thumbnail, new Action<ResultAnd<Texture2D>>(this.OnTextureDownloaded));
 	}
 
-	// Token: 0x06002DF0 RID: 11760 RVA: 0x000E51A8 File Offset: 0x000E33A8
+	// Token: 0x06002DF1 RID: 11761 RVA: 0x000E524C File Offset: 0x000E344C
 	private void OnTextureDownloaded(ResultAnd<Texture2D> resultAnd)
 	{
 		this.isDownloadingThumbnail = false;
@@ -880,7 +880,7 @@ public class CustomMapsListScreen : CustomMapsTerminalScreen
 		this.mapScreenshotImage.gameObject.SetActive(true);
 	}
 
-	// Token: 0x06002DF1 RID: 11761 RVA: 0x000E5258 File Offset: 0x000E3458
+	// Token: 0x06002DF2 RID: 11762 RVA: 0x000E52FC File Offset: 0x000E34FC
 	private void UpdatePageCount(int totalMods)
 	{
 		this.totalModCount = totalMods;
@@ -900,7 +900,7 @@ public class CustomMapsListScreen : CustomMapsTerminalScreen
 		}
 	}
 
-	// Token: 0x06002DF2 RID: 11762 RVA: 0x000E5310 File Offset: 0x000E3510
+	// Token: 0x06002DF3 RID: 11763 RVA: 0x000E53B4 File Offset: 0x000E35B4
 	public int GetNumPages()
 	{
 		if (this.currentState == CustomMapsListScreen.ListScreenState.CustomModList)
@@ -916,20 +916,20 @@ public class CustomMapsListScreen : CustomMapsTerminalScreen
 		return num2;
 	}
 
-	// Token: 0x06002DF3 RID: 11763 RVA: 0x000E5350 File Offset: 0x000E3550
+	// Token: 0x06002DF4 RID: 11764 RVA: 0x000E53F4 File Offset: 0x000E35F4
 	private bool IsOnFirstPage()
 	{
 		return this.currentModPage == 0;
 	}
 
-	// Token: 0x06002DF4 RID: 11764 RVA: 0x000E535C File Offset: 0x000E355C
+	// Token: 0x06002DF5 RID: 11765 RVA: 0x000E5400 File Offset: 0x000E3600
 	private bool IsOnLastPage()
 	{
 		long num = (long)this.GetNumPages();
 		return (long)(this.currentModPage + 1) == num;
 	}
 
-	// Token: 0x06002DF5 RID: 11765 RVA: 0x000E5380 File Offset: 0x000E3580
+	// Token: 0x06002DF6 RID: 11766 RVA: 0x000E5424 File Offset: 0x000E3624
 	public void UpdateFromTerminalStatus(CustomMapsTerminal.TerminalStatus localStatus)
 	{
 		switch (localStatus.currentScreen)
@@ -954,7 +954,7 @@ public class CustomMapsListScreen : CustomMapsTerminalScreen
 		this.customModListPageCount = localStatus.numModPages;
 	}
 
-	// Token: 0x06002DF6 RID: 11766 RVA: 0x000E5421 File Offset: 0x000E3621
+	// Token: 0x06002DF7 RID: 11767 RVA: 0x000E54C5 File Offset: 0x000E36C5
 	public void RefreshDriverNickname(string driverNickname)
 	{
 		if (this.currentState == CustomMapsListScreen.ListScreenState.CustomModList)
@@ -963,212 +963,212 @@ public class CustomMapsListScreen : CustomMapsTerminalScreen
 		}
 	}
 
-	// Token: 0x04003423 RID: 13347
+	// Token: 0x04003425 RID: 13349
 	[SerializeField]
 	private TMP_Text loadingText;
 
-	// Token: 0x04003424 RID: 13348
+	// Token: 0x04003426 RID: 13350
 	[SerializeField]
 	private TMP_Text modListText;
 
-	// Token: 0x04003425 RID: 13349
+	// Token: 0x04003427 RID: 13351
 	[SerializeField]
 	private TMP_Text modPageLabel;
 
-	// Token: 0x04003426 RID: 13350
+	// Token: 0x04003428 RID: 13352
 	[SerializeField]
 	private TMP_Text modPageText;
 
-	// Token: 0x04003427 RID: 13351
+	// Token: 0x04003429 RID: 13353
 	[SerializeField]
 	private TMP_Text titleText;
 
-	// Token: 0x04003428 RID: 13352
+	// Token: 0x0400342A RID: 13354
 	[SerializeField]
 	private SpriteRenderer mapScreenshotImage;
 
-	// Token: 0x04003429 RID: 13353
+	// Token: 0x0400342B RID: 13355
 	[SerializeField]
 	private TMP_Text createdByText;
 
-	// Token: 0x0400342A RID: 13354
+	// Token: 0x0400342C RID: 13356
 	[SerializeField]
 	private TMP_Text tagText;
 
-	// Token: 0x0400342B RID: 13355
+	// Token: 0x0400342D RID: 13357
 	[SerializeField]
 	private GameObject[] buttonsToHideForAvailableMaps;
 
-	// Token: 0x0400342C RID: 13356
+	// Token: 0x0400342E RID: 13358
 	[SerializeField]
 	private GameObject[] buttonsToShow;
 
-	// Token: 0x0400342D RID: 13357
+	// Token: 0x0400342F RID: 13359
 	[SerializeField]
 	private GameObject[] buttonsToHideForSubscribedMaps;
 
-	// Token: 0x0400342E RID: 13358
+	// Token: 0x04003430 RID: 13360
 	[SerializeField]
 	private string browseModsTitle = "AVAILABLE MODS";
 
-	// Token: 0x0400342F RID: 13359
+	// Token: 0x04003431 RID: 13361
 	[SerializeField]
 	private string subscribedOnlyTitle = "SUBSCRIBED MODS";
 
-	// Token: 0x04003430 RID: 13360
+	// Token: 0x04003432 RID: 13362
 	[SerializeField]
 	private string nextPageString = "NEXT PAGE";
 
-	// Token: 0x04003431 RID: 13361
+	// Token: 0x04003433 RID: 13363
 	[SerializeField]
 	private string prevPageString = "PREVIOUS PAGE";
 
-	// Token: 0x04003432 RID: 13362
+	// Token: 0x04003434 RID: 13364
 	[SerializeField]
 	private string noModsAvailableString = "NO MODS AVAILABLE";
 
-	// Token: 0x04003433 RID: 13363
+	// Token: 0x04003435 RID: 13365
 	[SerializeField]
 	private string noSubscribedModsString = "NOT SUBSCRIBED TO ANY MODS";
 
-	// Token: 0x04003434 RID: 13364
+	// Token: 0x04003436 RID: 13366
 	[SerializeField]
 	private string failedToRetrieveModsString = "FAILED TO RETRIEVE MODS FROM MOD.IO \nPRESS THE 'REFRESH' BUTTON TO RETRY";
 
-	// Token: 0x04003435 RID: 13365
+	// Token: 0x04003437 RID: 13367
 	[SerializeField]
 	private string creatorString = "CREATED BY:\n";
 
-	// Token: 0x04003436 RID: 13366
+	// Token: 0x04003438 RID: 13368
 	[SerializeField]
 	private string tagString = "MAP TAGS:\n";
 
-	// Token: 0x04003437 RID: 13367
+	// Token: 0x04003439 RID: 13369
 	[SerializeField]
 	private int modsPerPage = 10;
 
-	// Token: 0x04003438 RID: 13368
+	// Token: 0x0400343A RID: 13370
 	[SerializeField]
 	private int numModsPerRequest = 50;
 
-	// Token: 0x04003439 RID: 13369
+	// Token: 0x0400343B RID: 13371
 	[SerializeField]
 	private int maxModListItemLength = 25;
 
-	// Token: 0x0400343A RID: 13370
+	// Token: 0x0400343C RID: 13372
 	[SerializeField]
 	private string featuredModsPlayFabKey = "VStumpFeaturedMaps";
 
-	// Token: 0x0400343B RID: 13371
+	// Token: 0x0400343D RID: 13373
 	private bool loadingFeaturedMods;
 
-	// Token: 0x0400343C RID: 13372
+	// Token: 0x0400343E RID: 13374
 	private int totalFeaturedMods;
 
-	// Token: 0x0400343D RID: 13373
+	// Token: 0x0400343F RID: 13375
 	private List<long> featuredModIds = new List<long>();
 
-	// Token: 0x0400343E RID: 13374
+	// Token: 0x04003440 RID: 13376
 	private List<ModProfile> featuredMods = new List<ModProfile>();
 
-	// Token: 0x0400343F RID: 13375
+	// Token: 0x04003441 RID: 13377
 	private int currentAvailableModsRequestPage;
 
-	// Token: 0x04003440 RID: 13376
+	// Token: 0x04003442 RID: 13378
 	private bool loadingAvailableMods;
 
-	// Token: 0x04003441 RID: 13377
+	// Token: 0x04003443 RID: 13379
 	private int totalAvailableMods;
 
-	// Token: 0x04003442 RID: 13378
+	// Token: 0x04003444 RID: 13380
 	private bool errorLoadingAvailableMods;
 
-	// Token: 0x04003443 RID: 13379
+	// Token: 0x04003445 RID: 13381
 	private List<ModProfile> availableMods = new List<ModProfile>();
 
-	// Token: 0x04003444 RID: 13380
+	// Token: 0x04003446 RID: 13382
 	private List<ModProfile> filteredAvailableMods = new List<ModProfile>();
 
-	// Token: 0x04003445 RID: 13381
+	// Token: 0x04003447 RID: 13383
 	private int totalSubscribedMods;
 
-	// Token: 0x04003446 RID: 13382
+	// Token: 0x04003448 RID: 13384
 	private SubscribedMod[] subscribedMods;
 
-	// Token: 0x04003447 RID: 13383
+	// Token: 0x04003449 RID: 13385
 	private List<SubscribedMod> filteredSubscribedMods = new List<SubscribedMod>();
 
-	// Token: 0x04003448 RID: 13384
+	// Token: 0x0400344A RID: 13386
 	private bool loadingCustomModList;
 
-	// Token: 0x04003449 RID: 13385
+	// Token: 0x0400344B RID: 13387
 	private bool errorLoadingCustomModList;
 
-	// Token: 0x0400344A RID: 13386
+	// Token: 0x0400344C RID: 13388
 	private int customModListPageCount = -1;
 
-	// Token: 0x0400344B RID: 13387
+	// Token: 0x0400344D RID: 13389
 	private List<long> customModListModIds = new List<long>();
 
-	// Token: 0x0400344C RID: 13388
+	// Token: 0x0400344E RID: 13390
 	private List<ModProfile> customModList = new List<ModProfile>();
 
-	// Token: 0x0400344D RID: 13389
+	// Token: 0x0400344F RID: 13391
 	private int selectedModIndex;
 
-	// Token: 0x0400344E RID: 13390
+	// Token: 0x04003450 RID: 13392
 	private int currentModPage;
 
-	// Token: 0x0400344F RID: 13391
+	// Token: 0x04003451 RID: 13393
 	private int totalModCount;
 
-	// Token: 0x04003450 RID: 13392
+	// Token: 0x04003452 RID: 13394
 	private List<ModProfile> displayedModProfiles = new List<ModProfile>();
 
-	// Token: 0x04003451 RID: 13393
+	// Token: 0x04003453 RID: 13395
 	private int sortTypeIndex;
 
-	// Token: 0x04003452 RID: 13394
+	// Token: 0x04003454 RID: 13396
 	private SortModsBy sortType = SortModsBy.Popular;
 
-	// Token: 0x04003453 RID: 13395
+	// Token: 0x04003455 RID: 13397
 	private const int MAX_SORT_TYPES = 6;
 
-	// Token: 0x04003454 RID: 13396
+	// Token: 0x04003456 RID: 13398
 	private List<string> searchTags = new List<string>();
 
-	// Token: 0x04003455 RID: 13397
+	// Token: 0x04003457 RID: 13399
 	private bool isAscendingOrder = true;
 
-	// Token: 0x04003456 RID: 13398
+	// Token: 0x04003458 RID: 13400
 	private bool isDownloadingThumbnail;
 
-	// Token: 0x04003457 RID: 13399
+	// Token: 0x04003459 RID: 13401
 	private bool newDownloadRequest;
 
-	// Token: 0x04003458 RID: 13400
+	// Token: 0x0400345A RID: 13402
 	private DownloadReference currentThumbnail;
 
-	// Token: 0x04003459 RID: 13401
+	// Token: 0x0400345B RID: 13403
 	private bool restartCustomModListRetrieval;
 
-	// Token: 0x0400345A RID: 13402
+	// Token: 0x0400345C RID: 13404
 	public CustomMapsListScreen.ListScreenState currentState;
 
-	// Token: 0x0400345B RID: 13403
+	// Token: 0x0400345D RID: 13405
 	private int retrieveRetryCount;
 
-	// Token: 0x0400345C RID: 13404
+	// Token: 0x0400345E RID: 13406
 	private const int maxRetryCount = 10;
 
 	// Token: 0x02000730 RID: 1840
 	public enum ListScreenState
 	{
-		// Token: 0x0400345E RID: 13406
-		AvailableMods,
-		// Token: 0x0400345F RID: 13407
-		SubscribedMods,
 		// Token: 0x04003460 RID: 13408
+		AvailableMods,
+		// Token: 0x04003461 RID: 13409
+		SubscribedMods,
+		// Token: 0x04003462 RID: 13410
 		CustomModList
 	}
 }

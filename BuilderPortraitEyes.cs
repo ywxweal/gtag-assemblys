@@ -4,21 +4,21 @@ using UnityEngine;
 // Token: 0x020004D5 RID: 1237
 public class BuilderPortraitEyes : MonoBehaviour, IGorillaSliceableSimple
 {
-	// Token: 0x06001DF7 RID: 7671 RVA: 0x00091B86 File Offset: 0x0008FD86
+	// Token: 0x06001DF7 RID: 7671 RVA: 0x00091BA6 File Offset: 0x0008FDA6
 	public void OnEnable()
 	{
 		GorillaSlicerSimpleManager.RegisterSliceable(this, GorillaSlicerSimpleManager.UpdateStep.LateUpdate);
 		this.scale = base.transform.lossyScale.x;
 	}
 
-	// Token: 0x06001DF8 RID: 7672 RVA: 0x00091BA5 File Offset: 0x0008FDA5
+	// Token: 0x06001DF8 RID: 7672 RVA: 0x00091BC5 File Offset: 0x0008FDC5
 	public void OnDisable()
 	{
 		GorillaSlicerSimpleManager.UnregisterSliceable(this, GorillaSlicerSimpleManager.UpdateStep.LateUpdate);
 		this.eyes.transform.position = this.eyeCenter.transform.position;
 	}
 
-	// Token: 0x06001DF9 RID: 7673 RVA: 0x00091BD0 File Offset: 0x0008FDD0
+	// Token: 0x06001DF9 RID: 7673 RVA: 0x00091BF0 File Offset: 0x0008FDF0
 	public void SliceUpdate()
 	{
 		if (GorillaTagger.Instance == null)

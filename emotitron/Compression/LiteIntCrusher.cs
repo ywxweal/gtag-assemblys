@@ -7,7 +7,7 @@ namespace emotitron.Compression
 	[Serializable]
 	public class LiteIntCrusher : LiteCrusher<int>
 	{
-		// Token: 0x060059FF RID: 23039 RVA: 0x001B7740 File Offset: 0x001B5940
+		// Token: 0x06005A00 RID: 23040 RVA: 0x001B7818 File Offset: 0x001B5A18
 		public LiteIntCrusher()
 		{
 			this.compressType = LiteIntCompressType.PackSigned;
@@ -19,7 +19,7 @@ namespace emotitron.Compression
 			}
 		}
 
-		// Token: 0x06005A00 RID: 23040 RVA: 0x001B7796 File Offset: 0x001B5996
+		// Token: 0x06005A01 RID: 23041 RVA: 0x001B786E File Offset: 0x001B5A6E
 		public LiteIntCrusher(LiteIntCompressType comType = LiteIntCompressType.PackSigned, int min = -128, int max = 127)
 		{
 			this.compressType = comType;
@@ -31,7 +31,7 @@ namespace emotitron.Compression
 			}
 		}
 
-		// Token: 0x06005A01 RID: 23041 RVA: 0x001B77D8 File Offset: 0x001B59D8
+		// Token: 0x06005A02 RID: 23042 RVA: 0x001B78B0 File Offset: 0x001B5AB0
 		public override ulong WriteValue(int val, byte[] buffer, ref int bitposition)
 		{
 			switch (this.compressType)
@@ -56,7 +56,7 @@ namespace emotitron.Compression
 			}
 		}
 
-		// Token: 0x06005A02 RID: 23042 RVA: 0x001B7844 File Offset: 0x001B5A44
+		// Token: 0x06005A03 RID: 23043 RVA: 0x001B791C File Offset: 0x001B5B1C
 		public override void WriteCValue(uint cval, byte[] buffer, ref int bitposition)
 		{
 			switch (this.compressType)
@@ -75,7 +75,7 @@ namespace emotitron.Compression
 			}
 		}
 
-		// Token: 0x06005A03 RID: 23043 RVA: 0x001B7894 File Offset: 0x001B5A94
+		// Token: 0x06005A04 RID: 23044 RVA: 0x001B796C File Offset: 0x001B5B6C
 		public override int ReadValue(byte[] buffer, ref int bitposition)
 		{
 			switch (this.compressType)
@@ -94,20 +94,20 @@ namespace emotitron.Compression
 			}
 		}
 
-		// Token: 0x06005A04 RID: 23044 RVA: 0x001B78E9 File Offset: 0x001B5AE9
+		// Token: 0x06005A05 RID: 23045 RVA: 0x001B79C1 File Offset: 0x001B5BC1
 		public override ulong Encode(int value)
 		{
 			value = ((value > this.biggest) ? this.biggest : ((value < this.smallest) ? this.smallest : value));
 			return (ulong)((long)(value - this.smallest));
 		}
 
-		// Token: 0x06005A05 RID: 23045 RVA: 0x001B7919 File Offset: 0x001B5B19
+		// Token: 0x06005A06 RID: 23046 RVA: 0x001B79F1 File Offset: 0x001B5BF1
 		public override int Decode(uint cvalue)
 		{
 			return (int)((ulong)cvalue + (ulong)((long)this.smallest));
 		}
 
-		// Token: 0x06005A06 RID: 23046 RVA: 0x001B7928 File Offset: 0x001B5B28
+		// Token: 0x06005A07 RID: 23047 RVA: 0x001B7A00 File Offset: 0x001B5C00
 		public static void Recalculate(int min, int max, ref int smallest, ref int biggest, ref int bits)
 		{
 			if (min < max)
@@ -124,7 +124,7 @@ namespace emotitron.Compression
 			bits = LiteCrusher.GetBitsForMaxValue((uint)num);
 		}
 
-		// Token: 0x06005A07 RID: 23047 RVA: 0x001B7958 File Offset: 0x001B5B58
+		// Token: 0x06005A08 RID: 23048 RVA: 0x001B7A30 File Offset: 0x001B5C30
 		public override string ToString()
 		{
 			return string.Concat(new string[]
@@ -141,23 +141,23 @@ namespace emotitron.Compression
 			});
 		}
 
-		// Token: 0x04005E54 RID: 24148
+		// Token: 0x04005E55 RID: 24149
 		[SerializeField]
 		public LiteIntCompressType compressType;
 
-		// Token: 0x04005E55 RID: 24149
+		// Token: 0x04005E56 RID: 24150
 		[SerializeField]
 		protected int min;
 
-		// Token: 0x04005E56 RID: 24150
+		// Token: 0x04005E57 RID: 24151
 		[SerializeField]
 		protected int max;
 
-		// Token: 0x04005E57 RID: 24151
+		// Token: 0x04005E58 RID: 24152
 		[SerializeField]
 		private int smallest;
 
-		// Token: 0x04005E58 RID: 24152
+		// Token: 0x04005E59 RID: 24153
 		[SerializeField]
 		private int biggest;
 	}

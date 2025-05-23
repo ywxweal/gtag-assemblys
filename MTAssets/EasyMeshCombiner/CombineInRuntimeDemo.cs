@@ -6,7 +6,7 @@ namespace MTAssets.EasyMeshCombiner
 	// Token: 0x02000C9E RID: 3230
 	public class CombineInRuntimeDemo : MonoBehaviour
 	{
-		// Token: 0x06005017 RID: 20503 RVA: 0x0017D858 File Offset: 0x0017BA58
+		// Token: 0x06005018 RID: 20504 RVA: 0x0017D930 File Offset: 0x0017BB30
 		private void Update()
 		{
 			if (!this.runtimeCombiner.isTargetMeshesMerged())
@@ -21,25 +21,25 @@ namespace MTAssets.EasyMeshCombiner
 			}
 		}
 
-		// Token: 0x06005018 RID: 20504 RVA: 0x0017D8AF File Offset: 0x0017BAAF
+		// Token: 0x06005019 RID: 20505 RVA: 0x0017D987 File Offset: 0x0017BB87
 		public void CombineMeshes()
 		{
 			this.runtimeCombiner.CombineMeshes();
 		}
 
-		// Token: 0x06005019 RID: 20505 RVA: 0x0017D8BD File Offset: 0x0017BABD
+		// Token: 0x0600501A RID: 20506 RVA: 0x0017D995 File Offset: 0x0017BB95
 		public void UndoMerge()
 		{
 			this.runtimeCombiner.UndoMerge();
 		}
 
-		// Token: 0x0400530A RID: 21258
+		// Token: 0x0400530B RID: 21259
 		public GameObject combineButton;
 
-		// Token: 0x0400530B RID: 21259
+		// Token: 0x0400530C RID: 21260
 		public GameObject undoButton;
 
-		// Token: 0x0400530C RID: 21260
+		// Token: 0x0400530D RID: 21261
 		public RuntimeMeshCombiner runtimeCombiner;
 	}
 }

@@ -6,7 +6,7 @@ namespace GorillaNetworking
 	// Token: 0x02000C45 RID: 3141
 	public class SubmitAcceptedAgreementsRequest
 	{
-		// Token: 0x0400512E RID: 20782
+		// Token: 0x0400512F RID: 20783
 		public Dictionary<string, string> Agreements;
 	}
 }

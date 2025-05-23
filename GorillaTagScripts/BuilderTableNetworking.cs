@@ -14,7 +14,7 @@ namespace GorillaTagScripts
 	// Token: 0x02000AF7 RID: 2807
 	public class BuilderTableNetworking : MonoBehaviourPunCallbacks
 	{
-		// Token: 0x06004483 RID: 17539 RVA: 0x00143630 File Offset: 0x00141830
+		// Token: 0x06004484 RID: 17540 RVA: 0x00143708 File Offset: 0x00141908
 		private void Awake()
 		{
 			this.masterClientTableInit = new List<BuilderTableNetworking.PlayerTableInitState>(10);
@@ -51,19 +51,19 @@ namespace GorillaTagScripts
 			this.armShelfRequests = new List<Player>(10);
 		}
 
-		// Token: 0x06004484 RID: 17540 RVA: 0x00143923 File Offset: 0x00141B23
+		// Token: 0x06004485 RID: 17541 RVA: 0x001439FB File Offset: 0x00141BFB
 		public void SetTable(BuilderTable table)
 		{
 			this.currTable = table;
 		}
 
-		// Token: 0x06004485 RID: 17541 RVA: 0x0014392C File Offset: 0x00141B2C
+		// Token: 0x06004486 RID: 17542 RVA: 0x00143A04 File Offset: 0x00141C04
 		private BuilderTable GetTable()
 		{
 			return this.currTable;
 		}
 
-		// Token: 0x06004486 RID: 17542 RVA: 0x00143934 File Offset: 0x00141B34
+		// Token: 0x06004487 RID: 17543 RVA: 0x00143A0C File Offset: 0x00141C0C
 		private int CreateLocalCommandId()
 		{
 			int num = this.nextLocalCommandId;
@@ -71,13 +71,13 @@ namespace GorillaTagScripts
 			return num;
 		}
 
-		// Token: 0x06004487 RID: 17543 RVA: 0x0014394A File Offset: 0x00141B4A
+		// Token: 0x06004488 RID: 17544 RVA: 0x00143A22 File Offset: 0x00141C22
 		public BuilderTableNetworking.PlayerTableInitState GetLocalTableInit()
 		{
 			return this.localClientTableInit;
 		}
 
-		// Token: 0x06004488 RID: 17544 RVA: 0x00143954 File Offset: 0x00141B54
+		// Token: 0x06004489 RID: 17545 RVA: 0x00143A2C File Offset: 0x00141C2C
 		public override void OnMasterClientSwitched(Player newMasterClient)
 		{
 			if (!newMasterClient.IsLocal)
@@ -146,7 +146,7 @@ namespace GorillaTagScripts
 			table2.SetTableState(BuilderTable.TableState.Ready);
 		}
 
-		// Token: 0x06004489 RID: 17545 RVA: 0x00143B90 File Offset: 0x00141D90
+		// Token: 0x0600448A RID: 17546 RVA: 0x00143C68 File Offset: 0x00141E68
 		public override void OnPlayerLeftRoom(Player player)
 		{
 			Debug.LogFormat("Player {0} left room", new object[] { player.ActorNumber });
@@ -186,7 +186,7 @@ namespace GorillaTagScripts
 			}
 		}
 
-		// Token: 0x0600448A RID: 17546 RVA: 0x00143C7F File Offset: 0x00141E7F
+		// Token: 0x0600448B RID: 17547 RVA: 0x00143D57 File Offset: 0x00141F57
 		public override void OnJoinedRoom()
 		{
 			base.OnJoinedRoom();
@@ -195,7 +195,7 @@ namespace GorillaTagScripts
 			table.SetInRoom(true);
 		}
 
-		// Token: 0x0600448B RID: 17547 RVA: 0x00143C9A File Offset: 0x00141E9A
+		// Token: 0x0600448C RID: 17548 RVA: 0x00143D72 File Offset: 0x00141F72
 		public override void OnLeftRoom()
 		{
 			this.PlayerExitBuilder();
@@ -205,7 +205,7 @@ namespace GorillaTagScripts
 			this.armShelfRequests.Clear();
 		}
 
-		// Token: 0x0600448C RID: 17548 RVA: 0x00143CC0 File Offset: 0x00141EC0
+		// Token: 0x0600448D RID: 17549 RVA: 0x00143D98 File Offset: 0x00141F98
 		private void Update()
 		{
 			if (PhotonNetwork.IsMasterClient)
@@ -214,7 +214,7 @@ namespace GorillaTagScripts
 			}
 		}
 
-		// Token: 0x0600448D RID: 17549 RVA: 0x00143CD0 File Offset: 0x00141ED0
+		// Token: 0x0600448E RID: 17550 RVA: 0x00143DA8 File Offset: 0x00141FA8
 		public void PlayerEnterBuilder()
 		{
 			this.tablePhotonView.RPC("PlayerEnterBuilderRPC", PhotonNetwork.MasterClient, new object[]
@@ -229,7 +229,7 @@ namespace GorillaTagScripts
 			}
 		}
 
-		// Token: 0x0600448E RID: 17550 RVA: 0x00143D44 File Offset: 0x00141F44
+		// Token: 0x0600448F RID: 17551 RVA: 0x00143E1C File Offset: 0x0014201C
 		[PunRPC]
 		public void PlayerEnterBuilderRPC(Player player, bool entered, PhotonMessageInfo info)
 		{
@@ -282,7 +282,7 @@ namespace GorillaTagScripts
 			}
 		}
 
-		// Token: 0x0600448F RID: 17551 RVA: 0x00143E28 File Offset: 0x00142028
+		// Token: 0x06004490 RID: 17552 RVA: 0x00143F00 File Offset: 0x00142100
 		public void PlayerExitBuilder()
 		{
 			if (NetworkSystem.Instance.InRoom)
@@ -301,13 +301,13 @@ namespace GorillaTagScripts
 			this.masterClientTableInit.Clear();
 		}
 
-		// Token: 0x06004490 RID: 17552 RVA: 0x00143E9F File Offset: 0x0014209F
+		// Token: 0x06004491 RID: 17553 RVA: 0x00143F77 File Offset: 0x00142177
 		public bool IsPrivateMasterClient()
 		{
 			return PhotonNetwork.LocalPlayer == PhotonNetwork.MasterClient && NetworkSystem.Instance.SessionIsPrivate;
 		}
 
-		// Token: 0x06004491 RID: 17553 RVA: 0x00143EBC File Offset: 0x001420BC
+		// Token: 0x06004492 RID: 17554 RVA: 0x00143F94 File Offset: 0x00142194
 		private void UpdateNewPlayerInit()
 		{
 			if (this.GetTable().GetTableState() == BuilderTable.TableState.Ready)
@@ -344,7 +344,7 @@ namespace GorillaTagScripts
 			}
 		}
 
-		// Token: 0x06004492 RID: 17554 RVA: 0x0014404C File Offset: 0x0014224C
+		// Token: 0x06004493 RID: 17555 RVA: 0x00144124 File Offset: 0x00142324
 		private void StartCreatingSerializedTable(Player newPlayer)
 		{
 			BuilderTable table = this.GetTable();
@@ -357,7 +357,7 @@ namespace GorillaTagScripts
 			this.tablePhotonView.RPC("StartBuildTableRPC", newPlayer, new object[] { playerTableInit.totalSerializedBytes });
 		}
 
-		// Token: 0x06004493 RID: 17555 RVA: 0x001440D4 File Offset: 0x001422D4
+		// Token: 0x06004494 RID: 17556 RVA: 0x001441AC File Offset: 0x001423AC
 		[PunRPC]
 		public void StartBuildTableRPC(int totalBytes, PhotonMessageInfo info)
 		{
@@ -400,7 +400,7 @@ namespace GorillaTagScripts
 			table.ClearQueuedCommands();
 		}
 
-		// Token: 0x06004494 RID: 17556 RVA: 0x001441B0 File Offset: 0x001423B0
+		// Token: 0x06004495 RID: 17557 RVA: 0x00144288 File Offset: 0x00142488
 		private void SendNextTableData(Player requestingPlayer)
 		{
 			BuilderTableNetworking.PlayerTableInitState playerTableInit = this.GetPlayerTableInit(requestingPlayer);
@@ -419,7 +419,7 @@ namespace GorillaTagScripts
 			this.tablePhotonView.RPC("SendTableDataRPC", requestingPlayer, new object[] { num, playerTableInit.chunk });
 		}
 
-		// Token: 0x06004495 RID: 17557 RVA: 0x00144254 File Offset: 0x00142454
+		// Token: 0x06004496 RID: 17558 RVA: 0x0014432C File Offset: 0x0014252C
 		[PunRPC]
 		public void SendTableDataRPC(int numBytes, byte[] bytes, PhotonMessageInfo info)
 		{
@@ -459,7 +459,7 @@ namespace GorillaTagScripts
 			}
 		}
 
-		// Token: 0x06004496 RID: 17558 RVA: 0x0014433C File Offset: 0x0014253C
+		// Token: 0x06004497 RID: 17559 RVA: 0x00144414 File Offset: 0x00142614
 		private bool DoesTableInitExist(Player player)
 		{
 			for (int i = 0; i < this.masterClientTableInit.Count; i++)
@@ -472,7 +472,7 @@ namespace GorillaTagScripts
 			return false;
 		}
 
-		// Token: 0x06004497 RID: 17559 RVA: 0x00144380 File Offset: 0x00142580
+		// Token: 0x06004498 RID: 17560 RVA: 0x00144458 File Offset: 0x00142658
 		private BuilderTableNetworking.PlayerTableInitState CreatePlayerTableInit(Player player)
 		{
 			for (int i = 0; i < this.masterClientTableInit.Count; i++)
@@ -489,7 +489,7 @@ namespace GorillaTagScripts
 			return playerTableInitState;
 		}
 
-		// Token: 0x06004498 RID: 17560 RVA: 0x001443FC File Offset: 0x001425FC
+		// Token: 0x06004499 RID: 17561 RVA: 0x001444D4 File Offset: 0x001426D4
 		public void ResetSerializedTableForAllPlayers()
 		{
 			for (int i = 0; i < this.masterClientTableInit.Count; i++)
@@ -501,7 +501,7 @@ namespace GorillaTagScripts
 			}
 		}
 
-		// Token: 0x06004499 RID: 17561 RVA: 0x0014446F File Offset: 0x0014266F
+		// Token: 0x0600449A RID: 17562 RVA: 0x00144547 File Offset: 0x00142747
 		private void CreateSerializedTableForNewPlayerInit(Player newPlayer)
 		{
 			if (this.DoesTableInitExist(newPlayer))
@@ -513,7 +513,7 @@ namespace GorillaTagScripts
 			playerTableInitState.sendNextChunkTimeRemaining = -1f;
 		}
 
-		// Token: 0x0600449A RID: 17562 RVA: 0x00144498 File Offset: 0x00142698
+		// Token: 0x0600449B RID: 17563 RVA: 0x00144570 File Offset: 0x00142770
 		private void DestroyPlayerTableInit(Player player)
 		{
 			for (int i = 0; i < this.masterClientTableInit.Count; i++)
@@ -526,7 +526,7 @@ namespace GorillaTagScripts
 			}
 		}
 
-		// Token: 0x0600449B RID: 17563 RVA: 0x001444EC File Offset: 0x001426EC
+		// Token: 0x0600449C RID: 17564 RVA: 0x001445C4 File Offset: 0x001427C4
 		private BuilderTableNetworking.PlayerTableInitState GetPlayerTableInit(Player player)
 		{
 			for (int i = 0; i < this.masterClientTableInit.Count; i++)
@@ -539,7 +539,7 @@ namespace GorillaTagScripts
 			return null;
 		}
 
-		// Token: 0x0600449C RID: 17564 RVA: 0x0014453C File Offset: 0x0014273C
+		// Token: 0x0600449D RID: 17565 RVA: 0x00144614 File Offset: 0x00142814
 		private bool ValidateMasterClientIsReady(Player player)
 		{
 			if (!PhotonNetwork.IsMasterClient)
@@ -557,13 +557,13 @@ namespace GorillaTagScripts
 			return this.GetTable().GetTableState() == BuilderTable.TableState.Ready;
 		}
 
-		// Token: 0x0600449D RID: 17565 RVA: 0x0014458C File Offset: 0x0014278C
+		// Token: 0x0600449E RID: 17566 RVA: 0x00144664 File Offset: 0x00142864
 		private bool ValidateCallLimits(BuilderTableNetworking.RPC rpcCall, PhotonMessageInfo info)
 		{
 			return rpcCall >= BuilderTableNetworking.RPC.PlayerEnterMaster && rpcCall < BuilderTableNetworking.RPC.Count && this.callLimiters[(int)rpcCall].CheckCallTime(Time.time);
 		}
 
-		// Token: 0x0600449E RID: 17566 RVA: 0x001445BA File Offset: 0x001427BA
+		// Token: 0x0600449F RID: 17567 RVA: 0x00144692 File Offset: 0x00142892
 		[PunRPC]
 		public void RequestFailedRPC(int localCommandId, PhotonMessageInfo info)
 		{
@@ -579,22 +579,22 @@ namespace GorillaTagScripts
 			this.GetTable().RollbackFailedCommand(localCommandId);
 		}
 
-		// Token: 0x0600449F RID: 17567 RVA: 0x000023F4 File Offset: 0x000005F4
+		// Token: 0x060044A0 RID: 17568 RVA: 0x000023F4 File Offset: 0x000005F4
 		public void RequestCreatePiece(int newPieceType, Vector3 position, Quaternion rotation, int materialType)
 		{
 		}
 
-		// Token: 0x060044A0 RID: 17568 RVA: 0x000023F4 File Offset: 0x000005F4
+		// Token: 0x060044A1 RID: 17569 RVA: 0x000023F4 File Offset: 0x000005F4
 		public void RequestCreatePieceRPC(int newPieceType, long packedPosition, int packedRotation, int materialType, PhotonMessageInfo info)
 		{
 		}
 
-		// Token: 0x060044A1 RID: 17569 RVA: 0x000023F4 File Offset: 0x000005F4
+		// Token: 0x060044A2 RID: 17570 RVA: 0x000023F4 File Offset: 0x000005F4
 		public void PieceCreatedRPC(int pieceType, int pieceId, long packedPosition, int packedRotation, int materialType, Player creatingPlayer, PhotonMessageInfo info)
 		{
 		}
 
-		// Token: 0x060044A2 RID: 17570 RVA: 0x001445F0 File Offset: 0x001427F0
+		// Token: 0x060044A3 RID: 17571 RVA: 0x001446C8 File Offset: 0x001428C8
 		public void CreateShelfPiece(int pieceType, Vector3 position, Quaternion rotation, int materialType, BuilderPiece.State state, int shelfID)
 		{
 			if (!PhotonNetwork.IsMasterClient)
@@ -647,7 +647,7 @@ namespace GorillaTagScripts
 			});
 		}
 
-		// Token: 0x060044A3 RID: 17571 RVA: 0x001446EC File Offset: 0x001428EC
+		// Token: 0x060044A4 RID: 17572 RVA: 0x001447C4 File Offset: 0x001429C4
 		[PunRPC]
 		public void PieceCreatedByShelfRPC(int pieceType, int pieceId, long packedPosition, int packedRotation, int materialType, byte state, int shelfID, Player creatingPlayer, PhotonMessageInfo info)
 		{
@@ -682,7 +682,7 @@ namespace GorillaTagScripts
 			table.CreateConveyorPiece(pieceType, pieceId, vector, quaternion, materialType, shelfID, info.SentServerTimestamp);
 		}
 
-		// Token: 0x060044A4 RID: 17572 RVA: 0x00144770 File Offset: 0x00142970
+		// Token: 0x060044A5 RID: 17573 RVA: 0x00144848 File Offset: 0x00142A48
 		public void RequestRecyclePiece(int pieceId, Vector3 position, Quaternion rotation, bool playFX, int recyclerID)
 		{
 			if (!PhotonNetwork.IsMasterClient)
@@ -719,7 +719,7 @@ namespace GorillaTagScripts
 			});
 		}
 
-		// Token: 0x060044A5 RID: 17573 RVA: 0x00144820 File Offset: 0x00142A20
+		// Token: 0x060044A6 RID: 17574 RVA: 0x001448F8 File Offset: 0x00142AF8
 		[PunRPC]
 		public void PieceDestroyedRPC(int pieceId, long packedPosition, int packedRotation, bool playFX, short recyclerID, PhotonMessageInfo info)
 		{
@@ -747,7 +747,7 @@ namespace GorillaTagScripts
 			table.RecyclePiece(pieceId, vector, quaternion, playFX, (int)recyclerID, info.Sender);
 		}
 
-		// Token: 0x060044A6 RID: 17574 RVA: 0x001448A4 File Offset: 0x00142AA4
+		// Token: 0x060044A7 RID: 17575 RVA: 0x0014497C File Offset: 0x00142B7C
 		public void RequestPlacePiece(BuilderPiece piece, BuilderPiece attachPiece, sbyte bumpOffsetX, sbyte bumpOffsetZ, byte twist, BuilderPiece parentPiece, int attachIndex, int parentAttachIndex)
 		{
 			if (piece == null)
@@ -787,7 +787,7 @@ namespace GorillaTagScripts
 			}
 		}
 
-		// Token: 0x060044A7 RID: 17575 RVA: 0x001449CC File Offset: 0x00142BCC
+		// Token: 0x060044A8 RID: 17576 RVA: 0x00144AA4 File Offset: 0x00142CA4
 		[PunRPC]
 		public void RequestPlacePieceRPC(int localCommandId, int pieceId, int attachPieceId, int placement, int parentPieceId, int attachIndex, int parentAttachIndex, Player placedByPlayer, PhotonMessageInfo info)
 		{
@@ -833,7 +833,7 @@ namespace GorillaTagScripts
 			base.photonView.RPC("RequestFailedRPC", info.Sender, new object[] { localCommandId });
 		}
 
-		// Token: 0x060044A8 RID: 17576 RVA: 0x00144B80 File Offset: 0x00142D80
+		// Token: 0x060044A9 RID: 17577 RVA: 0x00144C58 File Offset: 0x00142E58
 		[PunRPC]
 		public void PiecePlacedRPC(int localCommandId, int pieceId, int attachPieceId, int placement, int parentPieceId, int attachIndex, int parentAttachIndex, Player placedByPlayer, int timeStamp, PhotonMessageInfo info)
 		{
@@ -866,7 +866,7 @@ namespace GorillaTagScripts
 			table.PlacePiece(localCommandId, pieceId, attachPieceId, b2, b3, b, parentPieceId, attachIndex, parentAttachIndex, NetPlayer.Get(placedByPlayer), timeStamp, false);
 		}
 
-		// Token: 0x060044A9 RID: 17577 RVA: 0x00144C38 File Offset: 0x00142E38
+		// Token: 0x060044AA RID: 17578 RVA: 0x00144D10 File Offset: 0x00142F10
 		public void RequestGrabPiece(BuilderPiece piece, bool isLefHand, Vector3 localPosition, Quaternion localRotation)
 		{
 			if (piece == null)
@@ -902,7 +902,7 @@ namespace GorillaTagScripts
 			}
 		}
 
-		// Token: 0x060044AA RID: 17578 RVA: 0x00144D14 File Offset: 0x00142F14
+		// Token: 0x060044AB RID: 17579 RVA: 0x00144DEC File Offset: 0x00142FEC
 		[PunRPC]
 		public void RequestGrabPieceRPC(int localCommandId, int pieceId, bool isLeftHand, long packedPosRot, Player grabbedByPlayer, PhotonMessageInfo info)
 		{
@@ -948,7 +948,7 @@ namespace GorillaTagScripts
 			}
 		}
 
-		// Token: 0x060044AB RID: 17579 RVA: 0x00144E4C File Offset: 0x0014304C
+		// Token: 0x060044AC RID: 17580 RVA: 0x00144F24 File Offset: 0x00143124
 		private void CheckForFreedPlot(int pieceId, Player grabbedByPlayer)
 		{
 			if (!PhotonNetwork.IsMasterClient)
@@ -967,7 +967,7 @@ namespace GorillaTagScripts
 			}
 		}
 
-		// Token: 0x060044AC RID: 17580 RVA: 0x00144EEC File Offset: 0x001430EC
+		// Token: 0x060044AD RID: 17581 RVA: 0x00144FC4 File Offset: 0x001431C4
 		[PunRPC]
 		public void PieceGrabbedRPC(int localCommandId, int pieceId, bool isLeftHand, long packedPosRot, Player grabbedByPlayer, PhotonMessageInfo info)
 		{
@@ -991,7 +991,7 @@ namespace GorillaTagScripts
 			table.GrabPiece(localCommandId, pieceId, isLeftHand, vector, quaternion, NetPlayer.Get(grabbedByPlayer), false);
 		}
 
-		// Token: 0x060044AD RID: 17581 RVA: 0x00144F50 File Offset: 0x00143150
+		// Token: 0x060044AE RID: 17582 RVA: 0x00145028 File Offset: 0x00143228
 		public void RequestDropPiece(BuilderPiece piece, Vector3 position, Quaternion rotation, Vector3 velocity, Vector3 angVelocity)
 		{
 			if (piece == null)
@@ -1035,7 +1035,7 @@ namespace GorillaTagScripts
 			}
 		}
 
-		// Token: 0x060044AE RID: 17582 RVA: 0x00145088 File Offset: 0x00143288
+		// Token: 0x060044AF RID: 17583 RVA: 0x00145160 File Offset: 0x00143360
 		[PunRPC]
 		public void RequestDropPieceRPC(int localCommandId, int pieceId, Vector3 position, Quaternion rotation, Vector3 velocity, Vector3 angVelocity, Player droppedByPlayer, PhotonMessageInfo info)
 		{
@@ -1075,7 +1075,7 @@ namespace GorillaTagScripts
 			base.photonView.RPC("RequestFailedRPC", info.Sender, new object[] { localCommandId });
 		}
 
-		// Token: 0x060044AF RID: 17583 RVA: 0x001451B4 File Offset: 0x001433B4
+		// Token: 0x060044B0 RID: 17584 RVA: 0x0014528C File Offset: 0x0014348C
 		[PunRPC]
 		public void PieceDroppedRPC(int localCommandId, int pieceId, Vector3 position, Quaternion rotation, Vector3 velocity, Vector3 angVelocity, Player droppedByPlayer, PhotonMessageInfo info)
 		{
@@ -1109,7 +1109,7 @@ namespace GorillaTagScripts
 			}
 		}
 
-		// Token: 0x060044B0 RID: 17584 RVA: 0x00145250 File Offset: 0x00143450
+		// Token: 0x060044B1 RID: 17585 RVA: 0x00145328 File Offset: 0x00143528
 		public void PieceEnteredDropZone(BuilderPiece piece, BuilderDropZone.DropType dropType, int dropZoneId)
 		{
 			if (!PhotonNetwork.IsMasterClient)
@@ -1131,7 +1131,7 @@ namespace GorillaTagScripts
 			base.photonView.RPC("PieceEnteredDropZoneRPC", RpcTarget.All, new object[] { rootPiece.pieceId, num, num2, dropZoneId });
 		}
 
-		// Token: 0x060044B1 RID: 17585 RVA: 0x001452E8 File Offset: 0x001434E8
+		// Token: 0x060044B2 RID: 17586 RVA: 0x001453C0 File Offset: 0x001435C0
 		[PunRPC]
 		public void PieceEnteredDropZoneRPC(int pieceId, long position, int rotation, int dropZoneId, PhotonMessageInfo info)
 		{
@@ -1163,7 +1163,7 @@ namespace GorillaTagScripts
 			table.PieceEnteredDropZone(pieceId, vector, quaternion, dropZoneId);
 		}
 
-		// Token: 0x060044B2 RID: 17586 RVA: 0x00145364 File Offset: 0x00143564
+		// Token: 0x060044B3 RID: 17587 RVA: 0x0014543C File Offset: 0x0014363C
 		[PunRPC]
 		public void PlotClaimedRPC(int pieceId, Player claimingPlayer, bool claimed, PhotonMessageInfo info)
 		{
@@ -1189,7 +1189,7 @@ namespace GorillaTagScripts
 			table.PlotFreed(pieceId, claimingPlayer);
 		}
 
-		// Token: 0x060044B3 RID: 17587 RVA: 0x001453C0 File Offset: 0x001435C0
+		// Token: 0x060044B4 RID: 17588 RVA: 0x00145498 File Offset: 0x00143698
 		public void RequestCreateArmShelfForPlayer(Player player)
 		{
 			if (!PhotonNetwork.IsMasterClient)
@@ -1219,7 +1219,7 @@ namespace GorillaTagScripts
 			base.photonView.RPC("ArmShelfCreatedRPC", RpcTarget.All, new object[] { num, num2, staticHash, player });
 		}
 
-		// Token: 0x060044B4 RID: 17588 RVA: 0x00145474 File Offset: 0x00143674
+		// Token: 0x060044B5 RID: 17589 RVA: 0x0014554C File Offset: 0x0014374C
 		[PunRPC]
 		public void ArmShelfCreatedRPC(int pieceIdLeft, int pieceIdRight, int pieceType, Player owningPlayer, PhotonMessageInfo info)
 		{
@@ -1244,7 +1244,7 @@ namespace GorillaTagScripts
 			table.CreateArmShelf(pieceIdLeft, pieceIdRight, pieceType, owningPlayer);
 		}
 
-		// Token: 0x060044B5 RID: 17589 RVA: 0x001454D8 File Offset: 0x001436D8
+		// Token: 0x060044B6 RID: 17590 RVA: 0x001455B0 File Offset: 0x001437B0
 		public void RequestShelfSelection(int shelfID, int setId, bool isConveyor)
 		{
 			BuilderTable table = this.GetTable();
@@ -1269,7 +1269,7 @@ namespace GorillaTagScripts
 			}
 		}
 
-		// Token: 0x060044B6 RID: 17590 RVA: 0x0014555C File Offset: 0x0014375C
+		// Token: 0x060044B7 RID: 17591 RVA: 0x00145634 File Offset: 0x00143834
 		[PunRPC]
 		public void RequestShelfSelectionRPC(int shelfId, int setId, bool isConveyor, PhotonMessageInfo info)
 		{
@@ -1298,7 +1298,7 @@ namespace GorillaTagScripts
 			base.photonView.RPC("ShelfSelectionChangedRPC", RpcTarget.All, new object[] { shelfId, setId, isConveyor, info.Sender });
 		}
 
-		// Token: 0x060044B7 RID: 17591 RVA: 0x001455FC File Offset: 0x001437FC
+		// Token: 0x060044B8 RID: 17592 RVA: 0x001456D4 File Offset: 0x001438D4
 		[PunRPC]
 		public void ShelfSelectionChangedRPC(int shelfId, int setId, bool isConveyor, Player caller, PhotonMessageInfo info)
 		{
@@ -1323,7 +1323,7 @@ namespace GorillaTagScripts
 			table.ChangeSetSelection(shelfId, setId, isConveyor);
 		}
 
-		// Token: 0x060044B8 RID: 17592 RVA: 0x0014567C File Offset: 0x0014387C
+		// Token: 0x060044B9 RID: 17593 RVA: 0x00145754 File Offset: 0x00143954
 		public void RequestFunctionalPieceStateChange(int pieceID, byte state)
 		{
 			BuilderTable table = this.GetTable();
@@ -1337,7 +1337,7 @@ namespace GorillaTagScripts
 			}
 		}
 
-		// Token: 0x060044B9 RID: 17593 RVA: 0x001456D8 File Offset: 0x001438D8
+		// Token: 0x060044BA RID: 17594 RVA: 0x001457B0 File Offset: 0x001439B0
 		[PunRPC]
 		public void RequestFunctionalPieceStateChangeRPC(int pieceID, byte state, PhotonMessageInfo info)
 		{
@@ -1365,7 +1365,7 @@ namespace GorillaTagScripts
 			}
 		}
 
-		// Token: 0x060044BA RID: 17594 RVA: 0x00145754 File Offset: 0x00143954
+		// Token: 0x060044BB RID: 17595 RVA: 0x0014582C File Offset: 0x00143A2C
 		public void FunctionalPieceStateChangeMaster(int pieceID, byte state, Player instigator, int timeStamp)
 		{
 			if (!PhotonNetwork.IsMasterClient)
@@ -1379,7 +1379,7 @@ namespace GorillaTagScripts
 			}
 		}
 
-		// Token: 0x060044BB RID: 17595 RVA: 0x001457C8 File Offset: 0x001439C8
+		// Token: 0x060044BC RID: 17596 RVA: 0x001458A0 File Offset: 0x00143AA0
 		[PunRPC]
 		public void FunctionalPieceStateChangeRPC(int pieceID, byte state, Player caller, int timeStamp, PhotonMessageInfo info)
 		{
@@ -1407,7 +1407,7 @@ namespace GorillaTagScripts
 			}
 		}
 
-		// Token: 0x060044BC RID: 17596 RVA: 0x00145874 File Offset: 0x00143A74
+		// Token: 0x060044BD RID: 17597 RVA: 0x0014594C File Offset: 0x00143B4C
 		public void RequestBlocksTerminalControl(bool locked)
 		{
 			BuilderTable table = this.GetTable();
@@ -1422,7 +1422,7 @@ namespace GorillaTagScripts
 			base.photonView.RPC("RequestBlocksTerminalControlRPC", RpcTarget.MasterClient, new object[] { locked });
 		}
 
-		// Token: 0x060044BD RID: 17597 RVA: 0x001458D0 File Offset: 0x00143AD0
+		// Token: 0x060044BE RID: 17598 RVA: 0x001459A8 File Offset: 0x00143BA8
 		[PunRPC]
 		private void RequestBlocksTerminalControlRPC(bool lockedStatus, PhotonMessageInfo info)
 		{
@@ -1460,7 +1460,7 @@ namespace GorillaTagScripts
 			}
 		}
 
-		// Token: 0x060044BE RID: 17598 RVA: 0x001459CC File Offset: 0x00143BCC
+		// Token: 0x060044BF RID: 17599 RVA: 0x00145AA4 File Offset: 0x00143CA4
 		[PunRPC]
 		private void SetBlocksTerminalDriverRPC(int driver, PhotonMessageInfo info)
 		{
@@ -1485,13 +1485,13 @@ namespace GorillaTagScripts
 			table.linkedTerminal.SetTerminalDriver(driver);
 		}
 
-		// Token: 0x060044BF RID: 17599 RVA: 0x00145A43 File Offset: 0x00143C43
+		// Token: 0x060044C0 RID: 17600 RVA: 0x00145B1B File Offset: 0x00143D1B
 		public void RequestLoadSharedBlocksMap(string mapID)
 		{
 			base.photonView.RPC("LoadSharedBlocksMapRPC", RpcTarget.MasterClient, new object[] { mapID });
 		}
 
-		// Token: 0x060044C0 RID: 17600 RVA: 0x00145A60 File Offset: 0x00143C60
+		// Token: 0x060044C1 RID: 17601 RVA: 0x00145B38 File Offset: 0x00143D38
 		[PunRPC]
 		private void LoadSharedBlocksMapRPC(string mapID, PhotonMessageInfo info)
 		{
@@ -1537,7 +1537,7 @@ namespace GorillaTagScripts
 			this.LoadSharedBlocksFailedMaster(mapID);
 		}
 
-		// Token: 0x060044C1 RID: 17601 RVA: 0x00145B75 File Offset: 0x00143D75
+		// Token: 0x060044C2 RID: 17602 RVA: 0x00145C4D File Offset: 0x00143E4D
 		public void LoadSharedBlocksFailedMaster(string mapID)
 		{
 			if (!NetworkSystem.Instance.IsMasterClient)
@@ -1551,7 +1551,7 @@ namespace GorillaTagScripts
 			base.photonView.RPC("SharedTableEventRPC", RpcTarget.All, new object[] { 1, mapID });
 		}
 
-		// Token: 0x060044C2 RID: 17602 RVA: 0x00145BB2 File Offset: 0x00143DB2
+		// Token: 0x060044C3 RID: 17603 RVA: 0x00145C8A File Offset: 0x00143E8A
 		public void SharedBlocksOutOfBoundsMaster(string mapID)
 		{
 			if (!NetworkSystem.Instance.IsMasterClient)
@@ -1565,7 +1565,7 @@ namespace GorillaTagScripts
 			base.photonView.RPC("SharedTableEventRPC", RpcTarget.All, new object[] { 2, mapID });
 		}
 
-		// Token: 0x060044C3 RID: 17603 RVA: 0x00145BF0 File Offset: 0x00143DF0
+		// Token: 0x060044C4 RID: 17604 RVA: 0x00145CC8 File Offset: 0x00143EC8
 		[PunRPC]
 		private void SharedTableEventRPC(byte eventType, string mapID, PhotonMessageInfo info)
 		{
@@ -1608,7 +1608,7 @@ namespace GorillaTagScripts
 			}
 		}
 
-		// Token: 0x060044C4 RID: 17604 RVA: 0x00145C8C File Offset: 0x00143E8C
+		// Token: 0x060044C5 RID: 17605 RVA: 0x00145D64 File Offset: 0x00143F64
 		private void OnSharedBlocksLoadStarted(string mapID)
 		{
 			this.localClientTableInit.Reset();
@@ -1623,7 +1623,7 @@ namespace GorillaTagScripts
 			}
 		}
 
-		// Token: 0x060044C5 RID: 17605 RVA: 0x00145CD4 File Offset: 0x00143ED4
+		// Token: 0x060044C6 RID: 17606 RVA: 0x00145DAC File Offset: 0x00143FAC
 		private void OnLoadSharedBlocksFailed(string mapID)
 		{
 			BuilderTable table = this.GetTable();
@@ -1668,7 +1668,7 @@ namespace GorillaTagScripts
 			}
 		}
 
-		// Token: 0x060044C6 RID: 17606 RVA: 0x00145DDC File Offset: 0x00143FDC
+		// Token: 0x060044C7 RID: 17607 RVA: 0x00145EB4 File Offset: 0x001440B4
 		private void OnSharedBlocksOutOfBounds(string mapID)
 		{
 			BuilderTable table = this.GetTable();
@@ -1700,58 +1700,58 @@ namespace GorillaTagScripts
 			}
 		}
 
-		// Token: 0x060044C7 RID: 17607 RVA: 0x000023F4 File Offset: 0x000005F4
+		// Token: 0x060044C8 RID: 17608 RVA: 0x000023F4 File Offset: 0x000005F4
 		public void RequestPaintPiece(int pieceID, int materialType)
 		{
 		}
 
-		// Token: 0x04004748 RID: 18248
+		// Token: 0x04004749 RID: 18249
 		public PhotonView tablePhotonView;
 
-		// Token: 0x04004749 RID: 18249
+		// Token: 0x0400474A RID: 18250
 		private const int MAX_TABLE_BYTES = 1048576;
 
-		// Token: 0x0400474A RID: 18250
+		// Token: 0x0400474B RID: 18251
 		private const int MAX_TABLE_CHUNK_BYTES = 1000;
 
-		// Token: 0x0400474B RID: 18251
+		// Token: 0x0400474C RID: 18252
 		private const float DELAY_CLIENT_TABLE_CREATION_TIME = 1f;
 
-		// Token: 0x0400474C RID: 18252
+		// Token: 0x0400474D RID: 18253
 		private const float SEND_INIT_DATA_COOLDOWN = 0f;
 
-		// Token: 0x0400474D RID: 18253
+		// Token: 0x0400474E RID: 18254
 		private const int PIECE_SYNC_BYTES = 128;
 
-		// Token: 0x0400474E RID: 18254
+		// Token: 0x0400474F RID: 18255
 		private BuilderTable currTable;
 
-		// Token: 0x0400474F RID: 18255
+		// Token: 0x04004750 RID: 18256
 		private int nextLocalCommandId;
 
-		// Token: 0x04004750 RID: 18256
+		// Token: 0x04004751 RID: 18257
 		private List<BuilderTableNetworking.PlayerTableInitState> masterClientTableInit;
 
-		// Token: 0x04004751 RID: 18257
+		// Token: 0x04004752 RID: 18258
 		private List<BuilderTableNetworking.PlayerTableInitState> masterClientTableValidators;
 
-		// Token: 0x04004752 RID: 18258
+		// Token: 0x04004753 RID: 18259
 		private BuilderTableNetworking.PlayerTableInitState localClientTableInit;
 
-		// Token: 0x04004753 RID: 18259
+		// Token: 0x04004754 RID: 18260
 		private BuilderTableNetworking.PlayerTableInitState localValidationTable;
 
-		// Token: 0x04004754 RID: 18260
+		// Token: 0x04004755 RID: 18261
 		[HideInInspector]
 		public List<Player> armShelfRequests;
 
-		// Token: 0x04004755 RID: 18261
+		// Token: 0x04004756 RID: 18262
 		private CallLimiter[] callLimiters;
 
 		// Token: 0x02000AF8 RID: 2808
 		public class PlayerTableInitState
 		{
-			// Token: 0x060044C9 RID: 17609 RVA: 0x00145EB2 File Offset: 0x001440B2
+			// Token: 0x060044CA RID: 17610 RVA: 0x00145F8A File Offset: 0x0014418A
 			public PlayerTableInitState()
 			{
 				this.serializedTableState = new byte[1048576];
@@ -1759,7 +1759,7 @@ namespace GorillaTagScripts
 				this.Reset();
 			}
 
-			// Token: 0x060044CA RID: 17610 RVA: 0x00145EE0 File Offset: 0x001440E0
+			// Token: 0x060044CB RID: 17611 RVA: 0x00145FB8 File Offset: 0x001441B8
 			public void Reset()
 			{
 				this.player = null;
@@ -1767,97 +1767,97 @@ namespace GorillaTagScripts
 				this.totalSerializedBytes = 0;
 			}
 
-			// Token: 0x04004756 RID: 18262
+			// Token: 0x04004757 RID: 18263
 			public Player player;
 
-			// Token: 0x04004757 RID: 18263
+			// Token: 0x04004758 RID: 18264
 			public int numSerializedBytes;
 
-			// Token: 0x04004758 RID: 18264
+			// Token: 0x04004759 RID: 18265
 			public int totalSerializedBytes;
 
-			// Token: 0x04004759 RID: 18265
+			// Token: 0x0400475A RID: 18266
 			public byte[] serializedTableState;
 
-			// Token: 0x0400475A RID: 18266
+			// Token: 0x0400475B RID: 18267
 			public byte[] chunk;
 
-			// Token: 0x0400475B RID: 18267
+			// Token: 0x0400475C RID: 18268
 			public float waitForInitTimeRemaining;
 
-			// Token: 0x0400475C RID: 18268
+			// Token: 0x0400475D RID: 18269
 			public float sendNextChunkTimeRemaining;
 		}
 
 		// Token: 0x02000AF9 RID: 2809
 		private enum RPC
 		{
-			// Token: 0x0400475E RID: 18270
-			PlayerEnterMaster,
 			// Token: 0x0400475F RID: 18271
-			TableDataMaster,
+			PlayerEnterMaster,
 			// Token: 0x04004760 RID: 18272
-			TableData,
+			TableDataMaster,
 			// Token: 0x04004761 RID: 18273
-			TableDataStart,
+			TableData,
 			// Token: 0x04004762 RID: 18274
-			PlacePieceMaster,
+			TableDataStart,
 			// Token: 0x04004763 RID: 18275
-			PlacePiece,
+			PlacePieceMaster,
 			// Token: 0x04004764 RID: 18276
-			GrabPieceMaster,
+			PlacePiece,
 			// Token: 0x04004765 RID: 18277
-			GrabPiece,
+			GrabPieceMaster,
 			// Token: 0x04004766 RID: 18278
-			DropPieceMaster,
+			GrabPiece,
 			// Token: 0x04004767 RID: 18279
-			DropPiece,
+			DropPieceMaster,
 			// Token: 0x04004768 RID: 18280
-			RequestFailed,
+			DropPiece,
 			// Token: 0x04004769 RID: 18281
-			PieceDropZone,
+			RequestFailed,
 			// Token: 0x0400476A RID: 18282
-			CreatePiece,
+			PieceDropZone,
 			// Token: 0x0400476B RID: 18283
-			CreatePieceMaster,
+			CreatePiece,
 			// Token: 0x0400476C RID: 18284
-			CreateShelfPieceMaster,
+			CreatePieceMaster,
 			// Token: 0x0400476D RID: 18285
-			RecyclePieceMaster,
+			CreateShelfPieceMaster,
 			// Token: 0x0400476E RID: 18286
-			PlotClaimedMaster,
+			RecyclePieceMaster,
 			// Token: 0x0400476F RID: 18287
-			ArmShelfCreated,
+			PlotClaimedMaster,
 			// Token: 0x04004770 RID: 18288
-			ShelfSelection,
+			ArmShelfCreated,
 			// Token: 0x04004771 RID: 18289
-			ShelfSelectionMaster,
+			ShelfSelection,
 			// Token: 0x04004772 RID: 18290
-			SetFunctionalState,
+			ShelfSelectionMaster,
 			// Token: 0x04004773 RID: 18291
-			SetFunctionalStateMaster,
+			SetFunctionalState,
 			// Token: 0x04004774 RID: 18292
-			RequestTerminalControl,
+			SetFunctionalStateMaster,
 			// Token: 0x04004775 RID: 18293
-			SetTerminalDriver,
+			RequestTerminalControl,
 			// Token: 0x04004776 RID: 18294
-			LoadSharedBlocksMap,
+			SetTerminalDriver,
 			// Token: 0x04004777 RID: 18295
-			SharedTableEvent,
+			LoadSharedBlocksMap,
 			// Token: 0x04004778 RID: 18296
+			SharedTableEvent,
+			// Token: 0x04004779 RID: 18297
 			Count
 		}
 
 		// Token: 0x02000AFA RID: 2810
 		private enum SharedTableEventTypes
 		{
-			// Token: 0x0400477A RID: 18298
-			LOAD_STARTED,
 			// Token: 0x0400477B RID: 18299
-			LOAD_FAILED,
+			LOAD_STARTED,
 			// Token: 0x0400477C RID: 18300
-			OUT_OF_BOUNDS,
+			LOAD_FAILED,
 			// Token: 0x0400477D RID: 18301
+			OUT_OF_BOUNDS,
+			// Token: 0x0400477E RID: 18302
 			COUNT
 		}
 	}

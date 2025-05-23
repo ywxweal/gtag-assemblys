@@ -6,10 +6,10 @@ namespace GorillaNetworking.Store
 	[Serializable]
 	public class SpawnedBundle
 	{
-		// Token: 0x04005258 RID: 21080
+		// Token: 0x04005259 RID: 21081
 		public string spawnLocationPath;
 
-		// Token: 0x04005259 RID: 21081
+		// Token: 0x0400525A RID: 21082
 		public BundleStand bundleStand;
 	}
 }

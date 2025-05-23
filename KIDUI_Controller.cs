@@ -10,7 +10,7 @@ using UnityEngine;
 public class KIDUI_Controller : MonoBehaviour
 {
 	// Token: 0x17000524 RID: 1316
-	// (get) Token: 0x060032F0 RID: 13040 RVA: 0x000FB38A File Offset: 0x000F958A
+	// (get) Token: 0x060032F1 RID: 13041 RVA: 0x000FB462 File Offset: 0x000F9662
 	public static KIDUI_Controller Instance
 	{
 		get
@@ -20,7 +20,7 @@ public class KIDUI_Controller : MonoBehaviour
 	}
 
 	// Token: 0x17000525 RID: 1317
-	// (get) Token: 0x060032F1 RID: 13041 RVA: 0x000FB391 File Offset: 0x000F9591
+	// (get) Token: 0x060032F2 RID: 13042 RVA: 0x000FB469 File Offset: 0x000F9669
 	public static bool IsKIDUIActive
 	{
 		get
@@ -30,7 +30,7 @@ public class KIDUI_Controller : MonoBehaviour
 	}
 
 	// Token: 0x17000526 RID: 1318
-	// (get) Token: 0x060032F2 RID: 13042 RVA: 0x000FB3AC File Offset: 0x000F95AC
+	// (get) Token: 0x060032F3 RID: 13043 RVA: 0x000FB484 File Offset: 0x000F9684
 	private static string EtagOnCloseBlackScreenPlayerPrefRef
 	{
 		get
@@ -43,20 +43,20 @@ public class KIDUI_Controller : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060032F3 RID: 13043 RVA: 0x000FB3DA File Offset: 0x000F95DA
+	// Token: 0x060032F4 RID: 13044 RVA: 0x000FB4B2 File Offset: 0x000F96B2
 	private void Awake()
 	{
 		KIDUI_Controller._instance = this;
 		Debug.LogFormat("[KID::UI::CONTROLLER] Controller Initialised", Array.Empty<object>());
 	}
 
-	// Token: 0x060032F4 RID: 13044 RVA: 0x000FB3F1 File Offset: 0x000F95F1
+	// Token: 0x060032F5 RID: 13045 RVA: 0x000FB4C9 File Offset: 0x000F96C9
 	private void OnDestroy()
 	{
 		KIDManager.onEmailResultReceived = (KIDManager.OnEmailResultReceived)Delegate.Remove(KIDManager.onEmailResultReceived, new KIDManager.OnEmailResultReceived(this.NotifyOfEmailResult));
 	}
 
-	// Token: 0x060032F5 RID: 13045 RVA: 0x000FB414 File Offset: 0x000F9614
+	// Token: 0x060032F6 RID: 13046 RVA: 0x000FB4EC File Offset: 0x000F96EC
 	public async Task StartKIDScreens(CancellationToken cancellationToken)
 	{
 		Debug.LogFormat("[KID::UI::CONTROLLER] Starting k-ID Screens", Array.Empty<object>());
@@ -80,7 +80,7 @@ public class KIDUI_Controller : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060032F6 RID: 13046 RVA: 0x000FB460 File Offset: 0x000F9660
+	// Token: 0x060032F7 RID: 13047 RVA: 0x000FB538 File Offset: 0x000F9738
 	public void CloseKIDScreens()
 	{
 		this.SaveEtagOnCloseScreen();
@@ -92,7 +92,7 @@ public class KIDUI_Controller : MonoBehaviour
 		KIDManager.onEmailResultReceived = (KIDManager.OnEmailResultReceived)Delegate.Remove(KIDManager.onEmailResultReceived, new KIDManager.OnEmailResultReceived(this.NotifyOfEmailResult));
 	}
 
-	// Token: 0x060032F7 RID: 13047 RVA: 0x000FB4C8 File Offset: 0x000F96C8
+	// Token: 0x060032F8 RID: 13048 RVA: 0x000FB5A0 File Offset: 0x000F97A0
 	public void UpdateScreenStatus()
 	{
 		EMainScreenStatus screenStatusFromSession = this.GetScreenStatusFromSession();
@@ -104,7 +104,7 @@ public class KIDUI_Controller : MonoBehaviour
 		mainKIDScreen.UpdateScreenStatus(screenStatusFromSession, true);
 	}
 
-	// Token: 0x060032F8 RID: 13048 RVA: 0x000FB4F0 File Offset: 0x000F96F0
+	// Token: 0x060032F9 RID: 13049 RVA: 0x000FB5C8 File Offset: 0x000F97C8
 	public void NotifyOfEmailResult(bool success)
 	{
 		if (this._confirmScreen == null)
@@ -121,7 +121,7 @@ public class KIDUI_Controller : MonoBehaviour
 		this._confirmScreen.NotifyOfResult(success);
 	}
 
-	// Token: 0x060032F9 RID: 13049 RVA: 0x000FB540 File Offset: 0x000F9740
+	// Token: 0x060032FA RID: 13050 RVA: 0x000FB618 File Offset: 0x000F9818
 	private EMainScreenStatus GetScreenStatusFromSession()
 	{
 		EMainScreenStatus emainScreenStatus;
@@ -165,7 +165,7 @@ public class KIDUI_Controller : MonoBehaviour
 		return emainScreenStatus;
 	}
 
-	// Token: 0x060032FA RID: 13050 RVA: 0x000FB5CC File Offset: 0x000F97CC
+	// Token: 0x060032FB RID: 13051 RVA: 0x000FB6A4 File Offset: 0x000F98A4
 	private async Task<bool> ShouldShowKIDScreen(CancellationToken cancellationToken)
 	{
 		bool flag;
@@ -242,7 +242,7 @@ public class KIDUI_Controller : MonoBehaviour
 		return flag;
 	}
 
-	// Token: 0x060032FB RID: 13051 RVA: 0x000FB617 File Offset: 0x000F9817
+	// Token: 0x060032FC RID: 13052 RVA: 0x000FB6EF File Offset: 0x000F98EF
 	private bool ShouldShowScreenOnPermissionChange()
 	{
 		this._lastEtagOnClose = this.GetLastBlackScreenEtag();
@@ -251,13 +251,13 @@ public class KIDUI_Controller : MonoBehaviour
 		return lastEtagOnClose != (((currentSession != null) ? currentSession.Etag : null) ?? string.Empty);
 	}
 
-	// Token: 0x060032FC RID: 13052 RVA: 0x000FB64A File Offset: 0x000F984A
+	// Token: 0x060032FD RID: 13053 RVA: 0x000FB722 File Offset: 0x000F9922
 	private string GetLastBlackScreenEtag()
 	{
 		return PlayerPrefs.GetString(KIDUI_Controller.EtagOnCloseBlackScreenPlayerPrefRef, "");
 	}
 
-	// Token: 0x060032FD RID: 13053 RVA: 0x000FB65B File Offset: 0x000F985B
+	// Token: 0x060032FE RID: 13054 RVA: 0x000FB733 File Offset: 0x000F9933
 	private void SaveEtagOnCloseScreen()
 	{
 		if (KIDManager.CurrentSession == null)
@@ -269,28 +269,28 @@ public class KIDUI_Controller : MonoBehaviour
 		PlayerPrefs.Save();
 	}
 
-	// Token: 0x040039C5 RID: 14789
+	// Token: 0x040039C6 RID: 14790
 	private const string CLOSE_BLACK_SCREEN_ETAG_PLAYER_PREF_PREFIX = "closeBlackScreen-";
 
-	// Token: 0x040039C6 RID: 14790
+	// Token: 0x040039C7 RID: 14791
 	private const string FIRST_TIME_POST_CHANGE_PLAYER_PREF = "hasShownFirstTimePostChange-";
 
-	// Token: 0x040039C7 RID: 14791
-	private static KIDUI_Controller _instance;
-
 	// Token: 0x040039C8 RID: 14792
-	[SerializeField]
-	private KIDUI_MainScreen _mainKIDScreen;
+	private static KIDUI_Controller _instance;
 
 	// Token: 0x040039C9 RID: 14793
 	[SerializeField]
-	private KIDUI_ConfirmScreen _confirmScreen;
+	private KIDUI_MainScreen _mainKIDScreen;
 
 	// Token: 0x040039CA RID: 14794
 	[SerializeField]
-	private List<string> _PermissionsWithToggles = new List<string>();
+	private KIDUI_ConfirmScreen _confirmScreen;
 
 	// Token: 0x040039CB RID: 14795
+	[SerializeField]
+	private List<string> _PermissionsWithToggles = new List<string>();
+
+	// Token: 0x040039CC RID: 14796
 	[SerializeField]
 	private List<EKIDFeatures> _inaccessibleSettings = new List<EKIDFeatures>
 	{
@@ -298,32 +298,32 @@ public class KIDUI_Controller : MonoBehaviour
 		EKIDFeatures.Mods
 	};
 
-	// Token: 0x040039CC RID: 14796
+	// Token: 0x040039CD RID: 14797
 	private KIDUI_Controller.Metrics_ShowReason _showReason;
 
-	// Token: 0x040039CD RID: 14797
+	// Token: 0x040039CE RID: 14798
 	private bool _isKidUIActive;
 
-	// Token: 0x040039CE RID: 14798
+	// Token: 0x040039CF RID: 14799
 	private static string etagOnCloseBlackScreenPlayerPrefStr;
 
-	// Token: 0x040039CF RID: 14799
+	// Token: 0x040039D0 RID: 14800
 	private string _lastEtagOnClose;
 
 	// Token: 0x02000823 RID: 2083
 	public enum Metrics_ShowReason
 	{
-		// Token: 0x040039D1 RID: 14801
-		None,
 		// Token: 0x040039D2 RID: 14802
-		Inaccessible,
+		None,
 		// Token: 0x040039D3 RID: 14803
-		Guardian_Disabled,
+		Inaccessible,
 		// Token: 0x040039D4 RID: 14804
-		Permissions_Changed,
+		Guardian_Disabled,
 		// Token: 0x040039D5 RID: 14805
-		Default_Session,
+		Permissions_Changed,
 		// Token: 0x040039D6 RID: 14806
+		Default_Session,
+		// Token: 0x040039D7 RID: 14807
 		No_Session
 	}
 }

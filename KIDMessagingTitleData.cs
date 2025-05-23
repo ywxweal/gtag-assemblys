@@ -4,6 +4,6 @@
 [Serializable]
 public class KIDMessagingTitleData
 {
-	// Token: 0x040036F0 RID: 14064
+	// Token: 0x040036F1 RID: 14065
 	public string KIDSetupConfirmation;
 }

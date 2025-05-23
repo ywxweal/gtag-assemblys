@@ -6,14 +6,14 @@ namespace GorillaTag.Cosmetics
 	// Token: 0x02000DB0 RID: 3504
 	public class CompassNeedleRotator : MonoBehaviour
 	{
-		// Token: 0x060056CC RID: 22220 RVA: 0x001A73B2 File Offset: 0x001A55B2
+		// Token: 0x060056CD RID: 22221 RVA: 0x001A748A File Offset: 0x001A568A
 		protected void OnEnable()
 		{
 			this.currentVelocity = 0f;
 			base.transform.localRotation = Quaternion.identity;
 		}
 
-		// Token: 0x060056CD RID: 22221 RVA: 0x001A73D0 File Offset: 0x001A55D0
+		// Token: 0x060056CE RID: 22222 RVA: 0x001A74A8 File Offset: 0x001A56A8
 		protected void LateUpdate()
 		{
 			Transform transform = base.transform;
@@ -24,10 +24,10 @@ namespace GorillaTag.Cosmetics
 			transform.Rotate(transform.up, num, Space.World);
 		}
 
-		// Token: 0x04005AC8 RID: 23240
+		// Token: 0x04005AC9 RID: 23241
 		private const float smoothTime = 0.005f;
 
-		// Token: 0x04005AC9 RID: 23241
+		// Token: 0x04005ACA RID: 23242
 		private float currentVelocity;
 	}
 }

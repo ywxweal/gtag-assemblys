@@ -7,8 +7,8 @@ namespace OculusSampleFramework
 	public class TrainTrack : MonoBehaviour
 	{
 		// Token: 0x17000786 RID: 1926
-		// (get) Token: 0x06004BD9 RID: 19417 RVA: 0x00167860 File Offset: 0x00165A60
-		// (set) Token: 0x06004BDA RID: 19418 RVA: 0x00167868 File Offset: 0x00165A68
+		// (get) Token: 0x06004BDA RID: 19418 RVA: 0x00167938 File Offset: 0x00165B38
+		// (set) Token: 0x06004BDB RID: 19419 RVA: 0x00167940 File Offset: 0x00165B40
 		public float TrackLength
 		{
 			get
@@ -21,13 +21,13 @@ namespace OculusSampleFramework
 			}
 		}
 
-		// Token: 0x06004BDB RID: 19419 RVA: 0x00167871 File Offset: 0x00165A71
+		// Token: 0x06004BDC RID: 19420 RVA: 0x00167949 File Offset: 0x00165B49
 		private void Awake()
 		{
 			this.Regenerate();
 		}
 
-		// Token: 0x06004BDC RID: 19420 RVA: 0x0016787C File Offset: 0x00165A7C
+		// Token: 0x06004BDD RID: 19421 RVA: 0x00167954 File Offset: 0x00165B54
 		public TrackSegment GetSegment(float distance)
 		{
 			int childCount = this._segmentParent.childCount;
@@ -43,7 +43,7 @@ namespace OculusSampleFramework
 			return null;
 		}
 
-		// Token: 0x06004BDD RID: 19421 RVA: 0x001678D4 File Offset: 0x00165AD4
+		// Token: 0x06004BDE RID: 19422 RVA: 0x001679AC File Offset: 0x00165BAC
 		public void Regenerate()
 		{
 			this._trackSegments = this._segmentParent.GetComponentsInChildren<TrackSegment>();
@@ -73,7 +73,7 @@ namespace OculusSampleFramework
 			this.SetScale(num);
 		}
 
-		// Token: 0x06004BDE RID: 19422 RVA: 0x001679BC File Offset: 0x00165BBC
+		// Token: 0x06004BDF RID: 19423 RVA: 0x00167A94 File Offset: 0x00165C94
 		private void SetScale(float ratio)
 		{
 			this._trainParent.localScale = new Vector3(ratio, ratio, ratio);
@@ -86,30 +86,30 @@ namespace OculusSampleFramework
 			}
 		}
 
-		// Token: 0x04004E8D RID: 20109
+		// Token: 0x04004E8E RID: 20110
 		[SerializeField]
 		private float _gridSize = 0.5f;
 
-		// Token: 0x04004E8E RID: 20110
+		// Token: 0x04004E8F RID: 20111
 		[SerializeField]
 		private int _subDivCount = 20;
 
-		// Token: 0x04004E8F RID: 20111
+		// Token: 0x04004E90 RID: 20112
 		[SerializeField]
 		private Transform _segmentParent;
 
-		// Token: 0x04004E90 RID: 20112
+		// Token: 0x04004E91 RID: 20113
 		[SerializeField]
 		private Transform _trainParent;
 
-		// Token: 0x04004E91 RID: 20113
+		// Token: 0x04004E92 RID: 20114
 		[SerializeField]
 		private bool _regnerateTrackMeshOnAwake;
 
-		// Token: 0x04004E92 RID: 20114
+		// Token: 0x04004E93 RID: 20115
 		private float _trainLength = -1f;
 
-		// Token: 0x04004E93 RID: 20115
+		// Token: 0x04004E94 RID: 20116
 		private TrackSegment[] _trackSegments;
 	}
 }

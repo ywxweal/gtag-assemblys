@@ -16,7 +16,7 @@ internal class VrrigReliableSerializer : GorillaWrappedSerializer
 	{
 	}
 
-	// Token: 0x06002550 RID: 9552 RVA: 0x000BA478 File Offset: 0x000B8678
+	// Token: 0x06002550 RID: 9552 RVA: 0x000BA498 File Offset: 0x000B8698
 	protected override bool OnSpawnSetupCheck(PhotonMessageInfoWrapped wrappedInfo, out GameObject outTargetObject, out Type outTargetType)
 	{
 		outTargetObject = null;
@@ -40,14 +40,14 @@ internal class VrrigReliableSerializer : GorillaWrappedSerializer
 	{
 	}
 
-	// Token: 0x06002553 RID: 9555 RVA: 0x000B838D File Offset: 0x000B658D
+	// Token: 0x06002553 RID: 9555 RVA: 0x000B83AD File Offset: 0x000B65AD
 	[WeaverGenerated]
 	public override void CopyBackingFieldsToState(bool A_1)
 	{
 		base.CopyBackingFieldsToState(A_1);
 	}
 
-	// Token: 0x06002554 RID: 9556 RVA: 0x000B8399 File Offset: 0x000B6599
+	// Token: 0x06002554 RID: 9556 RVA: 0x000B83B9 File Offset: 0x000B65B9
 	[WeaverGenerated]
 	public override void CopyStateToBackingFields()
 	{

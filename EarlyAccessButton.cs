@@ -12,7 +12,7 @@ public class EarlyAccessButton : GorillaPressableButton
 	{
 	}
 
-	// Token: 0x0600181C RID: 6172 RVA: 0x000755D0 File Offset: 0x000737D0
+	// Token: 0x0600181C RID: 6172 RVA: 0x000755F0 File Offset: 0x000737F0
 	public void Update()
 	{
 		if (NetworkSystem.Instance != null && NetworkSystem.Instance.WrongVersion)
@@ -24,7 +24,7 @@ public class EarlyAccessButton : GorillaPressableButton
 		}
 	}
 
-	// Token: 0x0600181D RID: 6173 RVA: 0x0007562A File Offset: 0x0007382A
+	// Token: 0x0600181D RID: 6173 RVA: 0x0007564A File Offset: 0x0007384A
 	public override void ButtonActivation()
 	{
 		base.ButtonActivation();
@@ -32,7 +32,7 @@ public class EarlyAccessButton : GorillaPressableButton
 		base.StartCoroutine(this.ButtonColorUpdate());
 	}
 
-	// Token: 0x0600181E RID: 6174 RVA: 0x0007564B File Offset: 0x0007384B
+	// Token: 0x0600181E RID: 6174 RVA: 0x0007566B File Offset: 0x0007386B
 	public void AlreadyOwn()
 	{
 		base.enabled = false;
@@ -41,7 +41,7 @@ public class EarlyAccessButton : GorillaPressableButton
 		this.myText.text = "YOU OWN THE BUNDLE ALREADY! THANK YOU!";
 	}
 
-	// Token: 0x0600181F RID: 6175 RVA: 0x00075681 File Offset: 0x00073881
+	// Token: 0x0600181F RID: 6175 RVA: 0x000756A1 File Offset: 0x000738A1
 	private IEnumerator ButtonColorUpdate()
 	{
 		this.buttonRenderer.material = this.pressedMaterial;

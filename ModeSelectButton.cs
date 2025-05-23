@@ -8,8 +8,8 @@ using UnityEngine;
 public class ModeSelectButton : GorillaPressableButton
 {
 	// Token: 0x17000411 RID: 1041
-	// (get) Token: 0x06002A2D RID: 10797 RVA: 0x000D075A File Offset: 0x000CE95A
-	// (set) Token: 0x06002A2E RID: 10798 RVA: 0x000D0762 File Offset: 0x000CE962
+	// (get) Token: 0x06002A2E RID: 10798 RVA: 0x000D07FE File Offset: 0x000CE9FE
+	// (set) Token: 0x06002A2F RID: 10799 RVA: 0x000D0806 File Offset: 0x000CEA06
 	public PartyGameModeWarning WarningScreen
 	{
 		get
@@ -22,14 +22,14 @@ public class ModeSelectButton : GorillaPressableButton
 		}
 	}
 
-	// Token: 0x06002A2F RID: 10799 RVA: 0x000D076B File Offset: 0x000CE96B
+	// Token: 0x06002A30 RID: 10800 RVA: 0x000D080F File Offset: 0x000CEA0F
 	public override void Start()
 	{
 		base.Start();
 		GorillaComputer.instance.currentGameMode.AddCallback(new Action<string>(this.OnGameModeChanged), true);
 	}
 
-	// Token: 0x06002A30 RID: 10800 RVA: 0x000D0791 File Offset: 0x000CE991
+	// Token: 0x06002A31 RID: 10801 RVA: 0x000D0835 File Offset: 0x000CEA35
 	private void OnDestroy()
 	{
 		if (!ApplicationQuittingState.IsQuitting)
@@ -38,7 +38,7 @@ public class ModeSelectButton : GorillaPressableButton
 		}
 	}
 
-	// Token: 0x06002A31 RID: 10801 RVA: 0x000D07B7 File Offset: 0x000CE9B7
+	// Token: 0x06002A32 RID: 10802 RVA: 0x000D085B File Offset: 0x000CEA5B
 	public override void ButtonActivationWithHand(bool isLeftHand)
 	{
 		base.ButtonActivationWithHand(isLeftHand);
@@ -50,19 +50,19 @@ public class ModeSelectButton : GorillaPressableButton
 		GorillaComputer.instance.OnModeSelectButtonPress(this.gameMode, isLeftHand);
 	}
 
-	// Token: 0x06002A32 RID: 10802 RVA: 0x000D07EC File Offset: 0x000CE9EC
+	// Token: 0x06002A33 RID: 10803 RVA: 0x000D0890 File Offset: 0x000CEA90
 	public void OnGameModeChanged(string newGameMode)
 	{
 		this.buttonRenderer.material = ((newGameMode.ToLower() == this.gameMode.ToLower()) ? this.pressedMaterial : this.unpressedMaterial);
 	}
 
-	// Token: 0x06002A33 RID: 10803 RVA: 0x000D081F File Offset: 0x000CEA1F
+	// Token: 0x06002A34 RID: 10804 RVA: 0x000D08C3 File Offset: 0x000CEAC3
 	public void SetInfo(ModeSelectButtonInfoData info)
 	{
 		this.SetInfo(info.Mode, info.ModeTitle, info.NewMode, info.CountdownTo);
 	}
 
-	// Token: 0x06002A34 RID: 10804 RVA: 0x000D0840 File Offset: 0x000CEA40
+	// Token: 0x06002A35 RID: 10805 RVA: 0x000D08E4 File Offset: 0x000CEAE4
 	public void SetInfo(string Mode, string ModeTitle, bool NewMode, CountdownTextDate CountdownTo)
 	{
 		this.gameModeTitle.text = ModeTitle;
@@ -77,30 +77,30 @@ public class ModeSelectButton : GorillaPressableButton
 		this.limitedCountdown.gameObject.SetActive(true);
 	}
 
-	// Token: 0x06002A35 RID: 10805 RVA: 0x000D08A6 File Offset: 0x000CEAA6
+	// Token: 0x06002A36 RID: 10806 RVA: 0x000D094A File Offset: 0x000CEB4A
 	public void HideNewAndLimitedTimeInfo()
 	{
 		this.limitedCountdown.gameObject.SetActive(false);
 		this.newModeSplash.SetActive(false);
 	}
 
-	// Token: 0x04002F31 RID: 12081
+	// Token: 0x04002F33 RID: 12083
 	[SerializeField]
 	public string gameMode;
 
-	// Token: 0x04002F32 RID: 12082
+	// Token: 0x04002F34 RID: 12084
 	[SerializeField]
 	private PartyGameModeWarning warningScreen;
 
-	// Token: 0x04002F33 RID: 12083
+	// Token: 0x04002F35 RID: 12085
 	[SerializeField]
 	private TMP_Text gameModeTitle;
 
-	// Token: 0x04002F34 RID: 12084
+	// Token: 0x04002F36 RID: 12086
 	[SerializeField]
 	private GameObject newModeSplash;
 
-	// Token: 0x04002F35 RID: 12085
+	// Token: 0x04002F37 RID: 12087
 	[SerializeField]
 	private CountdownText limitedCountdown;
 }

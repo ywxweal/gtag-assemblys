@@ -9,7 +9,7 @@ namespace GorillaExtensions
 	// Token: 0x02000CF3 RID: 3315
 	public static class GTStringBuilderExtensions
 	{
-		// Token: 0x0600523C RID: 21052 RVA: 0x00190244 File Offset: 0x0018E444
+		// Token: 0x0600523D RID: 21053 RVA: 0x0019031C File Offset: 0x0018E51C
 		public unsafe static IEnumerable<ReadOnlyMemory<char>> GetSegmentsOfMem(this Utf16ValueStringBuilder sb, int maxCharsPerSegment = 16300)
 		{
 			int i = 0;
@@ -40,21 +40,21 @@ namespace GorillaExtensions
 			return list;
 		}
 
-		// Token: 0x0600523D RID: 21053 RVA: 0x001902D9 File Offset: 0x0018E4D9
+		// Token: 0x0600523E RID: 21054 RVA: 0x001903B1 File Offset: 0x0018E5B1
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		public static void GTAddPath(this Utf16ValueStringBuilder stringBuilderToAddTo, GameObject gameObject)
 		{
 			gameObject.transform.GetPathQ(ref stringBuilderToAddTo);
 		}
 
-		// Token: 0x0600523E RID: 21054 RVA: 0x001902E8 File Offset: 0x0018E4E8
+		// Token: 0x0600523F RID: 21055 RVA: 0x001903C0 File Offset: 0x0018E5C0
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		public static void GTAddPath(this Utf16ValueStringBuilder stringBuilderToAddTo, Transform transform)
 		{
 			transform.GetPathQ(ref stringBuilderToAddTo);
 		}
 
-		// Token: 0x0600523F RID: 21055 RVA: 0x001902F2 File Offset: 0x0018E4F2
+		// Token: 0x06005240 RID: 21056 RVA: 0x001903CA File Offset: 0x0018E5CA
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		public static void Q(this Utf16ValueStringBuilder sb, string value)
 		{
@@ -63,7 +63,7 @@ namespace GorillaExtensions
 			sb.Append('"');
 		}
 
-		// Token: 0x06005240 RID: 21056 RVA: 0x0019030E File Offset: 0x0018E50E
+		// Token: 0x06005241 RID: 21057 RVA: 0x001903E6 File Offset: 0x0018E5E6
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		public static void GTMany(this Utf16ValueStringBuilder sb, string a, string b)
 		{
@@ -71,7 +71,7 @@ namespace GorillaExtensions
 			sb.Append(b);
 		}
 
-		// Token: 0x06005241 RID: 21057 RVA: 0x00190320 File Offset: 0x0018E520
+		// Token: 0x06005242 RID: 21058 RVA: 0x001903F8 File Offset: 0x0018E5F8
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		public static void GTMany(this Utf16ValueStringBuilder sb, string a, string b, string c)
 		{
@@ -80,7 +80,7 @@ namespace GorillaExtensions
 			sb.Append(c);
 		}
 
-		// Token: 0x06005242 RID: 21058 RVA: 0x0019033A File Offset: 0x0018E53A
+		// Token: 0x06005243 RID: 21059 RVA: 0x00190412 File Offset: 0x0018E612
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		public static void GTMany(this Utf16ValueStringBuilder sb, string a, string b, string c, string d)
 		{
@@ -90,7 +90,7 @@ namespace GorillaExtensions
 			sb.Append(d);
 		}
 
-		// Token: 0x06005243 RID: 21059 RVA: 0x0019035D File Offset: 0x0018E55D
+		// Token: 0x06005244 RID: 21060 RVA: 0x00190435 File Offset: 0x0018E635
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		public static void GTMany(this Utf16ValueStringBuilder sb, string a, string b, string c, string d, string e)
 		{
@@ -101,7 +101,7 @@ namespace GorillaExtensions
 			sb.Append(e);
 		}
 
-		// Token: 0x06005244 RID: 21060 RVA: 0x00190389 File Offset: 0x0018E589
+		// Token: 0x06005245 RID: 21061 RVA: 0x00190461 File Offset: 0x0018E661
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		public static void GTMany(this Utf16ValueStringBuilder sb, string a, string b, string c, string d, string e, string f)
 		{
@@ -113,7 +113,7 @@ namespace GorillaExtensions
 			sb.Append(f);
 		}
 
-		// Token: 0x06005245 RID: 21061 RVA: 0x001903BE File Offset: 0x0018E5BE
+		// Token: 0x06005246 RID: 21062 RVA: 0x00190496 File Offset: 0x0018E696
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		public static void GTMany(this Utf16ValueStringBuilder sb, string a, string b, string c, string d, string e, string f, string g)
 		{
@@ -126,7 +126,7 @@ namespace GorillaExtensions
 			sb.Append(g);
 		}
 
-		// Token: 0x06005246 RID: 21062 RVA: 0x001903FC File Offset: 0x0018E5FC
+		// Token: 0x06005247 RID: 21063 RVA: 0x001904D4 File Offset: 0x0018E6D4
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		public static void GTMany(this Utf16ValueStringBuilder sb, string a, string b, string c, string d, string e, string f, string g, string h)
 		{
@@ -140,7 +140,7 @@ namespace GorillaExtensions
 			sb.Append(h);
 		}
 
-		// Token: 0x06005247 RID: 21063 RVA: 0x00190450 File Offset: 0x0018E650
+		// Token: 0x06005248 RID: 21064 RVA: 0x00190528 File Offset: 0x0018E728
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		public static void GTMany(this Utf16ValueStringBuilder sb, string a, string b, string c, string d, string e, string f, string g, string h, string i)
 		{
@@ -155,7 +155,7 @@ namespace GorillaExtensions
 			sb.Append(i);
 		}
 
-		// Token: 0x06005248 RID: 21064 RVA: 0x001904AC File Offset: 0x0018E6AC
+		// Token: 0x06005249 RID: 21065 RVA: 0x00190584 File Offset: 0x0018E784
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		public static void GTMany(this Utf16ValueStringBuilder sb, string a, string b, string c, string d, string e, string f, string g, string h, string i, string j)
 		{

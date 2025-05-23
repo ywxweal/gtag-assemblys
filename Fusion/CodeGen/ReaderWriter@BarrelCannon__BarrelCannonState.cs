@@ -8,7 +8,7 @@ namespace Fusion.CodeGen
 	[PreserveInPlugin]
 	internal struct ReaderWriter@BarrelCannon__BarrelCannonState : IElementReaderWriter<BarrelCannon.BarrelCannonState>
 	{
-		// Token: 0x06005D79 RID: 23929 RVA: 0x001CCECC File Offset: 0x001CB0CC
+		// Token: 0x06005D7A RID: 23930 RVA: 0x001CCFA4 File Offset: 0x001CB1A4
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		[PreserveInPlugin]
 		[WeaverGenerated]
@@ -17,7 +17,7 @@ namespace Fusion.CodeGen
 			return *(BarrelCannon.BarrelCannonState*)(data + index * 4);
 		}
 
-		// Token: 0x06005D7A RID: 23930 RVA: 0x001CCEDC File Offset: 0x001CB0DC
+		// Token: 0x06005D7B RID: 23931 RVA: 0x001CCFB4 File Offset: 0x001CB1B4
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		[PreserveInPlugin]
 		[WeaverGenerated]
@@ -26,7 +26,7 @@ namespace Fusion.CodeGen
 			return ref *(BarrelCannon.BarrelCannonState*)(data + index * 4);
 		}
 
-		// Token: 0x06005D7B RID: 23931 RVA: 0x001CCEE7 File Offset: 0x001CB0E7
+		// Token: 0x06005D7C RID: 23932 RVA: 0x001CCFBF File Offset: 0x001CB1BF
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		[PreserveInPlugin]
 		[WeaverGenerated]
@@ -35,7 +35,7 @@ namespace Fusion.CodeGen
 			*(BarrelCannon.BarrelCannonState*)(data + index * 4) = val;
 		}
 
-		// Token: 0x06005D7C RID: 23932 RVA: 0x00047642 File Offset: 0x00045842
+		// Token: 0x06005D7D RID: 23933 RVA: 0x00047642 File Offset: 0x00045842
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		[PreserveInPlugin]
 		[WeaverGenerated]
@@ -44,7 +44,7 @@ namespace Fusion.CodeGen
 			return 1;
 		}
 
-		// Token: 0x06005D7D RID: 23933 RVA: 0x001CCEF8 File Offset: 0x001CB0F8
+		// Token: 0x06005D7E RID: 23934 RVA: 0x001CCFD0 File Offset: 0x001CB1D0
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		[PreserveInPlugin]
 		[WeaverGenerated]
@@ -53,7 +53,7 @@ namespace Fusion.CodeGen
 			return val.GetHashCode();
 		}
 
-		// Token: 0x06005D7E RID: 23934 RVA: 0x001CCF14 File Offset: 0x001CB114
+		// Token: 0x06005D7F RID: 23935 RVA: 0x001CCFEC File Offset: 0x001CB1EC
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		[WeaverGenerated]
 		public static IElementReaderWriter<BarrelCannon.BarrelCannonState> GetInstance()
@@ -65,7 +65,7 @@ namespace Fusion.CodeGen
 			return ReaderWriter@BarrelCannon__BarrelCannonState.Instance;
 		}
 
-		// Token: 0x0400616D RID: 24941
+		// Token: 0x0400616E RID: 24942
 		[WeaverGenerated]
 		public static IElementReaderWriter<BarrelCannon.BarrelCannonState> Instance;
 	}

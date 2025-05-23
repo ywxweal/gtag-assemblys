@@ -7,11 +7,11 @@ using UnityEngine;
 public struct GTSturdyEnum<TEnum> : ISerializationCallbackReceiver where TEnum : struct, Enum
 {
 	// Token: 0x170004B0 RID: 1200
-	// (get) Token: 0x06002F0A RID: 12042 RVA: 0x000EB555 File Offset: 0x000E9755
-	// (set) Token: 0x06002F0B RID: 12043 RVA: 0x000EB55D File Offset: 0x000E975D
+	// (get) Token: 0x06002F0B RID: 12043 RVA: 0x000EB5F9 File Offset: 0x000E97F9
+	// (set) Token: 0x06002F0C RID: 12044 RVA: 0x000EB601 File Offset: 0x000E9801
 	public TEnum Value { readonly get; private set; }
 
-	// Token: 0x06002F0C RID: 12044 RVA: 0x000EB568 File Offset: 0x000E9768
+	// Token: 0x06002F0D RID: 12045 RVA: 0x000EB60C File Offset: 0x000E980C
 	public static implicit operator GTSturdyEnum<TEnum>(TEnum value)
 	{
 		return new GTSturdyEnum<TEnum>
@@ -20,13 +20,13 @@ public struct GTSturdyEnum<TEnum> : ISerializationCallbackReceiver where TEnum :
 		};
 	}
 
-	// Token: 0x06002F0D RID: 12045 RVA: 0x000EB586 File Offset: 0x000E9786
+	// Token: 0x06002F0E RID: 12046 RVA: 0x000EB62A File Offset: 0x000E982A
 	public static implicit operator TEnum(GTSturdyEnum<TEnum> sturdyEnum)
 	{
 		return sturdyEnum.Value;
 	}
 
-	// Token: 0x06002F0E RID: 12046 RVA: 0x000EB590 File Offset: 0x000E9790
+	// Token: 0x06002F0F RID: 12047 RVA: 0x000EB634 File Offset: 0x000E9834
 	public void OnBeforeSerialize()
 	{
 		EnumData<TEnum> shared = EnumData<TEnum>.Shared;
@@ -72,7 +72,7 @@ public struct GTSturdyEnum<TEnum> : ISerializationCallbackReceiver where TEnum :
 		this.m_stringValuePairs = list.ToArray();
 	}
 
-	// Token: 0x06002F0F RID: 12047 RVA: 0x000EB6D8 File Offset: 0x000E98D8
+	// Token: 0x06002F10 RID: 12048 RVA: 0x000EB77C File Offset: 0x000E997C
 	public void OnAfterDeserialize()
 	{
 		EnumData<TEnum> shared = EnumData<TEnum>.Shared;
@@ -119,7 +119,7 @@ public struct GTSturdyEnum<TEnum> : ISerializationCallbackReceiver where TEnum :
 		}
 	}
 
-	// Token: 0x0400359A RID: 13722
+	// Token: 0x0400359C RID: 13724
 	[SerializeField]
 	private GTSturdyEnum<TEnum>.EnumPair[] m_stringValuePairs;
 
@@ -127,10 +127,10 @@ public struct GTSturdyEnum<TEnum> : ISerializationCallbackReceiver where TEnum :
 	[Serializable]
 	private struct EnumPair
 	{
-		// Token: 0x0400359B RID: 13723
+		// Token: 0x0400359D RID: 13725
 		public string Name;
 
-		// Token: 0x0400359C RID: 13724
+		// Token: 0x0400359E RID: 13726
 		public TEnum FallbackValue;
 	}
 }

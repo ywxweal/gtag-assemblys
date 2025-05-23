@@ -6,7 +6,7 @@ using UnityEngine;
 // Token: 0x020005FD RID: 1533
 public class GorillaDayNight : MonoBehaviour
 {
-	// Token: 0x060025BF RID: 9663 RVA: 0x000BBA60 File Offset: 0x000B9C60
+	// Token: 0x060025BF RID: 9663 RVA: 0x000BBA80 File Offset: 0x000B9C80
 	public void Awake()
 	{
 		if (GorillaDayNight.instance == null)
@@ -26,7 +26,7 @@ public class GorillaDayNight : MonoBehaviour
 		this.workingLightMapData.lightmapDir = this.lightmapDatas[0].dirTextures[0];
 	}
 
-	// Token: 0x060025C0 RID: 9664 RVA: 0x000BBB04 File Offset: 0x000B9D04
+	// Token: 0x060025C0 RID: 9664 RVA: 0x000BBB24 File Offset: 0x000B9D24
 	public void Update()
 	{
 		if (this.test)
@@ -36,7 +36,7 @@ public class GorillaDayNight : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060025C1 RID: 9665 RVA: 0x000BBB34 File Offset: 0x000B9D34
+	// Token: 0x060025C1 RID: 9665 RVA: 0x000BBB54 File Offset: 0x000B9D54
 	public void DoWork()
 	{
 		this.k = 0;
@@ -70,7 +70,7 @@ public class GorillaDayNight : MonoBehaviour
 		this.done = true;
 	}
 
-	// Token: 0x060025C2 RID: 9666 RVA: 0x000BBD40 File Offset: 0x000B9F40
+	// Token: 0x060025C2 RID: 9666 RVA: 0x000BBD60 File Offset: 0x000B9F60
 	public void DoLightsStep()
 	{
 		this.fromPixels = this.lightmapDatas[this.firstData].lights[this.k];
@@ -85,7 +85,7 @@ public class GorillaDayNight : MonoBehaviour
 		this.finishedStep = true;
 	}
 
-	// Token: 0x060025C3 RID: 9667 RVA: 0x000BBE04 File Offset: 0x000BA004
+	// Token: 0x060025C3 RID: 9667 RVA: 0x000BBE24 File Offset: 0x000BA024
 	public void DoDirsStep()
 	{
 		this.fromPixels = this.lightmapDatas[this.firstData].dirs[this.k];
@@ -100,7 +100,7 @@ public class GorillaDayNight : MonoBehaviour
 		this.finishedStep = true;
 	}
 
-	// Token: 0x060025C4 RID: 9668 RVA: 0x000BBEC7 File Offset: 0x000BA0C7
+	// Token: 0x060025C4 RID: 9668 RVA: 0x000BBEE7 File Offset: 0x000BA0E7
 	private IEnumerator LightMapSet(int setFirstData, int setSecondData, float setLerp)
 	{
 		this.working = true;

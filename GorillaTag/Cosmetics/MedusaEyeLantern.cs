@@ -9,7 +9,7 @@ namespace GorillaTag.Cosmetics
 	// Token: 0x02000DC4 RID: 3524
 	public class MedusaEyeLantern : MonoBehaviour
 	{
-		// Token: 0x0600575B RID: 22363 RVA: 0x001ACE00 File Offset: 0x001AB000
+		// Token: 0x0600575C RID: 22364 RVA: 0x001ACED8 File Offset: 0x001AB0D8
 		private void Awake()
 		{
 			foreach (MedusaEyeLantern.EyeState eyeState in this.allStates)
@@ -18,13 +18,13 @@ namespace GorillaTag.Cosmetics
 			}
 		}
 
-		// Token: 0x0600575C RID: 22364 RVA: 0x001ACE38 File Offset: 0x001AB038
+		// Token: 0x0600575D RID: 22365 RVA: 0x001ACF10 File Offset: 0x001AB110
 		private void OnDestroy()
 		{
 			this.allStatesDict.Clear();
 		}
 
-		// Token: 0x0600575D RID: 22365 RVA: 0x001ACE45 File Offset: 0x001AB045
+		// Token: 0x0600575E RID: 22366 RVA: 0x001ACF1D File Offset: 0x001AB11D
 		private void Start()
 		{
 			if (this.rotatingObjectTransform == null)
@@ -35,7 +35,7 @@ namespace GorillaTag.Cosmetics
 			this.SwitchState(MedusaEyeLantern.State.DORMANT);
 		}
 
-		// Token: 0x0600575E RID: 22366 RVA: 0x001ACE7C File Offset: 0x001AB07C
+		// Token: 0x0600575F RID: 22367 RVA: 0x001ACF54 File Offset: 0x001AB154
 		private void Update()
 		{
 			if (!this.transferableParent.InHand() && this.currentState != MedusaEyeLantern.State.DORMANT)
@@ -72,14 +72,14 @@ namespace GorillaTag.Cosmetics
 			}
 		}
 
-		// Token: 0x0600575F RID: 22367 RVA: 0x001ACFDA File Offset: 0x001AB1DA
+		// Token: 0x06005760 RID: 22368 RVA: 0x001AD0B2 File Offset: 0x001AB2B2
 		public void HandleOnNoOneInRange()
 		{
 			this.SwitchState(MedusaEyeLantern.State.DORMANT);
 			this.rotatingObjectTransform.localRotation = this.initialRotation;
 		}
 
-		// Token: 0x06005760 RID: 22368 RVA: 0x001ACFF4 File Offset: 0x001AB1F4
+		// Token: 0x06005761 RID: 22369 RVA: 0x001AD0CC File Offset: 0x001AB2CC
 		public void HandleOnNewPlayerDetected(VRRig target, float distance)
 		{
 			this.targetRig = target;
@@ -89,7 +89,7 @@ namespace GorillaTag.Cosmetics
 			}
 		}
 
-		// Token: 0x06005761 RID: 22369 RVA: 0x001AD00C File Offset: 0x001AB20C
+		// Token: 0x06005762 RID: 22370 RVA: 0x001AD0E4 File Offset: 0x001AB2E4
 		private void Sloshing()
 		{
 			Vector3 averageVelocity = this.velocityTracker.GetAverageVelocity(true, 0.15f, false);
@@ -100,7 +100,7 @@ namespace GorillaTag.Cosmetics
 			}
 		}
 
-		// Token: 0x06005762 RID: 22370 RVA: 0x001AD060 File Offset: 0x001AB260
+		// Token: 0x06005763 RID: 22371 RVA: 0x001AD138 File Offset: 0x001AB338
 		private void FaceTarget()
 		{
 			if (this.targetRig == null || this.rotatingObjectTransform == null)
@@ -125,7 +125,7 @@ namespace GorillaTag.Cosmetics
 			}
 		}
 
-		// Token: 0x06005763 RID: 22371 RVA: 0x001AD1BC File Offset: 0x001AB3BC
+		// Token: 0x06005764 RID: 22372 RVA: 0x001AD294 File Offset: 0x001AB494
 		private bool IsTargetLookingAtEye()
 		{
 			if (this.targetRig == null || this.rotatingObjectTransform == null)
@@ -140,7 +140,7 @@ namespace GorillaTag.Cosmetics
 			return num < this.lookAtEyeAngleThreshold;
 		}
 
-		// Token: 0x06005764 RID: 22372 RVA: 0x001AD2A4 File Offset: 0x001AB4A4
+		// Token: 0x06005765 RID: 22373 RVA: 0x001AD37C File Offset: 0x001AB57C
 		private void UpdateState()
 		{
 			switch (this.currentState)
@@ -195,7 +195,7 @@ namespace GorillaTag.Cosmetics
 			}
 		}
 
-		// Token: 0x06005765 RID: 22373 RVA: 0x001AD3D0 File Offset: 0x001AB5D0
+		// Token: 0x06005766 RID: 22374 RVA: 0x001AD4A8 File Offset: 0x001AB6A8
 		private void SwitchState(MedusaEyeLantern.State newState)
 		{
 			this.lastState = this.currentState;
@@ -212,7 +212,7 @@ namespace GorillaTag.Cosmetics
 			}
 		}
 
-		// Token: 0x06005766 RID: 22374 RVA: 0x001AD440 File Offset: 0x001AB640
+		// Token: 0x06005767 RID: 22375 RVA: 0x001AD518 File Offset: 0x001AB718
 		private void PlayStateEffect(MedusaEyeLantern.EyeState state)
 		{
 			if (state == null)
@@ -235,7 +235,7 @@ namespace GorillaTag.Cosmetics
 			}
 		}
 
-		// Token: 0x06005767 RID: 22375 RVA: 0x001AD4D8 File Offset: 0x001AB6D8
+		// Token: 0x06005768 RID: 22376 RVA: 0x001AD5B0 File Offset: 0x001AB7B0
 		private void StopStateEffect(MedusaEyeLantern.EyeState state)
 		{
 			if (state == null)
@@ -248,143 +248,143 @@ namespace GorillaTag.Cosmetics
 			}
 		}
 
-		// Token: 0x06005768 RID: 22376 RVA: 0x001AD4F7 File Offset: 0x001AB6F7
+		// Token: 0x06005769 RID: 22377 RVA: 0x001AD5CF File Offset: 0x001AB7CF
 		private bool EyeIsLockedOn()
 		{
 			return this.currentState == MedusaEyeLantern.State.TRACKING || this.currentState == MedusaEyeLantern.State.WARMUP || this.currentState == MedusaEyeLantern.State.PRIMING;
 		}
 
-		// Token: 0x04005BDF RID: 23519
+		// Token: 0x04005BE0 RID: 23520
 		[SerializeField]
 		private DistanceCheckerCosmetic distanceChecker;
 
-		// Token: 0x04005BE0 RID: 23520
+		// Token: 0x04005BE1 RID: 23521
 		[SerializeField]
 		private TransferrableObject transferableParent;
 
-		// Token: 0x04005BE1 RID: 23521
+		// Token: 0x04005BE2 RID: 23522
 		[SerializeField]
 		private GorillaVelocityTracker velocityTracker;
 
-		// Token: 0x04005BE2 RID: 23522
+		// Token: 0x04005BE3 RID: 23523
 		[SerializeField]
 		private Transform rotatingObjectTransform;
 
-		// Token: 0x04005BE3 RID: 23523
+		// Token: 0x04005BE4 RID: 23524
 		[SerializeField]
 		private AudioSource audioSource;
 
-		// Token: 0x04005BE4 RID: 23524
+		// Token: 0x04005BE5 RID: 23525
 		[SerializeField]
 		private SkinnedMeshRenderer meshRenderer;
 
-		// Token: 0x04005BE5 RID: 23525
+		// Token: 0x04005BE6 RID: 23526
 		[Space]
 		[Header("Rotation Settings")]
 		[SerializeField]
 		private float maxRotationAngle = 50f;
 
-		// Token: 0x04005BE6 RID: 23526
+		// Token: 0x04005BE7 RID: 23527
 		[SerializeField]
 		private float sloshVelocityThreshold = 1f;
 
-		// Token: 0x04005BE7 RID: 23527
+		// Token: 0x04005BE8 RID: 23528
 		[SerializeField]
 		private float rotationSmoothing = 10f;
 
-		// Token: 0x04005BE8 RID: 23528
+		// Token: 0x04005BE9 RID: 23529
 		[SerializeField]
 		private float rotationSpeedMultiplier = 5f;
 
-		// Token: 0x04005BE9 RID: 23529
+		// Token: 0x04005BEA RID: 23530
 		[Space]
 		[Header("Target Tracking Settings")]
 		[SerializeField]
 		private float lookAtEyeAngleThreshold = 90f;
 
-		// Token: 0x04005BEA RID: 23530
+		// Token: 0x04005BEB RID: 23531
 		[SerializeField]
 		private float targetHeadAngleThreshold = 5f;
 
-		// Token: 0x04005BEB RID: 23531
+		// Token: 0x04005BEC RID: 23532
 		[SerializeField]
 		private float lookAtTargetSpeed = 5f;
 
-		// Token: 0x04005BEC RID: 23532
+		// Token: 0x04005BED RID: 23533
 		[SerializeField]
 		private float warmUpProgressTime = 3f;
 
-		// Token: 0x04005BED RID: 23533
+		// Token: 0x04005BEE RID: 23534
 		[SerializeField]
 		private float petrificationCooldown = 5f;
 
-		// Token: 0x04005BEE RID: 23534
+		// Token: 0x04005BEF RID: 23535
 		[SerializeField]
 		private float faceDistanceOffset = 0.2f;
 
-		// Token: 0x04005BEF RID: 23535
+		// Token: 0x04005BF0 RID: 23536
 		[Space]
 		[Header("Eye State Settings")]
 		public MedusaEyeLantern.EyeState[] allStates = new MedusaEyeLantern.EyeState[0];
 
-		// Token: 0x04005BF0 RID: 23536
+		// Token: 0x04005BF1 RID: 23537
 		public UnityEvent<VRRig> OnPetrification;
 
-		// Token: 0x04005BF1 RID: 23537
+		// Token: 0x04005BF2 RID: 23538
 		private Quaternion initialRotation;
 
-		// Token: 0x04005BF2 RID: 23538
+		// Token: 0x04005BF3 RID: 23539
 		private Quaternion targetRotation;
 
-		// Token: 0x04005BF3 RID: 23539
+		// Token: 0x04005BF4 RID: 23540
 		private MedusaEyeLantern.State currentState;
 
-		// Token: 0x04005BF4 RID: 23540
+		// Token: 0x04005BF5 RID: 23541
 		private MedusaEyeLantern.State lastState;
 
-		// Token: 0x04005BF5 RID: 23541
+		// Token: 0x04005BF6 RID: 23542
 		private float warmUpStarted = float.PositiveInfinity;
 
-		// Token: 0x04005BF6 RID: 23542
+		// Token: 0x04005BF7 RID: 23543
 		private float petrificationStarted = float.PositiveInfinity;
 
-		// Token: 0x04005BF7 RID: 23543
+		// Token: 0x04005BF8 RID: 23544
 		private Dictionary<MedusaEyeLantern.State, MedusaEyeLantern.EyeState> allStatesDict = new Dictionary<MedusaEyeLantern.State, MedusaEyeLantern.EyeState>();
 
-		// Token: 0x04005BF8 RID: 23544
+		// Token: 0x04005BF9 RID: 23545
 		private VRRig targetRig;
 
 		// Token: 0x02000DC5 RID: 3525
 		[Serializable]
 		public class EyeState
 		{
-			// Token: 0x04005BF9 RID: 23545
+			// Token: 0x04005BFA RID: 23546
 			public MedusaEyeLantern.State eyeState;
 
-			// Token: 0x04005BFA RID: 23546
+			// Token: 0x04005BFB RID: 23547
 			public ParticleSystem particle;
 
-			// Token: 0x04005BFB RID: 23547
+			// Token: 0x04005BFC RID: 23548
 			public Material material;
 
-			// Token: 0x04005BFC RID: 23548
+			// Token: 0x04005BFD RID: 23549
 			public AudioClip audioClip;
 		}
 
 		// Token: 0x02000DC6 RID: 3526
 		public enum State
 		{
-			// Token: 0x04005BFE RID: 23550
-			SLOSHING,
 			// Token: 0x04005BFF RID: 23551
-			DORMANT,
+			SLOSHING,
 			// Token: 0x04005C00 RID: 23552
-			TRACKING,
+			DORMANT,
 			// Token: 0x04005C01 RID: 23553
-			WARMUP,
+			TRACKING,
 			// Token: 0x04005C02 RID: 23554
-			PRIMING,
+			WARMUP,
 			// Token: 0x04005C03 RID: 23555
+			PRIMING,
+			// Token: 0x04005C04 RID: 23556
 			PETRIFICATION
 		}
 	}

@@ -9,7 +9,7 @@ using System.Runtime.CompilerServices;
 [GeneratedCode("Unity.MonoScriptGenerator.MonoScriptInfoGenerator", null)]
 internal class UnitySourceGeneratedAssemblyMonoScriptTypes_v1
 {
-	// Token: 0x06003E55 RID: 15957 RVA: 0x00127CB8 File Offset: 0x00125EB8
+	// Token: 0x06003E56 RID: 15958 RVA: 0x00127D90 File Offset: 0x00125F90
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	private static UnitySourceGeneratedAssemblyMonoScriptTypes_v1.MonoScriptData Get()
 	{
@@ -2029,19 +2029,19 @@ internal class UnitySourceGeneratedAssemblyMonoScriptTypes_v1
 	// Token: 0x02000A3D RID: 2621
 	private struct MonoScriptData
 	{
-		// Token: 0x040042E1 RID: 17121
+		// Token: 0x040042E2 RID: 17122
 		public byte[] FilePathsData;
 
-		// Token: 0x040042E2 RID: 17122
+		// Token: 0x040042E3 RID: 17123
 		public byte[] TypesData;
 
-		// Token: 0x040042E3 RID: 17123
+		// Token: 0x040042E4 RID: 17124
 		public int TotalTypes;
 
-		// Token: 0x040042E4 RID: 17124
+		// Token: 0x040042E5 RID: 17125
 		public int TotalFiles;
 
-		// Token: 0x040042E5 RID: 17125
+		// Token: 0x040042E6 RID: 17126
 		public bool IsEditorOnly;
 	}
 }

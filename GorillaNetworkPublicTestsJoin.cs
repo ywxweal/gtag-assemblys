@@ -8,12 +8,12 @@ using UnityEngine;
 // Token: 0x020008DF RID: 2271
 public class GorillaNetworkPublicTestsJoin : GorillaTriggerBox
 {
-	// Token: 0x06003738 RID: 14136 RVA: 0x000023F4 File Offset: 0x000005F4
+	// Token: 0x06003739 RID: 14137 RVA: 0x000023F4 File Offset: 0x000005F4
 	public void Awake()
 	{
 	}
 
-	// Token: 0x06003739 RID: 14137 RVA: 0x0010B2B4 File Offset: 0x001094B4
+	// Token: 0x0600373A RID: 14138 RVA: 0x0010B38C File Offset: 0x0010958C
 	public void LateUpdate()
 	{
 		try
@@ -37,7 +37,7 @@ public class GorillaNetworkPublicTestsJoin : GorillaTriggerBox
 		}
 	}
 
-	// Token: 0x0600373A RID: 14138 RVA: 0x0010B3E8 File Offset: 0x001095E8
+	// Token: 0x0600373B RID: 14139 RVA: 0x0010B4C0 File Offset: 0x001096C0
 	private IEnumerator GracePeriod()
 	{
 		this.waiting = true;
@@ -76,45 +76,45 @@ public class GorillaNetworkPublicTestsJoin : GorillaTriggerBox
 		yield break;
 	}
 
-	// Token: 0x04003CCA RID: 15562
+	// Token: 0x04003CCB RID: 15563
 	public GameObject[] makeSureThisIsDisabled;
 
-	// Token: 0x04003CCB RID: 15563
+	// Token: 0x04003CCC RID: 15564
 	public GameObject[] makeSureThisIsEnabled;
 
-	// Token: 0x04003CCC RID: 15564
+	// Token: 0x04003CCD RID: 15565
 	public string gameModeName;
 
-	// Token: 0x04003CCD RID: 15565
+	// Token: 0x04003CCE RID: 15566
 	public PhotonNetworkController photonNetworkController;
 
-	// Token: 0x04003CCE RID: 15566
+	// Token: 0x04003CCF RID: 15567
 	public string componentTypeToAdd;
 
-	// Token: 0x04003CCF RID: 15567
+	// Token: 0x04003CD0 RID: 15568
 	public GameObject componentTarget;
 
-	// Token: 0x04003CD0 RID: 15568
+	// Token: 0x04003CD1 RID: 15569
 	public GorillaLevelScreen[] joinScreens;
 
-	// Token: 0x04003CD1 RID: 15569
+	// Token: 0x04003CD2 RID: 15570
 	public GorillaLevelScreen[] leaveScreens;
 
-	// Token: 0x04003CD2 RID: 15570
+	// Token: 0x04003CD3 RID: 15571
 	private Transform tosPition;
 
-	// Token: 0x04003CD3 RID: 15571
+	// Token: 0x04003CD4 RID: 15572
 	private Transform othsTosPosition;
 
-	// Token: 0x04003CD4 RID: 15572
+	// Token: 0x04003CD5 RID: 15573
 	private PhotonView fotVew;
 
-	// Token: 0x04003CD5 RID: 15573
+	// Token: 0x04003CD6 RID: 15574
 	private bool waiting;
 
-	// Token: 0x04003CD6 RID: 15574
+	// Token: 0x04003CD7 RID: 15575
 	private Vector3 lastPosition;
 
-	// Token: 0x04003CD7 RID: 15575
+	// Token: 0x04003CD8 RID: 15576
 	private VRRig tempRig;
 }

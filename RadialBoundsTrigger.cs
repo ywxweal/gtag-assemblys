@@ -5,13 +5,13 @@ using UnityEngine.Events;
 // Token: 0x020006A3 RID: 1699
 public class RadialBoundsTrigger : MonoBehaviour
 {
-	// Token: 0x06002A80 RID: 10880 RVA: 0x000D1454 File Offset: 0x000CF654
+	// Token: 0x06002A81 RID: 10881 RVA: 0x000D14F8 File Offset: 0x000CF6F8
 	public void TestOverlap()
 	{
 		this.TestOverlap(this._raiseEvents);
 	}
 
-	// Token: 0x06002A81 RID: 10881 RVA: 0x000D1464 File Offset: 0x000CF664
+	// Token: 0x06002A82 RID: 10882 RVA: 0x000D1508 File Offset: 0x000CF708
 	public void TestOverlap(bool raiseEvents)
 	{
 		if (!this.object1 || !this.object2)
@@ -94,13 +94,13 @@ public class RadialBoundsTrigger : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06002A82 RID: 10882 RVA: 0x000D1650 File Offset: 0x000CF850
+	// Token: 0x06002A83 RID: 10883 RVA: 0x000D16F4 File Offset: 0x000CF8F4
 	private void FixedUpdate()
 	{
 		this.TestOverlap();
 	}
 
-	// Token: 0x06002A83 RID: 10883 RVA: 0x000D1658 File Offset: 0x000CF858
+	// Token: 0x06002A84 RID: 10884 RVA: 0x000D16FC File Offset: 0x000CF8FC
 	private void OnDisable()
 	{
 		if (this._raiseEvents && this.object1 && this.object2 && this._overlapping)
@@ -121,37 +121,37 @@ public class RadialBoundsTrigger : MonoBehaviour
 		this._overlapping = false;
 	}
 
-	// Token: 0x04002F65 RID: 12133
+	// Token: 0x04002F67 RID: 12135
 	[SerializeField]
 	private Id32 _triggerID;
 
-	// Token: 0x04002F66 RID: 12134
+	// Token: 0x04002F68 RID: 12136
 	[Space]
 	public RadialBounds object1 = new RadialBounds();
 
-	// Token: 0x04002F67 RID: 12135
+	// Token: 0x04002F69 RID: 12137
 	[Space]
 	public RadialBounds object2 = new RadialBounds();
 
-	// Token: 0x04002F68 RID: 12136
+	// Token: 0x04002F6A RID: 12138
 	[Space]
 	public float hysteresis = 0.5f;
 
-	// Token: 0x04002F69 RID: 12137
+	// Token: 0x04002F6B RID: 12139
 	[SerializeField]
 	private bool _raiseEvents = true;
 
-	// Token: 0x04002F6A RID: 12138
+	// Token: 0x04002F6C RID: 12140
 	[Space]
 	private bool _overlapping;
 
-	// Token: 0x04002F6B RID: 12139
+	// Token: 0x04002F6D RID: 12141
 	private float _timeSpentInOverlap;
 
-	// Token: 0x04002F6C RID: 12140
+	// Token: 0x04002F6E RID: 12142
 	[Space]
 	private float _timeOverlapStarted;
 
-	// Token: 0x04002F6D RID: 12141
+	// Token: 0x04002F6F RID: 12143
 	private float _timeOverlapStopped;
 }

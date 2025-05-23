@@ -8,7 +8,7 @@ using UnityEngine;
 public class CustomMapTelemetry : MonoBehaviour
 {
 	// Token: 0x17000478 RID: 1144
-	// (get) Token: 0x06002CFF RID: 11519 RVA: 0x000DE7C7 File Offset: 0x000DC9C7
+	// (get) Token: 0x06002D00 RID: 11520 RVA: 0x000DE86B File Offset: 0x000DCA6B
 	public static bool IsActive
 	{
 		get
@@ -17,7 +17,7 @@ public class CustomMapTelemetry : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06002D00 RID: 11520 RVA: 0x000DE7D7 File Offset: 0x000DC9D7
+	// Token: 0x06002D01 RID: 11521 RVA: 0x000DE87B File Offset: 0x000DCA7B
 	private void Awake()
 	{
 		if (CustomMapTelemetry.instance == null)
@@ -31,21 +31,21 @@ public class CustomMapTelemetry : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06002D01 RID: 11521 RVA: 0x000DE80B File Offset: 0x000DCA0B
+	// Token: 0x06002D02 RID: 11522 RVA: 0x000DE8AF File Offset: 0x000DCAAF
 	private static void OnPlayerJoinedRoom(NetPlayer obj)
 	{
 		CustomMapTelemetry.runningPlayerCount++;
 		CustomMapTelemetry.maxPlayersInMap = Math.Max(CustomMapTelemetry.runningPlayerCount, CustomMapTelemetry.maxPlayersInMap);
 	}
 
-	// Token: 0x06002D02 RID: 11522 RVA: 0x000DE82D File Offset: 0x000DCA2D
+	// Token: 0x06002D03 RID: 11523 RVA: 0x000DE8D1 File Offset: 0x000DCAD1
 	private static void OnPlayerLeftRoom(NetPlayer obj)
 	{
 		CustomMapTelemetry.runningPlayerCount--;
 		CustomMapTelemetry.minPlayersInMap = Math.Min(CustomMapTelemetry.runningPlayerCount, CustomMapTelemetry.minPlayersInMap);
 	}
 
-	// Token: 0x06002D03 RID: 11523 RVA: 0x000DE850 File Offset: 0x000DCA50
+	// Token: 0x06002D04 RID: 11524 RVA: 0x000DE8F4 File Offset: 0x000DCAF4
 	public static void StartMapTracking()
 	{
 		if (CustomMapTelemetry.metricsCaptureStarted || CustomMapTelemetry.perfCaptureStarted)
@@ -76,7 +76,7 @@ public class CustomMapTelemetry : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06002D04 RID: 11524 RVA: 0x000DE8D4 File Offset: 0x000DCAD4
+	// Token: 0x06002D05 RID: 11525 RVA: 0x000DE978 File Offset: 0x000DCB78
 	public static void EndMapTracking()
 	{
 		CustomMapTelemetry.EndMetricsCapture();
@@ -87,7 +87,7 @@ public class CustomMapTelemetry : MonoBehaviour
 		CustomMapTelemetry.mapModId = 0L;
 	}
 
-	// Token: 0x06002D05 RID: 11525 RVA: 0x000DE908 File Offset: 0x000DCB08
+	// Token: 0x06002D06 RID: 11526 RVA: 0x000DE9AC File Offset: 0x000DCBAC
 	private static void StartMetricsCapture()
 	{
 		if (CustomMapTelemetry.metricsCaptureStarted)
@@ -104,7 +104,7 @@ public class CustomMapTelemetry : MonoBehaviour
 		CustomMapTelemetry.maxPlayersInMap = CustomMapTelemetry.runningPlayerCount;
 	}
 
-	// Token: 0x06002D06 RID: 11526 RVA: 0x000DE9A0 File Offset: 0x000DCBA0
+	// Token: 0x06002D07 RID: 11527 RVA: 0x000DEA44 File Offset: 0x000DCC44
 	private static void EndMetricsCapture()
 	{
 		if (!CustomMapTelemetry.metricsCaptureStarted)
@@ -128,7 +128,7 @@ public class CustomMapTelemetry : MonoBehaviour
 		GorillaTelemetry.PostCustomMapTracking(CustomMapTelemetry.mapName, CustomMapTelemetry.mapModId, CustomMapTelemetry.mapCreatorUsername, CustomMapTelemetry.minPlayersInMap, CustomMapTelemetry.maxPlayersInMap, num, CustomMapTelemetry.inPrivateRoom);
 	}
 
-	// Token: 0x06002D07 RID: 11527 RVA: 0x000DEA64 File Offset: 0x000DCC64
+	// Token: 0x06002D08 RID: 11528 RVA: 0x000DEB08 File Offset: 0x000DCD08
 	private static void StartPerfCapture()
 	{
 		if (CustomMapTelemetry.perfCaptureStarted)
@@ -150,7 +150,7 @@ public class CustomMapTelemetry : MonoBehaviour
 		CustomMapTelemetry.instance.perfCaptureCoroutine = CustomMapTelemetry.instance.StartCoroutine(CustomMapTelemetry.instance.CaptureMapPerformance());
 	}
 
-	// Token: 0x06002D08 RID: 11528 RVA: 0x000DEAFC File Offset: 0x000DCCFC
+	// Token: 0x06002D09 RID: 11529 RVA: 0x000DEBA0 File Offset: 0x000DCDA0
 	private static void EndPerfCapture()
 	{
 		if (!CustomMapTelemetry.perfCaptureStarted)
@@ -184,7 +184,7 @@ public class CustomMapTelemetry : MonoBehaviour
 		GorillaTelemetry.PostCustomMapPerformance(CustomMapTelemetry.mapName, CustomMapTelemetry.mapModId, CustomMapTelemetry.LowestFPS, CustomMapTelemetry.LowestFPSDrawCalls, CustomMapTelemetry.LowestFPSPlayerCount, CustomMapTelemetry.AverageFPS, CustomMapTelemetry.AverageDrawCalls, CustomMapTelemetry.AveragePlayerCount, CustomMapTelemetry.HighestFPS, CustomMapTelemetry.HighestFPSDrawCalls, CustomMapTelemetry.HighestFPSPlayerCount, num);
 	}
 
-	// Token: 0x06002D09 RID: 11529 RVA: 0x000DEBF7 File Offset: 0x000DCDF7
+	// Token: 0x06002D0A RID: 11530 RVA: 0x000DEC9B File Offset: 0x000DCE9B
 	private IEnumerator CaptureMapPerformance()
 	{
 		for (;;)
@@ -213,7 +213,7 @@ public class CustomMapTelemetry : MonoBehaviour
 		yield break;
 	}
 
-	// Token: 0x06002D0A RID: 11530 RVA: 0x000DEBFF File Offset: 0x000DCDFF
+	// Token: 0x06002D0B RID: 11531 RVA: 0x000DECA3 File Offset: 0x000DCEA3
 	private void OnDestroy()
 	{
 		if (this.perfCaptureCoroutine != null)
@@ -222,85 +222,85 @@ public class CustomMapTelemetry : MonoBehaviour
 		}
 	}
 
-	// Token: 0x0400333F RID: 13119
+	// Token: 0x04003341 RID: 13121
 	[OnEnterPlay_SetNull]
 	private static volatile CustomMapTelemetry instance;
 
-	// Token: 0x04003340 RID: 13120
+	// Token: 0x04003342 RID: 13122
 	private static string mapName;
 
-	// Token: 0x04003341 RID: 13121
+	// Token: 0x04003343 RID: 13123
 	private static long mapModId;
 
-	// Token: 0x04003342 RID: 13122
+	// Token: 0x04003344 RID: 13124
 	private static string mapCreatorUsername;
 
-	// Token: 0x04003343 RID: 13123
+	// Token: 0x04003345 RID: 13125
 	private static bool metricsCaptureStarted;
 
-	// Token: 0x04003344 RID: 13124
+	// Token: 0x04003346 RID: 13126
 	private static float mapEnterTime;
 
-	// Token: 0x04003345 RID: 13125
+	// Token: 0x04003347 RID: 13127
 	private static int runningPlayerCount;
 
-	// Token: 0x04003346 RID: 13126
+	// Token: 0x04003348 RID: 13128
 	private static int minPlayersInMap;
 
-	// Token: 0x04003347 RID: 13127
+	// Token: 0x04003349 RID: 13129
 	private static int maxPlayersInMap;
 
-	// Token: 0x04003348 RID: 13128
+	// Token: 0x0400334A RID: 13130
 	private static bool inPrivateRoom;
 
-	// Token: 0x04003349 RID: 13129
+	// Token: 0x0400334B RID: 13131
 	private const int minimumPlaytimeForTracking = 30;
 
-	// Token: 0x0400334A RID: 13130
+	// Token: 0x0400334C RID: 13132
 	private static int LowestFPS = int.MaxValue;
 
-	// Token: 0x0400334B RID: 13131
+	// Token: 0x0400334D RID: 13133
 	private static int LowestFPSDrawCalls;
 
-	// Token: 0x0400334C RID: 13132
+	// Token: 0x0400334E RID: 13134
 	private static int LowestFPSPlayerCount;
 
-	// Token: 0x0400334D RID: 13133
+	// Token: 0x0400334F RID: 13135
 	private static int AverageFPS;
 
-	// Token: 0x0400334E RID: 13134
+	// Token: 0x04003350 RID: 13136
 	private static int AverageDrawCalls;
 
-	// Token: 0x0400334F RID: 13135
+	// Token: 0x04003351 RID: 13137
 	private static int AveragePlayerCount;
 
-	// Token: 0x04003350 RID: 13136
+	// Token: 0x04003352 RID: 13138
 	private static int HighestFPS = int.MinValue;
 
-	// Token: 0x04003351 RID: 13137
+	// Token: 0x04003353 RID: 13139
 	private static int HighestFPSDrawCalls;
 
-	// Token: 0x04003352 RID: 13138
+	// Token: 0x04003354 RID: 13140
 	private static int HighestFPSPlayerCount;
 
-	// Token: 0x04003353 RID: 13139
+	// Token: 0x04003355 RID: 13141
 	private static int totalFPS;
 
-	// Token: 0x04003354 RID: 13140
+	// Token: 0x04003356 RID: 13142
 	private static int totalDrawCalls;
 
-	// Token: 0x04003355 RID: 13141
+	// Token: 0x04003357 RID: 13143
 	private static int totalPlayerCount;
 
-	// Token: 0x04003356 RID: 13142
+	// Token: 0x04003358 RID: 13144
 	private static int frameCounter;
 
-	// Token: 0x04003357 RID: 13143
+	// Token: 0x04003359 RID: 13145
 	private Coroutine perfCaptureCoroutine;
 
-	// Token: 0x04003358 RID: 13144
+	// Token: 0x0400335A RID: 13146
 	private static ProfilerRecorder drawCallsRecorder;
 
-	// Token: 0x04003359 RID: 13145
+	// Token: 0x0400335B RID: 13147
 	private static bool perfCaptureStarted;
 }

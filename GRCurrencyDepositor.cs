@@ -5,7 +5,7 @@ using UnityEngine;
 // Token: 0x0200059D RID: 1437
 public class GRCurrencyDepositor : MonoBehaviour
 {
-	// Token: 0x06002318 RID: 8984 RVA: 0x000AF8C0 File Offset: 0x000ADAC0
+	// Token: 0x06002318 RID: 8984 RVA: 0x000AF8E0 File Offset: 0x000ADAE0
 	private void OnTriggerEnter(Collider other)
 	{
 		if (other.attachedRigidbody != null)

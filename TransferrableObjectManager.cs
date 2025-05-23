@@ -6,7 +6,7 @@ using UnityEngine;
 [DefaultExecutionOrder(1549)]
 public class TransferrableObjectManager : MonoBehaviour
 {
-	// Token: 0x06001A64 RID: 6756 RVA: 0x00081BA6 File Offset: 0x0007FDA6
+	// Token: 0x06001A64 RID: 6756 RVA: 0x00081BC6 File Offset: 0x0007FDC6
 	protected void Awake()
 	{
 		if (TransferrableObjectManager.hasInstance && TransferrableObjectManager.instance != this)
@@ -17,7 +17,7 @@ public class TransferrableObjectManager : MonoBehaviour
 		TransferrableObjectManager.SetInstance(this);
 	}
 
-	// Token: 0x06001A65 RID: 6757 RVA: 0x00081BC9 File Offset: 0x0007FDC9
+	// Token: 0x06001A65 RID: 6757 RVA: 0x00081BE9 File Offset: 0x0007FDE9
 	protected void OnDestroy()
 	{
 		if (TransferrableObjectManager.instance == this)
@@ -27,7 +27,7 @@ public class TransferrableObjectManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001A66 RID: 6758 RVA: 0x00081BE4 File Offset: 0x0007FDE4
+	// Token: 0x06001A66 RID: 6758 RVA: 0x00081C04 File Offset: 0x0007FE04
 	protected void LateUpdate()
 	{
 		for (int i = 0; i < TransferrableObjectManager.transObs.Count; i++)
@@ -36,13 +36,13 @@ public class TransferrableObjectManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001A67 RID: 6759 RVA: 0x00081C16 File Offset: 0x0007FE16
+	// Token: 0x06001A67 RID: 6759 RVA: 0x00081C36 File Offset: 0x0007FE36
 	public static void CreateManager()
 	{
 		TransferrableObjectManager.SetInstance(new GameObject("TransferrableObjectManager").AddComponent<TransferrableObjectManager>());
 	}
 
-	// Token: 0x06001A68 RID: 6760 RVA: 0x00081C2C File Offset: 0x0007FE2C
+	// Token: 0x06001A68 RID: 6760 RVA: 0x00081C4C File Offset: 0x0007FE4C
 	private static void SetInstance(TransferrableObjectManager manager)
 	{
 		TransferrableObjectManager.instance = manager;
@@ -53,7 +53,7 @@ public class TransferrableObjectManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001A69 RID: 6761 RVA: 0x00081C47 File Offset: 0x0007FE47
+	// Token: 0x06001A69 RID: 6761 RVA: 0x00081C67 File Offset: 0x0007FE67
 	public static void Register(TransferrableObject transOb)
 	{
 		if (!TransferrableObjectManager.hasInstance)
@@ -66,7 +66,7 @@ public class TransferrableObjectManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001A6A RID: 6762 RVA: 0x00081C6D File Offset: 0x0007FE6D
+	// Token: 0x06001A6A RID: 6762 RVA: 0x00081C8D File Offset: 0x0007FE8D
 	public static void Unregister(TransferrableObject transOb)
 	{
 		if (!TransferrableObjectManager.hasInstance)

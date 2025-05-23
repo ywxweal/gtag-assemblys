@@ -7,7 +7,7 @@ namespace GorillaTag.Sports
 	// Token: 0x02000D45 RID: 3397
 	public class SportGoalTrigger : MonoBehaviour
 	{
-		// Token: 0x06005508 RID: 21768 RVA: 0x0019E057 File Offset: 0x0019C257
+		// Token: 0x06005509 RID: 21769 RVA: 0x0019E12F File Offset: 0x0019C32F
 		public void BallExitedGoalTrigger(SportBall ball)
 		{
 			if (this.ballsPendingTriggerExit.Contains(ball))
@@ -16,7 +16,7 @@ namespace GorillaTag.Sports
 			}
 		}
 
-		// Token: 0x06005509 RID: 21769 RVA: 0x0019E074 File Offset: 0x0019C274
+		// Token: 0x0600550A RID: 21770 RVA: 0x0019E14C File Offset: 0x0019C34C
 		private void PruneBallsPendingTriggerExitByDistance()
 		{
 			foreach (SportBall sportBall in this.ballsPendingTriggerExit)
@@ -28,7 +28,7 @@ namespace GorillaTag.Sports
 			}
 		}
 
-		// Token: 0x0600550A RID: 21770 RVA: 0x0019E100 File Offset: 0x0019C300
+		// Token: 0x0600550B RID: 21771 RVA: 0x0019E1D8 File Offset: 0x0019C3D8
 		private void OnTriggerEnter(Collider other)
 		{
 			SportBall componentInParent = other.GetComponentInParent<SportBall>();
@@ -43,19 +43,19 @@ namespace GorillaTag.Sports
 			}
 		}
 
-		// Token: 0x0400584F RID: 22607
+		// Token: 0x04005850 RID: 22608
 		[SerializeField]
 		private SportScoreboard scoreboard;
 
-		// Token: 0x04005850 RID: 22608
+		// Token: 0x04005851 RID: 22609
 		[SerializeField]
 		private int teamScoringOnThisGoal = 1;
 
-		// Token: 0x04005851 RID: 22609
+		// Token: 0x04005852 RID: 22610
 		[SerializeField]
 		private float ballTriggerExitDistanceFallback = 3f;
 
-		// Token: 0x04005852 RID: 22610
+		// Token: 0x04005853 RID: 22611
 		private HashSet<SportBall> ballsPendingTriggerExit = new HashSet<SportBall>();
 	}
 }

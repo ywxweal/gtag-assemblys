@@ -4,7 +4,7 @@ using GorillaNetworking;
 // Token: 0x02000457 RID: 1111
 public class WardrobeItemButton : GorillaPressableButton
 {
-	// Token: 0x06001B5D RID: 7005 RVA: 0x00086AED File Offset: 0x00084CED
+	// Token: 0x06001B5D RID: 7005 RVA: 0x00086B0D File Offset: 0x00084D0D
 	public override void ButtonActivationWithHand(bool isLeftHand)
 	{
 		base.ButtonActivationWithHand(isLeftHand);

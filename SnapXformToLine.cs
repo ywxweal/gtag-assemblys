@@ -6,7 +6,7 @@ using UnityEngine.Events;
 public class SnapXformToLine : MonoBehaviour
 {
 	// Token: 0x1700042D RID: 1069
-	// (get) Token: 0x06002ABC RID: 10940 RVA: 0x000D1ECB File Offset: 0x000D00CB
+	// (get) Token: 0x06002ABD RID: 10941 RVA: 0x000D1F6F File Offset: 0x000D016F
 	public Vector3 linePoint
 	{
 		get
@@ -16,7 +16,7 @@ public class SnapXformToLine : MonoBehaviour
 	}
 
 	// Token: 0x1700042E RID: 1070
-	// (get) Token: 0x06002ABD RID: 10941 RVA: 0x000D1ED3 File Offset: 0x000D00D3
+	// (get) Token: 0x06002ABE RID: 10942 RVA: 0x000D1F77 File Offset: 0x000D0177
 	public float linearDistance
 	{
 		get
@@ -25,13 +25,13 @@ public class SnapXformToLine : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06002ABE RID: 10942 RVA: 0x000D1EDB File Offset: 0x000D00DB
+	// Token: 0x06002ABF RID: 10943 RVA: 0x000D1F7F File Offset: 0x000D017F
 	public void SnapTarget(bool applyToXform = true)
 	{
 		this.Snap(this.target, true);
 	}
 
-	// Token: 0x06002ABF RID: 10943 RVA: 0x000D1EEA File Offset: 0x000D00EA
+	// Token: 0x06002AC0 RID: 10944 RVA: 0x000D1F8E File Offset: 0x000D018E
 	public void SnapTarget(Vector3 point)
 	{
 		if (this.target)
@@ -40,7 +40,7 @@ public class SnapXformToLine : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06002AC0 RID: 10944 RVA: 0x000D1F18 File Offset: 0x000D0118
+	// Token: 0x06002AC1 RID: 10945 RVA: 0x000D1FBC File Offset: 0x000D01BC
 	public void SnapTargetLinear(float t)
 	{
 		if (this.target && this.from && this.to)
@@ -49,13 +49,13 @@ public class SnapXformToLine : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06002AC1 RID: 10945 RVA: 0x000D1F73 File Offset: 0x000D0173
+	// Token: 0x06002AC2 RID: 10946 RVA: 0x000D2017 File Offset: 0x000D0217
 	public Vector3 GetSnappedPoint(Transform t)
 	{
 		return this.GetSnappedPoint(t.position);
 	}
 
-	// Token: 0x06002AC2 RID: 10946 RVA: 0x000D1F84 File Offset: 0x000D0184
+	// Token: 0x06002AC3 RID: 10947 RVA: 0x000D2028 File Offset: 0x000D0228
 	public Vector3 GetSnappedPoint(Vector3 point)
 	{
 		if (!this.apply)
@@ -69,7 +69,7 @@ public class SnapXformToLine : MonoBehaviour
 		return SnapXformToLine.GetClosestPointOnLine(point, this.from.position, this.to.position);
 	}
 
-	// Token: 0x06002AC3 RID: 10947 RVA: 0x000D1FD4 File Offset: 0x000D01D4
+	// Token: 0x06002AC4 RID: 10948 RVA: 0x000D2078 File Offset: 0x000D0278
 	public void Snap(Transform xform, bool applyToXform = true)
 	{
 		if (!this.apply || !xform || !this.from || !this.to)
@@ -120,7 +120,7 @@ public class SnapXformToLine : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06002AC4 RID: 10948 RVA: 0x000D219A File Offset: 0x000D039A
+	// Token: 0x06002AC5 RID: 10949 RVA: 0x000D223E File Offset: 0x000D043E
 	private void OnDisable()
 	{
 		if (this.resetOnDisable)
@@ -129,13 +129,13 @@ public class SnapXformToLine : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06002AC5 RID: 10949 RVA: 0x000D21AF File Offset: 0x000D03AF
+	// Token: 0x06002AC6 RID: 10950 RVA: 0x000D2253 File Offset: 0x000D0453
 	private void LateUpdate()
 	{
 		this.SnapTarget(true);
 	}
 
-	// Token: 0x06002AC6 RID: 10950 RVA: 0x000D21B8 File Offset: 0x000D03B8
+	// Token: 0x06002AC7 RID: 10951 RVA: 0x000D225C File Offset: 0x000D045C
 	private static Vector3 GetClosestPointOnLine(Vector3 p, Vector3 a, Vector3 b)
 	{
 		Vector3 vector = p - a;
@@ -145,38 +145,38 @@ public class SnapXformToLine : MonoBehaviour
 		return a + vector2 * num;
 	}
 
-	// Token: 0x04002F9E RID: 12190
+	// Token: 0x04002FA0 RID: 12192
 	public bool apply = true;
 
-	// Token: 0x04002F9F RID: 12191
+	// Token: 0x04002FA1 RID: 12193
 	public bool snapOrientation = true;
 
-	// Token: 0x04002FA0 RID: 12192
+	// Token: 0x04002FA2 RID: 12194
 	public bool resetOnDisable = true;
 
-	// Token: 0x04002FA1 RID: 12193
+	// Token: 0x04002FA3 RID: 12195
 	[Space]
 	public Transform target;
 
-	// Token: 0x04002FA2 RID: 12194
+	// Token: 0x04002FA4 RID: 12196
 	[Space]
 	public Transform from;
 
-	// Token: 0x04002FA3 RID: 12195
+	// Token: 0x04002FA5 RID: 12197
 	public Transform to;
 
-	// Token: 0x04002FA4 RID: 12196
+	// Token: 0x04002FA6 RID: 12198
 	private Vector3 _closest;
 
-	// Token: 0x04002FA5 RID: 12197
+	// Token: 0x04002FA7 RID: 12199
 	private float _linear;
 
-	// Token: 0x04002FA6 RID: 12198
+	// Token: 0x04002FA8 RID: 12200
 	public Ref<IRangedVariable<float>> output;
 
-	// Token: 0x04002FA7 RID: 12199
+	// Token: 0x04002FA9 RID: 12201
 	public UnityEvent<float> onLinearDistanceChanged;
 
-	// Token: 0x04002FA8 RID: 12200
+	// Token: 0x04002FAA RID: 12202
 	public UnityEvent<Vector3> onPositionChanged;
 }

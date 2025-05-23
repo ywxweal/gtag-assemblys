@@ -4,7 +4,7 @@ using UnityEngine;
 // Token: 0x020004E0 RID: 1248
 public class BuilderBumpGlow : MonoBehaviour
 {
-	// Token: 0x06001E1B RID: 7707 RVA: 0x00092560 File Offset: 0x00090760
+	// Token: 0x06001E1B RID: 7707 RVA: 0x00092580 File Offset: 0x00090780
 	public void Awake()
 	{
 		this.blendIn = 1f;
@@ -12,14 +12,14 @@ public class BuilderBumpGlow : MonoBehaviour
 		this.UpdateRender();
 	}
 
-	// Token: 0x06001E1C RID: 7708 RVA: 0x0009257E File Offset: 0x0009077E
+	// Token: 0x06001E1C RID: 7708 RVA: 0x0009259E File Offset: 0x0009079E
 	public void SetIntensity(float intensity)
 	{
 		this.intensity = intensity;
 		this.UpdateRender();
 	}
 
-	// Token: 0x06001E1D RID: 7709 RVA: 0x0009258D File Offset: 0x0009078D
+	// Token: 0x06001E1D RID: 7709 RVA: 0x000925AD File Offset: 0x000907AD
 	public void SetBlendIn(float blendIn)
 	{
 		this.blendIn = blendIn;

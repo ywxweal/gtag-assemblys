@@ -7,8 +7,8 @@ using UnityEngine.Audio;
 public class AudioMixVar
 {
 	// Token: 0x17000321 RID: 801
-	// (get) Token: 0x06001CEA RID: 7402 RVA: 0x0008C31C File Offset: 0x0008A51C
-	// (set) Token: 0x06001CEB RID: 7403 RVA: 0x0008C36B File Offset: 0x0008A56B
+	// (get) Token: 0x06001CEA RID: 7402 RVA: 0x0008C33C File Offset: 0x0008A53C
+	// (set) Token: 0x06001CEB RID: 7403 RVA: 0x0008C38B File Offset: 0x0008A58B
 	public float value
 	{
 		get
@@ -37,7 +37,7 @@ public class AudioMixVar
 		}
 	}
 
-	// Token: 0x06001CEC RID: 7404 RVA: 0x0008C38D File Offset: 0x0008A58D
+	// Token: 0x06001CEC RID: 7404 RVA: 0x0008C3AD File Offset: 0x0008A5AD
 	public void ReturnToPool()
 	{
 		if (this._pool != null)

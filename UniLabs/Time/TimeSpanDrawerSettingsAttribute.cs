@@ -7,36 +7,36 @@ namespace UniLabs.Time
 	[Conditional("UNITY_EDITOR")]
 	public class TimeSpanDrawerSettingsAttribute : Attribute
 	{
-		// Token: 0x060041AE RID: 16814 RVA: 0x001301E7 File Offset: 0x0012E3E7
+		// Token: 0x060041AF RID: 16815 RVA: 0x001302BF File Offset: 0x0012E4BF
 		public TimeSpanDrawerSettingsAttribute()
 		{
 		}
 
-		// Token: 0x060041AF RID: 16815 RVA: 0x001301FD File Offset: 0x0012E3FD
+		// Token: 0x060041B0 RID: 16816 RVA: 0x001302D5 File Offset: 0x0012E4D5
 		public TimeSpanDrawerSettingsAttribute(TimeUnit highestUnit, TimeUnit lowestUnit)
 		{
 			this.HighestUnit = highestUnit;
 			this.LowestUnit = lowestUnit;
 		}
 
-		// Token: 0x060041B0 RID: 16816 RVA: 0x00130221 File Offset: 0x0012E421
+		// Token: 0x060041B1 RID: 16817 RVA: 0x001302F9 File Offset: 0x0012E4F9
 		public TimeSpanDrawerSettingsAttribute(TimeUnit highestUnit, bool drawMilliseconds = false)
 		{
 			this.HighestUnit = highestUnit;
 			this.LowestUnit = (drawMilliseconds ? TimeUnit.Milliseconds : TimeUnit.Seconds);
 		}
 
-		// Token: 0x060041B1 RID: 16817 RVA: 0x0013024B File Offset: 0x0012E44B
+		// Token: 0x060041B2 RID: 16818 RVA: 0x00130323 File Offset: 0x0012E523
 		public TimeSpanDrawerSettingsAttribute(bool drawMilliseconds)
 		{
 			this.HighestUnit = TimeUnit.Days;
 			this.LowestUnit = (drawMilliseconds ? TimeUnit.Milliseconds : TimeUnit.Seconds);
 		}
 
-		// Token: 0x04004476 RID: 17526
+		// Token: 0x04004477 RID: 17527
 		public TimeUnit HighestUnit = TimeUnit.Days;
 
-		// Token: 0x04004477 RID: 17527
+		// Token: 0x04004478 RID: 17528
 		public TimeUnit LowestUnit = TimeUnit.Seconds;
 	}
 }

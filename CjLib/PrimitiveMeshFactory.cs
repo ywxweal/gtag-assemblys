@@ -7,7 +7,7 @@ namespace CjLib
 	// Token: 0x02000E3B RID: 3643
 	public class PrimitiveMeshFactory
 	{
-		// Token: 0x06005B12 RID: 23314 RVA: 0x001BB7E4 File Offset: 0x001B99E4
+		// Token: 0x06005B13 RID: 23315 RVA: 0x001BB8BC File Offset: 0x001B9ABC
 		private static Mesh GetPooledLineMesh()
 		{
 			if (PrimitiveMeshFactory.s_lineMeshPool == null)
@@ -36,7 +36,7 @@ namespace CjLib
 			return mesh;
 		}
 
-		// Token: 0x06005B13 RID: 23315 RVA: 0x001BB8B4 File Offset: 0x001B9AB4
+		// Token: 0x06005B14 RID: 23316 RVA: 0x001BB98C File Offset: 0x001B9B8C
 		public static Mesh Line(Vector3 v0, Vector3 v1)
 		{
 			Mesh pooledLineMesh = PrimitiveMeshFactory.GetPooledLineMesh();
@@ -52,7 +52,7 @@ namespace CjLib
 			return pooledLineMesh;
 		}
 
-		// Token: 0x06005B14 RID: 23316 RVA: 0x001BB90C File Offset: 0x001B9B0C
+		// Token: 0x06005B15 RID: 23317 RVA: 0x001BB9E4 File Offset: 0x001B9BE4
 		public static Mesh Lines(Vector3[] aVert)
 		{
 			if (aVert.Length <= 1)
@@ -74,7 +74,7 @@ namespace CjLib
 			return pooledLineMesh;
 		}
 
-		// Token: 0x06005B15 RID: 23317 RVA: 0x001BB960 File Offset: 0x001B9B60
+		// Token: 0x06005B16 RID: 23318 RVA: 0x001BBA38 File Offset: 0x001B9C38
 		public static Mesh LineStrip(Vector3[] aVert)
 		{
 			if (aVert.Length <= 1)
@@ -96,7 +96,7 @@ namespace CjLib
 			return pooledLineMesh;
 		}
 
-		// Token: 0x06005B16 RID: 23318 RVA: 0x001BB9B4 File Offset: 0x001B9BB4
+		// Token: 0x06005B17 RID: 23319 RVA: 0x001BBA8C File Offset: 0x001B9C8C
 		public static Mesh BoxWireframe()
 		{
 			if (PrimitiveMeshFactory.s_boxWireframeMesh == null)
@@ -126,7 +126,7 @@ namespace CjLib
 			return PrimitiveMeshFactory.s_boxWireframeMesh;
 		}
 
-		// Token: 0x06005B17 RID: 23319 RVA: 0x001BBAF8 File Offset: 0x001B9CF8
+		// Token: 0x06005B18 RID: 23320 RVA: 0x001BBBD0 File Offset: 0x001B9DD0
 		public static Mesh BoxSolidColor()
 		{
 			if (PrimitiveMeshFactory.s_boxSolidColorMesh == null)
@@ -156,7 +156,7 @@ namespace CjLib
 			return PrimitiveMeshFactory.s_boxSolidColorMesh;
 		}
 
-		// Token: 0x06005B18 RID: 23320 RVA: 0x001BBC30 File Offset: 0x001B9E30
+		// Token: 0x06005B19 RID: 23321 RVA: 0x001BBD08 File Offset: 0x001B9F08
 		public static Mesh BoxFlatShaded()
 		{
 			if (PrimitiveMeshFactory.s_boxFlatShadedMesh == null)
@@ -272,7 +272,7 @@ namespace CjLib
 			return PrimitiveMeshFactory.s_boxFlatShadedMesh;
 		}
 
-		// Token: 0x06005B19 RID: 23321 RVA: 0x001BC264 File Offset: 0x001BA464
+		// Token: 0x06005B1A RID: 23322 RVA: 0x001BC33C File Offset: 0x001BA53C
 		public static Mesh RectWireframe()
 		{
 			if (PrimitiveMeshFactory.s_rectWireframeMesh == null)
@@ -293,7 +293,7 @@ namespace CjLib
 			return PrimitiveMeshFactory.s_rectWireframeMesh;
 		}
 
-		// Token: 0x06005B1A RID: 23322 RVA: 0x001BC338 File Offset: 0x001BA538
+		// Token: 0x06005B1B RID: 23323 RVA: 0x001BC410 File Offset: 0x001BA610
 		public static Mesh RectSolidColor()
 		{
 			if (PrimitiveMeshFactory.s_rectSolidColorMesh == null)
@@ -317,7 +317,7 @@ namespace CjLib
 			return PrimitiveMeshFactory.s_rectSolidColorMesh;
 		}
 
-		// Token: 0x06005B1B RID: 23323 RVA: 0x001BC404 File Offset: 0x001BA604
+		// Token: 0x06005B1C RID: 23324 RVA: 0x001BC4DC File Offset: 0x001BA6DC
 		public static Mesh RectFlatShaded()
 		{
 			if (PrimitiveMeshFactory.s_rectFlatShadedMesh == null)
@@ -357,7 +357,7 @@ namespace CjLib
 			return PrimitiveMeshFactory.s_rectFlatShadedMesh;
 		}
 
-		// Token: 0x06005B1C RID: 23324 RVA: 0x001BC624 File Offset: 0x001BA824
+		// Token: 0x06005B1D RID: 23325 RVA: 0x001BC6FC File Offset: 0x001BA8FC
 		public static Mesh CircleWireframe(int numSegments)
 		{
 			if (numSegments <= 1)
@@ -395,7 +395,7 @@ namespace CjLib
 			return mesh;
 		}
 
-		// Token: 0x06005B1D RID: 23325 RVA: 0x001BC718 File Offset: 0x001BA918
+		// Token: 0x06005B1E RID: 23326 RVA: 0x001BC7F0 File Offset: 0x001BA9F0
 		public static Mesh CircleSolidColor(int numSegments)
 		{
 			if (numSegments <= 1)
@@ -438,7 +438,7 @@ namespace CjLib
 			return mesh;
 		}
 
-		// Token: 0x06005B1E RID: 23326 RVA: 0x001BC848 File Offset: 0x001BAA48
+		// Token: 0x06005B1F RID: 23327 RVA: 0x001BC920 File Offset: 0x001BAB20
 		public static Mesh CircleFlatShaded(int numSegments)
 		{
 			if (numSegments <= 1)
@@ -494,7 +494,7 @@ namespace CjLib
 			return mesh;
 		}
 
-		// Token: 0x06005B1F RID: 23327 RVA: 0x001BCA84 File Offset: 0x001BAC84
+		// Token: 0x06005B20 RID: 23328 RVA: 0x001BCB5C File Offset: 0x001BAD5C
 		public static Mesh CylinderWireframe(int numSegments)
 		{
 			if (numSegments <= 1)
@@ -541,7 +541,7 @@ namespace CjLib
 			return mesh;
 		}
 
-		// Token: 0x06005B20 RID: 23328 RVA: 0x001BCC14 File Offset: 0x001BAE14
+		// Token: 0x06005B21 RID: 23329 RVA: 0x001BCCEC File Offset: 0x001BAEEC
 		public static Mesh CylinderSolidColor(int numSegments)
 		{
 			if (numSegments <= 1)
@@ -598,7 +598,7 @@ namespace CjLib
 			return mesh;
 		}
 
-		// Token: 0x06005B21 RID: 23329 RVA: 0x001BCE2C File Offset: 0x001BB02C
+		// Token: 0x06005B22 RID: 23330 RVA: 0x001BCF04 File Offset: 0x001BB104
 		public static Mesh CylinderFlatShaded(int numSegments)
 		{
 			if (numSegments <= 1)
@@ -672,7 +672,7 @@ namespace CjLib
 			return mesh;
 		}
 
-		// Token: 0x06005B22 RID: 23330 RVA: 0x001BD1C4 File Offset: 0x001BB3C4
+		// Token: 0x06005B23 RID: 23331 RVA: 0x001BD29C File Offset: 0x001BB49C
 		public static Mesh CylinderSmoothShaded(int numSegments)
 		{
 			if (numSegments <= 1)
@@ -740,7 +740,7 @@ namespace CjLib
 			return mesh;
 		}
 
-		// Token: 0x06005B23 RID: 23331 RVA: 0x001BD4D0 File Offset: 0x001BB6D0
+		// Token: 0x06005B24 RID: 23332 RVA: 0x001BD5A8 File Offset: 0x001BB7A8
 		public static Mesh SphereWireframe(int latSegments, int longSegments)
 		{
 			if (latSegments <= 0 || longSegments <= 1)
@@ -827,7 +827,7 @@ namespace CjLib
 			return mesh;
 		}
 
-		// Token: 0x06005B24 RID: 23332 RVA: 0x001BD748 File Offset: 0x001BB948
+		// Token: 0x06005B25 RID: 23333 RVA: 0x001BD820 File Offset: 0x001BBA20
 		public static Mesh SphereSolidColor(int latSegments, int longSegments)
 		{
 			if (latSegments <= 0 || longSegments <= 1)
@@ -917,7 +917,7 @@ namespace CjLib
 			return mesh;
 		}
 
-		// Token: 0x06005B25 RID: 23333 RVA: 0x001BDA14 File Offset: 0x001BBC14
+		// Token: 0x06005B26 RID: 23334 RVA: 0x001BDAEC File Offset: 0x001BBCEC
 		public static Mesh SphereFlatShaded(int latSegments, int longSegments)
 		{
 			if (latSegments <= 1 || longSegments <= 1)
@@ -1027,7 +1027,7 @@ namespace CjLib
 			return mesh;
 		}
 
-		// Token: 0x06005B26 RID: 23334 RVA: 0x001BDF6C File Offset: 0x001BC16C
+		// Token: 0x06005B27 RID: 23335 RVA: 0x001BE044 File Offset: 0x001BC244
 		public static Mesh SphereSmoothShaded(int latSegments, int longSegments)
 		{
 			if (latSegments <= 1 || longSegments <= 1)
@@ -1138,7 +1138,7 @@ namespace CjLib
 			return mesh;
 		}
 
-		// Token: 0x06005B27 RID: 23335 RVA: 0x001BE2F4 File Offset: 0x001BC4F4
+		// Token: 0x06005B28 RID: 23336 RVA: 0x001BE3CC File Offset: 0x001BC5CC
 		public static Mesh CapsuleWireframe(int latSegmentsPerCap, int longSegmentsPerCap, bool caps = true, bool topCapOnly = false, bool sides = true)
 		{
 			if (latSegmentsPerCap <= 0 || longSegmentsPerCap <= 1)
@@ -1252,7 +1252,7 @@ namespace CjLib
 			return mesh;
 		}
 
-		// Token: 0x06005B28 RID: 23336 RVA: 0x001BE63C File Offset: 0x001BC83C
+		// Token: 0x06005B29 RID: 23337 RVA: 0x001BE714 File Offset: 0x001BC914
 		public static Mesh CapsuleSolidColor(int latSegmentsPerCap, int longSegmentsPerCap, bool caps = true, bool topCapOnly = false, bool sides = true)
 		{
 			if (latSegmentsPerCap <= 0 || longSegmentsPerCap <= 1)
@@ -1372,7 +1372,7 @@ namespace CjLib
 			return mesh;
 		}
 
-		// Token: 0x06005B29 RID: 23337 RVA: 0x001BEA54 File Offset: 0x001BCC54
+		// Token: 0x06005B2A RID: 23338 RVA: 0x001BEB2C File Offset: 0x001BCD2C
 		public static Mesh CapsuleFlatShaded(int latSegmentsPerCap, int longSegmentsPerCap, bool caps = true, bool topCapOnly = false, bool sides = true)
 		{
 			if (latSegmentsPerCap <= 0 || longSegmentsPerCap <= 1)
@@ -1541,7 +1541,7 @@ namespace CjLib
 			return mesh;
 		}
 
-		// Token: 0x06005B2A RID: 23338 RVA: 0x001BF304 File Offset: 0x001BD504
+		// Token: 0x06005B2B RID: 23339 RVA: 0x001BF3DC File Offset: 0x001BD5DC
 		public static Mesh CapsuleSmoothShaded(int latSegmentsPerCap, int longSegmentsPerCap, bool caps = true, bool topCapOnly = false, bool sides = true)
 		{
 			if (latSegmentsPerCap <= 0 || longSegmentsPerCap <= 1)
@@ -1666,7 +1666,7 @@ namespace CjLib
 			return mesh;
 		}
 
-		// Token: 0x06005B2B RID: 23339 RVA: 0x001BF7B8 File Offset: 0x001BD9B8
+		// Token: 0x06005B2C RID: 23340 RVA: 0x001BF890 File Offset: 0x001BDA90
 		public static Mesh Capsule2DWireframe(int capSegments)
 		{
 			if (capSegments <= 0)
@@ -1716,7 +1716,7 @@ namespace CjLib
 			return mesh;
 		}
 
-		// Token: 0x06005B2C RID: 23340 RVA: 0x001BF968 File Offset: 0x001BDB68
+		// Token: 0x06005B2D RID: 23341 RVA: 0x001BFA40 File Offset: 0x001BDC40
 		public static Mesh Capsule2DSolidColor(int capSegments)
 		{
 			if (capSegments <= 0)
@@ -1769,7 +1769,7 @@ namespace CjLib
 			return mesh;
 		}
 
-		// Token: 0x06005B2D RID: 23341 RVA: 0x001BFB40 File Offset: 0x001BDD40
+		// Token: 0x06005B2E RID: 23342 RVA: 0x001BFC18 File Offset: 0x001BDE18
 		public static Mesh Capsule2DFlatShaded(int capSegments)
 		{
 			if (capSegments <= 0)
@@ -1834,7 +1834,7 @@ namespace CjLib
 			return mesh;
 		}
 
-		// Token: 0x06005B2E RID: 23342 RVA: 0x001BFD94 File Offset: 0x001BDF94
+		// Token: 0x06005B2F RID: 23343 RVA: 0x001BFE6C File Offset: 0x001BE06C
 		public static Mesh ConeWireframe(int numSegments)
 		{
 			if (numSegments <= 1)
@@ -1876,7 +1876,7 @@ namespace CjLib
 			return mesh;
 		}
 
-		// Token: 0x06005B2F RID: 23343 RVA: 0x001BFED0 File Offset: 0x001BE0D0
+		// Token: 0x06005B30 RID: 23344 RVA: 0x001BFFA8 File Offset: 0x001BE1A8
 		public static Mesh ConeSolidColor(int numSegments)
 		{
 			if (numSegments <= 1)
@@ -1922,7 +1922,7 @@ namespace CjLib
 			return mesh;
 		}
 
-		// Token: 0x06005B30 RID: 23344 RVA: 0x001C002C File Offset: 0x001BE22C
+		// Token: 0x06005B31 RID: 23345 RVA: 0x001C0104 File Offset: 0x001BE304
 		public static Mesh ConeFlatShaded(int numSegments)
 		{
 			if (numSegments <= 1)
@@ -1990,7 +1990,7 @@ namespace CjLib
 			return mesh;
 		}
 
-		// Token: 0x06005B31 RID: 23345 RVA: 0x001C02B4 File Offset: 0x001BE4B4
+		// Token: 0x06005B32 RID: 23346 RVA: 0x001C038C File Offset: 0x001BE58C
 		public static Mesh ConeSmoothShaded(int numSegments)
 		{
 			if (numSegments <= 1)
@@ -2047,97 +2047,97 @@ namespace CjLib
 			return mesh;
 		}
 
-		// Token: 0x04005EFC RID: 24316
+		// Token: 0x04005EFD RID: 24317
 		private static int s_lastDrawLineFrame = -1;
 
-		// Token: 0x04005EFD RID: 24317
+		// Token: 0x04005EFE RID: 24318
 		private static int s_iPooledMesh = 0;
 
-		// Token: 0x04005EFE RID: 24318
+		// Token: 0x04005EFF RID: 24319
 		private static List<Mesh> s_lineMeshPool;
 
-		// Token: 0x04005EFF RID: 24319
+		// Token: 0x04005F00 RID: 24320
 		private static Mesh s_boxWireframeMesh;
 
-		// Token: 0x04005F00 RID: 24320
+		// Token: 0x04005F01 RID: 24321
 		private static Mesh s_boxSolidColorMesh;
 
-		// Token: 0x04005F01 RID: 24321
+		// Token: 0x04005F02 RID: 24322
 		private static Mesh s_boxFlatShadedMesh;
 
-		// Token: 0x04005F02 RID: 24322
+		// Token: 0x04005F03 RID: 24323
 		private static Mesh s_rectWireframeMesh;
 
-		// Token: 0x04005F03 RID: 24323
+		// Token: 0x04005F04 RID: 24324
 		private static Mesh s_rectSolidColorMesh;
 
-		// Token: 0x04005F04 RID: 24324
+		// Token: 0x04005F05 RID: 24325
 		private static Mesh s_rectFlatShadedMesh;
 
-		// Token: 0x04005F05 RID: 24325
+		// Token: 0x04005F06 RID: 24326
 		private static Dictionary<int, Mesh> s_circleWireframeMeshPool;
 
-		// Token: 0x04005F06 RID: 24326
+		// Token: 0x04005F07 RID: 24327
 		private static Dictionary<int, Mesh> s_circleSolidColorMeshPool;
 
-		// Token: 0x04005F07 RID: 24327
+		// Token: 0x04005F08 RID: 24328
 		private static Dictionary<int, Mesh> s_circleFlatShadedMeshPool;
 
-		// Token: 0x04005F08 RID: 24328
+		// Token: 0x04005F09 RID: 24329
 		private static Dictionary<int, Mesh> s_cylinderWireframeMeshPool;
 
-		// Token: 0x04005F09 RID: 24329
+		// Token: 0x04005F0A RID: 24330
 		private static Dictionary<int, Mesh> s_cylinderSolidColorMeshPool;
 
-		// Token: 0x04005F0A RID: 24330
+		// Token: 0x04005F0B RID: 24331
 		private static Dictionary<int, Mesh> s_cylinderFlatShadedMeshPool;
 
-		// Token: 0x04005F0B RID: 24331
+		// Token: 0x04005F0C RID: 24332
 		private static Dictionary<int, Mesh> s_cylinderSmoothShadedMeshPool;
 
-		// Token: 0x04005F0C RID: 24332
+		// Token: 0x04005F0D RID: 24333
 		private static Dictionary<int, Mesh> s_sphereWireframeMeshPool;
 
-		// Token: 0x04005F0D RID: 24333
+		// Token: 0x04005F0E RID: 24334
 		private static Dictionary<int, Mesh> s_sphereSolidColorMeshPool;
 
-		// Token: 0x04005F0E RID: 24334
+		// Token: 0x04005F0F RID: 24335
 		private static Dictionary<int, Mesh> s_sphereFlatShadedMeshPool;
 
-		// Token: 0x04005F0F RID: 24335
+		// Token: 0x04005F10 RID: 24336
 		private static Dictionary<int, Mesh> s_sphereSmoothShadedMeshPool;
 
-		// Token: 0x04005F10 RID: 24336
+		// Token: 0x04005F11 RID: 24337
 		private static Dictionary<int, Mesh> s_capsuleWireframeMeshPool;
 
-		// Token: 0x04005F11 RID: 24337
+		// Token: 0x04005F12 RID: 24338
 		private static Dictionary<int, Mesh> s_capsuleSolidColorMeshPool;
 
-		// Token: 0x04005F12 RID: 24338
+		// Token: 0x04005F13 RID: 24339
 		private static Dictionary<int, Mesh> s_capsuleFlatShadedMeshPool;
 
-		// Token: 0x04005F13 RID: 24339
+		// Token: 0x04005F14 RID: 24340
 		private static Dictionary<int, Mesh> s_capsuleSmoothShadedMeshPool;
 
-		// Token: 0x04005F14 RID: 24340
+		// Token: 0x04005F15 RID: 24341
 		private static Dictionary<int, Mesh> s_capsule2dWireframeMeshPool;
 
-		// Token: 0x04005F15 RID: 24341
+		// Token: 0x04005F16 RID: 24342
 		private static Dictionary<int, Mesh> s_capsule2dSolidColorMeshPool;
 
-		// Token: 0x04005F16 RID: 24342
+		// Token: 0x04005F17 RID: 24343
 		private static Dictionary<int, Mesh> s_capsule2dFlatShadedMeshPool;
 
-		// Token: 0x04005F17 RID: 24343
+		// Token: 0x04005F18 RID: 24344
 		private static Dictionary<int, Mesh> s_coneWireframeMeshPool;
 
-		// Token: 0x04005F18 RID: 24344
+		// Token: 0x04005F19 RID: 24345
 		private static Dictionary<int, Mesh> s_coneSolidColorMeshPool;
 
-		// Token: 0x04005F19 RID: 24345
+		// Token: 0x04005F1A RID: 24346
 		private static Dictionary<int, Mesh> s_coneFlatShadedMeshPool;
 
-		// Token: 0x04005F1A RID: 24346
+		// Token: 0x04005F1B RID: 24347
 		private static Dictionary<int, Mesh> s_coneSmoothhadedMeshPool;
 	}
 }

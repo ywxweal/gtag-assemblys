@@ -4,7 +4,7 @@ using UnityEngine;
 // Token: 0x02000410 RID: 1040
 public class ManipulatableSlider : ManipulatableObject
 {
-	// Token: 0x06001950 RID: 6480 RVA: 0x0007A99E File Offset: 0x00078B9E
+	// Token: 0x06001950 RID: 6480 RVA: 0x0007A9BE File Offset: 0x00078BBE
 	private void Awake()
 	{
 		this.localSpace = base.transform.worldToLocalMatrix;
@@ -16,7 +16,7 @@ public class ManipulatableSlider : ManipulatableObject
 	{
 	}
 
-	// Token: 0x06001952 RID: 6482 RVA: 0x0007A9C2 File Offset: 0x00078BC2
+	// Token: 0x06001952 RID: 6482 RVA: 0x0007A9E2 File Offset: 0x00078BE2
 	protected override void OnStopManipulation(GameObject releasingHand, Vector3 releaseVelocity)
 	{
 		if (this.applyReleaseVelocity)
@@ -25,7 +25,7 @@ public class ManipulatableSlider : ManipulatableObject
 		}
 	}
 
-	// Token: 0x06001953 RID: 6483 RVA: 0x0007A9E0 File Offset: 0x00078BE0
+	// Token: 0x06001953 RID: 6483 RVA: 0x0007AA00 File Offset: 0x00078C00
 	protected override bool ShouldHandDetach(GameObject hand)
 	{
 		Vector3 position = base.transform.position;
@@ -33,7 +33,7 @@ public class ManipulatableSlider : ManipulatableObject
 		return Vector3.SqrMagnitude(position - position2) > this.breakDistance * this.breakDistance;
 	}
 
-	// Token: 0x06001954 RID: 6484 RVA: 0x0007AA20 File Offset: 0x00078C20
+	// Token: 0x06001954 RID: 6484 RVA: 0x0007AA40 File Offset: 0x00078C40
 	protected override void OnHeldUpdate(GameObject hand)
 	{
 		Vector3 vector = this.localSpace.MultiplyPoint3x4(hand.transform.position);
@@ -44,7 +44,7 @@ public class ManipulatableSlider : ManipulatableObject
 		base.transform.localPosition = vector;
 	}
 
-	// Token: 0x06001955 RID: 6485 RVA: 0x0007AAB8 File Offset: 0x00078CB8
+	// Token: 0x06001955 RID: 6485 RVA: 0x0007AAD8 File Offset: 0x00078CD8
 	protected override void OnReleasedUpdate()
 	{
 		if (this.velocity != Vector3.zero)
@@ -91,7 +91,7 @@ public class ManipulatableSlider : ManipulatableObject
 		}
 	}
 
-	// Token: 0x06001956 RID: 6486 RVA: 0x0007AC6C File Offset: 0x00078E6C
+	// Token: 0x06001956 RID: 6486 RVA: 0x0007AC8C File Offset: 0x00078E8C
 	public void SetProgress(float x, float y, float z)
 	{
 		x = Mathf.Clamp(x, 0f, 1f);
@@ -104,19 +104,19 @@ public class ManipulatableSlider : ManipulatableObject
 		base.transform.localPosition = vector;
 	}
 
-	// Token: 0x06001957 RID: 6487 RVA: 0x0007AD19 File Offset: 0x00078F19
+	// Token: 0x06001957 RID: 6487 RVA: 0x0007AD39 File Offset: 0x00078F39
 	public float GetProgressX()
 	{
 		return ((base.transform.localPosition - this.startingPos).x - this.minXOffset) / (this.maxXOffset - this.minXOffset);
 	}
 
-	// Token: 0x06001958 RID: 6488 RVA: 0x0007AD4B File Offset: 0x00078F4B
+	// Token: 0x06001958 RID: 6488 RVA: 0x0007AD6B File Offset: 0x00078F6B
 	public float GetProgressY()
 	{
 		return ((base.transform.localPosition - this.startingPos).y - this.minYOffset) / (this.maxYOffset - this.minYOffset);
 	}
 
-	// Token: 0x06001959 RID: 6489 RVA: 0x0007AD7D File Offset: 0x00078F7D
+	// Token: 0x06001959 RID: 6489 RVA: 0x0007AD9D File Offset: 0x00078F9D
 	public float GetProgressZ()
 	{
 		return ((base.transform.localPosition - this.startingPos).z - this.minZOffset) / (this.maxZOffset - this.minZOffset);

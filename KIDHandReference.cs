@@ -5,7 +5,7 @@ using UnityEngine;
 public class KIDHandReference : MonoBehaviour
 {
 	// Token: 0x170004F5 RID: 1269
-	// (get) Token: 0x060030FC RID: 12540 RVA: 0x000F0E26 File Offset: 0x000EF026
+	// (get) Token: 0x060030FD RID: 12541 RVA: 0x000F0ECA File Offset: 0x000EF0CA
 	public static GameObject LeftHand
 	{
 		get
@@ -15,7 +15,7 @@ public class KIDHandReference : MonoBehaviour
 	}
 
 	// Token: 0x170004F6 RID: 1270
-	// (get) Token: 0x060030FD RID: 12541 RVA: 0x000F0E2D File Offset: 0x000EF02D
+	// (get) Token: 0x060030FE RID: 12542 RVA: 0x000F0ED1 File Offset: 0x000EF0D1
 	public static GameObject RightHand
 	{
 		get
@@ -24,29 +24,29 @@ public class KIDHandReference : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060030FE RID: 12542 RVA: 0x000F0E34 File Offset: 0x000EF034
+	// Token: 0x060030FF RID: 12543 RVA: 0x000F0ED8 File Offset: 0x000EF0D8
 	private void Awake()
 	{
 		KIDHandReference._leftHandRef = this._leftHand;
 		KIDHandReference._rightHandRef = this._rightHand;
 	}
 
-	// Token: 0x060030FF RID: 12543 RVA: 0x000023F4 File Offset: 0x000005F4
+	// Token: 0x06003100 RID: 12544 RVA: 0x000023F4 File Offset: 0x000005F4
 	private void Update()
 	{
 	}
 
-	// Token: 0x0400376B RID: 14187
+	// Token: 0x0400376C RID: 14188
 	[SerializeField]
 	private GameObject _leftHand;
 
-	// Token: 0x0400376C RID: 14188
+	// Token: 0x0400376D RID: 14189
 	[SerializeField]
 	private GameObject _rightHand;
 
-	// Token: 0x0400376D RID: 14189
+	// Token: 0x0400376E RID: 14190
 	private static GameObject _leftHandRef;
 
-	// Token: 0x0400376E RID: 14190
+	// Token: 0x0400376F RID: 14191
 	private static GameObject _rightHandRef;
 }

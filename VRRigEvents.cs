@@ -5,7 +5,7 @@ using UnityEngine;
 [RequireComponent(typeof(RigContainer))]
 public class VRRigEvents : MonoBehaviour, IPreDisable
 {
-	// Token: 0x060017D2 RID: 6098 RVA: 0x0007422B File Offset: 0x0007242B
+	// Token: 0x060017D2 RID: 6098 RVA: 0x0007424B File Offset: 0x0007244B
 	public void PreDisable()
 	{
 		Action<RigContainer> action = this.disableEvent;

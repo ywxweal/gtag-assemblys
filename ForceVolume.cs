@@ -7,26 +7,26 @@ using UnityEngine;
 // Token: 0x020008B4 RID: 2228
 public class ForceVolume : MonoBehaviour, IGorillaSliceableSimple
 {
-	// Token: 0x060035E3 RID: 13795 RVA: 0x00104E34 File Offset: 0x00103034
+	// Token: 0x060035E4 RID: 13796 RVA: 0x00104F0C File Offset: 0x0010310C
 	private void Awake()
 	{
 		this.volume = base.GetComponent<Collider>();
 		this.audioState = ForceVolume.AudioState.None;
 	}
 
-	// Token: 0x060035E4 RID: 13796 RVA: 0x00010F2B File Offset: 0x0000F12B
+	// Token: 0x060035E5 RID: 13797 RVA: 0x00010F2B File Offset: 0x0000F12B
 	public void OnEnable()
 	{
 		GorillaSlicerSimpleManager.RegisterSliceable(this, GorillaSlicerSimpleManager.UpdateStep.LateUpdate);
 	}
 
-	// Token: 0x060035E5 RID: 13797 RVA: 0x00010F34 File Offset: 0x0000F134
+	// Token: 0x060035E6 RID: 13798 RVA: 0x00010F34 File Offset: 0x0000F134
 	public void OnDisable()
 	{
 		GorillaSlicerSimpleManager.UnregisterSliceable(this, GorillaSlicerSimpleManager.UpdateStep.LateUpdate);
 	}
 
-	// Token: 0x060035E6 RID: 13798 RVA: 0x00104E4C File Offset: 0x0010304C
+	// Token: 0x060035E7 RID: 13799 RVA: 0x00104F24 File Offset: 0x00103124
 	public void SliceUpdate()
 	{
 		if (this.audioSource && this.audioSource != null && !this.audioSource.isPlaying && this.audioSource.enabled)
@@ -35,7 +35,7 @@ public class ForceVolume : MonoBehaviour, IGorillaSliceableSimple
 		}
 	}
 
-	// Token: 0x060035E7 RID: 13799 RVA: 0x00104E9C File Offset: 0x0010309C
+	// Token: 0x060035E8 RID: 13800 RVA: 0x00104F74 File Offset: 0x00103174
 	private bool TriggerFilter(Collider other, out Rigidbody rb, out Transform xf)
 	{
 		rb = null;
@@ -48,7 +48,7 @@ public class ForceVolume : MonoBehaviour, IGorillaSliceableSimple
 		return rb != null && xf != null;
 	}
 
-	// Token: 0x060035E8 RID: 13800 RVA: 0x00104EFC File Offset: 0x001030FC
+	// Token: 0x060035E9 RID: 13801 RVA: 0x00104FD4 File Offset: 0x001031D4
 	public void OnTriggerEnter(Collider other)
 	{
 		Rigidbody rigidbody = null;
@@ -70,7 +70,7 @@ public class ForceVolume : MonoBehaviour, IGorillaSliceableSimple
 		this.enterPos = transform.position;
 	}
 
-	// Token: 0x060035E9 RID: 13801 RVA: 0x00104F6C File Offset: 0x0010316C
+	// Token: 0x060035EA RID: 13802 RVA: 0x00105044 File Offset: 0x00103244
 	public void OnTriggerExit(Collider other)
 	{
 		Rigidbody rigidbody = null;
@@ -87,7 +87,7 @@ public class ForceVolume : MonoBehaviour, IGorillaSliceableSimple
 		}
 	}
 
-	// Token: 0x060035EA RID: 13802 RVA: 0x00104FC4 File Offset: 0x001031C4
+	// Token: 0x060035EB RID: 13803 RVA: 0x0010509C File Offset: 0x0010329C
 	public void OnTriggerStay(Collider other)
 	{
 		Rigidbody rigidbody = null;
@@ -202,7 +202,7 @@ public class ForceVolume : MonoBehaviour, IGorillaSliceableSimple
 		rigidbody.velocity = vector;
 	}
 
-	// Token: 0x060035EB RID: 13803 RVA: 0x001053DC File Offset: 0x001035DC
+	// Token: 0x060035EC RID: 13804 RVA: 0x001054B4 File Offset: 0x001036B4
 	public void OnDrawGizmosSelected()
 	{
 		base.GetComponents<Collider>();
@@ -211,7 +211,7 @@ public class ForceVolume : MonoBehaviour, IGorillaSliceableSimple
 		Gizmos.DrawWireCube(Vector3.zero, new Vector3(this.pullTOCenterMinDistance / base.transform.lossyScale.x, 1f, this.pullTOCenterMinDistance / base.transform.lossyScale.z));
 	}
 
-	// Token: 0x060035EC RID: 13804 RVA: 0x0010544C File Offset: 0x0010364C
+	// Token: 0x060035ED RID: 13805 RVA: 0x00105524 File Offset: 0x00103724
 	public void SetPropertiesFromPlaceholder(ForceVolumeProperties properties, AudioSource volumeAudioSource, Collider colliderVolume)
 	{
 		this.accel = properties.accel;
@@ -239,96 +239,96 @@ public class ForceVolume : MonoBehaviour, IGorillaSliceableSimple
 		}
 	}
 
-	// Token: 0x060035EE RID: 13806 RVA: 0x00011040 File Offset: 0x0000F240
+	// Token: 0x060035EF RID: 13807 RVA: 0x00011040 File Offset: 0x0000F240
 	bool IGorillaSliceableSimple.get_isActiveAndEnabled()
 	{
 		return base.isActiveAndEnabled;
 	}
 
-	// Token: 0x04003BA8 RID: 15272
+	// Token: 0x04003BA9 RID: 15273
 	[SerializeField]
 	public bool scaleWithSize = true;
 
-	// Token: 0x04003BA9 RID: 15273
+	// Token: 0x04003BAA RID: 15274
 	[SerializeField]
 	private float accel;
 
-	// Token: 0x04003BAA RID: 15274
+	// Token: 0x04003BAB RID: 15275
 	[SerializeField]
 	private float maxDepth = -1f;
 
-	// Token: 0x04003BAB RID: 15275
+	// Token: 0x04003BAC RID: 15276
 	[SerializeField]
 	private float maxSpeed;
 
-	// Token: 0x04003BAC RID: 15276
+	// Token: 0x04003BAD RID: 15277
 	[SerializeField]
 	private bool disableGrip;
 
-	// Token: 0x04003BAD RID: 15277
+	// Token: 0x04003BAE RID: 15278
 	[SerializeField]
 	private bool dampenLateralVelocity = true;
 
-	// Token: 0x04003BAE RID: 15278
+	// Token: 0x04003BAF RID: 15279
 	[SerializeField]
 	private float dampenXVelPerc;
 
-	// Token: 0x04003BAF RID: 15279
+	// Token: 0x04003BB0 RID: 15280
 	[SerializeField]
 	private float dampenZVelPerc;
 
-	// Token: 0x04003BB0 RID: 15280
+	// Token: 0x04003BB1 RID: 15281
 	[SerializeField]
 	private bool applyPullToCenterAcceleration = true;
 
-	// Token: 0x04003BB1 RID: 15281
+	// Token: 0x04003BB2 RID: 15282
 	[SerializeField]
 	private float pullToCenterAccel;
 
-	// Token: 0x04003BB2 RID: 15282
+	// Token: 0x04003BB3 RID: 15283
 	[SerializeField]
 	private float pullToCenterMaxSpeed;
 
-	// Token: 0x04003BB3 RID: 15283
+	// Token: 0x04003BB4 RID: 15284
 	[SerializeField]
 	private float pullTOCenterMinDistance = 0.1f;
 
-	// Token: 0x04003BB4 RID: 15284
+	// Token: 0x04003BB5 RID: 15285
 	private Collider volume;
 
-	// Token: 0x04003BB5 RID: 15285
+	// Token: 0x04003BB6 RID: 15286
 	public AudioClip enterClip;
 
-	// Token: 0x04003BB6 RID: 15286
+	// Token: 0x04003BB7 RID: 15287
 	public AudioClip exitClip;
 
-	// Token: 0x04003BB7 RID: 15287
+	// Token: 0x04003BB8 RID: 15288
 	public AudioClip loopClip;
 
-	// Token: 0x04003BB8 RID: 15288
+	// Token: 0x04003BB9 RID: 15289
 	public AudioClip loopCresendoClip;
 
-	// Token: 0x04003BB9 RID: 15289
+	// Token: 0x04003BBA RID: 15290
 	public AudioSource audioSource;
 
-	// Token: 0x04003BBA RID: 15290
+	// Token: 0x04003BBB RID: 15291
 	private Vector3 enterPos;
 
-	// Token: 0x04003BBB RID: 15291
+	// Token: 0x04003BBC RID: 15292
 	private ForceVolume.AudioState audioState;
 
 	// Token: 0x020008B5 RID: 2229
 	private enum AudioState
 	{
-		// Token: 0x04003BBD RID: 15293
-		None,
 		// Token: 0x04003BBE RID: 15294
-		Enter,
+		None,
 		// Token: 0x04003BBF RID: 15295
-		Crescendo,
+		Enter,
 		// Token: 0x04003BC0 RID: 15296
-		Loop,
+		Crescendo,
 		// Token: 0x04003BC1 RID: 15297
+		Loop,
+		// Token: 0x04003BC2 RID: 15298
 		Exit
 	}
 }

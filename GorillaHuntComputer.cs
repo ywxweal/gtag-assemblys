@@ -8,7 +8,7 @@ using UnityEngine.UI;
 // Token: 0x02000611 RID: 1553
 public class GorillaHuntComputer : MonoBehaviour
 {
-	// Token: 0x0600268E RID: 9870 RVA: 0x000BEA28 File Offset: 0x000BCC28
+	// Token: 0x0600268E RID: 9870 RVA: 0x000BEA48 File Offset: 0x000BCC48
 	private void Update()
 	{
 		if (!NetworkSystem.Instance.InRoom || GorillaGameManager.instance == null)
@@ -102,7 +102,7 @@ public class GorillaHuntComputer : MonoBehaviour
 		}
 	}
 
-	// Token: 0x0600268F RID: 9871 RVA: 0x000BEEF4 File Offset: 0x000BD0F4
+	// Token: 0x0600268F RID: 9871 RVA: 0x000BEF14 File Offset: 0x000BD114
 	private void SetImage(string itemDisplayName, ref Image image)
 	{
 		this.tempItem = CosmeticsController.instance.GetItemFromDict(CosmeticsController.instance.GetItemNameFromDisplayName(itemDisplayName));
@@ -115,7 +115,7 @@ public class GorillaHuntComputer : MonoBehaviour
 		image.gameObject.SetActive(false);
 	}
 
-	// Token: 0x06002690 RID: 9872 RVA: 0x000BEF8C File Offset: 0x000BD18C
+	// Token: 0x06002690 RID: 9872 RVA: 0x000BEFAC File Offset: 0x000BD1AC
 	public string NormalizeName(bool doIt, string text)
 	{
 		if (doIt)
@@ -137,7 +137,7 @@ public class GorillaHuntComputer : MonoBehaviour
 		return text;
 	}
 
-	// Token: 0x06002691 RID: 9873 RVA: 0x000BF004 File Offset: 0x000BD204
+	// Token: 0x06002691 RID: 9873 RVA: 0x000BF024 File Offset: 0x000BD224
 	public CosmeticsController.CosmeticItem GetPrioritizedItemForHand(VRRig targetRig, bool forLeftHand)
 	{
 		if (forLeftHand)

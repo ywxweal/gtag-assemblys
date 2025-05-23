@@ -7,41 +7,41 @@ using UnityEngine;
 // Token: 0x020005D3 RID: 1491
 public class GRVendingMachine : MonoBehaviour
 {
-	// Token: 0x0600245D RID: 9309 RVA: 0x000B6D2C File Offset: 0x000B4F2C
+	// Token: 0x0600245D RID: 9309 RVA: 0x000B6D4C File Offset: 0x000B4F4C
 	public Transform GetSpawnMarker()
 	{
 		return this.itemSpawnLocation;
 	}
 
-	// Token: 0x0600245E RID: 9310 RVA: 0x000B6D34 File Offset: 0x000B4F34
+	// Token: 0x0600245E RID: 9310 RVA: 0x000B6D54 File Offset: 0x000B4F54
 	public void NavButtonPressedLeft()
 	{
 		this.hIndex = Mathf.Max(0, this.hIndex - 1);
 		this.RefreshCardReaderDisplay();
 	}
 
-	// Token: 0x0600245F RID: 9311 RVA: 0x000B6D50 File Offset: 0x000B4F50
+	// Token: 0x0600245F RID: 9311 RVA: 0x000B6D70 File Offset: 0x000B4F70
 	public void NavButtonPressedRight()
 	{
 		this.hIndex = Mathf.Min(this.hIndex + 1, this.horizontalSteps - 1);
 		this.RefreshCardReaderDisplay();
 	}
 
-	// Token: 0x06002460 RID: 9312 RVA: 0x000B6D73 File Offset: 0x000B4F73
+	// Token: 0x06002460 RID: 9312 RVA: 0x000B6D93 File Offset: 0x000B4F93
 	public void NavButtonPressedUp()
 	{
 		this.vIndex = Mathf.Max(0, this.vIndex - 1);
 		this.RefreshCardReaderDisplay();
 	}
 
-	// Token: 0x06002461 RID: 9313 RVA: 0x000B6D8F File Offset: 0x000B4F8F
+	// Token: 0x06002461 RID: 9313 RVA: 0x000B6DAF File Offset: 0x000B4FAF
 	public void NavButtonPressedDown()
 	{
 		this.vIndex = Mathf.Min(this.vIndex + 1, this.verticalSteps - 1);
 		this.RefreshCardReaderDisplay();
 	}
 
-	// Token: 0x06002462 RID: 9314 RVA: 0x000B6DB4 File Offset: 0x000B4FB4
+	// Token: 0x06002462 RID: 9314 RVA: 0x000B6DD4 File Offset: 0x000B4FD4
 	public void RequestPurchase()
 	{
 		if (!this.currentlyVending)
@@ -59,7 +59,7 @@ public class GRVendingMachine : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06002463 RID: 9315 RVA: 0x000B6E20 File Offset: 0x000B5020
+	// Token: 0x06002463 RID: 9315 RVA: 0x000B6E40 File Offset: 0x000B5040
 	private void RefreshCardReaderDisplay()
 	{
 		int num = this.vIndex * this.horizontalSteps + this.hIndex;
@@ -71,7 +71,7 @@ public class GRVendingMachine : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06002464 RID: 9316 RVA: 0x000B6EA2 File Offset: 0x000B50A2
+	// Token: 0x06002464 RID: 9316 RVA: 0x000B6EC2 File Offset: 0x000B50C2
 	private void Update()
 	{
 		if (!this.currentlyVending)
@@ -80,7 +80,7 @@ public class GRVendingMachine : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06002465 RID: 9317 RVA: 0x000B6EDC File Offset: 0x000B50DC
+	// Token: 0x06002465 RID: 9317 RVA: 0x000B6EFC File Offset: 0x000B50FC
 	private bool MoveTransportToSlot(int x, int y, int rows, int cols, float xSpeed, float ySpeed, float dt)
 	{
 		Vector3 vector = Vector3.Lerp(this.horizontalMin.position, this.horizontalMax.position, (float)x / (float)(rows - 1));
@@ -92,7 +92,7 @@ public class GRVendingMachine : MonoBehaviour
 		return sqrMagnitude > 0.001f || sqrMagnitude2 > 0.001f;
 	}
 
-	// Token: 0x06002466 RID: 9318 RVA: 0x000B6FB6 File Offset: 0x000B51B6
+	// Token: 0x06002466 RID: 9318 RVA: 0x000B6FD6 File Offset: 0x000B51D6
 	private IEnumerator VendingCoroutine()
 	{
 		this.currentlyVending = true;
@@ -208,7 +208,7 @@ public class GRVendingMachine : MonoBehaviour
 	[Serializable]
 	public struct VendingEntry
 	{
-		// Token: 0x06002468 RID: 9320 RVA: 0x000B6FFC File Offset: 0x000B51FC
+		// Token: 0x06002468 RID: 9320 RVA: 0x000B701C File Offset: 0x000B521C
 		public int GetEntityTypeId()
 		{
 			if (!this.entityTypeIdSet)

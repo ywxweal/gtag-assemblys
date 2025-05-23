@@ -5,7 +5,7 @@ using UnityEngine.UI;
 // Token: 0x020006A1 RID: 1697
 public class ProgressBar : MonoBehaviour
 {
-	// Token: 0x06002A77 RID: 10871 RVA: 0x000D133C File Offset: 0x000CF53C
+	// Token: 0x06002A78 RID: 10872 RVA: 0x000D13E0 File Offset: 0x000CF5E0
 	public void UpdateProgress(float newFill)
 	{
 		bool flag = newFill > 1f;
@@ -27,26 +27,26 @@ public class ProgressBar : MonoBehaviour
 		}
 	}
 
-	// Token: 0x04002F5A RID: 12122
+	// Token: 0x04002F5C RID: 12124
 	[SerializeField]
 	private Image fillImage;
 
-	// Token: 0x04002F5B RID: 12123
+	// Token: 0x04002F5D RID: 12125
 	[SerializeField]
 	private bool useColors;
 
-	// Token: 0x04002F5C RID: 12124
+	// Token: 0x04002F5E RID: 12126
 	[SerializeField]
 	private Color underCapacity = Color.green;
 
-	// Token: 0x04002F5D RID: 12125
+	// Token: 0x04002F5F RID: 12127
 	[SerializeField]
 	private Color overCapacity = Color.red;
 
-	// Token: 0x04002F5E RID: 12126
+	// Token: 0x04002F60 RID: 12128
 	[SerializeField]
 	private Color atCapacity = Color.yellow;
 
-	// Token: 0x04002F5F RID: 12127
+	// Token: 0x04002F61 RID: 12129
 	private float _fillAmount;
 }

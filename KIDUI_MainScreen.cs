@@ -8,7 +8,7 @@ using UnityEngine;
 // Token: 0x0200082A RID: 2090
 public class KIDUI_MainScreen : MonoBehaviour
 {
-	// Token: 0x0600331E RID: 13086 RVA: 0x000FBF3E File Offset: 0x000FA13E
+	// Token: 0x0600331F RID: 13087 RVA: 0x000FC016 File Offset: 0x000FA216
 	private void Awake()
 	{
 		KIDUI_MainScreen._featuresList.Clear();
@@ -24,25 +24,25 @@ public class KIDUI_MainScreen : MonoBehaviour
 		this.InitialiseMainScreen();
 	}
 
-	// Token: 0x0600331F RID: 13087 RVA: 0x000FBF77 File Offset: 0x000FA177
+	// Token: 0x06003320 RID: 13088 RVA: 0x000FC04F File Offset: 0x000FA24F
 	private void OnEnable()
 	{
 		KIDManager.RegisterSessionUpdateCallback_AnyPermission(new Action(this.UpdatePermissionsAndFeaturesScreen));
 		this.UpdatePermissionsAndFeaturesScreen();
 	}
 
-	// Token: 0x06003320 RID: 13088 RVA: 0x000FBF90 File Offset: 0x000FA190
+	// Token: 0x06003321 RID: 13089 RVA: 0x000FC068 File Offset: 0x000FA268
 	private void OnDisable()
 	{
 		KIDManager.UnregisterSessionUpdateCallback_AnyPermission(new Action(this.UpdatePermissionsAndFeaturesScreen));
 	}
 
-	// Token: 0x06003321 RID: 13089 RVA: 0x000023F4 File Offset: 0x000005F4
+	// Token: 0x06003322 RID: 13090 RVA: 0x000023F4 File Offset: 0x000005F4
 	private void OnDestroy()
 	{
 	}
 
-	// Token: 0x06003322 RID: 13090 RVA: 0x000FBFA4 File Offset: 0x000FA1A4
+	// Token: 0x06003323 RID: 13091 RVA: 0x000FC07C File Offset: 0x000FA27C
 	private void ConstructFeatureSettings()
 	{
 		for (int i = 0; i < this._displayOrder.Length; i++)
@@ -59,7 +59,7 @@ public class KIDUI_MainScreen : MonoBehaviour
 		this.UpdatePermissionsAndFeaturesScreen();
 	}
 
-	// Token: 0x06003323 RID: 13091 RVA: 0x000FC010 File Offset: 0x000FA210
+	// Token: 0x06003324 RID: 13092 RVA: 0x000FC0E8 File Offset: 0x000FA2E8
 	private void CreateNewFeatureDisplay(KIDUI_MainScreen.FeatureToggleSetup setup)
 	{
 		Permission permissionDataByFeature = KIDManager.GetPermissionDataByFeature(setup.linkedFeature);
@@ -116,12 +116,12 @@ public class KIDUI_MainScreen : MonoBehaviour
 		this.ConstructAdditionalSetup(setup.linkedFeature, gameObject);
 	}
 
-	// Token: 0x06003324 RID: 13092 RVA: 0x000FC1AC File Offset: 0x000FA3AC
+	// Token: 0x06003325 RID: 13093 RVA: 0x000FC284 File Offset: 0x000FA484
 	private void ConstructAdditionalSetup(EKIDFeatures feature, GameObject featureObject)
 	{
 	}
 
-	// Token: 0x06003325 RID: 13093 RVA: 0x000FC1B4 File Offset: 0x000FA3B4
+	// Token: 0x06003326 RID: 13094 RVA: 0x000FC28C File Offset: 0x000FA48C
 	private void UpdatePermissionsAndFeaturesScreen()
 	{
 		int num = 0;
@@ -174,7 +174,7 @@ public class KIDUI_MainScreen : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06003326 RID: 13094 RVA: 0x000FC3EC File Offset: 0x000FA5EC
+	// Token: 0x06003327 RID: 13095 RVA: 0x000FC4C4 File Offset: 0x000FA6C4
 	private bool IsFeatureToggledOn(EKIDFeatures permissionFeature)
 	{
 		List<KIDUIFeatureSetting> list;
@@ -191,7 +191,7 @@ public class KIDUI_MainScreen : MonoBehaviour
 		return kiduifeatureSetting.GetFeatureToggleState();
 	}
 
-	// Token: 0x06003327 RID: 13095 RVA: 0x000FC43C File Offset: 0x000FA63C
+	// Token: 0x06003328 RID: 13096 RVA: 0x000FC514 File Offset: 0x000FA714
 	public void InitialiseMainScreen()
 	{
 		if (this._initialised)
@@ -208,7 +208,7 @@ public class KIDUI_MainScreen : MonoBehaviour
 		this._initialised = true;
 	}
 
-	// Token: 0x06003328 RID: 13096 RVA: 0x000FC4A8 File Offset: 0x000FA6A8
+	// Token: 0x06003329 RID: 13097 RVA: 0x000FC580 File Offset: 0x000FA780
 	public void ShowMainScreen(EMainScreenStatus showStatus, KIDUI_Controller.Metrics_ShowReason reason)
 	{
 		this.ShowMainScreen(showStatus);
@@ -234,7 +234,7 @@ public class KIDUI_MainScreen : MonoBehaviour
 		GorillaTelemetry.SendMothershipAnalytics(kidtelemetryData);
 	}
 
-	// Token: 0x06003329 RID: 13097 RVA: 0x000FC5E4 File Offset: 0x000FA7E4
+	// Token: 0x0600332A RID: 13098 RVA: 0x000FC6BC File Offset: 0x000FA8BC
 	public void ShowMainScreen(EMainScreenStatus showStatus)
 	{
 		KIDUI_MainScreen.ShownSettingsScreen = true;
@@ -243,7 +243,7 @@ public class KIDUI_MainScreen : MonoBehaviour
 		this.UpdateScreenStatus(showStatus, false);
 	}
 
-	// Token: 0x0600332A RID: 13098 RVA: 0x000FC608 File Offset: 0x000FA808
+	// Token: 0x0600332B RID: 13099 RVA: 0x000FC6E0 File Offset: 0x000FA8E0
 	public void UpdateScreenStatus(EMainScreenStatus showStatus, bool sendMetrics = false)
 	{
 		if (sendMetrics && showStatus == EMainScreenStatus.Updated)
@@ -310,13 +310,13 @@ public class KIDUI_MainScreen : MonoBehaviour
 		this.SetButtonContainersVisibility(KIDUI_MainScreen.GetPermissionState());
 	}
 
-	// Token: 0x0600332B RID: 13099 RVA: 0x0001F6FF File Offset: 0x0001D8FF
+	// Token: 0x0600332C RID: 13100 RVA: 0x0001F6FF File Offset: 0x0001D8FF
 	public void HideMainScreen()
 	{
 		base.gameObject.SetActive(false);
 	}
 
-	// Token: 0x0600332C RID: 13100 RVA: 0x000FC840 File Offset: 0x000FAA40
+	// Token: 0x0600332D RID: 13101 RVA: 0x000FC918 File Offset: 0x000FAB18
 	public void OnAskForPermission()
 	{
 		base.gameObject.SetActive(false);
@@ -329,7 +329,7 @@ public class KIDUI_MainScreen : MonoBehaviour
 		this._sendUpgradeEmailScreen.SendUpgradeEmail(list);
 	}
 
-	// Token: 0x0600332D RID: 13101 RVA: 0x000FC88C File Offset: 0x000FAA8C
+	// Token: 0x0600332E RID: 13102 RVA: 0x000FC964 File Offset: 0x000FAB64
 	public void OnSaveAndExit()
 	{
 		if (KIDManager.CurrentSession == null)
@@ -411,7 +411,7 @@ public class KIDUI_MainScreen : MonoBehaviour
 		KIDUI_Controller.Instance.CloseKIDScreens();
 	}
 
-	// Token: 0x0600332E RID: 13102 RVA: 0x000FCA9C File Offset: 0x000FAC9C
+	// Token: 0x0600332F RID: 13103 RVA: 0x000FCB74 File Offset: 0x000FAD74
 	public int GetFeatureListingCount()
 	{
 		int num = 0;
@@ -422,7 +422,7 @@ public class KIDUI_MainScreen : MonoBehaviour
 		return num;
 	}
 
-	// Token: 0x0600332F RID: 13103 RVA: 0x000FCAF8 File Offset: 0x000FACF8
+	// Token: 0x06003330 RID: 13104 RVA: 0x000FCBD0 File Offset: 0x000FADD0
 	private void UpdateOptInSetting(Permission permissionData, EKIDFeatures feature, Action<bool, Permission, bool> onOptedIn)
 	{
 		bool item = KIDManager.CheckFeatureOptIn(feature, permissionData).Item2;
@@ -435,14 +435,14 @@ public class KIDUI_MainScreen : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06003330 RID: 13104 RVA: 0x000FCB55 File Offset: 0x000FAD55
+	// Token: 0x06003331 RID: 13105 RVA: 0x000FCC2D File Offset: 0x000FAE2D
 	public void OnConfirmedEmailAddress(string emailAddress)
 	{
 		this._emailAddress = emailAddress;
 		Debug.LogFormat("[KID::UI::Main] Email has been confirmed: " + this._emailAddress, Array.Empty<object>());
 	}
 
-	// Token: 0x06003331 RID: 13105 RVA: 0x000FCB78 File Offset: 0x000FAD78
+	// Token: 0x06003332 RID: 13106 RVA: 0x000FCC50 File Offset: 0x000FAE50
 	private IEnumerable<string> CollectPermissionsToUpgrade()
 	{
 		return from permission in KIDManager.GetAllPermissionsData()
@@ -450,7 +450,7 @@ public class KIDUI_MainScreen : MonoBehaviour
 			select permission.Name;
 	}
 
-	// Token: 0x06003332 RID: 13106 RVA: 0x000FCBD4 File Offset: 0x000FADD4
+	// Token: 0x06003333 RID: 13107 RVA: 0x000FCCAC File Offset: 0x000FAEAC
 	private void ConfigurePermissionsButtons()
 	{
 		Debug.Log("[KID::MAIN_SCREEN] CONFIGURE BUTTONS");
@@ -463,7 +463,7 @@ public class KIDUI_MainScreen : MonoBehaviour
 		this.SetButtonContainersVisibility(KIDUI_MainScreen.GetPermissionState());
 	}
 
-	// Token: 0x06003333 RID: 13107 RVA: 0x000FCC48 File Offset: 0x000FAE48
+	// Token: 0x06003334 RID: 13108 RVA: 0x000FCD20 File Offset: 0x000FAF20
 	private void SetButtonContainersVisibility(EGetPermissionsStatus permissionStatus)
 	{
 		Debug.Log("[KID::MAIN_SCREEN] CONFIGURE BUTTONS - PERMISSION STATE: [" + permissionStatus.ToString() + "]");
@@ -472,7 +472,7 @@ public class KIDUI_MainScreen : MonoBehaviour
 		this._permissionsRequestedButtonContainer.SetActive(permissionStatus == EGetPermissionsStatus.RequestedPermission);
 	}
 
-	// Token: 0x06003334 RID: 13108 RVA: 0x000FCCA4 File Offset: 0x000FAEA4
+	// Token: 0x06003335 RID: 13109 RVA: 0x000FCD7C File Offset: 0x000FAF7C
 	private GameObject GetActiveStatusObject()
 	{
 		foreach (GameObject gameObject in new List<GameObject> { this._declinedStatus, this._timeoutStatus, this._pendingStatus, this._updatedStatus, this._setupRequiredStatus })
@@ -485,7 +485,7 @@ public class KIDUI_MainScreen : MonoBehaviour
 		return null;
 	}
 
-	// Token: 0x06003335 RID: 13109 RVA: 0x000FCD3C File Offset: 0x000FAF3C
+	// Token: 0x06003336 RID: 13110 RVA: 0x000FCE14 File Offset: 0x000FB014
 	private static EGetPermissionsStatus GetPermissionState()
 	{
 		if (!KIDManager.CurrentSession.IsDefault)
@@ -502,7 +502,7 @@ public class KIDUI_MainScreen : MonoBehaviour
 		return EGetPermissionsStatus.RequestingPermission;
 	}
 
-	// Token: 0x06003336 RID: 13110 RVA: 0x000FCD7C File Offset: 0x000FAF7C
+	// Token: 0x06003337 RID: 13111 RVA: 0x000FCE54 File Offset: 0x000FB054
 	private void OnFeatureToggleChanged(EKIDFeatures feature)
 	{
 		switch (feature)
@@ -528,180 +528,180 @@ public class KIDUI_MainScreen : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06003337 RID: 13111 RVA: 0x000FCDEE File Offset: 0x000FAFEE
+	// Token: 0x06003338 RID: 13112 RVA: 0x000FCEC6 File Offset: 0x000FB0C6
 	private void OnMultiplayerToggled()
 	{
 		Debug.LogErrorFormat("[KID::UI::MAIN_SCREEN] MULTIPLAYER Toggle NOT YET IMPLEMENTED.", Array.Empty<object>());
 	}
 
-	// Token: 0x06003338 RID: 13112 RVA: 0x000FCDFF File Offset: 0x000FAFFF
+	// Token: 0x06003339 RID: 13113 RVA: 0x000FCED7 File Offset: 0x000FB0D7
 	private void OnVoiceChatToggled()
 	{
 		Debug.LogErrorFormat("[KID::UI::MAIN_SCREEN] VOICE CHAT Toggle NOT YET IMPLEMENTED.", Array.Empty<object>());
 	}
 
-	// Token: 0x06003339 RID: 13113 RVA: 0x000FCE10 File Offset: 0x000FB010
+	// Token: 0x0600333A RID: 13114 RVA: 0x000FCEE8 File Offset: 0x000FB0E8
 	private void OnGroupToggleChanged()
 	{
 		Debug.LogErrorFormat("[KID::UI::MAIN_SCREEN] GROUPS Toggle NOT YET IMPLEMENTED.", Array.Empty<object>());
 	}
 
-	// Token: 0x0600333A RID: 13114 RVA: 0x000FCE21 File Offset: 0x000FB021
+	// Token: 0x0600333B RID: 13115 RVA: 0x000FCEF9 File Offset: 0x000FB0F9
 	private void OnModToggleChanged()
 	{
 		Debug.LogErrorFormat("[KID::UI::MAIN_SCREEN] MODS Toggle NOT YET IMPLEMENTED.", Array.Empty<object>());
 	}
 
-	// Token: 0x0600333B RID: 13115 RVA: 0x000FCE32 File Offset: 0x000FB032
+	// Token: 0x0600333C RID: 13116 RVA: 0x000FCF0A File Offset: 0x000FB10A
 	private void OnCustomNametagsToggled()
 	{
 		Debug.LogErrorFormat("[KID::UI::MAIN_SCREEN] CUSTOM USERNAMES Toggle NOT YET IMPLEMENTED.", Array.Empty<object>());
 	}
 
-	// Token: 0x040039EE RID: 14830
+	// Token: 0x040039EF RID: 14831
 	public const string OPT_IN_SUFFIX = "-opt-in";
 
-	// Token: 0x040039EF RID: 14831
-	public static bool ShownSettingsScreen = false;
-
 	// Token: 0x040039F0 RID: 14832
-	[SerializeField]
-	private GameObject _kidScreensGroup;
+	public static bool ShownSettingsScreen = false;
 
 	// Token: 0x040039F1 RID: 14833
 	[SerializeField]
-	private KIDUI_SetupScreen _setupKidScreen;
+	private GameObject _kidScreensGroup;
 
 	// Token: 0x040039F2 RID: 14834
 	[SerializeField]
-	private KIDUI_SendUpgradeEmailScreen _sendUpgradeEmailScreen;
+	private KIDUI_SetupScreen _setupKidScreen;
 
 	// Token: 0x040039F3 RID: 14835
+	[SerializeField]
+	private KIDUI_SendUpgradeEmailScreen _sendUpgradeEmailScreen;
+
+	// Token: 0x040039F4 RID: 14836
 	[Header("Permission Request Buttons")]
 	[SerializeField]
 	private KIDUIButton _getPermissionsButton;
 
-	// Token: 0x040039F4 RID: 14836
+	// Token: 0x040039F5 RID: 14837
 	[SerializeField]
 	private KIDUIButton _gettingPermissionsButton;
 
-	// Token: 0x040039F5 RID: 14837
+	// Token: 0x040039F6 RID: 14838
 	[SerializeField]
 	private KIDUIButton _requestPermissionsButton;
 
-	// Token: 0x040039F6 RID: 14838
+	// Token: 0x040039F7 RID: 14839
 	[SerializeField]
 	private GameObject _defaultButtonsContainer;
 
-	// Token: 0x040039F7 RID: 14839
+	// Token: 0x040039F8 RID: 14840
 	[SerializeField]
 	private GameObject _permissionsRequestingButtonContainer;
 
-	// Token: 0x040039F8 RID: 14840
+	// Token: 0x040039F9 RID: 14841
 	[SerializeField]
 	private GameObject _permissionsRequestedButtonContainer;
 
-	// Token: 0x040039F9 RID: 14841
+	// Token: 0x040039FA RID: 14842
 	private bool _hasAllPermissions;
 
-	// Token: 0x040039FA RID: 14842
+	// Token: 0x040039FB RID: 14843
 	[Header("Dynamic Feature Settings Setup")]
 	[SerializeField]
 	private GameObject _featurePrefab;
 
-	// Token: 0x040039FB RID: 14843
+	// Token: 0x040039FC RID: 14844
 	[SerializeField]
 	private Transform _featureRootTransform;
 
-	// Token: 0x040039FC RID: 14844
+	// Token: 0x040039FD RID: 14845
 	[SerializeField]
 	private EKIDFeatures[] _displayOrder = new EKIDFeatures[4];
 
-	// Token: 0x040039FD RID: 14845
+	// Token: 0x040039FE RID: 14846
 	[SerializeField]
 	private List<KIDUI_MainScreen.FeatureToggleSetup> _featureSetups = new List<KIDUI_MainScreen.FeatureToggleSetup>();
 
-	// Token: 0x040039FE RID: 14846
+	// Token: 0x040039FF RID: 14847
 	[Header("Additional Feature-Specific Setup")]
 	[SerializeField]
 	private GameObject _voiceChatLabel;
 
-	// Token: 0x040039FF RID: 14847
+	// Token: 0x04003A00 RID: 14848
 	[Header("Hide Permissions Tip")]
 	[SerializeField]
 	private GameObject _permissionsTip;
 
-	// Token: 0x04003A00 RID: 14848
+	// Token: 0x04003A01 RID: 14849
 	[Header("Game Status Setup")]
 	[SerializeField]
 	private GameObject _updatedStatus;
 
-	// Token: 0x04003A01 RID: 14849
+	// Token: 0x04003A02 RID: 14850
 	[SerializeField]
 	private GameObject _declinedStatus;
 
-	// Token: 0x04003A02 RID: 14850
+	// Token: 0x04003A03 RID: 14851
 	[SerializeField]
 	private GameObject _pendingStatus;
 
-	// Token: 0x04003A03 RID: 14851
+	// Token: 0x04003A04 RID: 14852
 	[SerializeField]
 	private GameObject _timeoutStatus;
 
-	// Token: 0x04003A04 RID: 14852
+	// Token: 0x04003A05 RID: 14853
 	[SerializeField]
 	private GameObject _setupRequiredStatus;
 
-	// Token: 0x04003A05 RID: 14853
+	// Token: 0x04003A06 RID: 14854
 	private string _emailAddress;
 
-	// Token: 0x04003A06 RID: 14854
+	// Token: 0x04003A07 RID: 14855
 	private bool _multiplayerEnabled;
 
-	// Token: 0x04003A07 RID: 14855
+	// Token: 0x04003A08 RID: 14856
 	private bool _customNameEnabled;
 
-	// Token: 0x04003A08 RID: 14856
+	// Token: 0x04003A09 RID: 14857
 	private bool _voiceChatEnabled;
 
-	// Token: 0x04003A09 RID: 14857
+	// Token: 0x04003A0A RID: 14858
 	private bool _initialised;
 
-	// Token: 0x04003A0A RID: 14858
+	// Token: 0x04003A0B RID: 14859
 	private KIDUI_Controller.Metrics_ShowReason _mainScreenOpenedReason;
 
-	// Token: 0x04003A0B RID: 14859
+	// Token: 0x04003A0C RID: 14860
 	private EMainScreenStatus _screenStatus;
 
-	// Token: 0x04003A0C RID: 14860
+	// Token: 0x04003A0D RID: 14861
 	private GameObject _eventSystemObj;
 
-	// Token: 0x04003A0D RID: 14861
+	// Token: 0x04003A0E RID: 14862
 	private static Dictionary<EKIDFeatures, List<KIDUIFeatureSetting>> _featuresList = new Dictionary<EKIDFeatures, List<KIDUIFeatureSetting>>();
 
 	// Token: 0x0200082B RID: 2091
 	[Serializable]
 	public struct FeatureToggleSetup
 	{
-		// Token: 0x04003A0E RID: 14862
+		// Token: 0x04003A0F RID: 14863
 		public EKIDFeatures linkedFeature;
 
-		// Token: 0x04003A0F RID: 14863
+		// Token: 0x04003A10 RID: 14864
 		public string permissionName;
 
-		// Token: 0x04003A10 RID: 14864
+		// Token: 0x04003A11 RID: 14865
 		public string featureName;
 
-		// Token: 0x04003A11 RID: 14865
+		// Token: 0x04003A12 RID: 14866
 		public bool requiresToggle;
 
-		// Token: 0x04003A12 RID: 14866
+		// Token: 0x04003A13 RID: 14867
 		public bool alwaysCheckFeatureSetting;
 
-		// Token: 0x04003A13 RID: 14867
+		// Token: 0x04003A14 RID: 14868
 		public string enabledText;
 
-		// Token: 0x04003A14 RID: 14868
+		// Token: 0x04003A15 RID: 14869
 		public string disabledText;
 	}
 }

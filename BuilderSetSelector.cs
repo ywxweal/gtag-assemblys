@@ -9,7 +9,7 @@ using UnityEngine.UI;
 // Token: 0x0200051C RID: 1308
 public class BuilderSetSelector : MonoBehaviour
 {
-	// Token: 0x06001FAA RID: 8106 RVA: 0x0009F508 File Offset: 0x0009D708
+	// Token: 0x06001FAA RID: 8106 RVA: 0x0009F528 File Offset: 0x0009D728
 	private void Start()
 	{
 		this.zoneRenderers.Clear();
@@ -43,7 +43,7 @@ public class BuilderSetSelector : MonoBehaviour
 		this.OnZoneChanged();
 	}
 
-	// Token: 0x06001FAB RID: 8107 RVA: 0x0009F630 File Offset: 0x0009D830
+	// Token: 0x06001FAB RID: 8107 RVA: 0x0009F650 File Offset: 0x0009D850
 	public void Setup(List<BuilderPieceSet.BuilderPieceCategory> categories)
 	{
 		List<BuilderPieceSet> livePieceSets = BuilderSetManager.instance.GetLivePieceSets();
@@ -81,7 +81,7 @@ public class BuilderSetSelector : MonoBehaviour
 		this.UpdateLabels();
 	}
 
-	// Token: 0x06001FAC RID: 8108 RVA: 0x0009F840 File Offset: 0x0009DA40
+	// Token: 0x06001FAC RID: 8108 RVA: 0x0009F860 File Offset: 0x0009DA60
 	private void OnDestroy()
 	{
 		if (this.previousPageButton != null)
@@ -111,7 +111,7 @@ public class BuilderSetSelector : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001FAD RID: 8109 RVA: 0x0009F954 File Offset: 0x0009DB54
+	// Token: 0x06001FAD RID: 8109 RVA: 0x0009F974 File Offset: 0x0009DB74
 	private void OnZoneChanged()
 	{
 		bool flag = ZoneManagement.instance.IsZoneActive(GTZone.monkeBlocks);
@@ -138,7 +138,7 @@ public class BuilderSetSelector : MonoBehaviour
 		this.inBuilderZone = flag;
 	}
 
-	// Token: 0x06001FAE RID: 8110 RVA: 0x0009FA10 File Offset: 0x0009DC10
+	// Token: 0x06001FAE RID: 8110 RVA: 0x0009FA30 File Offset: 0x0009DC30
 	private void OnSetButtonPressed(GorillaPressableButton button, bool isLeft)
 	{
 		int num = 0;
@@ -166,7 +166,7 @@ public class BuilderSetSelector : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001FAF RID: 8111 RVA: 0x0009FAB0 File Offset: 0x0009DCB0
+	// Token: 0x06001FAF RID: 8111 RVA: 0x0009FAD0 File Offset: 0x0009DCD0
 	private void RefreshUnlockedSets()
 	{
 		List<BuilderPieceSet> livePieceSets = BuilderSetManager.instance.GetLivePieceSets();
@@ -210,7 +210,7 @@ public class BuilderSetSelector : MonoBehaviour
 		this.UpdateLabels();
 	}
 
-	// Token: 0x06001FB0 RID: 8112 RVA: 0x0009FC80 File Offset: 0x0009DE80
+	// Token: 0x06001FB0 RID: 8112 RVA: 0x0009FCA0 File Offset: 0x0009DEA0
 	private void OnPreviousPageClicked()
 	{
 		this.RefreshUnlockedSets();
@@ -222,7 +222,7 @@ public class BuilderSetSelector : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001FB1 RID: 8113 RVA: 0x0009FCC0 File Offset: 0x0009DEC0
+	// Token: 0x06001FB1 RID: 8113 RVA: 0x0009FCE0 File Offset: 0x0009DEE0
 	private void OnNextPageClicked()
 	{
 		this.RefreshUnlockedSets();
@@ -234,7 +234,7 @@ public class BuilderSetSelector : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001FB2 RID: 8114 RVA: 0x0009FD00 File Offset: 0x0009DF00
+	// Token: 0x06001FB2 RID: 8114 RVA: 0x0009FD20 File Offset: 0x0009DF20
 	public void SetSelection(int setID)
 	{
 		if (BuilderSetManager.instance == null)
@@ -250,7 +250,7 @@ public class BuilderSetSelector : MonoBehaviour
 		this.UpdateLabels();
 	}
 
-	// Token: 0x06001FB3 RID: 8115 RVA: 0x0009FD44 File Offset: 0x0009DF44
+	// Token: 0x06001FB3 RID: 8115 RVA: 0x0009FD64 File Offset: 0x0009DF64
 	private void UpdateLabels()
 	{
 		for (int i = 0; i < this.setLabels.Length; i++)
@@ -312,7 +312,7 @@ public class BuilderSetSelector : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001FB4 RID: 8116 RVA: 0x000A0030 File Offset: 0x0009E230
+	// Token: 0x06001FB4 RID: 8116 RVA: 0x000A0050 File Offset: 0x0009E250
 	public bool DoesSetHaveIncludedCategories(BuilderPieceSet set)
 	{
 		foreach (BuilderPieceSet.BuilderPieceSubset builderPieceSubset in set.subsets)
@@ -325,13 +325,13 @@ public class BuilderSetSelector : MonoBehaviour
 		return false;
 	}
 
-	// Token: 0x06001FB5 RID: 8117 RVA: 0x000A0098 File Offset: 0x0009E298
+	// Token: 0x06001FB5 RID: 8117 RVA: 0x000A00B8 File Offset: 0x0009E2B8
 	public BuilderPieceSet GetSelectedSet()
 	{
 		return this.currentSet;
 	}
 
-	// Token: 0x06001FB6 RID: 8118 RVA: 0x000A00A0 File Offset: 0x0009E2A0
+	// Token: 0x06001FB6 RID: 8118 RVA: 0x000A00C0 File Offset: 0x0009E2C0
 	public int GetDefaultSetID()
 	{
 		if (this.pieceSets == null || this.pieceSets.Count < 1)

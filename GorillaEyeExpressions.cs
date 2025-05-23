@@ -4,13 +4,13 @@ using UnityEngine;
 // Token: 0x020005FF RID: 1535
 public class GorillaEyeExpressions : MonoBehaviour, IGorillaSliceableSimple
 {
-	// Token: 0x060025CE RID: 9678 RVA: 0x000BC0C1 File Offset: 0x000BA2C1
+	// Token: 0x060025CE RID: 9678 RVA: 0x000BC0E1 File Offset: 0x000BA2E1
 	private void Awake()
 	{
 		this.loudness = base.GetComponent<GorillaSpeakerLoudness>();
 	}
 
-	// Token: 0x060025CF RID: 9679 RVA: 0x000BC0CF File Offset: 0x000BA2CF
+	// Token: 0x060025CF RID: 9679 RVA: 0x000BC0EF File Offset: 0x000BA2EF
 	public void OnEnable()
 	{
 		GorillaSlicerSimpleManager.RegisterSliceable(this, GorillaSlicerSimpleManager.UpdateStep.LateUpdate);
@@ -24,7 +24,7 @@ public class GorillaEyeExpressions : MonoBehaviour, IGorillaSliceableSimple
 		GorillaSlicerSimpleManager.UnregisterSliceable(this, GorillaSlicerSimpleManager.UpdateStep.LateUpdate);
 	}
 
-	// Token: 0x060025D1 RID: 9681 RVA: 0x000BC0EE File Offset: 0x000BA2EE
+	// Token: 0x060025D1 RID: 9681 RVA: 0x000BC10E File Offset: 0x000BA30E
 	public void SliceUpdate()
 	{
 		this.deltaTime = Time.time - this.timeLastUpdated;
@@ -33,7 +33,7 @@ public class GorillaEyeExpressions : MonoBehaviour, IGorillaSliceableSimple
 		this.UpdateEyeExpression();
 	}
 
-	// Token: 0x060025D2 RID: 9682 RVA: 0x000BC11C File Offset: 0x000BA31C
+	// Token: 0x060025D2 RID: 9682 RVA: 0x000BC13C File Offset: 0x000BA33C
 	private void CheckEyeEffects()
 	{
 		if (this.loudness == null)
@@ -57,7 +57,7 @@ public class GorillaEyeExpressions : MonoBehaviour, IGorillaSliceableSimple
 		}
 	}
 
-	// Token: 0x060025D3 RID: 9683 RVA: 0x000BC1B4 File Offset: 0x000BA3B4
+	// Token: 0x060025D3 RID: 9683 RVA: 0x000BC1D4 File Offset: 0x000BA3D4
 	private void UpdateEyeExpression()
 	{
 		Material material = this.targetFace.GetComponent<Renderer>().material;

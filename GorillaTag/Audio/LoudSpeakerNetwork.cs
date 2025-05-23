@@ -9,7 +9,7 @@ namespace GorillaTag.Audio
 	public class LoudSpeakerNetwork : MonoBehaviour
 	{
 		// Token: 0x170008A4 RID: 2212
-		// (get) Token: 0x0600564D RID: 22093 RVA: 0x001A4394 File Offset: 0x001A2594
+		// (get) Token: 0x0600564E RID: 22094 RVA: 0x001A446C File Offset: 0x001A266C
 		public AudioSource[] SpeakerSources
 		{
 			get
@@ -18,7 +18,7 @@ namespace GorillaTag.Audio
 			}
 		}
 
-		// Token: 0x0600564E RID: 22094 RVA: 0x001A439C File Offset: 0x001A259C
+		// Token: 0x0600564F RID: 22095 RVA: 0x001A4474 File Offset: 0x001A2674
 		private void Awake()
 		{
 			if (this._speakerSources == null || this._speakerSources.Length == 0)
@@ -28,7 +28,7 @@ namespace GorillaTag.Audio
 			this._currentSpeakers = new List<Speaker>();
 		}
 
-		// Token: 0x0600564F RID: 22095 RVA: 0x001A43CC File Offset: 0x001A25CC
+		// Token: 0x06005650 RID: 22096 RVA: 0x001A44A4 File Offset: 0x001A26A4
 		private void Start()
 		{
 			RigContainer rigContainer;
@@ -42,7 +42,7 @@ namespace GorillaTag.Audio
 			}
 		}
 
-		// Token: 0x06005650 RID: 22096 RVA: 0x001A4417 File Offset: 0x001A2617
+		// Token: 0x06005651 RID: 22097 RVA: 0x001A44EF File Offset: 0x001A26EF
 		private bool GetParentRigContainer(out RigContainer rigContainer)
 		{
 			if (this._rigContainer == null)
@@ -53,7 +53,7 @@ namespace GorillaTag.Audio
 			return rigContainer != null;
 		}
 
-		// Token: 0x06005651 RID: 22097 RVA: 0x001A4448 File Offset: 0x001A2648
+		// Token: 0x06005652 RID: 22098 RVA: 0x001A4520 File Offset: 0x001A2720
 		private void OnEnable()
 		{
 			RigContainer rigContainer;
@@ -63,7 +63,7 @@ namespace GorillaTag.Audio
 			}
 		}
 
-		// Token: 0x06005652 RID: 22098 RVA: 0x001A4468 File Offset: 0x001A2668
+		// Token: 0x06005653 RID: 22099 RVA: 0x001A4540 File Offset: 0x001A2740
 		private void OnDisable()
 		{
 			RigContainer rigContainer;
@@ -73,7 +73,7 @@ namespace GorillaTag.Audio
 			}
 		}
 
-		// Token: 0x06005653 RID: 22099 RVA: 0x001A4486 File Offset: 0x001A2686
+		// Token: 0x06005654 RID: 22100 RVA: 0x001A455E File Offset: 0x001A275E
 		public void AddSpeaker(Speaker speaker)
 		{
 			if (this._currentSpeakers.Contains(speaker))
@@ -83,19 +83,19 @@ namespace GorillaTag.Audio
 			this._currentSpeakers.Add(speaker);
 		}
 
-		// Token: 0x06005654 RID: 22100 RVA: 0x001A44A3 File Offset: 0x001A26A3
+		// Token: 0x06005655 RID: 22101 RVA: 0x001A457B File Offset: 0x001A277B
 		public void RemoveSpeaker(Speaker speaker)
 		{
 			this._currentSpeakers.Remove(speaker);
 		}
 
-		// Token: 0x06005655 RID: 22101 RVA: 0x001A44B2 File Offset: 0x001A26B2
+		// Token: 0x06005656 RID: 22102 RVA: 0x001A458A File Offset: 0x001A278A
 		public void StartBroadcastSpeakerOutput(VRRig player)
 		{
 			GorillaTagger.Instance.rigSerializer.BroadcastLoudSpeakerNetwork(true, player.OwningNetPlayer.ActorNumber);
 		}
 
-		// Token: 0x06005656 RID: 22102 RVA: 0x001A44D0 File Offset: 0x001A26D0
+		// Token: 0x06005657 RID: 22103 RVA: 0x001A45A8 File Offset: 0x001A27A8
 		public void BroadcastLoudSpeakerNetwork(int actorNumber, bool isLocal = false)
 		{
 			if (isLocal)
@@ -135,13 +135,13 @@ namespace GorillaTag.Audio
 			this._currentSpeakerActor = actorNumber;
 		}
 
-		// Token: 0x06005657 RID: 22103 RVA: 0x001A45F0 File Offset: 0x001A27F0
+		// Token: 0x06005658 RID: 22104 RVA: 0x001A46C8 File Offset: 0x001A28C8
 		public void StopBroadcastSpeakerOutput(VRRig player)
 		{
 			GorillaTagger.Instance.rigSerializer.BroadcastLoudSpeakerNetwork(false, player.OwningNetPlayer.ActorNumber);
 		}
 
-		// Token: 0x06005658 RID: 22104 RVA: 0x001A4610 File Offset: 0x001A2810
+		// Token: 0x06005659 RID: 22105 RVA: 0x001A46E8 File Offset: 0x001A28E8
 		public void StopBroadcastLoudSpeakerNetwork(int actorNumber, bool isLocal = false)
 		{
 			if (isLocal)
@@ -185,25 +185,25 @@ namespace GorillaTag.Audio
 			}
 		}
 
-		// Token: 0x04005A1E RID: 23070
+		// Token: 0x04005A1F RID: 23071
 		[SerializeField]
 		private AudioSource[] _speakerSources;
 
-		// Token: 0x04005A1F RID: 23071
+		// Token: 0x04005A20 RID: 23072
 		[SerializeField]
 		private List<Speaker> _currentSpeakers;
 
-		// Token: 0x04005A20 RID: 23072
+		// Token: 0x04005A21 RID: 23073
 		[SerializeField]
 		private int _currentSpeakerActor = -1;
 
-		// Token: 0x04005A21 RID: 23073
+		// Token: 0x04005A22 RID: 23074
 		public bool ReparentLocalSpeaker = true;
 
-		// Token: 0x04005A22 RID: 23074
+		// Token: 0x04005A23 RID: 23075
 		private RigContainer _rigContainer;
 
-		// Token: 0x04005A23 RID: 23075
+		// Token: 0x04005A24 RID: 23076
 		private GTRecorder _localRecorder;
 	}
 }

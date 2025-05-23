@@ -17,7 +17,7 @@ namespace BuildSafe
 			}
 		}
 
-		// Token: 0x04004D16 RID: 19734
+		// Token: 0x04004D17 RID: 19735
 		public static readonly SessionState Shared = new SessionState();
 	}
 }

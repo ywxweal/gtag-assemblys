@@ -7,7 +7,7 @@ using UnityEngine;
 // Token: 0x02000831 RID: 2097
 public class KIDUI_SetupScreen : MonoBehaviour
 {
-	// Token: 0x06003351 RID: 13137 RVA: 0x000FD1F8 File Offset: 0x000FB3F8
+	// Token: 0x06003352 RID: 13138 RVA: 0x000FD2D0 File Offset: 0x000FB4D0
 	private void Awake()
 	{
 		if (this._emailInputField == null)
@@ -27,7 +27,7 @@ public class KIDUI_SetupScreen : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06003352 RID: 13138 RVA: 0x000FD260 File Offset: 0x000FB460
+	// Token: 0x06003353 RID: 13139 RVA: 0x000FD338 File Offset: 0x000FB538
 	private void OnEnable()
 	{
 		string @string = PlayerPrefs.GetString(KIDManager.GetEmailForUserPlayerPrefRef, "");
@@ -35,7 +35,7 @@ public class KIDUI_SetupScreen : MonoBehaviour
 		this._confirmButton.interactable = !string.IsNullOrEmpty(@string);
 	}
 
-	// Token: 0x06003353 RID: 13139 RVA: 0x000FD29D File Offset: 0x000FB49D
+	// Token: 0x06003354 RID: 13140 RVA: 0x000FD375 File Offset: 0x000FB575
 	private void OnDisable()
 	{
 		if (this._keyboard == null)
@@ -45,7 +45,7 @@ public class KIDUI_SetupScreen : MonoBehaviour
 		this._keyboard.active = false;
 	}
 
-	// Token: 0x06003354 RID: 13140 RVA: 0x000FD2B4 File Offset: 0x000FB4B4
+	// Token: 0x06003355 RID: 13141 RVA: 0x000FD38C File Offset: 0x000FB58C
 	public void OnStartSetup()
 	{
 		base.gameObject.SetActive(true);
@@ -62,13 +62,13 @@ public class KIDUI_SetupScreen : MonoBehaviour
 		});
 	}
 
-	// Token: 0x06003355 RID: 13141 RVA: 0x000FD328 File Offset: 0x000FB528
+	// Token: 0x06003356 RID: 13142 RVA: 0x000FD400 File Offset: 0x000FB600
 	public void OnInputSelected()
 	{
 		Debug.LogFormat("[KID::UI::SETUP] Email Input Selected!", Array.Empty<object>());
 	}
 
-	// Token: 0x06003356 RID: 13142 RVA: 0x000FD33C File Offset: 0x000FB53C
+	// Token: 0x06003357 RID: 13143 RVA: 0x000FD414 File Offset: 0x000FB614
 	public void OnInputChanged(string newVal)
 	{
 		bool flag = !string.IsNullOrEmpty(newVal);
@@ -79,7 +79,7 @@ public class KIDUI_SetupScreen : MonoBehaviour
 		this._confirmButton.interactable = flag;
 	}
 
-	// Token: 0x06003357 RID: 13143 RVA: 0x000FD36E File Offset: 0x000FB56E
+	// Token: 0x06003358 RID: 13144 RVA: 0x000FD446 File Offset: 0x000FB646
 	public void OnSubmitEmailPressed()
 	{
 		PlayerPrefs.SetString(KIDManager.GetEmailForUserPlayerPrefRef, this._emailInputField.text);
@@ -88,7 +88,7 @@ public class KIDUI_SetupScreen : MonoBehaviour
 		this._confirmScreen.OnEmailSubmitted(this._emailInputField.text);
 	}
 
-	// Token: 0x06003358 RID: 13144 RVA: 0x000FD3AC File Offset: 0x000FB5AC
+	// Token: 0x06003359 RID: 13145 RVA: 0x000FD484 File Offset: 0x000FB684
 	public void OnBackPressed()
 	{
 		PlayerPrefs.SetString(KIDManager.GetEmailForUserPlayerPrefRef, this._emailInputField.text);
@@ -97,25 +97,25 @@ public class KIDUI_SetupScreen : MonoBehaviour
 		this._mainScreen.ShowMainScreen(EMainScreenStatus.Previous);
 	}
 
-	// Token: 0x04003A28 RID: 14888
+	// Token: 0x04003A29 RID: 14889
 	[SerializeField]
 	private TMP_InputField _emailInputField;
 
-	// Token: 0x04003A29 RID: 14889
+	// Token: 0x04003A2A RID: 14890
 	[SerializeField]
 	private KIDUIButton _confirmButton;
 
-	// Token: 0x04003A2A RID: 14890
+	// Token: 0x04003A2B RID: 14891
 	[SerializeField]
 	private KIDUI_ConfirmScreen _confirmScreen;
 
-	// Token: 0x04003A2B RID: 14891
+	// Token: 0x04003A2C RID: 14892
 	[SerializeField]
 	private KIDUI_MainScreen _mainScreen;
 
-	// Token: 0x04003A2C RID: 14892
+	// Token: 0x04003A2D RID: 14893
 	private string _emailStr = string.Empty;
 
-	// Token: 0x04003A2D RID: 14893
+	// Token: 0x04003A2E RID: 14894
 	private TouchScreenKeyboard _keyboard;
 }

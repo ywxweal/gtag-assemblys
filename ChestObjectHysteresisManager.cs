@@ -6,7 +6,7 @@ using UnityEngine;
 [DefaultExecutionOrder(2000)]
 public class ChestObjectHysteresisManager : MonoBehaviour
 {
-	// Token: 0x0600188E RID: 6286 RVA: 0x000773AE File Offset: 0x000755AE
+	// Token: 0x0600188E RID: 6286 RVA: 0x000773CE File Offset: 0x000755CE
 	protected void Awake()
 	{
 		if (ChestObjectHysteresisManager.hasInstance && ChestObjectHysteresisManager.instance != this)
@@ -17,13 +17,13 @@ public class ChestObjectHysteresisManager : MonoBehaviour
 		ChestObjectHysteresisManager.SetInstance(this);
 	}
 
-	// Token: 0x0600188F RID: 6287 RVA: 0x000773D1 File Offset: 0x000755D1
+	// Token: 0x0600188F RID: 6287 RVA: 0x000773F1 File Offset: 0x000755F1
 	public static void CreateManager()
 	{
 		ChestObjectHysteresisManager.SetInstance(new GameObject("ChestObjectHysteresisManager").AddComponent<ChestObjectHysteresisManager>());
 	}
 
-	// Token: 0x06001890 RID: 6288 RVA: 0x000773E7 File Offset: 0x000755E7
+	// Token: 0x06001890 RID: 6288 RVA: 0x00077407 File Offset: 0x00075607
 	private static void SetInstance(ChestObjectHysteresisManager manager)
 	{
 		ChestObjectHysteresisManager.instance = manager;
@@ -34,7 +34,7 @@ public class ChestObjectHysteresisManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001891 RID: 6289 RVA: 0x00077402 File Offset: 0x00075602
+	// Token: 0x06001891 RID: 6289 RVA: 0x00077422 File Offset: 0x00075622
 	public static void RegisterCH(ChestObjectHysteresis cOH)
 	{
 		if (!ChestObjectHysteresisManager.hasInstance)
@@ -47,7 +47,7 @@ public class ChestObjectHysteresisManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001892 RID: 6290 RVA: 0x00077428 File Offset: 0x00075628
+	// Token: 0x06001892 RID: 6290 RVA: 0x00077448 File Offset: 0x00075648
 	public static void UnregisterCH(ChestObjectHysteresis cOH)
 	{
 		if (!ChestObjectHysteresisManager.hasInstance)
@@ -60,7 +60,7 @@ public class ChestObjectHysteresisManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001893 RID: 6291 RVA: 0x00077450 File Offset: 0x00075650
+	// Token: 0x06001893 RID: 6291 RVA: 0x00077470 File Offset: 0x00075670
 	public void Update()
 	{
 		for (int i = 0; i < ChestObjectHysteresisManager.allChests.Count; i++)

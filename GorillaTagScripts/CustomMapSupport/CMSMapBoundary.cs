@@ -11,7 +11,7 @@ namespace GorillaTagScripts.CustomMapSupport
 	// Token: 0x02000B31 RID: 2865
 	public class CMSMapBoundary : CMSTrigger
 	{
-		// Token: 0x06004687 RID: 18055 RVA: 0x0014F350 File Offset: 0x0014D550
+		// Token: 0x06004688 RID: 18056 RVA: 0x0014F428 File Offset: 0x0014D628
 		public override void CopyTriggerSettings(TriggerSettings settings)
 		{
 			if (settings.GetType() == typeof(MapBoundarySettings))
@@ -30,7 +30,7 @@ namespace GorillaTagScripts.CustomMapSupport
 			base.CopyTriggerSettings(settings);
 		}
 
-		// Token: 0x06004688 RID: 18056 RVA: 0x0014F3D4 File Offset: 0x0014D5D4
+		// Token: 0x06004689 RID: 18057 RVA: 0x0014F4AC File Offset: 0x0014D6AC
 		public override void Trigger(double triggerTime = -1.0, bool originatedLocally = false, bool ignoreTriggerCount = false)
 		{
 			base.Trigger(triggerTime, originatedLocally, ignoreTriggerCount);
@@ -53,13 +53,13 @@ namespace GorillaTagScripts.CustomMapSupport
 			}
 		}
 
-		// Token: 0x04004917 RID: 18711
+		// Token: 0x04004918 RID: 18712
 		[Tooltip("Teleport points used to return the player to the map. Chosen at random.")]
 		[SerializeField]
 		[NotNull]
 		public List<Transform> TeleportPoints = new List<Transform>();
 
-		// Token: 0x04004918 RID: 18712
+		// Token: 0x04004919 RID: 18713
 		public bool ShouldTagPlayer = true;
 	}
 }

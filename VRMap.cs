@@ -7,8 +7,8 @@ using UnityEngine.XR;
 public class VRMap
 {
 	// Token: 0x1700029C RID: 668
-	// (get) Token: 0x060017B7 RID: 6071 RVA: 0x00073818 File Offset: 0x00071A18
-	// (set) Token: 0x060017B8 RID: 6072 RVA: 0x00073825 File Offset: 0x00071A25
+	// (get) Token: 0x060017B7 RID: 6071 RVA: 0x00073838 File Offset: 0x00071A38
+	// (set) Token: 0x060017B8 RID: 6072 RVA: 0x00073845 File Offset: 0x00071A45
 	public Vector3 syncPos
 	{
 		get
@@ -21,14 +21,14 @@ public class VRMap
 		}
 	}
 
-	// Token: 0x060017B9 RID: 6073 RVA: 0x00073834 File Offset: 0x00071A34
+	// Token: 0x060017B9 RID: 6073 RVA: 0x00073854 File Offset: 0x00071A54
 	public void MapOther(float lerpValue)
 	{
 		this.rigTarget.localPosition = Vector3.Lerp(this.rigTarget.localPosition, this.syncPos, lerpValue);
 		this.rigTarget.localRotation = Quaternion.Lerp(this.rigTarget.localRotation, this.syncRotation, lerpValue);
 	}
 
-	// Token: 0x060017BA RID: 6074 RVA: 0x00073888 File Offset: 0x00071A88
+	// Token: 0x060017BA RID: 6074 RVA: 0x000738A8 File Offset: 0x00071AA8
 	public void MapMine(float ratio, Transform playerOffsetTransform)
 	{
 		Vector3 position = this.rigTarget.position;
@@ -57,13 +57,13 @@ public class VRMap
 		}
 	}
 
-	// Token: 0x060017BB RID: 6075 RVA: 0x00073A61 File Offset: 0x00071C61
+	// Token: 0x060017BB RID: 6075 RVA: 0x00073A81 File Offset: 0x00071C81
 	public Vector3 GetExtrapolatedControllerPosition()
 	{
 		return this.rigTarget.position - this.rigTarget.rotation * this.trackingPositionOffset * this.rigTarget.lossyScale.x;
 	}
 
-	// Token: 0x060017BC RID: 6076 RVA: 0x00073A9E File Offset: 0x00071C9E
+	// Token: 0x060017BC RID: 6076 RVA: 0x00073ABE File Offset: 0x00071CBE
 	public virtual void MapOtherFinger(float handSync, float lerpValue)
 	{
 		this.calcT = handSync;

@@ -5,20 +5,20 @@ using UnityEngine;
 // Token: 0x0200058F RID: 1423
 public class GRArmorEnemy : MonoBehaviour
 {
-	// Token: 0x060022DA RID: 8922 RVA: 0x000AEB77 File Offset: 0x000ACD77
+	// Token: 0x060022DA RID: 8922 RVA: 0x000AEB97 File Offset: 0x000ACD97
 	private void Awake()
 	{
 		this.SetHp(0);
 	}
 
-	// Token: 0x060022DB RID: 8923 RVA: 0x000AEB80 File Offset: 0x000ACD80
+	// Token: 0x060022DB RID: 8923 RVA: 0x000AEBA0 File Offset: 0x000ACDA0
 	public void SetHp(int hp)
 	{
 		this.hp = hp;
 		this.RefreshArmor();
 	}
 
-	// Token: 0x060022DC RID: 8924 RVA: 0x000AEB90 File Offset: 0x000ACD90
+	// Token: 0x060022DC RID: 8924 RVA: 0x000AEBB0 File Offset: 0x000ACDB0
 	private void RefreshArmor()
 	{
 		bool flag = this.hp > 0;
@@ -44,7 +44,7 @@ public class GRArmorEnemy : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060022DD RID: 8925 RVA: 0x000AEC6C File Offset: 0x000ACE6C
+	// Token: 0x060022DD RID: 8925 RVA: 0x000AEC8C File Offset: 0x000ACE8C
 	public void SetArmorColor(Color newColor)
 	{
 		if (this.renderers != null && this.renderers.Count > 0)
@@ -53,7 +53,7 @@ public class GRArmorEnemy : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060022DE RID: 8926 RVA: 0x000AECA0 File Offset: 0x000ACEA0
+	// Token: 0x060022DE RID: 8926 RVA: 0x000AECC0 File Offset: 0x000ACEC0
 	public Color GetArmorColor()
 	{
 		Color color = Color.white;
@@ -64,7 +64,7 @@ public class GRArmorEnemy : MonoBehaviour
 		return color;
 	}
 
-	// Token: 0x060022DF RID: 8927 RVA: 0x000AECE0 File Offset: 0x000ACEE0
+	// Token: 0x060022DF RID: 8927 RVA: 0x000AED00 File Offset: 0x000ACF00
 	public static void Hide(List<Renderer> renderers, bool hide)
 	{
 		if (renderers == null)
@@ -80,28 +80,28 @@ public class GRArmorEnemy : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060022E0 RID: 8928 RVA: 0x000AED21 File Offset: 0x000ACF21
+	// Token: 0x060022E0 RID: 8928 RVA: 0x000AED41 File Offset: 0x000ACF41
 	public void PlayHitFx(Vector3 position)
 	{
 		this.PlayFx(this.fxHit, position);
 		this.PlaySound(this.hitSound, this.hitSoundVolume, position);
 	}
 
-	// Token: 0x060022E1 RID: 8929 RVA: 0x000AED43 File Offset: 0x000ACF43
+	// Token: 0x060022E1 RID: 8929 RVA: 0x000AED63 File Offset: 0x000ACF63
 	public void PlayBlockFx(Vector3 position)
 	{
 		this.PlayFx(this.fxBlock, position);
 		this.PlaySound(this.blockSound, this.blockSoundVolume, position);
 	}
 
-	// Token: 0x060022E2 RID: 8930 RVA: 0x000AED65 File Offset: 0x000ACF65
+	// Token: 0x060022E2 RID: 8930 RVA: 0x000AED85 File Offset: 0x000ACF85
 	public void PlayDestroyFx(Vector3 position)
 	{
 		this.PlayFx(this.fxDestroy, position);
 		this.PlaySound(this.destroySound, this.destroySoundVolume, position);
 	}
 
-	// Token: 0x060022E3 RID: 8931 RVA: 0x000AED87 File Offset: 0x000ACF87
+	// Token: 0x060022E3 RID: 8931 RVA: 0x000AEDA7 File Offset: 0x000ACFA7
 	private void PlayFx(GameObject fx, Vector3 position)
 	{
 		if (fx == null)
@@ -112,7 +112,7 @@ public class GRArmorEnemy : MonoBehaviour
 		fx.SetActive(true);
 	}
 
-	// Token: 0x060022E4 RID: 8932 RVA: 0x000AEDA1 File Offset: 0x000ACFA1
+	// Token: 0x060022E4 RID: 8932 RVA: 0x000AEDC1 File Offset: 0x000ACFC1
 	private void PlaySound(AudioClip clip, float volume, Vector3 position)
 	{
 		this.audioSource.clip = clip;

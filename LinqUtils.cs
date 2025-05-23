@@ -4,7 +4,7 @@ using System.Collections.Generic;
 // Token: 0x02000999 RID: 2457
 public static class LinqUtils
 {
-	// Token: 0x06003AD4 RID: 15060 RVA: 0x0011955B File Offset: 0x0011775B
+	// Token: 0x06003AD5 RID: 15061 RVA: 0x00119633 File Offset: 0x00117833
 	public static IEnumerable<TResult> SelectManyNullSafe<TSource, TResult>(this IEnumerable<TSource> sources, Func<TSource, IEnumerable<TResult>> selector)
 	{
 		if (sources == null)
@@ -35,7 +35,7 @@ public static class LinqUtils
 		yield break;
 	}
 
-	// Token: 0x06003AD5 RID: 15061 RVA: 0x00119572 File Offset: 0x00117772
+	// Token: 0x06003AD6 RID: 15062 RVA: 0x0011964A File Offset: 0x0011784A
 	public static IEnumerable<TSource> DistinctBy<TSource, TResult>(this IEnumerable<TSource> source, Func<TSource, TResult> selector)
 	{
 		HashSet<TResult> set = new HashSet<TResult>();
@@ -52,7 +52,7 @@ public static class LinqUtils
 		yield break;
 	}
 
-	// Token: 0x06003AD6 RID: 15062 RVA: 0x0011958C File Offset: 0x0011778C
+	// Token: 0x06003AD7 RID: 15063 RVA: 0x00119664 File Offset: 0x00117864
 	public static IEnumerable<T> ForEach<T>(this IEnumerable<T> source, Action<T> action)
 	{
 		foreach (T t in source)
@@ -62,19 +62,19 @@ public static class LinqUtils
 		return source;
 	}
 
-	// Token: 0x06003AD7 RID: 15063 RVA: 0x001195D8 File Offset: 0x001177D8
+	// Token: 0x06003AD8 RID: 15064 RVA: 0x001196B0 File Offset: 0x001178B0
 	public static T[] AsArray<T>(this IEnumerable<T> source)
 	{
 		return (T[])source;
 	}
 
-	// Token: 0x06003AD8 RID: 15064 RVA: 0x001195E0 File Offset: 0x001177E0
+	// Token: 0x06003AD9 RID: 15065 RVA: 0x001196B8 File Offset: 0x001178B8
 	public static List<T> AsList<T>(this IEnumerable<T> source)
 	{
 		return (List<T>)source;
 	}
 
-	// Token: 0x06003AD9 RID: 15065 RVA: 0x001195E8 File Offset: 0x001177E8
+	// Token: 0x06003ADA RID: 15066 RVA: 0x001196C0 File Offset: 0x001178C0
 	public static IList<T> Transform<T>(this IList<T> list, Func<T, T> action)
 	{
 		for (int i = 0; i < list.Count; i++)
@@ -84,7 +84,7 @@ public static class LinqUtils
 		return list;
 	}
 
-	// Token: 0x06003ADA RID: 15066 RVA: 0x0011961B File Offset: 0x0011781B
+	// Token: 0x06003ADB RID: 15067 RVA: 0x001196F3 File Offset: 0x001178F3
 	public static IEnumerable<T> Self<T>(this T value)
 	{
 		yield return value;

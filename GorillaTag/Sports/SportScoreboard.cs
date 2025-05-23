@@ -13,7 +13,7 @@ namespace GorillaTag.Sports
 	[NetworkBehaviourWeaved(2)]
 	public class SportScoreboard : NetworkComponent
 	{
-		// Token: 0x0600550C RID: 21772 RVA: 0x0019E184 File Offset: 0x0019C384
+		// Token: 0x0600550D RID: 21773 RVA: 0x0019E25C File Offset: 0x0019C45C
 		protected override void Awake()
 		{
 			base.Awake();
@@ -27,14 +27,14 @@ namespace GorillaTag.Sports
 			}
 		}
 
-		// Token: 0x0600550D RID: 21773 RVA: 0x0019E1ED File Offset: 0x0019C3ED
+		// Token: 0x0600550E RID: 21774 RVA: 0x0019E2C5 File Offset: 0x0019C4C5
 		public void RegisterTeamVisual(int TeamIndex, SportScoreboardVisuals visuals)
 		{
 			this.scoreVisuals[TeamIndex] = visuals;
 			this.UpdateScoreboard();
 		}
 
-		// Token: 0x0600550E RID: 21774 RVA: 0x0019E200 File Offset: 0x0019C400
+		// Token: 0x0600550F RID: 21775 RVA: 0x0019E2D8 File Offset: 0x0019C4D8
 		private void UpdateScoreboard()
 		{
 			for (int i = 0; i < this.teamParameters.Count; i++)
@@ -54,7 +54,7 @@ namespace GorillaTag.Sports
 			}
 		}
 
-		// Token: 0x0600550F RID: 21775 RVA: 0x0019E29C File Offset: 0x0019C49C
+		// Token: 0x06005510 RID: 21776 RVA: 0x0019E374 File Offset: 0x0019C574
 		private void OnScoreUpdated()
 		{
 			for (int i = 0; i < this.teamScores.Count; i++)
@@ -79,7 +79,7 @@ namespace GorillaTag.Sports
 			this.UpdateScoreboard();
 		}
 
-		// Token: 0x06005510 RID: 21776 RVA: 0x0019E390 File Offset: 0x0019C590
+		// Token: 0x06005511 RID: 21777 RVA: 0x0019E468 File Offset: 0x0019C668
 		public void TeamScored(int team)
 		{
 			if (base.IsMine && !this.runningMatchEndCoroutine)
@@ -92,7 +92,7 @@ namespace GorillaTag.Sports
 			}
 		}
 
-		// Token: 0x06005511 RID: 21777 RVA: 0x0019E3E0 File Offset: 0x0019C5E0
+		// Token: 0x06005512 RID: 21778 RVA: 0x0019E4B8 File Offset: 0x0019C6B8
 		public void ResetScores()
 		{
 			if (base.IsMine && !this.runningMatchEndCoroutine)
@@ -105,7 +105,7 @@ namespace GorillaTag.Sports
 			}
 		}
 
-		// Token: 0x06005512 RID: 21778 RVA: 0x0019E426 File Offset: 0x0019C626
+		// Token: 0x06005513 RID: 21779 RVA: 0x0019E4FE File Offset: 0x0019C6FE
 		private IEnumerator MatchEndCoroutine(int winningTeam)
 		{
 			this.runningMatchEndCoroutine = true;
@@ -120,7 +120,7 @@ namespace GorillaTag.Sports
 		}
 
 		// Token: 0x1700087F RID: 2175
-		// (get) Token: 0x06005513 RID: 21779 RVA: 0x0019E43C File Offset: 0x0019C63C
+		// (get) Token: 0x06005514 RID: 21780 RVA: 0x0019E514 File Offset: 0x0019C714
 		[Networked]
 		[Capacity(2)]
 		[NetworkedWeaved(0, 2)]
@@ -136,13 +136,13 @@ namespace GorillaTag.Sports
 			}
 		}
 
-		// Token: 0x06005514 RID: 21780 RVA: 0x0019E478 File Offset: 0x0019C678
+		// Token: 0x06005515 RID: 21781 RVA: 0x0019E550 File Offset: 0x0019C750
 		public override void WriteDataFusion()
 		{
 			this.Data.CopyFrom(this.teamScores, 0, this.teamScores.Count);
 		}
 
-		// Token: 0x06005515 RID: 21781 RVA: 0x0019E4A8 File Offset: 0x0019C6A8
+		// Token: 0x06005516 RID: 21782 RVA: 0x0019E580 File Offset: 0x0019C780
 		public override void ReadDataFusion()
 		{
 			this.teamScores.Clear();
@@ -150,7 +150,7 @@ namespace GorillaTag.Sports
 			this.OnScoreUpdated();
 		}
 
-		// Token: 0x06005516 RID: 21782 RVA: 0x0019E4DC File Offset: 0x0019C6DC
+		// Token: 0x06005517 RID: 21783 RVA: 0x0019E5B4 File Offset: 0x0019C7B4
 		protected override void WriteDataPUN(PhotonStream stream, PhotonMessageInfo info)
 		{
 			for (int i = 0; i < this.teamScores.Count; i++)
@@ -159,7 +159,7 @@ namespace GorillaTag.Sports
 			}
 		}
 
-		// Token: 0x06005517 RID: 21783 RVA: 0x0019E518 File Offset: 0x0019C718
+		// Token: 0x06005518 RID: 21784 RVA: 0x0019E5F0 File Offset: 0x0019C7F0
 		protected override void ReadDataPUN(PhotonStream stream, PhotonMessageInfo info)
 		{
 			for (int i = 0; i < this.teamScores.Count; i++)
@@ -169,7 +169,7 @@ namespace GorillaTag.Sports
 			this.OnScoreUpdated();
 		}
 
-		// Token: 0x06005519 RID: 21785 RVA: 0x0019E593 File Offset: 0x0019C793
+		// Token: 0x0600551A RID: 21786 RVA: 0x0019E66B File Offset: 0x0019C86B
 		[WeaverGenerated]
 		public override void CopyBackingFieldsToState(bool A_1)
 		{
@@ -177,7 +177,7 @@ namespace GorillaTag.Sports
 			NetworkBehaviourUtils.InitializeNetworkArray<int>(this.Data, this._Data, "Data");
 		}
 
-		// Token: 0x0600551A RID: 21786 RVA: 0x0019E5B5 File Offset: 0x0019C7B5
+		// Token: 0x0600551B RID: 21787 RVA: 0x0019E68D File Offset: 0x0019C88D
 		[WeaverGenerated]
 		public override void CopyStateToBackingFields()
 		{
@@ -185,38 +185,38 @@ namespace GorillaTag.Sports
 			NetworkBehaviourUtils.CopyFromNetworkArray<int>(this.Data, ref this._Data);
 		}
 
-		// Token: 0x04005853 RID: 22611
+		// Token: 0x04005854 RID: 22612
 		[OnEnterPlay_SetNull]
 		public static SportScoreboard Instance;
 
-		// Token: 0x04005854 RID: 22612
+		// Token: 0x04005855 RID: 22613
 		[SerializeField]
 		private List<SportScoreboard.TeamParameters> teamParameters = new List<SportScoreboard.TeamParameters>();
 
-		// Token: 0x04005855 RID: 22613
+		// Token: 0x04005856 RID: 22614
 		[SerializeField]
 		private int matchEndScore = 3;
 
-		// Token: 0x04005856 RID: 22614
+		// Token: 0x04005857 RID: 22615
 		[SerializeField]
 		private float matchEndScoreResetDelayTime = 3f;
 
-		// Token: 0x04005857 RID: 22615
+		// Token: 0x04005858 RID: 22616
 		private List<int> teamScores = new List<int>();
 
-		// Token: 0x04005858 RID: 22616
+		// Token: 0x04005859 RID: 22617
 		private List<int> teamScoresPrev = new List<int>();
 
-		// Token: 0x04005859 RID: 22617
+		// Token: 0x0400585A RID: 22618
 		private bool runningMatchEndCoroutine;
 
-		// Token: 0x0400585A RID: 22618
+		// Token: 0x0400585B RID: 22619
 		private AudioSource audioSource;
 
-		// Token: 0x0400585B RID: 22619
+		// Token: 0x0400585C RID: 22620
 		private SportScoreboardVisuals[] scoreVisuals;
 
-		// Token: 0x0400585C RID: 22620
+		// Token: 0x0400585D RID: 22621
 		[WeaverGenerated]
 		[SerializeField]
 		[DefaultForProperty("Data", 0, 2)]
@@ -227,11 +227,11 @@ namespace GorillaTag.Sports
 		[Serializable]
 		private class TeamParameters
 		{
-			// Token: 0x0400585D RID: 22621
+			// Token: 0x0400585E RID: 22622
 			[SerializeField]
 			public AudioClip matchWonAudio;
 
-			// Token: 0x0400585E RID: 22622
+			// Token: 0x0400585F RID: 22623
 			[SerializeField]
 			public AudioClip goalScoredAudio;
 		}

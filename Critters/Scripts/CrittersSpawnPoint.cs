@@ -6,7 +6,7 @@ namespace Critters.Scripts
 	// Token: 0x02000E1F RID: 3615
 	public class CrittersSpawnPoint : MonoBehaviour
 	{
-		// Token: 0x06005A7B RID: 23163 RVA: 0x001B90C0 File Offset: 0x001B72C0
+		// Token: 0x06005A7C RID: 23164 RVA: 0x001B9198 File Offset: 0x001B7398
 		private void OnDrawGizmos()
 		{
 			Gizmos.color = Color.blue;

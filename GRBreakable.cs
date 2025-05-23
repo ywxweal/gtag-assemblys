@@ -6,7 +6,7 @@ using UnityEngine;
 public class GRBreakable : MonoBehaviour
 {
 	// Token: 0x17000361 RID: 865
-	// (get) Token: 0x060022FF RID: 8959 RVA: 0x000AF2C2 File Offset: 0x000AD4C2
+	// (get) Token: 0x060022FF RID: 8959 RVA: 0x000AF2E2 File Offset: 0x000AD4E2
 	public bool BrokenLocal
 	{
 		get
@@ -15,13 +15,13 @@ public class GRBreakable : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06002300 RID: 8960 RVA: 0x000AF2CA File Offset: 0x000AD4CA
+	// Token: 0x06002300 RID: 8960 RVA: 0x000AF2EA File Offset: 0x000AD4EA
 	private void OnEnable()
 	{
 		this.gameEntity.OnStateChanged += this.OnEntityStateChanged;
 	}
 
-	// Token: 0x06002301 RID: 8961 RVA: 0x000AF2E3 File Offset: 0x000AD4E3
+	// Token: 0x06002301 RID: 8961 RVA: 0x000AF303 File Offset: 0x000AD503
 	private void OnDisable()
 	{
 		if (this.gameEntity != null)
@@ -30,7 +30,7 @@ public class GRBreakable : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06002302 RID: 8962 RVA: 0x000AF30C File Offset: 0x000AD50C
+	// Token: 0x06002302 RID: 8962 RVA: 0x000AF32C File Offset: 0x000AD52C
 	private void OnEntityStateChanged(long prevState, long nextState)
 	{
 		GRBreakable.BreakableState breakableState = (GRBreakable.BreakableState)nextState;
@@ -45,7 +45,7 @@ public class GRBreakable : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06002303 RID: 8963 RVA: 0x000AF330 File Offset: 0x000AD530
+	// Token: 0x06002303 RID: 8963 RVA: 0x000AF350 File Offset: 0x000AD550
 	public void TryHit(GameEntity toolEntity = null)
 	{
 		if (!this.brokenLocal)
@@ -55,7 +55,7 @@ public class GRBreakable : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06002304 RID: 8964 RVA: 0x000AF354 File Offset: 0x000AD554
+	// Token: 0x06002304 RID: 8964 RVA: 0x000AF374 File Offset: 0x000AD574
 	public void BreakLocal()
 	{
 		if (!this.brokenLocal)
@@ -80,7 +80,7 @@ public class GRBreakable : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06002305 RID: 8965 RVA: 0x000AF40C File Offset: 0x000AD60C
+	// Token: 0x06002305 RID: 8965 RVA: 0x000AF42C File Offset: 0x000AD62C
 	public void RestoreLocal()
 	{
 		if (this.brokenLocal)

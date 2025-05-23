@@ -3,7 +3,7 @@
 // Token: 0x020007AF RID: 1967
 public class VerifyAgeData
 {
-	// Token: 0x060030C2 RID: 12482 RVA: 0x000EFB78 File Offset: 0x000EDD78
+	// Token: 0x060030C3 RID: 12483 RVA: 0x000EFC1C File Offset: 0x000EDE1C
 	public VerifyAgeData(VerifyAgeResponse response)
 	{
 		if (response == null)
@@ -18,9 +18,9 @@ public class VerifyAgeData
 		this.Session = new TMPSession(response.Session, response.DefaultSession, this.Status);
 	}
 
-	// Token: 0x0400371A RID: 14106
+	// Token: 0x0400371B RID: 14107
 	public readonly SessionStatus Status;
 
-	// Token: 0x0400371B RID: 14107
+	// Token: 0x0400371C RID: 14108
 	public readonly TMPSession Session;
 }

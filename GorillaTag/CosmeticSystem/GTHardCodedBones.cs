@@ -9,14 +9,14 @@ namespace GorillaTag.CosmeticSystem
 	// Token: 0x02000D81 RID: 3457
 	public static class GTHardCodedBones
 	{
-		// Token: 0x060055ED RID: 21997 RVA: 0x001A2292 File Offset: 0x001A0492
+		// Token: 0x060055EE RID: 21998 RVA: 0x001A236A File Offset: 0x001A056A
 		[RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
 		private static void HandleRuntimeInitialize_OnBeforeSceneLoad()
 		{
 			VRRigCache.OnPostInitialize += GTHardCodedBones.HandleVRRigCache_OnPostInitialize;
 		}
 
-		// Token: 0x060055EE RID: 21998 RVA: 0x001A22A5 File Offset: 0x001A04A5
+		// Token: 0x060055EF RID: 21999 RVA: 0x001A237D File Offset: 0x001A057D
 		private static void HandleVRRigCache_OnPostInitialize()
 		{
 			VRRigCache.OnPostInitialize -= GTHardCodedBones.HandleVRRigCache_OnPostInitialize;
@@ -24,7 +24,7 @@ namespace GorillaTag.CosmeticSystem
 			VRRigCache.OnPostSpawnRig += GTHardCodedBones.HandleVRRigCache_OnPostSpawnRig;
 		}
 
-		// Token: 0x060055EF RID: 21999 RVA: 0x001A22D0 File Offset: 0x001A04D0
+		// Token: 0x060055F0 RID: 22000 RVA: 0x001A23A8 File Offset: 0x001A05A8
 		private static void HandleVRRigCache_OnPostSpawnRig()
 		{
 			if (!VRRigCache.isInitialized || ApplicationQuittingState.IsQuitting)
@@ -50,14 +50,14 @@ namespace GorillaTag.CosmeticSystem
 			}
 		}
 
-		// Token: 0x060055F0 RID: 22000 RVA: 0x000430AE File Offset: 0x000412AE
+		// Token: 0x060055F1 RID: 22001 RVA: 0x000430AE File Offset: 0x000412AE
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		public static int GetBoneIndex(GTHardCodedBones.EBone bone)
 		{
 			return (int)bone;
 		}
 
-		// Token: 0x060055F1 RID: 22001 RVA: 0x001A2348 File Offset: 0x001A0548
+		// Token: 0x060055F2 RID: 22002 RVA: 0x001A2420 File Offset: 0x001A0620
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		public static int GetBoneIndex(string name)
 		{
@@ -71,7 +71,7 @@ namespace GorillaTag.CosmeticSystem
 			return 0;
 		}
 
-		// Token: 0x060055F2 RID: 22002 RVA: 0x001A237C File Offset: 0x001A057C
+		// Token: 0x060055F3 RID: 22003 RVA: 0x001A2454 File Offset: 0x001A0654
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		public static bool TryGetBoneIndexByName(string name, out int out_index)
 		{
@@ -87,14 +87,14 @@ namespace GorillaTag.CosmeticSystem
 			return false;
 		}
 
-		// Token: 0x060055F3 RID: 22003 RVA: 0x001A23B3 File Offset: 0x001A05B3
+		// Token: 0x060055F4 RID: 22004 RVA: 0x001A248B File Offset: 0x001A068B
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		public static GTHardCodedBones.EBone GetBone(string name)
 		{
 			return (GTHardCodedBones.EBone)GTHardCodedBones.GetBoneIndex(name);
 		}
 
-		// Token: 0x060055F4 RID: 22004 RVA: 0x001A23BC File Offset: 0x001A05BC
+		// Token: 0x060055F5 RID: 22005 RVA: 0x001A2494 File Offset: 0x001A0694
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		public static bool TryGetBoneByName(string name, out GTHardCodedBones.EBone out_eBone)
 		{
@@ -108,14 +108,14 @@ namespace GorillaTag.CosmeticSystem
 			return false;
 		}
 
-		// Token: 0x060055F5 RID: 22005 RVA: 0x001A23DC File Offset: 0x001A05DC
+		// Token: 0x060055F6 RID: 22006 RVA: 0x001A24B4 File Offset: 0x001A06B4
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		public static string GetBoneName(int boneIndex)
 		{
 			return GTHardCodedBones.kBoneNames[boneIndex];
 		}
 
-		// Token: 0x060055F6 RID: 22006 RVA: 0x001A23E5 File Offset: 0x001A05E5
+		// Token: 0x060055F7 RID: 22007 RVA: 0x001A24BD File Offset: 0x001A06BD
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		public static bool TryGetBoneName(int boneIndex, out string out_name)
 		{
@@ -128,21 +128,21 @@ namespace GorillaTag.CosmeticSystem
 			return false;
 		}
 
-		// Token: 0x060055F7 RID: 22007 RVA: 0x001A2408 File Offset: 0x001A0608
+		// Token: 0x060055F8 RID: 22008 RVA: 0x001A24E0 File Offset: 0x001A06E0
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		public static string GetBoneName(GTHardCodedBones.EBone bone)
 		{
 			return GTHardCodedBones.GetBoneName((int)bone);
 		}
 
-		// Token: 0x060055F8 RID: 22008 RVA: 0x001A2410 File Offset: 0x001A0610
+		// Token: 0x060055F9 RID: 22009 RVA: 0x001A24E8 File Offset: 0x001A06E8
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		public static bool TryGetBoneName(GTHardCodedBones.EBone bone, out string out_name)
 		{
 			return GTHardCodedBones.TryGetBoneName((int)bone, out out_name);
 		}
 
-		// Token: 0x060055F9 RID: 22009 RVA: 0x001A241C File Offset: 0x001A061C
+		// Token: 0x060055FA RID: 22010 RVA: 0x001A24F4 File Offset: 0x001A06F4
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		public static long GetBoneBitFlag(string name)
 		{
@@ -160,7 +160,7 @@ namespace GorillaTag.CosmeticSystem
 			return 0L;
 		}
 
-		// Token: 0x060055FA RID: 22010 RVA: 0x001A2466 File Offset: 0x001A0666
+		// Token: 0x060055FB RID: 22011 RVA: 0x001A253E File Offset: 0x001A073E
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		public static long GetBoneBitFlag(GTHardCodedBones.EBone bone)
 		{
@@ -171,7 +171,7 @@ namespace GorillaTag.CosmeticSystem
 			return 1L << bone - GTHardCodedBones.EBone.rig;
 		}
 
-		// Token: 0x060055FB RID: 22011 RVA: 0x001A2477 File Offset: 0x001A0677
+		// Token: 0x060055FC RID: 22012 RVA: 0x001A254F File Offset: 0x001A074F
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		public static EHandedness GetHandednessFromBone(GTHardCodedBones.EBone bone)
 		{
@@ -186,7 +186,7 @@ namespace GorillaTag.CosmeticSystem
 			return EHandedness.Right;
 		}
 
-		// Token: 0x060055FC RID: 22012 RVA: 0x001A24A4 File Offset: 0x001A06A4
+		// Token: 0x060055FD RID: 22013 RVA: 0x001A257C File Offset: 0x001A077C
 		public static bool TryGetBoneXforms(VRRig vrRig, out Transform[] outBoneXforms, out string outErrorMsg)
 		{
 			outErrorMsg = string.Empty;
@@ -219,7 +219,7 @@ namespace GorillaTag.CosmeticSystem
 			return true;
 		}
 
-		// Token: 0x060055FD RID: 22013 RVA: 0x001A2570 File Offset: 0x001A0770
+		// Token: 0x060055FE RID: 22014 RVA: 0x001A2648 File Offset: 0x001A0848
 		public static bool TryGetSlotAnchorXforms(VRRig vrRig, out Transform[] outSlotXforms, out string outErrorMsg)
 		{
 			outErrorMsg = string.Empty;
@@ -253,7 +253,7 @@ namespace GorillaTag.CosmeticSystem
 			return true;
 		}
 
-		// Token: 0x060055FE RID: 22014 RVA: 0x001A2628 File Offset: 0x001A0828
+		// Token: 0x060055FF RID: 22015 RVA: 0x001A2700 File Offset: 0x001A0900
 		public static bool TryGetBoneXforms(SkinnedMeshRenderer skinnedMeshRenderer, out Transform[] outBoneXforms, out string outErrorMsg)
 		{
 			outErrorMsg = string.Empty;
@@ -381,7 +381,7 @@ namespace GorillaTag.CosmeticSystem
 			return true;
 		}
 
-		// Token: 0x060055FF RID: 22015 RVA: 0x001A29C8 File Offset: 0x001A0BC8
+		// Token: 0x06005600 RID: 22016 RVA: 0x001A2AA0 File Offset: 0x001A0CA0
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		public static bool TryGetBoneXform(Transform[] boneXforms, string boneName, out Transform boneXform)
 		{
@@ -389,7 +389,7 @@ namespace GorillaTag.CosmeticSystem
 			return boneXform != null;
 		}
 
-		// Token: 0x06005600 RID: 22016 RVA: 0x001A29DC File Offset: 0x001A0BDC
+		// Token: 0x06005601 RID: 22017 RVA: 0x001A2AB4 File Offset: 0x001A0CB4
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		public static bool TryGetBoneXform(Transform[] boneXforms, GTHardCodedBones.EBone eBone, out Transform boneXform)
 		{
@@ -397,7 +397,7 @@ namespace GorillaTag.CosmeticSystem
 			return boneXform != null;
 		}
 
-		// Token: 0x06005601 RID: 22017 RVA: 0x001A29F0 File Offset: 0x001A0BF0
+		// Token: 0x06005602 RID: 22018 RVA: 0x001A2AC8 File Offset: 0x001A0CC8
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		public static bool TryGetFirstBoneInParents(Transform transform, out GTHardCodedBones.EBone eBone, out Transform boneXform)
 		{
@@ -461,7 +461,7 @@ namespace GorillaTag.CosmeticSystem
 			return false;
 		}
 
-		// Token: 0x06005602 RID: 22018 RVA: 0x001A2AE0 File Offset: 0x001A0CE0
+		// Token: 0x06005603 RID: 22019 RVA: 0x001A2BB8 File Offset: 0x001A0DB8
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		public static GTHardCodedBones.EBone GetBoneEnumOfCosmeticPosStateFlag(TransferrableObject.PositionState positionState)
 		{
@@ -512,7 +512,7 @@ namespace GorillaTag.CosmeticSystem
 			throw new ArgumentOutOfRangeException(positionState.ToString());
 		}
 
-		// Token: 0x06005603 RID: 22019 RVA: 0x001A2B60 File Offset: 0x001A0D60
+		// Token: 0x06005604 RID: 22020 RVA: 0x001A2C38 File Offset: 0x001A0E38
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		public static List<GTHardCodedBones.EBone> GetBoneEnumsFromCosmeticBodyDockDropPosFlags(BodyDockPositions.DropPositions enumFlags)
 		{
@@ -528,7 +528,7 @@ namespace GorillaTag.CosmeticSystem
 			return list;
 		}
 
-		// Token: 0x06005604 RID: 22020 RVA: 0x001A2BB8 File Offset: 0x001A0DB8
+		// Token: 0x06005605 RID: 22021 RVA: 0x001A2C90 File Offset: 0x001A0E90
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		public static List<GTHardCodedBones.EBone> GetBoneEnumsFromCosmeticTransferrablePosStateFlags(TransferrableObject.PositionState enumFlags)
 		{
@@ -544,14 +544,14 @@ namespace GorillaTag.CosmeticSystem
 			return list;
 		}
 
-		// Token: 0x06005605 RID: 22021 RVA: 0x001A2C0C File Offset: 0x001A0E0C
+		// Token: 0x06005606 RID: 22022 RVA: 0x001A2CE4 File Offset: 0x001A0EE4
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		public static bool TryGetTransferrablePosStateFromBoneEnum(GTHardCodedBones.EBone eBone, out TransferrableObject.PositionState outPosState)
 		{
 			return GTHardCodedBones._k_eBone_to_transferrablePosState.TryGetValue(eBone, out outPosState);
 		}
 
-		// Token: 0x06005606 RID: 22022 RVA: 0x001A2C1C File Offset: 0x001A0E1C
+		// Token: 0x06005607 RID: 22023 RVA: 0x001A2CF4 File Offset: 0x001A0EF4
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		public static Transform GetBoneXformOfCosmeticPosStateFlag(TransferrableObject.PositionState anchorPosState, Transform[] bones)
 		{
@@ -567,10 +567,10 @@ namespace GorillaTag.CosmeticSystem
 			return null;
 		}
 
-		// Token: 0x04005968 RID: 22888
+		// Token: 0x04005969 RID: 22889
 		public const int kBoneCount = 53;
 
-		// Token: 0x04005969 RID: 22889
+		// Token: 0x0400596A RID: 22890
 		public static readonly string[] kBoneNames = new string[]
 		{
 			"None", "rig", "body", "head", "head_end", "shoulder.L", "upper_arm.L", "forearm.L", "hand.L", "palm.01.L",
@@ -581,13 +581,13 @@ namespace GorillaTag.CosmeticSystem
 			"hand_L_AnchorBack", "hand_R_AnchorBack", "hand_L_AnchorFront_GameModeItemSlot"
 		};
 
-		// Token: 0x0400596A RID: 22890
+		// Token: 0x0400596B RID: 22891
 		private const long kLeftSideMask = 1728432283058160L;
 
-		// Token: 0x0400596B RID: 22891
+		// Token: 0x0400596C RID: 22892
 		private const long kRightSideMask = 1769114204897280L;
 
-		// Token: 0x0400596C RID: 22892
+		// Token: 0x0400596D RID: 22893
 		private static readonly Dictionary<BodyDockPositions.DropPositions, GTHardCodedBones.EBone> _k_bodyDockDropPosition_to_eBone = new Dictionary<BodyDockPositions.DropPositions, GTHardCodedBones.EBone>
 		{
 			{
@@ -616,7 +616,7 @@ namespace GorillaTag.CosmeticSystem
 			}
 		};
 
-		// Token: 0x0400596D RID: 22893
+		// Token: 0x0400596E RID: 22894
 		private static readonly Dictionary<TransferrableObject.PositionState, GTHardCodedBones.EBone> _k_transferrablePosState_to_eBone = new Dictionary<TransferrableObject.PositionState, GTHardCodedBones.EBone>
 		{
 			{
@@ -657,7 +657,7 @@ namespace GorillaTag.CosmeticSystem
 			}
 		};
 
-		// Token: 0x0400596E RID: 22894
+		// Token: 0x0400596F RID: 22895
 		private static readonly Dictionary<GTHardCodedBones.EBone, TransferrableObject.PositionState> _k_eBone_to_transferrablePosState = new Dictionary<GTHardCodedBones.EBone, TransferrableObject.PositionState>
 		{
 			{
@@ -694,17 +694,17 @@ namespace GorillaTag.CosmeticSystem
 			}
 		};
 
-		// Token: 0x0400596F RID: 22895
+		// Token: 0x04005970 RID: 22896
 		[OnEnterPlay_Clear]
 		[OnExitPlay_Clear]
 		private static readonly List<int> _gMissingBonesReport = new List<int>(53);
 
-		// Token: 0x04005970 RID: 22896
+		// Token: 0x04005971 RID: 22897
 		[OnEnterPlay_Clear]
 		[OnExitPlay_Clear]
 		private static readonly Dictionary<int, Transform[]> _gInstIds_To_boneXforms = new Dictionary<int, Transform[]>(20);
 
-		// Token: 0x04005971 RID: 22897
+		// Token: 0x04005972 RID: 22898
 		[OnEnterPlay_Clear]
 		[OnExitPlay_Clear]
 		private static readonly Dictionary<int, Transform[]> _gInstIds_To_slotXforms = new Dictionary<int, Transform[]>(20);
@@ -712,186 +712,186 @@ namespace GorillaTag.CosmeticSystem
 		// Token: 0x02000D82 RID: 3458
 		public enum EBone
 		{
-			// Token: 0x04005973 RID: 22899
-			None,
 			// Token: 0x04005974 RID: 22900
-			rig,
+			None,
 			// Token: 0x04005975 RID: 22901
-			body,
+			rig,
 			// Token: 0x04005976 RID: 22902
-			head,
+			body,
 			// Token: 0x04005977 RID: 22903
-			head_end,
+			head,
 			// Token: 0x04005978 RID: 22904
-			shoulder_L,
+			head_end,
 			// Token: 0x04005979 RID: 22905
-			upper_arm_L,
+			shoulder_L,
 			// Token: 0x0400597A RID: 22906
-			forearm_L,
+			upper_arm_L,
 			// Token: 0x0400597B RID: 22907
-			hand_L,
+			forearm_L,
 			// Token: 0x0400597C RID: 22908
-			palm_01_L,
+			hand_L,
 			// Token: 0x0400597D RID: 22909
-			palm_02_L,
+			palm_01_L,
 			// Token: 0x0400597E RID: 22910
-			thumb_01_L,
+			palm_02_L,
 			// Token: 0x0400597F RID: 22911
-			thumb_02_L,
+			thumb_01_L,
 			// Token: 0x04005980 RID: 22912
-			thumb_03_L,
+			thumb_02_L,
 			// Token: 0x04005981 RID: 22913
-			thumb_03_L_end,
+			thumb_03_L,
 			// Token: 0x04005982 RID: 22914
-			f_index_01_L,
+			thumb_03_L_end,
 			// Token: 0x04005983 RID: 22915
-			f_index_02_L,
+			f_index_01_L,
 			// Token: 0x04005984 RID: 22916
-			f_index_03_L,
+			f_index_02_L,
 			// Token: 0x04005985 RID: 22917
-			f_index_03_L_end,
+			f_index_03_L,
 			// Token: 0x04005986 RID: 22918
-			f_middle_01_L,
+			f_index_03_L_end,
 			// Token: 0x04005987 RID: 22919
-			f_middle_02_L,
+			f_middle_01_L,
 			// Token: 0x04005988 RID: 22920
-			f_middle_03_L,
+			f_middle_02_L,
 			// Token: 0x04005989 RID: 22921
-			f_middle_03_L_end,
+			f_middle_03_L,
 			// Token: 0x0400598A RID: 22922
-			shoulder_R,
+			f_middle_03_L_end,
 			// Token: 0x0400598B RID: 22923
-			upper_arm_R,
+			shoulder_R,
 			// Token: 0x0400598C RID: 22924
-			forearm_R,
+			upper_arm_R,
 			// Token: 0x0400598D RID: 22925
-			hand_R,
+			forearm_R,
 			// Token: 0x0400598E RID: 22926
-			palm_01_R,
+			hand_R,
 			// Token: 0x0400598F RID: 22927
-			palm_02_R,
+			palm_01_R,
 			// Token: 0x04005990 RID: 22928
-			thumb_01_R,
+			palm_02_R,
 			// Token: 0x04005991 RID: 22929
-			thumb_02_R,
+			thumb_01_R,
 			// Token: 0x04005992 RID: 22930
-			thumb_03_R,
+			thumb_02_R,
 			// Token: 0x04005993 RID: 22931
-			thumb_03_R_end,
+			thumb_03_R,
 			// Token: 0x04005994 RID: 22932
-			f_index_01_R,
+			thumb_03_R_end,
 			// Token: 0x04005995 RID: 22933
-			f_index_02_R,
+			f_index_01_R,
 			// Token: 0x04005996 RID: 22934
-			f_index_03_R,
+			f_index_02_R,
 			// Token: 0x04005997 RID: 22935
-			f_index_03_R_end,
+			f_index_03_R,
 			// Token: 0x04005998 RID: 22936
-			f_middle_01_R,
+			f_index_03_R_end,
 			// Token: 0x04005999 RID: 22937
-			f_middle_02_R,
+			f_middle_01_R,
 			// Token: 0x0400599A RID: 22938
-			f_middle_03_R,
+			f_middle_02_R,
 			// Token: 0x0400599B RID: 22939
-			f_middle_03_R_end,
+			f_middle_03_R,
 			// Token: 0x0400599C RID: 22940
-			body_AnchorTop_Neck,
+			f_middle_03_R_end,
 			// Token: 0x0400599D RID: 22941
-			body_AnchorFront_StowSlot,
+			body_AnchorTop_Neck,
 			// Token: 0x0400599E RID: 22942
-			body_AnchorFrontLeft_Badge,
+			body_AnchorFront_StowSlot,
 			// Token: 0x0400599F RID: 22943
-			body_AnchorFrontRight_NameTag,
+			body_AnchorFrontLeft_Badge,
 			// Token: 0x040059A0 RID: 22944
-			body_AnchorBack,
+			body_AnchorFrontRight_NameTag,
 			// Token: 0x040059A1 RID: 22945
-			body_AnchorBackLeft_StowSlot,
+			body_AnchorBack,
 			// Token: 0x040059A2 RID: 22946
-			body_AnchorBackRight_StowSlot,
+			body_AnchorBackLeft_StowSlot,
 			// Token: 0x040059A3 RID: 22947
-			body_AnchorBottom,
+			body_AnchorBackRight_StowSlot,
 			// Token: 0x040059A4 RID: 22948
-			body_AnchorBackBottom_Tail,
+			body_AnchorBottom,
 			// Token: 0x040059A5 RID: 22949
-			hand_L_AnchorBack,
+			body_AnchorBackBottom_Tail,
 			// Token: 0x040059A6 RID: 22950
-			hand_R_AnchorBack,
+			hand_L_AnchorBack,
 			// Token: 0x040059A7 RID: 22951
+			hand_R_AnchorBack,
+			// Token: 0x040059A8 RID: 22952
 			hand_L_AnchorFront_GameModeItemSlot
 		}
 
 		// Token: 0x02000D83 RID: 3459
 		public enum EStowSlots
 		{
-			// Token: 0x040059A9 RID: 22953
-			None,
 			// Token: 0x040059AA RID: 22954
-			forearm_L = 7,
+			None,
 			// Token: 0x040059AB RID: 22955
-			forearm_R = 25,
+			forearm_L = 7,
 			// Token: 0x040059AC RID: 22956
-			body_AnchorFront_Chest = 42,
+			forearm_R = 25,
 			// Token: 0x040059AD RID: 22957
-			body_AnchorBackLeft = 46,
+			body_AnchorFront_Chest = 42,
 			// Token: 0x040059AE RID: 22958
+			body_AnchorBackLeft = 46,
+			// Token: 0x040059AF RID: 22959
 			body_AnchorBackRight
 		}
 
 		// Token: 0x02000D84 RID: 3460
 		public enum EHandAndStowSlots
 		{
-			// Token: 0x040059B0 RID: 22960
-			None,
 			// Token: 0x040059B1 RID: 22961
-			forearm_L = 7,
+			None,
 			// Token: 0x040059B2 RID: 22962
-			hand_L,
+			forearm_L = 7,
 			// Token: 0x040059B3 RID: 22963
-			forearm_R = 25,
+			hand_L,
 			// Token: 0x040059B4 RID: 22964
-			hand_R,
+			forearm_R = 25,
 			// Token: 0x040059B5 RID: 22965
-			body_AnchorFront_Chest = 42,
+			hand_R,
 			// Token: 0x040059B6 RID: 22966
-			body_AnchorBackLeft = 46,
+			body_AnchorFront_Chest = 42,
 			// Token: 0x040059B7 RID: 22967
+			body_AnchorBackLeft = 46,
+			// Token: 0x040059B8 RID: 22968
 			body_AnchorBackRight
 		}
 
 		// Token: 0x02000D85 RID: 3461
 		public enum ECosmeticSlots
 		{
-			// Token: 0x040059B9 RID: 22969
-			Hat = 4,
 			// Token: 0x040059BA RID: 22970
-			Badge = 43,
+			Hat = 4,
 			// Token: 0x040059BB RID: 22971
-			Face = 3,
+			Badge = 43,
 			// Token: 0x040059BC RID: 22972
-			ArmLeft = 6,
+			Face = 3,
 			// Token: 0x040059BD RID: 22973
-			ArmRight = 24,
+			ArmLeft = 6,
 			// Token: 0x040059BE RID: 22974
-			BackLeft = 46,
+			ArmRight = 24,
 			// Token: 0x040059BF RID: 22975
-			BackRight,
+			BackLeft = 46,
 			// Token: 0x040059C0 RID: 22976
-			HandLeft = 8,
+			BackRight,
 			// Token: 0x040059C1 RID: 22977
-			HandRight = 26,
+			HandLeft = 8,
 			// Token: 0x040059C2 RID: 22978
-			Chest = 42,
+			HandRight = 26,
 			// Token: 0x040059C3 RID: 22979
-			Fur = 1,
+			Chest = 42,
 			// Token: 0x040059C4 RID: 22980
-			Shirt,
+			Fur = 1,
 			// Token: 0x040059C5 RID: 22981
-			Pants = 48,
+			Shirt,
 			// Token: 0x040059C6 RID: 22982
-			Back = 45,
+			Pants = 48,
 			// Token: 0x040059C7 RID: 22983
-			Arms = 2,
+			Back = 45,
 			// Token: 0x040059C8 RID: 22984
+			Arms = 2,
+			// Token: 0x040059C9 RID: 22985
 			TagEffect = 0
 		}
 
@@ -900,8 +900,8 @@ namespace GorillaTag.CosmeticSystem
 		public struct SturdyEBone : ISerializationCallbackReceiver
 		{
 			// Token: 0x170008A0 RID: 2208
-			// (get) Token: 0x06005608 RID: 22024 RVA: 0x001A2F78 File Offset: 0x001A1178
-			// (set) Token: 0x06005609 RID: 22025 RVA: 0x001A2F80 File Offset: 0x001A1180
+			// (get) Token: 0x06005609 RID: 22025 RVA: 0x001A3050 File Offset: 0x001A1250
+			// (set) Token: 0x0600560A RID: 22026 RVA: 0x001A3058 File Offset: 0x001A1258
 			public GTHardCodedBones.EBone Bone
 			{
 				get
@@ -915,50 +915,50 @@ namespace GorillaTag.CosmeticSystem
 				}
 			}
 
-			// Token: 0x0600560A RID: 22026 RVA: 0x001A2F9A File Offset: 0x001A119A
+			// Token: 0x0600560B RID: 22027 RVA: 0x001A3072 File Offset: 0x001A1272
 			public SturdyEBone(GTHardCodedBones.EBone bone)
 			{
 				this._bone = bone;
 				this._boneName = null;
 			}
 
-			// Token: 0x0600560B RID: 22027 RVA: 0x001A2FAA File Offset: 0x001A11AA
+			// Token: 0x0600560C RID: 22028 RVA: 0x001A3082 File Offset: 0x001A1282
 			public SturdyEBone(string boneName)
 			{
 				this._bone = GTHardCodedBones.GetBone(boneName);
 				this._boneName = null;
 			}
 
-			// Token: 0x0600560C RID: 22028 RVA: 0x001A2FBF File Offset: 0x001A11BF
+			// Token: 0x0600560D RID: 22029 RVA: 0x001A3097 File Offset: 0x001A1297
 			public static implicit operator GTHardCodedBones.EBone(GTHardCodedBones.SturdyEBone sturdyBone)
 			{
 				return sturdyBone.Bone;
 			}
 
-			// Token: 0x0600560D RID: 22029 RVA: 0x001A2FC8 File Offset: 0x001A11C8
+			// Token: 0x0600560E RID: 22030 RVA: 0x001A30A0 File Offset: 0x001A12A0
 			public static implicit operator GTHardCodedBones.SturdyEBone(GTHardCodedBones.EBone bone)
 			{
 				return new GTHardCodedBones.SturdyEBone(bone);
 			}
 
-			// Token: 0x0600560E RID: 22030 RVA: 0x001A2FBF File Offset: 0x001A11BF
+			// Token: 0x0600560F RID: 22031 RVA: 0x001A3097 File Offset: 0x001A1297
 			public static explicit operator int(GTHardCodedBones.SturdyEBone sturdyBone)
 			{
 				return (int)sturdyBone.Bone;
 			}
 
-			// Token: 0x0600560F RID: 22031 RVA: 0x001A2FD0 File Offset: 0x001A11D0
+			// Token: 0x06005610 RID: 22032 RVA: 0x001A30A8 File Offset: 0x001A12A8
 			public override string ToString()
 			{
 				return this._boneName;
 			}
 
-			// Token: 0x06005610 RID: 22032 RVA: 0x000023F4 File Offset: 0x000005F4
+			// Token: 0x06005611 RID: 22033 RVA: 0x000023F4 File Offset: 0x000005F4
 			void ISerializationCallbackReceiver.OnBeforeSerialize()
 			{
 			}
 
-			// Token: 0x06005611 RID: 22033 RVA: 0x001A2FD8 File Offset: 0x001A11D8
+			// Token: 0x06005612 RID: 22034 RVA: 0x001A30B0 File Offset: 0x001A12B0
 			void ISerializationCallbackReceiver.OnAfterDeserialize()
 			{
 				if (string.IsNullOrEmpty(this._boneName))
@@ -974,11 +974,11 @@ namespace GorillaTag.CosmeticSystem
 				}
 			}
 
-			// Token: 0x040059C9 RID: 22985
+			// Token: 0x040059CA RID: 22986
 			[SerializeField]
 			private GTHardCodedBones.EBone _bone;
 
-			// Token: 0x040059CA RID: 22986
+			// Token: 0x040059CB RID: 22987
 			[SerializeField]
 			private string _boneName;
 		}

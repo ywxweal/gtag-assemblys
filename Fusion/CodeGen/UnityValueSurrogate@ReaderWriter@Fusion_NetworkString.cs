@@ -9,8 +9,8 @@ namespace Fusion.CodeGen
 	internal class UnityValueSurrogate@ReaderWriter@Fusion_NetworkString : UnityValueSurrogate<NetworkString<_32>, ReaderWriter@Fusion_NetworkString>
 	{
 		// Token: 0x17000918 RID: 2328
-		// (get) Token: 0x06005D91 RID: 23953 RVA: 0x001CD058 File Offset: 0x001CB258
-		// (set) Token: 0x06005D92 RID: 23954 RVA: 0x001CD060 File Offset: 0x001CB260
+		// (get) Token: 0x06005D92 RID: 23954 RVA: 0x001CD130 File Offset: 0x001CB330
+		// (set) Token: 0x06005D93 RID: 23955 RVA: 0x001CD138 File Offset: 0x001CB338
 		[WeaverGenerated]
 		public override NetworkString<_32> DataProperty
 		{
@@ -26,13 +26,13 @@ namespace Fusion.CodeGen
 			}
 		}
 
-		// Token: 0x06005D93 RID: 23955 RVA: 0x001CD069 File Offset: 0x001CB269
+		// Token: 0x06005D94 RID: 23956 RVA: 0x001CD141 File Offset: 0x001CB341
 		[WeaverGenerated]
 		public UnityValueSurrogate@ReaderWriter@Fusion_NetworkString()
 		{
 		}
 
-		// Token: 0x04006194 RID: 24980
+		// Token: 0x04006195 RID: 24981
 		[WeaverGenerated]
 		public NetworkString<_32> Data;
 	}

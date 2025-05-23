@@ -9,16 +9,16 @@ namespace GorillaTagScripts.Builder
 	public class BuilderProjectile : MonoBehaviour
 	{
 		// Token: 0x170006EF RID: 1775
-		// (get) Token: 0x06004817 RID: 18455 RVA: 0x00157C75 File Offset: 0x00155E75
-		// (set) Token: 0x06004818 RID: 18456 RVA: 0x00157C7D File Offset: 0x00155E7D
+		// (get) Token: 0x06004818 RID: 18456 RVA: 0x00157D4D File Offset: 0x00155F4D
+		// (set) Token: 0x06004819 RID: 18457 RVA: 0x00157D55 File Offset: 0x00155F55
 		public Vector3 launchPosition { get; private set; }
 
 		// Token: 0x1400007E RID: 126
-		// (add) Token: 0x06004819 RID: 18457 RVA: 0x00157C88 File Offset: 0x00155E88
-		// (remove) Token: 0x0600481A RID: 18458 RVA: 0x00157CC0 File Offset: 0x00155EC0
+		// (add) Token: 0x0600481A RID: 18458 RVA: 0x00157D60 File Offset: 0x00155F60
+		// (remove) Token: 0x0600481B RID: 18459 RVA: 0x00157D98 File Offset: 0x00155F98
 		public event BuilderProjectile.ProjectileImpactEvent OnImpact;
 
-		// Token: 0x0600481B RID: 18459 RVA: 0x00157CF8 File Offset: 0x00155EF8
+		// Token: 0x0600481C RID: 18460 RVA: 0x00157DD0 File Offset: 0x00155FD0
 		public void Launch(Vector3 position, Vector3 velocity, BuilderProjectileLauncher sourceObject, int projectileCount, float scale, int timeStamp)
 		{
 			this.particleLaunched = true;
@@ -55,7 +55,7 @@ namespace GorillaTagScripts.Builder
 			this.projectileSource.RegisterProjectile(this);
 		}
 
-		// Token: 0x0600481C RID: 18460 RVA: 0x00157EB9 File Offset: 0x001560B9
+		// Token: 0x0600481D RID: 18461 RVA: 0x00157F91 File Offset: 0x00156191
 		protected void Awake()
 		{
 			this.projectileRigidbody = base.GetComponent<Rigidbody>();
@@ -63,7 +63,7 @@ namespace GorillaTagScripts.Builder
 			this.initialScale = base.transform.localScale.x;
 		}
 
-		// Token: 0x0600481D RID: 18461 RVA: 0x00157EEC File Offset: 0x001560EC
+		// Token: 0x0600481E RID: 18462 RVA: 0x00157FC4 File Offset: 0x001561C4
 		public void Deactivate()
 		{
 			base.transform.localScale = Vector3.one * this.initialScale;
@@ -78,7 +78,7 @@ namespace GorillaTagScripts.Builder
 			ObjectPools.instance.Destroy(base.gameObject);
 		}
 
-		// Token: 0x0600481E RID: 18462 RVA: 0x00157F84 File Offset: 0x00156184
+		// Token: 0x0600481F RID: 18463 RVA: 0x0015805C File Offset: 0x0015625C
 		private void SpawnImpactEffect(GameObject prefab, Vector3 position, Vector3 normal)
 		{
 			Vector3 vector = position + normal * this.impactEffectOffset;
@@ -98,7 +98,7 @@ namespace GorillaTagScripts.Builder
 			}
 		}
 
-		// Token: 0x0600481F RID: 18463 RVA: 0x0015802C File Offset: 0x0015622C
+		// Token: 0x06004820 RID: 18464 RVA: 0x00158104 File Offset: 0x00156304
 		public void ApplyHitKnockback(Vector3 hitNormal)
 		{
 			if (this.aoeKnockbackConfig != null && this.aoeKnockbackConfig.Value.applyAOEKnockback)
@@ -112,14 +112,14 @@ namespace GorillaTagScripts.Builder
 			}
 		}
 
-		// Token: 0x06004820 RID: 18464 RVA: 0x001580BC File Offset: 0x001562BC
+		// Token: 0x06004821 RID: 18465 RVA: 0x00158194 File Offset: 0x00156394
 		private void OnEnable()
 		{
 			this.timeCreated = 0f;
 			this.particleLaunched = false;
 		}
 
-		// Token: 0x06004821 RID: 18465 RVA: 0x001580D0 File Offset: 0x001562D0
+		// Token: 0x06004822 RID: 18466 RVA: 0x001581A8 File Offset: 0x001563A8
 		protected void OnDisable()
 		{
 			this.particleLaunched = false;
@@ -130,7 +130,7 @@ namespace GorillaTagScripts.Builder
 			this.projectileSource = null;
 		}
 
-		// Token: 0x06004822 RID: 18466 RVA: 0x001580FC File Offset: 0x001562FC
+		// Token: 0x06004823 RID: 18467 RVA: 0x001581D4 File Offset: 0x001563D4
 		public void UpdateProjectile()
 		{
 			if (this.particleLaunched)
@@ -150,7 +150,7 @@ namespace GorillaTagScripts.Builder
 			}
 		}
 
-		// Token: 0x06004823 RID: 18467 RVA: 0x00158178 File Offset: 0x00156378
+		// Token: 0x06004824 RID: 18468 RVA: 0x00158250 File Offset: 0x00156450
 		private void OnCollisionEnter(Collision other)
 		{
 			if (!this.particleLaunched)
@@ -176,7 +176,7 @@ namespace GorillaTagScripts.Builder
 			this.Deactivate();
 		}
 
-		// Token: 0x06004824 RID: 18468 RVA: 0x00158230 File Offset: 0x00156430
+		// Token: 0x06004825 RID: 18469 RVA: 0x00158308 File Offset: 0x00156508
 		protected void OnCollisionStay(Collision other)
 		{
 			if (!this.particleLaunched)
@@ -202,7 +202,7 @@ namespace GorillaTagScripts.Builder
 			this.Deactivate();
 		}
 
-		// Token: 0x06004825 RID: 18469 RVA: 0x001582E8 File Offset: 0x001564E8
+		// Token: 0x06004826 RID: 18470 RVA: 0x001583C0 File Offset: 0x001565C0
 		protected void OnTriggerEnter(Collider other)
 		{
 			if (!this.particleLaunched)
@@ -231,66 +231,66 @@ namespace GorillaTagScripts.Builder
 			this.Deactivate();
 		}
 
-		// Token: 0x04004A8E RID: 19086
+		// Token: 0x04004A8F RID: 19087
 		public BuilderProjectileLauncher projectileSource;
 
-		// Token: 0x04004A8F RID: 19087
+		// Token: 0x04004A90 RID: 19088
 		[Tooltip("Rotates to point along the Y axis after spawn.")]
 		public GameObject surfaceImpactEffectPrefab;
 
-		// Token: 0x04004A90 RID: 19088
+		// Token: 0x04004A91 RID: 19089
 		[Tooltip("Distance from the surface that the particle should spawn.")]
 		private float impactEffectOffset;
 
-		// Token: 0x04004A91 RID: 19089
+		// Token: 0x04004A92 RID: 19090
 		public float lifeTime = 20f;
 
-		// Token: 0x04004A92 RID: 19090
+		// Token: 0x04004A93 RID: 19091
 		public bool faceDirectionOfTravel = true;
 
-		// Token: 0x04004A93 RID: 19091
+		// Token: 0x04004A94 RID: 19092
 		private bool particleLaunched;
 
-		// Token: 0x04004A94 RID: 19092
+		// Token: 0x04004A95 RID: 19093
 		private float timeCreated;
 
-		// Token: 0x04004A96 RID: 19094
+		// Token: 0x04004A97 RID: 19095
 		private Rigidbody projectileRigidbody;
 
-		// Token: 0x04004A97 RID: 19095
+		// Token: 0x04004A98 RID: 19096
 		public int projectileId;
 
-		// Token: 0x04004A98 RID: 19096
+		// Token: 0x04004A99 RID: 19097
 		private float initialScale;
 
-		// Token: 0x04004A99 RID: 19097
-		private Vector3 previousPosition;
-
 		// Token: 0x04004A9A RID: 19098
-		[HideInInspector]
-		public SlingshotProjectile.AOEKnockbackConfig? aoeKnockbackConfig;
+		private Vector3 previousPosition;
 
 		// Token: 0x04004A9B RID: 19099
 		[HideInInspector]
-		public float? impactSoundVolumeOverride;
+		public SlingshotProjectile.AOEKnockbackConfig? aoeKnockbackConfig;
 
 		// Token: 0x04004A9C RID: 19100
 		[HideInInspector]
-		public float? impactSoundPitchOverride;
+		public float? impactSoundVolumeOverride;
 
 		// Token: 0x04004A9D RID: 19101
 		[HideInInspector]
-		public float impactEffectScaleMultiplier = 1f;
+		public float? impactSoundPitchOverride;
 
 		// Token: 0x04004A9E RID: 19102
 		[HideInInspector]
-		public float gravityMultiplier = 1f;
+		public float impactEffectScaleMultiplier = 1f;
 
 		// Token: 0x04004A9F RID: 19103
+		[HideInInspector]
+		public float gravityMultiplier = 1f;
+
+		// Token: 0x04004AA0 RID: 19104
 		private ConstantForce forceComponent;
 
 		// Token: 0x02000B64 RID: 2916
-		// (Invoke) Token: 0x06004828 RID: 18472
+		// (Invoke) Token: 0x06004829 RID: 18473
 		public delegate void ProjectileImpactEvent(BuilderProjectile projectile, Vector3 impactPos, NetPlayer hitPlayer);
 	}
 }

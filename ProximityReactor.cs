@@ -6,7 +6,7 @@ using UnityEngine.Events;
 public class ProximityReactor : MonoBehaviour
 {
 	// Token: 0x170004BE RID: 1214
-	// (get) Token: 0x06002F9F RID: 12191 RVA: 0x000ED091 File Offset: 0x000EB291
+	// (get) Token: 0x06002FA0 RID: 12192 RVA: 0x000ED135 File Offset: 0x000EB335
 	public float proximityRange
 	{
 		get
@@ -16,7 +16,7 @@ public class ProximityReactor : MonoBehaviour
 	}
 
 	// Token: 0x170004BF RID: 1215
-	// (get) Token: 0x06002FA0 RID: 12192 RVA: 0x000ED0A0 File Offset: 0x000EB2A0
+	// (get) Token: 0x06002FA1 RID: 12193 RVA: 0x000ED144 File Offset: 0x000EB344
 	public float distance
 	{
 		get
@@ -26,7 +26,7 @@ public class ProximityReactor : MonoBehaviour
 	}
 
 	// Token: 0x170004C0 RID: 1216
-	// (get) Token: 0x06002FA1 RID: 12193 RVA: 0x000ED0A8 File Offset: 0x000EB2A8
+	// (get) Token: 0x06002FA2 RID: 12194 RVA: 0x000ED14C File Offset: 0x000EB34C
 	public float distanceLinear
 	{
 		get
@@ -35,7 +35,7 @@ public class ProximityReactor : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06002FA2 RID: 12194 RVA: 0x000ED0B0 File Offset: 0x000EB2B0
+	// Token: 0x06002FA3 RID: 12195 RVA: 0x000ED154 File Offset: 0x000EB354
 	public void SetRigFrom()
 	{
 		VRRig componentInParent = base.GetComponentInParent<VRRig>(true);
@@ -45,7 +45,7 @@ public class ProximityReactor : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06002FA3 RID: 12195 RVA: 0x000ED0DC File Offset: 0x000EB2DC
+	// Token: 0x06002FA4 RID: 12196 RVA: 0x000ED180 File Offset: 0x000EB380
 	public void SetRigTo()
 	{
 		VRRig componentInParent = base.GetComponentInParent<VRRig>(true);
@@ -55,32 +55,32 @@ public class ProximityReactor : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06002FA4 RID: 12196 RVA: 0x000ED106 File Offset: 0x000EB306
+	// Token: 0x06002FA5 RID: 12197 RVA: 0x000ED1AA File Offset: 0x000EB3AA
 	public void SetTransformFrom(Transform t)
 	{
 		this.from = t;
 	}
 
-	// Token: 0x06002FA5 RID: 12197 RVA: 0x000ED10F File Offset: 0x000EB30F
+	// Token: 0x06002FA6 RID: 12198 RVA: 0x000ED1B3 File Offset: 0x000EB3B3
 	public void SetTransformTo(Transform t)
 	{
 		this.to = t;
 	}
 
-	// Token: 0x06002FA6 RID: 12198 RVA: 0x000ED118 File Offset: 0x000EB318
+	// Token: 0x06002FA7 RID: 12199 RVA: 0x000ED1BC File Offset: 0x000EB3BC
 	private void Setup()
 	{
 		this._distance = 0f;
 		this._distanceLinear = 0f;
 	}
 
-	// Token: 0x06002FA7 RID: 12199 RVA: 0x000ED130 File Offset: 0x000EB330
+	// Token: 0x06002FA8 RID: 12200 RVA: 0x000ED1D4 File Offset: 0x000EB3D4
 	private void OnEnable()
 	{
 		this.Setup();
 	}
 
-	// Token: 0x06002FA8 RID: 12200 RVA: 0x000ED138 File Offset: 0x000EB338
+	// Token: 0x06002FA9 RID: 12201 RVA: 0x000ED1DC File Offset: 0x000EB3DC
 	private void Update()
 	{
 		if (!this.from || !this.to)
@@ -129,39 +129,39 @@ public class ProximityReactor : MonoBehaviour
 		}
 	}
 
-	// Token: 0x04003621 RID: 13857
+	// Token: 0x04003623 RID: 13859
 	public Transform from;
 
-	// Token: 0x04003622 RID: 13858
+	// Token: 0x04003624 RID: 13860
 	public Transform to;
 
-	// Token: 0x04003623 RID: 13859
+	// Token: 0x04003625 RID: 13861
 	[Space]
 	public float proximityMin;
 
-	// Token: 0x04003624 RID: 13860
+	// Token: 0x04003626 RID: 13862
 	public float proximityMax = 1f;
 
-	// Token: 0x04003625 RID: 13861
+	// Token: 0x04003627 RID: 13863
 	[Space]
 	[NonSerialized]
 	private float _distance;
 
-	// Token: 0x04003626 RID: 13862
+	// Token: 0x04003628 RID: 13864
 	[NonSerialized]
 	private float _distanceLinear;
 
-	// Token: 0x04003627 RID: 13863
+	// Token: 0x04003629 RID: 13865
 	[Space]
 	public UnityEvent<float> onProximityChanged;
 
-	// Token: 0x04003628 RID: 13864
+	// Token: 0x0400362A RID: 13866
 	public UnityEvent<float> onProximityChangedLinear;
 
-	// Token: 0x04003629 RID: 13865
+	// Token: 0x0400362B RID: 13867
 	[Space]
 	public UnityEvent<float> onBelowMinProximity;
 
-	// Token: 0x0400362A RID: 13866
+	// Token: 0x0400362C RID: 13868
 	public UnityEvent<float> onAboveMaxProximity;
 }

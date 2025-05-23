@@ -6,7 +6,7 @@ using UnityEngine.UI;
 [Obsolete("This class is obsolete and will be removed in a future version. (MattO 2024-02-26) It doesn't appear to be used anywhere.")]
 public class GorillaHatButton : MonoBehaviour
 {
-	// Token: 0x06002685 RID: 9861 RVA: 0x000BE5EC File Offset: 0x000BC7EC
+	// Token: 0x06002685 RID: 9861 RVA: 0x000BE60C File Offset: 0x000BC80C
 	public void Update()
 	{
 		if (this.testPress)
@@ -21,7 +21,7 @@ public class GorillaHatButton : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06002686 RID: 9862 RVA: 0x000BE654 File Offset: 0x000BC854
+	// Token: 0x06002686 RID: 9862 RVA: 0x000BE674 File Offset: 0x000BC874
 	private void OnTriggerEnter(Collider collider)
 	{
 		if (this.touchTime + this.debounceTime < Time.time && collider.GetComponentInParent<GorillaTriggerColliderHandIndicator>() != null)
@@ -37,7 +37,7 @@ public class GorillaHatButton : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06002687 RID: 9863 RVA: 0x000BE6F4 File Offset: 0x000BC8F4
+	// Token: 0x06002687 RID: 9863 RVA: 0x000BE714 File Offset: 0x000BC914
 	public void UpdateColor()
 	{
 		if (this.isOn)

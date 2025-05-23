@@ -9,7 +9,7 @@ using UnityEngine.Networking;
 // Token: 0x02000433 RID: 1075
 public class NexusManager : MonoBehaviour
 {
-	// Token: 0x06001A8E RID: 6798 RVA: 0x00082743 File Offset: 0x00080943
+	// Token: 0x06001A8E RID: 6798 RVA: 0x00082763 File Offset: 0x00080963
 	private void Awake()
 	{
 		if (NexusManager.instance == null)
@@ -20,13 +20,13 @@ public class NexusManager : MonoBehaviour
 		Object.Destroy(this);
 	}
 
-	// Token: 0x06001A8F RID: 6799 RVA: 0x0008275F File Offset: 0x0008095F
+	// Token: 0x06001A8F RID: 6799 RVA: 0x0008277F File Offset: 0x0008097F
 	private void Start()
 	{
 		SDKInitializer.Init(this.publicApiKey, this.environment);
 	}
 
-	// Token: 0x06001A90 RID: 6800 RVA: 0x00082772 File Offset: 0x00080972
+	// Token: 0x06001A90 RID: 6800 RVA: 0x00082792 File Offset: 0x00080992
 	public static IEnumerator GetMembers(NexusManager.GetMembersRequest RequestParams, Action<AttributionAPI.GetMembers200Response> onSuccess, Action<string> onFailure)
 	{
 		string text = SDKInitializer.ApiBaseUrl + "/manage/members";
@@ -66,7 +66,7 @@ public class NexusManager : MonoBehaviour
 		yield break;
 	}
 
-	// Token: 0x06001A91 RID: 6801 RVA: 0x00082790 File Offset: 0x00080990
+	// Token: 0x06001A91 RID: 6801 RVA: 0x000827B0 File Offset: 0x000809B0
 	public void VerifyCreatorCode(string code, Action<Member> onSuccess, Action onFailure)
 	{
 		NexusManager.GetMemberByCodeRequest getMemberByCodeRequest = new NexusManager.GetMemberByCodeRequest
@@ -76,7 +76,7 @@ public class NexusManager : MonoBehaviour
 		base.StartCoroutine(NexusManager.GetMemberByCode(getMemberByCodeRequest, onSuccess, onFailure));
 	}
 
-	// Token: 0x06001A92 RID: 6802 RVA: 0x000827BE File Offset: 0x000809BE
+	// Token: 0x06001A92 RID: 6802 RVA: 0x000827DE File Offset: 0x000809DE
 	public static IEnumerator GetMemberByCode(NexusManager.GetMemberByCodeRequest RequestParams, Action<Member> onSuccess, Action onFailure)
 	{
 		string text = SDKInitializer.ApiBaseUrl + "/manage/members/{memberCode}";
@@ -126,13 +126,13 @@ public class NexusManager : MonoBehaviour
 	public struct GetMemberByCodeRequest
 	{
 		// Token: 0x170002DF RID: 735
-		// (get) Token: 0x06001A94 RID: 6804 RVA: 0x000827F9 File Offset: 0x000809F9
-		// (set) Token: 0x06001A95 RID: 6805 RVA: 0x00082801 File Offset: 0x00080A01
+		// (get) Token: 0x06001A94 RID: 6804 RVA: 0x00082819 File Offset: 0x00080A19
+		// (set) Token: 0x06001A95 RID: 6805 RVA: 0x00082821 File Offset: 0x00080A21
 		public string memberCode { readonly get; set; }
 
 		// Token: 0x170002E0 RID: 736
-		// (get) Token: 0x06001A96 RID: 6806 RVA: 0x0008280A File Offset: 0x00080A0A
-		// (set) Token: 0x06001A97 RID: 6807 RVA: 0x00082812 File Offset: 0x00080A12
+		// (get) Token: 0x06001A96 RID: 6806 RVA: 0x0008282A File Offset: 0x00080A2A
+		// (set) Token: 0x06001A97 RID: 6807 RVA: 0x00082832 File Offset: 0x00080A32
 		public string groupId { readonly get; set; }
 	}
 
@@ -141,13 +141,13 @@ public class NexusManager : MonoBehaviour
 	public struct GetMembersRequest
 	{
 		// Token: 0x170002E1 RID: 737
-		// (get) Token: 0x06001A98 RID: 6808 RVA: 0x0008281B File Offset: 0x00080A1B
-		// (set) Token: 0x06001A99 RID: 6809 RVA: 0x00082823 File Offset: 0x00080A23
+		// (get) Token: 0x06001A98 RID: 6808 RVA: 0x0008283B File Offset: 0x00080A3B
+		// (set) Token: 0x06001A99 RID: 6809 RVA: 0x00082843 File Offset: 0x00080A43
 		public int page { readonly get; set; }
 
 		// Token: 0x170002E2 RID: 738
-		// (get) Token: 0x06001A9A RID: 6810 RVA: 0x0008282C File Offset: 0x00080A2C
-		// (set) Token: 0x06001A9B RID: 6811 RVA: 0x00082834 File Offset: 0x00080A34
+		// (get) Token: 0x06001A9A RID: 6810 RVA: 0x0008284C File Offset: 0x00080A4C
+		// (set) Token: 0x06001A9B RID: 6811 RVA: 0x00082854 File Offset: 0x00080A54
 		public int pageSize { readonly get; set; }
 	}
 }

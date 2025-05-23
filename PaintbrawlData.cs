@@ -10,7 +10,7 @@ using UnityEngine;
 public struct PaintbrawlData : INetworkStruct
 {
 	// Token: 0x1700030C RID: 780
-	// (get) Token: 0x06001C41 RID: 7233 RVA: 0x0008AB9C File Offset: 0x00088D9C
+	// (get) Token: 0x06001C41 RID: 7233 RVA: 0x0008ABBC File Offset: 0x00088DBC
 	[Networked]
 	[Capacity(10)]
 	public NetworkArray<int> playerLivesArray
@@ -22,7 +22,7 @@ public struct PaintbrawlData : INetworkStruct
 	}
 
 	// Token: 0x1700030D RID: 781
-	// (get) Token: 0x06001C42 RID: 7234 RVA: 0x0008ABC4 File Offset: 0x00088DC4
+	// (get) Token: 0x06001C42 RID: 7234 RVA: 0x0008ABE4 File Offset: 0x00088DE4
 	[Networked]
 	[Capacity(10)]
 	public NetworkArray<int> playerActorNumberArray
@@ -34,7 +34,7 @@ public struct PaintbrawlData : INetworkStruct
 	}
 
 	// Token: 0x1700030E RID: 782
-	// (get) Token: 0x06001C43 RID: 7235 RVA: 0x0008ABEC File Offset: 0x00088DEC
+	// (get) Token: 0x06001C43 RID: 7235 RVA: 0x0008AC0C File Offset: 0x00088E0C
 	[Networked]
 	[Capacity(10)]
 	public NetworkArray<GorillaPaintbrawlManager.PaintbrawlStatus> playerStatusArray

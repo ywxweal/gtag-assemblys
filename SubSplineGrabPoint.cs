@@ -6,13 +6,13 @@ using UnityEngine;
 [Serializable]
 public class SubSplineGrabPoint : SubLineGrabPoint
 {
-	// Token: 0x060019D9 RID: 6617 RVA: 0x0007E28D File Offset: 0x0007C48D
+	// Token: 0x060019D9 RID: 6617 RVA: 0x0007E2AD File Offset: 0x0007C4AD
 	public override Matrix4x4 GetTransformation_GripPointLocalToAdvOriginLocal(AdvancedItemState.PreData advancedItemState, SlotTransformOverride slotTransformOverride)
 	{
 		return CatmullRomSpline.Evaluate(this.controlPointsTransformsRelativeToGrabOrigin, advancedItemState.distAlongLine);
 	}
 
-	// Token: 0x060019DA RID: 6618 RVA: 0x0007E2A0 File Offset: 0x0007C4A0
+	// Token: 0x060019DA RID: 6618 RVA: 0x0007E2C0 File Offset: 0x0007C4C0
 	public override void InitializePoints(Transform anchor, Transform grabPointAnchor, Transform advancedGrabPointOrigin)
 	{
 		base.InitializePoints(anchor, grabPointAnchor, advancedGrabPointOrigin);
@@ -24,7 +24,7 @@ public class SubSplineGrabPoint : SubLineGrabPoint
 		}
 	}
 
-	// Token: 0x060019DB RID: 6619 RVA: 0x0007E314 File Offset: 0x0007C514
+	// Token: 0x060019DB RID: 6619 RVA: 0x0007E334 File Offset: 0x0007C534
 	public override AdvancedItemState.PreData GetPreData(Transform objectTransform, Transform handTransform, Transform targetDock, SlotTransformOverride slotTransformOverride)
 	{
 		Vector3 vector = objectTransform.InverseTransformPoint(handTransform.position);
@@ -36,7 +36,7 @@ public class SubSplineGrabPoint : SubLineGrabPoint
 		};
 	}
 
-	// Token: 0x060019DC RID: 6620 RVA: 0x0007E350 File Offset: 0x0007C550
+	// Token: 0x060019DC RID: 6620 RVA: 0x0007E370 File Offset: 0x0007C570
 	public override float EvaluateScore(Transform objectTransform, Transform handTransform, Transform targetDock)
 	{
 		Vector3 vector = objectTransform.InverseTransformPoint(handTransform.position);

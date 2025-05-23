@@ -4,7 +4,7 @@ using UnityEngine;
 // Token: 0x0200047F RID: 1151
 public static class DeepLinkSender
 {
-	// Token: 0x06001C3C RID: 7228 RVA: 0x0008AAA4 File Offset: 0x00088CA4
+	// Token: 0x06001C3C RID: 7228 RVA: 0x0008AAC4 File Offset: 0x00088CC4
 	public static bool SendDeepLink(ulong deepLinkAppID, string deepLinkMessage, Action<string> onSent)
 	{
 		Debug.LogError("[DeepLinkSender::SendDeepLink] Called on non-oculus platform!");

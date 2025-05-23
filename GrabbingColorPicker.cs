@@ -8,7 +8,7 @@ using UnityEngine;
 // Token: 0x02000451 RID: 1105
 public class GrabbingColorPicker : MonoBehaviour, IGorillaSliceableSimple
 {
-	// Token: 0x06001B3F RID: 6975 RVA: 0x00086220 File Offset: 0x00084420
+	// Token: 0x06001B3F RID: 6975 RVA: 0x00086240 File Offset: 0x00084440
 	private void Start()
 	{
 		float @float = PlayerPrefs.GetFloat("redValue", 0f);
@@ -27,7 +27,7 @@ public class GrabbingColorPicker : MonoBehaviour, IGorillaSliceableSimple
 		}
 	}
 
-	// Token: 0x06001B40 RID: 6976 RVA: 0x00086310 File Offset: 0x00084510
+	// Token: 0x06001B40 RID: 6976 RVA: 0x00086330 File Offset: 0x00084530
 	private void OnDestroy()
 	{
 		if (GorillaTagger.Instance && GorillaTagger.Instance.offlineVRRig)
@@ -48,7 +48,7 @@ public class GrabbingColorPicker : MonoBehaviour, IGorillaSliceableSimple
 		GorillaSlicerSimpleManager.UnregisterSliceable(this, GorillaSlicerSimpleManager.UpdateStep.Update);
 	}
 
-	// Token: 0x06001B43 RID: 6979 RVA: 0x0008634C File Offset: 0x0008454C
+	// Token: 0x06001B43 RID: 6979 RVA: 0x0008636C File Offset: 0x0008456C
 	public void SliceUpdate()
 	{
 		float num = Vector3.Distance(base.transform.position, GTPlayer.Instance.transform.position);
@@ -99,7 +99,7 @@ public class GrabbingColorPicker : MonoBehaviour, IGorillaSliceableSimple
 		}
 	}
 
-	// Token: 0x06001B44 RID: 6980 RVA: 0x000865E8 File Offset: 0x000847E8
+	// Token: 0x06001B44 RID: 6980 RVA: 0x00086608 File Offset: 0x00084808
 	private void SetSliderColors(float r, float g, float b)
 	{
 		if (!this.hasUpdated)
@@ -114,13 +114,13 @@ public class GrabbingColorPicker : MonoBehaviour, IGorillaSliceableSimple
 		}
 	}
 
-	// Token: 0x06001B45 RID: 6981 RVA: 0x00086678 File Offset: 0x00084878
+	// Token: 0x06001B45 RID: 6981 RVA: 0x00086698 File Offset: 0x00084898
 	private void HandleLocalColorChanged(Color newColor)
 	{
 		this.SetSliderColors(newColor.r, newColor.g, newColor.b);
 	}
 
-	// Token: 0x06001B46 RID: 6982 RVA: 0x00086694 File Offset: 0x00084894
+	// Token: 0x06001B46 RID: 6982 RVA: 0x000866B4 File Offset: 0x000848B4
 	private void UpdateDisplay()
 	{
 		this.textR.text = this.Segment1.ToString();

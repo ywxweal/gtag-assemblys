@@ -5,7 +5,7 @@ using UnityEngine;
 // Token: 0x020009D8 RID: 2520
 public static class UnityObjectUtils
 {
-	// Token: 0x06003C55 RID: 15445 RVA: 0x001203C0 File Offset: 0x0011E5C0
+	// Token: 0x06003C56 RID: 15446 RVA: 0x00120498 File Offset: 0x0011E698
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	public static T AsNull<T>(this T obj) where T : Object
 	{
@@ -20,7 +20,7 @@ public static class UnityObjectUtils
 		return default(T);
 	}
 
-	// Token: 0x06003C56 RID: 15446 RVA: 0x0003A5F2 File Offset: 0x000387F2
+	// Token: 0x06003C57 RID: 15447 RVA: 0x0003A5F2 File Offset: 0x000387F2
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	public static void SafeDestroy(this Object obj)
 	{

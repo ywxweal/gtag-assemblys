@@ -12,7 +12,7 @@ using UnityEngine.XR;
 public class LuauHud : MonoBehaviour
 {
 	// Token: 0x17000536 RID: 1334
-	// (get) Token: 0x060035CF RID: 13775 RVA: 0x0010431C File Offset: 0x0010251C
+	// (get) Token: 0x060035D0 RID: 13776 RVA: 0x001043F4 File Offset: 0x001025F4
 	public static LuauHud Instance
 	{
 		get
@@ -21,7 +21,7 @@ public class LuauHud : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060035D0 RID: 13776 RVA: 0x00104324 File Offset: 0x00102524
+	// Token: 0x060035D1 RID: 13777 RVA: 0x001043FC File Offset: 0x001025FC
 	private void Awake()
 	{
 		if (LuauHud._instance != null && LuauHud._instance != this)
@@ -35,7 +35,7 @@ public class LuauHud : MonoBehaviour
 		this.path = Path.Combine(Application.persistentDataPath, "script.luau");
 	}
 
-	// Token: 0x060035D1 RID: 13777 RVA: 0x00104373 File Offset: 0x00102573
+	// Token: 0x060035D2 RID: 13778 RVA: 0x0010444B File Offset: 0x0010264B
 	private void OnDestroy()
 	{
 		if (LuauHud._instance == this)
@@ -44,7 +44,7 @@ public class LuauHud : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060035D2 RID: 13778 RVA: 0x00104388 File Offset: 0x00102588
+	// Token: 0x060035D3 RID: 13779 RVA: 0x00104460 File Offset: 0x00102660
 	private void Start()
 	{
 		this.useLuauHud = true;
@@ -55,7 +55,7 @@ public class LuauHud : MonoBehaviour
 		this.builder = new StringBuilder(50);
 	}
 
-	// Token: 0x060035D3 RID: 13779 RVA: 0x001043D0 File Offset: 0x001025D0
+	// Token: 0x060035D4 RID: 13780 RVA: 0x001044A8 File Offset: 0x001026A8
 	private void Update()
 	{
 		MapDescriptor loadedMapDescriptor = CustomMapLoader.LoadedMapDescriptor;
@@ -124,7 +124,7 @@ public class LuauHud : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060035D4 RID: 13780 RVA: 0x00104577 File Offset: 0x00102777
+	// Token: 0x060035D5 RID: 13781 RVA: 0x0010464F File Offset: 0x0010284F
 	public void LuauLog(string log)
 	{
 		Debug.Log(log);
@@ -135,36 +135,36 @@ public class LuauHud : MonoBehaviour
 		}
 	}
 
-	// Token: 0x04003B90 RID: 15248
+	// Token: 0x04003B91 RID: 15249
 	private bool useLuauHud;
 
-	// Token: 0x04003B91 RID: 15249
+	// Token: 0x04003B92 RID: 15250
 	private bool buttonDown;
 
-	// Token: 0x04003B92 RID: 15250
+	// Token: 0x04003B93 RID: 15251
 	private bool showLog;
 
-	// Token: 0x04003B93 RID: 15251
+	// Token: 0x04003B94 RID: 15252
 	private GameObject debugHud;
 
-	// Token: 0x04003B94 RID: 15252
+	// Token: 0x04003B95 RID: 15253
 	private TMP_Text text;
 
-	// Token: 0x04003B95 RID: 15253
+	// Token: 0x04003B96 RID: 15254
 	private StringBuilder builder;
 
-	// Token: 0x04003B96 RID: 15254
+	// Token: 0x04003B97 RID: 15255
 	private float resetTimer;
 
-	// Token: 0x04003B97 RID: 15255
+	// Token: 0x04003B98 RID: 15256
 	private string path = "";
 
-	// Token: 0x04003B98 RID: 15256
+	// Token: 0x04003B99 RID: 15257
 	private string script = "";
 
-	// Token: 0x04003B99 RID: 15257
+	// Token: 0x04003B9A RID: 15258
 	private static LuauHud _instance;
 
-	// Token: 0x04003B9A RID: 15258
+	// Token: 0x04003B9B RID: 15259
 	private List<string> luauLogs = new List<string>();
 }

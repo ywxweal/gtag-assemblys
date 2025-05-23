@@ -7,7 +7,7 @@ namespace com.AnotherAxiom.Paddleball
 	public class PaddleballPaddle : MonoBehaviour
 	{
 		// Token: 0x170007F2 RID: 2034
-		// (get) Token: 0x0600504D RID: 20557 RVA: 0x0017FC86 File Offset: 0x0017DE86
+		// (get) Token: 0x0600504E RID: 20558 RVA: 0x0017FD5E File Offset: 0x0017DF5E
 		public bool Right
 		{
 			get
@@ -16,7 +16,7 @@ namespace com.AnotherAxiom.Paddleball
 			}
 		}
 
-		// Token: 0x04005380 RID: 21376
+		// Token: 0x04005381 RID: 21377
 		[SerializeField]
 		private bool right;
 	}

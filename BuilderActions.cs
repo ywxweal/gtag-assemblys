@@ -4,7 +4,7 @@ using UnityEngine;
 // Token: 0x020004DE RID: 1246
 public class BuilderActions
 {
-	// Token: 0x06001E0B RID: 7691 RVA: 0x000920D8 File Offset: 0x000902D8
+	// Token: 0x06001E0B RID: 7691 RVA: 0x000920F8 File Offset: 0x000902F8
 	public static BuilderAction CreateAttachToPlayer(int cmdId, int pieceId, Vector3 localPosition, Quaternion localRotation, int actorNumber, bool leftHand)
 	{
 		return new BuilderAction
@@ -19,13 +19,13 @@ public class BuilderActions
 		};
 	}
 
-	// Token: 0x06001E0C RID: 7692 RVA: 0x00092128 File Offset: 0x00090328
+	// Token: 0x06001E0C RID: 7692 RVA: 0x00092148 File Offset: 0x00090348
 	public static BuilderAction CreateAttachToPlayerRollback(int cmdId, BuilderPiece piece)
 	{
 		return BuilderActions.CreateAttachToPlayer(cmdId, piece.pieceId, piece.transform.localPosition, piece.transform.localRotation, piece.heldByPlayerActorNumber, piece.heldInLeftHand);
 	}
 
-	// Token: 0x06001E0D RID: 7693 RVA: 0x00092158 File Offset: 0x00090358
+	// Token: 0x06001E0D RID: 7693 RVA: 0x00092178 File Offset: 0x00090378
 	public static BuilderAction CreateDetachFromPlayer(int cmdId, int pieceId, int actorNumber)
 	{
 		return new BuilderAction
@@ -37,7 +37,7 @@ public class BuilderActions
 		};
 	}
 
-	// Token: 0x06001E0E RID: 7694 RVA: 0x00092190 File Offset: 0x00090390
+	// Token: 0x06001E0E RID: 7694 RVA: 0x000921B0 File Offset: 0x000903B0
 	public static BuilderAction CreateAttachToPiece(int cmdId, int pieceId, int parentPieceId, int attachIndex, int parentAttachIndex, sbyte bumpOffsetX, sbyte bumpOffsetZ, byte twist, int actorNumber, int timeStamp)
 	{
 		return new BuilderAction
@@ -56,7 +56,7 @@ public class BuilderActions
 		};
 	}
 
-	// Token: 0x06001E0F RID: 7695 RVA: 0x00092204 File Offset: 0x00090404
+	// Token: 0x06001E0F RID: 7695 RVA: 0x00092224 File Offset: 0x00090424
 	public static BuilderAction CreateAttachToPieceRollback(int cmdId, BuilderPiece piece, int actorNumber)
 	{
 		byte pieceTwist = piece.GetPieceTwist();
@@ -66,7 +66,7 @@ public class BuilderActions
 		return BuilderActions.CreateAttachToPiece(cmdId, piece.pieceId, piece.parentPiece.pieceId, piece.attachIndex, piece.parentAttachIndex, b, b2, pieceTwist, actorNumber, piece.activatedTimeStamp);
 	}
 
-	// Token: 0x06001E10 RID: 7696 RVA: 0x00092250 File Offset: 0x00090450
+	// Token: 0x06001E10 RID: 7696 RVA: 0x00092270 File Offset: 0x00090470
 	public static BuilderAction CreateDetachFromPiece(int cmdId, int pieceId, int actorNumber)
 	{
 		return new BuilderAction
@@ -78,7 +78,7 @@ public class BuilderActions
 		};
 	}
 
-	// Token: 0x06001E11 RID: 7697 RVA: 0x00092288 File Offset: 0x00090488
+	// Token: 0x06001E11 RID: 7697 RVA: 0x000922A8 File Offset: 0x000904A8
 	public static BuilderAction CreateMakeRoot(int cmdId, int pieceId)
 	{
 		return new BuilderAction
@@ -89,7 +89,7 @@ public class BuilderActions
 		};
 	}
 
-	// Token: 0x06001E12 RID: 7698 RVA: 0x000922B8 File Offset: 0x000904B8
+	// Token: 0x06001E12 RID: 7698 RVA: 0x000922D8 File Offset: 0x000904D8
 	public static BuilderAction CreateDropPiece(int cmdId, int pieceId, Vector3 localPosition, Quaternion localRotation, Vector3 velocity, Vector3 angVelocity, int actorNumber)
 	{
 		return new BuilderAction
@@ -105,7 +105,7 @@ public class BuilderActions
 		};
 	}
 
-	// Token: 0x06001E13 RID: 7699 RVA: 0x00092314 File Offset: 0x00090514
+	// Token: 0x06001E13 RID: 7699 RVA: 0x00092334 File Offset: 0x00090534
 	public static BuilderAction CreateDropPieceRollback(int cmdId, BuilderPiece rootPiece, int actorNumber)
 	{
 		Vector3 vector = rootPiece.transform.position;
@@ -123,7 +123,7 @@ public class BuilderActions
 		return BuilderActions.CreateDropPiece(cmdId, rootPiece.pieceId, vector, quaternion, vector2, vector3, actorNumber);
 	}
 
-	// Token: 0x06001E14 RID: 7700 RVA: 0x00092388 File Offset: 0x00090588
+	// Token: 0x06001E14 RID: 7700 RVA: 0x000923A8 File Offset: 0x000905A8
 	public static BuilderAction CreateAttachToShelfRollback(int cmdId, BuilderPiece piece, int shelfID, bool isConveyor, int timestamp = 0, float splineTime = 0f)
 	{
 		return new BuilderAction

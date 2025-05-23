@@ -5,7 +5,7 @@ using UnityEngine;
 // Token: 0x020009B5 RID: 2485
 public class OnExitPlay_Clear : OnExitPlay_Attribute
 {
-	// Token: 0x06003B6A RID: 15210 RVA: 0x0011B6C4 File Offset: 0x001198C4
+	// Token: 0x06003B6B RID: 15211 RVA: 0x0011B79C File Offset: 0x0011999C
 	public override void OnEnterPlay(FieldInfo field)
 	{
 		if (!field.IsStatic)

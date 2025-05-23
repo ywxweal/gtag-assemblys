@@ -8,7 +8,7 @@ namespace GorillaTag.Cosmetics
 	// Token: 0x02000DC7 RID: 3527
 	public class PickupableBanner : PickupableVariant
 	{
-		// Token: 0x0600576B RID: 22379 RVA: 0x001AD5C8 File Offset: 0x001AB7C8
+		// Token: 0x0600576C RID: 22380 RVA: 0x001AD6A0 File Offset: 0x001AB8A0
 		protected internal override void Pickup()
 		{
 			UnityEvent onPickup = this.OnPickup;
@@ -35,13 +35,13 @@ namespace GorillaTag.Cosmetics
 			base.enabled = false;
 		}
 
-		// Token: 0x0600576C RID: 22380 RVA: 0x001AD694 File Offset: 0x001AB894
+		// Token: 0x0600576D RID: 22381 RVA: 0x001AD76C File Offset: 0x001AB96C
 		protected internal override void DelayedPickup()
 		{
 			base.StartCoroutine(this.DelayedPickup_Internal());
 		}
 
-		// Token: 0x0600576D RID: 22381 RVA: 0x001AD6A3 File Offset: 0x001AB8A3
+		// Token: 0x0600576E RID: 22382 RVA: 0x001AD77B File Offset: 0x001AB97B
 		private IEnumerator DelayedPickup_Internal()
 		{
 			yield return new WaitForSeconds(1f);
@@ -49,7 +49,7 @@ namespace GorillaTag.Cosmetics
 			yield break;
 		}
 
-		// Token: 0x0600576E RID: 22382 RVA: 0x001AD6B4 File Offset: 0x001AB8B4
+		// Token: 0x0600576F RID: 22383 RVA: 0x001AD78C File Offset: 0x001AB98C
 		protected internal override void Release(HoldableObject holdable, Vector3 startPosition, Vector3 velocity, float playerScale)
 		{
 			this.holdableParent = holdable;
@@ -67,7 +67,7 @@ namespace GorillaTag.Cosmetics
 			base.enabled = true;
 		}
 
-		// Token: 0x0600576F RID: 22383 RVA: 0x001AD74C File Offset: 0x001AB94C
+		// Token: 0x06005770 RID: 22384 RVA: 0x001AD824 File Offset: 0x001ABA24
 		private void FixedUpdate()
 		{
 			if (this.placedOnFloor && Time.time - this.placedOnFloorTime > this.autoPickupAfterSeconds)
@@ -105,67 +105,67 @@ namespace GorillaTag.Cosmetics
 			}
 		}
 
-		// Token: 0x04005C04 RID: 23556
+		// Token: 0x04005C05 RID: 23557
 		[Tooltip("The distance to check if the banner is close to the floor (from a raycast check).")]
 		public float RaycastCheckDist = 0.2f;
 
-		// Token: 0x04005C05 RID: 23557
+		// Token: 0x04005C06 RID: 23558
 		[Tooltip("How many checks should we attempt for a raycast.")]
 		public int RaycastChecksMax = 12;
 
-		// Token: 0x04005C06 RID: 23558
+		// Token: 0x04005C07 RID: 23559
 		[SerializeField]
 		private InteractionPoint interactionPoint;
 
-		// Token: 0x04005C07 RID: 23559
+		// Token: 0x04005C08 RID: 23560
 		[SerializeField]
 		private Rigidbody rb;
 
-		// Token: 0x04005C08 RID: 23560
+		// Token: 0x04005C09 RID: 23561
 		[SerializeField]
 		private bool allowPickupFromGround = true;
 
-		// Token: 0x04005C09 RID: 23561
+		// Token: 0x04005C0A RID: 23562
 		[SerializeField]
 		private LayerMask floorLayerMask;
 
-		// Token: 0x04005C0A RID: 23562
+		// Token: 0x04005C0B RID: 23563
 		[SerializeField]
 		private float placementOffset;
 
-		// Token: 0x04005C0B RID: 23563
+		// Token: 0x04005C0C RID: 23564
 		[SerializeField]
 		private Transform raycastOrigin;
 
-		// Token: 0x04005C0C RID: 23564
+		// Token: 0x04005C0D RID: 23565
 		[SerializeField]
 		private float autoPickupAfterSeconds;
 
-		// Token: 0x04005C0D RID: 23565
+		// Token: 0x04005C0E RID: 23566
 		public UnityEvent OnPickup;
 
-		// Token: 0x04005C0E RID: 23566
+		// Token: 0x04005C0F RID: 23567
 		public UnityEvent OnPlaced;
 
-		// Token: 0x04005C0F RID: 23567
+		// Token: 0x04005C10 RID: 23568
 		private bool placedOnFloor;
 
-		// Token: 0x04005C10 RID: 23568
+		// Token: 0x04005C11 RID: 23569
 		private float placedOnFloorTime = -1f;
 
-		// Token: 0x04005C11 RID: 23569
+		// Token: 0x04005C12 RID: 23570
 		private VRRig cachedLocalRig;
 
-		// Token: 0x04005C12 RID: 23570
+		// Token: 0x04005C13 RID: 23571
 		private HoldableObject holdableParent;
 
-		// Token: 0x04005C13 RID: 23571
+		// Token: 0x04005C14 RID: 23572
 		private double throwSettledTime = -1.0;
 
-		// Token: 0x04005C14 RID: 23572
+		// Token: 0x04005C15 RID: 23573
 		private int landingSide;
 
-		// Token: 0x04005C15 RID: 23573
+		// Token: 0x04005C16 RID: 23574
 		private float scale;
 	}
 }

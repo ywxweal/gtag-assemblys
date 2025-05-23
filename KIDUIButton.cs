@@ -10,7 +10,7 @@ using UnityEngine.XR.Interaction.Toolkit.UI;
 public class KIDUIButton : Button, IPointerEnterHandler, IEventSystemHandler, IPointerExitHandler
 {
 	// Token: 0x17000517 RID: 1303
-	// (get) Token: 0x06003236 RID: 12854 RVA: 0x000F8106 File Offset: 0x000F6306
+	// (get) Token: 0x06003237 RID: 12855 RVA: 0x000F81DE File Offset: 0x000F63DE
 	private XRUIInputModule InputModule
 	{
 		get
@@ -19,7 +19,7 @@ public class KIDUIButton : Button, IPointerEnterHandler, IEventSystemHandler, IP
 		}
 	}
 
-	// Token: 0x06003237 RID: 12855 RVA: 0x000F8118 File Offset: 0x000F6318
+	// Token: 0x06003238 RID: 12856 RVA: 0x000F81F0 File Offset: 0x000F63F0
 	protected override void Awake()
 	{
 		this.controllerBehaviour = base.GetComponentInChildren<ControllerBehaviour>();
@@ -35,7 +35,7 @@ public class KIDUIButton : Button, IPointerEnterHandler, IEventSystemHandler, IP
 		}
 	}
 
-	// Token: 0x06003238 RID: 12856 RVA: 0x000F8179 File Offset: 0x000F6379
+	// Token: 0x06003239 RID: 12857 RVA: 0x000F8251 File Offset: 0x000F6451
 	protected override void OnEnable()
 	{
 		if (this.controllerBehaviour)
@@ -44,7 +44,7 @@ public class KIDUIButton : Button, IPointerEnterHandler, IEventSystemHandler, IP
 		}
 	}
 
-	// Token: 0x06003239 RID: 12857 RVA: 0x000F81A0 File Offset: 0x000F63A0
+	// Token: 0x0600323A RID: 12858 RVA: 0x000F8278 File Offset: 0x000F6478
 	private void PostUpdate()
 	{
 		if (!KIDUIButton._canTrigger)
@@ -88,7 +88,7 @@ public class KIDUIButton : Button, IPointerEnterHandler, IEventSystemHandler, IP
 		}
 	}
 
-	// Token: 0x0600323A RID: 12858 RVA: 0x000F82F8 File Offset: 0x000F64F8
+	// Token: 0x0600323B RID: 12859 RVA: 0x000F83D0 File Offset: 0x000F65D0
 	private void LateUpdate()
 	{
 		if (KIDUIButton._triggeredThisFrame)
@@ -117,21 +117,21 @@ public class KIDUIButton : Button, IPointerEnterHandler, IEventSystemHandler, IP
 		KIDUIButton._triggeredThisFrame = false;
 	}
 
-	// Token: 0x0600323B RID: 12859 RVA: 0x000F83DD File Offset: 0x000F65DD
+	// Token: 0x0600323C RID: 12860 RVA: 0x000F84B5 File Offset: 0x000F66B5
 	public override void OnPointerExit(PointerEventData eventData)
 	{
 		base.OnPointerExit(eventData);
 		this.inside = false;
 	}
 
-	// Token: 0x0600323C RID: 12860 RVA: 0x000F83ED File Offset: 0x000F65ED
+	// Token: 0x0600323D RID: 12861 RVA: 0x000F84C5 File Offset: 0x000F66C5
 	public void ResetButton()
 	{
 		this.inside = false;
 		KIDUIButton._triggeredThisFrame = false;
 	}
 
-	// Token: 0x0600323D RID: 12861 RVA: 0x000F83FC File Offset: 0x000F65FC
+	// Token: 0x0600323E RID: 12862 RVA: 0x000F84D4 File Offset: 0x000F66D4
 	protected override void OnDisable()
 	{
 		this.FixStuckPressedState();
@@ -141,7 +141,7 @@ public class KIDUIButton : Button, IPointerEnterHandler, IEventSystemHandler, IP
 		}
 	}
 
-	// Token: 0x0600323E RID: 12862 RVA: 0x000F8428 File Offset: 0x000F6628
+	// Token: 0x0600323F RID: 12863 RVA: 0x000F8500 File Offset: 0x000F6700
 	private void FixStuckPressedState()
 	{
 		this.InstantClearState();
@@ -150,7 +150,7 @@ public class KIDUIButton : Button, IPointerEnterHandler, IEventSystemHandler, IP
 		KIDUIButton._triggeredThisFrame = false;
 	}
 
-	// Token: 0x0600323F RID: 12863 RVA: 0x000F8460 File Offset: 0x000F6660
+	// Token: 0x06003240 RID: 12864 RVA: 0x000F8538 File Offset: 0x000F6738
 	protected override void DoStateTransition(Selectable.SelectionState state, bool instant)
 	{
 		base.DoStateTransition(state, instant);
@@ -179,7 +179,7 @@ public class KIDUIButton : Button, IPointerEnterHandler, IEventSystemHandler, IP
 		}
 	}
 
-	// Token: 0x06003240 RID: 12864 RVA: 0x000F8510 File Offset: 0x000F6710
+	// Token: 0x06003241 RID: 12865 RVA: 0x000F85E8 File Offset: 0x000F67E8
 	private void SetIcons(bool normalEnabled, bool highlightedEnabled)
 	{
 		if (this._normalIcon == null || this._highlightedIcon == null)
@@ -199,7 +199,7 @@ public class KIDUIButton : Button, IPointerEnterHandler, IEventSystemHandler, IP
 		highlightedIcon.SetActive(highlightedEnabled);
 	}
 
-	// Token: 0x06003241 RID: 12865 RVA: 0x000F8560 File Offset: 0x000F6760
+	// Token: 0x06003242 RID: 12866 RVA: 0x000F8638 File Offset: 0x000F6838
 	public override void OnPointerEnter(PointerEventData eventData)
 	{
 		base.OnPointerEnter(eventData);
@@ -216,7 +216,7 @@ public class KIDUIButton : Button, IPointerEnterHandler, IEventSystemHandler, IP
 		xrrayInteractor.xrController.SendHapticImpulse(this._highlightedVibrationStrength, this._highlightedVibrationDuration);
 	}
 
-	// Token: 0x06003242 RID: 12866 RVA: 0x000F85C4 File Offset: 0x000F67C4
+	// Token: 0x06003243 RID: 12867 RVA: 0x000F869C File Offset: 0x000F689C
 	public override void OnPointerDown(PointerEventData eventData)
 	{
 		base.OnPointerDown(eventData);
@@ -233,139 +233,139 @@ public class KIDUIButton : Button, IPointerEnterHandler, IEventSystemHandler, IP
 		xrrayInteractor.xrController.SendHapticImpulse(this._pressedVibrationStrength, this._pressedVibrationDuration);
 	}
 
-	// Token: 0x06003243 RID: 12867 RVA: 0x000F8628 File Offset: 0x000F6828
+	// Token: 0x06003244 RID: 12868 RVA: 0x000F8700 File Offset: 0x000F6900
 	public void SetText(string text)
 	{
 		this._buttonText.SetText(text, true);
 	}
 
-	// Token: 0x040038EF RID: 14575
+	// Token: 0x040038F0 RID: 14576
 	[SerializeField]
 	private Image _borderImage;
 
-	// Token: 0x040038F0 RID: 14576
+	// Token: 0x040038F1 RID: 14577
 	[SerializeField]
 	private RectTransform _fillImageRef;
 
-	// Token: 0x040038F1 RID: 14577
+	// Token: 0x040038F2 RID: 14578
 	[SerializeField]
 	private TMP_Text _buttonText;
 
-	// Token: 0x040038F2 RID: 14578
+	// Token: 0x040038F3 RID: 14579
 	[Header("Transition States")]
 	[Header("Normal")]
 	[SerializeField]
 	[ColorUsage(true, false)]
 	private Color _normalBorderColor;
 
-	// Token: 0x040038F3 RID: 14579
+	// Token: 0x040038F4 RID: 14580
 	[SerializeField]
 	[ColorUsage(true, false)]
 	private Color _normalTextColor;
 
-	// Token: 0x040038F4 RID: 14580
+	// Token: 0x040038F5 RID: 14581
 	[SerializeField]
 	private float _normalBorderSize;
 
-	// Token: 0x040038F5 RID: 14581
+	// Token: 0x040038F6 RID: 14582
 	[Header("Highlighted")]
 	[SerializeField]
 	[ColorUsage(true, false)]
 	private Color _highlightedBorderColor;
 
-	// Token: 0x040038F6 RID: 14582
+	// Token: 0x040038F7 RID: 14583
 	[SerializeField]
 	[ColorUsage(true, false)]
 	private Color _highlightedTextColor;
 
-	// Token: 0x040038F7 RID: 14583
+	// Token: 0x040038F8 RID: 14584
 	[SerializeField]
 	private float _highlightedBorderSize;
 
-	// Token: 0x040038F8 RID: 14584
+	// Token: 0x040038F9 RID: 14585
 	[SerializeField]
 	private float _highlightedVibrationStrength = 0.1f;
 
-	// Token: 0x040038F9 RID: 14585
+	// Token: 0x040038FA RID: 14586
 	[SerializeField]
 	private float _highlightedVibrationDuration = 0.1f;
 
-	// Token: 0x040038FA RID: 14586
+	// Token: 0x040038FB RID: 14587
 	[Header("Pressed")]
 	[SerializeField]
 	[ColorUsage(true, false)]
 	private Color _pressedBorderColor;
 
-	// Token: 0x040038FB RID: 14587
+	// Token: 0x040038FC RID: 14588
 	[SerializeField]
 	[ColorUsage(true, false)]
 	private Color _pressedTextColor;
 
-	// Token: 0x040038FC RID: 14588
+	// Token: 0x040038FD RID: 14589
 	[SerializeField]
 	private float _pressedBorderSize;
 
-	// Token: 0x040038FD RID: 14589
+	// Token: 0x040038FE RID: 14590
 	[SerializeField]
 	private float _pressedVibrationStrength = 0.5f;
 
-	// Token: 0x040038FE RID: 14590
+	// Token: 0x040038FF RID: 14591
 	[SerializeField]
 	private float _pressedVibrationDuration = 0.1f;
 
-	// Token: 0x040038FF RID: 14591
+	// Token: 0x04003900 RID: 14592
 	[Header("Selected")]
 	[SerializeField]
 	[ColorUsage(true, false)]
 	private Color _selectedBorderColor;
 
-	// Token: 0x04003900 RID: 14592
+	// Token: 0x04003901 RID: 14593
 	[SerializeField]
 	[ColorUsage(true, false)]
 	private Color _selectedTextColor;
 
-	// Token: 0x04003901 RID: 14593
+	// Token: 0x04003902 RID: 14594
 	[SerializeField]
 	private float _selectedBorderSize;
 
-	// Token: 0x04003902 RID: 14594
+	// Token: 0x04003903 RID: 14595
 	[Header("Disabled")]
 	[SerializeField]
 	[ColorUsage(true, false)]
 	private Color _disabledBorderColor;
 
-	// Token: 0x04003903 RID: 14595
+	// Token: 0x04003904 RID: 14596
 	[SerializeField]
 	[ColorUsage(true, false)]
 	private Color _disabledTextColor;
 
-	// Token: 0x04003904 RID: 14596
+	// Token: 0x04003905 RID: 14597
 	[SerializeField]
 	private float _disabledBorderSize;
 
-	// Token: 0x04003905 RID: 14597
+	// Token: 0x04003906 RID: 14598
 	[Header("Icon Swap Settings")]
 	[SerializeField]
 	private GameObject _normalIcon;
 
-	// Token: 0x04003906 RID: 14598
+	// Token: 0x04003907 RID: 14599
 	[SerializeField]
 	private GameObject _highlightedIcon;
 
-	// Token: 0x04003907 RID: 14599
+	// Token: 0x04003908 RID: 14600
 	[Header("Steam Settings")]
 	[SerializeField]
 	private UXSettings _cbUXSettings;
 
-	// Token: 0x04003908 RID: 14600
+	// Token: 0x04003909 RID: 14601
 	private ControllerBehaviour controllerBehaviour;
 
-	// Token: 0x04003909 RID: 14601
+	// Token: 0x0400390A RID: 14602
 	private bool inside;
 
-	// Token: 0x0400390A RID: 14602
+	// Token: 0x0400390B RID: 14603
 	private static bool _triggeredThisFrame = false;
 
-	// Token: 0x0400390B RID: 14603
+	// Token: 0x0400390C RID: 14604
 	private static bool _canTrigger = true;
 }

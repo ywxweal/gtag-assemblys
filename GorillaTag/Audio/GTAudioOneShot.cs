@@ -7,12 +7,12 @@ namespace GorillaTag.Audio
 	internal static class GTAudioOneShot
 	{
 		// Token: 0x170008A1 RID: 2209
-		// (get) Token: 0x06005613 RID: 22035 RVA: 0x001A302F File Offset: 0x001A122F
-		// (set) Token: 0x06005614 RID: 22036 RVA: 0x001A3036 File Offset: 0x001A1236
+		// (get) Token: 0x06005614 RID: 22036 RVA: 0x001A3107 File Offset: 0x001A1307
+		// (set) Token: 0x06005615 RID: 22037 RVA: 0x001A310E File Offset: 0x001A130E
 		[OnEnterPlay_Set(false)]
 		internal static bool isInitialized { get; private set; }
 
-		// Token: 0x06005615 RID: 22037 RVA: 0x001A3040 File Offset: 0x001A1240
+		// Token: 0x06005616 RID: 22038 RVA: 0x001A3118 File Offset: 0x001A1318
 		[RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
 		private static void Initialize()
 		{
@@ -32,7 +32,7 @@ namespace GorillaTag.Audio
 			GTAudioOneShot.isInitialized = true;
 		}
 
-		// Token: 0x06005616 RID: 22038 RVA: 0x001A309F File Offset: 0x001A129F
+		// Token: 0x06005617 RID: 22039 RVA: 0x001A3177 File Offset: 0x001A1377
 		internal static void Play(AudioClip clip, Vector3 position, float volume = 1f, float pitch = 1f)
 		{
 			if (ApplicationQuittingState.IsQuitting || !GTAudioOneShot.isInitialized)
@@ -44,7 +44,7 @@ namespace GorillaTag.Audio
 			GTAudioOneShot.audioSource.GTPlayOneShot(clip, volume);
 		}
 
-		// Token: 0x06005617 RID: 22039 RVA: 0x001A30D7 File Offset: 0x001A12D7
+		// Token: 0x06005618 RID: 22040 RVA: 0x001A31AF File Offset: 0x001A13AF
 		internal static void Play(AudioClip clip, Vector3 position, AnimationCurve curve, float volume = 1f, float pitch = 1f)
 		{
 			if (ApplicationQuittingState.IsQuitting || !GTAudioOneShot.isInitialized)
@@ -56,11 +56,11 @@ namespace GorillaTag.Audio
 			GTAudioOneShot.audioSource.SetCustomCurve(AudioSourceCurveType.CustomRolloff, GTAudioOneShot.defaultCurve);
 		}
 
-		// Token: 0x040059E6 RID: 23014
+		// Token: 0x040059E7 RID: 23015
 		[OnEnterPlay_SetNull]
 		internal static AudioSource audioSource;
 
-		// Token: 0x040059E7 RID: 23015
+		// Token: 0x040059E8 RID: 23016
 		[OnEnterPlay_SetNull]
 		internal static AnimationCurve defaultCurve;
 	}

@@ -5,9 +5,9 @@ using KID.Model;
 [Serializable]
 public class UpgradeSessionResponse
 {
-	// Token: 0x04003705 RID: 14085
+	// Token: 0x04003706 RID: 14086
 	public SessionStatus status;
 
-	// Token: 0x04003706 RID: 14086
+	// Token: 0x04003707 RID: 14087
 	public Session session;
 }

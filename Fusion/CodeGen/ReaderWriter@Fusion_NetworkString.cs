@@ -8,7 +8,7 @@ namespace Fusion.CodeGen
 	[PreserveInPlugin]
 	internal struct ReaderWriter@Fusion_NetworkString : IElementReaderWriter<NetworkString<_32>>
 	{
-		// Token: 0x06005D8B RID: 23947 RVA: 0x001CCFDD File Offset: 0x001CB1DD
+		// Token: 0x06005D8C RID: 23948 RVA: 0x001CD0B5 File Offset: 0x001CB2B5
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		[PreserveInPlugin]
 		[WeaverGenerated]
@@ -17,7 +17,7 @@ namespace Fusion.CodeGen
 			return *(NetworkString<_32>*)(data + index * 132);
 		}
 
-		// Token: 0x06005D8C RID: 23948 RVA: 0x001CCFED File Offset: 0x001CB1ED
+		// Token: 0x06005D8D RID: 23949 RVA: 0x001CD0C5 File Offset: 0x001CB2C5
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		[PreserveInPlugin]
 		[WeaverGenerated]
@@ -26,7 +26,7 @@ namespace Fusion.CodeGen
 			return ref *(NetworkString<_32>*)(data + index * 132);
 		}
 
-		// Token: 0x06005D8D RID: 23949 RVA: 0x001CCFF8 File Offset: 0x001CB1F8
+		// Token: 0x06005D8E RID: 23950 RVA: 0x001CD0D0 File Offset: 0x001CB2D0
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		[PreserveInPlugin]
 		[WeaverGenerated]
@@ -35,7 +35,7 @@ namespace Fusion.CodeGen
 			*(NetworkString<_32>*)(data + index * 132) = val;
 		}
 
-		// Token: 0x06005D8E RID: 23950 RVA: 0x001CD009 File Offset: 0x001CB209
+		// Token: 0x06005D8F RID: 23951 RVA: 0x001CD0E1 File Offset: 0x001CB2E1
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		[PreserveInPlugin]
 		[WeaverGenerated]
@@ -44,7 +44,7 @@ namespace Fusion.CodeGen
 			return 33;
 		}
 
-		// Token: 0x06005D8F RID: 23951 RVA: 0x001CD010 File Offset: 0x001CB210
+		// Token: 0x06005D90 RID: 23952 RVA: 0x001CD0E8 File Offset: 0x001CB2E8
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		[PreserveInPlugin]
 		[WeaverGenerated]
@@ -53,7 +53,7 @@ namespace Fusion.CodeGen
 			return val.GetHashCode();
 		}
 
-		// Token: 0x06005D90 RID: 23952 RVA: 0x001CD02C File Offset: 0x001CB22C
+		// Token: 0x06005D91 RID: 23953 RVA: 0x001CD104 File Offset: 0x001CB304
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		[WeaverGenerated]
 		public static IElementReaderWriter<NetworkString<_32>> GetInstance()
@@ -65,7 +65,7 @@ namespace Fusion.CodeGen
 			return ReaderWriter@Fusion_NetworkString.Instance;
 		}
 
-		// Token: 0x04006193 RID: 24979
+		// Token: 0x04006194 RID: 24980
 		[WeaverGenerated]
 		public static IElementReaderWriter<NetworkString<_32>> Instance;
 	}

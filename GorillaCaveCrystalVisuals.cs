@@ -6,8 +6,8 @@ using UnityEngine;
 public class GorillaCaveCrystalVisuals : MonoBehaviour
 {
 	// Token: 0x1700039A RID: 922
-	// (get) Token: 0x060025AC RID: 9644 RVA: 0x000BB72A File Offset: 0x000B992A
-	// (set) Token: 0x060025AD RID: 9645 RVA: 0x000BB732 File Offset: 0x000B9932
+	// (get) Token: 0x060025AC RID: 9644 RVA: 0x000BB74A File Offset: 0x000B994A
+	// (set) Token: 0x060025AD RID: 9645 RVA: 0x000BB752 File Offset: 0x000B9952
 	public float lerp
 	{
 		get
@@ -20,7 +20,7 @@ public class GorillaCaveCrystalVisuals : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060025AE RID: 9646 RVA: 0x000BB73C File Offset: 0x000B993C
+	// Token: 0x060025AE RID: 9646 RVA: 0x000BB75C File Offset: 0x000B995C
 	public void Setup()
 	{
 		base.TryGetComponent<MeshRenderer>(out this._renderer);
@@ -34,14 +34,14 @@ public class GorillaCaveCrystalVisuals : MonoBehaviour
 		this.Update();
 	}
 
-	// Token: 0x060025AF RID: 9647 RVA: 0x000BB7B8 File Offset: 0x000B99B8
+	// Token: 0x060025AF RID: 9647 RVA: 0x000BB7D8 File Offset: 0x000B99D8
 	private void Start()
 	{
 		this.UpdateAlbedo();
 		this.ForceUpdate();
 	}
 
-	// Token: 0x060025B0 RID: 9648 RVA: 0x000BB7C8 File Offset: 0x000B99C8
+	// Token: 0x060025B0 RID: 9648 RVA: 0x000BB7E8 File Offset: 0x000B99E8
 	public void UpdateAlbedo()
 	{
 		if (!this._initialized)
@@ -61,14 +61,14 @@ public class GorillaCaveCrystalVisuals : MonoBehaviour
 		this._renderer.SetPropertyBlock(this._block);
 	}
 
-	// Token: 0x060025B1 RID: 9649 RVA: 0x000BB83D File Offset: 0x000B9A3D
+	// Token: 0x060025B1 RID: 9649 RVA: 0x000BB85D File Offset: 0x000B9A5D
 	private void Awake()
 	{
 		this.UpdateAlbedo();
 		this.Update();
 	}
 
-	// Token: 0x060025B2 RID: 9650 RVA: 0x000BB84C File Offset: 0x000B9A4C
+	// Token: 0x060025B2 RID: 9650 RVA: 0x000BB86C File Offset: 0x000B9A6C
 	private void Update()
 	{
 		if (!this._initialized)
@@ -98,14 +98,14 @@ public class GorillaCaveCrystalVisuals : MonoBehaviour
 		this._renderer.SetPropertyBlock(this._block);
 	}
 
-	// Token: 0x060025B3 RID: 9651 RVA: 0x000BB942 File Offset: 0x000B9B42
+	// Token: 0x060025B3 RID: 9651 RVA: 0x000BB962 File Offset: 0x000B9B62
 	public void ForceUpdate()
 	{
 		this._lastState = 0;
 		this.Update();
 	}
 
-	// Token: 0x060025B4 RID: 9652 RVA: 0x000BB954 File Offset: 0x000B9B54
+	// Token: 0x060025B4 RID: 9652 RVA: 0x000BB974 File Offset: 0x000B9B74
 	private static void InitializeCrystals()
 	{
 		foreach (GorillaCaveCrystalVisuals gorillaCaveCrystalVisuals in Object.FindObjectsByType<GorillaCaveCrystalVisuals>(FindObjectsInactive.Include, FindObjectsSortMode.InstanceID))

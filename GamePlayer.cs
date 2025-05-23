@@ -6,7 +6,7 @@ using UnityEngine;
 // Token: 0x02000573 RID: 1395
 public class GamePlayer : MonoBehaviour
 {
-	// Token: 0x06002216 RID: 8726 RVA: 0x000AAC50 File Offset: 0x000A8E50
+	// Token: 0x06002216 RID: 8726 RVA: 0x000AAC70 File Offset: 0x000A8E70
 	private void Awake()
 	{
 		this.handTransforms = new Transform[2];
@@ -29,7 +29,7 @@ public class GamePlayer : MonoBehaviour
 	{
 	}
 
-	// Token: 0x06002218 RID: 8728 RVA: 0x000AAD18 File Offset: 0x000A8F18
+	// Token: 0x06002218 RID: 8728 RVA: 0x000AAD38 File Offset: 0x000A8F38
 	public void SetGrabbed(GameEntityId gameBallId, int handIndex)
 	{
 		if (gameBallId.IsValid())
@@ -41,7 +41,7 @@ public class GamePlayer : MonoBehaviour
 		this.hands[handIndex] = handData;
 	}
 
-	// Token: 0x06002219 RID: 8729 RVA: 0x000AAD58 File Offset: 0x000A8F58
+	// Token: 0x06002219 RID: 8729 RVA: 0x000AAD78 File Offset: 0x000A8F78
 	public void Clear()
 	{
 		for (int i = 0; i < 2; i++)
@@ -55,7 +55,7 @@ public class GamePlayer : MonoBehaviour
 	{
 	}
 
-	// Token: 0x0600221B RID: 8731 RVA: 0x000AAD78 File Offset: 0x000A8F78
+	// Token: 0x0600221B RID: 8731 RVA: 0x000AAD98 File Offset: 0x000A8F98
 	public void ClearGrabbedIfHeld(GameEntityId gameBallId)
 	{
 		for (int i = 0; i < 2; i++)
@@ -67,49 +67,49 @@ public class GamePlayer : MonoBehaviour
 		}
 	}
 
-	// Token: 0x0600221C RID: 8732 RVA: 0x000AADB1 File Offset: 0x000A8FB1
+	// Token: 0x0600221C RID: 8732 RVA: 0x000AADD1 File Offset: 0x000A8FD1
 	public void ClearGrabbed(int handIndex)
 	{
 		this.SetGrabbed(GameEntityId.Invalid, handIndex);
 	}
 
-	// Token: 0x0600221D RID: 8733 RVA: 0x000AADBF File Offset: 0x000A8FBF
+	// Token: 0x0600221D RID: 8733 RVA: 0x000AADDF File Offset: 0x000A8FDF
 	public bool IsGrabbingDisabled()
 	{
 		return this.grabbingDisabled;
 	}
 
-	// Token: 0x0600221E RID: 8734 RVA: 0x000AADC7 File Offset: 0x000A8FC7
+	// Token: 0x0600221E RID: 8734 RVA: 0x000AADE7 File Offset: 0x000A8FE7
 	public void DisableGrabbing(bool disable)
 	{
 		this.grabbingDisabled = disable;
 	}
 
-	// Token: 0x0600221F RID: 8735 RVA: 0x000AADD0 File Offset: 0x000A8FD0
+	// Token: 0x0600221F RID: 8735 RVA: 0x000AADF0 File Offset: 0x000A8FF0
 	public bool IsHoldingEntity(GameEntityId gameEntityId, bool isLeftHand)
 	{
 		return this.GetGameEntityId(GamePlayer.GetHandIndex(isLeftHand)) == gameEntityId;
 	}
 
-	// Token: 0x06002220 RID: 8736 RVA: 0x000AADE4 File Offset: 0x000A8FE4
+	// Token: 0x06002220 RID: 8736 RVA: 0x000AAE04 File Offset: 0x000A9004
 	public bool IsHoldingEntity(bool isLeftHand)
 	{
 		return GameEntityManager.instance.GetGameEntity(this.GetGameEntityId(GamePlayer.GetHandIndex(isLeftHand))) != null;
 	}
 
-	// Token: 0x06002221 RID: 8737 RVA: 0x000AAE04 File Offset: 0x000A9004
+	// Token: 0x06002221 RID: 8737 RVA: 0x000AAE24 File Offset: 0x000A9024
 	public GameEntityId GetGameEntityId(bool isLeftHand)
 	{
 		return this.GetGameEntityId(GamePlayer.GetHandIndex(isLeftHand));
 	}
 
-	// Token: 0x06002222 RID: 8738 RVA: 0x000AAE12 File Offset: 0x000A9012
+	// Token: 0x06002222 RID: 8738 RVA: 0x000AAE32 File Offset: 0x000A9032
 	public GameEntityId GetGameEntityId(int handIndex)
 	{
 		return this.hands[handIndex].grabbedEntityId;
 	}
 
-	// Token: 0x06002223 RID: 8739 RVA: 0x000AAE28 File Offset: 0x000A9028
+	// Token: 0x06002223 RID: 8739 RVA: 0x000AAE48 File Offset: 0x000A9048
 	public int FindHandIndex(GameEntityId gameBallId)
 	{
 		for (int i = 0; i < this.hands.Length; i++)
@@ -122,7 +122,7 @@ public class GamePlayer : MonoBehaviour
 		return -1;
 	}
 
-	// Token: 0x06002224 RID: 8740 RVA: 0x000AAE64 File Offset: 0x000A9064
+	// Token: 0x06002224 RID: 8740 RVA: 0x000AAE84 File Offset: 0x000A9084
 	public GameEntityId GetGameBallId()
 	{
 		for (int i = 0; i < this.hands.Length; i++)
@@ -135,13 +135,13 @@ public class GamePlayer : MonoBehaviour
 		return GameEntityId.Invalid;
 	}
 
-	// Token: 0x06002225 RID: 8741 RVA: 0x0008DD4B File Offset: 0x0008BF4B
+	// Token: 0x06002225 RID: 8741 RVA: 0x0008DD6B File Offset: 0x0008BF6B
 	public static bool IsLeftHand(int handIndex)
 	{
 		return handIndex == 0;
 	}
 
-	// Token: 0x06002226 RID: 8742 RVA: 0x0008DD51 File Offset: 0x0008BF51
+	// Token: 0x06002226 RID: 8742 RVA: 0x0008DD71 File Offset: 0x0008BF71
 	public static int GetHandIndex(bool leftHand)
 	{
 		if (!leftHand)
@@ -151,7 +151,7 @@ public class GamePlayer : MonoBehaviour
 		return 0;
 	}
 
-	// Token: 0x06002227 RID: 8743 RVA: 0x000AAEB4 File Offset: 0x000A90B4
+	// Token: 0x06002227 RID: 8743 RVA: 0x000AAED4 File Offset: 0x000A90D4
 	public static VRRig GetRig(int actorNumber)
 	{
 		NetPlayer player = NetworkSystem.Instance.GetPlayer(actorNumber);
@@ -167,7 +167,7 @@ public class GamePlayer : MonoBehaviour
 		return rigContainer.Rig;
 	}
 
-	// Token: 0x06002228 RID: 8744 RVA: 0x000AAEE9 File Offset: 0x000A90E9
+	// Token: 0x06002228 RID: 8744 RVA: 0x000AAF09 File Offset: 0x000A9109
 	public static GamePlayer GetGamePlayer(Player player)
 	{
 		if (player == null)
@@ -177,7 +177,7 @@ public class GamePlayer : MonoBehaviour
 		return GamePlayer.GetGamePlayer(player.ActorNumber);
 	}
 
-	// Token: 0x06002229 RID: 8745 RVA: 0x000AAEFB File Offset: 0x000A90FB
+	// Token: 0x06002229 RID: 8745 RVA: 0x000AAF1B File Offset: 0x000A911B
 	public static GamePlayer GetGamePlayer(int actorNumber)
 	{
 		if (actorNumber < 0)
@@ -187,7 +187,7 @@ public class GamePlayer : MonoBehaviour
 		return GamePlayer.GetGamePlayer(GamePlayer.GetRig(actorNumber));
 	}
 
-	// Token: 0x0600222A RID: 8746 RVA: 0x000AAF0E File Offset: 0x000A910E
+	// Token: 0x0600222A RID: 8746 RVA: 0x000AAF2E File Offset: 0x000A912E
 	public static GamePlayer GetGamePlayer(VRRig rig)
 	{
 		if (rig == null)
@@ -197,7 +197,7 @@ public class GamePlayer : MonoBehaviour
 		return rig.GetComponent<GamePlayer>();
 	}
 
-	// Token: 0x0600222B RID: 8747 RVA: 0x000AAF24 File Offset: 0x000A9124
+	// Token: 0x0600222B RID: 8747 RVA: 0x000AAF44 File Offset: 0x000A9144
 	public static GamePlayer GetGamePlayer(Collider collider, bool bodyOnly = false)
 	{
 		Transform transform = collider.transform;
@@ -217,7 +217,7 @@ public class GamePlayer : MonoBehaviour
 		return null;
 	}
 
-	// Token: 0x0600222C RID: 8748 RVA: 0x000AAF60 File Offset: 0x000A9160
+	// Token: 0x0600222C RID: 8748 RVA: 0x000AAF80 File Offset: 0x000A9180
 	public static Transform GetHandTransform(VRRig rig, int handIndex)
 	{
 		if (handIndex < 0 || handIndex >= 2)
@@ -227,13 +227,13 @@ public class GamePlayer : MonoBehaviour
 		return GamePlayer.GetGamePlayer(rig).handTransforms[handIndex];
 	}
 
-	// Token: 0x0600222D RID: 8749 RVA: 0x000AAF79 File Offset: 0x000A9179
+	// Token: 0x0600222D RID: 8749 RVA: 0x000AAF99 File Offset: 0x000A9199
 	public bool IsLocal()
 	{
 		return GamePlayerLocal.instance != null && GamePlayerLocal.instance.gamePlayer == this;
 	}
 
-	// Token: 0x0600222E RID: 8750 RVA: 0x000AAFA0 File Offset: 0x000A91A0
+	// Token: 0x0600222E RID: 8750 RVA: 0x000AAFC0 File Offset: 0x000A91C0
 	public void SerializeNetworkState(BinaryWriter writer, NetPlayer player)
 	{
 		for (int i = 0; i < 2; i++)
@@ -253,7 +253,7 @@ public class GamePlayer : MonoBehaviour
 		}
 	}
 
-	// Token: 0x0600222F RID: 8751 RVA: 0x000AB028 File Offset: 0x000A9228
+	// Token: 0x0600222F RID: 8751 RVA: 0x000AB048 File Offset: 0x000A9248
 	public static void DeserializeNetworkState(BinaryReader reader, GamePlayer gamePlayer)
 	{
 		for (int i = 0; i < 2; i++)

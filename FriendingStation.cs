@@ -8,7 +8,7 @@ using UnityEngine;
 public class FriendingStation : MonoBehaviour
 {
 	// Token: 0x17000572 RID: 1394
-	// (get) Token: 0x060036E4 RID: 14052 RVA: 0x001094CE File Offset: 0x001076CE
+	// (get) Token: 0x060036E5 RID: 14053 RVA: 0x001095A6 File Offset: 0x001077A6
 	public TextMeshProUGUI Player1Text
 	{
 		get
@@ -18,7 +18,7 @@ public class FriendingStation : MonoBehaviour
 	}
 
 	// Token: 0x17000573 RID: 1395
-	// (get) Token: 0x060036E5 RID: 14053 RVA: 0x001094D6 File Offset: 0x001076D6
+	// (get) Token: 0x060036E6 RID: 14054 RVA: 0x001095AE File Offset: 0x001077AE
 	public TextMeshProUGUI Player2Text
 	{
 		get
@@ -28,7 +28,7 @@ public class FriendingStation : MonoBehaviour
 	}
 
 	// Token: 0x17000574 RID: 1396
-	// (get) Token: 0x060036E6 RID: 14054 RVA: 0x001094DE File Offset: 0x001076DE
+	// (get) Token: 0x060036E7 RID: 14055 RVA: 0x001095B6 File Offset: 0x001077B6
 	public TextMeshProUGUI StatusText
 	{
 		get
@@ -38,7 +38,7 @@ public class FriendingStation : MonoBehaviour
 	}
 
 	// Token: 0x17000575 RID: 1397
-	// (get) Token: 0x060036E7 RID: 14055 RVA: 0x001094E6 File Offset: 0x001076E6
+	// (get) Token: 0x060036E8 RID: 14056 RVA: 0x001095BE File Offset: 0x001077BE
 	public GTZone Zone
 	{
 		get
@@ -47,14 +47,14 @@ public class FriendingStation : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060036E8 RID: 14056 RVA: 0x001094EE File Offset: 0x001076EE
+	// Token: 0x060036E9 RID: 14057 RVA: 0x001095C6 File Offset: 0x001077C6
 	private void Awake()
 	{
 		this.triggerNotifier.TriggerEnterEvent += this.TriggerEntered;
 		this.triggerNotifier.TriggerExitEvent += this.TriggerExited;
 	}
 
-	// Token: 0x060036E9 RID: 14057 RVA: 0x00109520 File Offset: 0x00107720
+	// Token: 0x060036EA RID: 14058 RVA: 0x001095F8 File Offset: 0x001077F8
 	private void OnEnable()
 	{
 		FriendingManager.Instance.RegisterFriendingStation(this);
@@ -75,13 +75,13 @@ public class FriendingStation : MonoBehaviour
 		this.UpdateDisplayedState(this.displayedData.state);
 	}
 
-	// Token: 0x060036EA RID: 14058 RVA: 0x001095CC File Offset: 0x001077CC
+	// Token: 0x060036EB RID: 14059 RVA: 0x001096A4 File Offset: 0x001078A4
 	private void OnDisable()
 	{
 		FriendingManager.Instance.UnregisterFriendingStation(this);
 	}
 
-	// Token: 0x060036EB RID: 14059 RVA: 0x001095DC File Offset: 0x001077DC
+	// Token: 0x060036EC RID: 14060 RVA: 0x001096B4 File Offset: 0x001078B4
 	private void UpdatePlayerText(TextMeshProUGUI playerText, int playerId)
 	{
 		if (playerId == -2)
@@ -103,7 +103,7 @@ public class FriendingStation : MonoBehaviour
 		playerText.text = "PLAYER:\nNONE";
 	}
 
-	// Token: 0x060036EC RID: 14060 RVA: 0x0010963C File Offset: 0x0010783C
+	// Token: 0x060036ED RID: 14061 RVA: 0x00109714 File Offset: 0x00107914
 	private void UpdateDisplayedState(FriendingManager.FriendStationState state)
 	{
 		switch (state)
@@ -170,7 +170,7 @@ public class FriendingStation : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060036ED RID: 14061 RVA: 0x001097E0 File Offset: 0x001079E0
+	// Token: 0x060036EE RID: 14062 RVA: 0x001098B8 File Offset: 0x00107AB8
 	private void UpdateAddFriendButton()
 	{
 		int actorNumber = NetworkSystem.Instance.LocalPlayer.ActorNumber;
@@ -185,7 +185,7 @@ public class FriendingStation : MonoBehaviour
 		this.addFriendButton.UpdateColor();
 	}
 
-	// Token: 0x060036EE RID: 14062 RVA: 0x00109880 File Offset: 0x00107A80
+	// Token: 0x060036EF RID: 14063 RVA: 0x00109958 File Offset: 0x00107B58
 	private void UpdateDisplay(ref FriendingManager.FriendStationData data)
 	{
 		if (this.displayedData.actorNumberA != data.actorNumberA)
@@ -204,13 +204,13 @@ public class FriendingStation : MonoBehaviour
 		this.UpdateAddFriendButton();
 	}
 
-	// Token: 0x060036EF RID: 14063 RVA: 0x00109908 File Offset: 0x00107B08
+	// Token: 0x060036F0 RID: 14064 RVA: 0x001099E0 File Offset: 0x00107BE0
 	public void UpdateState(FriendingManager.FriendStationData data)
 	{
 		this.UpdateDisplay(ref data);
 	}
 
-	// Token: 0x060036F0 RID: 14064 RVA: 0x00109914 File Offset: 0x00107B14
+	// Token: 0x060036F1 RID: 14065 RVA: 0x001099EC File Offset: 0x00107BEC
 	public void TriggerEntered(TriggerEventNotifier notifier, Collider other)
 	{
 		if (PhotonNetwork.InRoom)
@@ -235,7 +235,7 @@ public class FriendingStation : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060036F1 RID: 14065 RVA: 0x001099EC File Offset: 0x00107BEC
+	// Token: 0x060036F2 RID: 14066 RVA: 0x00109AC4 File Offset: 0x00107CC4
 	public void TriggerExited(TriggerEventNotifier notifier, Collider other)
 	{
 		if (PhotonNetwork.InRoom)
@@ -260,7 +260,7 @@ public class FriendingStation : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060036F2 RID: 14066 RVA: 0x00109ABC File Offset: 0x00107CBC
+	// Token: 0x060036F3 RID: 14067 RVA: 0x00109B94 File Offset: 0x00107D94
 	public void FriendButtonPressed()
 	{
 		if (this.displayedData.state == FriendingManager.FriendStationState.WaitingForPlayers || this.displayedData.state == FriendingManager.FriendStationState.Friends)
@@ -279,7 +279,7 @@ public class FriendingStation : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060036F3 RID: 14067 RVA: 0x00109B90 File Offset: 0x00107D90
+	// Token: 0x060036F4 RID: 14068 RVA: 0x00109C68 File Offset: 0x00107E68
 	public void FriendButtonReleased()
 	{
 		if (this.displayedData.state == FriendingManager.FriendStationState.WaitingForPlayers || this.displayedData.state == FriendingManager.FriendStationState.Friends)
@@ -298,30 +298,30 @@ public class FriendingStation : MonoBehaviour
 		}
 	}
 
-	// Token: 0x04003C77 RID: 15479
+	// Token: 0x04003C78 RID: 15480
 	[SerializeField]
 	private TriggerEventNotifier triggerNotifier;
 
-	// Token: 0x04003C78 RID: 15480
+	// Token: 0x04003C79 RID: 15481
 	[SerializeField]
 	private TextMeshProUGUI player1Text;
 
-	// Token: 0x04003C79 RID: 15481
+	// Token: 0x04003C7A RID: 15482
 	[SerializeField]
 	private TextMeshProUGUI player2Text;
 
-	// Token: 0x04003C7A RID: 15482
+	// Token: 0x04003C7B RID: 15483
 	[SerializeField]
 	private TextMeshProUGUI statusText;
 
-	// Token: 0x04003C7B RID: 15483
+	// Token: 0x04003C7C RID: 15484
 	[SerializeField]
 	private GTZone zone;
 
-	// Token: 0x04003C7C RID: 15484
+	// Token: 0x04003C7D RID: 15485
 	[SerializeField]
 	private GorillaPressableButton addFriendButton;
 
-	// Token: 0x04003C7D RID: 15485
+	// Token: 0x04003C7E RID: 15486
 	private FriendingManager.FriendStationData displayedData;
 }

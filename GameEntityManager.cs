@@ -15,16 +15,16 @@ using UnityEngine;
 public class GameEntityManager : NetworkComponent, IMatchmakingCallbacks, IInRoomCallbacks, IRequestableOwnershipGuardCallbacks
 {
 	// Token: 0x1400004F RID: 79
-	// (add) Token: 0x06002185 RID: 8581 RVA: 0x000A764C File Offset: 0x000A584C
-	// (remove) Token: 0x06002186 RID: 8582 RVA: 0x000A7684 File Offset: 0x000A5884
+	// (add) Token: 0x06002185 RID: 8581 RVA: 0x000A766C File Offset: 0x000A586C
+	// (remove) Token: 0x06002186 RID: 8582 RVA: 0x000A76A4 File Offset: 0x000A58A4
 	public event GameEntityManager.ZoneStartEvent onZoneStart;
 
 	// Token: 0x14000050 RID: 80
-	// (add) Token: 0x06002187 RID: 8583 RVA: 0x000A76BC File Offset: 0x000A58BC
-	// (remove) Token: 0x06002188 RID: 8584 RVA: 0x000A76F4 File Offset: 0x000A58F4
+	// (add) Token: 0x06002187 RID: 8583 RVA: 0x000A76DC File Offset: 0x000A58DC
+	// (remove) Token: 0x06002188 RID: 8584 RVA: 0x000A7714 File Offset: 0x000A5914
 	public event GameEntityManager.ZoneClearEvent onZoneClear;
 
-	// Token: 0x06002189 RID: 8585 RVA: 0x000A772C File Offset: 0x000A592C
+	// Token: 0x06002189 RID: 8585 RVA: 0x000A774C File Offset: 0x000A594C
 	protected override void Awake()
 	{
 		base.Awake();
@@ -56,7 +56,7 @@ public class GameEntityManager : NetworkComponent, IMatchmakingCallbacks, IInRoo
 		this.statesForState = new List<long>();
 	}
 
-	// Token: 0x0600218A RID: 8586 RVA: 0x000A785B File Offset: 0x000A5A5B
+	// Token: 0x0600218A RID: 8586 RVA: 0x000A787B File Offset: 0x000A5A7B
 	private void OnDestroy()
 	{
 		NetworkBehaviourUtils.InternalOnDestroy(this);
@@ -64,7 +64,7 @@ public class GameEntityManager : NetworkComponent, IMatchmakingCallbacks, IInRoo
 		this.zoneIds.Dispose();
 	}
 
-	// Token: 0x0600218B RID: 8587 RVA: 0x000A787C File Offset: 0x000A5A7C
+	// Token: 0x0600218B RID: 8587 RVA: 0x000A789C File Offset: 0x000A5A9C
 	private void Update()
 	{
 		this.UpdateZoneState();
@@ -110,7 +110,7 @@ public class GameEntityManager : NetworkComponent, IMatchmakingCallbacks, IInRoo
 		}
 	}
 
-	// Token: 0x0600218C RID: 8588 RVA: 0x000A7A4C File Offset: 0x000A5C4C
+	// Token: 0x0600218C RID: 8588 RVA: 0x000A7A6C File Offset: 0x000A5C6C
 	public GameEntityId AddGameEntity(int netId, int zoneId, GameEntity gameEntity)
 	{
 		int num = this.FindNewEntityIndex();
@@ -127,7 +127,7 @@ public class GameEntityManager : NetworkComponent, IMatchmakingCallbacks, IInRoo
 		return gameEntity.id;
 	}
 
-	// Token: 0x0600218D RID: 8589 RVA: 0x000A7AC8 File Offset: 0x000A5CC8
+	// Token: 0x0600218D RID: 8589 RVA: 0x000A7AE8 File Offset: 0x000A5CE8
 	private int FindNewEntityIndex()
 	{
 		for (int i = 0; i < this.entities.Count; i++)
@@ -141,7 +141,7 @@ public class GameEntityManager : NetworkComponent, IMatchmakingCallbacks, IInRoo
 		return this.entities.Count - 1;
 	}
 
-	// Token: 0x0600218E RID: 8590 RVA: 0x000A7B1C File Offset: 0x000A5D1C
+	// Token: 0x0600218E RID: 8590 RVA: 0x000A7B3C File Offset: 0x000A5D3C
 	public void RemoveGameEntity(GameEntity entity)
 	{
 		int index = entity.id.index;
@@ -155,20 +155,20 @@ public class GameEntityManager : NetworkComponent, IMatchmakingCallbacks, IInRoo
 		}
 	}
 
-	// Token: 0x0600218F RID: 8591 RVA: 0x000A7B69 File Offset: 0x000A5D69
+	// Token: 0x0600218F RID: 8591 RVA: 0x000A7B89 File Offset: 0x000A5D89
 	public List<GameEntity> GetGameEntities()
 	{
 		return this.entities;
 	}
 
-	// Token: 0x06002190 RID: 8592 RVA: 0x000A7B74 File Offset: 0x000A5D74
+	// Token: 0x06002190 RID: 8592 RVA: 0x000A7B94 File Offset: 0x000A5D94
 	public static bool IsValidNetId(int netId)
 	{
 		int num;
 		return GameEntityManager.instance != null && GameEntityManager.instance.netIdToIndex.TryGetValue(netId, out num) && num >= 0 && num < GameEntityManager.instance.entities.Count;
 	}
 
-	// Token: 0x06002191 RID: 8593 RVA: 0x000A7BC0 File Offset: 0x000A5DC0
+	// Token: 0x06002191 RID: 8593 RVA: 0x000A7BE0 File Offset: 0x000A5DE0
 	public int FindOpenIndex()
 	{
 		for (int i = 0; i < this.netIds.Length; i++)
@@ -181,7 +181,7 @@ public class GameEntityManager : NetworkComponent, IMatchmakingCallbacks, IInRoo
 		return -1;
 	}
 
-	// Token: 0x06002192 RID: 8594 RVA: 0x000A7BF8 File Offset: 0x000A5DF8
+	// Token: 0x06002192 RID: 8594 RVA: 0x000A7C18 File Offset: 0x000A5E18
 	public GameEntityId GetEntityIdFromNetId(int netId)
 	{
 		int num;
@@ -195,7 +195,7 @@ public class GameEntityManager : NetworkComponent, IMatchmakingCallbacks, IInRoo
 		return GameEntityId.Invalid;
 	}
 
-	// Token: 0x06002193 RID: 8595 RVA: 0x000A7C2C File Offset: 0x000A5E2C
+	// Token: 0x06002193 RID: 8595 RVA: 0x000A7C4C File Offset: 0x000A5E4C
 	public int GetNetIdFromEntityId(GameEntityId id)
 	{
 		if (id.index < 0 || id.index >= this.netIds.Length)
@@ -205,43 +205,43 @@ public class GameEntityManager : NetworkComponent, IMatchmakingCallbacks, IInRoo
 		return this.netIds[id.index];
 	}
 
-	// Token: 0x06002194 RID: 8596 RVA: 0x000A7C5D File Offset: 0x000A5E5D
+	// Token: 0x06002194 RID: 8596 RVA: 0x000A7C7D File Offset: 0x000A5E7D
 	private int GetPlayerZoneId()
 	{
 		return 5;
 	}
 
-	// Token: 0x06002195 RID: 8597 RVA: 0x000A7C60 File Offset: 0x000A5E60
+	// Token: 0x06002195 RID: 8597 RVA: 0x000A7C80 File Offset: 0x000A5E80
 	public bool IsAuthority()
 	{
 		return !NetworkSystem.Instance.InRoom || this.guard.isTrulyMine;
 	}
 
-	// Token: 0x06002196 RID: 8598 RVA: 0x000A7C7B File Offset: 0x000A5E7B
+	// Token: 0x06002196 RID: 8598 RVA: 0x000A7C9B File Offset: 0x000A5E9B
 	public bool IsAuthorityPlayer(NetPlayer player)
 	{
 		return player != null && this.IsAuthorityPlayer(player.GetPlayerRef());
 	}
 
-	// Token: 0x06002197 RID: 8599 RVA: 0x000A7C8E File Offset: 0x000A5E8E
+	// Token: 0x06002197 RID: 8599 RVA: 0x000A7CAE File Offset: 0x000A5EAE
 	public bool IsAuthorityPlayer(Player player)
 	{
 		return player != null && this.guard.actualOwner != null && player == this.guard.actualOwner.GetPlayerRef();
 	}
 
-	// Token: 0x06002198 RID: 8600 RVA: 0x000A7CB5 File Offset: 0x000A5EB5
+	// Token: 0x06002198 RID: 8600 RVA: 0x000A7CD5 File Offset: 0x000A5ED5
 	public bool IsZoneAuthority(int zoneId)
 	{
 		return this.IsAuthority();
 	}
 
-	// Token: 0x06002199 RID: 8601 RVA: 0x000A7CBD File Offset: 0x000A5EBD
+	// Token: 0x06002199 RID: 8601 RVA: 0x000A7CDD File Offset: 0x000A5EDD
 	public bool HasAuthority()
 	{
 		return this.GetAuthorityPlayer() != null;
 	}
 
-	// Token: 0x0600219A RID: 8602 RVA: 0x000A7CC8 File Offset: 0x000A5EC8
+	// Token: 0x0600219A RID: 8602 RVA: 0x000A7CE8 File Offset: 0x000A5EE8
 	public Player GetAuthorityPlayer()
 	{
 		if (this.guard.actualOwner != null)
@@ -251,73 +251,73 @@ public class GameEntityManager : NetworkComponent, IMatchmakingCallbacks, IInRoo
 		return null;
 	}
 
-	// Token: 0x0600219B RID: 8603 RVA: 0x000A7CE9 File Offset: 0x000A5EE9
+	// Token: 0x0600219B RID: 8603 RVA: 0x000A7D09 File Offset: 0x000A5F09
 	public bool IsZoneActive()
 	{
 		return this.zoneStateData.state == GameEntityManager.ZoneState.Active;
 	}
 
-	// Token: 0x0600219C RID: 8604 RVA: 0x000A7CFC File Offset: 0x000A5EFC
+	// Token: 0x0600219C RID: 8604 RVA: 0x000A7D1C File Offset: 0x000A5F1C
 	public bool IsPositionInZone(Vector3 pos)
 	{
 		return this.zoneLimit == null || this.zoneLimit.bounds.Contains(pos);
 	}
 
-	// Token: 0x0600219D RID: 8605 RVA: 0x000A7D2D File Offset: 0x000A5F2D
+	// Token: 0x0600219D RID: 8605 RVA: 0x000A7D4D File Offset: 0x000A5F4D
 	public bool IsValidClientRPC(Player sender)
 	{
 		return this.IsAuthorityPlayer(sender) && this.IsZoneActive();
 	}
 
-	// Token: 0x0600219E RID: 8606 RVA: 0x000A7D40 File Offset: 0x000A5F40
+	// Token: 0x0600219E RID: 8606 RVA: 0x000A7D60 File Offset: 0x000A5F60
 	public bool IsValidClientRPC(Player sender, int entityNetId)
 	{
 		return this.IsValidClientRPC(sender) && GameEntityManager.IsValidNetId(entityNetId);
 	}
 
-	// Token: 0x0600219F RID: 8607 RVA: 0x000A7D53 File Offset: 0x000A5F53
+	// Token: 0x0600219F RID: 8607 RVA: 0x000A7D73 File Offset: 0x000A5F73
 	public bool IsValidClientRPC(Player sender, int entityNetId, Vector3 pos)
 	{
 		return this.IsValidClientRPC(sender, entityNetId) && this.IsPositionInZone(pos);
 	}
 
-	// Token: 0x060021A0 RID: 8608 RVA: 0x000A7D68 File Offset: 0x000A5F68
+	// Token: 0x060021A0 RID: 8608 RVA: 0x000A7D88 File Offset: 0x000A5F88
 	public bool IsValidClientRPC(Player sender, Vector3 pos)
 	{
 		return this.IsValidClientRPC(sender) && this.IsPositionInZone(pos);
 	}
 
-	// Token: 0x060021A1 RID: 8609 RVA: 0x000A7D7C File Offset: 0x000A5F7C
+	// Token: 0x060021A1 RID: 8609 RVA: 0x000A7D9C File Offset: 0x000A5F9C
 	public bool IsValidAuthorityRPC()
 	{
 		return this.IsAuthority() && this.IsZoneActive();
 	}
 
-	// Token: 0x060021A2 RID: 8610 RVA: 0x000A7D8E File Offset: 0x000A5F8E
+	// Token: 0x060021A2 RID: 8610 RVA: 0x000A7DAE File Offset: 0x000A5FAE
 	public bool IsValidAuthorityRPC(int entityNetId)
 	{
 		return this.IsValidAuthorityRPC() && GameEntityManager.IsValidNetId(entityNetId);
 	}
 
-	// Token: 0x060021A3 RID: 8611 RVA: 0x000A7DA0 File Offset: 0x000A5FA0
+	// Token: 0x060021A3 RID: 8611 RVA: 0x000A7DC0 File Offset: 0x000A5FC0
 	public bool IsValidAuthorityRPC(int entityNetId, Vector3 pos)
 	{
 		return this.IsValidAuthorityRPC(entityNetId) && this.IsPositionInZone(pos);
 	}
 
-	// Token: 0x060021A4 RID: 8612 RVA: 0x000A7DB4 File Offset: 0x000A5FB4
+	// Token: 0x060021A4 RID: 8612 RVA: 0x000A7DD4 File Offset: 0x000A5FD4
 	public bool IsValidAuthorityRPC(Vector3 pos)
 	{
 		return this.IsValidAuthorityRPC() && this.IsPositionInZone(pos);
 	}
 
-	// Token: 0x060021A5 RID: 8613 RVA: 0x000A7DC7 File Offset: 0x000A5FC7
+	// Token: 0x060021A5 RID: 8613 RVA: 0x000A7DE7 File Offset: 0x000A5FE7
 	public bool IsValidEntity(GameEntityId id)
 	{
 		return this.GetGameEntity(id) != null;
 	}
 
-	// Token: 0x060021A6 RID: 8614 RVA: 0x000A7DD8 File Offset: 0x000A5FD8
+	// Token: 0x060021A6 RID: 8614 RVA: 0x000A7DF8 File Offset: 0x000A5FF8
 	public GameEntity GetGameEntity(GameEntityId id)
 	{
 		if (!id.IsValid())
@@ -337,7 +337,7 @@ public class GameEntityManager : NetworkComponent, IMatchmakingCallbacks, IInRoo
 		return this.entities[index];
 	}
 
-	// Token: 0x060021A7 RID: 8615 RVA: 0x000A7E48 File Offset: 0x000A6048
+	// Token: 0x060021A7 RID: 8615 RVA: 0x000A7E68 File Offset: 0x000A6068
 	private void BuildFactory()
 	{
 		this.itemPrefabFactory = new Dictionary<int, GameObject>(1024);
@@ -359,7 +359,7 @@ public class GameEntityManager : NetworkComponent, IMatchmakingCallbacks, IInRoo
 		}
 	}
 
-	// Token: 0x060021A8 RID: 8616 RVA: 0x000A7F11 File Offset: 0x000A6111
+	// Token: 0x060021A8 RID: 8616 RVA: 0x000A7F31 File Offset: 0x000A6131
 	private int CreateNetId()
 	{
 		int num = this.nextNetId;
@@ -367,7 +367,7 @@ public class GameEntityManager : NetworkComponent, IMatchmakingCallbacks, IInRoo
 		return num;
 	}
 
-	// Token: 0x060021A9 RID: 8617 RVA: 0x000A7F28 File Offset: 0x000A6128
+	// Token: 0x060021A9 RID: 8617 RVA: 0x000A7F48 File Offset: 0x000A6148
 	public void RequestCreateItem(int entityTypeId, Vector3 position, Quaternion rotation, long createData)
 	{
 		int num = 5;
@@ -387,7 +387,7 @@ public class GameEntityManager : NetworkComponent, IMatchmakingCallbacks, IInRoo
 		this.CreateItemLocal(num4, num, entityTypeId, position, rotation, createData);
 	}
 
-	// Token: 0x060021AA RID: 8618 RVA: 0x000A7FC0 File Offset: 0x000A61C0
+	// Token: 0x060021AA RID: 8618 RVA: 0x000A7FE0 File Offset: 0x000A61E0
 	[PunRPC]
 	public void CreateItemRPC(int[] netId, int[] zoneId, int[] entityTypeId, long[] packedPos, int[] packedRot, long[] createData, PhotonMessageInfo info)
 	{
@@ -412,7 +412,7 @@ public class GameEntityManager : NetworkComponent, IMatchmakingCallbacks, IInRoo
 		}
 	}
 
-	// Token: 0x060021AB RID: 8619 RVA: 0x000A8080 File Offset: 0x000A6280
+	// Token: 0x060021AB RID: 8619 RVA: 0x000A80A0 File Offset: 0x000A62A0
 	public void RequestCreateItems(List<GameEntityCreateData> entityData)
 	{
 		int num = 5;
@@ -441,7 +441,7 @@ public class GameEntityManager : NetworkComponent, IMatchmakingCallbacks, IInRoo
 		this.photonView.RPC("CreateItemsRPC", RpcTarget.All, new object[] { num, array });
 	}
 
-	// Token: 0x060021AC RID: 8620 RVA: 0x000A8174 File Offset: 0x000A6374
+	// Token: 0x060021AC RID: 8620 RVA: 0x000A8194 File Offset: 0x000A6394
 	[PunRPC]
 	private void CreateItemsRPC(int zoneId, byte[] stateData, PhotonMessageInfo info)
 	{
@@ -481,14 +481,14 @@ public class GameEntityManager : NetworkComponent, IMatchmakingCallbacks, IInRoo
 		}
 	}
 
-	// Token: 0x060021AD RID: 8621 RVA: 0x000A8294 File Offset: 0x000A6494
+	// Token: 0x060021AD RID: 8621 RVA: 0x000A82B4 File Offset: 0x000A64B4
 	public bool FactoryHasEntity(int entityTypeId)
 	{
 		GameObject gameObject;
 		return this.itemPrefabFactory.TryGetValue(entityTypeId, out gameObject);
 	}
 
-	// Token: 0x060021AE RID: 8622 RVA: 0x000A82AF File Offset: 0x000A64AF
+	// Token: 0x060021AE RID: 8622 RVA: 0x000A82CF File Offset: 0x000A64CF
 	public static bool PriceLookup(int entityTypeId, out int price)
 	{
 		if (GameEntityManager.instance.priceLookupByEntityId.TryGetValue(entityTypeId, out price))
@@ -499,7 +499,7 @@ public class GameEntityManager : NetworkComponent, IMatchmakingCallbacks, IInRoo
 		return false;
 	}
 
-	// Token: 0x060021AF RID: 8623 RVA: 0x000A82CC File Offset: 0x000A64CC
+	// Token: 0x060021AF RID: 8623 RVA: 0x000A82EC File Offset: 0x000A64EC
 	private void ValidateThatNetIdIsNotAlreadyUsed(int netId, int newTypeId)
 	{
 		for (int i = 0; i < this.netIds.Length; i++)
@@ -525,7 +525,7 @@ public class GameEntityManager : NetworkComponent, IMatchmakingCallbacks, IInRoo
 		}
 	}
 
-	// Token: 0x060021B0 RID: 8624 RVA: 0x000A83BC File Offset: 0x000A65BC
+	// Token: 0x060021B0 RID: 8624 RVA: 0x000A83DC File Offset: 0x000A65DC
 	public GameEntityId CreateItemLocal(int netId, int zoneId, int entityTypeId, Vector3 position, Quaternion rotation, long createData)
 	{
 		this.nextNetId = Mathf.Max(netId + 1, this.nextNetId);
@@ -588,7 +588,7 @@ public class GameEntityManager : NetworkComponent, IMatchmakingCallbacks, IInRoo
 		return gameEntityId;
 	}
 
-	// Token: 0x060021B1 RID: 8625 RVA: 0x000A8549 File Offset: 0x000A6749
+	// Token: 0x060021B1 RID: 8625 RVA: 0x000A8569 File Offset: 0x000A6769
 	public void RequestDestroyItem(GameEntityId entityId)
 	{
 		if (!this.IsValidAuthorityRPC())
@@ -602,7 +602,7 @@ public class GameEntityManager : NetworkComponent, IMatchmakingCallbacks, IInRoo
 		this.DestroyItemLocal(entityId);
 	}
 
-	// Token: 0x060021B2 RID: 8626 RVA: 0x000A8580 File Offset: 0x000A6780
+	// Token: 0x060021B2 RID: 8626 RVA: 0x000A85A0 File Offset: 0x000A67A0
 	public void RequestDestroyItems(List<GameEntityId> entityIds)
 	{
 		if (!this.IsValidAuthorityRPC())
@@ -617,7 +617,7 @@ public class GameEntityManager : NetworkComponent, IMatchmakingCallbacks, IInRoo
 		this.photonView.RPC("DestroyItemRPC", RpcTarget.All, new object[] { list.ToArray() });
 	}
 
-	// Token: 0x060021B3 RID: 8627 RVA: 0x000A85E4 File Offset: 0x000A67E4
+	// Token: 0x060021B3 RID: 8627 RVA: 0x000A8604 File Offset: 0x000A6804
 	[PunRPC]
 	public void DestroyItemRPC(int[] entityNetId, PhotonMessageInfo info)
 	{
@@ -635,7 +635,7 @@ public class GameEntityManager : NetworkComponent, IMatchmakingCallbacks, IInRoo
 		}
 	}
 
-	// Token: 0x060021B4 RID: 8628 RVA: 0x000A8630 File Offset: 0x000A6830
+	// Token: 0x060021B4 RID: 8628 RVA: 0x000A8650 File Offset: 0x000A6850
 	public void DestroyItemLocal(GameEntityId entityId)
 	{
 		GameEntity gameEntity = GameEntityManager.instance.GetGameEntity(entityId);
@@ -664,7 +664,7 @@ public class GameEntityManager : NetworkComponent, IMatchmakingCallbacks, IInRoo
 		global::UnityEngine.Object.Destroy(gameEntity.gameObject);
 	}
 
-	// Token: 0x060021B5 RID: 8629 RVA: 0x000A86FA File Offset: 0x000A68FA
+	// Token: 0x060021B5 RID: 8629 RVA: 0x000A871A File Offset: 0x000A691A
 	public void RequestState(GameEntityId entityId, long newState)
 	{
 		this.photonView.RPC("RequestStateRPC", this.GetAuthorityPlayer(), new object[]
@@ -674,7 +674,7 @@ public class GameEntityManager : NetworkComponent, IMatchmakingCallbacks, IInRoo
 		});
 	}
 
-	// Token: 0x060021B6 RID: 8630 RVA: 0x000A8730 File Offset: 0x000A6930
+	// Token: 0x060021B6 RID: 8630 RVA: 0x000A8750 File Offset: 0x000A6950
 	[PunRPC]
 	public void RequestStateRPC(int entityNetId, long newState, PhotonMessageInfo info)
 	{
@@ -730,7 +730,7 @@ public class GameEntityManager : NetworkComponent, IMatchmakingCallbacks, IInRoo
 		}
 	}
 
-	// Token: 0x060021B7 RID: 8631 RVA: 0x000A8898 File Offset: 0x000A6A98
+	// Token: 0x060021B7 RID: 8631 RVA: 0x000A88B8 File Offset: 0x000A6AB8
 	[PunRPC]
 	public void ApplyStateRPC(int[] netId, long[] newState, PhotonMessageInfo info)
 	{
@@ -749,7 +749,7 @@ public class GameEntityManager : NetworkComponent, IMatchmakingCallbacks, IInRoo
 		}
 	}
 
-	// Token: 0x060021B8 RID: 8632 RVA: 0x000A8900 File Offset: 0x000A6B00
+	// Token: 0x060021B8 RID: 8632 RVA: 0x000A8920 File Offset: 0x000A6B20
 	public void RequestGrabEntity(GameEntityId gameEntityId, bool isLeftHand, Vector3 localPosition, Quaternion localRotation)
 	{
 		if (!this.IsAuthority())
@@ -766,7 +766,7 @@ public class GameEntityManager : NetworkComponent, IMatchmakingCallbacks, IInRoo
 		PhotonNetwork.SendAllOutgoingCommands();
 	}
 
-	// Token: 0x060021B9 RID: 8633 RVA: 0x000A8974 File Offset: 0x000A6B74
+	// Token: 0x060021B9 RID: 8633 RVA: 0x000A8994 File Offset: 0x000A6B94
 	[PunRPC]
 	public void RequestGrabEntityRPC(int entityNetId, bool isLeftHand, long packedPosRot, PhotonMessageInfo info)
 	{
@@ -805,7 +805,7 @@ public class GameEntityManager : NetworkComponent, IMatchmakingCallbacks, IInRoo
 		}
 	}
 
-	// Token: 0x060021BA RID: 8634 RVA: 0x000A8ADC File Offset: 0x000A6CDC
+	// Token: 0x060021BA RID: 8634 RVA: 0x000A8AFC File Offset: 0x000A6CFC
 	[PunRPC]
 	public void GrabEntityRPC(int entityNetId, bool isLeftHand, long packedPosRot, Player grabbedByPlayer, PhotonMessageInfo info)
 	{
@@ -824,7 +824,7 @@ public class GameEntityManager : NetworkComponent, IMatchmakingCallbacks, IInRoo
 		this.GrabEntityLocal(GameEntity.GetIdFromNetId(entityNetId), isLeftHand, vector, quaternion, NetPlayer.Get(grabbedByPlayer));
 	}
 
-	// Token: 0x060021BB RID: 8635 RVA: 0x000A8B54 File Offset: 0x000A6D54
+	// Token: 0x060021BB RID: 8635 RVA: 0x000A8B74 File Offset: 0x000A6D74
 	private void GrabEntityLocal(GameEntityId gameEntityId, bool isLeftHand, Vector3 localPosition, Quaternion localRotation, NetPlayer grabbedByPlayer)
 	{
 		RigContainer rigContainer;
@@ -888,13 +888,13 @@ public class GameEntityManager : NetworkComponent, IMatchmakingCallbacks, IInRoo
 		onGrabbed();
 	}
 
-	// Token: 0x060021BC RID: 8636 RVA: 0x000A8D15 File Offset: 0x000A6F15
+	// Token: 0x060021BC RID: 8636 RVA: 0x000A8D35 File Offset: 0x000A6F35
 	public void GrabEntityOnCreate(GameEntityId gameEntityId, bool isLeftHand, Vector3 localPosition, Quaternion localRotation, NetPlayer grabbedByPlayer)
 	{
 		this.GrabEntityLocal(gameEntityId, isLeftHand, localPosition, localRotation, grabbedByPlayer);
 	}
 
-	// Token: 0x060021BD RID: 8637 RVA: 0x000A8D24 File Offset: 0x000A6F24
+	// Token: 0x060021BD RID: 8637 RVA: 0x000A8D44 File Offset: 0x000A6F44
 	public GameEntityId TryGrabLocal(Vector3 handPosition)
 	{
 		int actorNumber = PhotonNetwork.LocalPlayer.ActorNumber;
@@ -921,7 +921,7 @@ public class GameEntityManager : NetworkComponent, IMatchmakingCallbacks, IInRoo
 		return gameEntityId;
 	}
 
-	// Token: 0x060021BE RID: 8638 RVA: 0x000A8E88 File Offset: 0x000A7088
+	// Token: 0x060021BE RID: 8638 RVA: 0x000A8EA8 File Offset: 0x000A70A8
 	public void RequestThrowEntity(GameEntityId entityId, bool isLeftHand, Vector3 velocity, Vector3 angVelocity)
 	{
 		GameEntity gameEntity = this.GetGameEntity(entityId);
@@ -947,7 +947,7 @@ public class GameEntityManager : NetworkComponent, IMatchmakingCallbacks, IInRoo
 		PhotonNetwork.SendAllOutgoingCommands();
 	}
 
-	// Token: 0x060021BF RID: 8639 RVA: 0x000A8F3C File Offset: 0x000A713C
+	// Token: 0x060021BF RID: 8639 RVA: 0x000A8F5C File Offset: 0x000A715C
 	[PunRPC]
 	public void RequestThrowEntityRPC(int entityNetId, bool isLeftHand, Vector3 position, Quaternion rotation, Vector3 velocity, Vector3 angVelocity, PhotonMessageInfo info)
 	{
@@ -976,7 +976,7 @@ public class GameEntityManager : NetworkComponent, IMatchmakingCallbacks, IInRoo
 		}
 	}
 
-	// Token: 0x060021C0 RID: 8640 RVA: 0x000A9060 File Offset: 0x000A7260
+	// Token: 0x060021C0 RID: 8640 RVA: 0x000A9080 File Offset: 0x000A7280
 	[PunRPC]
 	public void ThrowEntityRPC(int entityNetId, bool isLeftHand, Vector3 position, Quaternion rotation, Vector3 velocity, Vector3 angVelocity, Player thrownByPlayer, double throwTime, PhotonMessageInfo info)
 	{
@@ -999,7 +999,7 @@ public class GameEntityManager : NetworkComponent, IMatchmakingCallbacks, IInRoo
 		}
 	}
 
-	// Token: 0x060021C1 RID: 8641 RVA: 0x000A90F4 File Offset: 0x000A72F4
+	// Token: 0x060021C1 RID: 8641 RVA: 0x000A9114 File Offset: 0x000A7314
 	private void ThrowEntityLocal(GameEntityId gameBallId, bool isLeftHand, Vector3 position, Quaternion rotation, Vector3 velocity, Vector3 angVelocity, NetPlayer thrownByPlayer)
 	{
 		if (gameBallId.index < 0 || gameBallId.index >= this.entities.Count)
@@ -1066,7 +1066,7 @@ public class GameEntityManager : NetworkComponent, IMatchmakingCallbacks, IInRoo
 		}
 	}
 
-	// Token: 0x060021C2 RID: 8642 RVA: 0x000A9298 File Offset: 0x000A7498
+	// Token: 0x060021C2 RID: 8642 RVA: 0x000A92B8 File Offset: 0x000A74B8
 	public bool IsPlayerHandNearEntity(GamePlayer player, int entityNetId, bool isLeftHand, bool checkBothHands, float acceptableRadius = 16f)
 	{
 		GameEntityId idFromNetId = GameEntity.GetIdFromNetId(entityNetId);
@@ -1074,7 +1074,7 @@ public class GameEntityManager : NetworkComponent, IMatchmakingCallbacks, IInRoo
 		return !(gameEntity == null) && GameEntityManager.IsPlayerHandNearPosition(player, gameEntity.transform.position, isLeftHand, checkBothHands, acceptableRadius);
 	}
 
-	// Token: 0x060021C3 RID: 8643 RVA: 0x000A92D8 File Offset: 0x000A74D8
+	// Token: 0x060021C3 RID: 8643 RVA: 0x000A92F8 File Offset: 0x000A74F8
 	public static bool IsPlayerHandNearPosition(GamePlayer player, Vector3 worldPosition, bool isLeftHand, bool checkBothHands, float acceptableRadius = 16f)
 	{
 		bool flag = true;
@@ -1093,7 +1093,7 @@ public class GameEntityManager : NetworkComponent, IMatchmakingCallbacks, IInRoo
 		return flag;
 	}
 
-	// Token: 0x060021C4 RID: 8644 RVA: 0x000A9364 File Offset: 0x000A7564
+	// Token: 0x060021C4 RID: 8644 RVA: 0x000A9384 File Offset: 0x000A7584
 	public bool IsEntityNearEntity(int entityNetId, int otherEntityNetId, float acceptableRadius = 16f)
 	{
 		GameEntityId idFromNetId = GameEntity.GetIdFromNetId(otherEntityNetId);
@@ -1101,7 +1101,7 @@ public class GameEntityManager : NetworkComponent, IMatchmakingCallbacks, IInRoo
 		return !(gameEntity == null) && this.IsEntityNearPosition(entityNetId, gameEntity.transform.position, acceptableRadius);
 	}
 
-	// Token: 0x060021C5 RID: 8645 RVA: 0x000A93A0 File Offset: 0x000A75A0
+	// Token: 0x060021C5 RID: 8645 RVA: 0x000A93C0 File Offset: 0x000A75C0
 	public bool IsEntityNearPosition(int entityNetId, Vector3 position, float acceptableRadius = 16f)
 	{
 		GameEntityId idFromNetId = GameEntity.GetIdFromNetId(entityNetId);
@@ -1109,7 +1109,7 @@ public class GameEntityManager : NetworkComponent, IMatchmakingCallbacks, IInRoo
 		return !(gameEntity == null) && Vector3.SqrMagnitude(gameEntity.transform.position - position) < acceptableRadius * acceptableRadius;
 	}
 
-	// Token: 0x060021C6 RID: 8646 RVA: 0x000A93E4 File Offset: 0x000A75E4
+	// Token: 0x060021C6 RID: 8646 RVA: 0x000A9404 File Offset: 0x000A7604
 	private void ClearZone(GameEntityManager.ZoneStateData zoneStateData)
 	{
 		for (int i = 0; i < this.entities.Count; i++)
@@ -1135,7 +1135,7 @@ public class GameEntityManager : NetworkComponent, IMatchmakingCallbacks, IInRoo
 		zoneClearEvent(zoneStateData.zone);
 	}
 
-	// Token: 0x060021C7 RID: 8647 RVA: 0x000A9484 File Offset: 0x000A7684
+	// Token: 0x060021C7 RID: 8647 RVA: 0x000A94A4 File Offset: 0x000A76A4
 	public int SerializeGameState(int zoneId, byte[] bytes, int maxBytes)
 	{
 		MemoryStream memoryStream = new MemoryStream(bytes);
@@ -1258,7 +1258,7 @@ public class GameEntityManager : NetworkComponent, IMatchmakingCallbacks, IInRoo
 		return (int)memoryStream.Position;
 	}
 
-	// Token: 0x060021C8 RID: 8648 RVA: 0x000A98C4 File Offset: 0x000A7AC4
+	// Token: 0x060021C8 RID: 8648 RVA: 0x000A98E4 File Offset: 0x000A7AE4
 	public void DeserializeTableState(int zoneId, byte[] bytes, int numBytes)
 	{
 		if (numBytes <= 0)
@@ -1395,7 +1395,7 @@ public class GameEntityManager : NetworkComponent, IMatchmakingCallbacks, IInRoo
 		}
 	}
 
-	// Token: 0x060021C9 RID: 8649 RVA: 0x000A9CC8 File Offset: 0x000A7EC8
+	// Token: 0x060021C9 RID: 8649 RVA: 0x000A9CE8 File Offset: 0x000A7EE8
 	private void UpdateZoneState()
 	{
 		GameEntityManager.tempRigs.Clear();
@@ -1420,7 +1420,7 @@ public class GameEntityManager : NetworkComponent, IMatchmakingCallbacks, IInRoo
 		}
 	}
 
-	// Token: 0x060021CA RID: 8650 RVA: 0x000A9D84 File Offset: 0x000A7F84
+	// Token: 0x060021CA RID: 8650 RVA: 0x000A9DA4 File Offset: 0x000A7FA4
 	private void UpdateAuthority(GameEntityManager.ZoneStateData zoneStateData, List<VRRig> allRigs)
 	{
 		if (!PhotonNetwork.InRoom && base.IsMine)
@@ -1450,7 +1450,7 @@ public class GameEntityManager : NetworkComponent, IMatchmakingCallbacks, IInRoo
 		}
 	}
 
-	// Token: 0x060021CB RID: 8651 RVA: 0x000A9E74 File Offset: 0x000A8074
+	// Token: 0x060021CB RID: 8651 RVA: 0x000A9E94 File Offset: 0x000A8094
 	private void UpdateClientsFromAuthority(GameEntityManager.ZoneStateData zoneStateData, List<VRRig> allRigs)
 	{
 		if (!this.IsInZone(zoneStateData.zone))
@@ -1473,7 +1473,7 @@ public class GameEntityManager : NetworkComponent, IMatchmakingCallbacks, IInRoo
 		}
 	}
 
-	// Token: 0x060021CC RID: 8652 RVA: 0x000A9F10 File Offset: 0x000A8110
+	// Token: 0x060021CC RID: 8652 RVA: 0x000A9F30 File Offset: 0x000A8130
 	public void TestSerializeTableState()
 	{
 		GameEntityManager.ClearByteBuffer(GameEntityManager.tempSerializeGameState);
@@ -1483,7 +1483,7 @@ public class GameEntityManager : NetworkComponent, IMatchmakingCallbacks, IInRoo
 		Debug.LogFormat("Test Serialize Game State Buffer Size Compressed {0}", new object[] { array.Length });
 	}
 
-	// Token: 0x060021CD RID: 8653 RVA: 0x000A9F84 File Offset: 0x000A8184
+	// Token: 0x060021CD RID: 8653 RVA: 0x000A9FA4 File Offset: 0x000A81A4
 	public static void ClearByteBuffer(byte[] buffer)
 	{
 		int num = buffer.Length;
@@ -1493,7 +1493,7 @@ public class GameEntityManager : NetworkComponent, IMatchmakingCallbacks, IInRoo
 		}
 	}
 
-	// Token: 0x060021CE RID: 8654 RVA: 0x000A9FA8 File Offset: 0x000A81A8
+	// Token: 0x060021CE RID: 8654 RVA: 0x000A9FC8 File Offset: 0x000A81C8
 	private void SendZoneStateToPlayerOrTarget(GTZone zone, Player player, RpcTarget target)
 	{
 		GameEntityManager.ClearByteBuffer(GameEntityManager.tempSerializeGameState);
@@ -1520,7 +1520,7 @@ public class GameEntityManager : NetworkComponent, IMatchmakingCallbacks, IInRoo
 		}
 	}
 
-	// Token: 0x060021CF RID: 8655 RVA: 0x000AA084 File Offset: 0x000A8284
+	// Token: 0x060021CF RID: 8655 RVA: 0x000AA0A4 File Offset: 0x000A82A4
 	[PunRPC]
 	public void SendTableDataRPC(int packetNum, int totalBytes, byte[] bytes, PhotonMessageInfo info)
 	{
@@ -1563,7 +1563,7 @@ public class GameEntityManager : NetworkComponent, IMatchmakingCallbacks, IInRoo
 		}
 	}
 
-	// Token: 0x060021D0 RID: 8656 RVA: 0x000AA1B8 File Offset: 0x000A83B8
+	// Token: 0x060021D0 RID: 8656 RVA: 0x000AA1D8 File Offset: 0x000A83D8
 	private void UpdateZoneStateAuthority(GameEntityManager.ZoneStateData zoneStateData)
 	{
 		GamePlayer gamePlayer = GamePlayer.GetGamePlayer(VRRig.LocalRig);
@@ -1601,7 +1601,7 @@ public class GameEntityManager : NetworkComponent, IMatchmakingCallbacks, IInRoo
 		}
 	}
 
-	// Token: 0x060021D1 RID: 8657 RVA: 0x000AA29C File Offset: 0x000A849C
+	// Token: 0x060021D1 RID: 8657 RVA: 0x000AA2BC File Offset: 0x000A84BC
 	private void UpdateZoneStateClient(GameEntityManager.ZoneStateData zoneStateData)
 	{
 		GamePlayer gamePlayer = GamePlayer.GetGamePlayer(VRRig.LocalRig);
@@ -1634,13 +1634,13 @@ public class GameEntityManager : NetworkComponent, IMatchmakingCallbacks, IInRoo
 		}
 	}
 
-	// Token: 0x060021D2 RID: 8658 RVA: 0x000AA377 File Offset: 0x000A8577
+	// Token: 0x060021D2 RID: 8658 RVA: 0x000AA397 File Offset: 0x000A8597
 	private bool IsInZone(GTZone zone)
 	{
 		return ZoneManagement.instance.IsZoneActive(zone) && GhostReactor.instance != null;
 	}
 
-	// Token: 0x060021D3 RID: 8659 RVA: 0x000AA394 File Offset: 0x000A8594
+	// Token: 0x060021D3 RID: 8659 RVA: 0x000AA3B4 File Offset: 0x000A85B4
 	private void SetZoneState(GameEntityManager.ZoneStateData zoneStateData, GameEntityManager.ZoneState newState)
 	{
 		if (newState == zoneStateData.state)
@@ -1666,13 +1666,13 @@ public class GameEntityManager : NetworkComponent, IMatchmakingCallbacks, IInRoo
 		}
 	}
 
-	// Token: 0x060021D4 RID: 8660 RVA: 0x000AA3F7 File Offset: 0x000A85F7
+	// Token: 0x060021D4 RID: 8660 RVA: 0x000AA417 File Offset: 0x000A8617
 	public void DebugSendState()
 	{
 		this.SetZoneState(this.zoneStateData, GameEntityManager.ZoneState.WaitingToRequestState);
 	}
 
-	// Token: 0x060021D5 RID: 8661 RVA: 0x000AA408 File Offset: 0x000A8608
+	// Token: 0x060021D5 RID: 8661 RVA: 0x000AA428 File Offset: 0x000A8628
 	[PunRPC]
 	private void RequestZoneStateRPC(int zoneId, PhotonMessageInfo info)
 	{
@@ -1728,13 +1728,13 @@ public class GameEntityManager : NetworkComponent, IMatchmakingCallbacks, IInRoo
 	{
 	}
 
-	// Token: 0x060021DA RID: 8666 RVA: 0x000AA4DD File Offset: 0x000A86DD
+	// Token: 0x060021DA RID: 8666 RVA: 0x000AA4FD File Offset: 0x000A86FD
 	void IMatchmakingCallbacks.OnJoinedRoom()
 	{
 		this.SetZoneState(this.zoneStateData, GameEntityManager.ZoneState.WaitingToEnterZone);
 	}
 
-	// Token: 0x060021DB RID: 8667 RVA: 0x000AA4DD File Offset: 0x000A86DD
+	// Token: 0x060021DB RID: 8667 RVA: 0x000AA4FD File Offset: 0x000A86FD
 	void IMatchmakingCallbacks.OnLeftRoom()
 	{
 		this.SetZoneState(this.zoneStateData, GameEntityManager.ZoneState.WaitingToEnterZone);

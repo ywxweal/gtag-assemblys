@@ -8,7 +8,7 @@ using UnityEngine;
 // Token: 0x0200057B RID: 1403
 public class GhostReactor : MonoBehaviour
 {
-	// Token: 0x06002248 RID: 8776 RVA: 0x000AB7C4 File Offset: 0x000A99C4
+	// Token: 0x06002248 RID: 8776 RVA: 0x000AB7E4 File Offset: 0x000A99E4
 	private void Awake()
 	{
 		GhostReactor.instance = this;
@@ -44,7 +44,7 @@ public class GhostReactor : MonoBehaviour
 		this.randomGenerator = new SRand(Random.Range(0, int.MaxValue));
 	}
 
-	// Token: 0x06002249 RID: 8777 RVA: 0x000AB8E8 File Offset: 0x000A9AE8
+	// Token: 0x06002249 RID: 8777 RVA: 0x000AB908 File Offset: 0x000A9B08
 	private void OnEnable()
 	{
 		GhostReactorManager.instance.reactor = this;
@@ -59,7 +59,7 @@ public class GhostReactor : MonoBehaviour
 		}
 	}
 
-	// Token: 0x0600224A RID: 8778 RVA: 0x000AB978 File Offset: 0x000A9B78
+	// Token: 0x0600224A RID: 8778 RVA: 0x000AB998 File Offset: 0x000A9B98
 	private void OnDisable()
 	{
 		GameLightingManager.instance.SetCustomDynamicLightingEnabled(false);
@@ -72,7 +72,7 @@ public class GhostReactor : MonoBehaviour
 		}
 	}
 
-	// Token: 0x0600224B RID: 8779 RVA: 0x000AB9E8 File Offset: 0x000A9BE8
+	// Token: 0x0600224B RID: 8779 RVA: 0x000ABA08 File Offset: 0x000A9C08
 	public GRPatrolPath GetPatrolPath(int patrolPathId)
 	{
 		if (this.levelGenerator == null)
@@ -82,7 +82,7 @@ public class GhostReactor : MonoBehaviour
 		return this.levelGenerator.GetPatrolPath(patrolPathId);
 	}
 
-	// Token: 0x0600224C RID: 8780 RVA: 0x000ABA08 File Offset: 0x000A9C08
+	// Token: 0x0600224C RID: 8780 RVA: 0x000ABA28 File Offset: 0x000A9C28
 	private void Update()
 	{
 		float deltaTime = Time.deltaTime;
@@ -99,31 +99,31 @@ public class GhostReactor : MonoBehaviour
 		}
 	}
 
-	// Token: 0x0600224D RID: 8781 RVA: 0x000ABA91 File Offset: 0x000A9C91
+	// Token: 0x0600224D RID: 8781 RVA: 0x000ABAB1 File Offset: 0x000A9CB1
 	private bool IsAuthority()
 	{
 		return GameEntityManager.instance.IsAuthority();
 	}
 
-	// Token: 0x0600224E RID: 8782 RVA: 0x000ABA9F File Offset: 0x000A9C9F
+	// Token: 0x0600224E RID: 8782 RVA: 0x000ABABF File Offset: 0x000A9CBF
 	private bool IsAuthorityPlayer(NetPlayer player)
 	{
 		return GameEntityManager.instance.IsAuthorityPlayer(player);
 	}
 
-	// Token: 0x0600224F RID: 8783 RVA: 0x000ABAAE File Offset: 0x000A9CAE
+	// Token: 0x0600224F RID: 8783 RVA: 0x000ABACE File Offset: 0x000A9CCE
 	private bool IsAuthorityPlayer(Player player)
 	{
 		return GameEntityManager.instance.IsAuthorityPlayer(player);
 	}
 
-	// Token: 0x06002250 RID: 8784 RVA: 0x000ABABD File Offset: 0x000A9CBD
+	// Token: 0x06002250 RID: 8784 RVA: 0x000ABADD File Offset: 0x000A9CDD
 	private Player GetAuthorityPlayer()
 	{
 		return GameEntityManager.instance.GetAuthorityPlayer();
 	}
 
-	// Token: 0x06002251 RID: 8785 RVA: 0x000ABACC File Offset: 0x000A9CCC
+	// Token: 0x06002251 RID: 8785 RVA: 0x000ABAEC File Offset: 0x000A9CEC
 	private void OnLocalPlayerConnectedToRoom()
 	{
 		GRPlayer grplayer = GRPlayer.Get(VRRig.LocalRig);
@@ -137,13 +137,13 @@ public class GhostReactor : MonoBehaviour
 		this.shiftManager.RefreshShiftStatsDisplay();
 	}
 
-	// Token: 0x06002252 RID: 8786 RVA: 0x000ABB23 File Offset: 0x000A9D23
+	// Token: 0x06002252 RID: 8786 RVA: 0x000ABB43 File Offset: 0x000A9D43
 	private void OnVRRigsChanged(RigContainer container)
 	{
 		this.VRRigRefresh();
 	}
 
-	// Token: 0x06002253 RID: 8787 RVA: 0x000ABB2C File Offset: 0x000A9D2C
+	// Token: 0x06002253 RID: 8787 RVA: 0x000ABB4C File Offset: 0x000A9D4C
 	public void VRRigRefresh()
 	{
 		this.vrRigs.Clear();
@@ -164,7 +164,7 @@ public class GhostReactor : MonoBehaviour
 		this.RefreshScoreboards();
 	}
 
-	// Token: 0x06002254 RID: 8788 RVA: 0x000ABB94 File Offset: 0x000A9D94
+	// Token: 0x06002254 RID: 8788 RVA: 0x000ABBB4 File Offset: 0x000A9DB4
 	public void RefreshScoreboards()
 	{
 		for (int i = 0; i < this.scoreboards.Count; i++)
@@ -173,7 +173,7 @@ public class GhostReactor : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06002255 RID: 8789 RVA: 0x000ABBD0 File Offset: 0x000A9DD0
+	// Token: 0x06002255 RID: 8789 RVA: 0x000ABBF0 File Offset: 0x000A9DF0
 	public int GetItemCost(int entityTypeId)
 	{
 		int num;

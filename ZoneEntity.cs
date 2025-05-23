@@ -8,7 +8,7 @@ using UnityEngine;
 public class ZoneEntity : MonoBehaviour
 {
 	// Token: 0x17000614 RID: 1556
-	// (get) Token: 0x06003E16 RID: 15894 RVA: 0x00127104 File Offset: 0x00125304
+	// (get) Token: 0x06003E17 RID: 15895 RVA: 0x001271DC File Offset: 0x001253DC
 	public string entityTag
 	{
 		get
@@ -18,7 +18,7 @@ public class ZoneEntity : MonoBehaviour
 	}
 
 	// Token: 0x17000615 RID: 1557
-	// (get) Token: 0x06003E17 RID: 15895 RVA: 0x0012710C File Offset: 0x0012530C
+	// (get) Token: 0x06003E18 RID: 15896 RVA: 0x001271E4 File Offset: 0x001253E4
 	public int entityID
 	{
 		get
@@ -34,7 +34,7 @@ public class ZoneEntity : MonoBehaviour
 	}
 
 	// Token: 0x17000616 RID: 1558
-	// (get) Token: 0x06003E18 RID: 15896 RVA: 0x00127150 File Offset: 0x00125350
+	// (get) Token: 0x06003E19 RID: 15897 RVA: 0x00127228 File Offset: 0x00125428
 	public VRRig entityRig
 	{
 		get
@@ -44,7 +44,7 @@ public class ZoneEntity : MonoBehaviour
 	}
 
 	// Token: 0x17000617 RID: 1559
-	// (get) Token: 0x06003E19 RID: 15897 RVA: 0x00127158 File Offset: 0x00125358
+	// (get) Token: 0x06003E1A RID: 15898 RVA: 0x00127230 File Offset: 0x00125430
 	public SphereCollider collider
 	{
 		get
@@ -54,7 +54,7 @@ public class ZoneEntity : MonoBehaviour
 	}
 
 	// Token: 0x17000618 RID: 1560
-	// (get) Token: 0x06003E1A RID: 15898 RVA: 0x00127160 File Offset: 0x00125360
+	// (get) Token: 0x06003E1B RID: 15899 RVA: 0x00127238 File Offset: 0x00125438
 	public GroupJoinZoneAB GroupZone
 	{
 		get
@@ -63,21 +63,21 @@ public class ZoneEntity : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06003E1B RID: 15899 RVA: 0x00127183 File Offset: 0x00125383
+	// Token: 0x06003E1C RID: 15900 RVA: 0x0012725B File Offset: 0x0012545B
 	protected virtual void OnEnable()
 	{
 		this.insideBoxes.Clear();
 		ZoneGraph.Register(this);
 	}
 
-	// Token: 0x06003E1C RID: 15900 RVA: 0x00127196 File Offset: 0x00125396
+	// Token: 0x06003E1D RID: 15901 RVA: 0x0012726E File Offset: 0x0012546E
 	protected virtual void OnDisable()
 	{
 		this.insideBoxes.Clear();
 		ZoneGraph.Unregister(this);
 	}
 
-	// Token: 0x06003E1D RID: 15901 RVA: 0x001271A9 File Offset: 0x001253A9
+	// Token: 0x06003E1E RID: 15902 RVA: 0x00127281 File Offset: 0x00125481
 	public void EnableZoneChanges()
 	{
 		this._collider.enabled = true;
@@ -88,7 +88,7 @@ public class ZoneEntity : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06003E1E RID: 15902 RVA: 0x001271D2 File Offset: 0x001253D2
+	// Token: 0x06003E1F RID: 15903 RVA: 0x001272AA File Offset: 0x001254AA
 	public void DisableZoneChanges()
 	{
 		this._collider.enabled = false;
@@ -98,7 +98,7 @@ public class ZoneEntity : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06003E1F RID: 15903 RVA: 0x00127208 File Offset: 0x00125408
+	// Token: 0x06003E20 RID: 15904 RVA: 0x001272E0 File Offset: 0x001254E0
 	private IEnumerator DisabledZoneCollider_OnTriggerStay()
 	{
 		for (;;)
@@ -112,19 +112,19 @@ public class ZoneEntity : MonoBehaviour
 		yield break;
 	}
 
-	// Token: 0x06003E20 RID: 15904 RVA: 0x00127217 File Offset: 0x00125417
+	// Token: 0x06003E21 RID: 15905 RVA: 0x001272EF File Offset: 0x001254EF
 	protected virtual void OnTriggerEnter(Collider c)
 	{
 		this.OnZoneTrigger(GTZoneEventType.zone_enter, c);
 	}
 
-	// Token: 0x06003E21 RID: 15905 RVA: 0x00127221 File Offset: 0x00125421
+	// Token: 0x06003E22 RID: 15906 RVA: 0x001272F9 File Offset: 0x001254F9
 	protected virtual void OnTriggerExit(Collider c)
 	{
 		this.OnZoneTrigger(GTZoneEventType.zone_exit, c);
 	}
 
-	// Token: 0x06003E22 RID: 15906 RVA: 0x0012722C File Offset: 0x0012542C
+	// Token: 0x06003E23 RID: 15907 RVA: 0x00127304 File Offset: 0x00125504
 	protected virtual void OnTriggerStay(Collider c)
 	{
 		if (!Application.isPlaying)
@@ -156,7 +156,7 @@ public class ZoneEntity : MonoBehaviour
 		this.OnZoneTrigger(GTZoneEventType.zone_stay, boxCollider);
 	}
 
-	// Token: 0x06003E23 RID: 15907 RVA: 0x001272F4 File Offset: 0x001254F4
+	// Token: 0x06003E24 RID: 15908 RVA: 0x001273CC File Offset: 0x001255CC
 	protected virtual void OnZoneTrigger(GTZoneEventType zoneEvent, Collider c)
 	{
 		if (!Application.isPlaying)
@@ -172,7 +172,7 @@ public class ZoneEntity : MonoBehaviour
 		this.OnZoneTrigger(zoneEvent, zoneDef, boxCollider);
 	}
 
-	// Token: 0x06003E24 RID: 15908 RVA: 0x00127324 File Offset: 0x00125524
+	// Token: 0x06003E25 RID: 15909 RVA: 0x001273FC File Offset: 0x001255FC
 	private void OnZoneTrigger(GTZoneEventType zoneEvent, ZoneDef zone, BoxCollider box)
 	{
 		bool flag = false;
@@ -263,7 +263,7 @@ public class ZoneEntity : MonoBehaviour
 		GorillaTelemetry.PostZoneEvent(zone.zoneId, zone.subZoneId, zoneEvent);
 	}
 
-	// Token: 0x06003E25 RID: 15909 RVA: 0x00127554 File Offset: 0x00125754
+	// Token: 0x06003E26 RID: 15910 RVA: 0x0012762C File Offset: 0x0012582C
 	public static int Compare<T>(T x, T y) where T : ZoneEntity
 	{
 		if (x == null && y == null)
@@ -281,91 +281,91 @@ public class ZoneEntity : MonoBehaviour
 		return x.entityID.CompareTo(y.entityID);
 	}
 
-	// Token: 0x040042B6 RID: 17078
+	// Token: 0x040042B7 RID: 17079
 	[Space]
 	[NonSerialized]
 	private int? _entityID;
 
-	// Token: 0x040042B7 RID: 17079
+	// Token: 0x040042B8 RID: 17080
 	[SerializeField]
 	private string _entityTag;
 
-	// Token: 0x040042B8 RID: 17080
+	// Token: 0x040042B9 RID: 17081
 	[Space]
 	[SerializeField]
 	private bool _emitTelemetry = true;
 
-	// Token: 0x040042B9 RID: 17081
+	// Token: 0x040042BA RID: 17082
 	[SerializeField]
 	private int _zoneStayEventInterval = 300;
 
-	// Token: 0x040042BA RID: 17082
+	// Token: 0x040042BB RID: 17083
 	[Space]
 	[SerializeField]
 	private VRRig _entityRig;
 
-	// Token: 0x040042BB RID: 17083
+	// Token: 0x040042BC RID: 17084
 	[SerializeField]
 	private SphereCollider _collider;
 
-	// Token: 0x040042BC RID: 17084
+	// Token: 0x040042BD RID: 17085
 	[SerializeField]
 	private Rigidbody _rigidbody;
 
-	// Token: 0x040042BD RID: 17085
+	// Token: 0x040042BE RID: 17086
 	[Space]
 	[NonSerialized]
 	public GTZone currentZone = GTZone.none;
 
-	// Token: 0x040042BE RID: 17086
+	// Token: 0x040042BF RID: 17087
 	[NonSerialized]
 	public GTSubZone currentSubZone;
 
-	// Token: 0x040042BF RID: 17087
+	// Token: 0x040042C0 RID: 17088
 	[NonSerialized]
 	private GroupJoinZoneAB currentGroupZone = 0;
 
-	// Token: 0x040042C0 RID: 17088
+	// Token: 0x040042C1 RID: 17089
 	[NonSerialized]
 	private GroupJoinZoneAB previousGroupZone = 0;
 
-	// Token: 0x040042C1 RID: 17089
+	// Token: 0x040042C2 RID: 17090
 	[NonSerialized]
 	private GroupJoinZoneAB currentExcludeGroupZone = 0;
 
-	// Token: 0x040042C2 RID: 17090
+	// Token: 0x040042C3 RID: 17091
 	private HashSet<BoxCollider> insideBoxes = new HashSet<BoxCollider>();
 
-	// Token: 0x040042C3 RID: 17091
+	// Token: 0x040042C4 RID: 17092
 	private int currentZonePriority;
 
-	// Token: 0x040042C4 RID: 17092
+	// Token: 0x040042C5 RID: 17093
 	private float groupZoneClearAtTimestamp;
 
-	// Token: 0x040042C5 RID: 17093
+	// Token: 0x040042C6 RID: 17094
 	private float groupZoneClearInterval = 0.1f;
 
-	// Token: 0x040042C6 RID: 17094
+	// Token: 0x040042C7 RID: 17095
 	private Coroutine disabledZoneChangesOnTriggerStayCoroutine;
 
-	// Token: 0x040042C7 RID: 17095
+	// Token: 0x040042C8 RID: 17096
 	[Space]
 	[NonSerialized]
 	public ZoneNode currentNode = ZoneNode.Null;
 
-	// Token: 0x040042C8 RID: 17096
+	// Token: 0x040042C9 RID: 17097
 	[NonSerialized]
 	public ZoneNode lastEnteredNode = ZoneNode.Null;
 
-	// Token: 0x040042C9 RID: 17097
+	// Token: 0x040042CA RID: 17098
 	[NonSerialized]
 	public ZoneNode lastExitedNode = ZoneNode.Null;
 
-	// Token: 0x040042CA RID: 17098
+	// Token: 0x040042CB RID: 17099
 	[Space]
 	[NonSerialized]
 	private TimeSince sinceZoneEntered = 0;
 
-	// Token: 0x040042CB RID: 17099
+	// Token: 0x040042CC RID: 17100
 	private TimeSince gLastStayPoll = 0;
 }

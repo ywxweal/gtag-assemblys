@@ -10,17 +10,17 @@ namespace GorillaTag.Cosmetics
 	public class VenusFlyTrapHoldable : MonoBehaviour, ITickSystemTick
 	{
 		// Token: 0x170008D0 RID: 2256
-		// (get) Token: 0x060058A4 RID: 22692 RVA: 0x001B40B3 File Offset: 0x001B22B3
-		// (set) Token: 0x060058A5 RID: 22693 RVA: 0x001B40BB File Offset: 0x001B22BB
+		// (get) Token: 0x060058A5 RID: 22693 RVA: 0x001B418B File Offset: 0x001B238B
+		// (set) Token: 0x060058A6 RID: 22694 RVA: 0x001B4193 File Offset: 0x001B2393
 		public bool TickRunning { get; set; }
 
-		// Token: 0x060058A6 RID: 22694 RVA: 0x001B40C4 File Offset: 0x001B22C4
+		// Token: 0x060058A7 RID: 22695 RVA: 0x001B419C File Offset: 0x001B239C
 		private void Awake()
 		{
 			this.transferrableObject = base.GetComponent<TransferrableObject>();
 		}
 
-		// Token: 0x060058A7 RID: 22695 RVA: 0x001B40D4 File Offset: 0x001B22D4
+		// Token: 0x060058A8 RID: 22696 RVA: 0x001B41AC File Offset: 0x001B23AC
 		private void OnEnable()
 		{
 			TickSystem<object>.AddCallbackTarget(this);
@@ -43,7 +43,7 @@ namespace GorillaTag.Cosmetics
 			}
 		}
 
-		// Token: 0x060058A8 RID: 22696 RVA: 0x001B41EC File Offset: 0x001B23EC
+		// Token: 0x060058A9 RID: 22697 RVA: 0x001B42C4 File Offset: 0x001B24C4
 		private void OnDisable()
 		{
 			TickSystem<object>.RemoveCallbackTarget(this);
@@ -56,7 +56,7 @@ namespace GorillaTag.Cosmetics
 			}
 		}
 
-		// Token: 0x060058A9 RID: 22697 RVA: 0x001B4258 File Offset: 0x001B2458
+		// Token: 0x060058AA RID: 22698 RVA: 0x001B4330 File Offset: 0x001B2530
 		public void Tick()
 		{
 			if (this.transferrableObject.InHand() && this.audioSource && !this.audioSource.isPlaying && this.flyLoopingAudio != null)
@@ -91,7 +91,7 @@ namespace GorillaTag.Cosmetics
 			}
 		}
 
-		// Token: 0x060058AA RID: 22698 RVA: 0x001B4368 File Offset: 0x001B2568
+		// Token: 0x060058AB RID: 22699 RVA: 0x001B4440 File Offset: 0x001B2640
 		private void SmoothRotation(bool isClosing)
 		{
 			if (isClosing)
@@ -121,7 +121,7 @@ namespace GorillaTag.Cosmetics
 			}
 		}
 
-		// Token: 0x060058AB RID: 22699 RVA: 0x001B4552 File Offset: 0x001B2752
+		// Token: 0x060058AC RID: 22700 RVA: 0x001B462A File Offset: 0x001B282A
 		private void UpdateState(VenusFlyTrapHoldable.VenusState newState)
 		{
 			this.state = newState;
@@ -131,7 +131,7 @@ namespace GorillaTag.Cosmetics
 			}
 		}
 
-		// Token: 0x060058AC RID: 22700 RVA: 0x001B4570 File Offset: 0x001B2770
+		// Token: 0x060058AD RID: 22701 RVA: 0x001B4648 File Offset: 0x001B2848
 		private void TriggerEntered(TriggerEventNotifier notifier, Collider other)
 		{
 			if (this.state != VenusFlyTrapHoldable.VenusState.Open)
@@ -155,7 +155,7 @@ namespace GorillaTag.Cosmetics
 			GorillaTagger.Instance.StartVibration(componentInChildren.isLeftHand, this.hapticStrength, this.hapticDuration);
 		}
 
-		// Token: 0x060058AD RID: 22701 RVA: 0x001B460B File Offset: 0x001B280B
+		// Token: 0x060058AE RID: 22702 RVA: 0x001B46E3 File Offset: 0x001B28E3
 		private void OnTriggerEvent(int sender, int target, object[] args, PhotonMessageInfoWrapped info)
 		{
 			if (sender != target)
@@ -170,7 +170,7 @@ namespace GorillaTag.Cosmetics
 			this.OnTriggerLocal();
 		}
 
-		// Token: 0x060058AE RID: 22702 RVA: 0x001B4637 File Offset: 0x001B2837
+		// Token: 0x060058AF RID: 22703 RVA: 0x001B470F File Offset: 0x001B290F
 		private void OnTriggerLocal()
 		{
 			this.UpdateState(VenusFlyTrapHoldable.VenusState.Closing);
@@ -180,97 +180,97 @@ namespace GorillaTag.Cosmetics
 			}
 		}
 
-		// Token: 0x04005E03 RID: 24067
+		// Token: 0x04005E04 RID: 24068
 		[SerializeField]
 		private GameObject lipA;
 
-		// Token: 0x04005E04 RID: 24068
+		// Token: 0x04005E05 RID: 24069
 		[SerializeField]
 		private GameObject lipB;
 
-		// Token: 0x04005E05 RID: 24069
+		// Token: 0x04005E06 RID: 24070
 		[SerializeField]
 		private Vector3 targetRotationA;
 
-		// Token: 0x04005E06 RID: 24070
+		// Token: 0x04005E07 RID: 24071
 		[SerializeField]
 		private Vector3 targetRotationB;
 
-		// Token: 0x04005E07 RID: 24071
+		// Token: 0x04005E08 RID: 24072
 		[SerializeField]
 		private float closedDuration = 3f;
 
-		// Token: 0x04005E08 RID: 24072
+		// Token: 0x04005E09 RID: 24073
 		[SerializeField]
 		private float speed = 2f;
 
-		// Token: 0x04005E09 RID: 24073
+		// Token: 0x04005E0A RID: 24074
 		[SerializeField]
 		private UnityLayer layers;
 
-		// Token: 0x04005E0A RID: 24074
+		// Token: 0x04005E0B RID: 24075
 		[SerializeField]
 		private TriggerEventNotifier triggerEventNotifier;
 
-		// Token: 0x04005E0B RID: 24075
+		// Token: 0x04005E0C RID: 24076
 		[SerializeField]
 		private float hapticStrength = 0.5f;
 
-		// Token: 0x04005E0C RID: 24076
+		// Token: 0x04005E0D RID: 24077
 		[SerializeField]
 		private float hapticDuration = 0.1f;
 
-		// Token: 0x04005E0D RID: 24077
+		// Token: 0x04005E0E RID: 24078
 		[SerializeField]
 		private GameObject bug;
 
-		// Token: 0x04005E0E RID: 24078
+		// Token: 0x04005E0F RID: 24079
 		[SerializeField]
 		private AudioSource audioSource;
 
-		// Token: 0x04005E0F RID: 24079
+		// Token: 0x04005E10 RID: 24080
 		[SerializeField]
 		private AudioClip closingAudio;
 
-		// Token: 0x04005E10 RID: 24080
+		// Token: 0x04005E11 RID: 24081
 		[SerializeField]
 		private AudioClip openingAudio;
 
-		// Token: 0x04005E11 RID: 24081
+		// Token: 0x04005E12 RID: 24082
 		[SerializeField]
 		private AudioClip flyLoopingAudio;
 
-		// Token: 0x04005E12 RID: 24082
+		// Token: 0x04005E13 RID: 24083
 		private CallLimiter callLimiter = new CallLimiter(10, 2f, 0.5f);
 
-		// Token: 0x04005E13 RID: 24083
+		// Token: 0x04005E14 RID: 24084
 		private float closedStartedTime;
 
-		// Token: 0x04005E14 RID: 24084
+		// Token: 0x04005E15 RID: 24085
 		private VenusFlyTrapHoldable.VenusState state;
 
-		// Token: 0x04005E15 RID: 24085
+		// Token: 0x04005E16 RID: 24086
 		private Quaternion localRotA;
 
-		// Token: 0x04005E16 RID: 24086
+		// Token: 0x04005E17 RID: 24087
 		private Quaternion localRotB;
 
-		// Token: 0x04005E17 RID: 24087
+		// Token: 0x04005E18 RID: 24088
 		private RubberDuckEvents _events;
 
-		// Token: 0x04005E18 RID: 24088
+		// Token: 0x04005E19 RID: 24089
 		private TransferrableObject transferrableObject;
 
 		// Token: 0x02000DFF RID: 3583
 		private enum VenusState
 		{
-			// Token: 0x04005E1B RID: 24091
-			Closed,
 			// Token: 0x04005E1C RID: 24092
-			Open,
+			Closed,
 			// Token: 0x04005E1D RID: 24093
-			Closing,
+			Open,
 			// Token: 0x04005E1E RID: 24094
+			Closing,
+			// Token: 0x04005E1F RID: 24095
 			Opening
 		}
 	}

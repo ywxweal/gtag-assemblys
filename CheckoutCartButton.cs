@@ -6,13 +6,13 @@ using UnityEngine.UI;
 // Token: 0x020003E3 RID: 995
 public class CheckoutCartButton : GorillaPressableButton
 {
-	// Token: 0x06001803 RID: 6147 RVA: 0x00074FA7 File Offset: 0x000731A7
+	// Token: 0x06001803 RID: 6147 RVA: 0x00074FC7 File Offset: 0x000731C7
 	public override void Start()
 	{
 		this.currentCosmeticItem = CosmeticsController.instance.nullItem;
 	}
 
-	// Token: 0x06001804 RID: 6148 RVA: 0x00074FBC File Offset: 0x000731BC
+	// Token: 0x06001804 RID: 6148 RVA: 0x00074FDC File Offset: 0x000731DC
 	public override void UpdateColor()
 	{
 		if (this.currentCosmeticItem.itemName == "null")
@@ -31,7 +31,7 @@ public class CheckoutCartButton : GorillaPressableButton
 		this.buttonText.text = this.offText;
 	}
 
-	// Token: 0x06001805 RID: 6149 RVA: 0x00075050 File Offset: 0x00073250
+	// Token: 0x06001805 RID: 6149 RVA: 0x00075070 File Offset: 0x00073270
 	public override void ButtonActivationWithHand(bool isLeftHand)
 	{
 		base.ButtonActivation();

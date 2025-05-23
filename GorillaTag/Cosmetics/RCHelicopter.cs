@@ -6,7 +6,7 @@ namespace GorillaTag.Cosmetics
 	// Token: 0x02000DB9 RID: 3513
 	public class RCHelicopter : RCVehicle
 	{
-		// Token: 0x060056FB RID: 22267 RVA: 0x001A9FC4 File Offset: 0x001A81C4
+		// Token: 0x060056FC RID: 22268 RVA: 0x001AA09C File Offset: 0x001A829C
 		protected override void AuthorityBeginDocked()
 		{
 			base.AuthorityBeginDocked();
@@ -19,7 +19,7 @@ namespace GorillaTag.Cosmetics
 			}
 		}
 
-		// Token: 0x060056FC RID: 22268 RVA: 0x001AA020 File Offset: 0x001A8220
+		// Token: 0x060056FD RID: 22269 RVA: 0x001AA0F8 File Offset: 0x001A82F8
 		protected override void Awake()
 		{
 			base.Awake();
@@ -30,7 +30,7 @@ namespace GorillaTag.Cosmetics
 			this.horizontalAccel = this.maxHorizontalSpeed / this.horizontalAccelTime;
 		}
 
-		// Token: 0x060056FD RID: 22269 RVA: 0x001AA090 File Offset: 0x001A8290
+		// Token: 0x060056FE RID: 22270 RVA: 0x001AA168 File Offset: 0x001A8368
 		protected override void SharedUpdate(float dt)
 		{
 			if (this.localState == RCVehicle.State.Mobilized)
@@ -41,7 +41,7 @@ namespace GorillaTag.Cosmetics
 			}
 		}
 
-		// Token: 0x060056FE RID: 22270 RVA: 0x001AA120 File Offset: 0x001A8320
+		// Token: 0x060056FF RID: 22271 RVA: 0x001AA1F8 File Offset: 0x001A83F8
 		private void FixedUpdate()
 		{
 			if (!base.HasLocalAuthority || this.localState != RCVehicle.State.Mobilized)
@@ -74,7 +74,7 @@ namespace GorillaTag.Cosmetics
 			}
 		}
 
-		// Token: 0x060056FF RID: 22271 RVA: 0x001AA2EE File Offset: 0x001A84EE
+		// Token: 0x06005700 RID: 22272 RVA: 0x001AA3C6 File Offset: 0x001A85C6
 		private void OnTriggerEnter(Collider other)
 		{
 			if (!other.isTrigger && base.HasLocalAuthority && this.localState == RCVehicle.State.Mobilized)
@@ -83,70 +83,70 @@ namespace GorillaTag.Cosmetics
 			}
 		}
 
-		// Token: 0x04005B4B RID: 23371
+		// Token: 0x04005B4C RID: 23372
 		[SerializeField]
 		private float maxAscendSpeed = 6f;
 
-		// Token: 0x04005B4C RID: 23372
+		// Token: 0x04005B4D RID: 23373
 		[SerializeField]
 		private float ascendAccelTime = 3f;
 
-		// Token: 0x04005B4D RID: 23373
+		// Token: 0x04005B4E RID: 23374
 		[SerializeField]
 		private float gravityCompensation = 0.5f;
 
-		// Token: 0x04005B4E RID: 23374
+		// Token: 0x04005B4F RID: 23375
 		[SerializeField]
 		private float maxTurnRate = 90f;
 
-		// Token: 0x04005B4F RID: 23375
+		// Token: 0x04005B50 RID: 23376
 		[SerializeField]
 		private float turnAccelTime = 0.75f;
 
-		// Token: 0x04005B50 RID: 23376
+		// Token: 0x04005B51 RID: 23377
 		[SerializeField]
 		private float maxHorizontalSpeed = 6f;
 
-		// Token: 0x04005B51 RID: 23377
+		// Token: 0x04005B52 RID: 23378
 		[SerializeField]
 		private float horizontalAccelTime = 2f;
 
-		// Token: 0x04005B52 RID: 23378
+		// Token: 0x04005B53 RID: 23379
 		[SerializeField]
 		private float maxHorizontalTiltAngle = 45f;
 
-		// Token: 0x04005B53 RID: 23379
+		// Token: 0x04005B54 RID: 23380
 		[SerializeField]
 		private Vector2 mainPropellerSpinRateRange = new Vector2(3f, 15f);
 
-		// Token: 0x04005B54 RID: 23380
+		// Token: 0x04005B55 RID: 23381
 		[SerializeField]
 		private float backPropellerSpinRate = 5f;
 
-		// Token: 0x04005B55 RID: 23381
+		// Token: 0x04005B56 RID: 23382
 		[SerializeField]
 		private Transform verticalPropeller;
 
-		// Token: 0x04005B56 RID: 23382
+		// Token: 0x04005B57 RID: 23383
 		[SerializeField]
 		private Transform turnPropeller;
 
-		// Token: 0x04005B57 RID: 23383
+		// Token: 0x04005B58 RID: 23384
 		private Quaternion verticalPropellerBaseRotation;
 
-		// Token: 0x04005B58 RID: 23384
+		// Token: 0x04005B59 RID: 23385
 		private Quaternion turnPropellerBaseRotation;
 
-		// Token: 0x04005B59 RID: 23385
+		// Token: 0x04005B5A RID: 23386
 		private float turnRate;
 
-		// Token: 0x04005B5A RID: 23386
+		// Token: 0x04005B5B RID: 23387
 		private float ascendAccel;
 
-		// Token: 0x04005B5B RID: 23387
+		// Token: 0x04005B5C RID: 23388
 		private float turnAccel;
 
-		// Token: 0x04005B5C RID: 23388
+		// Token: 0x04005B5D RID: 23389
 		private float horizontalAccel;
 	}
 }

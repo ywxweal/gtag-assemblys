@@ -10,14 +10,14 @@ namespace Viveport.Arcade
 	// Token: 0x02000A84 RID: 2692
 	internal class Session
 	{
-		// Token: 0x0600404F RID: 16463 RVA: 0x0012B1BD File Offset: 0x001293BD
+		// Token: 0x06004050 RID: 16464 RVA: 0x0012B295 File Offset: 0x00129495
 		[MonoPInvokeCallback(typeof(SessionCallback))]
 		private static void IsReadyIl2cppCallback(int errorCode, string message)
 		{
 			Session.isReadyIl2cppCallback(errorCode, message);
 		}
 
-		// Token: 0x06004050 RID: 16464 RVA: 0x0012B1CB File Offset: 0x001293CB
+		// Token: 0x06004051 RID: 16465 RVA: 0x0012B2A3 File Offset: 0x001294A3
 		public static void IsReady(Session.SessionListener listener)
 		{
 			Session.isReadyIl2cppCallback = new Session.SessionHandler(listener).getIsReadyHandler();
@@ -29,14 +29,14 @@ namespace Viveport.Arcade
 			Session.IsReady(new SessionCallback(Session.IsReadyIl2cppCallback));
 		}
 
-		// Token: 0x06004051 RID: 16465 RVA: 0x0012B208 File Offset: 0x00129408
+		// Token: 0x06004052 RID: 16466 RVA: 0x0012B2E0 File Offset: 0x001294E0
 		[MonoPInvokeCallback(typeof(SessionCallback))]
 		private static void StartIl2cppCallback(int errorCode, string message)
 		{
 			Session.startIl2cppCallback(errorCode, message);
 		}
 
-		// Token: 0x06004052 RID: 16466 RVA: 0x0012B216 File Offset: 0x00129416
+		// Token: 0x06004053 RID: 16467 RVA: 0x0012B2EE File Offset: 0x001294EE
 		public static void Start(Session.SessionListener listener)
 		{
 			Session.startIl2cppCallback = new Session.SessionHandler(listener).getStartHandler();
@@ -48,14 +48,14 @@ namespace Viveport.Arcade
 			Session.Start(new SessionCallback(Session.StartIl2cppCallback));
 		}
 
-		// Token: 0x06004053 RID: 16467 RVA: 0x0012B253 File Offset: 0x00129453
+		// Token: 0x06004054 RID: 16468 RVA: 0x0012B32B File Offset: 0x0012952B
 		[MonoPInvokeCallback(typeof(SessionCallback))]
 		private static void StopIl2cppCallback(int errorCode, string message)
 		{
 			Session.stopIl2cppCallback(errorCode, message);
 		}
 
-		// Token: 0x06004054 RID: 16468 RVA: 0x0012B261 File Offset: 0x00129461
+		// Token: 0x06004055 RID: 16469 RVA: 0x0012B339 File Offset: 0x00129539
 		public static void Stop(Session.SessionListener listener)
 		{
 			Session.stopIl2cppCallback = new Session.SessionHandler(listener).getStopHandler();
@@ -67,31 +67,31 @@ namespace Viveport.Arcade
 			Session.Stop(new SessionCallback(Session.StopIl2cppCallback));
 		}
 
-		// Token: 0x040043BE RID: 17342
+		// Token: 0x040043BF RID: 17343
 		private static SessionCallback isReadyIl2cppCallback;
 
-		// Token: 0x040043BF RID: 17343
+		// Token: 0x040043C0 RID: 17344
 		private static SessionCallback startIl2cppCallback;
 
-		// Token: 0x040043C0 RID: 17344
+		// Token: 0x040043C1 RID: 17345
 		private static SessionCallback stopIl2cppCallback;
 
 		// Token: 0x02000A85 RID: 2693
 		private class SessionHandler : Session.BaseHandler
 		{
-			// Token: 0x06004056 RID: 16470 RVA: 0x0012B29E File Offset: 0x0012949E
+			// Token: 0x06004057 RID: 16471 RVA: 0x0012B376 File Offset: 0x00129576
 			public SessionHandler(Session.SessionListener cb)
 			{
 				Session.SessionHandler.listener = cb;
 			}
 
-			// Token: 0x06004057 RID: 16471 RVA: 0x0012B2AC File Offset: 0x001294AC
+			// Token: 0x06004058 RID: 16472 RVA: 0x0012B384 File Offset: 0x00129584
 			public SessionCallback getIsReadyHandler()
 			{
 				return new SessionCallback(this.IsReadyHandler);
 			}
 
-			// Token: 0x06004058 RID: 16472 RVA: 0x0012B2BC File Offset: 0x001294BC
+			// Token: 0x06004059 RID: 16473 RVA: 0x0012B394 File Offset: 0x00129594
 			protected override void IsReadyHandler(int code, [MarshalAs(UnmanagedType.LPStr)] string message)
 			{
 				Logger.Log("[Session IsReadyHandler] message=" + message + ",code=" + code.ToString());
@@ -157,13 +157,13 @@ namespace Viveport.Arcade
 				}
 			}
 
-			// Token: 0x06004059 RID: 16473 RVA: 0x0012B430 File Offset: 0x00129630
+			// Token: 0x0600405A RID: 16474 RVA: 0x0012B508 File Offset: 0x00129708
 			public SessionCallback getStartHandler()
 			{
 				return new SessionCallback(this.StartHandler);
 			}
 
-			// Token: 0x0600405A RID: 16474 RVA: 0x0012B440 File Offset: 0x00129640
+			// Token: 0x0600405B RID: 16475 RVA: 0x0012B518 File Offset: 0x00129718
 			protected override void StartHandler(int code, [MarshalAs(UnmanagedType.LPStr)] string message)
 			{
 				Logger.Log("[Session StartHandler] message=" + message + ",code=" + code.ToString());
@@ -231,13 +231,13 @@ namespace Viveport.Arcade
 				}
 			}
 
-			// Token: 0x0600405B RID: 16475 RVA: 0x0012B5D4 File Offset: 0x001297D4
+			// Token: 0x0600405C RID: 16476 RVA: 0x0012B6AC File Offset: 0x001298AC
 			public SessionCallback getStopHandler()
 			{
 				return new SessionCallback(this.StopHandler);
 			}
 
-			// Token: 0x0600405C RID: 16476 RVA: 0x0012B5E4 File Offset: 0x001297E4
+			// Token: 0x0600405D RID: 16477 RVA: 0x0012B6BC File Offset: 0x001298BC
 			protected override void StopHandler(int code, [MarshalAs(UnmanagedType.LPStr)] string message)
 			{
 				Logger.Log("[Session StopHandler] message=" + message + ",code=" + code.ToString());
@@ -305,42 +305,42 @@ namespace Viveport.Arcade
 				}
 			}
 
-			// Token: 0x040043C1 RID: 17345
+			// Token: 0x040043C2 RID: 17346
 			private static Session.SessionListener listener;
 		}
 
 		// Token: 0x02000A86 RID: 2694
 		private abstract class BaseHandler
 		{
-			// Token: 0x0600405D RID: 16477
+			// Token: 0x0600405E RID: 16478
 			protected abstract void IsReadyHandler(int code, [MarshalAs(UnmanagedType.LPStr)] string message);
 
-			// Token: 0x0600405E RID: 16478
+			// Token: 0x0600405F RID: 16479
 			protected abstract void StartHandler(int code, [MarshalAs(UnmanagedType.LPStr)] string message);
 
-			// Token: 0x0600405F RID: 16479
+			// Token: 0x06004060 RID: 16480
 			protected abstract void StopHandler(int code, [MarshalAs(UnmanagedType.LPStr)] string message);
 		}
 
 		// Token: 0x02000A87 RID: 2695
 		public class SessionListener
 		{
-			// Token: 0x06004061 RID: 16481 RVA: 0x000023F4 File Offset: 0x000005F4
+			// Token: 0x06004062 RID: 16482 RVA: 0x000023F4 File Offset: 0x000005F4
 			public virtual void OnSuccess(string pchAppID)
 			{
 			}
 
-			// Token: 0x06004062 RID: 16482 RVA: 0x000023F4 File Offset: 0x000005F4
+			// Token: 0x06004063 RID: 16483 RVA: 0x000023F4 File Offset: 0x000005F4
 			public virtual void OnStartSuccess(string pchAppID, string pchGuid)
 			{
 			}
 
-			// Token: 0x06004063 RID: 16483 RVA: 0x000023F4 File Offset: 0x000005F4
+			// Token: 0x06004064 RID: 16484 RVA: 0x000023F4 File Offset: 0x000005F4
 			public virtual void OnStopSuccess(string pchAppID, string pchGuid)
 			{
 			}
 
-			// Token: 0x06004064 RID: 16484 RVA: 0x000023F4 File Offset: 0x000005F4
+			// Token: 0x06004065 RID: 16485 RVA: 0x000023F4 File Offset: 0x000005F4
 			public virtual void OnFailure(int nCode, string pchMessage)
 			{
 			}

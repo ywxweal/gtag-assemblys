@@ -6,13 +6,13 @@ using UnityEngine;
 // Token: 0x0200059F RID: 1439
 public class GRDropZone : MonoBehaviour
 {
-	// Token: 0x0600231F RID: 8991 RVA: 0x000AFA2E File Offset: 0x000ADC2E
+	// Token: 0x0600231F RID: 8991 RVA: 0x000AFA4E File Offset: 0x000ADC4E
 	private void Awake()
 	{
 		this.repelDirectionWorld = base.transform.TransformDirection(this.repelDirectionLocal.normalized);
 	}
 
-	// Token: 0x06002320 RID: 8992 RVA: 0x000AFA4C File Offset: 0x000ADC4C
+	// Token: 0x06002320 RID: 8992 RVA: 0x000AFA6C File Offset: 0x000ADC6C
 	private void OnTriggerEnter(Collider other)
 	{
 		if (!PhotonNetwork.IsMasterClient)
@@ -26,13 +26,13 @@ public class GRDropZone : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06002321 RID: 8993 RVA: 0x000AFA81 File Offset: 0x000ADC81
+	// Token: 0x06002321 RID: 8993 RVA: 0x000AFAA1 File Offset: 0x000ADCA1
 	public Vector3 GetRepelDirectionWorld()
 	{
 		return this.repelDirectionWorld;
 	}
 
-	// Token: 0x06002322 RID: 8994 RVA: 0x000AFA8C File Offset: 0x000ADC8C
+	// Token: 0x06002322 RID: 8994 RVA: 0x000AFAAC File Offset: 0x000ADCAC
 	public void PlayEffect()
 	{
 		if (this.vfxRoot != null && !this.playingEffect)
@@ -47,7 +47,7 @@ public class GRDropZone : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06002323 RID: 8995 RVA: 0x000AFB05 File Offset: 0x000ADD05
+	// Token: 0x06002323 RID: 8995 RVA: 0x000AFB25 File Offset: 0x000ADD25
 	private IEnumerator DelayedStopEffect()
 	{
 		yield return new WaitForSeconds(this.effectDuration);

@@ -4,20 +4,20 @@ using UnityEngine;
 // Token: 0x020003CD RID: 973
 public class BitmapFontText : MonoBehaviour
 {
-	// Token: 0x060016AD RID: 5805 RVA: 0x0006D17E File Offset: 0x0006B37E
+	// Token: 0x060016AD RID: 5805 RVA: 0x0006D19E File Offset: 0x0006B39E
 	private void Awake()
 	{
 		this.Init();
 		this.Render();
 	}
 
-	// Token: 0x060016AE RID: 5806 RVA: 0x0006D18C File Offset: 0x0006B38C
+	// Token: 0x060016AE RID: 5806 RVA: 0x0006D1AC File Offset: 0x0006B3AC
 	public void Render()
 	{
 		this.font.RenderToTexture(this.texture, this.uppercaseOnly ? this.text.ToUpperInvariant() : this.text);
 	}
 
-	// Token: 0x060016AF RID: 5807 RVA: 0x0006D1BC File Offset: 0x0006B3BC
+	// Token: 0x060016AF RID: 5807 RVA: 0x0006D1DC File Offset: 0x0006B3DC
 	public void Init()
 	{
 		this.texture = new Texture2D(this.textArea.x, this.textArea.y, this.font.fontImage.format, false);

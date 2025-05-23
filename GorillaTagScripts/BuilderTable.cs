@@ -23,7 +23,7 @@ namespace GorillaTagScripts
 	// Token: 0x02000AE4 RID: 2788
 	public class BuilderTable : MonoBehaviour
 	{
-		// Token: 0x06004383 RID: 17283 RVA: 0x00138978 File Offset: 0x00136B78
+		// Token: 0x06004384 RID: 17284 RVA: 0x00138A50 File Offset: 0x00136C50
 		private void ExecuteAction(BuilderAction action)
 		{
 			if (!this.isTableMutable)
@@ -324,7 +324,7 @@ namespace GorillaTagScripts
 			}
 		}
 
-		// Token: 0x06004384 RID: 17284 RVA: 0x0013922C File Offset: 0x0013742C
+		// Token: 0x06004385 RID: 17285 RVA: 0x00139304 File Offset: 0x00137504
 		public static bool AreStatesCompatibleForOverlap(BuilderPiece.State stateA, BuilderPiece.State stateB, BuilderPiece rootA, BuilderPiece rootB)
 		{
 			switch (stateA)
@@ -360,8 +360,8 @@ namespace GorillaTagScripts
 		}
 
 		// Token: 0x170006B3 RID: 1715
-		// (get) Token: 0x06004385 RID: 17285 RVA: 0x001392F1 File Offset: 0x001374F1
-		// (set) Token: 0x06004386 RID: 17286 RVA: 0x001392F9 File Offset: 0x001374F9
+		// (get) Token: 0x06004386 RID: 17286 RVA: 0x001393C9 File Offset: 0x001375C9
+		// (set) Token: 0x06004387 RID: 17287 RVA: 0x001393D1 File Offset: 0x001375D1
 		public int CurrentSaveSlot
 		{
 			get
@@ -386,7 +386,7 @@ namespace GorillaTagScripts
 			}
 		}
 
-		// Token: 0x06004387 RID: 17287 RVA: 0x00139330 File Offset: 0x00137530
+		// Token: 0x06004388 RID: 17288 RVA: 0x00139408 File Offset: 0x00137608
 		private void Awake()
 		{
 			if (BuilderTable.zoneToInstance == null)
@@ -459,7 +459,7 @@ namespace GorillaTagScripts
 			}
 		}
 
-		// Token: 0x06004388 RID: 17288 RVA: 0x00139613 File Offset: 0x00137813
+		// Token: 0x06004389 RID: 17289 RVA: 0x001396EB File Offset: 0x001378EB
 		public static bool TryGetBuilderTableForZone(GTZone zone, out BuilderTable table)
 		{
 			if (BuilderTable.zoneToInstance == null)
@@ -470,7 +470,7 @@ namespace GorillaTagScripts
 			return BuilderTable.zoneToInstance.TryGetValue(zone, out table);
 		}
 
-		// Token: 0x06004389 RID: 17289 RVA: 0x00139630 File Offset: 0x00137830
+		// Token: 0x0600438A RID: 17290 RVA: 0x00139708 File Offset: 0x00137908
 		private void SetupMonkeBlocksRoom()
 		{
 			if (this.shelves == null)
@@ -523,7 +523,7 @@ namespace GorillaTagScripts
 			}
 		}
 
-		// Token: 0x0600438A RID: 17290 RVA: 0x0013983C File Offset: 0x00137A3C
+		// Token: 0x0600438B RID: 17291 RVA: 0x00139914 File Offset: 0x00137B14
 		private void SetupResources()
 		{
 			this.maxResources = new int[3];
@@ -563,7 +563,7 @@ namespace GorillaTagScripts
 			this.OnAvailableResourcesChange();
 		}
 
-		// Token: 0x0600438B RID: 17291 RVA: 0x00139A84 File Offset: 0x00137C84
+		// Token: 0x0600438C RID: 17292 RVA: 0x00139B5C File Offset: 0x00137D5C
 		private void Start()
 		{
 			if (NetworkSystem.Instance != null && NetworkSystem.Instance.InRoom != this.inRoom)
@@ -576,14 +576,14 @@ namespace GorillaTagScripts
 			this.RequestTableConfiguration();
 		}
 
-		// Token: 0x0600438C RID: 17292 RVA: 0x00139AF2 File Offset: 0x00137CF2
+		// Token: 0x0600438D RID: 17293 RVA: 0x00139BCA File Offset: 0x00137DCA
 		private void OnApplicationQuit()
 		{
 			this.ClearTable();
 			this.tableState = BuilderTable.TableState.WaitingForZoneAndRoom;
 		}
 
-		// Token: 0x0600438D RID: 17293 RVA: 0x00139B04 File Offset: 0x00137D04
+		// Token: 0x0600438E RID: 17294 RVA: 0x00139BDC File Offset: 0x00137DDC
 		private void OnDestroy()
 		{
 			ZoneManagement instance = ZoneManagement.instance;
@@ -610,14 +610,14 @@ namespace GorillaTagScripts
 			this.DestroyData();
 		}
 
-		// Token: 0x0600438E RID: 17294 RVA: 0x00139BA8 File Offset: 0x00137DA8
+		// Token: 0x0600438F RID: 17295 RVA: 0x00139C80 File Offset: 0x00137E80
 		private void HandleOnZoneChanged()
 		{
 			bool flag = ZoneManagement.instance.IsZoneActive(this.tableZone);
 			this.SetInBuilderZone(flag);
 		}
 
-		// Token: 0x0600438F RID: 17295 RVA: 0x00139BD0 File Offset: 0x00137DD0
+		// Token: 0x06004390 RID: 17296 RVA: 0x00139CA8 File Offset: 0x00137EA8
 		public void InitIfNeeded()
 		{
 			if (!this.isSetup)
@@ -707,7 +707,7 @@ namespace GorillaTagScripts
 			}
 		}
 
-		// Token: 0x06004390 RID: 17296 RVA: 0x00139F9E File Offset: 0x0013819E
+		// Token: 0x06004391 RID: 17297 RVA: 0x0013A076 File Offset: 0x00138276
 		private void SetIsDirty(bool dirty)
 		{
 			if (this.isDirty != dirty)
@@ -721,7 +721,7 @@ namespace GorillaTagScripts
 			this.isDirty = dirty;
 		}
 
-		// Token: 0x06004391 RID: 17297 RVA: 0x00139FC4 File Offset: 0x001381C4
+		// Token: 0x06004392 RID: 17298 RVA: 0x0013A09C File Offset: 0x0013829C
 		private void FixedUpdate()
 		{
 			if (this.tableState != BuilderTable.TableState.Ready && this.tableState != BuilderTable.TableState.WaitForMasterResync)
@@ -747,7 +747,7 @@ namespace GorillaTagScripts
 			}
 		}
 
-		// Token: 0x06004392 RID: 17298 RVA: 0x0013A0D0 File Offset: 0x001382D0
+		// Token: 0x06004393 RID: 17299 RVA: 0x0013A1A8 File Offset: 0x001383A8
 		private void Update()
 		{
 			this.InitIfNeeded();
@@ -761,13 +761,13 @@ namespace GorillaTagScripts
 			}
 		}
 
-		// Token: 0x06004393 RID: 17299 RVA: 0x0013A12E File Offset: 0x0013832E
+		// Token: 0x06004394 RID: 17300 RVA: 0x0013A206 File Offset: 0x00138406
 		public void AddQueuedCommand(BuilderTable.BuilderCommand cmd)
 		{
 			this.queuedBuildCommands.Add(cmd);
 		}
 
-		// Token: 0x06004394 RID: 17300 RVA: 0x0013A13C File Offset: 0x0013833C
+		// Token: 0x06004395 RID: 17301 RVA: 0x0013A214 File Offset: 0x00138414
 		public void ClearQueuedCommands()
 		{
 			if (this.queuedBuildCommands != null)
@@ -782,7 +782,7 @@ namespace GorillaTagScripts
 			this.RemoveRollForwardCommands();
 		}
 
-		// Token: 0x06004395 RID: 17301 RVA: 0x0013A170 File Offset: 0x00138370
+		// Token: 0x06004396 RID: 17302 RVA: 0x0013A248 File Offset: 0x00138448
 		public int GetNumQueuedCommands()
 		{
 			if (this.queuedBuildCommands != null)
@@ -792,19 +792,19 @@ namespace GorillaTagScripts
 			return 0;
 		}
 
-		// Token: 0x06004396 RID: 17302 RVA: 0x0013A187 File Offset: 0x00138387
+		// Token: 0x06004397 RID: 17303 RVA: 0x0013A25F File Offset: 0x0013845F
 		public void AddRollbackAction(BuilderAction action)
 		{
 			this.rollBackActions.Add(action);
 		}
 
-		// Token: 0x06004397 RID: 17303 RVA: 0x0013A195 File Offset: 0x00138395
+		// Token: 0x06004398 RID: 17304 RVA: 0x0013A26D File Offset: 0x0013846D
 		public void RemoveRollBackActions()
 		{
 			this.rollBackActions.Clear();
 		}
 
-		// Token: 0x06004398 RID: 17304 RVA: 0x0013A1A4 File Offset: 0x001383A4
+		// Token: 0x06004399 RID: 17305 RVA: 0x0013A27C File Offset: 0x0013847C
 		public void RemoveRollBackActions(int localCommandId)
 		{
 			for (int i = this.rollBackActions.Count - 1; i >= 0; i--)
@@ -816,7 +816,7 @@ namespace GorillaTagScripts
 			}
 		}
 
-		// Token: 0x06004399 RID: 17305 RVA: 0x0013A1F0 File Offset: 0x001383F0
+		// Token: 0x0600439A RID: 17306 RVA: 0x0013A2C8 File Offset: 0x001384C8
 		public bool HasRollBackActionsForCommand(int localCommandId)
 		{
 			for (int i = 0; i < this.rollBackActions.Count; i++)
@@ -829,19 +829,19 @@ namespace GorillaTagScripts
 			return false;
 		}
 
-		// Token: 0x0600439A RID: 17306 RVA: 0x0013A22A File Offset: 0x0013842A
+		// Token: 0x0600439B RID: 17307 RVA: 0x0013A302 File Offset: 0x00138502
 		public void AddRollForwardCommand(BuilderTable.BuilderCommand command)
 		{
 			this.rollForwardCommands.Add(command);
 		}
 
-		// Token: 0x0600439B RID: 17307 RVA: 0x0013A238 File Offset: 0x00138438
+		// Token: 0x0600439C RID: 17308 RVA: 0x0013A310 File Offset: 0x00138510
 		public void RemoveRollForwardCommands()
 		{
 			this.rollForwardCommands.Clear();
 		}
 
-		// Token: 0x0600439C RID: 17308 RVA: 0x0013A248 File Offset: 0x00138448
+		// Token: 0x0600439D RID: 17309 RVA: 0x0013A320 File Offset: 0x00138520
 		public void RemoveRollForwardCommands(int localCommandId)
 		{
 			for (int i = this.rollForwardCommands.Count - 1; i >= 0; i--)
@@ -853,7 +853,7 @@ namespace GorillaTagScripts
 			}
 		}
 
-		// Token: 0x0600439D RID: 17309 RVA: 0x0013A294 File Offset: 0x00138494
+		// Token: 0x0600439E RID: 17310 RVA: 0x0013A36C File Offset: 0x0013856C
 		public bool HasRollForwardCommand(int localCommandId)
 		{
 			for (int i = 0; i < this.rollForwardCommands.Count; i++)
@@ -866,19 +866,19 @@ namespace GorillaTagScripts
 			return false;
 		}
 
-		// Token: 0x0600439E RID: 17310 RVA: 0x0013A2D0 File Offset: 0x001384D0
+		// Token: 0x0600439F RID: 17311 RVA: 0x0013A3A8 File Offset: 0x001385A8
 		public bool ShouldRollbackBufferCommand(BuilderTable.BuilderCommand cmd)
 		{
 			return cmd.type != BuilderTable.BuilderCommandType.Create && cmd.type != BuilderTable.BuilderCommandType.CreateArmShelf && this.rollBackActions.Count > 0 && (cmd.player == null || !cmd.player.IsLocal || !this.HasRollForwardCommand(cmd.localCommandId));
 		}
 
-		// Token: 0x0600439F RID: 17311 RVA: 0x0013A327 File Offset: 0x00138527
+		// Token: 0x060043A0 RID: 17312 RVA: 0x0013A3FF File Offset: 0x001385FF
 		public void AddRollbackBufferedCommand(BuilderTable.BuilderCommand bufferedCmd)
 		{
 			this.rollBackBufferedCommands.Add(bufferedCmd);
 		}
 
-		// Token: 0x060043A0 RID: 17312 RVA: 0x0013A338 File Offset: 0x00138538
+		// Token: 0x060043A1 RID: 17313 RVA: 0x0013A410 File Offset: 0x00138610
 		private void ExecuteRollBackActions()
 		{
 			for (int i = this.rollBackActions.Count - 1; i >= 0; i--)
@@ -888,7 +888,7 @@ namespace GorillaTagScripts
 			this.rollBackActions.Clear();
 		}
 
-		// Token: 0x060043A1 RID: 17313 RVA: 0x0013A37C File Offset: 0x0013857C
+		// Token: 0x060043A2 RID: 17314 RVA: 0x0013A454 File Offset: 0x00138654
 		private void ExecuteRollbackBufferedCommands()
 		{
 			for (int i = 0; i < this.rollBackBufferedCommands.Count; i++)
@@ -901,7 +901,7 @@ namespace GorillaTagScripts
 			this.rollBackBufferedCommands.Clear();
 		}
 
-		// Token: 0x060043A2 RID: 17314 RVA: 0x0013A3D0 File Offset: 0x001385D0
+		// Token: 0x060043A3 RID: 17315 RVA: 0x0013A4A8 File Offset: 0x001386A8
 		private void ExecuteRollForwardCommands()
 		{
 			BuilderTable.tempRollForwardCommands.Clear();
@@ -920,7 +920,7 @@ namespace GorillaTagScripts
 			BuilderTable.tempRollForwardCommands.Clear();
 		}
 
-		// Token: 0x060043A3 RID: 17315 RVA: 0x0013A460 File Offset: 0x00138660
+		// Token: 0x060043A4 RID: 17316 RVA: 0x0013A538 File Offset: 0x00138738
 		private void UpdateRollForwardCommandData()
 		{
 			for (int i = 0; i < this.rollForwardCommands.Count; i++)
@@ -941,7 +941,7 @@ namespace GorillaTagScripts
 			}
 		}
 
-		// Token: 0x060043A4 RID: 17316 RVA: 0x0013A518 File Offset: 0x00138718
+		// Token: 0x060043A5 RID: 17317 RVA: 0x0013A5F0 File Offset: 0x001387F0
 		public bool TryRollbackAndReExecute(int localCommandId)
 		{
 			if (this.HasRollBackActionsForCommand(localCommandId))
@@ -965,7 +965,7 @@ namespace GorillaTagScripts
 			return false;
 		}
 
-		// Token: 0x060043A5 RID: 17317 RVA: 0x0013A577 File Offset: 0x00138777
+		// Token: 0x060043A6 RID: 17318 RVA: 0x0013A64F File Offset: 0x0013884F
 		public void RollbackFailedCommand(int localCommandId)
 		{
 			if (this.HasRollBackActionsForCommand(localCommandId))
@@ -978,13 +978,13 @@ namespace GorillaTagScripts
 			}
 		}
 
-		// Token: 0x060043A6 RID: 17318 RVA: 0x0013A5A1 File Offset: 0x001387A1
+		// Token: 0x060043A7 RID: 17319 RVA: 0x0013A679 File Offset: 0x00138879
 		public BuilderTable.TableState GetTableState()
 		{
 			return this.tableState;
 		}
 
-		// Token: 0x060043A7 RID: 17319 RVA: 0x0013A5AC File Offset: 0x001387AC
+		// Token: 0x060043A8 RID: 17320 RVA: 0x0013A684 File Offset: 0x00138884
 		public void SetTableState(BuilderTable.TableState newState)
 		{
 			this.InitIfNeeded();
@@ -1055,19 +1055,19 @@ namespace GorillaTagScripts
 			}
 		}
 
-		// Token: 0x060043A8 RID: 17320 RVA: 0x0013A6D8 File Offset: 0x001388D8
+		// Token: 0x060043A9 RID: 17321 RVA: 0x0013A7B0 File Offset: 0x001389B0
 		public void SetPendingMap(string mapID)
 		{
 			this.pendingMapID = mapID;
 		}
 
-		// Token: 0x060043A9 RID: 17321 RVA: 0x0013A6E1 File Offset: 0x001388E1
+		// Token: 0x060043AA RID: 17322 RVA: 0x0013A7B9 File Offset: 0x001389B9
 		public string GetPendingMap()
 		{
 			return this.pendingMapID;
 		}
 
-		// Token: 0x060043AA RID: 17322 RVA: 0x0013A6E9 File Offset: 0x001388E9
+		// Token: 0x060043AB RID: 17323 RVA: 0x0013A7C1 File Offset: 0x001389C1
 		public string GetCurrentMapID()
 		{
 			SharedBlocksManager.SharedBlocksMap sharedBlocksMap = this.sharedBlocksMap;
@@ -1078,7 +1078,7 @@ namespace GorillaTagScripts
 			return sharedBlocksMap.MapID;
 		}
 
-		// Token: 0x060043AB RID: 17323 RVA: 0x0013A6FC File Offset: 0x001388FC
+		// Token: 0x060043AC RID: 17324 RVA: 0x0013A7D4 File Offset: 0x001389D4
 		public void LoadSharedMap(SharedBlocksManager.SharedBlocksMap map)
 		{
 			if (NetworkSystem.Instance.InRoom)
@@ -1122,7 +1122,7 @@ namespace GorillaTagScripts
 			}
 		}
 
-		// Token: 0x060043AC RID: 17324 RVA: 0x0013A794 File Offset: 0x00138994
+		// Token: 0x060043AD RID: 17325 RVA: 0x0013A86C File Offset: 0x00138A6C
 		public void SetInRoom(bool inRoom)
 		{
 			this.inRoom = inRoom;
@@ -1160,7 +1160,7 @@ namespace GorillaTagScripts
 			}
 		}
 
-		// Token: 0x060043AD RID: 17325 RVA: 0x0013A868 File Offset: 0x00138A68
+		// Token: 0x060043AE RID: 17326 RVA: 0x0013A940 File Offset: 0x00138B40
 		public static bool IsLocalPlayerInBuilderZone()
 		{
 			GorillaTagger instance = GorillaTagger.Instance;
@@ -1179,13 +1179,13 @@ namespace GorillaTagScripts
 			return !(zoneEntity2 == null) && BuilderTable.TryGetBuilderTableForZone(zoneEntity2.currentZone, out builderTable) && builderTable.IsInBuilderZone();
 		}
 
-		// Token: 0x060043AE RID: 17326 RVA: 0x0013A8B5 File Offset: 0x00138AB5
+		// Token: 0x060043AF RID: 17327 RVA: 0x0013A98D File Offset: 0x00138B8D
 		public bool IsInBuilderZone()
 		{
 			return this.inBuilderZone;
 		}
 
-		// Token: 0x060043AF RID: 17327 RVA: 0x0013A8C0 File Offset: 0x00138AC0
+		// Token: 0x060043B0 RID: 17328 RVA: 0x0013A998 File Offset: 0x00138B98
 		public void SetInBuilderZone(bool inBuilderZone)
 		{
 			this.inBuilderZone = inBuilderZone;
@@ -1217,7 +1217,7 @@ namespace GorillaTagScripts
 			}
 		}
 
-		// Token: 0x060043B0 RID: 17328 RVA: 0x0013A978 File Offset: 0x00138B78
+		// Token: 0x060043B1 RID: 17329 RVA: 0x0013AA50 File Offset: 0x00138C50
 		private void UpdateTableState()
 		{
 			switch (this.tableState)
@@ -1321,7 +1321,7 @@ namespace GorillaTagScripts
 			this.SetTableState(BuilderTable.TableState.Ready);
 		}
 
-		// Token: 0x060043B1 RID: 17329 RVA: 0x0013AD04 File Offset: 0x00138F04
+		// Token: 0x060043B2 RID: 17330 RVA: 0x0013ADDC File Offset: 0x00138FDC
 		private void RouteNewCommand(BuilderTable.BuilderCommand cmd, bool force)
 		{
 			bool flag = this.ShouldExecuteCommand();
@@ -1348,7 +1348,7 @@ namespace GorillaTagScripts
 			this.ShouldDiscardCommand();
 		}
 
-		// Token: 0x060043B2 RID: 17330 RVA: 0x0013AD5C File Offset: 0x00138F5C
+		// Token: 0x060043B3 RID: 17331 RVA: 0x0013AE34 File Offset: 0x00139034
 		private void ExecuteBuildCommand(BuilderTable.BuilderCommand cmd)
 		{
 			if (!this.isTableMutable && cmd.type != BuilderTable.BuilderCommandType.FunctionalStateChange)
@@ -1403,13 +1403,13 @@ namespace GorillaTagScripts
 			}
 		}
 
-		// Token: 0x060043B3 RID: 17331 RVA: 0x0013AE29 File Offset: 0x00139029
+		// Token: 0x060043B4 RID: 17332 RVA: 0x0013AF01 File Offset: 0x00139101
 		public void ClearTable()
 		{
 			this.ClearTableInternal();
 		}
 
-		// Token: 0x060043B4 RID: 17332 RVA: 0x0013AE34 File Offset: 0x00139034
+		// Token: 0x060043B5 RID: 17333 RVA: 0x0013AF0C File Offset: 0x0013910C
 		private void ClearTableInternal()
 		{
 			BuilderTable.tempDeletePieces.Clear();
@@ -1471,7 +1471,7 @@ namespace GorillaTagScripts
 			}
 		}
 
-		// Token: 0x060043B5 RID: 17333 RVA: 0x0013B0A0 File Offset: 0x001392A0
+		// Token: 0x060043B6 RID: 17334 RVA: 0x0013B178 File Offset: 0x00139378
 		private void ClearBuiltInPlots()
 		{
 			foreach (BuilderPiecePrivatePlot builderPiecePrivatePlot in this.allPrivatePlots)
@@ -1482,7 +1482,7 @@ namespace GorillaTagScripts
 			this.SetLocalPlayerOwnsPlot(false);
 		}
 
-		// Token: 0x060043B6 RID: 17334 RVA: 0x0013B104 File Offset: 0x00139304
+		// Token: 0x060043B7 RID: 17335 RVA: 0x0013B1DC File Offset: 0x001393DC
 		private void OnDeserializeUpdatePlots()
 		{
 			foreach (BuilderPiecePrivatePlot builderPiecePrivatePlot in this.allPrivatePlots)
@@ -1491,7 +1491,7 @@ namespace GorillaTagScripts
 			}
 		}
 
-		// Token: 0x060043B7 RID: 17335 RVA: 0x0013B154 File Offset: 0x00139354
+		// Token: 0x060043B8 RID: 17336 RVA: 0x0013B22C File Offset: 0x0013942C
 		public void BuildPiecesOnShelves()
 		{
 			if (!this.isTableMutable)
@@ -1527,7 +1527,7 @@ namespace GorillaTagScripts
 			}
 		}
 
-		// Token: 0x060043B8 RID: 17336 RVA: 0x0013B207 File Offset: 0x00139407
+		// Token: 0x060043B9 RID: 17337 RVA: 0x0013B2DF File Offset: 0x001394DF
 		private void OnFinishedInitialTableBuild()
 		{
 			this.BuildPiecesOnShelves();
@@ -1535,7 +1535,7 @@ namespace GorillaTagScripts
 			this.CreateArmShelvesForPlayersInBuilder();
 		}
 
-		// Token: 0x060043B9 RID: 17337 RVA: 0x0013B21C File Offset: 0x0013941C
+		// Token: 0x060043BA RID: 17338 RVA: 0x0013B2F4 File Offset: 0x001394F4
 		public int CreatePieceId()
 		{
 			int num = this.nextPieceId;
@@ -1547,7 +1547,7 @@ namespace GorillaTagScripts
 			return num;
 		}
 
-		// Token: 0x060043BA RID: 17338 RVA: 0x0013B24C File Offset: 0x0013944C
+		// Token: 0x060043BB RID: 17339 RVA: 0x0013B324 File Offset: 0x00139524
 		public void ResetConveyors()
 		{
 			if (this.isTableMutable)
@@ -1559,7 +1559,7 @@ namespace GorillaTagScripts
 			}
 		}
 
-		// Token: 0x060043BB RID: 17339 RVA: 0x0013B2A4 File Offset: 0x001394A4
+		// Token: 0x060043BC RID: 17340 RVA: 0x0013B37C File Offset: 0x0013957C
 		public void RequestCreateConveyorPiece(int newPieceType, int materialType, int shelfID)
 		{
 			if (shelfID < 0 || shelfID >= this.conveyors.Count)
@@ -1575,7 +1575,7 @@ namespace GorillaTagScripts
 			this.builderNetworking.CreateShelfPiece(newPieceType, spawnTransform.position, spawnTransform.rotation, materialType, BuilderPiece.State.OnConveyor, shelfID);
 		}
 
-		// Token: 0x060043BC RID: 17340 RVA: 0x0013B2FD File Offset: 0x001394FD
+		// Token: 0x060043BD RID: 17341 RVA: 0x0013B3D5 File Offset: 0x001395D5
 		public void RequestCreateDispenserShelfPiece(int pieceType, Vector3 position, Quaternion rotation, int materialType, int shelfID)
 		{
 			if (shelfID < 0 || shelfID >= this.dispenserShelves.Count)
@@ -1589,7 +1589,7 @@ namespace GorillaTagScripts
 			this.builderNetworking.CreateShelfPiece(pieceType, position, rotation, materialType, BuilderPiece.State.OnShelf, shelfID);
 		}
 
-		// Token: 0x060043BD RID: 17341 RVA: 0x0013B340 File Offset: 0x00139540
+		// Token: 0x060043BE RID: 17342 RVA: 0x0013B418 File Offset: 0x00139618
 		public void CreateConveyorPiece(int pieceType, int pieceId, Vector3 position, Quaternion rotation, int materialType, int shelfID, int sendTimestamp)
 		{
 			if (shelfID < 0 || shelfID >= this.conveyors.Count)
@@ -1616,7 +1616,7 @@ namespace GorillaTagScripts
 			this.RouteNewCommand(builderCommand, false);
 		}
 
-		// Token: 0x060043BE RID: 17342 RVA: 0x0013B3E8 File Offset: 0x001395E8
+		// Token: 0x060043BF RID: 17343 RVA: 0x0013B4C0 File Offset: 0x001396C0
 		public void CreateDispenserShelfPiece(int pieceType, int pieceId, Vector3 position, Quaternion rotation, int materialType, int shelfID)
 		{
 			if (shelfID < 0 || shelfID >= this.dispenserShelves.Count)
@@ -1643,7 +1643,7 @@ namespace GorillaTagScripts
 			this.RouteNewCommand(builderCommand, false);
 		}
 
-		// Token: 0x060043BF RID: 17343 RVA: 0x0013B48E File Offset: 0x0013968E
+		// Token: 0x060043C0 RID: 17344 RVA: 0x0013B566 File Offset: 0x00139766
 		public void RequestShelfSelection(int shelfId, int setId, bool isConveyor)
 		{
 			if (this.tableState != BuilderTable.TableState.Ready)
@@ -1653,7 +1653,7 @@ namespace GorillaTagScripts
 			this.builderNetworking.RequestShelfSelection(shelfId, setId, isConveyor);
 		}
 
-		// Token: 0x060043C0 RID: 17344 RVA: 0x0013B4A8 File Offset: 0x001396A8
+		// Token: 0x060043C1 RID: 17345 RVA: 0x0013B580 File Offset: 0x00139780
 		public void VerifySetSelections()
 		{
 			if (!this.isTableMutable)
@@ -1670,7 +1670,7 @@ namespace GorillaTagScripts
 			}
 		}
 
-		// Token: 0x060043C1 RID: 17345 RVA: 0x0013B540 File Offset: 0x00139740
+		// Token: 0x060043C2 RID: 17346 RVA: 0x0013B618 File Offset: 0x00139818
 		public bool ValidateShelfSelectionParams(int shelfId, int setId, bool isConveyor, Player player)
 		{
 			bool flag = shelfId >= 0 && ((isConveyor && shelfId < this.conveyors.Count) || (!isConveyor && shelfId < this.dispenserShelves.Count)) && BuilderSetManager.instance.DoesPlayerOwnPieceSet(player, setId);
@@ -1692,7 +1692,7 @@ namespace GorillaTagScripts
 			return flag;
 		}
 
-		// Token: 0x060043C2 RID: 17346 RVA: 0x0013B5FC File Offset: 0x001397FC
+		// Token: 0x060043C3 RID: 17347 RVA: 0x0013B6D4 File Offset: 0x001398D4
 		private void SetConveyorSelection(int conveyorId, int setId)
 		{
 			BuilderConveyor builderConveyor = this.conveyors[conveyorId];
@@ -1703,7 +1703,7 @@ namespace GorillaTagScripts
 			builderConveyor.SetSelection(setId);
 		}
 
-		// Token: 0x060043C3 RID: 17347 RVA: 0x0013B628 File Offset: 0x00139828
+		// Token: 0x060043C4 RID: 17348 RVA: 0x0013B700 File Offset: 0x00139900
 		private void SetDispenserSelection(int conveyorId, int setId)
 		{
 			BuilderDispenserShelf builderDispenserShelf = this.dispenserShelves[conveyorId];
@@ -1714,7 +1714,7 @@ namespace GorillaTagScripts
 			builderDispenserShelf.SetSelection(setId);
 		}
 
-		// Token: 0x060043C4 RID: 17348 RVA: 0x0013B654 File Offset: 0x00139854
+		// Token: 0x060043C5 RID: 17349 RVA: 0x0013B72C File Offset: 0x0013992C
 		public void ChangeSetSelection(int shelfID, int setID, bool isConveyor)
 		{
 			BuilderTable.BuilderCommand builderCommand = new BuilderTable.BuilderCommand
@@ -1728,7 +1728,7 @@ namespace GorillaTagScripts
 			this.RouteNewCommand(builderCommand, false);
 		}
 
-		// Token: 0x060043C5 RID: 17349 RVA: 0x0013B6A8 File Offset: 0x001398A8
+		// Token: 0x060043C6 RID: 17350 RVA: 0x0013B780 File Offset: 0x00139980
 		public void ExecuteSetSelection(BuilderTable.BuilderCommand cmd)
 		{
 			bool isLeft = cmd.isLeft;
@@ -1742,14 +1742,14 @@ namespace GorillaTagScripts
 			this.SetDispenserSelection(parentPieceId, pieceType);
 		}
 
-		// Token: 0x060043C6 RID: 17350 RVA: 0x0013B6DC File Offset: 0x001398DC
+		// Token: 0x060043C7 RID: 17351 RVA: 0x0013B7B4 File Offset: 0x001399B4
 		public bool ValidateFunctionalPieceState(int pieceID, byte state, NetPlayer player)
 		{
 			BuilderPiece piece = this.GetPiece(pieceID);
 			return !(piece == null) && piece.functionalPieceComponent != null && (!NetworkSystem.Instance.IsMasterClient || player.IsMasterClient || this.IsPlayerHandNearAction(player, piece.transform.position, true, false, piece.functionalPieceComponent.GetInteractionDistace())) && piece.functionalPieceComponent.IsStateValid(state);
 		}
 
-		// Token: 0x060043C7 RID: 17351 RVA: 0x0013B74C File Offset: 0x0013994C
+		// Token: 0x060043C8 RID: 17352 RVA: 0x0013B824 File Offset: 0x00139A24
 		public void OnFunctionalStateRequest(int pieceID, byte state, NetPlayer player, int timeStamp)
 		{
 			BuilderPiece piece = this.GetPiece(pieceID);
@@ -1768,7 +1768,7 @@ namespace GorillaTagScripts
 			piece.functionalPieceComponent.OnStateRequest(state, player, timeStamp);
 		}
 
-		// Token: 0x060043C8 RID: 17352 RVA: 0x0013B788 File Offset: 0x00139988
+		// Token: 0x060043C9 RID: 17353 RVA: 0x0013B860 File Offset: 0x00139A60
 		public void SetFunctionalPieceState(int pieceID, byte state, NetPlayer player, int timeStamp)
 		{
 			BuilderTable.BuilderCommand builderCommand = new BuilderTable.BuilderCommand
@@ -1782,7 +1782,7 @@ namespace GorillaTagScripts
 			this.RouteNewCommand(builderCommand, false);
 		}
 
-		// Token: 0x060043C9 RID: 17353 RVA: 0x0013B7D4 File Offset: 0x001399D4
+		// Token: 0x060043CA RID: 17354 RVA: 0x0013B8AC File Offset: 0x00139AAC
 		public void ExecuteSetFunctionalPieceState(BuilderTable.BuilderCommand cmd)
 		{
 			BuilderPiece piece = this.GetPiece(cmd.pieceId);
@@ -1793,7 +1793,7 @@ namespace GorillaTagScripts
 			piece.SetFunctionalPieceState(cmd.twist, cmd.player, cmd.serverTimeStamp);
 		}
 
-		// Token: 0x060043CA RID: 17354 RVA: 0x0013B810 File Offset: 0x00139A10
+		// Token: 0x060043CB RID: 17355 RVA: 0x0013B8E8 File Offset: 0x00139AE8
 		public void RegisterFunctionalPiece(IBuilderPieceFunctional component)
 		{
 			if (component != null)
@@ -1802,7 +1802,7 @@ namespace GorillaTagScripts
 			}
 		}
 
-		// Token: 0x060043CB RID: 17355 RVA: 0x0013B821 File Offset: 0x00139A21
+		// Token: 0x060043CC RID: 17356 RVA: 0x0013B8F9 File Offset: 0x00139AF9
 		public void UnregisterFunctionalPiece(IBuilderPieceFunctional component)
 		{
 			if (component != null)
@@ -1811,7 +1811,7 @@ namespace GorillaTagScripts
 			}
 		}
 
-		// Token: 0x060043CC RID: 17356 RVA: 0x0013B832 File Offset: 0x00139A32
+		// Token: 0x060043CD RID: 17357 RVA: 0x0013B90A File Offset: 0x00139B0A
 		public void RegisterFunctionalPieceFixedUpdate(IBuilderPieceFunctional component)
 		{
 			if (component != null)
@@ -1820,7 +1820,7 @@ namespace GorillaTagScripts
 			}
 		}
 
-		// Token: 0x060043CD RID: 17357 RVA: 0x0013B843 File Offset: 0x00139A43
+		// Token: 0x060043CE RID: 17358 RVA: 0x0013B91B File Offset: 0x00139B1B
 		public void UnregisterFunctionalPieceFixedUpdate(IBuilderPieceFunctional component)
 		{
 			if (component != null)
@@ -1829,12 +1829,12 @@ namespace GorillaTagScripts
 			}
 		}
 
-		// Token: 0x060043CE RID: 17358 RVA: 0x000023F4 File Offset: 0x000005F4
+		// Token: 0x060043CF RID: 17359 RVA: 0x000023F4 File Offset: 0x000005F4
 		public void RequestCreatePiece(int newPieceType, Vector3 position, Quaternion rotation, int materialType)
 		{
 		}
 
-		// Token: 0x060043CF RID: 17359 RVA: 0x0013B858 File Offset: 0x00139A58
+		// Token: 0x060043D0 RID: 17360 RVA: 0x0013B930 File Offset: 0x00139B30
 		public void CreatePiece(int pieceType, int pieceId, Vector3 position, Quaternion rotation, int materialType, BuilderPiece.State state, Player player)
 		{
 			BuilderTable.BuilderCommand builderCommand = new BuilderTable.BuilderCommand
@@ -1851,13 +1851,13 @@ namespace GorillaTagScripts
 			this.RouteNewCommand(builderCommand, false);
 		}
 
-		// Token: 0x060043D0 RID: 17360 RVA: 0x0013B8C0 File Offset: 0x00139AC0
+		// Token: 0x060043D1 RID: 17361 RVA: 0x0013B998 File Offset: 0x00139B98
 		public void RequestRecyclePiece(BuilderPiece piece, bool playFX, int recyclerID)
 		{
 			this.builderNetworking.RequestRecyclePiece(piece.pieceId, piece.transform.position, piece.transform.rotation, playFX, recyclerID);
 		}
 
-		// Token: 0x060043D1 RID: 17361 RVA: 0x0013B8EC File Offset: 0x00139AEC
+		// Token: 0x060043D2 RID: 17362 RVA: 0x0013B9C4 File Offset: 0x00139BC4
 		public void RecyclePiece(int pieceId, Vector3 position, Quaternion rotation, bool playFX, int recyclerID, Player player)
 		{
 			BuilderTable.BuilderCommand builderCommand = new BuilderTable.BuilderCommand
@@ -1873,31 +1873,31 @@ namespace GorillaTagScripts
 			this.RouteNewCommand(builderCommand, false);
 		}
 
-		// Token: 0x060043D2 RID: 17362 RVA: 0x0013B94B File Offset: 0x00139B4B
+		// Token: 0x060043D3 RID: 17363 RVA: 0x0013BA23 File Offset: 0x00139C23
 		private bool ShouldExecuteCommand()
 		{
 			return this.tableState == BuilderTable.TableState.Ready || this.tableState == BuilderTable.TableState.WaitForInitialBuildMaster;
 		}
 
-		// Token: 0x060043D3 RID: 17363 RVA: 0x0013B961 File Offset: 0x00139B61
+		// Token: 0x060043D4 RID: 17364 RVA: 0x0013BA39 File Offset: 0x00139C39
 		private bool ShouldQueueCommand()
 		{
 			return this.tableState == BuilderTable.TableState.ReceivingInitialBuild || this.tableState == BuilderTable.TableState.ReceivingMasterResync || this.tableState == BuilderTable.TableState.InitialBuild || this.tableState == BuilderTable.TableState.ExecuteQueuedCommands;
 		}
 
-		// Token: 0x060043D4 RID: 17364 RVA: 0x0013B989 File Offset: 0x00139B89
+		// Token: 0x060043D5 RID: 17365 RVA: 0x0013BA61 File Offset: 0x00139C61
 		private bool ShouldDiscardCommand()
 		{
 			return this.tableState == BuilderTable.TableState.WaitingForInitalBuild || this.tableState == BuilderTable.TableState.WaitForInitialBuildMaster || this.tableState == BuilderTable.TableState.WaitingForZoneAndRoom;
 		}
 
-		// Token: 0x060043D5 RID: 17365 RVA: 0x0013B9A8 File Offset: 0x00139BA8
+		// Token: 0x060043D6 RID: 17366 RVA: 0x0013BA80 File Offset: 0x00139C80
 		public bool DoesChainContainPiece(BuilderPiece targetPiece, BuilderPiece firstInChain, BuilderPiece nextInChain)
 		{
 			return !(targetPiece == null) && !(firstInChain == null) && (targetPiece.Equals(firstInChain) || (!(nextInChain == null) && (targetPiece.Equals(nextInChain) || (!(firstInChain == nextInChain) && this.DoesChainContainPiece(targetPiece, firstInChain, nextInChain.parentPiece)))));
 		}
 
-		// Token: 0x060043D6 RID: 17366 RVA: 0x0013BA04 File Offset: 0x00139C04
+		// Token: 0x060043D7 RID: 17367 RVA: 0x0013BADC File Offset: 0x00139CDC
 		public bool DoesChainContainChain(BuilderPiece chainARoot, BuilderPiece chainBAttachPiece)
 		{
 			if (chainARoot == null || chainBAttachPiece == null)
@@ -1920,7 +1920,7 @@ namespace GorillaTagScripts
 			return false;
 		}
 
-		// Token: 0x060043D7 RID: 17367 RVA: 0x0013BA60 File Offset: 0x00139C60
+		// Token: 0x060043D8 RID: 17368 RVA: 0x0013BB38 File Offset: 0x00139D38
 		private bool IsPlayerHandNearAction(NetPlayer player, Vector3 worldPosition, bool isLeftHand, bool checkBothHands, float acceptableRadius = 2.5f)
 		{
 			bool flag = true;
@@ -1940,7 +1940,7 @@ namespace GorillaTagScripts
 			return flag;
 		}
 
-		// Token: 0x060043D8 RID: 17368 RVA: 0x0013BAF4 File Offset: 0x00139CF4
+		// Token: 0x060043D9 RID: 17369 RVA: 0x0013BBCC File Offset: 0x00139DCC
 		public bool ValidatePlacePieceParams(int pieceId, int attachPieceId, sbyte bumpOffsetX, sbyte bumpOffsetZ, byte twist, int parentPieceId, int attachIndex, int parentAttachIndex, NetPlayer placedByPlayer)
 		{
 			BuilderPiece piece = this.GetPiece(pieceId);
@@ -2031,7 +2031,7 @@ namespace GorillaTagScripts
 			return true;
 		}
 
-		// Token: 0x060043D9 RID: 17369 RVA: 0x0013BD08 File Offset: 0x00139F08
+		// Token: 0x060043DA RID: 17370 RVA: 0x0013BDE0 File Offset: 0x00139FE0
 		public bool ValidatePlacePieceState(int pieceId, int attachPieceId, sbyte bumpOffsetX, sbyte bumpOffsetZ, byte twist, int parentPieceId, int attachIndex, int parentAttachIndex, Player placedByPlayer)
 		{
 			BuilderPiece piece = this.GetPiece(pieceId);
@@ -2043,7 +2043,7 @@ namespace GorillaTagScripts
 			return !(piece2 == null) && !(this.GetPiece(parentPieceId) == null) && placedByPlayer != null && !piece2.GetRootPiece() != piece;
 		}
 
-		// Token: 0x060043DA RID: 17370 RVA: 0x0013BD6C File Offset: 0x00139F6C
+		// Token: 0x060043DB RID: 17371 RVA: 0x0013BE44 File Offset: 0x0013A044
 		public void ExecutePieceCreated(BuilderTable.BuilderCommand cmd)
 		{
 			if ((cmd.player == null || !cmd.player.IsLocal) && !this.ValidateCreatePieceParams(cmd.pieceType, cmd.pieceId, cmd.state, cmd.materialType))
@@ -2079,19 +2079,19 @@ namespace GorillaTagScripts
 			builderConveyor.OnShelfPieceCreated(builderPiece, num);
 		}
 
-		// Token: 0x060043DB RID: 17371 RVA: 0x0013BEB3 File Offset: 0x0013A0B3
+		// Token: 0x060043DC RID: 17372 RVA: 0x0013BF8B File Offset: 0x0013A18B
 		public void ExecutePieceRecycled(BuilderTable.BuilderCommand cmd)
 		{
 			this.RecyclePieceInternal(cmd.pieceId, false, cmd.isLeft, cmd.parentPieceId);
 		}
 
-		// Token: 0x060043DC RID: 17372 RVA: 0x0013BECE File Offset: 0x0013A0CE
+		// Token: 0x060043DD RID: 17373 RVA: 0x0013BFA6 File Offset: 0x0013A1A6
 		private bool ValidateCreatePieceParams(int newPieceType, int newPieceId, BuilderPiece.State state, int materialType)
 		{
 			return !(this.GetPiecePrefab(newPieceType) == null) && !(this.GetPiece(newPieceId) != null);
 		}
 
-		// Token: 0x060043DD RID: 17373 RVA: 0x0013BEF4 File Offset: 0x0013A0F4
+		// Token: 0x060043DE RID: 17374 RVA: 0x0013BFCC File Offset: 0x0013A1CC
 		private bool ValidateDeserializedRootPieceState(int pieceId, BuilderPiece.State state, int shelfOwner, int heldByActor, Vector3 localPosition, Quaternion localRotation)
 		{
 			switch (state)
@@ -2161,7 +2161,7 @@ namespace GorillaTagScripts
 			return true;
 		}
 
-		// Token: 0x060043DE RID: 17374 RVA: 0x0013C00C File Offset: 0x0013A20C
+		// Token: 0x060043DF RID: 17375 RVA: 0x0013C0E4 File Offset: 0x0013A2E4
 		private bool ValidateDeserializedChildPieceState(int pieceId, BuilderPiece.State state)
 		{
 			switch (state)
@@ -2184,14 +2184,14 @@ namespace GorillaTagScripts
 			return false;
 		}
 
-		// Token: 0x060043DF RID: 17375 RVA: 0x0013C070 File Offset: 0x0013A270
+		// Token: 0x060043E0 RID: 17376 RVA: 0x0013C148 File Offset: 0x0013A348
 		public bool ValidatePieceWorldTransform(Vector3 position, Quaternion rotation)
 		{
 			float num = 10000f;
 			return (in position).IsValid(in num) && (in rotation).IsValid() && (this.roomCenter.position - position).sqrMagnitude <= this.acceptableSqrDistFromCenter;
 		}
 
-		// Token: 0x060043E0 RID: 17376 RVA: 0x0013C0C0 File Offset: 0x0013A2C0
+		// Token: 0x060043E1 RID: 17377 RVA: 0x0013C198 File Offset: 0x0013A398
 		private BuilderPiece CreatePieceInternal(int newPieceType, int newPieceId, Vector3 position, Quaternion rotation, BuilderPiece.State state, int materialType, int activateTimeStamp, BuilderTable table)
 		{
 			if (this.GetPiecePrefab(newPieceType) == null)
@@ -2218,7 +2218,7 @@ namespace GorillaTagScripts
 			return builderPiece;
 		}
 
-		// Token: 0x060043E1 RID: 17377 RVA: 0x0013C174 File Offset: 0x0013A374
+		// Token: 0x060043E2 RID: 17378 RVA: 0x0013C24C File Offset: 0x0013A44C
 		private void RecyclePieceInternal(int pieceId, bool ignoreHaptics, bool playFX, int recyclerId)
 		{
 			BuilderPiece piece = this.GetPiece(pieceId);
@@ -2293,13 +2293,13 @@ namespace GorillaTagScripts
 			this.builderPool.DestroyPiece(piece);
 		}
 
-		// Token: 0x060043E2 RID: 17378 RVA: 0x0013C3D0 File Offset: 0x0013A5D0
+		// Token: 0x060043E3 RID: 17379 RVA: 0x0013C4A8 File Offset: 0x0013A6A8
 		public BuilderPiece GetPiecePrefab(int pieceType)
 		{
 			return this.factories[0].GetPiecePrefab(pieceType);
 		}
 
-		// Token: 0x060043E3 RID: 17379 RVA: 0x0013C3E4 File Offset: 0x0013A5E4
+		// Token: 0x060043E4 RID: 17380 RVA: 0x0013C4BC File Offset: 0x0013A6BC
 		private bool ValidateAttachPieceParams(int pieceId, int attachIndex, int parentId, int parentAttachIndex, int piecePlacement)
 		{
 			BuilderPiece piece = this.GetPiece(pieceId);
@@ -2352,7 +2352,7 @@ namespace GorillaTagScripts
 			return (int)b3 >= num6 - num2 && (int)b3 <= num5 + num2;
 		}
 
-		// Token: 0x060043E4 RID: 17380 RVA: 0x0013C530 File Offset: 0x0013A730
+		// Token: 0x060043E5 RID: 17381 RVA: 0x0013C608 File Offset: 0x0013A808
 		private void AttachPieceInternal(int pieceId, int attachIndex, int parentId, int parentAttachIndex, int placement)
 		{
 			BuilderPiece piece = this.GetPiece(pieceId);
@@ -2381,7 +2381,7 @@ namespace GorillaTagScripts
 			piece.transform.SetLocalPositionAndRotation(zero, quaternion);
 		}
 
-		// Token: 0x060043E5 RID: 17381 RVA: 0x0013C5DC File Offset: 0x0013A7DC
+		// Token: 0x060043E6 RID: 17382 RVA: 0x0013C6B4 File Offset: 0x0013A8B4
 		private void AttachPieceToActorInternal(int pieceId, int actorNumber, bool isLeftHand)
 		{
 			BuilderPiece piece = this.GetPiece(pieceId);
@@ -2461,7 +2461,7 @@ namespace GorillaTagScripts
 			}
 		}
 
-		// Token: 0x060043E6 RID: 17382 RVA: 0x0013C7F4 File Offset: 0x0013A9F4
+		// Token: 0x060043E7 RID: 17383 RVA: 0x0013C8CC File Offset: 0x0013AACC
 		public void RequestPlacePiece(BuilderPiece piece, BuilderPiece attachPiece, sbyte bumpOffsetX, sbyte bumpOffsetZ, byte twist, BuilderPiece parentPiece, int attachIndex, int parentAttachIndex)
 		{
 			if (this.tableState != BuilderTable.TableState.Ready)
@@ -2471,13 +2471,13 @@ namespace GorillaTagScripts
 			this.builderNetworking.RequestPlacePiece(piece, attachPiece, bumpOffsetX, bumpOffsetZ, twist, parentPiece, attachIndex, parentAttachIndex);
 		}
 
-		// Token: 0x060043E7 RID: 17383 RVA: 0x0013C824 File Offset: 0x0013AA24
+		// Token: 0x060043E8 RID: 17384 RVA: 0x0013C8FC File Offset: 0x0013AAFC
 		public void PlacePiece(int localCommandId, int pieceId, int attachPieceId, sbyte bumpOffsetX, sbyte bumpOffsetZ, byte twist, int parentPieceId, int attachIndex, int parentAttachIndex, NetPlayer placedByPlayer, int timeStamp, bool force)
 		{
 			this.PiecePlacedInternal(localCommandId, pieceId, attachPieceId, bumpOffsetX, bumpOffsetZ, twist, parentPieceId, attachIndex, parentAttachIndex, placedByPlayer, timeStamp, force);
 		}
 
-		// Token: 0x060043E8 RID: 17384 RVA: 0x0013C84C File Offset: 0x0013AA4C
+		// Token: 0x060043E9 RID: 17385 RVA: 0x0013C924 File Offset: 0x0013AB24
 		public void PiecePlacedInternal(int localCommandId, int pieceId, int attachPieceId, sbyte bumpOffsetX, sbyte bumpOffsetZ, byte twist, int parentPieceId, int attachIndex, int parentAttachIndex, NetPlayer placedByPlayer, int timeStamp, bool force)
 		{
 			if (!force && placedByPlayer == NetworkSystem.Instance.LocalPlayer && this.HasRollForwardCommand(localCommandId) && this.TryRollbackAndReExecute(localCommandId))
@@ -2503,7 +2503,7 @@ namespace GorillaTagScripts
 			this.RouteNewCommand(builderCommand, force);
 		}
 
-		// Token: 0x060043E9 RID: 17385 RVA: 0x0013C904 File Offset: 0x0013AB04
+		// Token: 0x060043EA RID: 17386 RVA: 0x0013C9DC File Offset: 0x0013ABDC
 		public void ExecutePiecePlacedWithActions(BuilderTable.BuilderCommand cmd)
 		{
 			int pieceId = cmd.pieceId;
@@ -2553,7 +2553,7 @@ namespace GorillaTagScripts
 			}
 		}
 
-		// Token: 0x060043EA RID: 17386 RVA: 0x0013CA68 File Offset: 0x0013AC68
+		// Token: 0x060043EB RID: 17387 RVA: 0x0013CB40 File Offset: 0x0013AD40
 		public bool ValidateGrabPieceParams(int pieceId, bool isLeftHand, Vector3 localPosition, Quaternion localRotation, NetPlayer grabbedByPlayer)
 		{
 			float num = 10000f;
@@ -2593,14 +2593,14 @@ namespace GorillaTagScripts
 			return true;
 		}
 
-		// Token: 0x060043EB RID: 17387 RVA: 0x0013CB08 File Offset: 0x0013AD08
+		// Token: 0x060043EC RID: 17388 RVA: 0x0013CBE0 File Offset: 0x0013ADE0
 		public bool ValidateGrabPieceState(int pieceId, bool isLeftHand, Vector3 localPosition, Quaternion localRotation, Player grabbedByPlayer)
 		{
 			BuilderPiece piece = this.GetPiece(pieceId);
 			return !(piece == null) && piece.state != BuilderPiece.State.Displayed && piece.state != BuilderPiece.State.None;
 		}
 
-		// Token: 0x060043EC RID: 17388 RVA: 0x0013CB40 File Offset: 0x0013AD40
+		// Token: 0x060043ED RID: 17389 RVA: 0x0013CC18 File Offset: 0x0013AE18
 		public bool IsLocationWithinSharedBuildArea(Vector3 worldPosition)
 		{
 			Vector3 vector = this.sharedBuildArea.transform.InverseTransformPoint(worldPosition);
@@ -2616,7 +2616,7 @@ namespace GorillaTagScripts
 			return false;
 		}
 
-		// Token: 0x060043ED RID: 17389 RVA: 0x0013CC20 File Offset: 0x0013AE20
+		// Token: 0x060043EE RID: 17390 RVA: 0x0013CCF8 File Offset: 0x0013AEF8
 		private bool NoBlocksCheck()
 		{
 			foreach (BuilderTable.BoxCheckParams boxCheckParams in this.noBlocksAreas)
@@ -2638,7 +2638,7 @@ namespace GorillaTagScripts
 			return true;
 		}
 
-		// Token: 0x060043EE RID: 17390 RVA: 0x0013CD50 File Offset: 0x0013AF50
+		// Token: 0x060043EF RID: 17391 RVA: 0x0013CE28 File Offset: 0x0013B028
 		public void RequestGrabPiece(BuilderPiece piece, bool isLefHand, Vector3 localPosition, Quaternion localRotation)
 		{
 			if (this.tableState != BuilderTable.TableState.Ready)
@@ -2648,13 +2648,13 @@ namespace GorillaTagScripts
 			this.builderNetworking.RequestGrabPiece(piece, isLefHand, localPosition, localRotation);
 		}
 
-		// Token: 0x060043EF RID: 17391 RVA: 0x0013CD6C File Offset: 0x0013AF6C
+		// Token: 0x060043F0 RID: 17392 RVA: 0x0013CE44 File Offset: 0x0013B044
 		public void GrabPiece(int localCommandId, int pieceId, bool isLeftHand, Vector3 localPosition, Quaternion localRotation, NetPlayer grabbedByPlayer, bool force)
 		{
 			this.PieceGrabbedInternal(localCommandId, pieceId, isLeftHand, localPosition, localRotation, grabbedByPlayer, force);
 		}
 
-		// Token: 0x060043F0 RID: 17392 RVA: 0x0013CD80 File Offset: 0x0013AF80
+		// Token: 0x060043F1 RID: 17393 RVA: 0x0013CE58 File Offset: 0x0013B058
 		public void PieceGrabbedInternal(int localCommandId, int pieceId, bool isLeftHand, Vector3 localPosition, Quaternion localRotation, NetPlayer grabbedByPlayer, bool force)
 		{
 			if (!force && grabbedByPlayer == NetworkSystem.Instance.LocalPlayer && this.HasRollForwardCommand(localCommandId) && this.TryRollbackAndReExecute(localCommandId))
@@ -2676,7 +2676,7 @@ namespace GorillaTagScripts
 			this.RouteNewCommand(builderCommand, force);
 		}
 
-		// Token: 0x060043F1 RID: 17393 RVA: 0x0013CE14 File Offset: 0x0013B014
+		// Token: 0x060043F2 RID: 17394 RVA: 0x0013CEEC File Offset: 0x0013B0EC
 		public void ExecutePieceGrabbedWithActions(BuilderTable.BuilderCommand cmd)
 		{
 			int pieceId = cmd.pieceId;
@@ -2777,7 +2777,7 @@ namespace GorillaTagScripts
 			}
 		}
 
-		// Token: 0x060043F2 RID: 17394 RVA: 0x0013D0E8 File Offset: 0x0013B2E8
+		// Token: 0x060043F3 RID: 17395 RVA: 0x0013D1C0 File Offset: 0x0013B3C0
 		public bool ValidateDropPieceParams(int pieceId, Vector3 position, Quaternion rotation, Vector3 velocity, Vector3 angVelocity, NetPlayer droppedByPlayer)
 		{
 			float num = 10000f;
@@ -2836,7 +2836,7 @@ namespace GorillaTagScripts
 			return false;
 		}
 
-		// Token: 0x060043F3 RID: 17395 RVA: 0x0013D208 File Offset: 0x0013B408
+		// Token: 0x060043F4 RID: 17396 RVA: 0x0013D2E0 File Offset: 0x0013B4E0
 		public bool ValidateDropPieceState(int pieceId, Vector3 position, Quaternion rotation, Vector3 velocity, Vector3 angVelocity, Player droppedByPlayer)
 		{
 			BuilderPiece piece = this.GetPiece(pieceId);
@@ -2848,7 +2848,7 @@ namespace GorillaTagScripts
 			return (flag || piece.heldByPlayerActorNumber == droppedByPlayer.ActorNumber) && (!flag || piece.parentPiece.heldByPlayerActorNumber == droppedByPlayer.ActorNumber);
 		}
 
-		// Token: 0x060043F4 RID: 17396 RVA: 0x0013D25E File Offset: 0x0013B45E
+		// Token: 0x060043F5 RID: 17397 RVA: 0x0013D336 File Offset: 0x0013B536
 		public void RequestDropPiece(BuilderPiece piece, Vector3 position, Quaternion rotation, Vector3 velocity, Vector3 angVelocity)
 		{
 			if (this.tableState != BuilderTable.TableState.Ready)
@@ -2858,13 +2858,13 @@ namespace GorillaTagScripts
 			this.builderNetworking.RequestDropPiece(piece, position, rotation, velocity, angVelocity);
 		}
 
-		// Token: 0x060043F5 RID: 17397 RVA: 0x0013D27C File Offset: 0x0013B47C
+		// Token: 0x060043F6 RID: 17398 RVA: 0x0013D354 File Offset: 0x0013B554
 		public void DropPiece(int localCommandId, int pieceId, Vector3 position, Quaternion rotation, Vector3 velocity, Vector3 angVelocity, NetPlayer droppedByPlayer, bool force)
 		{
 			this.PieceDroppedInternal(localCommandId, pieceId, position, rotation, velocity, angVelocity, droppedByPlayer, force);
 		}
 
-		// Token: 0x060043F6 RID: 17398 RVA: 0x0013D29C File Offset: 0x0013B49C
+		// Token: 0x060043F7 RID: 17399 RVA: 0x0013D374 File Offset: 0x0013B574
 		public void PieceDroppedInternal(int localCommandId, int pieceId, Vector3 position, Quaternion rotation, Vector3 velocity, Vector3 angVelocity, NetPlayer droppedByPlayer, bool force)
 		{
 			if (!force && droppedByPlayer == NetworkSystem.Instance.LocalPlayer && this.HasRollForwardCommand(localCommandId) && this.TryRollbackAndReExecute(localCommandId))
@@ -2887,7 +2887,7 @@ namespace GorillaTagScripts
 			this.RouteNewCommand(builderCommand, force);
 		}
 
-		// Token: 0x060043F7 RID: 17399 RVA: 0x0013D338 File Offset: 0x0013B538
+		// Token: 0x060043F8 RID: 17400 RVA: 0x0013D410 File Offset: 0x0013B610
 		public void ExecutePieceDroppedWithActions(BuilderTable.BuilderCommand cmd)
 		{
 			int pieceId = cmd.pieceId;
@@ -2929,7 +2929,7 @@ namespace GorillaTagScripts
 			this.ExecuteAction(builderAction5);
 		}
 
-		// Token: 0x060043F8 RID: 17400 RVA: 0x0013D47C File Offset: 0x0013B67C
+		// Token: 0x060043F9 RID: 17401 RVA: 0x0013D554 File Offset: 0x0013B754
 		public void ExecutePieceRepelled(BuilderTable.BuilderCommand cmd)
 		{
 			int pieceId = cmd.pieceId;
@@ -2979,7 +2979,7 @@ namespace GorillaTagScripts
 			this.ExecuteAction(builderAction5);
 		}
 
-		// Token: 0x060043F9 RID: 17401 RVA: 0x0013D61C File Offset: 0x0013B81C
+		// Token: 0x060043FA RID: 17402 RVA: 0x0013D6F4 File Offset: 0x0013B8F4
 		private void CleanUpDroppedPiece()
 		{
 			if (!PhotonNetwork.IsMasterClient || this.droppedPieces.Count <= BuilderTable.DROPPED_PIECE_LIMIT)
@@ -2995,7 +2995,7 @@ namespace GorillaTagScripts
 			Debug.LogErrorFormat("Piece {0} in Dropped List is {1}", new object[] { builderPiece.pieceId, builderPiece.state });
 		}
 
-		// Token: 0x060043FA RID: 17402 RVA: 0x0013D694 File Offset: 0x0013B894
+		// Token: 0x060043FB RID: 17403 RVA: 0x0013D76C File Offset: 0x0013B96C
 		public void AddPieceToDropList(BuilderPiece piece)
 		{
 			this.droppedPieces.Add(piece);
@@ -3007,7 +3007,7 @@ namespace GorillaTagScripts
 			});
 		}
 
-		// Token: 0x060043FB RID: 17403 RVA: 0x0013D6E4 File Offset: 0x0013B8E4
+		// Token: 0x060043FC RID: 17404 RVA: 0x0013D7BC File Offset: 0x0013B9BC
 		private BuilderPiece FindFirstSleepingPiece()
 		{
 			if (this.droppedPieces.Count < 1)
@@ -3031,7 +3031,7 @@ namespace GorillaTagScripts
 			return builderPiece3;
 		}
 
-		// Token: 0x060043FC RID: 17404 RVA: 0x0013D79E File Offset: 0x0013B99E
+		// Token: 0x060043FD RID: 17405 RVA: 0x0013D876 File Offset: 0x0013BA76
 		public void RemovePieceFromDropList(BuilderPiece piece)
 		{
 			if (piece.state == BuilderPiece.State.Dropped)
@@ -3040,7 +3040,7 @@ namespace GorillaTagScripts
 			}
 		}
 
-		// Token: 0x060043FD RID: 17405 RVA: 0x0013D7B8 File Offset: 0x0013B9B8
+		// Token: 0x060043FE RID: 17406 RVA: 0x0013D890 File Offset: 0x0013BA90
 		private void UpdateDroppedPieces(float dt)
 		{
 			for (int i = 0; i < this.droppedPieces.Count; i++)
@@ -3081,7 +3081,7 @@ namespace GorillaTagScripts
 			}
 		}
 
-		// Token: 0x060043FE RID: 17406 RVA: 0x0013D915 File Offset: 0x0013BB15
+		// Token: 0x060043FF RID: 17407 RVA: 0x0013D9ED File Offset: 0x0013BBED
 		private void SetLocalPlayerOwnsPlot(bool ownsPlot)
 		{
 			this.doesLocalPlayerOwnPlot = ownsPlot;
@@ -3093,7 +3093,7 @@ namespace GorillaTagScripts
 			onLocalPlayerClaimedPlot.Invoke(this.doesLocalPlayerOwnPlot);
 		}
 
-		// Token: 0x060043FF RID: 17407 RVA: 0x0013D934 File Offset: 0x0013BB34
+		// Token: 0x06004400 RID: 17408 RVA: 0x0013DA0C File Offset: 0x0013BC0C
 		public void PlotClaimed(int plotPieceId, Player claimingPlayer)
 		{
 			BuilderTable.BuilderCommand builderCommand = new BuilderTable.BuilderCommand
@@ -3105,7 +3105,7 @@ namespace GorillaTagScripts
 			this.RouteNewCommand(builderCommand, false);
 		}
 
-		// Token: 0x06004400 RID: 17408 RVA: 0x0013D970 File Offset: 0x0013BB70
+		// Token: 0x06004401 RID: 17409 RVA: 0x0013DA48 File Offset: 0x0013BC48
 		public void ExecuteClaimPlot(BuilderTable.BuilderCommand cmd)
 		{
 			int pieceId = cmd.pieceId;
@@ -3134,7 +3134,7 @@ namespace GorillaTagScripts
 			}
 		}
 
-		// Token: 0x06004401 RID: 17409 RVA: 0x0013D9F4 File Offset: 0x0013BBF4
+		// Token: 0x06004402 RID: 17410 RVA: 0x0013DACC File Offset: 0x0013BCCC
 		public void PlayerLeftRoom(int playerActorNumber)
 		{
 			BuilderTable.BuilderCommand builderCommand = new BuilderTable.BuilderCommand
@@ -3147,7 +3147,7 @@ namespace GorillaTagScripts
 			this.RouteNewCommand(builderCommand, flag);
 		}
 
-		// Token: 0x06004402 RID: 17410 RVA: 0x0013DA38 File Offset: 0x0013BC38
+		// Token: 0x06004403 RID: 17411 RVA: 0x0013DB10 File Offset: 0x0013BD10
 		public void ExecutePlayerLeftRoom(BuilderTable.BuilderCommand cmd)
 		{
 			NetPlayer player = cmd.player;
@@ -3167,7 +3167,7 @@ namespace GorillaTagScripts
 			this.playerToArmShelfRight.Remove(num);
 		}
 
-		// Token: 0x06004403 RID: 17411 RVA: 0x0013DAB4 File Offset: 0x0013BCB4
+		// Token: 0x06004404 RID: 17412 RVA: 0x0013DB8C File Offset: 0x0013BD8C
 		public void PlotFreed(int plotPieceId, Player claimingPlayer)
 		{
 			BuilderTable.BuilderCommand builderCommand = new BuilderTable.BuilderCommand
@@ -3179,7 +3179,7 @@ namespace GorillaTagScripts
 			this.RouteNewCommand(builderCommand, false);
 		}
 
-		// Token: 0x06004404 RID: 17412 RVA: 0x0013DAF0 File Offset: 0x0013BCF0
+		// Token: 0x06004405 RID: 17413 RVA: 0x0013DBC8 File Offset: 0x0013BDC8
 		public void ExecuteFreePlot(BuilderTable.BuilderCommand cmd)
 		{
 			int pieceId = cmd.pieceId;
@@ -3191,7 +3191,7 @@ namespace GorillaTagScripts
 			this.FreePlotInternal(pieceId, player.ActorNumber);
 		}
 
-		// Token: 0x06004405 RID: 17413 RVA: 0x0013DB1C File Offset: 0x0013BD1C
+		// Token: 0x06004406 RID: 17414 RVA: 0x0013DBF4 File Offset: 0x0013BDF4
 		private void FreePlotInternal(int plotPieceId, int requestingPlayer)
 		{
 			if (plotPieceId == -1 && !this.plotOwners.TryGetValue(requestingPlayer, out plotPieceId))
@@ -3216,25 +3216,25 @@ namespace GorillaTagScripts
 			}
 		}
 
-		// Token: 0x06004406 RID: 17414 RVA: 0x0013DB90 File Offset: 0x0013BD90
+		// Token: 0x06004407 RID: 17415 RVA: 0x0013DC68 File Offset: 0x0013BE68
 		public bool DoesPlayerOwnPlot(int actorNum)
 		{
 			return this.plotOwners.ContainsKey(actorNum);
 		}
 
-		// Token: 0x06004407 RID: 17415 RVA: 0x0013DB9E File Offset: 0x0013BD9E
+		// Token: 0x06004408 RID: 17416 RVA: 0x0013DC76 File Offset: 0x0013BE76
 		public void RequestPaintPiece(int pieceId, int materialType)
 		{
 			this.builderNetworking.RequestPaintPiece(pieceId, materialType);
 		}
 
-		// Token: 0x06004408 RID: 17416 RVA: 0x0013DBAD File Offset: 0x0013BDAD
+		// Token: 0x06004409 RID: 17417 RVA: 0x0013DC85 File Offset: 0x0013BE85
 		public void PaintPiece(int pieceId, int materialType, Player paintingPlayer, bool force)
 		{
 			this.PaintPieceInternal(pieceId, materialType, paintingPlayer, force);
 		}
 
-		// Token: 0x06004409 RID: 17417 RVA: 0x0013DBBC File Offset: 0x0013BDBC
+		// Token: 0x0600440A RID: 17418 RVA: 0x0013DC94 File Offset: 0x0013BE94
 		private void PaintPieceInternal(int pieceId, int materialType, Player paintingPlayer, bool force)
 		{
 			if (!force && paintingPlayer == PhotonNetwork.LocalPlayer)
@@ -3251,7 +3251,7 @@ namespace GorillaTagScripts
 			this.RouteNewCommand(builderCommand, force);
 		}
 
-		// Token: 0x0600440A RID: 17418 RVA: 0x0013DC10 File Offset: 0x0013BE10
+		// Token: 0x0600440B RID: 17419 RVA: 0x0013DCE8 File Offset: 0x0013BEE8
 		public void ExecutePiecePainted(BuilderTable.BuilderCommand cmd)
 		{
 			int pieceId = cmd.pieceId;
@@ -3263,7 +3263,7 @@ namespace GorillaTagScripts
 			}
 		}
 
-		// Token: 0x0600440B RID: 17419 RVA: 0x0013DC4C File Offset: 0x0013BE4C
+		// Token: 0x0600440C RID: 17420 RVA: 0x0013DD24 File Offset: 0x0013BF24
 		public void CreateArmShelvesForPlayersInBuilder()
 		{
 			if (!this.isTableMutable)
@@ -3283,7 +3283,7 @@ namespace GorillaTagScripts
 			}
 		}
 
-		// Token: 0x0600440C RID: 17420 RVA: 0x0013DCD4 File Offset: 0x0013BED4
+		// Token: 0x0600440D RID: 17421 RVA: 0x0013DDAC File Offset: 0x0013BFAC
 		public void RemoveArmShelfForPlayer(Player player)
 		{
 			if (!this.isTableMutable)
@@ -3337,7 +3337,7 @@ namespace GorillaTagScripts
 			}
 		}
 
-		// Token: 0x0600440D RID: 17421 RVA: 0x0013DE20 File Offset: 0x0013C020
+		// Token: 0x0600440E RID: 17422 RVA: 0x0013DEF8 File Offset: 0x0013C0F8
 		public void DropAllPiecesForPlayerLeaving(int playerActorNumber)
 		{
 			List<BuilderPiece> list = this.pieces;
@@ -3355,7 +3355,7 @@ namespace GorillaTagScripts
 			}
 		}
 
-		// Token: 0x0600440E RID: 17422 RVA: 0x0013DE80 File Offset: 0x0013C080
+		// Token: 0x0600440F RID: 17423 RVA: 0x0013DF58 File Offset: 0x0013C158
 		public void RecycleAllPiecesForPlayerLeaving(int playerActorNumber)
 		{
 			List<BuilderPiece> list = this.pieces;
@@ -3373,7 +3373,7 @@ namespace GorillaTagScripts
 			}
 		}
 
-		// Token: 0x0600440F RID: 17423 RVA: 0x0013DEE0 File Offset: 0x0013C0E0
+		// Token: 0x06004410 RID: 17424 RVA: 0x0013DFB8 File Offset: 0x0013C1B8
 		private void DropPieceForPlayerLeavingInternal(BuilderPiece piece, int playerActorNumber)
 		{
 			BuilderAction builderAction = BuilderActions.CreateDetachFromPlayer(-1, piece.pieceId, playerActorNumber);
@@ -3382,13 +3382,13 @@ namespace GorillaTagScripts
 			this.ExecuteAction(builderAction2);
 		}
 
-		// Token: 0x06004410 RID: 17424 RVA: 0x0013DF37 File Offset: 0x0013C137
+		// Token: 0x06004411 RID: 17425 RVA: 0x0013E00F File Offset: 0x0013C20F
 		private void RecyclePieceForPlayerLeavingInternal(BuilderPiece piece, int playerActorNumber)
 		{
 			this.builderNetworking.RequestRecyclePiece(piece.pieceId, piece.transform.position, piece.transform.rotation, false, -1);
 		}
 
-		// Token: 0x06004411 RID: 17425 RVA: 0x0013DF64 File Offset: 0x0013C164
+		// Token: 0x06004412 RID: 17426 RVA: 0x0013E03C File Offset: 0x0013C23C
 		private void DetachPieceForPlayerLeavingInternal(BuilderPiece piece, int playerActorNumber)
 		{
 			BuilderAction builderAction = BuilderActions.CreateDetachFromPiece(-1, piece.pieceId, playerActorNumber);
@@ -3397,7 +3397,7 @@ namespace GorillaTagScripts
 			this.ExecuteAction(builderAction2);
 		}
 
-		// Token: 0x06004412 RID: 17426 RVA: 0x0013DFBC File Offset: 0x0013C1BC
+		// Token: 0x06004413 RID: 17427 RVA: 0x0013E094 File Offset: 0x0013C294
 		public void CreateArmShelf(int pieceIdLeft, int pieceIdRight, int pieceType, Player player)
 		{
 			BuilderTable.BuilderCommand builderCommand = new BuilderTable.BuilderCommand
@@ -3420,7 +3420,7 @@ namespace GorillaTagScripts
 			this.RouteNewCommand(builderCommand2, false);
 		}
 
-		// Token: 0x06004413 RID: 17427 RVA: 0x0013E04C File Offset: 0x0013C24C
+		// Token: 0x06004414 RID: 17428 RVA: 0x0013E124 File Offset: 0x0013C324
 		public void ExecuteArmShelfCreated(BuilderTable.BuilderCommand cmd)
 		{
 			NetPlayer player = cmd.player;
@@ -3483,7 +3483,7 @@ namespace GorillaTagScripts
 			}
 		}
 
-		// Token: 0x06004414 RID: 17428 RVA: 0x0013E298 File Offset: 0x0013C498
+		// Token: 0x06004415 RID: 17429 RVA: 0x0013E370 File Offset: 0x0013C570
 		public void ClearLocalArmShelf()
 		{
 			VRRig offlineVRRig = GorillaTagger.Instance.offlineVRRig;
@@ -3512,7 +3512,7 @@ namespace GorillaTagScripts
 			}
 		}
 
-		// Token: 0x06004415 RID: 17429 RVA: 0x0013E320 File Offset: 0x0013C520
+		// Token: 0x06004416 RID: 17430 RVA: 0x0013E3F8 File Offset: 0x0013C5F8
 		public void PieceEnteredDropZone(int pieceId, Vector3 worldPos, Quaternion worldRot, int dropZoneId)
 		{
 			Vector3 vector = (this.roomCenter.position - worldPos).normalized * BuilderTable.DROP_ZONE_REPEL;
@@ -3532,7 +3532,7 @@ namespace GorillaTagScripts
 			this.RouteNewCommand(builderCommand, false);
 		}
 
-		// Token: 0x06004416 RID: 17430 RVA: 0x0013E3C4 File Offset: 0x0013C5C4
+		// Token: 0x06004417 RID: 17431 RVA: 0x0013E49C File Offset: 0x0013C69C
 		public bool ValidateRepelPiece(BuilderPiece piece)
 		{
 			if (!this.isSetup)
@@ -3560,7 +3560,7 @@ namespace GorillaTagScripts
 			return false;
 		}
 
-		// Token: 0x06004417 RID: 17431 RVA: 0x0013E468 File Offset: 0x0013C668
+		// Token: 0x06004418 RID: 17432 RVA: 0x0013E540 File Offset: 0x0013C740
 		public void RepelPieceTowardTable(int pieceID)
 		{
 			BuilderPiece piece = this.GetPiece(pieceID);
@@ -3594,7 +3594,7 @@ namespace GorillaTagScripts
 			}
 		}
 
-		// Token: 0x06004418 RID: 17432 RVA: 0x0013E5A0 File Offset: 0x0013C7A0
+		// Token: 0x06004419 RID: 17433 RVA: 0x0013E678 File Offset: 0x0013C878
 		public BuilderPiece GetPiece(int pieceId)
 		{
 			int num;
@@ -3624,7 +3624,7 @@ namespace GorillaTagScripts
 			return null;
 		}
 
-		// Token: 0x06004419 RID: 17433 RVA: 0x0013E665 File Offset: 0x0013C865
+		// Token: 0x0600441A RID: 17434 RVA: 0x0013E73D File Offset: 0x0013C93D
 		public void AddPiece(BuilderPiece piece)
 		{
 			this.pieces.Add(piece);
@@ -3632,7 +3632,7 @@ namespace GorillaTagScripts
 			this.AddPieceData(piece);
 		}
 
-		// Token: 0x0600441A RID: 17434 RVA: 0x0013E682 File Offset: 0x0013C882
+		// Token: 0x0600441B RID: 17435 RVA: 0x0013E75A File Offset: 0x0013C95A
 		public void RemovePiece(BuilderPiece piece)
 		{
 			this.pieces.Remove(piece);
@@ -3641,62 +3641,62 @@ namespace GorillaTagScripts
 			this.pieceIDToIndexCache.Clear();
 		}
 
-		// Token: 0x0600441B RID: 17435 RVA: 0x000023F4 File Offset: 0x000005F4
+		// Token: 0x0600441C RID: 17436 RVA: 0x000023F4 File Offset: 0x000005F4
 		private void CreateData()
 		{
 		}
 
-		// Token: 0x0600441C RID: 17436 RVA: 0x000023F4 File Offset: 0x000005F4
+		// Token: 0x0600441D RID: 17437 RVA: 0x000023F4 File Offset: 0x000005F4
 		private void DestroyData()
 		{
 		}
 
-		// Token: 0x0600441D RID: 17437 RVA: 0x000BC477 File Offset: 0x000BA677
+		// Token: 0x0600441E RID: 17438 RVA: 0x000BC497 File Offset: 0x000BA697
 		private int AddPieceData(BuilderPiece piece)
 		{
 			return -1;
 		}
 
-		// Token: 0x0600441E RID: 17438 RVA: 0x000023F4 File Offset: 0x000005F4
+		// Token: 0x0600441F RID: 17439 RVA: 0x000023F4 File Offset: 0x000005F4
 		public void UpdatePieceData(BuilderPiece piece)
 		{
 		}
 
-		// Token: 0x0600441F RID: 17439 RVA: 0x000023F4 File Offset: 0x000005F4
+		// Token: 0x06004420 RID: 17440 RVA: 0x000023F4 File Offset: 0x000005F4
 		private void RemovePieceData(BuilderPiece piece)
 		{
 		}
 
-		// Token: 0x06004420 RID: 17440 RVA: 0x000BC477 File Offset: 0x000BA677
+		// Token: 0x06004421 RID: 17441 RVA: 0x000BC497 File Offset: 0x000BA697
 		private int AddGridPlaneData(BuilderAttachGridPlane gridPlane)
 		{
 			return -1;
 		}
 
-		// Token: 0x06004421 RID: 17441 RVA: 0x000023F4 File Offset: 0x000005F4
+		// Token: 0x06004422 RID: 17442 RVA: 0x000023F4 File Offset: 0x000005F4
 		private void RemoveGridPlaneData(BuilderAttachGridPlane gridPlane)
 		{
 		}
 
-		// Token: 0x06004422 RID: 17442 RVA: 0x000BC477 File Offset: 0x000BA677
+		// Token: 0x06004423 RID: 17443 RVA: 0x000BC497 File Offset: 0x000BA697
 		private int AddPrivatePlotData(BuilderPiecePrivatePlot plot)
 		{
 			return -1;
 		}
 
-		// Token: 0x06004423 RID: 17443 RVA: 0x000023F4 File Offset: 0x000005F4
+		// Token: 0x06004424 RID: 17444 RVA: 0x000023F4 File Offset: 0x000005F4
 		private void RemovePrivatePlotData(BuilderPiecePrivatePlot plot)
 		{
 		}
 
-		// Token: 0x06004424 RID: 17444 RVA: 0x0013E6AA File Offset: 0x0013C8AA
+		// Token: 0x06004425 RID: 17445 RVA: 0x0013E782 File Offset: 0x0013C982
 		public void OnButtonFreeRotation(BuilderOptionButton button, bool isLeftHand)
 		{
 			this.useSnapRotation = !this.useSnapRotation;
 			button.SetPressed(this.useSnapRotation);
 		}
 
-		// Token: 0x06004425 RID: 17445 RVA: 0x0013E6C7 File Offset: 0x0013C8C7
+		// Token: 0x06004426 RID: 17446 RVA: 0x0013E79F File Offset: 0x0013C99F
 		public void OnButtonFreePosition(BuilderOptionButton button, bool isLeftHand)
 		{
 			if (this.usePlacementStyle == BuilderPlacementStyle.Float)
@@ -3710,17 +3710,17 @@ namespace GorillaTagScripts
 			button.SetPressed(this.usePlacementStyle > BuilderPlacementStyle.Float);
 		}
 
-		// Token: 0x06004426 RID: 17446 RVA: 0x000023F4 File Offset: 0x000005F4
+		// Token: 0x06004427 RID: 17447 RVA: 0x000023F4 File Offset: 0x000005F4
 		public void OnButtonSaveLayout(BuilderOptionButton button, bool isLeftHand)
 		{
 		}
 
-		// Token: 0x06004427 RID: 17447 RVA: 0x000023F4 File Offset: 0x000005F4
+		// Token: 0x06004428 RID: 17448 RVA: 0x000023F4 File Offset: 0x000005F4
 		public void OnButtonClearLayout(BuilderOptionButton button, bool isLeftHand)
 		{
 		}
 
-		// Token: 0x06004428 RID: 17448 RVA: 0x0013E6FC File Offset: 0x0013C8FC
+		// Token: 0x06004429 RID: 17449 RVA: 0x0013E7D4 File Offset: 0x0013C9D4
 		public bool TryPlaceGridPlane(BuilderPiece piece, BuilderAttachGridPlane gridPlane, List<BuilderAttachGridPlane> checkGridPlanes, out BuilderPotentialPlacement potentialPlacement)
 		{
 			potentialPlacement = default(BuilderPotentialPlacement);
@@ -3740,7 +3740,7 @@ namespace GorillaTagScripts
 			return flag;
 		}
 
-		// Token: 0x06004429 RID: 17449 RVA: 0x0013E770 File Offset: 0x0013C970
+		// Token: 0x0600442A RID: 17450 RVA: 0x0013E848 File Offset: 0x0013CA48
 		public bool TryPlaceGridPlaneOnGridPlane(BuilderPiece piece, BuilderAttachGridPlane gridPlane, Vector3 gridPlanePos, Quaternion gridPlaneRot, BuilderAttachGridPlane checkGridPlane, ref BuilderPotentialPlacement potentialPlacement, ref bool success)
 		{
 			if (checkGridPlane.male == gridPlane.male)
@@ -3918,31 +3918,31 @@ namespace GorillaTagScripts
 			return true;
 		}
 
-		// Token: 0x0600442A RID: 17450 RVA: 0x0013EEEA File Offset: 0x0013D0EA
+		// Token: 0x0600442B RID: 17451 RVA: 0x0013EFC2 File Offset: 0x0013D1C2
 		private Vector2Int Rotate90(Vector2Int v, int offsetX, int offsetY)
 		{
 			return new Vector2Int(v.y * -1 + offsetY, v.x);
 		}
 
-		// Token: 0x0600442B RID: 17451 RVA: 0x0013EF03 File Offset: 0x0013D103
+		// Token: 0x0600442C RID: 17452 RVA: 0x0013EFDB File Offset: 0x0013D1DB
 		private Vector2Int Rotate270(Vector2Int v, int offsetX, int offsetY)
 		{
 			return new Vector2Int(v.y, v.x * -1 + offsetX);
 		}
 
-		// Token: 0x0600442C RID: 17452 RVA: 0x0013EF1C File Offset: 0x0013D11C
+		// Token: 0x0600442D RID: 17453 RVA: 0x0013EFF4 File Offset: 0x0013D1F4
 		private Vector2Int Rotate180(Vector2Int v, int offsetX, int offsetY)
 		{
 			return new Vector2Int(v.x * -1 + offsetX, v.y * -1 + offsetY);
 		}
 
-		// Token: 0x0600442D RID: 17453 RVA: 0x0013EF39 File Offset: 0x0013D139
+		// Token: 0x0600442E RID: 17454 RVA: 0x0013F011 File Offset: 0x0013D211
 		public bool ShareSameRoot(BuilderAttachGridPlane plane, BuilderAttachGridPlane otherPlane)
 		{
 			return !(plane == null) && !(otherPlane == null) && !(otherPlane.piece == null) && BuilderTable.ShareSameRoot(plane.piece, otherPlane.piece);
 		}
 
-		// Token: 0x0600442E RID: 17454 RVA: 0x0013EF70 File Offset: 0x0013D170
+		// Token: 0x0600442F RID: 17455 RVA: 0x0013F048 File Offset: 0x0013D248
 		public static bool ShareSameRoot(BuilderPiece piece, BuilderPiece otherPiece)
 		{
 			if (otherPiece == null || piece == null)
@@ -3978,7 +3978,7 @@ namespace GorillaTagScripts
 			return builderPiece == builderPiece2;
 		}
 
-		// Token: 0x0600442F RID: 17455 RVA: 0x0013F010 File Offset: 0x0013D210
+		// Token: 0x06004430 RID: 17456 RVA: 0x0013F0E8 File Offset: 0x0013D2E8
 		public bool TryPlacePieceOnTableNoDrop(bool leftHand, BuilderPiece testPiece, List<BuilderAttachGridPlane> checkGridPlanesMale, List<BuilderAttachGridPlane> checkGridPlanesFemale, out BuilderPotentialPlacement potentialPlacement)
 		{
 			potentialPlacement = default(BuilderPotentialPlacement);
@@ -3995,7 +3995,7 @@ namespace GorillaTagScripts
 			return this.TryPlacePieceGridPlanesOnTableInternal(testPiece, this.maxPlacementChildDepth, checkGridPlanesMale, checkGridPlanesFemale, out potentialPlacement);
 		}
 
-		// Token: 0x06004430 RID: 17456 RVA: 0x0013F060 File Offset: 0x0013D260
+		// Token: 0x06004431 RID: 17457 RVA: 0x0013F138 File Offset: 0x0013D338
 		public bool TryPlacePieceOnTableNoDropJobs(NativeList<BuilderGridPlaneData> gridPlaneData, NativeList<BuilderPieceData> pieceData, NativeList<BuilderGridPlaneData> checkGridPlaneData, NativeList<BuilderPieceData> checkPieceData, out BuilderPotentialPlacement potentialPlacement, List<BuilderPotentialPlacement> allPlacements)
 		{
 			potentialPlacement = default(BuilderPotentialPlacement);
@@ -4067,7 +4067,7 @@ namespace GorillaTagScripts
 			return flag;
 		}
 
-		// Token: 0x06004431 RID: 17457 RVA: 0x0013F2CC File Offset: 0x0013D4CC
+		// Token: 0x06004432 RID: 17458 RVA: 0x0013F3A4 File Offset: 0x0013D5A4
 		public bool CalcAllPotentialPlacements(NativeList<BuilderGridPlaneData> gridPlaneData, NativeList<BuilderGridPlaneData> checkGridPlaneData, BuilderPotentialPlacement potentialPlacement, List<BuilderPotentialPlacement> allPlacements)
 		{
 			if (this == null)
@@ -4107,14 +4107,14 @@ namespace GorillaTagScripts
 			return flag;
 		}
 
-		// Token: 0x06004432 RID: 17458 RVA: 0x0013F438 File Offset: 0x0013D638
+		// Token: 0x06004433 RID: 17459 RVA: 0x0013F510 File Offset: 0x0013D710
 		public bool CanPiecesPotentiallySnap(BuilderPiece pieceInHand, BuilderPiece piece)
 		{
 			BuilderPiece rootPiece = piece.GetRootPiece();
 			return !(rootPiece == pieceInHand) && BuilderPiece.CanPlayerAttachPieceToPiece(PhotonNetwork.LocalPlayer.ActorNumber, pieceInHand, rootPiece) && (!(piece.requestedParentPiece != null) || !BuilderTable.ShareSameRoot(pieceInHand, piece.requestedParentPiece)) && piece.preventSnapUntilMoved <= 0;
 		}
 
-		// Token: 0x06004433 RID: 17459 RVA: 0x0013F49C File Offset: 0x0013D69C
+		// Token: 0x06004434 RID: 17460 RVA: 0x0013F574 File Offset: 0x0013D774
 		public bool CanPiecesPotentiallyOverlap(BuilderPiece pieceInHand, BuilderPiece rootWhenPlaced, BuilderPiece.State stateWhenPlaced, BuilderPiece otherPiece)
 		{
 			BuilderPiece rootPiece = otherPiece.GetRootPiece();
@@ -4142,7 +4142,7 @@ namespace GorillaTagScripts
 			return BuilderTable.AreStatesCompatibleForOverlap(stateWhenPlaced, state, rootWhenPlaced, rootPiece);
 		}
 
-		// Token: 0x06004434 RID: 17460 RVA: 0x0013F525 File Offset: 0x0013D725
+		// Token: 0x06004435 RID: 17461 RVA: 0x0013F5FD File Offset: 0x0013D7FD
 		public void TryDropPiece(bool leftHand, BuilderPiece testPiece, Vector3 velocity, Vector3 angVelocity)
 		{
 			if (this == null)
@@ -4156,7 +4156,7 @@ namespace GorillaTagScripts
 			this.RequestDropPiece(testPiece, testPiece.transform.position, testPiece.transform.rotation, velocity, angVelocity);
 		}
 
-		// Token: 0x06004435 RID: 17461 RVA: 0x0013F55C File Offset: 0x0013D75C
+		// Token: 0x06004436 RID: 17462 RVA: 0x0013F634 File Offset: 0x0013D834
 		public bool TryPlacePieceGridPlanesOnTableInternal(BuilderPiece testPiece, int recurse, List<BuilderAttachGridPlane> checkGridPlanesMale, List<BuilderAttachGridPlane> checkGridPlanesFemale, out BuilderPotentialPlacement potentialPlacement)
 		{
 			potentialPlacement = default(BuilderPotentialPlacement);
@@ -4214,7 +4214,7 @@ namespace GorillaTagScripts
 			return flag;
 		}
 
-		// Token: 0x06004436 RID: 17462 RVA: 0x0013F6E0 File Offset: 0x0013D8E0
+		// Token: 0x06004437 RID: 17463 RVA: 0x0013F7B8 File Offset: 0x0013D9B8
 		public void TryPlaceRandomlyOnTable(BuilderPiece piece)
 		{
 			BuilderAttachGridPlane builderAttachGridPlane = piece.gridPlanes[Random.Range(0, piece.gridPlanes.Count)];
@@ -4253,7 +4253,7 @@ namespace GorillaTagScripts
 			}
 		}
 
-		// Token: 0x06004437 RID: 17463 RVA: 0x0013F89C File Offset: 0x0013DA9C
+		// Token: 0x06004438 RID: 17464 RVA: 0x0013F974 File Offset: 0x0013DB74
 		public void UseResources(BuilderPiece piece)
 		{
 			BuilderResources cost = piece.cost;
@@ -4267,7 +4267,7 @@ namespace GorillaTagScripts
 			}
 		}
 
-		// Token: 0x06004438 RID: 17464 RVA: 0x0013F8E2 File Offset: 0x0013DAE2
+		// Token: 0x06004439 RID: 17465 RVA: 0x0013F9BA File Offset: 0x0013DBBA
 		private void UseResource(BuilderResourceQuantity quantity)
 		{
 			if (quantity.type < BuilderResourceType.Basic || quantity.type >= BuilderResourceType.Count)
@@ -4281,7 +4281,7 @@ namespace GorillaTagScripts
 			}
 		}
 
-		// Token: 0x06004439 RID: 17465 RVA: 0x0013F924 File Offset: 0x0013DB24
+		// Token: 0x0600443A RID: 17466 RVA: 0x0013F9FC File Offset: 0x0013DBFC
 		public void AddResources(BuilderPiece piece)
 		{
 			BuilderResources cost = piece.cost;
@@ -4295,7 +4295,7 @@ namespace GorillaTagScripts
 			}
 		}
 
-		// Token: 0x0600443A RID: 17466 RVA: 0x0013F96A File Offset: 0x0013DB6A
+		// Token: 0x0600443B RID: 17467 RVA: 0x0013FA42 File Offset: 0x0013DC42
 		private void AddResource(BuilderResourceQuantity quantity)
 		{
 			if (quantity.type < BuilderResourceType.Basic || quantity.type >= BuilderResourceType.Count)
@@ -4309,7 +4309,7 @@ namespace GorillaTagScripts
 			}
 		}
 
-		// Token: 0x0600443B RID: 17467 RVA: 0x0013F9AC File Offset: 0x0013DBAC
+		// Token: 0x0600443C RID: 17468 RVA: 0x0013FA84 File Offset: 0x0013DC84
 		public bool HasEnoughUnreservedResources(BuilderResources resources)
 		{
 			if (resources == null)
@@ -4326,13 +4326,13 @@ namespace GorillaTagScripts
 			return true;
 		}
 
-		// Token: 0x0600443C RID: 17468 RVA: 0x0013F9F4 File Offset: 0x0013DBF4
+		// Token: 0x0600443D RID: 17469 RVA: 0x0013FACC File Offset: 0x0013DCCC
 		public bool HasEnoughUnreservedResource(BuilderResourceQuantity quantity)
 		{
 			return quantity.type >= BuilderResourceType.Basic && quantity.type < BuilderResourceType.Count && this.usedResources[(int)quantity.type] + this.reservedResources[(int)quantity.type] + quantity.count <= this.maxResources[(int)quantity.type];
 		}
 
-		// Token: 0x0600443D RID: 17469 RVA: 0x0013FA4C File Offset: 0x0013DC4C
+		// Token: 0x0600443E RID: 17470 RVA: 0x0013FB24 File Offset: 0x0013DD24
 		public bool HasEnoughResources(BuilderPiece piece)
 		{
 			BuilderResources cost = piece.cost;
@@ -4350,13 +4350,13 @@ namespace GorillaTagScripts
 			return true;
 		}
 
-		// Token: 0x0600443E RID: 17470 RVA: 0x0013FA98 File Offset: 0x0013DC98
+		// Token: 0x0600443F RID: 17471 RVA: 0x0013FB70 File Offset: 0x0013DD70
 		public bool HasEnoughResource(BuilderResourceQuantity quantity)
 		{
 			return quantity.type >= BuilderResourceType.Basic && quantity.type < BuilderResourceType.Count && this.usedResources[(int)quantity.type] + quantity.count <= this.maxResources[(int)quantity.type];
 		}
 
-		// Token: 0x0600443F RID: 17471 RVA: 0x0013FAD4 File Offset: 0x0013DCD4
+		// Token: 0x06004440 RID: 17472 RVA: 0x0013FBAC File Offset: 0x0013DDAC
 		public int GetAvailableResources(BuilderResourceType type)
 		{
 			if (type < BuilderResourceType.Basic || type >= BuilderResourceType.Count)
@@ -4366,7 +4366,7 @@ namespace GorillaTagScripts
 			return this.maxResources[(int)type] - this.usedResources[(int)type];
 		}
 
-		// Token: 0x06004440 RID: 17472 RVA: 0x0013FAF4 File Offset: 0x0013DCF4
+		// Token: 0x06004441 RID: 17473 RVA: 0x0013FBCC File Offset: 0x0013DDCC
 		private void OnAvailableResourcesChange()
 		{
 			for (int i = 0; i < this.factories.Count; i++)
@@ -4386,7 +4386,7 @@ namespace GorillaTagScripts
 			}
 		}
 
-		// Token: 0x06004441 RID: 17473 RVA: 0x0013FBA4 File Offset: 0x0013DDA4
+		// Token: 0x06004442 RID: 17474 RVA: 0x0013FC7C File Offset: 0x0013DE7C
 		public int GetPrivateResourceLimitForType(int type)
 		{
 			if (this.plotMaxResources == null)
@@ -4396,7 +4396,7 @@ namespace GorillaTagScripts
 			return this.plotMaxResources[type];
 		}
 
-		// Token: 0x06004442 RID: 17474 RVA: 0x0013FBB8 File Offset: 0x0013DDB8
+		// Token: 0x06004443 RID: 17475 RVA: 0x0013FC90 File Offset: 0x0013DE90
 		private void WriteVector3(BinaryWriter writer, Vector3 data)
 		{
 			writer.Write(data.x);
@@ -4404,7 +4404,7 @@ namespace GorillaTagScripts
 			writer.Write(data.z);
 		}
 
-		// Token: 0x06004443 RID: 17475 RVA: 0x0013FBDE File Offset: 0x0013DDDE
+		// Token: 0x06004444 RID: 17476 RVA: 0x0013FCB6 File Offset: 0x0013DEB6
 		private void WriteQuaternion(BinaryWriter writer, Quaternion data)
 		{
 			writer.Write(data.x);
@@ -4413,7 +4413,7 @@ namespace GorillaTagScripts
 			writer.Write(data.w);
 		}
 
-		// Token: 0x06004444 RID: 17476 RVA: 0x0013FC10 File Offset: 0x0013DE10
+		// Token: 0x06004445 RID: 17477 RVA: 0x0013FCE8 File Offset: 0x0013DEE8
 		private Vector3 ReadVector3(BinaryReader reader)
 		{
 			Vector3 vector;
@@ -4423,7 +4423,7 @@ namespace GorillaTagScripts
 			return vector;
 		}
 
-		// Token: 0x06004445 RID: 17477 RVA: 0x0013FC48 File Offset: 0x0013DE48
+		// Token: 0x06004446 RID: 17478 RVA: 0x0013FD20 File Offset: 0x0013DF20
 		private Quaternion ReadQuaternion(BinaryReader reader)
 		{
 			Quaternion quaternion;
@@ -4434,7 +4434,7 @@ namespace GorillaTagScripts
 			return quaternion;
 		}
 
-		// Token: 0x06004446 RID: 17478 RVA: 0x0013FC8C File Offset: 0x0013DE8C
+		// Token: 0x06004447 RID: 17479 RVA: 0x0013FD64 File Offset: 0x0013DF64
 		public static int PackPiecePlacement(byte twist, sbyte xOffset, sbyte zOffset)
 		{
 			int num = (int)(twist & 3);
@@ -4443,7 +4443,7 @@ namespace GorillaTagScripts
 			return num2 + (num3 << 8) + (num << 16);
 		}
 
-		// Token: 0x06004447 RID: 17479 RVA: 0x0013FCB8 File Offset: 0x0013DEB8
+		// Token: 0x06004448 RID: 17480 RVA: 0x0013FD90 File Offset: 0x0013DF90
 		public static void UnpackPiecePlacement(int packed, out byte twist, out sbyte xOffset, out sbyte zOffset)
 		{
 			int num = packed & 255;
@@ -4454,7 +4454,7 @@ namespace GorillaTagScripts
 			zOffset = (sbyte)(num2 - 128);
 		}
 
-		// Token: 0x06004448 RID: 17480 RVA: 0x0013FCF8 File Offset: 0x0013DEF8
+		// Token: 0x06004449 RID: 17481 RVA: 0x0013FDD0 File Offset: 0x0013DFD0
 		private long PackSnapInfo(int attachGridIndex, int otherAttachGridIndex, Vector2Int min, Vector2Int max)
 		{
 			long num = (long)Mathf.Clamp(attachGridIndex, 0, 31);
@@ -4466,7 +4466,7 @@ namespace GorillaTagScripts
 			return num + (num2 << 5) + (num3 << 10) + (num4 << 21) + (num5 << 32) + (num6 << 43);
 		}
 
-		// Token: 0x06004449 RID: 17481 RVA: 0x0013FD9C File Offset: 0x0013DF9C
+		// Token: 0x0600444A RID: 17482 RVA: 0x0013FE74 File Offset: 0x0013E074
 		private void UnpackSnapInfo(long packed, out int attachGridIndex, out int otherAttachGridIndex, out Vector2Int min, out Vector2Int max)
 		{
 			long num = packed & 31L;
@@ -4481,14 +4481,14 @@ namespace GorillaTagScripts
 			max = new Vector2Int(num4, num5);
 		}
 
-		// Token: 0x0600444A RID: 17482 RVA: 0x0013FE29 File Offset: 0x0013E029
+		// Token: 0x0600444B RID: 17483 RVA: 0x0013FF01 File Offset: 0x0013E101
 		private void RequestTableConfiguration()
 		{
 			SharedBlocksManager.instance.OnGetTableConfiguration += this.OnGetTableConfiguration;
 			SharedBlocksManager.instance.RequestTableConfiguration();
 		}
 
-		// Token: 0x0600444B RID: 17483 RVA: 0x0013FE4B File Offset: 0x0013E04B
+		// Token: 0x0600444C RID: 17484 RVA: 0x0013FF23 File Offset: 0x0013E123
 		private void OnGetTableConfiguration(string configString)
 		{
 			SharedBlocksManager.instance.OnGetTableConfiguration -= this.OnGetTableConfiguration;
@@ -4498,7 +4498,7 @@ namespace GorillaTagScripts
 			}
 		}
 
-		// Token: 0x0600444C RID: 17484 RVA: 0x0013FE74 File Offset: 0x0013E074
+		// Token: 0x0600444D RID: 17485 RVA: 0x0013FF4C File Offset: 0x0013E14C
 		private void ParseTableConfiguration(string dataRecord)
 		{
 			if (string.IsNullOrEmpty(dataRecord))
@@ -4561,7 +4561,7 @@ namespace GorillaTagScripts
 			}
 		}
 
-		// Token: 0x0600444D RID: 17485 RVA: 0x0013FF84 File Offset: 0x0013E184
+		// Token: 0x0600444E RID: 17486 RVA: 0x0014005C File Offset: 0x0013E25C
 		private void DumpTableConfig()
 		{
 			BuilderTableConfiguration builderTableConfiguration = new BuilderTableConfiguration();
@@ -4587,25 +4587,25 @@ namespace GorillaTagScripts
 			Debug.Log("Configuration Dump \n" + text);
 		}
 
-		// Token: 0x0600444E RID: 17486 RVA: 0x001400D0 File Offset: 0x0013E2D0
+		// Token: 0x0600444F RID: 17487 RVA: 0x001401A8 File Offset: 0x0013E3A8
 		private string GetSaveDataTimeKey(int slot)
 		{
 			return BuilderTable.personalBuildKey + slot.ToString("D2") + "Time";
 		}
 
-		// Token: 0x0600444F RID: 17487 RVA: 0x001400ED File Offset: 0x0013E2ED
+		// Token: 0x06004450 RID: 17488 RVA: 0x001401C5 File Offset: 0x0013E3C5
 		private string GetSaveDataKey(int slot)
 		{
 			return BuilderTable.personalBuildKey + slot.ToString("D2");
 		}
 
-		// Token: 0x06004450 RID: 17488 RVA: 0x00140105 File Offset: 0x0013E305
+		// Token: 0x06004451 RID: 17489 RVA: 0x001401DD File Offset: 0x0013E3DD
 		public void FindAndLoadSharedBlocksMap(string mapID)
 		{
 			SharedBlocksManager.instance.RequestMapDataFromID(mapID, new SharedBlocksManager.BlocksMapRequestCallback(this.FoundSharedBlocksMap));
 		}
 
-		// Token: 0x06004451 RID: 17489 RVA: 0x0014011E File Offset: 0x0013E31E
+		// Token: 0x06004452 RID: 17490 RVA: 0x001401F6 File Offset: 0x0013E3F6
 		public string GetSharedBlocksMapID()
 		{
 			if (this.sharedBlocksMap != null)
@@ -4615,7 +4615,7 @@ namespace GorillaTagScripts
 			return string.Empty;
 		}
 
-		// Token: 0x06004452 RID: 17490 RVA: 0x0014013C File Offset: 0x0013E33C
+		// Token: 0x06004453 RID: 17491 RVA: 0x00140214 File Offset: 0x0013E414
 		private void FoundSharedBlocksMap(SharedBlocksManager.SharedBlocksMap map)
 		{
 			if (!NetworkSystem.Instance.IsMasterClient)
@@ -4636,7 +4636,7 @@ namespace GorillaTagScripts
 			this.SetTableState(BuilderTable.TableState.WaitForInitialBuildMaster);
 		}
 
-		// Token: 0x06004453 RID: 17491 RVA: 0x001401B8 File Offset: 0x0013E3B8
+		// Token: 0x06004454 RID: 17492 RVA: 0x00140290 File Offset: 0x0013E490
 		private void BuildInitialTableForPlayer()
 		{
 			if (NetworkSystem.Instance.IsNull() || !NetworkSystem.Instance.InRoom || !NetworkSystem.Instance.SessionIsPrivate || NetworkSystem.Instance.GetLocalPlayer() == null || !NetworkSystem.Instance.IsMasterClient)
@@ -4653,7 +4653,7 @@ namespace GorillaTagScripts
 			SharedBlocksManager.instance.RequestFetchPrivateScan(this.currentSaveSlot);
 		}
 
-		// Token: 0x06004454 RID: 17492 RVA: 0x0014024C File Offset: 0x0013E44C
+		// Token: 0x06004455 RID: 17493 RVA: 0x00140324 File Offset: 0x0013E524
 		private void OnFetchPrivateScanComplete(int slot, bool success)
 		{
 			SharedBlocksManager.instance.OnFetchPrivateScanComplete -= this.OnFetchPrivateScanComplete;
@@ -4676,7 +4676,7 @@ namespace GorillaTagScripts
 			this.OnFinishedInitialTableBuild();
 		}
 
-		// Token: 0x06004455 RID: 17493 RVA: 0x001402B0 File Offset: 0x0013E4B0
+		// Token: 0x06004456 RID: 17494 RVA: 0x00140388 File Offset: 0x0013E588
 		private void BuildSelectedSharedMap()
 		{
 			if (!NetworkSystem.Instance.IsNull() && NetworkSystem.Instance.InRoom && NetworkSystem.Instance.IsMasterClient)
@@ -4700,7 +4700,7 @@ namespace GorillaTagScripts
 			}
 		}
 
-		// Token: 0x06004456 RID: 17494 RVA: 0x00140358 File Offset: 0x0013E558
+		// Token: 0x06004457 RID: 17495 RVA: 0x00140430 File Offset: 0x0013E630
 		private void FoundDefaultSharedBlocksMap(bool success, SharedBlocksManager.SharedBlocksMap map)
 		{
 			SharedBlocksManager.instance.OnFoundDefaultSharedBlocksMap -= this.FoundDefaultSharedBlocksMap;
@@ -4713,7 +4713,7 @@ namespace GorillaTagScripts
 			this.TryBuildingFromTitleData();
 		}
 
-		// Token: 0x06004457 RID: 17495 RVA: 0x001403AC File Offset: 0x0013E5AC
+		// Token: 0x06004458 RID: 17496 RVA: 0x00140484 File Offset: 0x0013E684
 		private void TryBuildingSharedBlocksMap(string mapData)
 		{
 			if (this.tableState != BuilderTable.TableState.WaitForInitialBuildMaster)
@@ -4734,7 +4734,7 @@ namespace GorillaTagScripts
 			base.StartCoroutine(this.CheckForNoBlocks());
 		}
 
-		// Token: 0x06004458 RID: 17496 RVA: 0x00140421 File Offset: 0x0013E621
+		// Token: 0x06004459 RID: 17497 RVA: 0x001404F9 File Offset: 0x0013E6F9
 		private IEnumerator CheckForNoBlocks()
 		{
 			yield return null;
@@ -4753,14 +4753,14 @@ namespace GorillaTagScripts
 			yield break;
 		}
 
-		// Token: 0x06004459 RID: 17497 RVA: 0x00140430 File Offset: 0x0013E630
+		// Token: 0x0600445A RID: 17498 RVA: 0x00140508 File Offset: 0x0013E708
 		private void TryBuildingFromTitleData()
 		{
 			SharedBlocksManager.instance.OnGetTitleDataBuildComplete += this.OnGetTitleDataBuildComplete;
 			SharedBlocksManager.instance.FetchTitleDataBuild();
 		}
 
-		// Token: 0x0600445A RID: 17498 RVA: 0x00140454 File Offset: 0x0013E654
+		// Token: 0x0600445B RID: 17499 RVA: 0x0014052C File Offset: 0x0013E72C
 		private void OnGetTitleDataBuildComplete(string titleDataBuild)
 		{
 			SharedBlocksManager.instance.OnGetTitleDataBuildComplete -= this.OnGetTitleDataBuildComplete;
@@ -4782,7 +4782,7 @@ namespace GorillaTagScripts
 			this.OnFinishedInitialTableBuild();
 		}
 
-		// Token: 0x0600445B RID: 17499 RVA: 0x001404B4 File Offset: 0x0013E6B4
+		// Token: 0x0600445C RID: 17500 RVA: 0x0014058C File Offset: 0x0013E78C
 		public void SaveTableForPlayer()
 		{
 			if (SharedBlocksManager.instance.IsWaitingOnRequest())
@@ -4845,7 +4845,7 @@ namespace GorillaTagScripts
 			}
 		}
 
-		// Token: 0x0600445C RID: 17500 RVA: 0x001405D8 File Offset: 0x0013E7D8
+		// Token: 0x0600445D RID: 17501 RVA: 0x001406B0 File Offset: 0x0013E8B0
 		private void OnSaveScanSuccess(int scan)
 		{
 			SharedBlocksManager.instance.OnSavePrivateScanSuccess -= this.OnSaveScanSuccess;
@@ -4859,7 +4859,7 @@ namespace GorillaTagScripts
 			onSaveSuccess.Invoke();
 		}
 
-		// Token: 0x0600445D RID: 17501 RVA: 0x00140628 File Offset: 0x0013E828
+		// Token: 0x0600445E RID: 17502 RVA: 0x00140700 File Offset: 0x0013E900
 		private void OnSaveScanFailure(int scan, string message)
 		{
 			SharedBlocksManager.instance.OnSavePrivateScanSuccess -= this.OnSaveScanSuccess;
@@ -4874,7 +4874,7 @@ namespace GorillaTagScripts
 			onSaveFailure.Invoke(message);
 		}
 
-		// Token: 0x0600445E RID: 17502 RVA: 0x00140680 File Offset: 0x0013E880
+		// Token: 0x0600445F RID: 17503 RVA: 0x00140758 File Offset: 0x0013E958
 		private string WriteTableToJson()
 		{
 			this.tableData.Clear();
@@ -4948,7 +4948,7 @@ namespace GorillaTagScripts
 			return JsonUtility.ToJson(this.tableData);
 		}
 
-		// Token: 0x0600445F RID: 17503 RVA: 0x00140BD4 File Offset: 0x0013EDD4
+		// Token: 0x06004460 RID: 17504 RVA: 0x00140CAC File Offset: 0x0013EEAC
 		private static BuilderTable.SnapOverlapKey BuildOverlapKey(int pieceId, int otherPieceId, int attachGridIndex, int otherAttachGridIndex)
 		{
 			BuilderTable.SnapOverlapKey snapOverlapKey = default(BuilderTable.SnapOverlapKey);
@@ -4961,7 +4961,7 @@ namespace GorillaTagScripts
 			return snapOverlapKey;
 		}
 
-		// Token: 0x06004460 RID: 17504 RVA: 0x00140C30 File Offset: 0x0013EE30
+		// Token: 0x06004461 RID: 17505 RVA: 0x00140D08 File Offset: 0x0013EF08
 		private bool BuildTableFromJson(string tableJson, bool fromTitleData)
 		{
 			if (string.IsNullOrEmpty(tableJson))
@@ -5138,7 +5138,7 @@ namespace GorillaTagScripts
 			return true;
 		}
 
-		// Token: 0x06004461 RID: 17505 RVA: 0x0014129C File Offset: 0x0013F49C
+		// Token: 0x06004462 RID: 17506 RVA: 0x00141374 File Offset: 0x0013F574
 		public int SerializeTableState(byte[] bytes, int maxBytes)
 		{
 			MemoryStream memoryStream = new MemoryStream(bytes);
@@ -5342,7 +5342,7 @@ namespace GorillaTagScripts
 			return (int)memoryStream.Position;
 		}
 
-		// Token: 0x06004462 RID: 17506 RVA: 0x00141B84 File Offset: 0x0013FD84
+		// Token: 0x06004463 RID: 17507 RVA: 0x00141C5C File Offset: 0x0013FE5C
 		public void DeserializeTableState(byte[] bytes, int numBytes)
 		{
 			if (numBytes <= 0)
@@ -5596,527 +5596,527 @@ namespace GorillaTagScripts
 			BuilderTable.tempDuplicateOverlaps.Clear();
 		}
 
-		// Token: 0x0400461D RID: 17949
+		// Token: 0x0400461E RID: 17950
 		public const GTZone BUILDER_ZONE = GTZone.monkeBlocks;
 
-		// Token: 0x0400461E RID: 17950
+		// Token: 0x0400461F RID: 17951
 		private const int INITIAL_BUILTIN_PIECE_ID = 5;
 
-		// Token: 0x0400461F RID: 17951
+		// Token: 0x04004620 RID: 17952
 		private const int INITIAL_CREATED_PIECE_ID = 10000;
 
-		// Token: 0x04004620 RID: 17952
+		// Token: 0x04004621 RID: 17953
 		public static float MAX_DROP_VELOCITY = 20f;
 
-		// Token: 0x04004621 RID: 17953
+		// Token: 0x04004622 RID: 17954
 		public static float MAX_DROP_ANG_VELOCITY = 50f;
 
-		// Token: 0x04004622 RID: 17954
+		// Token: 0x04004623 RID: 17955
 		private const float MAX_DISTANCE_FROM_CENTER = 217f;
 
-		// Token: 0x04004623 RID: 17955
+		// Token: 0x04004624 RID: 17956
 		private const float MAX_LOCAL_MAGNITUDE = 80f;
 
-		// Token: 0x04004624 RID: 17956
+		// Token: 0x04004625 RID: 17957
 		public const float MAX_DISTANCE_FROM_HAND = 2.5f;
 
-		// Token: 0x04004625 RID: 17957
+		// Token: 0x04004626 RID: 17958
 		public static float DROP_ZONE_REPEL = 2.25f;
 
-		// Token: 0x04004626 RID: 17958
+		// Token: 0x04004627 RID: 17959
 		public static int placedLayer;
 
-		// Token: 0x04004627 RID: 17959
+		// Token: 0x04004628 RID: 17960
 		public static int heldLayer;
 
-		// Token: 0x04004628 RID: 17960
+		// Token: 0x04004629 RID: 17961
 		public static int heldLayerLocal;
 
-		// Token: 0x04004629 RID: 17961
+		// Token: 0x0400462A RID: 17962
 		public static int droppedLayer;
 
-		// Token: 0x0400462A RID: 17962
+		// Token: 0x0400462B RID: 17963
 		private float acceptableSqrDistFromCenter = 47089f;
 
-		// Token: 0x0400462B RID: 17963
+		// Token: 0x0400462C RID: 17964
 		public List<BuilderPiece> builderPieces;
 
-		// Token: 0x0400462C RID: 17964
+		// Token: 0x0400462D RID: 17965
 		[FormerlySerializedAs("isTableMutible")]
 		[Header("Scene References")]
 		public bool isTableMutable = true;
 
-		// Token: 0x0400462D RID: 17965
+		// Token: 0x0400462E RID: 17966
 		public GTZone tableZone = GTZone.monkeBlocks;
 
-		// Token: 0x0400462E RID: 17966
+		// Token: 0x0400462F RID: 17967
 		public BuilderTableNetworking builderNetworking;
 
-		// Token: 0x0400462F RID: 17967
+		// Token: 0x04004630 RID: 17968
 		public BuilderRenderer builderRenderer;
 
-		// Token: 0x04004630 RID: 17968
+		// Token: 0x04004631 RID: 17969
 		public BuilderPool builderPool;
 
-		// Token: 0x04004631 RID: 17969
+		// Token: 0x04004632 RID: 17970
 		public SizeChanger sizeChanger;
 
-		// Token: 0x04004632 RID: 17970
+		// Token: 0x04004633 RID: 17971
 		public GameObject shelvesRoot;
 
-		// Token: 0x04004633 RID: 17971
+		// Token: 0x04004634 RID: 17972
 		public GameObject dropZoneRoot;
 
-		// Token: 0x04004634 RID: 17972
+		// Token: 0x04004635 RID: 17973
 		public List<GameObject> recyclerRoot;
 
-		// Token: 0x04004635 RID: 17973
+		// Token: 0x04004636 RID: 17974
 		public List<GameObject> allShelvesRoot;
 
-		// Token: 0x04004636 RID: 17974
-		public List<BuilderFactory> factories;
-
 		// Token: 0x04004637 RID: 17975
-		[NonSerialized]
-		public List<BuilderConveyor> conveyors = new List<BuilderConveyor>();
+		public List<BuilderFactory> factories;
 
 		// Token: 0x04004638 RID: 17976
 		[NonSerialized]
-		public List<BuilderDispenserShelf> dispenserShelves = new List<BuilderDispenserShelf>();
+		public List<BuilderConveyor> conveyors = new List<BuilderConveyor>();
 
 		// Token: 0x04004639 RID: 17977
-		public BuilderConveyorManager conveyorManager;
+		[NonSerialized]
+		public List<BuilderDispenserShelf> dispenserShelves = new List<BuilderDispenserShelf>();
 
 		// Token: 0x0400463A RID: 17978
-		public List<BuilderResourceMeter> resourceMeters;
+		public BuilderConveyorManager conveyorManager;
 
 		// Token: 0x0400463B RID: 17979
-		public SharedBlocksTerminal linkedTerminal;
+		public List<BuilderResourceMeter> resourceMeters;
 
 		// Token: 0x0400463C RID: 17980
-		[NonSerialized]
-		public List<BuilderRecycler> recyclers;
+		public SharedBlocksTerminal linkedTerminal;
 
 		// Token: 0x0400463D RID: 17981
 		[NonSerialized]
-		public List<BuilderDropZone> dropZones;
+		public List<BuilderRecycler> recyclers;
 
 		// Token: 0x0400463E RID: 17982
-		private int shelfSliceUpdateIndex;
+		[NonSerialized]
+		public List<BuilderDropZone> dropZones;
 
 		// Token: 0x0400463F RID: 17983
-		public static int SHELF_SLICE_BUCKETS = 6;
+		private int shelfSliceUpdateIndex;
 
 		// Token: 0x04004640 RID: 17984
+		public static int SHELF_SLICE_BUCKETS = 6;
+
+		// Token: 0x04004641 RID: 17985
 		[Header("Tint Settings")]
 		public float defaultTint = 1f;
 
-		// Token: 0x04004641 RID: 17985
+		// Token: 0x04004642 RID: 17986
 		public float droppedTint = 0.75f;
 
-		// Token: 0x04004642 RID: 17986
+		// Token: 0x04004643 RID: 17987
 		public float grabbedTint = 0.75f;
 
-		// Token: 0x04004643 RID: 17987
+		// Token: 0x04004644 RID: 17988
 		public float shelfTint = 1f;
 
-		// Token: 0x04004644 RID: 17988
+		// Token: 0x04004645 RID: 17989
 		public float potentialGrabTint = 0.75f;
 
-		// Token: 0x04004645 RID: 17989
+		// Token: 0x04004646 RID: 17990
 		public float paintingTint = 0.6f;
 
-		// Token: 0x04004646 RID: 17990
+		// Token: 0x04004647 RID: 17991
 		[Header("Table Transform")]
 		public Transform tableCenter;
 
-		// Token: 0x04004647 RID: 17991
+		// Token: 0x04004648 RID: 17992
 		public Transform roomCenter;
 
-		// Token: 0x04004648 RID: 17992
+		// Token: 0x04004649 RID: 17993
 		public Transform worldCenter;
 
-		// Token: 0x04004649 RID: 17993
+		// Token: 0x0400464A RID: 17994
 		public GameObject sharedBuildArea;
 
-		// Token: 0x0400464A RID: 17994
+		// Token: 0x0400464B RID: 17995
 		private BoxCollider[] sharedBuildAreas;
 
-		// Token: 0x0400464B RID: 17995
+		// Token: 0x0400464C RID: 17996
 		public GameObject noBlocksArea;
 
-		// Token: 0x0400464C RID: 17996
+		// Token: 0x0400464D RID: 17997
 		private List<BuilderTable.BoxCheckParams> noBlocksAreas;
 
-		// Token: 0x0400464D RID: 17997
+		// Token: 0x0400464E RID: 17998
 		private Collider[] noBlocksCheckResults = new Collider[64];
 
-		// Token: 0x0400464E RID: 17998
+		// Token: 0x0400464F RID: 17999
 		[Header("Table Scale")]
 		public float tableToWorldScale = 50f;
 
-		// Token: 0x0400464F RID: 17999
+		// Token: 0x04004650 RID: 18000
 		public float pieceScale = 0.04f;
 
-		// Token: 0x04004650 RID: 18000
+		// Token: 0x04004651 RID: 18001
 		public float gridSize = 0.02f;
 
-		// Token: 0x04004651 RID: 18001
+		// Token: 0x04004652 RID: 18002
 		[Header("Layers")]
 		public LayerMask allPiecesMask;
 
-		// Token: 0x04004652 RID: 18002
+		// Token: 0x04004653 RID: 18003
 		[Header("Builder Options")]
 		public bool useSnapRotation;
 
-		// Token: 0x04004653 RID: 18003
+		// Token: 0x04004654 RID: 18004
 		public BuilderPlacementStyle usePlacementStyle;
 
-		// Token: 0x04004654 RID: 18004
+		// Token: 0x04004655 RID: 18005
 		public bool buildInPlace;
 
-		// Token: 0x04004655 RID: 18005
+		// Token: 0x04004656 RID: 18006
 		public BuilderOptionButton buttonSnapRotation;
 
-		// Token: 0x04004656 RID: 18006
+		// Token: 0x04004657 RID: 18007
 		public BuilderOptionButton buttonSnapPosition;
 
-		// Token: 0x04004657 RID: 18007
+		// Token: 0x04004658 RID: 18008
 		public BuilderOptionButton buttonSaveLayout;
 
-		// Token: 0x04004658 RID: 18008
+		// Token: 0x04004659 RID: 18009
 		public BuilderOptionButton buttonClearLayout;
 
-		// Token: 0x04004659 RID: 18009
+		// Token: 0x0400465A RID: 18010
 		[HideInInspector]
 		public List<BuilderAttachGridPlane> baseGridPlanes;
 
-		// Token: 0x0400465A RID: 18010
+		// Token: 0x0400465B RID: 18011
 		[Header("Piece Fabrication")]
 		public List<GameObject> builtInPieceRoots;
 
-		// Token: 0x0400465B RID: 18011
+		// Token: 0x0400465C RID: 18012
 		private List<BuilderPiece> basePieces;
 
-		// Token: 0x0400465C RID: 18012
+		// Token: 0x0400465D RID: 18013
 		public List<BuilderPiecePrivatePlot> allPrivatePlots;
 
-		// Token: 0x0400465D RID: 18013
+		// Token: 0x0400465E RID: 18014
 		public BuilderPiece armShelfPieceType;
 
-		// Token: 0x0400465E RID: 18014
-		private int nextPieceId;
-
 		// Token: 0x0400465F RID: 18015
-		[HideInInspector]
-		public List<BuilderTable.BuildPieceSpawn> buildPieceSpawns;
+		private int nextPieceId;
 
 		// Token: 0x04004660 RID: 18016
 		[HideInInspector]
-		public List<BuilderShelf> shelves;
+		public List<BuilderTable.BuildPieceSpawn> buildPieceSpawns;
 
 		// Token: 0x04004661 RID: 18017
+		[HideInInspector]
+		public List<BuilderShelf> shelves;
+
+		// Token: 0x04004662 RID: 18018
 		[NonSerialized]
 		public List<BuilderPiece> pieces = new List<BuilderPiece>(1024);
 
-		// Token: 0x04004662 RID: 18018
+		// Token: 0x04004663 RID: 18019
 		private Dictionary<int, int> pieceIDToIndexCache = new Dictionary<int, int>(1024);
 
-		// Token: 0x04004663 RID: 18019
+		// Token: 0x04004664 RID: 18020
 		[HideInInspector]
 		public Dictionary<int, int> plotOwners;
 
-		// Token: 0x04004664 RID: 18020
+		// Token: 0x04004665 RID: 18021
 		private bool doesLocalPlayerOwnPlot;
 
-		// Token: 0x04004665 RID: 18021
+		// Token: 0x04004666 RID: 18022
 		public Dictionary<int, int> playerToArmShelfLeft;
 
-		// Token: 0x04004666 RID: 18022
+		// Token: 0x04004667 RID: 18023
 		public Dictionary<int, int> playerToArmShelfRight;
 
-		// Token: 0x04004667 RID: 18023
+		// Token: 0x04004668 RID: 18024
 		private HashSet<int> builderPiecesVisited = new HashSet<int>(128);
 
-		// Token: 0x04004668 RID: 18024
+		// Token: 0x04004669 RID: 18025
 		public BuilderResources totalResources;
 
-		// Token: 0x04004669 RID: 18025
+		// Token: 0x0400466A RID: 18026
 		[Tooltip("Resources reserved for conveyors and dispensers")]
 		public BuilderResources totalReservedResources;
 
-		// Token: 0x0400466A RID: 18026
+		// Token: 0x0400466B RID: 18027
 		public BuilderResources resourcesPerPrivatePlot;
 
-		// Token: 0x0400466B RID: 18027
+		// Token: 0x0400466C RID: 18028
 		[NonSerialized]
 		public int[] maxResources;
 
-		// Token: 0x0400466C RID: 18028
-		private int[] plotMaxResources;
-
 		// Token: 0x0400466D RID: 18029
-		[NonSerialized]
-		public int[] usedResources;
+		private int[] plotMaxResources;
 
 		// Token: 0x0400466E RID: 18030
 		[NonSerialized]
-		public int[] reservedResources;
+		public int[] usedResources;
 
 		// Token: 0x0400466F RID: 18031
-		private List<int> playersInBuilder;
+		[NonSerialized]
+		public int[] reservedResources;
 
 		// Token: 0x04004670 RID: 18032
-		private List<IBuilderPieceFunctional> activeFunctionalComponents = new List<IBuilderPieceFunctional>(128);
+		private List<int> playersInBuilder;
 
 		// Token: 0x04004671 RID: 18033
-		private List<IBuilderPieceFunctional> funcComponentsToRegister = new List<IBuilderPieceFunctional>(10);
+		private List<IBuilderPieceFunctional> activeFunctionalComponents = new List<IBuilderPieceFunctional>(128);
 
 		// Token: 0x04004672 RID: 18034
-		private List<IBuilderPieceFunctional> funcComponentsToUnregister = new List<IBuilderPieceFunctional>(10);
+		private List<IBuilderPieceFunctional> funcComponentsToRegister = new List<IBuilderPieceFunctional>(10);
 
 		// Token: 0x04004673 RID: 18035
-		private List<IBuilderPieceFunctional> fixedUpdateFunctionalComponents = new List<IBuilderPieceFunctional>(128);
+		private List<IBuilderPieceFunctional> funcComponentsToUnregister = new List<IBuilderPieceFunctional>(10);
 
 		// Token: 0x04004674 RID: 18036
-		private List<IBuilderPieceFunctional> funcComponentsToRegisterFixed = new List<IBuilderPieceFunctional>(10);
+		private List<IBuilderPieceFunctional> fixedUpdateFunctionalComponents = new List<IBuilderPieceFunctional>(128);
 
 		// Token: 0x04004675 RID: 18037
-		private List<IBuilderPieceFunctional> funcComponentsToUnregisterFixed = new List<IBuilderPieceFunctional>(10);
+		private List<IBuilderPieceFunctional> funcComponentsToRegisterFixed = new List<IBuilderPieceFunctional>(10);
 
 		// Token: 0x04004676 RID: 18038
-		private const int MAX_SPHERE_CHECK_RESULTS = 1024;
+		private List<IBuilderPieceFunctional> funcComponentsToUnregisterFixed = new List<IBuilderPieceFunctional>(10);
 
 		// Token: 0x04004677 RID: 18039
-		private NativeList<BuilderGridPlaneData> gridPlaneData;
+		private const int MAX_SPHERE_CHECK_RESULTS = 1024;
 
 		// Token: 0x04004678 RID: 18040
-		private NativeList<BuilderGridPlaneData> checkGridPlaneData;
+		private NativeList<BuilderGridPlaneData> gridPlaneData;
 
 		// Token: 0x04004679 RID: 18041
-		private NativeArray<ColliderHit> nearbyPiecesResults;
+		private NativeList<BuilderGridPlaneData> checkGridPlaneData;
 
 		// Token: 0x0400467A RID: 18042
-		private NativeArray<OverlapSphereCommand> nearbyPiecesCommands;
+		private NativeArray<ColliderHit> nearbyPiecesResults;
 
 		// Token: 0x0400467B RID: 18043
-		private List<BuilderPotentialPlacement> allPotentialPlacements;
+		private NativeArray<OverlapSphereCommand> nearbyPiecesCommands;
 
 		// Token: 0x0400467C RID: 18044
-		private static HashSet<BuilderPiece> tempPieceSet = new HashSet<BuilderPiece>(512);
+		private List<BuilderPotentialPlacement> allPotentialPlacements;
 
 		// Token: 0x0400467D RID: 18045
-		private BuilderTable.TableState tableState;
+		private static HashSet<BuilderPiece> tempPieceSet = new HashSet<BuilderPiece>(512);
 
 		// Token: 0x0400467E RID: 18046
-		private bool inRoom;
+		private BuilderTable.TableState tableState;
 
 		// Token: 0x0400467F RID: 18047
-		private bool inBuilderZone;
+		private bool inRoom;
 
 		// Token: 0x04004680 RID: 18048
-		private static int DROPPED_PIECE_LIMIT = 100;
+		private bool inBuilderZone;
 
 		// Token: 0x04004681 RID: 18049
-		public static string nextUpdateOverride = string.Empty;
+		private static int DROPPED_PIECE_LIMIT = 100;
 
 		// Token: 0x04004682 RID: 18050
-		private List<BuilderPiece> droppedPieces;
+		public static string nextUpdateOverride = string.Empty;
 
 		// Token: 0x04004683 RID: 18051
-		private List<BuilderTable.DroppedPieceData> droppedPieceData;
+		private List<BuilderPiece> droppedPieces;
 
 		// Token: 0x04004684 RID: 18052
-		private HashSet<int>[] repelledPieceRoots;
+		private List<BuilderTable.DroppedPieceData> droppedPieceData;
 
 		// Token: 0x04004685 RID: 18053
-		private int repelHistoryLength = 3;
+		private HashSet<int>[] repelledPieceRoots;
 
 		// Token: 0x04004686 RID: 18054
-		private int repelHistoryIndex;
+		private int repelHistoryLength = 3;
 
 		// Token: 0x04004687 RID: 18055
-		private bool hasRequestedConfig;
+		private int repelHistoryIndex;
 
 		// Token: 0x04004688 RID: 18056
-		private bool isDirty;
+		private bool hasRequestedConfig;
 
 		// Token: 0x04004689 RID: 18057
-		private bool saveInProgress;
+		private bool isDirty;
 
 		// Token: 0x0400468A RID: 18058
-		private int currentSaveSlot = -1;
+		private bool saveInProgress;
 
 		// Token: 0x0400468B RID: 18059
-		[HideInInspector]
-		public UnityEvent OnSaveTimeUpdated;
+		private int currentSaveSlot = -1;
 
 		// Token: 0x0400468C RID: 18060
 		[HideInInspector]
-		public UnityEvent<bool> OnSaveDirtyChanged;
+		public UnityEvent OnSaveTimeUpdated;
 
 		// Token: 0x0400468D RID: 18061
 		[HideInInspector]
-		public UnityEvent OnSaveSuccess;
+		public UnityEvent<bool> OnSaveDirtyChanged;
 
 		// Token: 0x0400468E RID: 18062
 		[HideInInspector]
-		public UnityEvent<string> OnSaveFailure;
+		public UnityEvent OnSaveSuccess;
 
 		// Token: 0x0400468F RID: 18063
 		[HideInInspector]
-		public UnityEvent OnTableConfigurationUpdated;
+		public UnityEvent<string> OnSaveFailure;
 
 		// Token: 0x04004690 RID: 18064
 		[HideInInspector]
-		public UnityEvent<bool> OnLocalPlayerClaimedPlot;
+		public UnityEvent OnTableConfigurationUpdated;
 
 		// Token: 0x04004691 RID: 18065
 		[HideInInspector]
-		public UnityEvent OnMapCleared;
+		public UnityEvent<bool> OnLocalPlayerClaimedPlot;
 
 		// Token: 0x04004692 RID: 18066
 		[HideInInspector]
-		public UnityEvent<string> OnMapLoaded;
+		public UnityEvent OnMapCleared;
 
 		// Token: 0x04004693 RID: 18067
 		[HideInInspector]
-		public UnityEvent<string> OnMapLoadFailed;
+		public UnityEvent<string> OnMapLoaded;
 
 		// Token: 0x04004694 RID: 18068
-		private List<BuilderTable.BuilderCommand> queuedBuildCommands;
+		[HideInInspector]
+		public UnityEvent<string> OnMapLoadFailed;
 
 		// Token: 0x04004695 RID: 18069
-		private List<BuilderAction> rollBackActions;
+		private List<BuilderTable.BuilderCommand> queuedBuildCommands;
 
 		// Token: 0x04004696 RID: 18070
-		private List<BuilderTable.BuilderCommand> rollBackBufferedCommands;
+		private List<BuilderAction> rollBackActions;
 
 		// Token: 0x04004697 RID: 18071
-		private List<BuilderTable.BuilderCommand> rollForwardCommands;
+		private List<BuilderTable.BuilderCommand> rollBackBufferedCommands;
 
 		// Token: 0x04004698 RID: 18072
-		private static Dictionary<GTZone, BuilderTable> zoneToInstance;
+		private List<BuilderTable.BuilderCommand> rollForwardCommands;
 
 		// Token: 0x04004699 RID: 18073
-		private bool isSetup;
+		private static Dictionary<GTZone, BuilderTable> zoneToInstance;
 
 		// Token: 0x0400469A RID: 18074
+		private bool isSetup;
+
+		// Token: 0x0400469B RID: 18075
 		[Header("Snap Params")]
 		public BuilderTable.SnapParams pushAndEaseParams;
 
-		// Token: 0x0400469B RID: 18075
+		// Token: 0x0400469C RID: 18076
 		public BuilderTable.SnapParams overlapParams;
 
-		// Token: 0x0400469C RID: 18076
+		// Token: 0x0400469D RID: 18077
 		private BuilderTable.SnapParams currSnapParams;
 
-		// Token: 0x0400469D RID: 18077
+		// Token: 0x0400469E RID: 18078
 		public int maxPlacementChildDepth = 5;
 
-		// Token: 0x0400469E RID: 18078
+		// Token: 0x0400469F RID: 18079
 		private static List<BuilderPiece> tempPieces = new List<BuilderPiece>(256);
 
-		// Token: 0x0400469F RID: 18079
+		// Token: 0x040046A0 RID: 18080
 		private static List<BuilderConveyor> tempConveyors = new List<BuilderConveyor>(256);
 
-		// Token: 0x040046A0 RID: 18080
+		// Token: 0x040046A1 RID: 18081
 		private static List<BuilderDispenserShelf> tempDispensers = new List<BuilderDispenserShelf>(256);
 
-		// Token: 0x040046A1 RID: 18081
+		// Token: 0x040046A2 RID: 18082
 		private static List<BuilderRecycler> tempRecyclers = new List<BuilderRecycler>(5);
 
-		// Token: 0x040046A2 RID: 18082
+		// Token: 0x040046A3 RID: 18083
 		private static List<BuilderTable.BuilderCommand> tempRollForwardCommands = new List<BuilderTable.BuilderCommand>(128);
 
-		// Token: 0x040046A3 RID: 18083
+		// Token: 0x040046A4 RID: 18084
 		private static List<BuilderPiece> tempDeletePieces = new List<BuilderPiece>(1024);
 
-		// Token: 0x040046A4 RID: 18084
+		// Token: 0x040046A5 RID: 18085
 		public const int MAX_PIECE_DATA = 2560;
 
-		// Token: 0x040046A5 RID: 18085
+		// Token: 0x040046A6 RID: 18086
 		public const int MAX_GRID_PLANE_DATA = 10240;
 
-		// Token: 0x040046A6 RID: 18086
+		// Token: 0x040046A7 RID: 18087
 		public const int MAX_PRIVATE_PLOT_DATA = 64;
 
-		// Token: 0x040046A7 RID: 18087
+		// Token: 0x040046A8 RID: 18088
 		public const int MAX_PLAYER_DATA = 64;
 
-		// Token: 0x040046A8 RID: 18088
+		// Token: 0x040046A9 RID: 18089
 		private BuilderTableData tableData;
 
-		// Token: 0x040046A9 RID: 18089
+		// Token: 0x040046AA RID: 18090
 		private int fetchConfigurationAttempts;
 
-		// Token: 0x040046AA RID: 18090
+		// Token: 0x040046AB RID: 18091
 		private int maxRetries = 3;
 
-		// Token: 0x040046AB RID: 18091
+		// Token: 0x040046AC RID: 18092
 		private SharedBlocksManager.SharedBlocksMap sharedBlocksMap;
 
-		// Token: 0x040046AC RID: 18092
+		// Token: 0x040046AD RID: 18093
 		private string pendingMapID;
 
-		// Token: 0x040046AD RID: 18093
+		// Token: 0x040046AE RID: 18094
 		private static string personalBuildKey = "MyBuild";
 
-		// Token: 0x040046AE RID: 18094
+		// Token: 0x040046AF RID: 18095
 		private static HashSet<BuilderTable.SnapOverlapKey> tempDuplicateOverlaps = new HashSet<BuilderTable.SnapOverlapKey>(16384);
 
-		// Token: 0x040046AF RID: 18095
+		// Token: 0x040046B0 RID: 18096
 		private static List<BuilderPiece> childPieces = new List<BuilderPiece>(4096);
 
-		// Token: 0x040046B0 RID: 18096
+		// Token: 0x040046B1 RID: 18097
 		private static List<BuilderPiece> rootPieces = new List<BuilderPiece>(4096);
 
-		// Token: 0x040046B1 RID: 18097
+		// Token: 0x040046B2 RID: 18098
 		private static List<int> overlapPieces = new List<int>(4096);
 
-		// Token: 0x040046B2 RID: 18098
+		// Token: 0x040046B3 RID: 18099
 		private static List<int> overlapOtherPieces = new List<int>(4096);
 
-		// Token: 0x040046B3 RID: 18099
+		// Token: 0x040046B4 RID: 18100
 		private static List<long> overlapPacked = new List<long>(4096);
 
-		// Token: 0x040046B4 RID: 18100
+		// Token: 0x040046B5 RID: 18101
 		private static char[] mapIDBuffer = new char[8];
 
-		// Token: 0x040046B5 RID: 18101
+		// Token: 0x040046B6 RID: 18102
 		private static Dictionary<long, int> snapOverlapSanity = new Dictionary<long, int>(16384);
 
-		// Token: 0x040046B6 RID: 18102
+		// Token: 0x040046B7 RID: 18103
 		private static List<int> tempPeiceIds = new List<int>(4096);
 
-		// Token: 0x040046B7 RID: 18103
+		// Token: 0x040046B8 RID: 18104
 		private static List<int> tempParentPeiceIds = new List<int>(4096);
 
-		// Token: 0x040046B8 RID: 18104
+		// Token: 0x040046B9 RID: 18105
 		private static List<int> tempAttachIndexes = new List<int>(4096);
 
-		// Token: 0x040046B9 RID: 18105
+		// Token: 0x040046BA RID: 18106
 		private static List<int> tempParentAttachIndexes = new List<int>(4096);
 
-		// Token: 0x040046BA RID: 18106
+		// Token: 0x040046BB RID: 18107
 		private static List<int> tempParentActorNumbers = new List<int>(4096);
 
-		// Token: 0x040046BB RID: 18107
+		// Token: 0x040046BC RID: 18108
 		private static List<bool> tempInLeftHand = new List<bool>(4096);
 
-		// Token: 0x040046BC RID: 18108
+		// Token: 0x040046BD RID: 18109
 		private static List<int> tempPiecePlacement = new List<int>(4096);
 
 		// Token: 0x02000AE5 RID: 2789
 		private struct BoxCheckParams
 		{
-			// Token: 0x040046BD RID: 18109
+			// Token: 0x040046BE RID: 18110
 			public Vector3 center;
 
-			// Token: 0x040046BE RID: 18110
+			// Token: 0x040046BF RID: 18111
 			public Vector3 halfExtents;
 
-			// Token: 0x040046BF RID: 18111
+			// Token: 0x040046C0 RID: 18112
 			public Quaternion rotation;
 		}
 
@@ -6124,164 +6124,164 @@ namespace GorillaTagScripts
 		[Serializable]
 		public class BuildPieceSpawn
 		{
-			// Token: 0x040046C0 RID: 18112
+			// Token: 0x040046C1 RID: 18113
 			public GameObject buildPiecePrefab;
 
-			// Token: 0x040046C1 RID: 18113
+			// Token: 0x040046C2 RID: 18114
 			public int count = 1;
 		}
 
 		// Token: 0x02000AE7 RID: 2791
 		public enum BuilderCommandType
 		{
-			// Token: 0x040046C3 RID: 18115
-			Create,
 			// Token: 0x040046C4 RID: 18116
-			Place,
+			Create,
 			// Token: 0x040046C5 RID: 18117
-			Grab,
+			Place,
 			// Token: 0x040046C6 RID: 18118
-			Drop,
+			Grab,
 			// Token: 0x040046C7 RID: 18119
-			Remove,
+			Drop,
 			// Token: 0x040046C8 RID: 18120
-			Paint,
+			Remove,
 			// Token: 0x040046C9 RID: 18121
-			Recycle,
+			Paint,
 			// Token: 0x040046CA RID: 18122
-			ClaimPlot,
+			Recycle,
 			// Token: 0x040046CB RID: 18123
-			FreePlot,
+			ClaimPlot,
 			// Token: 0x040046CC RID: 18124
-			CreateArmShelf,
+			FreePlot,
 			// Token: 0x040046CD RID: 18125
-			PlayerLeftRoom,
+			CreateArmShelf,
 			// Token: 0x040046CE RID: 18126
-			FunctionalStateChange,
+			PlayerLeftRoom,
 			// Token: 0x040046CF RID: 18127
-			SetSelection,
+			FunctionalStateChange,
 			// Token: 0x040046D0 RID: 18128
+			SetSelection,
+			// Token: 0x040046D1 RID: 18129
 			Repel
 		}
 
 		// Token: 0x02000AE8 RID: 2792
 		public enum TableState
 		{
-			// Token: 0x040046D2 RID: 18130
-			WaitingForZoneAndRoom,
 			// Token: 0x040046D3 RID: 18131
-			WaitingForInitalBuild,
+			WaitingForZoneAndRoom,
 			// Token: 0x040046D4 RID: 18132
-			ReceivingInitialBuild,
+			WaitingForInitalBuild,
 			// Token: 0x040046D5 RID: 18133
-			WaitForInitialBuildMaster,
+			ReceivingInitialBuild,
 			// Token: 0x040046D6 RID: 18134
-			WaitForMasterResync,
+			WaitForInitialBuildMaster,
 			// Token: 0x040046D7 RID: 18135
-			ReceivingMasterResync,
+			WaitForMasterResync,
 			// Token: 0x040046D8 RID: 18136
-			InitialBuild,
+			ReceivingMasterResync,
 			// Token: 0x040046D9 RID: 18137
-			ExecuteQueuedCommands,
+			InitialBuild,
 			// Token: 0x040046DA RID: 18138
-			Ready,
+			ExecuteQueuedCommands,
 			// Token: 0x040046DB RID: 18139
-			BadData,
+			Ready,
 			// Token: 0x040046DC RID: 18140
+			BadData,
+			// Token: 0x040046DD RID: 18141
 			WaitingForSharedMapLoad
 		}
 
 		// Token: 0x02000AE9 RID: 2793
 		public enum DroppedPieceState
 		{
-			// Token: 0x040046DE RID: 18142
-			None = -1,
 			// Token: 0x040046DF RID: 18143
-			Light,
+			None = -1,
 			// Token: 0x040046E0 RID: 18144
+			Light,
+			// Token: 0x040046E1 RID: 18145
 			Heavy
 		}
 
 		// Token: 0x02000AEA RID: 2794
 		private struct DroppedPieceData
 		{
-			// Token: 0x040046E1 RID: 18145
+			// Token: 0x040046E2 RID: 18146
 			public BuilderTable.DroppedPieceState droppedState;
 
-			// Token: 0x040046E2 RID: 18146
+			// Token: 0x040046E3 RID: 18147
 			public float speedThreshCrossedTime;
 
-			// Token: 0x040046E3 RID: 18147
+			// Token: 0x040046E4 RID: 18148
 			public float filteredSpeed;
 		}
 
 		// Token: 0x02000AEB RID: 2795
 		public struct BuilderCommand
 		{
-			// Token: 0x040046E4 RID: 18148
+			// Token: 0x040046E5 RID: 18149
 			public BuilderTable.BuilderCommandType type;
 
-			// Token: 0x040046E5 RID: 18149
+			// Token: 0x040046E6 RID: 18150
 			public int pieceType;
 
-			// Token: 0x040046E6 RID: 18150
+			// Token: 0x040046E7 RID: 18151
 			public int pieceId;
 
-			// Token: 0x040046E7 RID: 18151
+			// Token: 0x040046E8 RID: 18152
 			public int attachPieceId;
 
-			// Token: 0x040046E8 RID: 18152
+			// Token: 0x040046E9 RID: 18153
 			public int parentPieceId;
 
-			// Token: 0x040046E9 RID: 18153
+			// Token: 0x040046EA RID: 18154
 			public int parentAttachIndex;
 
-			// Token: 0x040046EA RID: 18154
+			// Token: 0x040046EB RID: 18155
 			public int attachIndex;
 
-			// Token: 0x040046EB RID: 18155
+			// Token: 0x040046EC RID: 18156
 			public Vector3 localPosition;
 
-			// Token: 0x040046EC RID: 18156
+			// Token: 0x040046ED RID: 18157
 			public Quaternion localRotation;
 
-			// Token: 0x040046ED RID: 18157
+			// Token: 0x040046EE RID: 18158
 			public byte twist;
 
-			// Token: 0x040046EE RID: 18158
+			// Token: 0x040046EF RID: 18159
 			public sbyte bumpOffsetX;
 
-			// Token: 0x040046EF RID: 18159
+			// Token: 0x040046F0 RID: 18160
 			public sbyte bumpOffsetZ;
 
-			// Token: 0x040046F0 RID: 18160
+			// Token: 0x040046F1 RID: 18161
 			public Vector3 velocity;
 
-			// Token: 0x040046F1 RID: 18161
+			// Token: 0x040046F2 RID: 18162
 			public Vector3 angVelocity;
 
-			// Token: 0x040046F2 RID: 18162
+			// Token: 0x040046F3 RID: 18163
 			public bool isLeft;
 
-			// Token: 0x040046F3 RID: 18163
+			// Token: 0x040046F4 RID: 18164
 			public int materialType;
 
-			// Token: 0x040046F4 RID: 18164
+			// Token: 0x040046F5 RID: 18165
 			public NetPlayer player;
 
-			// Token: 0x040046F5 RID: 18165
+			// Token: 0x040046F6 RID: 18166
 			public BuilderPiece.State state;
 
-			// Token: 0x040046F6 RID: 18166
+			// Token: 0x040046F7 RID: 18167
 			public bool isQueued;
 
-			// Token: 0x040046F7 RID: 18167
+			// Token: 0x040046F8 RID: 18168
 			public bool canRollback;
 
-			// Token: 0x040046F8 RID: 18168
+			// Token: 0x040046F9 RID: 18169
 			public int localCommandId;
 
-			// Token: 0x040046F9 RID: 18169
+			// Token: 0x040046FA RID: 18170
 			public int serverTimeStamp;
 		}
 
@@ -6289,62 +6289,62 @@ namespace GorillaTagScripts
 		[Serializable]
 		public struct SnapParams
 		{
-			// Token: 0x040046FA RID: 18170
+			// Token: 0x040046FB RID: 18171
 			public float minOffsetY;
 
-			// Token: 0x040046FB RID: 18171
+			// Token: 0x040046FC RID: 18172
 			public float maxOffsetY;
 
-			// Token: 0x040046FC RID: 18172
+			// Token: 0x040046FD RID: 18173
 			public float maxUpDotProduct;
 
-			// Token: 0x040046FD RID: 18173
+			// Token: 0x040046FE RID: 18174
 			public float maxTwistDotProduct;
 
-			// Token: 0x040046FE RID: 18174
+			// Token: 0x040046FF RID: 18175
 			public float snapAttachDistance;
 
-			// Token: 0x040046FF RID: 18175
+			// Token: 0x04004700 RID: 18176
 			public float snapDelayTime;
 
-			// Token: 0x04004700 RID: 18176
+			// Token: 0x04004701 RID: 18177
 			public float snapDelayOffsetDist;
 
-			// Token: 0x04004701 RID: 18177
+			// Token: 0x04004702 RID: 18178
 			public float unSnapDelayTime;
 
-			// Token: 0x04004702 RID: 18178
+			// Token: 0x04004703 RID: 18179
 			public float unSnapDelayDist;
 
-			// Token: 0x04004703 RID: 18179
+			// Token: 0x04004704 RID: 18180
 			public float maxBlockSnapDist;
 		}
 
 		// Token: 0x02000AED RID: 2797
 		private struct SnapOverlapKey
 		{
-			// Token: 0x06004466 RID: 17510 RVA: 0x001426E9 File Offset: 0x001408E9
+			// Token: 0x06004467 RID: 17511 RVA: 0x001427C1 File Offset: 0x001409C1
 			public override int GetHashCode()
 			{
 				return HashCode.Combine<int, int>(this.piece.GetHashCode(), this.otherPiece.GetHashCode());
 			}
 
-			// Token: 0x06004467 RID: 17511 RVA: 0x00142706 File Offset: 0x00140906
+			// Token: 0x06004468 RID: 17512 RVA: 0x001427DE File Offset: 0x001409DE
 			public bool Equals(BuilderTable.SnapOverlapKey other)
 			{
 				return this.piece == other.piece && this.otherPiece == other.otherPiece;
 			}
 
-			// Token: 0x06004468 RID: 17512 RVA: 0x00142726 File Offset: 0x00140926
+			// Token: 0x06004469 RID: 17513 RVA: 0x001427FE File Offset: 0x001409FE
 			public override bool Equals(object o)
 			{
 				return o is BuilderTable.SnapOverlapKey && this.Equals((BuilderTable.SnapOverlapKey)o);
 			}
 
-			// Token: 0x04004704 RID: 18180
+			// Token: 0x04004705 RID: 18181
 			public long piece;
 
-			// Token: 0x04004705 RID: 18181
+			// Token: 0x04004706 RID: 18182
 			public long otherPiece;
 		}
 	}

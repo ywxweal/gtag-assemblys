@@ -9,7 +9,7 @@ namespace GorillaTagScripts.AI.Entities
 	// Token: 0x02000B9F RID: 2975
 	public class TestShark : AIEntity
 	{
-		// Token: 0x060049B9 RID: 18873 RVA: 0x00160178 File Offset: 0x0015E378
+		// Token: 0x060049BA RID: 18874 RVA: 0x00160250 File Offset: 0x0015E450
 		private new void Awake()
 		{
 			base.Awake();
@@ -23,7 +23,7 @@ namespace GorillaTagScripts.AI.Entities
 			this._stateMachine.SetState(this.patrol);
 		}
 
-		// Token: 0x060049BA RID: 18874 RVA: 0x00160210 File Offset: 0x0015E410
+		// Token: 0x060049BB RID: 18875 RVA: 0x001602E8 File Offset: 0x0015E4E8
 		private void Update()
 		{
 			this._stateMachine.Tick();
@@ -41,39 +41,39 @@ namespace GorillaTagScripts.AI.Entities
 			}
 		}
 
-		// Token: 0x060049BC RID: 18876 RVA: 0x00160299 File Offset: 0x0015E499
+		// Token: 0x060049BD RID: 18877 RVA: 0x00160371 File Offset: 0x0015E571
 		[CompilerGenerated]
 		private Func<bool> <Awake>g__ShouldChase|7_0()
 		{
 			return () => this.shouldChase && PhotonNetwork.InRoom;
 		}
 
-		// Token: 0x060049BE RID: 18878 RVA: 0x001602B8 File Offset: 0x0015E4B8
+		// Token: 0x060049BF RID: 18879 RVA: 0x00160390 File Offset: 0x0015E590
 		[CompilerGenerated]
 		private Func<bool> <Awake>g__ShouldPatrol|7_1()
 		{
 			return () => this.chase.chaseOver;
 		}
 
-		// Token: 0x04004C8D RID: 19597
+		// Token: 0x04004C8E RID: 19598
 		public float nextTimeToChasePlayer = 30f;
 
-		// Token: 0x04004C8E RID: 19598
+		// Token: 0x04004C8F RID: 19599
 		private float chasingTimer;
 
-		// Token: 0x04004C8F RID: 19599
+		// Token: 0x04004C90 RID: 19600
 		private bool shouldChase;
 
-		// Token: 0x04004C90 RID: 19600
+		// Token: 0x04004C91 RID: 19601
 		private StateMachine _stateMachine;
 
-		// Token: 0x04004C91 RID: 19601
+		// Token: 0x04004C92 RID: 19602
 		private CircularPatrol_State circularPatrol;
 
-		// Token: 0x04004C92 RID: 19602
+		// Token: 0x04004C93 RID: 19603
 		private Patrol_State patrol;
 
-		// Token: 0x04004C93 RID: 19603
+		// Token: 0x04004C94 RID: 19604
 		private Chase_State chase;
 	}
 }

@@ -9,7 +9,7 @@ using UnityEngine;
 public class TMPSession
 {
 	// Token: 0x170004F1 RID: 1265
-	// (get) Token: 0x060030B8 RID: 12472 RVA: 0x000EF62B File Offset: 0x000ED82B
+	// (get) Token: 0x060030B9 RID: 12473 RVA: 0x000EF6CF File Offset: 0x000ED8CF
 	public bool IsValidSession
 	{
 		get
@@ -18,7 +18,7 @@ public class TMPSession
 		}
 	}
 
-	// Token: 0x060030B9 RID: 12473 RVA: 0x000EF668 File Offset: 0x000ED868
+	// Token: 0x060030BA RID: 12474 RVA: 0x000EF70C File Offset: 0x000ED90C
 	public TMPSession(Session session, KIDDefaultSession defaultSession, SessionStatus status)
 	{
 		this.Permissions = new Dictionary<EKIDFeatures, Permission>();
@@ -60,7 +60,7 @@ public class TMPSession
 		}
 	}
 
-	// Token: 0x060030BA RID: 12474 RVA: 0x000EF7AB File Offset: 0x000ED9AB
+	// Token: 0x060030BB RID: 12475 RVA: 0x000EF84F File Offset: 0x000EDA4F
 	public bool TryGetPermission(EKIDFeatures feature, out Permission permission)
 	{
 		if (!this.Permissions.ContainsKey(feature))
@@ -73,13 +73,13 @@ public class TMPSession
 		return true;
 	}
 
-	// Token: 0x060030BB RID: 12475 RVA: 0x000EF7E9 File Offset: 0x000ED9E9
+	// Token: 0x060030BC RID: 12476 RVA: 0x000EF88D File Offset: 0x000EDA8D
 	public List<Permission> GetAllPermissions()
 	{
 		return this.Permissions.Values.ToList<Permission>();
 	}
 
-	// Token: 0x060030BC RID: 12476 RVA: 0x000EF7FC File Offset: 0x000ED9FC
+	// Token: 0x060030BD RID: 12477 RVA: 0x000EF8A0 File Offset: 0x000EDAA0
 	public bool HasPermissionForFeature(EKIDFeatures feature)
 	{
 		Permission permission;
@@ -91,7 +91,7 @@ public class TMPSession
 		return permission.Enabled;
 	}
 
-	// Token: 0x060030BD RID: 12477 RVA: 0x000EF838 File Offset: 0x000EDA38
+	// Token: 0x060030BE RID: 12478 RVA: 0x000EF8DC File Offset: 0x000EDADC
 	public void UpdatePermission(EKIDFeatures feature, Permission newData)
 	{
 		if (!this.Permissions.ContainsKey(feature))
@@ -102,7 +102,7 @@ public class TMPSession
 		this.Permissions[feature] = newData;
 	}
 
-	// Token: 0x060030BE RID: 12478 RVA: 0x000EF888 File Offset: 0x000EDA88
+	// Token: 0x060030BF RID: 12479 RVA: 0x000EF92C File Offset: 0x000EDB2C
 	private void InitialiseDefaultPermissionSet(KIDDefaultSession defaultSession)
 	{
 		for (int i = 0; i < defaultSession.Permissions.Count; i++)
@@ -123,7 +123,7 @@ public class TMPSession
 		}
 	}
 
-	// Token: 0x060030BF RID: 12479 RVA: 0x000EF94C File Offset: 0x000EDB4C
+	// Token: 0x060030C0 RID: 12480 RVA: 0x000EF9F0 File Offset: 0x000EDBF0
 	private int GetAgeFromDateOfBirth()
 	{
 		DateTime today = DateTime.Today;
@@ -140,7 +140,7 @@ public class TMPSession
 		return num;
 	}
 
-	// Token: 0x060030C0 RID: 12480 RVA: 0x000EF9B0 File Offset: 0x000EDBB0
+	// Token: 0x060030C1 RID: 12481 RVA: 0x000EFA54 File Offset: 0x000EDC54
 	public override string ToString()
 	{
 		StringBuilder stringBuilder = new StringBuilder();
@@ -165,39 +165,39 @@ public class TMPSession
 		return stringBuilder.ToString();
 	}
 
-	// Token: 0x0400370C RID: 14092
+	// Token: 0x0400370D RID: 14093
 	public readonly Guid SessionId;
 
-	// Token: 0x0400370D RID: 14093
+	// Token: 0x0400370E RID: 14094
 	public readonly string Etag;
 
-	// Token: 0x0400370E RID: 14094
+	// Token: 0x0400370F RID: 14095
 	public readonly AgeStatusType AgeStatus;
 
-	// Token: 0x0400370F RID: 14095
+	// Token: 0x04003710 RID: 14096
 	public readonly Session.StatusEnum KidStatus;
 
-	// Token: 0x04003710 RID: 14096
+	// Token: 0x04003711 RID: 14097
 	public readonly Session.ManagedByEnum ManagedBy;
 
-	// Token: 0x04003711 RID: 14097
+	// Token: 0x04003712 RID: 14098
 	public readonly DateTime DateOfBirth;
 
-	// Token: 0x04003712 RID: 14098
+	// Token: 0x04003713 RID: 14099
 	public readonly string Jurisdiction;
 
-	// Token: 0x04003713 RID: 14099
+	// Token: 0x04003714 RID: 14100
 	public readonly string KUID;
 
-	// Token: 0x04003714 RID: 14100
+	// Token: 0x04003715 RID: 14101
 	public readonly int Age;
 
-	// Token: 0x04003715 RID: 14101
+	// Token: 0x04003716 RID: 14102
 	public readonly bool IsDefault;
 
-	// Token: 0x04003716 RID: 14102
+	// Token: 0x04003717 RID: 14103
 	public readonly SessionStatus SessionStatus;
 
-	// Token: 0x04003717 RID: 14103
+	// Token: 0x04003718 RID: 14104
 	private Dictionary<EKIDFeatures, Permission> Permissions;
 }

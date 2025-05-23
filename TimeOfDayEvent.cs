@@ -5,7 +5,7 @@ using UnityEngine;
 public class TimeOfDayEvent : TimeEvent
 {
 	// Token: 0x170005F9 RID: 1529
-	// (get) Token: 0x06003D03 RID: 15619 RVA: 0x00121F1D File Offset: 0x0012011D
+	// (get) Token: 0x06003D04 RID: 15620 RVA: 0x00121FF5 File Offset: 0x001201F5
 	public float currentTime
 	{
 		get
@@ -15,8 +15,8 @@ public class TimeOfDayEvent : TimeEvent
 	}
 
 	// Token: 0x170005FA RID: 1530
-	// (get) Token: 0x06003D04 RID: 15620 RVA: 0x00121F25 File Offset: 0x00120125
-	// (set) Token: 0x06003D05 RID: 15621 RVA: 0x00121F2D File Offset: 0x0012012D
+	// (get) Token: 0x06003D05 RID: 15621 RVA: 0x00121FFD File Offset: 0x001201FD
+	// (set) Token: 0x06003D06 RID: 15622 RVA: 0x00122005 File Offset: 0x00120205
 	public float timeStart
 	{
 		get
@@ -30,8 +30,8 @@ public class TimeOfDayEvent : TimeEvent
 	}
 
 	// Token: 0x170005FB RID: 1531
-	// (get) Token: 0x06003D06 RID: 15622 RVA: 0x00121F3B File Offset: 0x0012013B
-	// (set) Token: 0x06003D07 RID: 15623 RVA: 0x00121F43 File Offset: 0x00120143
+	// (get) Token: 0x06003D07 RID: 15623 RVA: 0x00122013 File Offset: 0x00120213
+	// (set) Token: 0x06003D08 RID: 15624 RVA: 0x0012201B File Offset: 0x0012021B
 	public float timeEnd
 	{
 		get
@@ -45,7 +45,7 @@ public class TimeOfDayEvent : TimeEvent
 	}
 
 	// Token: 0x170005FC RID: 1532
-	// (get) Token: 0x06003D08 RID: 15624 RVA: 0x00121F51 File Offset: 0x00120151
+	// (get) Token: 0x06003D09 RID: 15625 RVA: 0x00122029 File Offset: 0x00120229
 	public bool isOngoing
 	{
 		get
@@ -54,7 +54,7 @@ public class TimeOfDayEvent : TimeEvent
 		}
 	}
 
-	// Token: 0x06003D09 RID: 15625 RVA: 0x00121F5C File Offset: 0x0012015C
+	// Token: 0x06003D0A RID: 15626 RVA: 0x00122034 File Offset: 0x00120234
 	private void Start()
 	{
 		if (!this._dayNightManager)
@@ -72,7 +72,7 @@ public class TimeOfDayEvent : TimeEvent
 		this._totalSecondsInRange = Math.Floor(this._totalSecondsInRange);
 	}
 
-	// Token: 0x06003D0A RID: 15626 RVA: 0x00121FDE File Offset: 0x001201DE
+	// Token: 0x06003D0B RID: 15627 RVA: 0x001220B6 File Offset: 0x001202B6
 	private void Update()
 	{
 		this._elapsed += Time.deltaTime;
@@ -84,7 +84,7 @@ public class TimeOfDayEvent : TimeEvent
 		this.UpdateTime();
 	}
 
-	// Token: 0x06003D0B RID: 15627 RVA: 0x00122014 File Offset: 0x00120214
+	// Token: 0x06003D0C RID: 15628 RVA: 0x001220EC File Offset: 0x001202EC
 	private void UpdateTime()
 	{
 		this._currentSeconds = ((ITimeOfDaySystem)this._dayNightManager).currentTimeInSeconds;
@@ -101,40 +101,40 @@ public class TimeOfDayEvent : TimeEvent
 		}
 	}
 
-	// Token: 0x06003D0C RID: 15628 RVA: 0x001220AB File Offset: 0x001202AB
+	// Token: 0x06003D0D RID: 15629 RVA: 0x00122183 File Offset: 0x00120383
 	public static implicit operator bool(TimeOfDayEvent ev)
 	{
 		return ev && ev.isOngoing;
 	}
 
-	// Token: 0x040040C2 RID: 16578
+	// Token: 0x040040C3 RID: 16579
 	[SerializeField]
 	[Range(0f, 1f)]
 	private float _timeStart;
 
-	// Token: 0x040040C3 RID: 16579
+	// Token: 0x040040C4 RID: 16580
 	[SerializeField]
 	[Range(0f, 1f)]
 	private float _timeEnd = 1f;
 
-	// Token: 0x040040C4 RID: 16580
+	// Token: 0x040040C5 RID: 16581
 	[SerializeField]
 	private float _currentTime = -1f;
 
-	// Token: 0x040040C5 RID: 16581
+	// Token: 0x040040C6 RID: 16582
 	[Space]
 	[SerializeField]
 	private double _currentSeconds = -1.0;
 
-	// Token: 0x040040C6 RID: 16582
+	// Token: 0x040040C7 RID: 16583
 	[SerializeField]
 	private double _totalSecondsInRange = -1.0;
 
-	// Token: 0x040040C7 RID: 16583
+	// Token: 0x040040C8 RID: 16584
 	[NonSerialized]
 	private float _elapsed = -1f;
 
-	// Token: 0x040040C8 RID: 16584
+	// Token: 0x040040C9 RID: 16585
 	[SerializeField]
 	private BetterDayNightManager _dayNightManager;
 }

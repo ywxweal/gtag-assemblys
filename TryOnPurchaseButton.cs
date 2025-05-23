@@ -6,7 +6,7 @@ using UnityEngine;
 // Token: 0x02000449 RID: 1097
 public class TryOnPurchaseButton : GorillaPressableButton
 {
-	// Token: 0x06001B17 RID: 6935 RVA: 0x00085140 File Offset: 0x00083340
+	// Token: 0x06001B17 RID: 6935 RVA: 0x00085160 File Offset: 0x00083360
 	public void Update()
 	{
 		if (NetworkSystem.Instance != null && NetworkSystem.Instance.WrongVersion && !this.bError)
@@ -18,7 +18,7 @@ public class TryOnPurchaseButton : GorillaPressableButton
 		}
 	}
 
-	// Token: 0x06001B18 RID: 6936 RVA: 0x000851A2 File Offset: 0x000833A2
+	// Token: 0x06001B18 RID: 6936 RVA: 0x000851C2 File Offset: 0x000833C2
 	public override void ButtonActivation()
 	{
 		if (this.bError)
@@ -30,7 +30,7 @@ public class TryOnPurchaseButton : GorillaPressableButton
 		base.StartCoroutine(this.ButtonColorUpdate());
 	}
 
-	// Token: 0x06001B19 RID: 6937 RVA: 0x000851CC File Offset: 0x000833CC
+	// Token: 0x06001B19 RID: 6937 RVA: 0x000851EC File Offset: 0x000833EC
 	public void AlreadyOwn()
 	{
 		if (this.bError)
@@ -43,7 +43,7 @@ public class TryOnPurchaseButton : GorillaPressableButton
 		this.myText.text = this.AlreadyOwnText;
 	}
 
-	// Token: 0x06001B1A RID: 6938 RVA: 0x0008520C File Offset: 0x0008340C
+	// Token: 0x06001B1A RID: 6938 RVA: 0x0008522C File Offset: 0x0008342C
 	public void ResetButton()
 	{
 		if (this.bError)
@@ -56,7 +56,7 @@ public class TryOnPurchaseButton : GorillaPressableButton
 		this.myText.text = this.offText;
 	}
 
-	// Token: 0x06001B1B RID: 6939 RVA: 0x0008524C File Offset: 0x0008344C
+	// Token: 0x06001B1B RID: 6939 RVA: 0x0008526C File Offset: 0x0008346C
 	private IEnumerator ButtonColorUpdate()
 	{
 		this.buttonRenderer.material = this.pressedMaterial;
@@ -65,7 +65,7 @@ public class TryOnPurchaseButton : GorillaPressableButton
 		yield break;
 	}
 
-	// Token: 0x06001B1C RID: 6940 RVA: 0x0008525B File Offset: 0x0008345B
+	// Token: 0x06001B1C RID: 6940 RVA: 0x0008527B File Offset: 0x0008347B
 	public void ErrorHappened()
 	{
 		this.bError = true;

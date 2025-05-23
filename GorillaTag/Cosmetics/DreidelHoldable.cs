@@ -9,7 +9,7 @@ namespace GorillaTag.Cosmetics
 	// Token: 0x02000DC3 RID: 3523
 	public class DreidelHoldable : TransferrableObject
 	{
-		// Token: 0x06005752 RID: 22354 RVA: 0x001AC960 File Offset: 0x001AAB60
+		// Token: 0x06005753 RID: 22355 RVA: 0x001ACA38 File Offset: 0x001AAC38
 		internal override void OnEnable()
 		{
 			base.OnEnable();
@@ -32,7 +32,7 @@ namespace GorillaTag.Cosmetics
 			}
 		}
 
-		// Token: 0x06005753 RID: 22355 RVA: 0x001ACA30 File Offset: 0x001AAC30
+		// Token: 0x06005754 RID: 22356 RVA: 0x001ACB08 File Offset: 0x001AAD08
 		internal override void OnDisable()
 		{
 			base.OnDisable();
@@ -44,7 +44,7 @@ namespace GorillaTag.Cosmetics
 			}
 		}
 
-		// Token: 0x06005754 RID: 22356 RVA: 0x001ACA88 File Offset: 0x001AAC88
+		// Token: 0x06005755 RID: 22357 RVA: 0x001ACB60 File Offset: 0x001AAD60
 		private void OnDreidelSpin(int sender, int target, object[] args, PhotonMessageInfoWrapped info)
 		{
 			GorillaNot.IncrementRPCCall(info, "OnDreidelSpin");
@@ -75,7 +75,7 @@ namespace GorillaTag.Cosmetics
 			}
 		}
 
-		// Token: 0x06005755 RID: 22357 RVA: 0x001ACB47 File Offset: 0x001AAD47
+		// Token: 0x06005756 RID: 22358 RVA: 0x001ACC1F File Offset: 0x001AAE1F
 		public override void OnGrab(InteractionPoint pointGrabbed, GameObject grabbingHand)
 		{
 			base.OnGrab(pointGrabbed, grabbingHand);
@@ -85,7 +85,7 @@ namespace GorillaTag.Cosmetics
 			}
 		}
 
-		// Token: 0x06005756 RID: 22358 RVA: 0x001ACB6B File Offset: 0x001AAD6B
+		// Token: 0x06005757 RID: 22359 RVA: 0x001ACC43 File Offset: 0x001AAE43
 		public override bool OnRelease(DropZone zoneReleased, GameObject releasingHand)
 		{
 			if (!base.OnRelease(zoneReleased, releasingHand))
@@ -99,7 +99,7 @@ namespace GorillaTag.Cosmetics
 			return true;
 		}
 
-		// Token: 0x06005757 RID: 22359 RVA: 0x001ACB94 File Offset: 0x001AAD94
+		// Token: 0x06005758 RID: 22360 RVA: 0x001ACC6C File Offset: 0x001AAE6C
 		public override void OnActivate()
 		{
 			base.OnActivate();
@@ -131,7 +131,7 @@ namespace GorillaTag.Cosmetics
 			}
 		}
 
-		// Token: 0x06005758 RID: 22360 RVA: 0x001ACC74 File Offset: 0x001AAE74
+		// Token: 0x06005759 RID: 22361 RVA: 0x001ACD4C File Offset: 0x001AAF4C
 		private void StartSpinLocal(Vector3 surfacePoint, Vector3 surfaceNormal, float duration, bool counterClockwise, Dreidel.Side side, Dreidel.Variation variation, double startTime)
 		{
 			if (this.dreidelAnimation != null)
@@ -141,7 +141,7 @@ namespace GorillaTag.Cosmetics
 			}
 		}
 
-		// Token: 0x06005759 RID: 22361 RVA: 0x001ACCA8 File Offset: 0x001AAEA8
+		// Token: 0x0600575A RID: 22362 RVA: 0x001ACD80 File Offset: 0x001AAF80
 		public void DebugSpinDreidel()
 		{
 			Transform transform = GTPlayer.Instance.headCollider.transform;
@@ -176,11 +176,11 @@ namespace GorillaTag.Cosmetics
 			}
 		}
 
-		// Token: 0x04005BDD RID: 23517
+		// Token: 0x04005BDE RID: 23518
 		[SerializeField]
 		private Dreidel dreidelAnimation;
 
-		// Token: 0x04005BDE RID: 23518
+		// Token: 0x04005BDF RID: 23519
 		private RubberDuckEvents _events;
 	}
 }

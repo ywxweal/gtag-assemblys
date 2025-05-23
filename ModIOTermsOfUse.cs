@@ -10,25 +10,25 @@ using UnityEngine;
 // Token: 0x02000722 RID: 1826
 public class ModIOTermsOfUse : MonoBehaviour
 {
-	// Token: 0x06002D7C RID: 11644 RVA: 0x000E0D5E File Offset: 0x000DEF5E
+	// Token: 0x06002D7D RID: 11645 RVA: 0x000E0E02 File Offset: 0x000DF002
 	private void Awake()
 	{
 		this.controllerBehaviour = base.GetComponentInChildren<ControllerBehaviour>(true);
 	}
 
-	// Token: 0x06002D7D RID: 11645 RVA: 0x000E0D6D File Offset: 0x000DEF6D
+	// Token: 0x06002D7E RID: 11646 RVA: 0x000E0E11 File Offset: 0x000DF011
 	private void OnEnable()
 	{
 		this.controllerBehaviour.OnAction += this.PostUpdate;
 	}
 
-	// Token: 0x06002D7E RID: 11646 RVA: 0x000E0D86 File Offset: 0x000DEF86
+	// Token: 0x06002D7F RID: 11647 RVA: 0x000E0E2A File Offset: 0x000DF02A
 	private void OnDisable()
 	{
 		this.controllerBehaviour.OnAction -= this.PostUpdate;
 	}
 
-	// Token: 0x06002D7F RID: 11647 RVA: 0x000E0D9F File Offset: 0x000DEF9F
+	// Token: 0x06002D80 RID: 11648 RVA: 0x000E0E43 File Offset: 0x000DF043
 	public void Initialize(TermsOfUse terms, Action<bool> callback)
 	{
 		if (terms.hash.md5hash.Length != 0)
@@ -39,7 +39,7 @@ public class ModIOTermsOfUse : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06002D80 RID: 11648 RVA: 0x000E0DC8 File Offset: 0x000DEFC8
+	// Token: 0x06002D81 RID: 11649 RVA: 0x000E0E6C File Offset: 0x000DF06C
 	private void PostUpdate()
 	{
 		if (this.controllerBehaviour.IsLeftStick)
@@ -56,7 +56,7 @@ public class ModIOTermsOfUse : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06002D81 RID: 11649 RVA: 0x000E0E18 File Offset: 0x000DF018
+	// Token: 0x06002D82 RID: 11650 RVA: 0x000E0EBC File Offset: 0x000DF0BC
 	private async void Start()
 	{
 		while (!this.hasTermsOfUse)
@@ -90,7 +90,7 @@ public class ModIOTermsOfUse : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06002D82 RID: 11650 RVA: 0x000E0E50 File Offset: 0x000DF050
+	// Token: 0x06002D83 RID: 11651 RVA: 0x000E0EF4 File Offset: 0x000DF0F4
 	private async Task<bool> UpdateTextFromTerms()
 	{
 		this.tmpTitle.text = this.title;
@@ -106,7 +106,7 @@ public class ModIOTermsOfUse : MonoBehaviour
 		return flag;
 	}
 
-	// Token: 0x06002D83 RID: 11651 RVA: 0x000E0E94 File Offset: 0x000DF094
+	// Token: 0x06002D84 RID: 11652 RVA: 0x000E0F38 File Offset: 0x000DF138
 	public async Task<bool> UpdateTextWithFullTerms()
 	{
 		ResultAnd<CurrentAgreement> resultAnd = await ModIOUnityAsync.GetCurrentAgreement(AgreementType.TermsOfUse);
@@ -139,7 +139,7 @@ public class ModIOTermsOfUse : MonoBehaviour
 		return flag;
 	}
 
-	// Token: 0x06002D84 RID: 11652 RVA: 0x000E0ED8 File Offset: 0x000DF0D8
+	// Token: 0x06002D85 RID: 11653 RVA: 0x000E0F7C File Offset: 0x000DF17C
 	private string FormatAgreementText(CurrentAgreement agreement)
 	{
 		string text = string.Concat(new string[]
@@ -233,7 +233,7 @@ public class ModIOTermsOfUse : MonoBehaviour
 		return text.Replace("</center>", "");
 	}
 
-	// Token: 0x06002D85 RID: 11653 RVA: 0x000E135C File Offset: 0x000DF55C
+	// Token: 0x06002D86 RID: 11654 RVA: 0x000E1400 File Offset: 0x000DF600
 	private string GetStringForListItemIdx_LowerAlpha(int idx)
 	{
 		switch (idx)
@@ -295,7 +295,7 @@ public class ModIOTermsOfUse : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06002D86 RID: 11654 RVA: 0x000E1480 File Offset: 0x000DF680
+	// Token: 0x06002D87 RID: 11655 RVA: 0x000E1524 File Offset: 0x000DF724
 	private async Task WaitForAcknowledgement()
 	{
 		this.accepted = false;
@@ -321,7 +321,7 @@ public class ModIOTermsOfUse : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06002D87 RID: 11655 RVA: 0x000E14C4 File Offset: 0x000DF6C4
+	// Token: 0x06002D88 RID: 11656 RVA: 0x000E1568 File Offset: 0x000DF768
 	public void TurnPage(int i)
 	{
 		this.tmpBody.pageToDisplay = Mathf.Clamp(this.tmpBody.pageToDisplay + i, 1, this.tmpBody.textInfo.pageCount);
@@ -331,7 +331,7 @@ public class ModIOTermsOfUse : MonoBehaviour
 		this.ActivateAcceptButtonGroup();
 	}
 
-	// Token: 0x06002D88 RID: 11656 RVA: 0x000E1580 File Offset: 0x000DF780
+	// Token: 0x06002D89 RID: 11657 RVA: 0x000E1624 File Offset: 0x000DF824
 	private void ActivateAcceptButtonGroup()
 	{
 		bool flag = this.tmpBody.pageToDisplay == this.tmpBody.textInfo.pageCount;
@@ -339,73 +339,73 @@ public class ModIOTermsOfUse : MonoBehaviour
 		this.waitingForAcknowledge = flag;
 	}
 
-	// Token: 0x06002D89 RID: 11657 RVA: 0x000E15BE File Offset: 0x000DF7BE
+	// Token: 0x06002D8A RID: 11658 RVA: 0x000E1662 File Offset: 0x000DF862
 	public void Acknowledge(bool didAccept)
 	{
 		this.accepted = didAccept;
 	}
 
-	// Token: 0x040033AB RID: 13227
+	// Token: 0x040033AD RID: 13229
 	[SerializeField]
 	private Transform uiParent;
 
-	// Token: 0x040033AC RID: 13228
+	// Token: 0x040033AE RID: 13230
 	[SerializeField]
 	private string title;
 
-	// Token: 0x040033AD RID: 13229
+	// Token: 0x040033AF RID: 13231
 	[SerializeField]
 	private TMP_Text tmpBody;
 
-	// Token: 0x040033AE RID: 13230
+	// Token: 0x040033B0 RID: 13232
 	[SerializeField]
 	private TMP_Text tmpTitle;
 
-	// Token: 0x040033AF RID: 13231
+	// Token: 0x040033B1 RID: 13233
 	[SerializeField]
 	private TMP_Text tmpPage;
 
-	// Token: 0x040033B0 RID: 13232
+	// Token: 0x040033B2 RID: 13234
 	[SerializeField]
 	public GameObject yesNoButtons;
 
-	// Token: 0x040033B1 RID: 13233
+	// Token: 0x040033B3 RID: 13235
 	[SerializeField]
 	public GameObject nextButton;
 
-	// Token: 0x040033B2 RID: 13234
+	// Token: 0x040033B4 RID: 13236
 	[SerializeField]
 	public GameObject prevButton;
 
-	// Token: 0x040033B3 RID: 13235
+	// Token: 0x040033B5 RID: 13237
 	private TermsOfUse termsOfUse;
 
-	// Token: 0x040033B4 RID: 13236
+	// Token: 0x040033B6 RID: 13238
 	private bool hasTermsOfUse;
 
-	// Token: 0x040033B5 RID: 13237
+	// Token: 0x040033B7 RID: 13239
 	private Action<bool> termsAcknowledgedCallback;
 
-	// Token: 0x040033B6 RID: 13238
+	// Token: 0x040033B8 RID: 13240
 	private string cachedTermsText;
 
-	// Token: 0x040033B7 RID: 13239
+	// Token: 0x040033B9 RID: 13241
 	private bool waitingForAcknowledge;
 
-	// Token: 0x040033B8 RID: 13240
+	// Token: 0x040033BA RID: 13242
 	private bool accepted;
 
-	// Token: 0x040033B9 RID: 13241
+	// Token: 0x040033BB RID: 13243
 	private bool acceptButtonDown;
 
-	// Token: 0x040033BA RID: 13242
+	// Token: 0x040033BC RID: 13244
 	[SerializeField]
 	private float holdTime = 5f;
 
-	// Token: 0x040033BB RID: 13243
+	// Token: 0x040033BD RID: 13245
 	[SerializeField]
 	private LineRenderer progressBar;
 
-	// Token: 0x040033BC RID: 13244
+	// Token: 0x040033BE RID: 13246
 	private ControllerBehaviour controllerBehaviour;
 }

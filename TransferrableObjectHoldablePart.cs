@@ -5,7 +5,7 @@ using UnityEngine.Events;
 // Token: 0x020003BC RID: 956
 public class TransferrableObjectHoldablePart : HoldableObject
 {
-	// Token: 0x0600163D RID: 5693 RVA: 0x0006BD28 File Offset: 0x00069F28
+	// Token: 0x0600163D RID: 5693 RVA: 0x0006BD48 File Offset: 0x00069F48
 	private void Update()
 	{
 		VRRig vrrig;
@@ -51,7 +51,7 @@ public class TransferrableObjectHoldablePart : HoldableObject
 	{
 	}
 
-	// Token: 0x06001640 RID: 5696 RVA: 0x0006BDF4 File Offset: 0x00069FF4
+	// Token: 0x06001640 RID: 5696 RVA: 0x0006BE14 File Offset: 0x0006A014
 	public override void OnGrab(InteractionPoint pointGrabbed, GameObject grabbingHand)
 	{
 		this.isHeld = true;
@@ -66,7 +66,7 @@ public class TransferrableObjectHoldablePart : HoldableObject
 		unityEvent.Invoke();
 	}
 
-	// Token: 0x06001641 RID: 5697 RVA: 0x0006BE5B File Offset: 0x0006A05B
+	// Token: 0x06001641 RID: 5697 RVA: 0x0006BE7B File Offset: 0x0006A07B
 	public override void DropItemCleanup()
 	{
 		this.isHeld = false;
@@ -74,7 +74,7 @@ public class TransferrableObjectHoldablePart : HoldableObject
 		this.transferrableParentObject.itemState &= ~this.heldBit;
 	}
 
-	// Token: 0x06001642 RID: 5698 RVA: 0x0006BE84 File Offset: 0x0006A084
+	// Token: 0x06001642 RID: 5698 RVA: 0x0006BEA4 File Offset: 0x0006A0A4
 	public override bool OnRelease(DropZone zoneReleased, GameObject releasingHand)
 	{
 		if (EquipmentInteractor.instance.rightHandHeldEquipment == this && releasingHand != EquipmentInteractor.instance.rightHand)

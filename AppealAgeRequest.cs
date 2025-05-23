@@ -4,12 +4,12 @@
 [Serializable]
 public class AppealAgeRequest : KIDRequestData
 {
-	// Token: 0x040036F1 RID: 14065
+	// Token: 0x040036F2 RID: 14066
 	public int Age;
 
-	// Token: 0x040036F2 RID: 14066
+	// Token: 0x040036F3 RID: 14067
 	public string Email;
 
-	// Token: 0x040036F3 RID: 14067
+	// Token: 0x040036F4 RID: 14068
 	public string Locale;
 }

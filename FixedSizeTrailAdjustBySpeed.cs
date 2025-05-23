@@ -5,13 +5,13 @@ using UnityEngine.Serialization;
 // Token: 0x02000547 RID: 1351
 public class FixedSizeTrailAdjustBySpeed : MonoBehaviour
 {
-	// Token: 0x060020BC RID: 8380 RVA: 0x000A451A File Offset: 0x000A271A
+	// Token: 0x060020BC RID: 8380 RVA: 0x000A453A File Offset: 0x000A273A
 	private void Start()
 	{
 		this.Setup();
 	}
 
-	// Token: 0x060020BD RID: 8381 RVA: 0x000A4524 File Offset: 0x000A2724
+	// Token: 0x060020BD RID: 8381 RVA: 0x000A4544 File Offset: 0x000A2744
 	private void Setup()
 	{
 		this._lastPosition = base.transform.position;
@@ -26,7 +26,7 @@ public class FixedSizeTrailAdjustBySpeed : MonoBehaviour
 		this.LerpTrailColors(0.5f);
 	}
 
-	// Token: 0x060020BE RID: 8382 RVA: 0x000A45A0 File Offset: 0x000A27A0
+	// Token: 0x060020BE RID: 8382 RVA: 0x000A45C0 File Offset: 0x000A27C0
 	private void LerpTrailColors(float t = 0.5f)
 	{
 		GradientColorKey[] colorKeys = this._mixGradient.colorKeys;
@@ -47,7 +47,7 @@ public class FixedSizeTrailAdjustBySpeed : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060020BF RID: 8383 RVA: 0x000A4640 File Offset: 0x000A2840
+	// Token: 0x060020BF RID: 8383 RVA: 0x000A4660 File Offset: 0x000A2860
 	private void Update()
 	{
 		float deltaTime = Time.deltaTime;
@@ -76,7 +76,7 @@ public class FixedSizeTrailAdjustBySpeed : MonoBehaviour
 		this._lastPosition = position;
 	}
 
-	// Token: 0x060020C0 RID: 8384 RVA: 0x000A4738 File Offset: 0x000A2938
+	// Token: 0x060020C0 RID: 8384 RVA: 0x000A4758 File Offset: 0x000A2958
 	private void AdjustTrail()
 	{
 		if (!this.trail)
@@ -169,7 +169,7 @@ public class FixedSizeTrailAdjustBySpeed : MonoBehaviour
 	[Serializable]
 	public struct GradientKey
 	{
-		// Token: 0x060020C2 RID: 8386 RVA: 0x000A490D File Offset: 0x000A2B0D
+		// Token: 0x060020C2 RID: 8386 RVA: 0x000A492D File Offset: 0x000A2B2D
 		public GradientKey(Color color, float time)
 		{
 			this.color = color;

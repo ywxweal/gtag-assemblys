@@ -7,8 +7,8 @@ namespace OculusSampleFramework
 	public class SelectionCylinder : MonoBehaviour
 	{
 		// Token: 0x17000775 RID: 1909
-		// (get) Token: 0x06004B7C RID: 19324 RVA: 0x00165FB6 File Offset: 0x001641B6
-		// (set) Token: 0x06004B7D RID: 19325 RVA: 0x00165FC0 File Offset: 0x001641C0
+		// (get) Token: 0x06004B7D RID: 19325 RVA: 0x0016608E File Offset: 0x0016428E
+		// (set) Token: 0x06004B7E RID: 19326 RVA: 0x00166098 File Offset: 0x00164298
 		public SelectionCylinder.SelectionState CurrSelectionState
 		{
 			get
@@ -32,7 +32,7 @@ namespace OculusSampleFramework
 			}
 		}
 
-		// Token: 0x06004B7E RID: 19326 RVA: 0x00166024 File Offset: 0x00164224
+		// Token: 0x06004B7F RID: 19327 RVA: 0x001660FC File Offset: 0x001642FC
 		private void Awake()
 		{
 			this._selectionMaterials = this._selectionMeshRenderer.materials;
@@ -47,7 +47,7 @@ namespace OculusSampleFramework
 			this.CurrSelectionState = SelectionCylinder.SelectionState.Off;
 		}
 
-		// Token: 0x06004B7F RID: 19327 RVA: 0x001660C8 File Offset: 0x001642C8
+		// Token: 0x06004B80 RID: 19328 RVA: 0x001661A0 File Offset: 0x001643A0
 		private void OnDestroy()
 		{
 			if (this._selectionMaterials != null)
@@ -62,7 +62,7 @@ namespace OculusSampleFramework
 			}
 		}
 
-		// Token: 0x06004B80 RID: 19328 RVA: 0x00166108 File Offset: 0x00164308
+		// Token: 0x06004B81 RID: 19329 RVA: 0x001661E0 File Offset: 0x001643E0
 		private void AffectSelectionColor(Color[] newColors)
 		{
 			int num = newColors.Length;
@@ -72,33 +72,33 @@ namespace OculusSampleFramework
 			}
 		}
 
-		// Token: 0x04004E0E RID: 19982
+		// Token: 0x04004E0F RID: 19983
 		[SerializeField]
 		private MeshRenderer _selectionMeshRenderer;
 
-		// Token: 0x04004E0F RID: 19983
+		// Token: 0x04004E10 RID: 19984
 		private static int _colorId = Shader.PropertyToID("_Color");
 
-		// Token: 0x04004E10 RID: 19984
+		// Token: 0x04004E11 RID: 19985
 		private Material[] _selectionMaterials;
 
-		// Token: 0x04004E11 RID: 19985
+		// Token: 0x04004E12 RID: 19986
 		private Color[] _defaultSelectionColors;
 
-		// Token: 0x04004E12 RID: 19986
+		// Token: 0x04004E13 RID: 19987
 		private Color[] _highlightColors;
 
-		// Token: 0x04004E13 RID: 19987
+		// Token: 0x04004E14 RID: 19988
 		private SelectionCylinder.SelectionState _currSelectionState;
 
 		// Token: 0x02000BF1 RID: 3057
 		public enum SelectionState
 		{
-			// Token: 0x04004E15 RID: 19989
-			Off,
 			// Token: 0x04004E16 RID: 19990
-			Selected,
+			Off,
 			// Token: 0x04004E17 RID: 19991
+			Selected,
+			// Token: 0x04004E18 RID: 19992
 			Highlighted
 		}
 	}

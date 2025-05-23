@@ -9,8 +9,8 @@ namespace Fusion.CodeGen
 	internal class UnityArraySurrogate@ReaderWriter@System_Single : UnityArraySurrogate<float, ReaderWriter@System_Single>
 	{
 		// Token: 0x17000929 RID: 2345
-		// (get) Token: 0x06005DFA RID: 24058 RVA: 0x001CD638 File Offset: 0x001CB838
-		// (set) Token: 0x06005DFB RID: 24059 RVA: 0x001CD640 File Offset: 0x001CB840
+		// (get) Token: 0x06005DFB RID: 24059 RVA: 0x001CD710 File Offset: 0x001CB910
+		// (set) Token: 0x06005DFC RID: 24060 RVA: 0x001CD718 File Offset: 0x001CB918
 		[WeaverGenerated]
 		public override float[] DataProperty
 		{
@@ -26,13 +26,13 @@ namespace Fusion.CodeGen
 			}
 		}
 
-		// Token: 0x06005DFC RID: 24060 RVA: 0x001CD649 File Offset: 0x001CB849
+		// Token: 0x06005DFD RID: 24061 RVA: 0x001CD721 File Offset: 0x001CB921
 		[WeaverGenerated]
 		public UnityArraySurrogate@ReaderWriter@System_Single()
 		{
 		}
 
-		// Token: 0x040064B5 RID: 25781
+		// Token: 0x040064B6 RID: 25782
 		[WeaverGenerated]
 		public float[] Data = Array.Empty<float>();
 	}

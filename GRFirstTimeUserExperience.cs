@@ -7,7 +7,7 @@ using UnityEngine;
 // Token: 0x020005AC RID: 1452
 public class GRFirstTimeUserExperience : MonoBehaviour
 {
-	// Token: 0x06002384 RID: 9092 RVA: 0x000AF9E6 File Offset: 0x000ADBE6
+	// Token: 0x06002384 RID: 9092 RVA: 0x000AFA06 File Offset: 0x000ADC06
 	[ContextMenu("Set Player Pref")]
 	private void RemovePlayerPref()
 	{
@@ -15,7 +15,7 @@ public class GRFirstTimeUserExperience : MonoBehaviour
 		PlayerPrefs.Save();
 	}
 
-	// Token: 0x06002385 RID: 9093 RVA: 0x000B2A84 File Offset: 0x000B0C84
+	// Token: 0x06002385 RID: 9093 RVA: 0x000B2AA4 File Offset: 0x000B0CA4
 	private void OnEnable()
 	{
 		this.audioSource = base.GetComponent<AudioSource>();
@@ -28,7 +28,7 @@ public class GRFirstTimeUserExperience : MonoBehaviour
 		this.ChangeState(GRFirstTimeUserExperience.TransitionState.Waiting);
 	}
 
-	// Token: 0x06002386 RID: 9094 RVA: 0x000B2B08 File Offset: 0x000B0D08
+	// Token: 0x06002386 RID: 9094 RVA: 0x000B2B28 File Offset: 0x000B0D28
 	public void ChangeState(GRFirstTimeUserExperience.TransitionState state)
 	{
 		this.transitionState = state;
@@ -74,7 +74,7 @@ public class GRFirstTimeUserExperience : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06002387 RID: 9095 RVA: 0x000B2C87 File Offset: 0x000B0E87
+	// Token: 0x06002387 RID: 9095 RVA: 0x000B2CA7 File Offset: 0x000B0EA7
 	private void OnZoneLoadComplete()
 	{
 		ZoneManagement instance = ZoneManagement.instance;
@@ -82,7 +82,7 @@ public class GRFirstTimeUserExperience : MonoBehaviour
 		this.ChangeState(GRFirstTimeUserExperience.TransitionState.Teleport);
 	}
 
-	// Token: 0x06002388 RID: 9096 RVA: 0x000B2CB8 File Offset: 0x000B0EB8
+	// Token: 0x06002388 RID: 9096 RVA: 0x000B2CD8 File Offset: 0x000B0ED8
 	public void InterruptWaitingTimer()
 	{
 		this.stateStartTime = -1f;
@@ -92,7 +92,7 @@ public class GRFirstTimeUserExperience : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06002389 RID: 9097 RVA: 0x000B2D00 File Offset: 0x000B0F00
+	// Token: 0x06002389 RID: 9097 RVA: 0x000B2D20 File Offset: 0x000B0F20
 	private void Update()
 	{
 		switch (this.transitionState)

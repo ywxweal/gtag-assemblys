@@ -5,13 +5,13 @@ using UnityEngine.XR.Interaction.Toolkit;
 // Token: 0x02000496 RID: 1174
 public class GorillaIKHandTarget : MonoBehaviour
 {
-	// Token: 0x06001C9C RID: 7324 RVA: 0x0008B749 File Offset: 0x00089949
+	// Token: 0x06001C9C RID: 7324 RVA: 0x0008B769 File Offset: 0x00089969
 	private void Start()
 	{
 		this.thisRigidbody = base.gameObject.GetComponent<Rigidbody>();
 	}
 
-	// Token: 0x06001C9D RID: 7325 RVA: 0x0008B75C File Offset: 0x0008995C
+	// Token: 0x06001C9D RID: 7325 RVA: 0x0008B77C File Offset: 0x0008997C
 	private void FixedUpdate()
 	{
 		this.thisRigidbody.MovePosition(this.handToStickTo.transform.position);

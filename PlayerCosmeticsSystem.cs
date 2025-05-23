@@ -12,11 +12,11 @@ using UnityEngine;
 internal class PlayerCosmeticsSystem : MonoBehaviour, ITickSystemPre
 {
 	// Token: 0x170005A6 RID: 1446
-	// (get) Token: 0x06003946 RID: 14662 RVA: 0x0011353C File Offset: 0x0011173C
-	// (set) Token: 0x06003947 RID: 14663 RVA: 0x00113544 File Offset: 0x00111744
+	// (get) Token: 0x06003947 RID: 14663 RVA: 0x00113614 File Offset: 0x00111814
+	// (set) Token: 0x06003948 RID: 14664 RVA: 0x0011361C File Offset: 0x0011181C
 	bool ITickSystemPre.PreTickRunning { get; set; }
 
-	// Token: 0x06003948 RID: 14664 RVA: 0x00113550 File Offset: 0x00111750
+	// Token: 0x06003949 RID: 14665 RVA: 0x00113628 File Offset: 0x00111828
 	private void Awake()
 	{
 		if (PlayerCosmeticsSystem.instance == null)
@@ -32,13 +32,13 @@ internal class PlayerCosmeticsSystem : MonoBehaviour, ITickSystemPre
 		Object.Destroy(this);
 	}
 
-	// Token: 0x06003949 RID: 14665 RVA: 0x001135BD File Offset: 0x001117BD
+	// Token: 0x0600394A RID: 14666 RVA: 0x00113695 File Offset: 0x00111895
 	private void Start()
 	{
 		this.playerLookUpCooldown = Mathf.Max(this.playerLookUpCooldown, 3f);
 	}
 
-	// Token: 0x0600394A RID: 14666 RVA: 0x001135D5 File Offset: 0x001117D5
+	// Token: 0x0600394B RID: 14667 RVA: 0x001136AD File Offset: 0x001118AD
 	private void OnDestroy()
 	{
 		if (PlayerCosmeticsSystem.instance == this)
@@ -47,7 +47,7 @@ internal class PlayerCosmeticsSystem : MonoBehaviour, ITickSystemPre
 		}
 	}
 
-	// Token: 0x0600394B RID: 14667 RVA: 0x001135EA File Offset: 0x001117EA
+	// Token: 0x0600394C RID: 14668 RVA: 0x001136C2 File Offset: 0x001118C2
 	private void LookUpPlayerCosmetics(bool wait = false)
 	{
 		if (!this.isLookingUp)
@@ -62,7 +62,7 @@ internal class PlayerCosmeticsSystem : MonoBehaviour, ITickSystemPre
 		}
 	}
 
-	// Token: 0x0600394C RID: 14668 RVA: 0x00113614 File Offset: 0x00111814
+	// Token: 0x0600394D RID: 14669 RVA: 0x001136EC File Offset: 0x001118EC
 	public void PreTick()
 	{
 		if (PlayerCosmeticsSystem.playersToLookUp.Count < 1)
@@ -119,7 +119,7 @@ internal class PlayerCosmeticsSystem : MonoBehaviour, ITickSystemPre
 		this.isLookingUp = false;
 	}
 
-	// Token: 0x0600394D RID: 14669 RVA: 0x00113779 File Offset: 0x00111979
+	// Token: 0x0600394E RID: 14670 RVA: 0x00113851 File Offset: 0x00111A51
 	private void NewCosmeticsPath()
 	{
 		if (this.isLookingUpNew)
@@ -129,7 +129,7 @@ internal class PlayerCosmeticsSystem : MonoBehaviour, ITickSystemPre
 		base.StartCoroutine(this.NewCosmeticsPathCoroutine());
 	}
 
-	// Token: 0x0600394E RID: 14670 RVA: 0x00113791 File Offset: 0x00111991
+	// Token: 0x0600394F RID: 14671 RVA: 0x00113869 File Offset: 0x00111A69
 	private IEnumerator NewCosmeticsPathCoroutine()
 	{
 		this.isLookingUpNew = true;
@@ -200,7 +200,7 @@ internal class PlayerCosmeticsSystem : MonoBehaviour, ITickSystemPre
 		yield break;
 	}
 
-	// Token: 0x0600394F RID: 14671 RVA: 0x001137A0 File Offset: 0x001119A0
+	// Token: 0x06003950 RID: 14672 RVA: 0x00113878 File Offset: 0x00111A78
 	private void UpdatePlayersWaitingAndDoLookup(bool retrying)
 	{
 		if (PlayerCosmeticsSystem.playersWaiting.Count > 0)
@@ -225,7 +225,7 @@ internal class PlayerCosmeticsSystem : MonoBehaviour, ITickSystemPre
 		}
 	}
 
-	// Token: 0x06003950 RID: 14672 RVA: 0x00113814 File Offset: 0x00111A14
+	// Token: 0x06003951 RID: 14673 RVA: 0x001138EC File Offset: 0x00111AEC
 	private void OnGetsharedGroupData(GetSharedGroupDataResult result)
 	{
 		if (!NetworkSystem.Instance.InRoom)
@@ -271,7 +271,7 @@ internal class PlayerCosmeticsSystem : MonoBehaviour, ITickSystemPre
 		this.UpdatePlayersWaitingAndDoLookup(flag);
 	}
 
-	// Token: 0x06003951 RID: 14673 RVA: 0x00113958 File Offset: 0x00111B58
+	// Token: 0x06003952 RID: 14674 RVA: 0x00113A30 File Offset: 0x00111C30
 	private void OnNetEvent(byte code, object data, int source)
 	{
 		if (code != 199 || source < 0)
@@ -285,7 +285,7 @@ internal class PlayerCosmeticsSystem : MonoBehaviour, ITickSystemPre
 	}
 
 	// Token: 0x170005A7 RID: 1447
-	// (get) Token: 0x06003952 RID: 14674 RVA: 0x001139A6 File Offset: 0x00111BA6
+	// (get) Token: 0x06003953 RID: 14675 RVA: 0x00113A7E File Offset: 0x00111C7E
 	private static bool nullInstance
 	{
 		get
@@ -294,7 +294,7 @@ internal class PlayerCosmeticsSystem : MonoBehaviour, ITickSystemPre
 		}
 	}
 
-	// Token: 0x06003953 RID: 14675 RVA: 0x001139C0 File Offset: 0x00111BC0
+	// Token: 0x06003954 RID: 14676 RVA: 0x00113A98 File Offset: 0x00111C98
 	public static void RegisterCosmeticCallback(int playerID, IUserCosmeticsCallback callback)
 	{
 		PlayerCosmeticsSystem.userCosmeticCallback[playerID] = callback;
@@ -307,7 +307,7 @@ internal class PlayerCosmeticsSystem : MonoBehaviour, ITickSystemPre
 		}
 	}
 
-	// Token: 0x06003954 RID: 14676 RVA: 0x00113A03 File Offset: 0x00111C03
+	// Token: 0x06003955 RID: 14677 RVA: 0x00113ADB File Offset: 0x00111CDB
 	public static void RemoveCosmeticCallback(int playerID)
 	{
 		if (PlayerCosmeticsSystem.userCosmeticCallback.ContainsKey(playerID))
@@ -316,7 +316,7 @@ internal class PlayerCosmeticsSystem : MonoBehaviour, ITickSystemPre
 		}
 	}
 
-	// Token: 0x06003955 RID: 14677 RVA: 0x00113A20 File Offset: 0x00111C20
+	// Token: 0x06003956 RID: 14678 RVA: 0x00113AF8 File Offset: 0x00111CF8
 	public static void UpdatePlayerCosmetics(NetPlayer player)
 	{
 		if (player == null || player.IsLocal)
@@ -335,7 +335,7 @@ internal class PlayerCosmeticsSystem : MonoBehaviour, ITickSystemPre
 		}
 	}
 
-	// Token: 0x06003956 RID: 14678 RVA: 0x00113A74 File Offset: 0x00111C74
+	// Token: 0x06003957 RID: 14679 RVA: 0x00113B4C File Offset: 0x00111D4C
 	public static void UpdatePlayerCosmetics(List<NetPlayer> players)
 	{
 		foreach (NetPlayer netPlayer in players)
@@ -356,7 +356,7 @@ internal class PlayerCosmeticsSystem : MonoBehaviour, ITickSystemPre
 		}
 	}
 
-	// Token: 0x06003957 RID: 14679 RVA: 0x00113B00 File Offset: 0x00111D00
+	// Token: 0x06003958 RID: 14680 RVA: 0x00113BD8 File Offset: 0x00111DD8
 	public static void SetRigTryOn(bool inTryon, RigContainer rigRefg)
 	{
 		VRRig rig = rigRefg.Rig;
@@ -381,7 +381,7 @@ internal class PlayerCosmeticsSystem : MonoBehaviour, ITickSystemPre
 		rig.myBodyDockPositions.RefreshTransferrableItems();
 	}
 
-	// Token: 0x06003958 RID: 14680 RVA: 0x00113BB2 File Offset: 0x00111DB2
+	// Token: 0x06003959 RID: 14681 RVA: 0x00113C8A File Offset: 0x00111E8A
 	public static void StaticReset()
 	{
 		PlayerCosmeticsSystem.playersToLookUp.Clear();
@@ -391,54 +391,54 @@ internal class PlayerCosmeticsSystem : MonoBehaviour, ITickSystemPre
 		PlayerCosmeticsSystem.playersWaiting.Clear();
 	}
 
-	// Token: 0x04003E68 RID: 15976
+	// Token: 0x04003E69 RID: 15977
 	public float playerLookUpCooldown = 3f;
 
-	// Token: 0x04003E69 RID: 15977
+	// Token: 0x04003E6A RID: 15978
 	public float getSharedGroupDataCooldown = 0.1f;
 
-	// Token: 0x04003E6A RID: 15978
+	// Token: 0x04003E6B RID: 15979
 	private float startSearchingTime = float.MinValue;
 
-	// Token: 0x04003E6B RID: 15979
+	// Token: 0x04003E6C RID: 15980
 	private bool isLookingUp;
 
-	// Token: 0x04003E6C RID: 15980
+	// Token: 0x04003E6D RID: 15981
 	private bool isLookingUpNew;
 
-	// Token: 0x04003E6D RID: 15981
+	// Token: 0x04003E6E RID: 15982
 	private string tempCosmetics;
 
-	// Token: 0x04003E6E RID: 15982
+	// Token: 0x04003E6F RID: 15983
 	private NetPlayer playerTemp;
 
-	// Token: 0x04003E6F RID: 15983
+	// Token: 0x04003E70 RID: 15984
 	private RigContainer tempRC;
 
-	// Token: 0x04003E70 RID: 15984
+	// Token: 0x04003E71 RID: 15985
 	private List<string> inventory;
 
-	// Token: 0x04003E71 RID: 15985
+	// Token: 0x04003E72 RID: 15986
 	private static PlayerCosmeticsSystem instance;
 
-	// Token: 0x04003E72 RID: 15986
+	// Token: 0x04003E73 RID: 15987
 	private static Queue<NetPlayer> playersToLookUp = new Queue<NetPlayer>(10);
 
-	// Token: 0x04003E73 RID: 15987
+	// Token: 0x04003E74 RID: 15988
 	private static Dictionary<int, IUserCosmeticsCallback> userCosmeticCallback = new Dictionary<int, IUserCosmeticsCallback>(10);
 
-	// Token: 0x04003E74 RID: 15988
+	// Token: 0x04003E75 RID: 15989
 	private static Dictionary<int, string> userCosmeticsWaiting = new Dictionary<int, string>(5);
 
-	// Token: 0x04003E75 RID: 15989
+	// Token: 0x04003E76 RID: 15990
 	private static List<string> playerIDsList = new List<string>(10);
 
-	// Token: 0x04003E76 RID: 15990
+	// Token: 0x04003E77 RID: 15991
 	private static List<int> playerActorNumberList = new List<int>(10);
 
-	// Token: 0x04003E77 RID: 15991
+	// Token: 0x04003E78 RID: 15992
 	private static List<int> playersWaiting = new List<int>();
 
-	// Token: 0x04003E78 RID: 15992
+	// Token: 0x04003E79 RID: 15993
 	private static TimeSince sinceLastTryOnEvent = 0f;
 }

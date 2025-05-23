@@ -4,7 +4,7 @@ using UnityEngine;
 // Token: 0x02000752 RID: 1874
 public class DistanceMeasure : MonoBehaviour
 {
-	// Token: 0x06002ED5 RID: 11989 RVA: 0x000EAC03 File Offset: 0x000E8E03
+	// Token: 0x06002ED6 RID: 11990 RVA: 0x000EACA7 File Offset: 0x000E8EA7
 	private void Awake()
 	{
 		if (this.from == null)
@@ -17,9 +17,9 @@ public class DistanceMeasure : MonoBehaviour
 		}
 	}
 
-	// Token: 0x04003554 RID: 13652
+	// Token: 0x04003556 RID: 13654
 	public Transform from;
 
-	// Token: 0x04003555 RID: 13653
+	// Token: 0x04003557 RID: 13655
 	public Transform to;
 }

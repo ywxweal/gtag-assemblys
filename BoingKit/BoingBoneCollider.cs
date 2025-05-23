@@ -7,7 +7,7 @@ namespace BoingKit
 	public class BoingBoneCollider : MonoBehaviour
 	{
 		// Token: 0x170008F1 RID: 2289
-		// (get) Token: 0x06005BB7 RID: 23479 RVA: 0x001C29D4 File Offset: 0x001C0BD4
+		// (get) Token: 0x06005BB8 RID: 23480 RVA: 0x001C2AAC File Offset: 0x001C0CAC
 		public Bounds Bounds
 		{
 			get
@@ -32,7 +32,7 @@ namespace BoingKit
 			}
 		}
 
-		// Token: 0x06005BB8 RID: 23480 RVA: 0x001C2AE4 File Offset: 0x001C0CE4
+		// Token: 0x06005BB9 RID: 23481 RVA: 0x001C2BBC File Offset: 0x001C0DBC
 		public bool Collide(Vector3 boneCenter, float boneRadius, out Vector3 push)
 		{
 			switch (this.Shape)
@@ -66,7 +66,7 @@ namespace BoingKit
 			}
 		}
 
-		// Token: 0x06005BB9 RID: 23481 RVA: 0x001C2C08 File Offset: 0x001C0E08
+		// Token: 0x06005BBA RID: 23482 RVA: 0x001C2CE0 File Offset: 0x001C0EE0
 		public void OnValidate()
 		{
 			this.Radius = Mathf.Max(0f, this.Radius);
@@ -75,13 +75,13 @@ namespace BoingKit
 			this.Dimensions.z = Mathf.Max(0f, this.Dimensions.z);
 		}
 
-		// Token: 0x06005BBA RID: 23482 RVA: 0x001C2C8B File Offset: 0x001C0E8B
+		// Token: 0x06005BBB RID: 23483 RVA: 0x001C2D63 File Offset: 0x001C0F63
 		public void OnDrawGizmos()
 		{
 			this.DrawGizmos();
 		}
 
-		// Token: 0x06005BBB RID: 23483 RVA: 0x001C2C94 File Offset: 0x001C0E94
+		// Token: 0x06005BBC RID: 23484 RVA: 0x001C2D6C File Offset: 0x001C0F6C
 		public void DrawGizmos()
 		{
 			switch (this.Shape)
@@ -143,26 +143,26 @@ namespace BoingKit
 			}
 		}
 
-		// Token: 0x04005F9C RID: 24476
+		// Token: 0x04005F9D RID: 24477
 		public BoingBoneCollider.Type Shape;
 
-		// Token: 0x04005F9D RID: 24477
+		// Token: 0x04005F9E RID: 24478
 		public float Radius = 0.1f;
 
-		// Token: 0x04005F9E RID: 24478
+		// Token: 0x04005F9F RID: 24479
 		public float Height = 0.25f;
 
-		// Token: 0x04005F9F RID: 24479
+		// Token: 0x04005FA0 RID: 24480
 		public Vector3 Dimensions = new Vector3(0.1f, 0.1f, 0.1f);
 
 		// Token: 0x02000E4F RID: 3663
 		public enum Type
 		{
-			// Token: 0x04005FA1 RID: 24481
-			Sphere,
 			// Token: 0x04005FA2 RID: 24482
-			Capsule,
+			Sphere,
 			// Token: 0x04005FA3 RID: 24483
+			Capsule,
+			// Token: 0x04005FA4 RID: 24484
 			Box
 		}
 	}

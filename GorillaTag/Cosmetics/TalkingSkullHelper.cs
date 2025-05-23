@@ -7,27 +7,27 @@ namespace GorillaTag.Cosmetics
 	// Token: 0x02000DAD RID: 3501
 	public class TalkingSkullHelper : MonoBehaviour, IGorillaSliceableSimple
 	{
-		// Token: 0x060056B7 RID: 22199 RVA: 0x001A6D8D File Offset: 0x001A4F8D
+		// Token: 0x060056B8 RID: 22200 RVA: 0x001A6E65 File Offset: 0x001A5065
 		public void Awake()
 		{
 			this._materialPropertyBlock = new MaterialPropertyBlock();
 			this.SetEyeColor(this.EyeColorOff);
 		}
 
-		// Token: 0x060056B8 RID: 22200 RVA: 0x001A6DA6 File Offset: 0x001A4FA6
+		// Token: 0x060056B9 RID: 22201 RVA: 0x001A6E7E File Offset: 0x001A507E
 		public void OnEnable()
 		{
 			GorillaSlicerSimpleManager.RegisterSliceable(this, GorillaSlicerSimpleManager.UpdateStep.LateUpdate);
 			this._speakerLoudness = base.GetComponentInParent<GorillaSpeakerLoudness>();
 		}
 
-		// Token: 0x060056B9 RID: 22201 RVA: 0x00010F34 File Offset: 0x0000F134
+		// Token: 0x060056BA RID: 22202 RVA: 0x00010F34 File Offset: 0x0000F134
 		public void OnDisable()
 		{
 			GorillaSlicerSimpleManager.UnregisterSliceable(this, GorillaSlicerSimpleManager.UpdateStep.LateUpdate);
 		}
 
-		// Token: 0x060056BA RID: 22202 RVA: 0x001A6DBB File Offset: 0x001A4FBB
+		// Token: 0x060056BB RID: 22203 RVA: 0x001A6E93 File Offset: 0x001A5093
 		public void ToggleIsPlaced(bool isPlaced)
 		{
 			this._isPlaced = isPlaced;
@@ -37,7 +37,7 @@ namespace GorillaTag.Cosmetics
 			}
 		}
 
-		// Token: 0x060056BB RID: 22203 RVA: 0x001A6DD4 File Offset: 0x001A4FD4
+		// Token: 0x060056BC RID: 22204 RVA: 0x001A6EAC File Offset: 0x001A50AC
 		public void CanTalk(bool toggle)
 		{
 			if (this._isActive == toggle)
@@ -55,7 +55,7 @@ namespace GorillaTag.Cosmetics
 			this.SetEyeColor(this.EyeColorOff);
 		}
 
-		// Token: 0x060056BC RID: 22204 RVA: 0x001A6E24 File Offset: 0x001A5024
+		// Token: 0x060056BD RID: 22205 RVA: 0x001A6EFC File Offset: 0x001A50FC
 		public void SliceUpdate()
 		{
 			this._deltaTime = Time.time - this._timeLastUpdated;
@@ -102,14 +102,14 @@ namespace GorillaTag.Cosmetics
 			}
 		}
 
-		// Token: 0x060056BD RID: 22205 RVA: 0x001A6F99 File Offset: 0x001A5199
+		// Token: 0x060056BE RID: 22206 RVA: 0x001A7071 File Offset: 0x001A5271
 		private void SetEyeColor(Color eyeColor)
 		{
 			this._materialPropertyBlock.SetColor("_BaseColor", eyeColor);
 			this._skinnedMeshRenderer.SetPropertyBlock(this._materialPropertyBlock, 0);
 		}
 
-		// Token: 0x060056BE RID: 22206 RVA: 0x001A6FBE File Offset: 0x001A51BE
+		// Token: 0x060056BF RID: 22207 RVA: 0x001A7096 File Offset: 0x001A5296
 		private void ResetToFirstFrame()
 		{
 			this._animation.Rewind();
@@ -118,76 +118,76 @@ namespace GorillaTag.Cosmetics
 			this._animation.Stop();
 		}
 
-		// Token: 0x060056C0 RID: 22208 RVA: 0x00011040 File Offset: 0x0000F240
+		// Token: 0x060056C1 RID: 22209 RVA: 0x00011040 File Offset: 0x0000F240
 		bool IGorillaSliceableSimple.get_isActiveAndEnabled()
 		{
 			return base.isActiveAndEnabled;
 		}
 
-		// Token: 0x04005AA2 RID: 23202
+		// Token: 0x04005AA3 RID: 23203
 		[Tooltip("How loud the Gorilla voice should be before detecting as talking.")]
 		public float LoudnessThreshold = 0.1f;
 
-		// Token: 0x04005AA3 RID: 23203
+		// Token: 0x04005AA4 RID: 23204
 		[Tooltip("How long the initial speaking section needs to last to trigger the talking animation.")]
 		public float LoudnessAttack = 0.15f;
 
-		// Token: 0x04005AA4 RID: 23204
+		// Token: 0x04005AA5 RID: 23205
 		[Tooltip("How fast the antenna should extend (with the range of the blend shape from 0-100).")]
 		public float AntennaExtendSpeed = 100f;
 
-		// Token: 0x04005AA5 RID: 23205
+		// Token: 0x04005AA6 RID: 23206
 		public Color EyeColorOff = Color.black;
 
-		// Token: 0x04005AA6 RID: 23206
+		// Token: 0x04005AA7 RID: 23207
 		public Color EyeColorOn = Color.white;
 
-		// Token: 0x04005AA7 RID: 23207
+		// Token: 0x04005AA8 RID: 23208
 		private float _attack;
 
-		// Token: 0x04005AA8 RID: 23208
+		// Token: 0x04005AA9 RID: 23209
 		private float _deltaTime;
 
-		// Token: 0x04005AA9 RID: 23209
+		// Token: 0x04005AAA RID: 23210
 		private float _timeLastUpdated;
 
-		// Token: 0x04005AAA RID: 23210
+		// Token: 0x04005AAB RID: 23211
 		private bool _isPlaced;
 
-		// Token: 0x04005AAB RID: 23211
+		// Token: 0x04005AAC RID: 23212
 		private bool _isActive;
 
-		// Token: 0x04005AAC RID: 23212
-		private float _currentAntennaWeight;
-
 		// Token: 0x04005AAD RID: 23213
-		[SerializeField]
-		private Animation _animation;
+		private float _currentAntennaWeight;
 
 		// Token: 0x04005AAE RID: 23214
 		[SerializeField]
-		private SkinnedMeshRenderer _skinnedMeshRenderer;
+		private Animation _animation;
 
 		// Token: 0x04005AAF RID: 23215
 		[SerializeField]
-		private AudioSource _audioSource;
+		private SkinnedMeshRenderer _skinnedMeshRenderer;
 
 		// Token: 0x04005AB0 RID: 23216
 		[SerializeField]
-		private LoudSpeakerActivator _activator;
+		private AudioSource _audioSource;
 
 		// Token: 0x04005AB1 RID: 23217
 		[SerializeField]
-		private GorillaSpeakerLoudness _speakerLoudness;
+		private LoudSpeakerActivator _activator;
 
 		// Token: 0x04005AB2 RID: 23218
 		[SerializeField]
-		private Transform _skullTransform;
+		private GorillaSpeakerLoudness _speakerLoudness;
 
 		// Token: 0x04005AB3 RID: 23219
-		public Vector3 SkullOffsetPosition = new Vector3(0f, -0.15f, 0f);
+		[SerializeField]
+		private Transform _skullTransform;
 
 		// Token: 0x04005AB4 RID: 23220
+		public Vector3 SkullOffsetPosition = new Vector3(0f, -0.15f, 0f);
+
+		// Token: 0x04005AB5 RID: 23221
 		private MaterialPropertyBlock _materialPropertyBlock;
 	}
 }

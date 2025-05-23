@@ -6,7 +6,7 @@ using UnityEngine;
 // Token: 0x020008E2 RID: 2274
 public class MothershipAuthenticator : MonoBehaviour, IGorillaSliceableSimple
 {
-	// Token: 0x06003743 RID: 14147 RVA: 0x0010B5EC File Offset: 0x001097EC
+	// Token: 0x06003744 RID: 14148 RVA: 0x0010B6C4 File Offset: 0x001098C4
 	public void Awake()
 	{
 		if (MothershipAuthenticator.Instance == null)
@@ -32,14 +32,14 @@ public class MothershipAuthenticator : MonoBehaviour, IGorillaSliceableSimple
 		});
 	}
 
-	// Token: 0x06003744 RID: 14148 RVA: 0x0010B680 File Offset: 0x00109880
+	// Token: 0x06003745 RID: 14149 RVA: 0x0010B758 File Offset: 0x00109958
 	public void BeginLoginFlow()
 	{
 		Debug.Log("making login call");
 		this.LogInWithSteam();
 	}
 
-	// Token: 0x06003745 RID: 14149 RVA: 0x0010B692 File Offset: 0x00109892
+	// Token: 0x06003746 RID: 14150 RVA: 0x0010B76A File Offset: 0x0010996A
 	private void LogInWithInsecure()
 	{
 		MothershipClientApiUnity.LogInWithInsecure1(this.TestNickname, this.TestAccountId, delegate(LoginResponse LoginResponse)
@@ -69,7 +69,7 @@ public class MothershipAuthenticator : MonoBehaviour, IGorillaSliceableSimple
 		});
 	}
 
-	// Token: 0x06003746 RID: 14150 RVA: 0x0010B6BE File Offset: 0x001098BE
+	// Token: 0x06003747 RID: 14151 RVA: 0x0010B796 File Offset: 0x00109996
 	private void LogInWithSteam()
 	{
 		MothershipClientApiUnity.StartLoginWithSteam(delegate(PlayerSteamBeginLoginResponse resp)
@@ -150,19 +150,19 @@ public class MothershipAuthenticator : MonoBehaviour, IGorillaSliceableSimple
 		});
 	}
 
-	// Token: 0x06003747 RID: 14151 RVA: 0x00017251 File Offset: 0x00015451
+	// Token: 0x06003748 RID: 14152 RVA: 0x00017251 File Offset: 0x00015451
 	public void OnEnable()
 	{
 		GorillaSlicerSimpleManager.RegisterSliceable(this, GorillaSlicerSimpleManager.UpdateStep.Update);
 	}
 
-	// Token: 0x06003748 RID: 14152 RVA: 0x0001725A File Offset: 0x0001545A
+	// Token: 0x06003749 RID: 14153 RVA: 0x0001725A File Offset: 0x0001545A
 	public void OnDisable()
 	{
 		GorillaSlicerSimpleManager.UnregisterSliceable(this, GorillaSlicerSimpleManager.UpdateStep.Update);
 	}
 
-	// Token: 0x06003749 RID: 14153 RVA: 0x0010B6DE File Offset: 0x001098DE
+	// Token: 0x0600374A RID: 14154 RVA: 0x0010B7B6 File Offset: 0x001099B6
 	public void SliceUpdate()
 	{
 		if (MothershipClientApiUnity.IsEnabled())
@@ -171,39 +171,39 @@ public class MothershipAuthenticator : MonoBehaviour, IGorillaSliceableSimple
 		}
 	}
 
-	// Token: 0x0600374B RID: 14155 RVA: 0x00011040 File Offset: 0x0000F240
+	// Token: 0x0600374C RID: 14156 RVA: 0x00011040 File Offset: 0x0000F240
 	bool IGorillaSliceableSimple.get_isActiveAndEnabled()
 	{
 		return base.isActiveAndEnabled;
 	}
 
-	// Token: 0x04003CDE RID: 15582
+	// Token: 0x04003CDF RID: 15583
 	public static volatile MothershipAuthenticator Instance;
 
-	// Token: 0x04003CDF RID: 15583
+	// Token: 0x04003CE0 RID: 15584
 	public MetaAuthenticator MetaAuthenticator;
 
-	// Token: 0x04003CE0 RID: 15584
+	// Token: 0x04003CE1 RID: 15585
 	public SteamAuthenticator SteamAuthenticator;
 
-	// Token: 0x04003CE1 RID: 15585
+	// Token: 0x04003CE2 RID: 15586
 	public string TestNickname;
 
-	// Token: 0x04003CE2 RID: 15586
+	// Token: 0x04003CE3 RID: 15587
 	public string TestAccountId;
 
-	// Token: 0x04003CE3 RID: 15587
+	// Token: 0x04003CE4 RID: 15588
 	public bool UseConstantTestAccountId = true;
 
-	// Token: 0x04003CE4 RID: 15588
+	// Token: 0x04003CE5 RID: 15589
 	public int MaxMetaLoginAttempts = 5;
 
-	// Token: 0x04003CE5 RID: 15589
+	// Token: 0x04003CE6 RID: 15590
 	public Action OnLoginSuccess;
 
-	// Token: 0x04003CE6 RID: 15590
+	// Token: 0x04003CE7 RID: 15591
 	public Action OnLoginFailure;
 
-	// Token: 0x04003CE7 RID: 15591
+	// Token: 0x04003CE8 RID: 15592
 	public Action<int> OnLoginAttemptFailure;
 }

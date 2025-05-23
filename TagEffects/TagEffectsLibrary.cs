@@ -11,7 +11,7 @@ namespace TagEffects
 	public class TagEffectsLibrary : MonoBehaviour
 	{
 		// Token: 0x17000806 RID: 2054
-		// (get) Token: 0x0600507A RID: 20602 RVA: 0x0018063F File Offset: 0x0017E83F
+		// (get) Token: 0x0600507B RID: 20603 RVA: 0x00180717 File Offset: 0x0017E917
 		public static float FistBumpSpeedThreshold
 		{
 			get
@@ -21,7 +21,7 @@ namespace TagEffects
 		}
 
 		// Token: 0x17000807 RID: 2055
-		// (get) Token: 0x0600507B RID: 20603 RVA: 0x0018064B File Offset: 0x0017E84B
+		// (get) Token: 0x0600507C RID: 20604 RVA: 0x00180723 File Offset: 0x0017E923
 		public static float HighFiveSpeedThreshold
 		{
 			get
@@ -31,7 +31,7 @@ namespace TagEffects
 		}
 
 		// Token: 0x17000808 RID: 2056
-		// (get) Token: 0x0600507C RID: 20604 RVA: 0x00180657 File Offset: 0x0017E857
+		// (get) Token: 0x0600507D RID: 20605 RVA: 0x0018072F File Offset: 0x0017E92F
 		public static bool DebugMode
 		{
 			get
@@ -40,7 +40,7 @@ namespace TagEffects
 			}
 		}
 
-		// Token: 0x0600507D RID: 20605 RVA: 0x00180663 File Offset: 0x0017E863
+		// Token: 0x0600507E RID: 20606 RVA: 0x0018073B File Offset: 0x0017E93B
 		private void Awake()
 		{
 			if (TagEffectsLibrary._instance != null)
@@ -53,7 +53,7 @@ namespace TagEffects
 			this.tagEffectsComboLookUp = new Dictionary<TagEffectsCombo, TagEffectPack[]>();
 		}
 
-		// Token: 0x0600507E RID: 20606 RVA: 0x0018069C File Offset: 0x0017E89C
+		// Token: 0x0600507F RID: 20607 RVA: 0x00180774 File Offset: 0x0017E974
 		public static void PlayEffect(Transform target, bool isLeftHand, float rigScale, TagEffectsLibrary.EffectType effectType, TagEffectPack playerCosmeticTagEffectPack, TagEffectPack otherPlayerCosmeticTagEffectPack, Quaternion rotation)
 		{
 			if (TagEffectsLibrary._instance == null)
@@ -130,7 +130,7 @@ namespace TagEffects
 			}
 		}
 
-		// Token: 0x0600507F RID: 20607 RVA: 0x001808BC File Offset: 0x0017EABC
+		// Token: 0x06005080 RID: 20608 RVA: 0x00180994 File Offset: 0x0017EB94
 		private static TagEffectPack comboLookup(TagEffectPack playerCosmeticTagEffectPack, TagEffectPack otherPlayerCosmeticTagEffectPack)
 		{
 			if (otherPlayerCosmeticTagEffectPack == null)
@@ -153,7 +153,7 @@ namespace TagEffects
 			return array[num % array.Length];
 		}
 
-		// Token: 0x06005080 RID: 20608 RVA: 0x0018092C File Offset: 0x0017EB2C
+		// Token: 0x06005081 RID: 20609 RVA: 0x00180A04 File Offset: 0x0017EC04
 		public static void placeEffects(GameObject prefab, Transform target, float scale, bool flipZAxis, bool parentEffect, Quaternion rotation)
 		{
 			if (prefab == null)
@@ -185,13 +185,13 @@ namespace TagEffects
 			TagEffectsLibrary._instance.StartCoroutine(TagEffectsLibrary._instance.RecycleGameObject(gameObjectOnDisableDispatcher2, target, scale, flipZAxis, parentEffect));
 		}
 
-		// Token: 0x06005081 RID: 20609 RVA: 0x00180A4B File Offset: 0x0017EC4B
+		// Token: 0x06005082 RID: 20610 RVA: 0x00180B23 File Offset: 0x0017ED23
 		private static void NewGameObjectOnDisableDispatcher_OnDisabled(GameObjectOnDisableDispatcher goodd)
 		{
 			TagEffectsLibrary._instance.StartCoroutine(TagEffectsLibrary._instance.ReclaimDisabled(goodd.transform));
 		}
 
-		// Token: 0x06005082 RID: 20610 RVA: 0x00180A68 File Offset: 0x0017EC68
+		// Token: 0x06005083 RID: 20611 RVA: 0x00180B40 File Offset: 0x0017ED40
 		private IEnumerator RecycleGameObject(GameObjectOnDisableDispatcher recycledGameObject, Transform target, float scale, bool flipZAxis, bool parentEffect)
 		{
 			if (recycledGameObject.gameObject.activeInHierarchy)
@@ -213,7 +213,7 @@ namespace TagEffects
 			yield break;
 		}
 
-		// Token: 0x06005083 RID: 20611 RVA: 0x00180A95 File Offset: 0x0017EC95
+		// Token: 0x06005084 RID: 20612 RVA: 0x00180B6D File Offset: 0x0017ED6D
 		private IEnumerator ReclaimDisabled(Transform transform)
 		{
 			yield return null;
@@ -221,49 +221,49 @@ namespace TagEffects
 			yield break;
 		}
 
-		// Token: 0x0400539D RID: 21405
+		// Token: 0x0400539E RID: 21406
 		private const int OBJECT_QUEUE_LIMIT = 12;
 
-		// Token: 0x0400539E RID: 21406
+		// Token: 0x0400539F RID: 21407
 		[OnEnterPlay_SetNull]
 		private static TagEffectsLibrary _instance;
 
-		// Token: 0x0400539F RID: 21407
+		// Token: 0x040053A0 RID: 21408
 		[SerializeField]
 		private float fistBumpSpeedThreshold = 1f;
 
-		// Token: 0x040053A0 RID: 21408
+		// Token: 0x040053A1 RID: 21409
 		[SerializeField]
 		private float highFiveSpeedThreshold = 1f;
 
-		// Token: 0x040053A1 RID: 21409
+		// Token: 0x040053A2 RID: 21410
 		[SerializeField]
 		private ModeTagEffect[] defaultTagEffects;
 
-		// Token: 0x040053A2 RID: 21410
+		// Token: 0x040053A3 RID: 21411
 		[SerializeField]
 		private TagEffectsComboResult[] tagEffectsCombos;
 
-		// Token: 0x040053A3 RID: 21411
+		// Token: 0x040053A4 RID: 21412
 		[SerializeField]
 		private bool debugMode;
 
-		// Token: 0x040053A4 RID: 21412
+		// Token: 0x040053A5 RID: 21413
 		private Dictionary<string, Queue<GameObjectOnDisableDispatcher>> tagEffectsPool;
 
-		// Token: 0x040053A5 RID: 21413
+		// Token: 0x040053A6 RID: 21414
 		private Dictionary<TagEffectsCombo, TagEffectPack[]> tagEffectsComboLookUp;
 
 		// Token: 0x02000CB8 RID: 3256
 		public enum EffectType
 		{
-			// Token: 0x040053A7 RID: 21415
-			FIRST_PERSON,
 			// Token: 0x040053A8 RID: 21416
-			THIRD_PERSON,
+			FIRST_PERSON,
 			// Token: 0x040053A9 RID: 21417
-			HIGH_FIVE,
+			THIRD_PERSON,
 			// Token: 0x040053AA RID: 21418
+			HIGH_FIVE,
+			// Token: 0x040053AB RID: 21419
 			FIST_BUMP
 		}
 	}

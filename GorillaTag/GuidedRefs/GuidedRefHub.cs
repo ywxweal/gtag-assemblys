@@ -10,13 +10,13 @@ namespace GorillaTag.GuidedRefs
 	[DefaultExecutionOrder(-2147483648)]
 	public class GuidedRefHub : MonoBehaviour, IGuidedRefMonoBehaviour, IGuidedRefObject
 	{
-		// Token: 0x06005578 RID: 21880 RVA: 0x001A03C3 File Offset: 0x0019E5C3
+		// Token: 0x06005579 RID: 21881 RVA: 0x001A049B File Offset: 0x0019E69B
 		protected void Awake()
 		{
 			this.GuidedRefInitialize();
 		}
 
-		// Token: 0x06005579 RID: 21881 RVA: 0x001A03CC File Offset: 0x0019E5CC
+		// Token: 0x0600557A RID: 21882 RVA: 0x001A04A4 File Offset: 0x0019E6A4
 		protected void OnDestroy()
 		{
 			if (ApplicationQuittingState.IsQuitting)
@@ -39,7 +39,7 @@ namespace GorillaTag.GuidedRefs
 			}
 		}
 
-		// Token: 0x0600557A RID: 21882 RVA: 0x001A045C File Offset: 0x0019E65C
+		// Token: 0x0600557B RID: 21883 RVA: 0x001A0534 File Offset: 0x0019E734
 		public void GuidedRefInitialize()
 		{
 			if (this.isRootInstance)
@@ -63,13 +63,13 @@ namespace GorillaTag.GuidedRefs
 			GuidedRefHub.globalLookupRefInstIDsByHub[this] = new List<int>(2);
 		}
 
-		// Token: 0x0600557B RID: 21883 RVA: 0x001A04E5 File Offset: 0x0019E6E5
+		// Token: 0x0600557C RID: 21884 RVA: 0x001A05BD File Offset: 0x0019E7BD
 		public static bool IsInstanceIDRegisteredWithAnyHub(int instanceID)
 		{
 			return GuidedRefHub.globalLookupHubsThatHaveRegisteredInstId.ContainsKey(instanceID);
 		}
 
-		// Token: 0x0600557C RID: 21884 RVA: 0x001A04F4 File Offset: 0x0019E6F4
+		// Token: 0x0600557D RID: 21885 RVA: 0x001A05CC File Offset: 0x0019E7CC
 		private void RegisterTarget_Internal<TIGuidedRefTargetMono>(TIGuidedRefTargetMono targetMono) where TIGuidedRefTargetMono : IGuidedRefTargetMono
 		{
 			RelayInfo orAddRelayInfoByTargetId = this.GetOrAddRelayInfoByTargetId(targetMono.GRefTargetInfo.targetId);
@@ -120,7 +120,7 @@ namespace GorillaTag.GuidedRefs
 			}
 		}
 
-		// Token: 0x0600557D RID: 21885 RVA: 0x001A0648 File Offset: 0x0019E848
+		// Token: 0x0600557E RID: 21886 RVA: 0x001A0720 File Offset: 0x0019E920
 		public static void RegisterTarget<TIGuidedRefTargetMono>(TIGuidedRefTargetMono targetMono, GuidedRefHubIdSO[] hubIds = null, Component debugCaller = null) where TIGuidedRefTargetMono : IGuidedRefTargetMono
 		{
 			if (targetMono == null)
@@ -154,7 +154,7 @@ namespace GorillaTag.GuidedRefs
 			}
 		}
 
-		// Token: 0x0600557E RID: 21886 RVA: 0x001A077C File Offset: 0x0019E97C
+		// Token: 0x0600557F RID: 21887 RVA: 0x001A0854 File Offset: 0x0019EA54
 		public static void UnregisterTarget<TIGuidedRefTargetMono>(TIGuidedRefTargetMono targetMono, bool destroyed = true) where TIGuidedRefTargetMono : IGuidedRefTargetMono
 		{
 			if (ApplicationQuittingState.IsQuitting)
@@ -207,7 +207,7 @@ namespace GorillaTag.GuidedRefs
 			GuidedRefHub.globalLookupHubsThatHaveRegisteredInstId.Remove(instanceID);
 		}
 
-		// Token: 0x0600557F RID: 21887 RVA: 0x001A0944 File Offset: 0x0019EB44
+		// Token: 0x06005580 RID: 21888 RVA: 0x001A0A1C File Offset: 0x0019EC1C
 		public static void ReceiverFullyRegistered<TIGuidedRefReceiverMono>(TIGuidedRefReceiverMono receiverMono) where TIGuidedRefReceiverMono : IGuidedRefReceiverMono
 		{
 			GuidedRefHub.kReceiversFullyRegistered.Add(receiverMono);
@@ -215,7 +215,7 @@ namespace GorillaTag.GuidedRefs
 			GuidedRefHub.CheckAndNotifyIfReceiverFullyResolved<TIGuidedRefReceiverMono>(receiverMono);
 		}
 
-		// Token: 0x06005580 RID: 21888 RVA: 0x001A0970 File Offset: 0x0019EB70
+		// Token: 0x06005581 RID: 21889 RVA: 0x001A0A48 File Offset: 0x0019EC48
 		private static void CheckAndNotifyIfReceiverFullyResolved<TIGuidedRefReceiverMono>(TIGuidedRefReceiverMono receiverMono) where TIGuidedRefReceiverMono : IGuidedRefReceiverMono
 		{
 			if (receiverMono.GuidedRefsWaitingToResolveCount == 0 && GuidedRefHub.kReceiversFullyRegistered.Contains(receiverMono))
@@ -225,7 +225,7 @@ namespace GorillaTag.GuidedRefs
 			}
 		}
 
-		// Token: 0x06005581 RID: 21889 RVA: 0x001A09BC File Offset: 0x0019EBBC
+		// Token: 0x06005582 RID: 21890 RVA: 0x001A0A94 File Offset: 0x0019EC94
 		private void RegisterReceiverField(RegisteredReceiverFieldInfo registeredReceiverFieldInfo, GuidedRefTargetIdSO targetId)
 		{
 			GuidedRefHub.globalLookupRefInstIDsByHub[this].Add(registeredReceiverFieldInfo.receiverMono.GetInstanceID());
@@ -235,7 +235,7 @@ namespace GorillaTag.GuidedRefs
 			GuidedRefHub.ResolveReferences(orAddRelayInfoByTargetId);
 		}
 
-		// Token: 0x06005582 RID: 21890 RVA: 0x001A0A14 File Offset: 0x0019EC14
+		// Token: 0x06005583 RID: 21891 RVA: 0x001A0AEC File Offset: 0x0019ECEC
 		private static void RegisterReceiverField_Internal<TIGuidedRefReceiverMono>(GuidedRefHubIdSO hubId, TIGuidedRefReceiverMono receiverMono, int fieldId, GuidedRefTargetIdSO targetId, int index) where TIGuidedRefReceiverMono : IGuidedRefReceiverMono
 		{
 			if (receiverMono == null)
@@ -274,7 +274,7 @@ namespace GorillaTag.GuidedRefs
 			Debug.LogError("Could not find matching GuidedRefHub to register with for receiver at: " + receiverMono.transform.GetPath(), receiverMono.transform);
 		}
 
-		// Token: 0x06005583 RID: 21891 RVA: 0x001A0B4C File Offset: 0x0019ED4C
+		// Token: 0x06005584 RID: 21892 RVA: 0x001A0C24 File Offset: 0x0019EE24
 		public static void RegisterReceiverField<TIGuidedRefReceiverMono>(TIGuidedRefReceiverMono receiverMono, string fieldIdName, ref GuidedRefReceiverFieldInfo fieldInfo) where TIGuidedRefReceiverMono : IGuidedRefReceiverMono
 		{
 			if (!GRef.ShouldResolveNow(fieldInfo.resolveModes))
@@ -285,7 +285,7 @@ namespace GorillaTag.GuidedRefs
 			GuidedRefHub.RegisterReceiverField_Internal<TIGuidedRefReceiverMono>(fieldInfo.hubId, receiverMono, fieldInfo.fieldId, fieldInfo.targetId, -1);
 		}
 
-		// Token: 0x06005584 RID: 21892 RVA: 0x001A0B84 File Offset: 0x0019ED84
+		// Token: 0x06005585 RID: 21893 RVA: 0x001A0C5C File Offset: 0x0019EE5C
 		public static void RegisterReceiverArray<TIGuidedRefReceiverMono, T>(TIGuidedRefReceiverMono receiverMono, string fieldIdName, ref T[] receiverArray, ref GuidedRefReceiverArrayInfo arrayInfo) where TIGuidedRefReceiverMono : IGuidedRefReceiverMono where T : Object
 		{
 			if (!GRef.ShouldResolveNow(arrayInfo.resolveModes))
@@ -307,7 +307,7 @@ namespace GorillaTag.GuidedRefs
 			}
 		}
 
-		// Token: 0x06005585 RID: 21893 RVA: 0x001A0C0C File Offset: 0x0019EE0C
+		// Token: 0x06005586 RID: 21894 RVA: 0x001A0CE4 File Offset: 0x0019EEE4
 		public static void UnregisterReceiver<TIGuidedRefReceiverMono>(TIGuidedRefReceiverMono receiverMono) where TIGuidedRefReceiverMono : IGuidedRefReceiverMono
 		{
 			if (receiverMono == null)
@@ -342,7 +342,7 @@ namespace GorillaTag.GuidedRefs
 			receiverMono.GuidedRefsWaitingToResolveCount = 0;
 		}
 
-		// Token: 0x06005586 RID: 21894 RVA: 0x001A0D40 File Offset: 0x0019EF40
+		// Token: 0x06005587 RID: 21895 RVA: 0x001A0E18 File Offset: 0x0019F018
 		private RelayInfo GetOrAddRelayInfoByTargetId(GuidedRefTargetIdSO targetId)
 		{
 			if (targetId == null)
@@ -365,7 +365,7 @@ namespace GorillaTag.GuidedRefs
 			return relayInfo;
 		}
 
-		// Token: 0x06005587 RID: 21895 RVA: 0x001A0DB4 File Offset: 0x0019EFB4
+		// Token: 0x06005588 RID: 21896 RVA: 0x001A0E8C File Offset: 0x0019F08C
 		public static List<GuidedRefHub> GetHubsThatHaveRegisteredInstId(int instanceId)
 		{
 			List<GuidedRefHub> list;
@@ -377,7 +377,7 @@ namespace GorillaTag.GuidedRefs
 			return list;
 		}
 
-		// Token: 0x06005588 RID: 21896 RVA: 0x001A0DE4 File Offset: 0x0019EFE4
+		// Token: 0x06005589 RID: 21897 RVA: 0x001A0EBC File Offset: 0x0019F0BC
 		private static void ResolveReferences(RelayInfo relayInfo)
 		{
 			if (ApplicationQuittingState.IsQuitting)
@@ -417,7 +417,7 @@ namespace GorillaTag.GuidedRefs
 			}
 		}
 
-		// Token: 0x06005589 RID: 21897 RVA: 0x001A0ED8 File Offset: 0x0019F0D8
+		// Token: 0x0600558A RID: 21898 RVA: 0x001A0FB0 File Offset: 0x0019F1B0
 		public static bool TryResolveField<TIGuidedRefReceiverMono, T>(TIGuidedRefReceiverMono receiverMono, ref T refReceiverObj, GuidedRefReceiverFieldInfo receiverFieldInfo, GuidedRefTryResolveInfo tryResolveInfo) where TIGuidedRefReceiverMono : IGuidedRefReceiverMono where T : Object
 		{
 			if (tryResolveInfo.index > -1 || tryResolveInfo.fieldId != receiverFieldInfo.fieldId || refReceiverObj != null)
@@ -459,14 +459,14 @@ namespace GorillaTag.GuidedRefs
 			return true;
 		}
 
-		// Token: 0x0600558A RID: 21898 RVA: 0x001A10AC File Offset: 0x0019F2AC
+		// Token: 0x0600558B RID: 21899 RVA: 0x001A1184 File Offset: 0x0019F384
 		public static bool TryResolveArrayItem<TIGuidedRefReceiverMono, T>(TIGuidedRefReceiverMono receiverMono, IList<T> receivingArray, GuidedRefReceiverArrayInfo receiverArrayInfo, GuidedRefTryResolveInfo tryResolveInfo) where TIGuidedRefReceiverMono : IGuidedRefReceiverMono where T : Object
 		{
 			bool flag;
 			return GuidedRefHub.TryResolveArrayItem<TIGuidedRefReceiverMono, T>(receiverMono, receivingArray, receiverArrayInfo, tryResolveInfo, out flag);
 		}
 
-		// Token: 0x0600558B RID: 21899 RVA: 0x001A10C4 File Offset: 0x0019F2C4
+		// Token: 0x0600558C RID: 21900 RVA: 0x001A119C File Offset: 0x0019F39C
 		public static bool TryResolveArrayItem<TIGuidedRefReceiverMono, T>(TIGuidedRefReceiverMono receiverMono, IList<T> receivingArray, GuidedRefReceiverArrayInfo receiverArrayInfo, GuidedRefTryResolveInfo tryResolveInfo, out bool arrayResolved) where TIGuidedRefReceiverMono : IGuidedRefReceiverMono where T : Object
 		{
 			arrayResolved = false;
@@ -569,69 +569,69 @@ namespace GorillaTag.GuidedRefs
 			return true;
 		}
 
-		// Token: 0x0600558C RID: 21900 RVA: 0x001A14B7 File Offset: 0x0019F6B7
+		// Token: 0x0600558D RID: 21901 RVA: 0x001A158F File Offset: 0x0019F78F
 		public static string GetFieldNameByID(int fieldId)
 		{
 			return "FieldNameOnlyAvailableInEditor";
 		}
 
-		// Token: 0x0600558F RID: 21903 RVA: 0x00045F89 File Offset: 0x00044189
+		// Token: 0x06005590 RID: 21904 RVA: 0x00045F89 File Offset: 0x00044189
 		Transform IGuidedRefMonoBehaviour.get_transform()
 		{
 			return base.transform;
 		}
 
-		// Token: 0x06005590 RID: 21904 RVA: 0x00017401 File Offset: 0x00015601
+		// Token: 0x06005591 RID: 21905 RVA: 0x00017401 File Offset: 0x00015601
 		int IGuidedRefObject.GetInstanceID()
 		{
 			return base.GetInstanceID();
 		}
 
-		// Token: 0x040058E4 RID: 22756
+		// Token: 0x040058E5 RID: 22757
 		[SerializeField]
 		private bool isRootInstance;
 
-		// Token: 0x040058E5 RID: 22757
+		// Token: 0x040058E6 RID: 22758
 		public GuidedRefHubIdSO hubId;
 
-		// Token: 0x040058E6 RID: 22758
+		// Token: 0x040058E7 RID: 22759
 		[OnEnterPlay_SetNull]
 		[NonSerialized]
 		public static GuidedRefHub rootInstance;
 
-		// Token: 0x040058E7 RID: 22759
+		// Token: 0x040058E8 RID: 22760
 		[OnEnterPlay_Set(false)]
 		[NonSerialized]
 		public static bool hasRootInstance;
 
-		// Token: 0x040058E8 RID: 22760
+		// Token: 0x040058E9 RID: 22761
 		[DebugReadout]
 		private readonly Dictionary<GuidedRefTargetIdSO, RelayInfo> lookupRelayInfoByTargetId = new Dictionary<GuidedRefTargetIdSO, RelayInfo>(256);
 
-		// Token: 0x040058E9 RID: 22761
-		private static readonly Dictionary<RelayInfo, GuidedRefTargetIdSO> static_relayInfo_to_targetId = new Dictionary<RelayInfo, GuidedRefTargetIdSO>(256);
-
 		// Token: 0x040058EA RID: 22762
-		[OnEnterPlay_Clear]
-		private static readonly Dictionary<int, List<GuidedRefHub>> globalLookupHubsThatHaveRegisteredInstId = new Dictionary<int, List<GuidedRefHub>>(256);
+		private static readonly Dictionary<RelayInfo, GuidedRefTargetIdSO> static_relayInfo_to_targetId = new Dictionary<RelayInfo, GuidedRefTargetIdSO>(256);
 
 		// Token: 0x040058EB RID: 22763
 		[OnEnterPlay_Clear]
-		private static readonly Dictionary<GuidedRefHub, List<int>> globalLookupRefInstIDsByHub = new Dictionary<GuidedRefHub, List<int>>(256);
+		private static readonly Dictionary<int, List<GuidedRefHub>> globalLookupHubsThatHaveRegisteredInstId = new Dictionary<int, List<GuidedRefHub>>(256);
 
 		// Token: 0x040058EC RID: 22764
 		[OnEnterPlay_Clear]
-		private static readonly List<GuidedRefHub> globalHubsTransientList = new List<GuidedRefHub>(32);
+		private static readonly Dictionary<GuidedRefHub, List<int>> globalLookupRefInstIDsByHub = new Dictionary<GuidedRefHub, List<int>>(256);
 
 		// Token: 0x040058ED RID: 22765
-		private const string kUnsuppliedCallerName = "UNSUPPLIED_CALLER_NAME";
+		[OnEnterPlay_Clear]
+		private static readonly List<GuidedRefHub> globalHubsTransientList = new List<GuidedRefHub>(32);
 
 		// Token: 0x040058EE RID: 22766
+		private const string kUnsuppliedCallerName = "UNSUPPLIED_CALLER_NAME";
+
+		// Token: 0x040058EF RID: 22767
 		[DebugReadout]
 		[OnEnterPlay_Clear]
 		internal static readonly HashSet<IGuidedRefReceiverMono> kReceiversWaitingToFullyResolve = new HashSet<IGuidedRefReceiverMono>(256);
 
-		// Token: 0x040058EF RID: 22767
+		// Token: 0x040058F0 RID: 22768
 		[DebugReadout]
 		[OnEnterPlay_Clear]
 		internal static readonly HashSet<IGuidedRefReceiverMono> kReceiversFullyRegistered = new HashSet<IGuidedRefReceiverMono>(256);

@@ -5,7 +5,7 @@ using UnityEngine;
 // Token: 0x020005D2 RID: 1490
 public class GRUIStationEmployeeBadges : MonoBehaviour, IGorillaSliceableSimple
 {
-	// Token: 0x06002452 RID: 9298 RVA: 0x000B696C File Offset: 0x000B4B6C
+	// Token: 0x06002452 RID: 9298 RVA: 0x000B698C File Offset: 0x000B4B8C
 	public void OnEnable()
 	{
 		GorillaSlicerSimpleManager.RegisterSliceable(this, GorillaSlicerSimpleManager.UpdateStep.Update);
@@ -22,7 +22,7 @@ public class GRUIStationEmployeeBadges : MonoBehaviour, IGorillaSliceableSimple
 		this.UpdateRigs();
 	}
 
-	// Token: 0x06002453 RID: 9299 RVA: 0x000B6A18 File Offset: 0x000B4C18
+	// Token: 0x06002453 RID: 9299 RVA: 0x000B6A38 File Offset: 0x000B4C38
 	public void OnDisable()
 	{
 		GorillaSlicerSimpleManager.UnregisterSliceable(this, GorillaSlicerSimpleManager.UpdateStep.Update);
@@ -31,13 +31,13 @@ public class GRUIStationEmployeeBadges : MonoBehaviour, IGorillaSliceableSimple
 		RoomSystem.JoinedRoomEvent = (Action)Delegate.Remove(RoomSystem.JoinedRoomEvent, new Action(this.UpdateRigs));
 	}
 
-	// Token: 0x06002454 RID: 9300 RVA: 0x000B6A6E File Offset: 0x000B4C6E
+	// Token: 0x06002454 RID: 9300 RVA: 0x000B6A8E File Offset: 0x000B4C8E
 	public void UpdateRigs(RigContainer container)
 	{
 		this.UpdateRigs();
 	}
 
-	// Token: 0x06002455 RID: 9301 RVA: 0x000B6A76 File Offset: 0x000B4C76
+	// Token: 0x06002455 RID: 9301 RVA: 0x000B6A96 File Offset: 0x000B4C96
 	public void UpdateRigs()
 	{
 		GRUIStationEmployeeBadges.tempRigs.Clear();
@@ -45,7 +45,7 @@ public class GRUIStationEmployeeBadges : MonoBehaviour, IGorillaSliceableSimple
 		VRRigCache.Instance.GetAllUsedRigs(GRUIStationEmployeeBadges.tempRigs);
 	}
 
-	// Token: 0x06002456 RID: 9302 RVA: 0x000B6AA0 File Offset: 0x000B4CA0
+	// Token: 0x06002456 RID: 9302 RVA: 0x000B6AC0 File Offset: 0x000B4CC0
 	public void RefreshBadgesAuthority()
 	{
 		for (int i = 0; i < GRUIStationEmployeeBadges.tempRigs.Count; i++)
@@ -74,7 +74,7 @@ public class GRUIStationEmployeeBadges : MonoBehaviour, IGorillaSliceableSimple
 		}
 	}
 
-	// Token: 0x06002457 RID: 9303 RVA: 0x000B6BF0 File Offset: 0x000B4DF0
+	// Token: 0x06002457 RID: 9303 RVA: 0x000B6C10 File Offset: 0x000B4E10
 	public void SliceUpdate()
 	{
 		if (GameEntityManager.instance.IsAuthority())
@@ -87,7 +87,7 @@ public class GRUIStationEmployeeBadges : MonoBehaviour, IGorillaSliceableSimple
 		}
 	}
 
-	// Token: 0x06002458 RID: 9304 RVA: 0x000B6C38 File Offset: 0x000B4E38
+	// Token: 0x06002458 RID: 9304 RVA: 0x000B6C58 File Offset: 0x000B4E58
 	public void RemoveBadge(GRBadge badge)
 	{
 		if (this.registeredBadges.Contains(badge))
@@ -101,7 +101,7 @@ public class GRUIStationEmployeeBadges : MonoBehaviour, IGorillaSliceableSimple
 		}
 	}
 
-	// Token: 0x06002459 RID: 9305 RVA: 0x000B6CA8 File Offset: 0x000B4EA8
+	// Token: 0x06002459 RID: 9305 RVA: 0x000B6CC8 File Offset: 0x000B4EC8
 	public void LinkBadgeToDispenser(GRBadge badge, long createData)
 	{
 		if (!this.registeredBadges.Contains(badge))

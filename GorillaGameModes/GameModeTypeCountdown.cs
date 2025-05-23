@@ -7,10 +7,10 @@ namespace GorillaGameModes
 	[Serializable]
 	public struct GameModeTypeCountdown
 	{
-		// Token: 0x040044B8 RID: 17592
+		// Token: 0x040044B9 RID: 17593
 		public GameModeType mode;
 
-		// Token: 0x040044B9 RID: 17593
+		// Token: 0x040044BA RID: 17594
 		public CountdownTextDate countdownTextDate;
 	}
 }

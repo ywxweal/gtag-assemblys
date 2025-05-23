@@ -8,7 +8,7 @@ using UnityEngine;
 public class GRPlayer : MonoBehaviour
 {
 	// Token: 0x17000368 RID: 872
-	// (get) Token: 0x060023A9 RID: 9129 RVA: 0x000B3716 File Offset: 0x000B1916
+	// (get) Token: 0x060023A9 RID: 9129 RVA: 0x000B3736 File Offset: 0x000B1936
 	public GRPlayer.GRPlayerState State
 	{
 		get
@@ -17,7 +17,7 @@ public class GRPlayer : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060023AA RID: 9130 RVA: 0x000B3720 File Offset: 0x000B1920
+	// Token: 0x060023AA RID: 9130 RVA: 0x000B3740 File Offset: 0x000B1940
 	private void Awake()
 	{
 		this.vrRig = base.GetComponent<VRRig>();
@@ -35,7 +35,7 @@ public class GRPlayer : MonoBehaviour
 		this.playerStateChangeLimiter = new CallLimiter(25, 1f, 0.5f);
 	}
 
-	// Token: 0x060023AB RID: 9131 RVA: 0x000B3822 File Offset: 0x000B1A22
+	// Token: 0x060023AB RID: 9131 RVA: 0x000B3842 File Offset: 0x000B1A42
 	public void OnPlayerHit()
 	{
 		if (this.hp <= 0)
@@ -46,7 +46,7 @@ public class GRPlayer : MonoBehaviour
 		int num = this.hp;
 	}
 
-	// Token: 0x060023AC RID: 9132 RVA: 0x000B3848 File Offset: 0x000B1A48
+	// Token: 0x060023AC RID: 9132 RVA: 0x000B3868 File Offset: 0x000B1A68
 	public void ChangePlayerState(GRPlayer.GRPlayerState newState)
 	{
 		if (!NetworkSystem.Instance.InRoom)
@@ -94,7 +94,7 @@ public class GRPlayer : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060023AD RID: 9133 RVA: 0x000B395C File Offset: 0x000B1B5C
+	// Token: 0x060023AD RID: 9133 RVA: 0x000B397C File Offset: 0x000B1B7C
 	public void RefreshPlayerVisuals()
 	{
 		GRPlayer.GRPlayerState grplayerState = this.state;
@@ -149,7 +149,7 @@ public class GRPlayer : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060023AE RID: 9134 RVA: 0x000B3AFC File Offset: 0x000B1CFC
+	// Token: 0x060023AE RID: 9134 RVA: 0x000B3B1C File Offset: 0x000B1D1C
 	public static GRPlayer Get(int actorNumber)
 	{
 		GamePlayer gamePlayer = GamePlayer.GetGamePlayer(actorNumber);
@@ -160,7 +160,7 @@ public class GRPlayer : MonoBehaviour
 		return gamePlayer.GetComponent<GRPlayer>();
 	}
 
-	// Token: 0x060023AF RID: 9135 RVA: 0x000B3B21 File Offset: 0x000B1D21
+	// Token: 0x060023AF RID: 9135 RVA: 0x000B3B41 File Offset: 0x000B1D41
 	public static GRPlayer Get(VRRig vrRig)
 	{
 		if (!(vrRig != null))
@@ -170,7 +170,7 @@ public class GRPlayer : MonoBehaviour
 		return vrRig.GetComponent<GRPlayer>();
 	}
 
-	// Token: 0x060023B0 RID: 9136 RVA: 0x000B3B34 File Offset: 0x000B1D34
+	// Token: 0x060023B0 RID: 9136 RVA: 0x000B3B54 File Offset: 0x000B1D54
 	public void AttachBadge(GRBadge grBadge)
 	{
 		this.badge = grBadge;
@@ -179,7 +179,7 @@ public class GRPlayer : MonoBehaviour
 		this.badge.StartRetracting();
 	}
 
-	// Token: 0x060023B1 RID: 9137 RVA: 0x000B3B6F File Offset: 0x000B1D6F
+	// Token: 0x060023B1 RID: 9137 RVA: 0x000B3B8F File Offset: 0x000B1D8F
 	public void SerializeNetworkState(BinaryWriter writer, NetPlayer player)
 	{
 		writer.Write((byte)this.state);
@@ -187,7 +187,7 @@ public class GRPlayer : MonoBehaviour
 		writer.Write(this.isEmployee ? 1 : 0);
 	}
 
-	// Token: 0x060023B2 RID: 9138 RVA: 0x000B3BA0 File Offset: 0x000B1DA0
+	// Token: 0x060023B2 RID: 9138 RVA: 0x000B3BC0 File Offset: 0x000B1DC0
 	public static void DeserializeNetworkStateAndBurn(BinaryReader reader, GRPlayer player)
 	{
 		GRPlayer.GRPlayerState grplayerState = (GRPlayer.GRPlayerState)reader.ReadByte();
@@ -201,7 +201,7 @@ public class GRPlayer : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060023B3 RID: 9139 RVA: 0x000B3BE4 File Offset: 0x000B1DE4
+	// Token: 0x060023B3 RID: 9139 RVA: 0x000B3C04 File Offset: 0x000B1E04
 	public void PlayHitFx(Vector3 attackLocation)
 	{
 		if (this.playerDamageAudioSource != null)

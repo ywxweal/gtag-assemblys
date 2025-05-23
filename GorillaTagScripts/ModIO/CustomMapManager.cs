@@ -20,7 +20,7 @@ namespace GorillaTagScripts.ModIO
 	public class CustomMapManager : MonoBehaviour, IBuildValidation
 	{
 		// Token: 0x170006DA RID: 1754
-		// (get) Token: 0x060046C2 RID: 18114 RVA: 0x0015085B File Offset: 0x0014EA5B
+		// (get) Token: 0x060046C3 RID: 18115 RVA: 0x00150933 File Offset: 0x0014EB33
 		public static bool WaitingForRoomJoin
 		{
 			get
@@ -30,7 +30,7 @@ namespace GorillaTagScripts.ModIO
 		}
 
 		// Token: 0x170006DB RID: 1755
-		// (get) Token: 0x060046C3 RID: 18115 RVA: 0x00150862 File Offset: 0x0014EA62
+		// (get) Token: 0x060046C4 RID: 18116 RVA: 0x0015093A File Offset: 0x0014EB3A
 		public static bool WaitingForDisconnect
 		{
 			get
@@ -40,7 +40,7 @@ namespace GorillaTagScripts.ModIO
 		}
 
 		// Token: 0x170006DC RID: 1756
-		// (get) Token: 0x060046C4 RID: 18116 RVA: 0x00150869 File Offset: 0x0014EA69
+		// (get) Token: 0x060046C5 RID: 18117 RVA: 0x00150941 File Offset: 0x0014EB41
 		public static long LoadingMapId
 		{
 			get
@@ -50,7 +50,7 @@ namespace GorillaTagScripts.ModIO
 		}
 
 		// Token: 0x170006DD RID: 1757
-		// (get) Token: 0x060046C5 RID: 18117 RVA: 0x00150875 File Offset: 0x0014EA75
+		// (get) Token: 0x060046C6 RID: 18118 RVA: 0x0015094D File Offset: 0x0014EB4D
 		public static long UnloadingMapId
 		{
 			get
@@ -59,7 +59,7 @@ namespace GorillaTagScripts.ModIO
 			}
 		}
 
-		// Token: 0x060046C6 RID: 18118 RVA: 0x00150884 File Offset: 0x0014EA84
+		// Token: 0x060046C7 RID: 18119 RVA: 0x0015095C File Offset: 0x0014EB5C
 		public bool BuildValidationCheck()
 		{
 			for (int i = 0; i < this.virtualStumpEjectLocations.Length; i++)
@@ -73,7 +73,7 @@ namespace GorillaTagScripts.ModIO
 			return true;
 		}
 
-		// Token: 0x060046C7 RID: 18119 RVA: 0x001508E8 File Offset: 0x0014EAE8
+		// Token: 0x060046C8 RID: 18120 RVA: 0x001509C0 File Offset: 0x0014EBC0
 		private void Awake()
 		{
 			if (CustomMapManager.instance == null)
@@ -88,7 +88,7 @@ namespace GorillaTagScripts.ModIO
 			}
 		}
 
-		// Token: 0x060046C8 RID: 18120 RVA: 0x00150924 File Offset: 0x0014EB24
+		// Token: 0x060046C9 RID: 18121 RVA: 0x001509FC File Offset: 0x0014EBFC
 		public void OnEnable()
 		{
 			CustomMapManager.gamemodeButtonLayout = Object.FindObjectOfType<GameModeSelectorButtonLayout>();
@@ -110,7 +110,7 @@ namespace GorillaTagScripts.ModIO
 			NetworkSystem.Instance.OnReturnedToSinglePlayer += this.OnDisconnected;
 		}
 
-		// Token: 0x060046C9 RID: 18121 RVA: 0x00150A9C File Offset: 0x0014EC9C
+		// Token: 0x060046CA RID: 18122 RVA: 0x00150B74 File Offset: 0x0014ED74
 		public void OnDisable()
 		{
 			UGCPermissionManager.UnsubscribeFromUGCEnabled(new Action(this.OnUGCEnabled));
@@ -123,17 +123,17 @@ namespace GorillaTagScripts.ModIO
 			NetworkSystem.Instance.OnReturnedToSinglePlayer -= this.OnDisconnected;
 		}
 
-		// Token: 0x060046CA RID: 18122 RVA: 0x000023F4 File Offset: 0x000005F4
+		// Token: 0x060046CB RID: 18123 RVA: 0x000023F4 File Offset: 0x000005F4
 		private void OnUGCEnabled()
 		{
 		}
 
-		// Token: 0x060046CB RID: 18123 RVA: 0x000023F4 File Offset: 0x000005F4
+		// Token: 0x060046CC RID: 18124 RVA: 0x000023F4 File Offset: 0x000005F4
 		private void OnUGCDisabled()
 		{
 		}
 
-		// Token: 0x060046CC RID: 18124 RVA: 0x00150B50 File Offset: 0x0014ED50
+		// Token: 0x060046CD RID: 18125 RVA: 0x00150C28 File Offset: 0x0014EE28
 		private void Start()
 		{
 			for (int i = this.virtualStumpTeleportLocations.Count - 1; i >= 0; i--)
@@ -163,7 +163,7 @@ namespace GorillaTagScripts.ModIO
 			base.gameObject.SetActive(false);
 		}
 
-		// Token: 0x060046CD RID: 18125 RVA: 0x00150C58 File Offset: 0x0014EE58
+		// Token: 0x060046CE RID: 18126 RVA: 0x00150D30 File Offset: 0x0014EF30
 		private void OnDestroy()
 		{
 			if (CustomMapManager.instance == this)
@@ -181,7 +181,7 @@ namespace GorillaTagScripts.ModIO
 			NetworkSystem.Instance.OnReturnedToSinglePlayer -= this.OnDisconnected;
 		}
 
-		// Token: 0x060046CE RID: 18126 RVA: 0x00150D28 File Offset: 0x0014EF28
+		// Token: 0x060046CF RID: 18127 RVA: 0x00150E00 File Offset: 0x0014F000
 		private void HandleModManagementEvent(ModManagementEventType eventType, ModId modId, Result result)
 		{
 			if (CustomMapManager.waitingForModInstall && CustomMapManager.waitingForModInstallId == modId)
@@ -230,7 +230,7 @@ namespace GorillaTagScripts.ModIO
 			}
 		}
 
-		// Token: 0x060046CF RID: 18127 RVA: 0x00150E20 File Offset: 0x0014F020
+		// Token: 0x060046D0 RID: 18128 RVA: 0x00150EF8 File Offset: 0x0014F0F8
 		private void OnModIOLoggedOut()
 		{
 			ModId @null = ModId.Null;
@@ -242,7 +242,7 @@ namespace GorillaTagScripts.ModIO
 			CustomMapManager.mapIdToLoadOnLogin = @null;
 		}
 
-		// Token: 0x060046D0 RID: 18128 RVA: 0x00150E6D File Offset: 0x0014F06D
+		// Token: 0x060046D1 RID: 18129 RVA: 0x00150F45 File Offset: 0x0014F145
 		private void OnModIOLoggedIn()
 		{
 			if (CustomMapManager.mapIdToLoadOnLogin != ModId.Null && CustomMapManager.mapIdToLoadOnLogin.Equals(CustomMapManager.currentRoomMapModId) && CustomMapManager.currentRoomMapApproved)
@@ -251,7 +251,7 @@ namespace GorillaTagScripts.ModIO
 			}
 		}
 
-		// Token: 0x060046D1 RID: 18129 RVA: 0x00150EA2 File Offset: 0x0014F0A2
+		// Token: 0x060046D2 RID: 18130 RVA: 0x00150F7A File Offset: 0x0014F17A
 		internal static IEnumerator TeleportToVirtualStump(short teleporterIdx, Action<bool> callback, GTZone playerEntranceZone, VirtualStumpTeleporterSerializer teleporterSerializer)
 		{
 			if (UGCPermissionManager.IsUGCDisabled)
@@ -333,7 +333,7 @@ namespace GorillaTagScripts.ModIO
 			yield break;
 		}
 
-		// Token: 0x060046D2 RID: 18130 RVA: 0x00150EC8 File Offset: 0x0014F0C8
+		// Token: 0x060046D3 RID: 18131 RVA: 0x00150FA0 File Offset: 0x0014F1A0
 		private static void OnPlatformLoginComplete(ModIORequestResult result)
 		{
 			if (!CustomMapManager.hasInstance)
@@ -359,7 +359,7 @@ namespace GorillaTagScripts.ModIO
 			CustomMapManager.preTeleportInPrivateRoom = false;
 		}
 
-		// Token: 0x060046D3 RID: 18131 RVA: 0x00150F57 File Offset: 0x0014F157
+		// Token: 0x060046D4 RID: 18132 RVA: 0x0015102F File Offset: 0x0014F22F
 		private static IEnumerator DelayedJoinVStumpPrivateRoom()
 		{
 			while (NetworkSystem.Instance.netState != NetSystemState.Idle)
@@ -370,7 +370,7 @@ namespace GorillaTagScripts.ModIO
 			yield break;
 		}
 
-		// Token: 0x060046D4 RID: 18132 RVA: 0x00150F60 File Offset: 0x0014F160
+		// Token: 0x060046D5 RID: 18133 RVA: 0x00151038 File Offset: 0x0014F238
 		public static void ExitVirtualStump(Action<bool> callback)
 		{
 			if (!CustomMapManager.hasInstance)
@@ -400,7 +400,7 @@ namespace GorillaTagScripts.ModIO
 			}
 		}
 
-		// Token: 0x060046D5 RID: 18133 RVA: 0x00151014 File Offset: 0x0014F214
+		// Token: 0x060046D6 RID: 18134 RVA: 0x001510EC File Offset: 0x0014F2EC
 		private static void FinalizeExitVirtualStump()
 		{
 			if (!CustomMapManager.hasInstance)
@@ -480,7 +480,7 @@ namespace GorillaTagScripts.ModIO
 			PhotonNetworkController.Instance.AttemptToJoinPublicRoom(CustomMapManager.instance.exitVirtualStumpJoinTrigger, JoinType.Solo);
 		}
 
-		// Token: 0x060046D6 RID: 18134 RVA: 0x001512E9 File Offset: 0x0014F4E9
+		// Token: 0x060046D7 RID: 18135 RVA: 0x001513C1 File Offset: 0x0014F5C1
 		private static void OnJoinSpecificRoomResult(NetJoinResult result)
 		{
 			switch (result)
@@ -500,7 +500,7 @@ namespace GorillaTagScripts.ModIO
 			}
 		}
 
-		// Token: 0x060046D7 RID: 18135 RVA: 0x00151326 File Offset: 0x0014F526
+		// Token: 0x060046D8 RID: 18136 RVA: 0x001513FE File Offset: 0x0014F5FE
 		private static void OnJoinSpecificRoomResultFailureAllowed(NetJoinResult result)
 		{
 			if (!CustomMapManager.hasInstance)
@@ -524,7 +524,7 @@ namespace GorillaTagScripts.ModIO
 			}
 		}
 
-		// Token: 0x060046D8 RID: 18136 RVA: 0x00151368 File Offset: 0x0014F568
+		// Token: 0x060046D9 RID: 18137 RVA: 0x00151440 File Offset: 0x0014F640
 		public static bool AreAllPlayersInVirtualStump()
 		{
 			if (!CustomMapManager.hasInstance)
@@ -541,19 +541,19 @@ namespace GorillaTagScripts.ModIO
 			return true;
 		}
 
-		// Token: 0x060046D9 RID: 18137 RVA: 0x001513F0 File Offset: 0x0014F5F0
+		// Token: 0x060046DA RID: 18138 RVA: 0x001514C8 File Offset: 0x0014F6C8
 		public static bool IsRemotePlayerInVirtualStump(string playerID)
 		{
 			return CustomMapManager.instance.virtualStumpPlayerDetector.playerIDsCurrentlyTouching.Contains(playerID);
 		}
 
-		// Token: 0x060046DA RID: 18138 RVA: 0x00151409 File Offset: 0x0014F609
+		// Token: 0x060046DB RID: 18139 RVA: 0x001514E1 File Offset: 0x0014F6E1
 		public static bool IsLocalPlayerInVirtualStump()
 		{
 			return CustomMapManager.hasInstance && CustomMapManager.instance.virtualStumpPlayerDetector.playerIDsCurrentlyTouching.Contains(VRRig.LocalRig.creator.UserId);
 		}
 
-		// Token: 0x060046DB RID: 18139 RVA: 0x00151440 File Offset: 0x0014F640
+		// Token: 0x060046DC RID: 18140 RVA: 0x00151518 File Offset: 0x0014F718
 		private void OnDisconnected()
 		{
 			if (!CustomMapManager.hasInstance)
@@ -580,7 +580,7 @@ namespace GorillaTagScripts.ModIO
 			}
 		}
 
-		// Token: 0x060046DC RID: 18140 RVA: 0x001514AC File Offset: 0x0014F6AC
+		// Token: 0x060046DD RID: 18141 RVA: 0x00151584 File Offset: 0x0014F784
 		private static void RequestPlatformLogin()
 		{
 			ModIOManager.Initialize(delegate(ModIORequestResult result)
@@ -594,7 +594,7 @@ namespace GorillaTagScripts.ModIO
 			});
 		}
 
-		// Token: 0x060046DD RID: 18141 RVA: 0x001514D2 File Offset: 0x0014F6D2
+		// Token: 0x060046DE RID: 18142 RVA: 0x001515AA File Offset: 0x0014F7AA
 		private void OnJoinRoomFailed()
 		{
 			if (!CustomMapManager.hasInstance)
@@ -608,7 +608,7 @@ namespace GorillaTagScripts.ModIO
 			}
 		}
 
-		// Token: 0x060046DE RID: 18142 RVA: 0x001514F0 File Offset: 0x0014F6F0
+		// Token: 0x060046DF RID: 18143 RVA: 0x001515C8 File Offset: 0x0014F7C8
 		private static void EndTeleport(bool teleportSuccessful)
 		{
 			if (CustomMapManager.hasInstance)
@@ -639,7 +639,7 @@ namespace GorillaTagScripts.ModIO
 			}
 		}
 
-		// Token: 0x060046DF RID: 18143 RVA: 0x00151593 File Offset: 0x0014F793
+		// Token: 0x060046E0 RID: 18144 RVA: 0x0015166B File Offset: 0x0014F86B
 		private static IEnumerator DelayedEndTeleport()
 		{
 			yield return new WaitForSecondsRealtime(CustomMapManager.instance.maxPostTeleportRoomProcessingTime);
@@ -647,7 +647,7 @@ namespace GorillaTagScripts.ModIO
 			yield break;
 		}
 
-		// Token: 0x060046E0 RID: 18144 RVA: 0x0015159C File Offset: 0x0014F79C
+		// Token: 0x060046E1 RID: 18145 RVA: 0x00151674 File Offset: 0x0014F874
 		private void OnJoinedRoom()
 		{
 			if (!CustomMapManager.hasInstance)
@@ -666,7 +666,7 @@ namespace GorillaTagScripts.ModIO
 			}
 		}
 
-		// Token: 0x060046E1 RID: 18145 RVA: 0x001515F0 File Offset: 0x0014F7F0
+		// Token: 0x060046E2 RID: 18146 RVA: 0x001516C8 File Offset: 0x0014F8C8
 		public static bool UnloadMod(bool returnToSinglePlayerIfInPublic = true)
 		{
 			if (CustomMapManager.unloadInProgress)
@@ -728,7 +728,7 @@ namespace GorillaTagScripts.ModIO
 			return true;
 		}
 
-		// Token: 0x060046E2 RID: 18146 RVA: 0x0015178D File Offset: 0x0014F98D
+		// Token: 0x060046E3 RID: 18147 RVA: 0x00151865 File Offset: 0x0014FA65
 		private static void OnMapUnloadCompleted()
 		{
 			CustomMapManager.unloadInProgress = false;
@@ -742,7 +742,7 @@ namespace GorillaTagScripts.ModIO
 			}
 		}
 
-		// Token: 0x060046E3 RID: 18147 RVA: 0x001517CC File Offset: 0x0014F9CC
+		// Token: 0x060046E4 RID: 18148 RVA: 0x001518A4 File Offset: 0x0014FAA4
 		public static void LoadMod(ModId modId)
 		{
 			if (!CustomMapManager.hasInstance || CustomMapManager.loadInProgress)
@@ -794,7 +794,7 @@ namespace GorillaTagScripts.ModIO
 			CustomMapManager.instance.LoadSubscribedMod(subscribedMod);
 		}
 
-		// Token: 0x060046E4 RID: 18148 RVA: 0x001518AC File Offset: 0x0014FAAC
+		// Token: 0x060046E5 RID: 18149 RVA: 0x00151984 File Offset: 0x0014FB84
 		private void LoadSubscribedMod(SubscribedMod subscribedMod)
 		{
 			if (subscribedMod.status != SubscribedModStatus.Installed)
@@ -822,7 +822,7 @@ namespace GorillaTagScripts.ModIO
 			this.LoadInstalledMod(subscribedMod.modProfile.id);
 		}
 
-		// Token: 0x060046E5 RID: 18149 RVA: 0x00151944 File Offset: 0x0014FB44
+		// Token: 0x060046E6 RID: 18150 RVA: 0x00151A1C File Offset: 0x0014FC1C
 		private void LoadInstalledMod(ModId installedModId)
 		{
 			CustomMapManager.waitingForModInstall = false;
@@ -843,13 +843,13 @@ namespace GorillaTagScripts.ModIO
 			CustomMapLoader.LoadMap(installedModId.id, files[0].FullName, new Action<bool>(this.OnMapLoadFinished), new Action<MapLoadStatus, int, string>(this.OnMapLoadProgress), new Action<string>(CustomMapManager.OnSceneLoaded));
 		}
 
-		// Token: 0x060046E6 RID: 18150 RVA: 0x001519DB File Offset: 0x0014FBDB
+		// Token: 0x060046E7 RID: 18151 RVA: 0x00151AB3 File Offset: 0x0014FCB3
 		private void OnMapLoadProgress(MapLoadStatus loadStatus, int progress, string message)
 		{
 			CustomMapManager.OnMapLoadStatusChanged.Invoke(loadStatus, progress, message);
 		}
 
-		// Token: 0x060046E7 RID: 18151 RVA: 0x001519EC File Offset: 0x0014FBEC
+		// Token: 0x060046E8 RID: 18152 RVA: 0x00151AC4 File Offset: 0x0014FCC4
 		private void OnMapLoadFinished(bool success)
 		{
 			CustomMapManager.loadInProgress = false;
@@ -872,7 +872,7 @@ namespace GorillaTagScripts.ModIO
 			CustomMapManager.OnMapLoadComplete.Invoke(success);
 		}
 
-		// Token: 0x060046E8 RID: 18152 RVA: 0x00151A80 File Offset: 0x0014FC80
+		// Token: 0x060046E9 RID: 18153 RVA: 0x00151B58 File Offset: 0x0014FD58
 		private void HandleMapLoadFailed(string message = null)
 		{
 			CustomMapManager.loadInProgress = false;
@@ -883,13 +883,13 @@ namespace GorillaTagScripts.ModIO
 			CustomMapManager.OnMapLoadComplete.Invoke(false);
 		}
 
-		// Token: 0x060046E9 RID: 18153 RVA: 0x00151ACE File Offset: 0x0014FCCE
+		// Token: 0x060046EA RID: 18154 RVA: 0x00151BA6 File Offset: 0x0014FDA6
 		public static bool IsUnloading()
 		{
 			return CustomMapManager.unloadInProgress;
 		}
 
-		// Token: 0x060046EA RID: 18154 RVA: 0x00151AD5 File Offset: 0x0014FCD5
+		// Token: 0x060046EB RID: 18155 RVA: 0x00151BAD File Offset: 0x0014FDAD
 		public static bool IsLoading(long mapId = 0L)
 		{
 			if (mapId == 0L)
@@ -899,7 +899,7 @@ namespace GorillaTagScripts.ModIO
 			return CustomMapManager.loadInProgress && CustomMapManager.loadingMapId.id == mapId;
 		}
 
-		// Token: 0x060046EB RID: 18155 RVA: 0x00151AFF File Offset: 0x0014FCFF
+		// Token: 0x060046EC RID: 18156 RVA: 0x00151BD7 File Offset: 0x0014FDD7
 		public static void SetMapToLoadOnLogin(ModId modId)
 		{
 			if (!CustomMapManager.hasInstance)
@@ -909,7 +909,7 @@ namespace GorillaTagScripts.ModIO
 			CustomMapManager.mapIdToLoadOnLogin = modId;
 		}
 
-		// Token: 0x060046EC RID: 18156 RVA: 0x00151B0F File Offset: 0x0014FD0F
+		// Token: 0x060046ED RID: 18157 RVA: 0x00151BE7 File Offset: 0x0014FDE7
 		public static void ClearMapToLoadOnLogin()
 		{
 			if (!CustomMapManager.hasInstance)
@@ -919,7 +919,7 @@ namespace GorillaTagScripts.ModIO
 			CustomMapManager.mapIdToLoadOnLogin = ModId.Null;
 		}
 
-		// Token: 0x060046ED RID: 18157 RVA: 0x00151B24 File Offset: 0x0014FD24
+		// Token: 0x060046EE RID: 18158 RVA: 0x00151BFC File Offset: 0x0014FDFC
 		public static ModId GetRoomMapId()
 		{
 			if (NetworkSystem.Instance.InRoom)
@@ -941,7 +941,7 @@ namespace GorillaTagScripts.ModIO
 			return ModId.Null;
 		}
 
-		// Token: 0x060046EE RID: 18158 RVA: 0x00151BA0 File Offset: 0x0014FDA0
+		// Token: 0x060046EF RID: 18159 RVA: 0x00151C78 File Offset: 0x0014FE78
 		public static void SetRoomMod(long modId)
 		{
 			if (!CustomMapManager.hasInstance || modId == CustomMapManager.currentRoomMapModId.id)
@@ -957,7 +957,7 @@ namespace GorillaTagScripts.ModIO
 			CustomMapManager.OnRoomMapChanged.Invoke(CustomMapManager.currentRoomMapModId);
 		}
 
-		// Token: 0x060046EF RID: 18159 RVA: 0x00151BFC File Offset: 0x0014FDFC
+		// Token: 0x060046F0 RID: 18160 RVA: 0x00151CD4 File Offset: 0x0014FED4
 		public static void ClearRoomMap()
 		{
 			if (!CustomMapManager.hasInstance || CustomMapManager.currentRoomMapModId.Equals(ModId.Null))
@@ -970,13 +970,13 @@ namespace GorillaTagScripts.ModIO
 			CustomMapManager.OnRoomMapChanged.Invoke(ModId.Null);
 		}
 
-		// Token: 0x060046F0 RID: 18160 RVA: 0x00151C4B File Offset: 0x0014FE4B
+		// Token: 0x060046F1 RID: 18161 RVA: 0x00151D23 File Offset: 0x0014FF23
 		public static bool CanLoadRoomMap()
 		{
 			return CustomMapManager.currentRoomMapModId != ModId.Null;
 		}
 
-		// Token: 0x060046F1 RID: 18161 RVA: 0x00151C61 File Offset: 0x0014FE61
+		// Token: 0x060046F2 RID: 18162 RVA: 0x00151D39 File Offset: 0x0014FF39
 		public static void ApproveAndLoadRoomMap()
 		{
 			CustomMapManager.currentRoomMapApproved = true;
@@ -984,7 +984,7 @@ namespace GorillaTagScripts.ModIO
 			CustomMapManager.LoadMod(CustomMapManager.currentRoomMapModId);
 		}
 
-		// Token: 0x060046F2 RID: 18162 RVA: 0x00151C78 File Offset: 0x0014FE78
+		// Token: 0x060046F3 RID: 18163 RVA: 0x00151D50 File Offset: 0x0014FF50
 		public static void RequestEnableTeleportHUD(bool enteringVirtualStump)
 		{
 			if (CustomMapManager.hasInstance)
@@ -993,7 +993,7 @@ namespace GorillaTagScripts.ModIO
 			}
 		}
 
-		// Token: 0x060046F3 RID: 18163 RVA: 0x00151C90 File Offset: 0x0014FE90
+		// Token: 0x060046F4 RID: 18164 RVA: 0x00151D68 File Offset: 0x0014FF68
 		private void EnableTeleportHUD(bool enteringVirtualStump)
 		{
 			if (CustomMapManager.teleportingHUD != null)
@@ -1020,7 +1020,7 @@ namespace GorillaTagScripts.ModIO
 			}
 		}
 
-		// Token: 0x060046F4 RID: 18164 RVA: 0x00151D21 File Offset: 0x0014FF21
+		// Token: 0x060046F5 RID: 18165 RVA: 0x00151DF9 File Offset: 0x0014FFF9
 		public static void DisableTeleportHUD()
 		{
 			if (CustomMapManager.teleportingHUD != null)
@@ -1029,20 +1029,20 @@ namespace GorillaTagScripts.ModIO
 			}
 		}
 
-		// Token: 0x060046F5 RID: 18165 RVA: 0x00151D40 File Offset: 0x0014FF40
+		// Token: 0x060046F6 RID: 18166 RVA: 0x00151E18 File Offset: 0x00150018
 		public static void LoadZoneTriggered(int[] scenesToLoad, int[] scenesToUnload)
 		{
 			CustomMapLoader.LoadZoneTriggered(scenesToLoad, scenesToUnload, new Action<string>(CustomMapManager.OnSceneLoaded), new Action<string>(CustomMapManager.OnSceneUnloaded));
 		}
 
-		// Token: 0x060046F6 RID: 18166 RVA: 0x00151D61 File Offset: 0x0014FF61
+		// Token: 0x060046F7 RID: 18167 RVA: 0x00151E39 File Offset: 0x00150039
 		private static void OnSceneLoaded(string sceneName)
 		{
 			CMSSerializer.ProcessSceneLoad(sceneName);
 			CustomMapManager.ProcessZoneShaderSettings(sceneName);
 		}
 
-		// Token: 0x060046F7 RID: 18167 RVA: 0x00151D70 File Offset: 0x0014FF70
+		// Token: 0x060046F8 RID: 18168 RVA: 0x00151E48 File Offset: 0x00150048
 		private static void OnSceneUnloaded(string sceneName)
 		{
 			CMSSerializer.UnregisterTriggers(sceneName);
@@ -1055,7 +1055,7 @@ namespace GorillaTagScripts.ModIO
 			}
 		}
 
-		// Token: 0x060046F8 RID: 18168 RVA: 0x00151DB8 File Offset: 0x0014FFB8
+		// Token: 0x060046F9 RID: 18169 RVA: 0x00151E90 File Offset: 0x00150090
 		private static void OnSceneTriggerHistoryProcessed(string sceneName)
 		{
 			CapsuleCollider bodyCollider = GTPlayer.Instance.bodyCollider;
@@ -1114,7 +1114,7 @@ namespace GorillaTagScripts.ModIO
 			}
 		}
 
-		// Token: 0x060046F9 RID: 18169 RVA: 0x00151F97 File Offset: 0x00150197
+		// Token: 0x060046FA RID: 18170 RVA: 0x0015206F File Offset: 0x0015026F
 		public static void SetDefaultZoneShaderSettings(ZoneShaderSettings defaultCustomMapShaderSettings, CMSZoneShaderSettings.CMSZoneShaderProperties defaultZoneShaderProperties)
 		{
 			if (CustomMapManager.hasInstance)
@@ -1126,7 +1126,7 @@ namespace GorillaTagScripts.ModIO
 			}
 		}
 
-		// Token: 0x060046FA RID: 18170 RVA: 0x00151FC8 File Offset: 0x001501C8
+		// Token: 0x060046FB RID: 18171 RVA: 0x001520A0 File Offset: 0x001502A0
 		private static void ProcessZoneShaderSettings(string loadedSceneName)
 		{
 			if (CustomMapManager.hasInstance && CustomMapManager.customMapDefaultZoneShaderSettingsInitialized && CustomMapManager.customMapDefaultZoneShaderProperties.isInitialized)
@@ -1152,13 +1152,13 @@ namespace GorillaTagScripts.ModIO
 			}
 		}
 
-		// Token: 0x060046FB RID: 18171 RVA: 0x001520F2 File Offset: 0x001502F2
+		// Token: 0x060046FC RID: 18172 RVA: 0x001521CA File Offset: 0x001503CA
 		public static void AddZoneShaderSettings(ZoneShaderSettings zoneShaderSettings)
 		{
 			CustomMapManager.allCustomMapZoneShaderSettings.AddIfNew(zoneShaderSettings);
 		}
 
-		// Token: 0x060046FC RID: 18172 RVA: 0x001520FF File Offset: 0x001502FF
+		// Token: 0x060046FD RID: 18173 RVA: 0x001521D7 File Offset: 0x001503D7
 		public static void ActivateDefaultZoneShaderSettings()
 		{
 			if (CustomMapManager.hasInstance && CustomMapManager.customMapDefaultZoneShaderSettingsInitialized)
@@ -1172,7 +1172,7 @@ namespace GorillaTagScripts.ModIO
 			}
 		}
 
-		// Token: 0x060046FD RID: 18173 RVA: 0x0015213C File Offset: 0x0015033C
+		// Token: 0x060046FE RID: 18174 RVA: 0x00152214 File Offset: 0x00150414
 		public static void ReturnToVirtualStump()
 		{
 			if (!CustomMapManager.hasInstance)
@@ -1194,166 +1194,166 @@ namespace GorillaTagScripts.ModIO
 			}
 		}
 
-		// Token: 0x0400494A RID: 18762
+		// Token: 0x0400494B RID: 18763
 		[OnEnterPlay_SetNull]
 		private static volatile CustomMapManager instance;
 
-		// Token: 0x0400494B RID: 18763
+		// Token: 0x0400494C RID: 18764
 		[OnEnterPlay_Set(false)]
 		private static bool hasInstance = false;
 
-		// Token: 0x0400494C RID: 18764
+		// Token: 0x0400494D RID: 18765
 		[SerializeField]
 		private GameObject virtualStumpToggleableRoot;
 
-		// Token: 0x0400494D RID: 18765
+		// Token: 0x0400494E RID: 18766
 		[SerializeField]
 		private GorillaNetworkJoinTrigger exitVirtualStumpJoinTrigger;
 
-		// Token: 0x0400494E RID: 18766
+		// Token: 0x0400494F RID: 18767
 		[SerializeField]
 		private Transform returnToVirtualStumpTeleportLocation;
 
-		// Token: 0x0400494F RID: 18767
+		// Token: 0x04004950 RID: 18768
 		[SerializeField]
 		private List<Transform> virtualStumpTeleportLocations;
 
-		// Token: 0x04004950 RID: 18768
+		// Token: 0x04004951 RID: 18769
 		[SerializeField]
 		private ZoneEjectLocations[] virtualStumpEjectLocations;
 
-		// Token: 0x04004951 RID: 18769
+		// Token: 0x04004952 RID: 18770
 		[SerializeField]
 		private GameObject[] rootObjectsToDeactivateAfterTeleport;
 
-		// Token: 0x04004952 RID: 18770
+		// Token: 0x04004953 RID: 18771
 		[SerializeField]
 		private GorillaFriendCollider virtualStumpPlayerDetector;
 
-		// Token: 0x04004953 RID: 18771
+		// Token: 0x04004954 RID: 18772
 		[SerializeField]
 		private ZoneShaderSettings virtualStumpZoneShaderSettings;
 
-		// Token: 0x04004954 RID: 18772
+		// Token: 0x04004955 RID: 18773
 		[SerializeField]
 		private BetterDayNightManager dayNightManager;
 
-		// Token: 0x04004955 RID: 18773
+		// Token: 0x04004956 RID: 18774
 		[SerializeField]
 		private ZoneShaderSettings customMapDefaultZoneShaderSettings;
 
-		// Token: 0x04004956 RID: 18774
+		// Token: 0x04004957 RID: 18775
 		[SerializeField]
 		private GameObject teleportingHUDPrefab;
 
-		// Token: 0x04004957 RID: 18775
+		// Token: 0x04004958 RID: 18776
 		[SerializeField]
 		private AudioSource localTeleportSFXSource;
 
-		// Token: 0x04004958 RID: 18776
+		// Token: 0x04004959 RID: 18777
 		private static GTZone entranceZone;
 
-		// Token: 0x04004959 RID: 18777
+		// Token: 0x0400495A RID: 18778
 		private static VirtualStumpTeleporterSerializer teleporterNetworkObj = null;
 
-		// Token: 0x0400495A RID: 18778
+		// Token: 0x0400495B RID: 18779
 		[SerializeField]
 		private float maxPostTeleportRoomProcessingTime = 15f;
 
-		// Token: 0x0400495B RID: 18779
+		// Token: 0x0400495C RID: 18780
 		private static bool customMapDefaultZoneShaderSettingsInitialized;
 
-		// Token: 0x0400495C RID: 18780
+		// Token: 0x0400495D RID: 18781
 		private static ZoneShaderSettings loadedCustomMapDefaultZoneShaderSettings;
 
-		// Token: 0x0400495D RID: 18781
+		// Token: 0x0400495E RID: 18782
 		private static CMSZoneShaderSettings.CMSZoneShaderProperties customMapDefaultZoneShaderProperties;
 
-		// Token: 0x0400495E RID: 18782
+		// Token: 0x0400495F RID: 18783
 		private static readonly List<ZoneShaderSettings> allCustomMapZoneShaderSettings = new List<ZoneShaderSettings>();
 
-		// Token: 0x0400495F RID: 18783
+		// Token: 0x04004960 RID: 18784
 		private static GameModeSelectorButtonLayout gamemodeButtonLayout;
 
-		// Token: 0x04004960 RID: 18784
+		// Token: 0x04004961 RID: 18785
 		private static bool loadInProgress = false;
 
-		// Token: 0x04004961 RID: 18785
+		// Token: 0x04004962 RID: 18786
 		private static ModId loadingMapId = ModId.Null;
 
-		// Token: 0x04004962 RID: 18786
+		// Token: 0x04004963 RID: 18787
 		private static bool unloadInProgress = false;
 
-		// Token: 0x04004963 RID: 18787
+		// Token: 0x04004964 RID: 18788
 		private static ModId unloadingMapId = ModId.Null;
 
-		// Token: 0x04004964 RID: 18788
+		// Token: 0x04004965 RID: 18789
 		private static List<ModId> abortModLoadIds = new List<ModId>();
 
-		// Token: 0x04004965 RID: 18789
+		// Token: 0x04004966 RID: 18790
 		private static bool waitingForModDownload = false;
 
-		// Token: 0x04004966 RID: 18790
+		// Token: 0x04004967 RID: 18791
 		private static bool waitingForModInstall = false;
 
-		// Token: 0x04004967 RID: 18791
+		// Token: 0x04004968 RID: 18792
 		private static ModId waitingForModInstallId = ModId.Null;
 
-		// Token: 0x04004968 RID: 18792
+		// Token: 0x04004969 RID: 18793
 		private static bool preTeleportInPrivateRoom = false;
 
-		// Token: 0x04004969 RID: 18793
+		// Token: 0x0400496A RID: 18794
 		private static string pendingNewPrivateRoomName = "";
 
-		// Token: 0x0400496A RID: 18794
+		// Token: 0x0400496B RID: 18795
 		private static ModId mapIdToLoadOnLogin = ModId.Null;
 
-		// Token: 0x0400496B RID: 18795
+		// Token: 0x0400496C RID: 18796
 		private static Action<bool> currentTeleportCallback;
 
-		// Token: 0x0400496C RID: 18796
+		// Token: 0x0400496D RID: 18797
 		private static bool waitingForLoginDisconnect = false;
 
-		// Token: 0x0400496D RID: 18797
+		// Token: 0x0400496E RID: 18798
 		private static bool waitingForDisconnect = false;
 
-		// Token: 0x0400496E RID: 18798
+		// Token: 0x0400496F RID: 18799
 		private static bool waitingForRoomJoin = false;
 
-		// Token: 0x0400496F RID: 18799
+		// Token: 0x04004970 RID: 18800
 		private static bool shouldRetryJoin = false;
 
-		// Token: 0x04004970 RID: 18800
+		// Token: 0x04004971 RID: 18801
 		private static short pendingTeleportVFXIdx = -1;
 
-		// Token: 0x04004971 RID: 18801
+		// Token: 0x04004972 RID: 18802
 		private static bool exitVirtualStumpPending = false;
 
-		// Token: 0x04004972 RID: 18802
+		// Token: 0x04004973 RID: 18803
 		private static ModId currentRoomMapModId = ModId.Null;
 
-		// Token: 0x04004973 RID: 18803
+		// Token: 0x04004974 RID: 18804
 		private static bool currentRoomMapApproved = false;
 
-		// Token: 0x04004974 RID: 18804
+		// Token: 0x04004975 RID: 18805
 		private static VirtualStumpTeleportingHUD teleportingHUD;
 
-		// Token: 0x04004975 RID: 18805
+		// Token: 0x04004976 RID: 18806
 		private static Coroutine delayedEndTeleportCoroutine;
 
-		// Token: 0x04004976 RID: 18806
+		// Token: 0x04004977 RID: 18807
 		private static Coroutine delayedJoinCoroutine;
 
-		// Token: 0x04004977 RID: 18807
+		// Token: 0x04004978 RID: 18808
 		public static UnityEvent<ModId> OnRoomMapChanged = new UnityEvent<ModId>();
 
-		// Token: 0x04004978 RID: 18808
+		// Token: 0x04004979 RID: 18809
 		public static UnityEvent<MapLoadStatus, int, string> OnMapLoadStatusChanged = new UnityEvent<MapLoadStatus, int, string>();
 
-		// Token: 0x04004979 RID: 18809
+		// Token: 0x0400497A RID: 18810
 		public static UnityEvent<bool> OnMapLoadComplete = new UnityEvent<bool>();
 
-		// Token: 0x0400497A RID: 18810
+		// Token: 0x0400497B RID: 18811
 		public static UnityEvent OnMapUnloadComplete = new UnityEvent();
 	}
 }

@@ -8,13 +8,13 @@ using UnityEngine.Serialization;
 [CreateAssetMenu(fileName = "BuilderPieceSet01", menuName = "Gorilla Tag/Builder/PieceSet", order = 0)]
 public class BuilderPieceSet : ScriptableObject
 {
-	// Token: 0x06001F22 RID: 7970 RVA: 0x0009AD3D File Offset: 0x00098F3D
+	// Token: 0x06001F22 RID: 7970 RVA: 0x0009AD5D File Offset: 0x00098F5D
 	public int GetIntIdentifier()
 	{
 		return this.playfabID.GetStaticHash();
 	}
 
-	// Token: 0x06001F23 RID: 7971 RVA: 0x0009AD4C File Offset: 0x00098F4C
+	// Token: 0x06001F23 RID: 7971 RVA: 0x0009AD6C File Offset: 0x00098F6C
 	public DateTime GetScheduleDateTime()
 	{
 		if (this.isScheduled)

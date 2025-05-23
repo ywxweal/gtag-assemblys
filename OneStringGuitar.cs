@@ -9,13 +9,13 @@ using UnityEngine;
 // Token: 0x02000413 RID: 1043
 public class OneStringGuitar : TransferrableObject
 {
-	// Token: 0x06001976 RID: 6518 RVA: 0x0007B0E4 File Offset: 0x000792E4
+	// Token: 0x06001976 RID: 6518 RVA: 0x0007B104 File Offset: 0x00079304
 	public override Matrix4x4 GetDefaultTransformationMatrix()
 	{
 		return Matrix4x4.identity;
 	}
 
-	// Token: 0x06001977 RID: 6519 RVA: 0x0007B0EC File Offset: 0x000792EC
+	// Token: 0x06001977 RID: 6519 RVA: 0x0007B10C File Offset: 0x0007930C
 	public override void OnSpawn(VRRig rig)
 	{
 		base.OnSpawn(rig);
@@ -49,7 +49,7 @@ public class OneStringGuitar : TransferrableObject
 		}
 	}
 
-	// Token: 0x06001978 RID: 6520 RVA: 0x0007B234 File Offset: 0x00079434
+	// Token: 0x06001978 RID: 6520 RVA: 0x0007B254 File Offset: 0x00079454
 	private Collider _GetChestColliderByPath(VRRig vrRig, string chestColliderLeftPath)
 	{
 		Transform transform;
@@ -67,7 +67,7 @@ public class OneStringGuitar : TransferrableObject
 		return component;
 	}
 
-	// Token: 0x06001979 RID: 6521 RVA: 0x0007B2A4 File Offset: 0x000794A4
+	// Token: 0x06001979 RID: 6521 RVA: 0x0007B2C4 File Offset: 0x000794C4
 	internal override void OnEnable()
 	{
 		base.OnEnable();
@@ -93,7 +93,7 @@ public class OneStringGuitar : TransferrableObject
 		this.initRotation = Quaternion.identity;
 	}
 
-	// Token: 0x0600197A RID: 6522 RVA: 0x0007B338 File Offset: 0x00079538
+	// Token: 0x0600197A RID: 6522 RVA: 0x0007B358 File Offset: 0x00079558
 	internal override void OnDisable()
 	{
 		base.OnDisable();
@@ -103,7 +103,7 @@ public class OneStringGuitar : TransferrableObject
 		this.itemState = TransferrableObject.ItemStates.State0;
 	}
 
-	// Token: 0x0600197B RID: 6523 RVA: 0x0007B35C File Offset: 0x0007955C
+	// Token: 0x0600197B RID: 6523 RVA: 0x0007B37C File Offset: 0x0007957C
 	public override bool OnRelease(DropZone zoneReleased, GameObject releasingHand)
 	{
 		if (!base.OnRelease(zoneReleased, releasingHand))
@@ -122,7 +122,7 @@ public class OneStringGuitar : TransferrableObject
 		return true;
 	}
 
-	// Token: 0x0600197C RID: 6524 RVA: 0x0007B388 File Offset: 0x00079588
+	// Token: 0x0600197C RID: 6524 RVA: 0x0007B3A8 File Offset: 0x000795A8
 	protected override void LateUpdateShared()
 	{
 		base.LateUpdateShared();
@@ -258,7 +258,7 @@ public class OneStringGuitar : TransferrableObject
 		this.lastState = (OneStringGuitar.GuitarStates)this.itemState;
 	}
 
-	// Token: 0x0600197D RID: 6525 RVA: 0x0007B924 File Offset: 0x00079B24
+	// Token: 0x0600197D RID: 6525 RVA: 0x0007B944 File Offset: 0x00079B44
 	public override void PlayNote(int note, float volume)
 	{
 		this.audioSource.time = 0.005f;
@@ -268,13 +268,13 @@ public class OneStringGuitar : TransferrableObject
 		base.PlayNote(note, volume);
 	}
 
-	// Token: 0x0600197E RID: 6526 RVA: 0x0007B974 File Offset: 0x00079B74
+	// Token: 0x0600197E RID: 6526 RVA: 0x0007B994 File Offset: 0x00079B94
 	private bool Unsnap()
 	{
 		return (this.parentHand.position - this.chestTouch.position).magnitude > this.unsnapDistance;
 	}
 
-	// Token: 0x0600197F RID: 6527 RVA: 0x0007B9AC File Offset: 0x00079BAC
+	// Token: 0x0600197F RID: 6527 RVA: 0x0007B9CC File Offset: 0x00079BCC
 	private void CheckFretFinger(Transform finger)
 	{
 		for (int i = 0; i < this.collidersHit.Length; i++)
@@ -307,7 +307,7 @@ public class OneStringGuitar : TransferrableObject
 		this.lastFretIndex = -1;
 	}
 
-	// Token: 0x06001980 RID: 6528 RVA: 0x0007BAE0 File Offset: 0x00079CE0
+	// Token: 0x06001980 RID: 6528 RVA: 0x0007BB00 File Offset: 0x00079D00
 	public void UpdateNonPlayingPosition(Vector3 positionTarget, Quaternion rotationTarget)
 	{
 		if (!this.angleSnapped)
@@ -334,19 +334,19 @@ public class OneStringGuitar : TransferrableObject
 		}
 	}
 
-	// Token: 0x06001981 RID: 6529 RVA: 0x0007BBA4 File Offset: 0x00079DA4
+	// Token: 0x06001981 RID: 6529 RVA: 0x0007BBC4 File Offset: 0x00079DC4
 	public override bool CanDeactivate()
 	{
 		return !base.gameObject.activeSelf || this.itemState == TransferrableObject.ItemStates.State0 || this.itemState == TransferrableObject.ItemStates.State1;
 	}
 
-	// Token: 0x06001982 RID: 6530 RVA: 0x0007BBC7 File Offset: 0x00079DC7
+	// Token: 0x06001982 RID: 6530 RVA: 0x0007BBE7 File Offset: 0x00079DE7
 	public override bool CanActivate()
 	{
 		return this.itemState == TransferrableObject.ItemStates.State0 || this.itemState == TransferrableObject.ItemStates.State1;
 	}
 
-	// Token: 0x06001983 RID: 6531 RVA: 0x0007BBDD File Offset: 0x00079DDD
+	// Token: 0x06001983 RID: 6531 RVA: 0x0007BBFD File Offset: 0x00079DFD
 	public override void OnActivate()
 	{
 		base.OnActivate();
@@ -358,63 +358,63 @@ public class OneStringGuitar : TransferrableObject
 		this.itemState = TransferrableObject.ItemStates.State0;
 	}
 
-	// Token: 0x06001984 RID: 6532 RVA: 0x0007BC00 File Offset: 0x00079E00
+	// Token: 0x06001984 RID: 6532 RVA: 0x0007BC20 File Offset: 0x00079E20
 	public void GenerateVectorOffsetLeft()
 	{
 		this.chestOffsetLeft = base.transform.position - this.chestColliderLeft.transform.position;
 		this.holdingOffsetRotationLeft = Quaternion.LookRotation(base.transform.position - this.chestColliderLeft.transform.position);
 	}
 
-	// Token: 0x06001985 RID: 6533 RVA: 0x0007BC60 File Offset: 0x00079E60
+	// Token: 0x06001985 RID: 6533 RVA: 0x0007BC80 File Offset: 0x00079E80
 	public void GenerateVectorOffsetRight()
 	{
 		this.chestOffsetRight = base.transform.position - this.chestColliderRight.transform.position;
 		this.holdingOffsetRotationRight = Quaternion.LookRotation(base.transform.position - this.chestColliderRight.transform.position);
 	}
 
-	// Token: 0x06001986 RID: 6534 RVA: 0x0007BCBE File Offset: 0x00079EBE
+	// Token: 0x06001986 RID: 6534 RVA: 0x0007BCDE File Offset: 0x00079EDE
 	public void GenerateReverseGripOffsetLeft()
 	{
 		this.reverseGripPositionLeft = base.transform.localPosition;
 		this.reverseGripQuatLeft = base.transform.localRotation;
 	}
 
-	// Token: 0x06001987 RID: 6535 RVA: 0x0007BCE2 File Offset: 0x00079EE2
+	// Token: 0x06001987 RID: 6535 RVA: 0x0007BD02 File Offset: 0x00079F02
 	public void GenerateClubOffsetLeft()
 	{
 		this.startPositionLeft = base.transform.localPosition;
 		this.startQuatLeft = base.transform.localRotation;
 	}
 
-	// Token: 0x06001988 RID: 6536 RVA: 0x0007BD06 File Offset: 0x00079F06
+	// Token: 0x06001988 RID: 6536 RVA: 0x0007BD26 File Offset: 0x00079F26
 	public void GenerateReverseGripOffsetRight()
 	{
 		this.reverseGripPositionRight = base.transform.localPosition;
 		this.reverseGripQuatRight = base.transform.localRotation;
 	}
 
-	// Token: 0x06001989 RID: 6537 RVA: 0x0007BD2A File Offset: 0x00079F2A
+	// Token: 0x06001989 RID: 6537 RVA: 0x0007BD4A File Offset: 0x00079F4A
 	public void GenerateClubOffsetRight()
 	{
 		this.startPositionRight = base.transform.localPosition;
 		this.startQuatRight = base.transform.localRotation;
 	}
 
-	// Token: 0x0600198A RID: 6538 RVA: 0x0007BD4E File Offset: 0x00079F4E
+	// Token: 0x0600198A RID: 6538 RVA: 0x0007BD6E File Offset: 0x00079F6E
 	public void TestClubPositionRight()
 	{
 		base.transform.localPosition = this.startPositionRight;
 		base.transform.localRotation = this.startQuatRight;
 	}
 
-	// Token: 0x0600198B RID: 6539 RVA: 0x0007BD72 File Offset: 0x00079F72
+	// Token: 0x0600198B RID: 6539 RVA: 0x0007BD92 File Offset: 0x00079F92
 	public void TestReverseGripPositionRight()
 	{
 		base.transform.localPosition = this.reverseGripPositionRight;
 		base.transform.localRotation = this.reverseGripQuatRight;
 	}
 
-	// Token: 0x0600198C RID: 6540 RVA: 0x0007BD98 File Offset: 0x00079F98
+	// Token: 0x0600198C RID: 6540 RVA: 0x0007BDB8 File Offset: 0x00079FB8
 	public void TestPlayingPositionRight()
 	{
 		base.transform.rotation = Quaternion.LookRotation(this.parentHand.position - this.currentChestCollider.transform.position) * this.holdingOffsetRotationRight;

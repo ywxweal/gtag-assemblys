@@ -6,7 +6,7 @@ using UnityEngine;
 // Token: 0x0200043E RID: 1086
 public class SmoothLoop : MonoBehaviour, IGorillaSliceableSimple, IBuildValidation
 {
-	// Token: 0x06001AC4 RID: 6852 RVA: 0x00082E45 File Offset: 0x00081045
+	// Token: 0x06001AC4 RID: 6852 RVA: 0x00082E65 File Offset: 0x00081065
 	public bool BuildValidationCheck()
 	{
 		if (this.source == null)
@@ -17,7 +17,7 @@ public class SmoothLoop : MonoBehaviour, IGorillaSliceableSimple, IBuildValidati
 		return true;
 	}
 
-	// Token: 0x06001AC5 RID: 6853 RVA: 0x00082E68 File Offset: 0x00081068
+	// Token: 0x06001AC5 RID: 6853 RVA: 0x00082E88 File Offset: 0x00081088
 	private void Start()
 	{
 		if (this.delay != 0f && !this.randomStart)
@@ -36,7 +36,7 @@ public class SmoothLoop : MonoBehaviour, IGorillaSliceableSimple, IBuildValidati
 		}
 	}
 
-	// Token: 0x06001AC6 RID: 6854 RVA: 0x00082EE8 File Offset: 0x000810E8
+	// Token: 0x06001AC6 RID: 6854 RVA: 0x00082F08 File Offset: 0x00081108
 	public void SliceUpdate()
 	{
 		if (!base.enabled)
@@ -49,7 +49,7 @@ public class SmoothLoop : MonoBehaviour, IGorillaSliceableSimple, IBuildValidati
 		}
 	}
 
-	// Token: 0x06001AC7 RID: 6855 RVA: 0x00082F28 File Offset: 0x00081128
+	// Token: 0x06001AC7 RID: 6855 RVA: 0x00082F48 File Offset: 0x00081148
 	public void OnEnable()
 	{
 		GorillaSlicerSimpleManager.RegisterSliceable(this, GorillaSlicerSimpleManager.UpdateStep.Update);
@@ -73,7 +73,7 @@ public class SmoothLoop : MonoBehaviour, IGorillaSliceableSimple, IBuildValidati
 		GorillaSlicerSimpleManager.UnregisterSliceable(this, GorillaSlicerSimpleManager.UpdateStep.Update);
 	}
 
-	// Token: 0x06001AC9 RID: 6857 RVA: 0x00082F8C File Offset: 0x0008118C
+	// Token: 0x06001AC9 RID: 6857 RVA: 0x00082FAC File Offset: 0x000811AC
 	private bool sourceCheck()
 	{
 		if (!this.source || !this.source.clip)
@@ -86,7 +86,7 @@ public class SmoothLoop : MonoBehaviour, IGorillaSliceableSimple, IBuildValidati
 		return true;
 	}
 
-	// Token: 0x06001ACA RID: 6858 RVA: 0x00082FE3 File Offset: 0x000811E3
+	// Token: 0x06001ACA RID: 6858 RVA: 0x00083003 File Offset: 0x00081203
 	public IEnumerator DelayedStart()
 	{
 		if (!this.sourceCheck())

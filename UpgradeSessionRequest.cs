@@ -6,6 +6,6 @@ using KID.Model;
 [Serializable]
 public class UpgradeSessionRequest : KIDRequestData
 {
-	// Token: 0x04003704 RID: 14084
+	// Token: 0x04003705 RID: 14085
 	public List<RequestedPermission> Permissions;
 }

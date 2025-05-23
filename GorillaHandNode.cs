@@ -5,7 +5,7 @@ using UnityEngine;
 public class GorillaHandNode : MonoBehaviour
 {
 	// Token: 0x170003A3 RID: 931
-	// (get) Token: 0x06002663 RID: 9827 RVA: 0x000BE0AC File Offset: 0x000BC2AC
+	// (get) Token: 0x06002663 RID: 9827 RVA: 0x000BE0CC File Offset: 0x000BC2CC
 	public bool isGripping
 	{
 		get
@@ -15,7 +15,7 @@ public class GorillaHandNode : MonoBehaviour
 	}
 
 	// Token: 0x170003A4 RID: 932
-	// (get) Token: 0x06002664 RID: 9828 RVA: 0x000BE0B4 File Offset: 0x000BC2B4
+	// (get) Token: 0x06002664 RID: 9828 RVA: 0x000BE0D4 File Offset: 0x000BC2D4
 	public bool isLeftHand
 	{
 		get
@@ -25,7 +25,7 @@ public class GorillaHandNode : MonoBehaviour
 	}
 
 	// Token: 0x170003A5 RID: 933
-	// (get) Token: 0x06002665 RID: 9829 RVA: 0x000BE0BC File Offset: 0x000BC2BC
+	// (get) Token: 0x06002665 RID: 9829 RVA: 0x000BE0DC File Offset: 0x000BC2DC
 	public bool isRightHand
 	{
 		get
@@ -34,13 +34,13 @@ public class GorillaHandNode : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06002666 RID: 9830 RVA: 0x000BE0C4 File Offset: 0x000BC2C4
+	// Token: 0x06002666 RID: 9830 RVA: 0x000BE0E4 File Offset: 0x000BC2E4
 	private void Awake()
 	{
 		this.Setup();
 	}
 
-	// Token: 0x06002667 RID: 9831 RVA: 0x000BE0CC File Offset: 0x000BC2CC
+	// Token: 0x06002667 RID: 9831 RVA: 0x000BE0EC File Offset: 0x000BC2EC
 	private bool PollGrip()
 	{
 		if (this.rig == null)
@@ -53,7 +53,7 @@ public class GorillaHandNode : MonoBehaviour
 		return flag && flag2 && flag3;
 	}
 
-	// Token: 0x06002668 RID: 9832 RVA: 0x000BE120 File Offset: 0x000BC320
+	// Token: 0x06002668 RID: 9832 RVA: 0x000BE140 File Offset: 0x000BC340
 	private void Setup()
 	{
 		if (this.rig == null)
@@ -97,19 +97,19 @@ public class GorillaHandNode : MonoBehaviour
 	{
 	}
 
-	// Token: 0x0600266A RID: 9834 RVA: 0x000BE2DF File Offset: 0x000BC4DF
+	// Token: 0x0600266A RID: 9834 RVA: 0x000BE2FF File Offset: 0x000BC4FF
 	private float PollIndex()
 	{
 		return Mathf.Clamp01(this.vrIndex.calcT / 0.88f);
 	}
 
-	// Token: 0x0600266B RID: 9835 RVA: 0x000BE2F7 File Offset: 0x000BC4F7
+	// Token: 0x0600266B RID: 9835 RVA: 0x000BE317 File Offset: 0x000BC517
 	private float PollMiddle()
 	{
 		return this.vrIndex.calcT;
 	}
 
-	// Token: 0x0600266C RID: 9836 RVA: 0x000BE2F7 File Offset: 0x000BC4F7
+	// Token: 0x0600266C RID: 9836 RVA: 0x000BE317 File Offset: 0x000BC517
 	private float PollThumb()
 	{
 		return this.vrIndex.calcT;

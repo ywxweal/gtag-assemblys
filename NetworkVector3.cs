@@ -7,7 +7,7 @@ using UnityEngine;
 internal class NetworkVector3
 {
 	// Token: 0x170005D8 RID: 1496
-	// (get) Token: 0x06003B2E RID: 15150 RVA: 0x0011AED6 File Offset: 0x001190D6
+	// (get) Token: 0x06003B2F RID: 15151 RVA: 0x0011AFAE File Offset: 0x001191AE
 	public Vector3 CurrentSyncTarget
 	{
 		get
@@ -16,7 +16,7 @@ internal class NetworkVector3
 		}
 	}
 
-	// Token: 0x06003B2F RID: 15151 RVA: 0x0011AEE0 File Offset: 0x001190E0
+	// Token: 0x06003B30 RID: 15152 RVA: 0x0011AFB8 File Offset: 0x001191B8
 	public void SetNewSyncTarget(Vector3 newTarget)
 	{
 		Vector3 currentSyncTarget = this.CurrentSyncTarget;
@@ -26,7 +26,7 @@ internal class NetworkVector3
 		this.lastSetNetTime = PhotonNetwork.Time;
 	}
 
-	// Token: 0x06003B30 RID: 15152 RVA: 0x0011AF24 File Offset: 0x00119124
+	// Token: 0x06003B31 RID: 15153 RVA: 0x0011AFFC File Offset: 0x001191FC
 	public Vector3 GetPredictedFuture()
 	{
 		float num = (float)(PhotonNetwork.Time - this.lastSetNetTime) * (float)PhotonNetwork.SerializationRate;
@@ -34,7 +34,7 @@ internal class NetworkVector3
 		return this._currentSyncTarget + vector;
 	}
 
-	// Token: 0x06003B31 RID: 15153 RVA: 0x0011AF5F File Offset: 0x0011915F
+	// Token: 0x06003B32 RID: 15154 RVA: 0x0011B037 File Offset: 0x00119237
 	public void Reset()
 	{
 		this._currentSyncTarget = Vector3.zero;
@@ -42,12 +42,12 @@ internal class NetworkVector3
 		this.lastSetNetTime = 0.0;
 	}
 
-	// Token: 0x04003FCB RID: 16331
+	// Token: 0x04003FCC RID: 16332
 	private double lastSetNetTime;
 
-	// Token: 0x04003FCC RID: 16332
+	// Token: 0x04003FCD RID: 16333
 	private Vector3 _currentSyncTarget = Vector3.zero;
 
-	// Token: 0x04003FCD RID: 16333
+	// Token: 0x04003FCE RID: 16334
 	private Vector3 distanceTraveled = Vector3.zero;
 }

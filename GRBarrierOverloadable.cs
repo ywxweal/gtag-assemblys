@@ -4,14 +4,14 @@ using UnityEngine;
 // Token: 0x02000593 RID: 1427
 public class GRBarrierOverloadable : MonoBehaviour
 {
-	// Token: 0x060022F4 RID: 8948 RVA: 0x000AF02D File Offset: 0x000AD22D
+	// Token: 0x060022F4 RID: 8948 RVA: 0x000AF04D File Offset: 0x000AD24D
 	private void OnEnable()
 	{
 		this.tool.OnEnergyChange += this.OnEnergyChange;
 		this.gameEntity.OnStateChanged += this.OnEntityStateChanged;
 	}
 
-	// Token: 0x060022F5 RID: 8949 RVA: 0x000AF060 File Offset: 0x000AD260
+	// Token: 0x060022F5 RID: 8949 RVA: 0x000AF080 File Offset: 0x000AD280
 	private void OnEnergyChange(GRTool tool, int energyChange)
 	{
 		if (this.state == GRBarrierOverloadable.State.Active && tool.energy >= tool.maxEnergy)
@@ -24,7 +24,7 @@ public class GRBarrierOverloadable : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060022F6 RID: 8950 RVA: 0x000AF0B1 File Offset: 0x000AD2B1
+	// Token: 0x060022F6 RID: 8950 RVA: 0x000AF0D1 File Offset: 0x000AD2D1
 	private void OnEntityStateChanged(long prevState, long nextState)
 	{
 		if (!GameEntityManager.instance.IsAuthority())
@@ -33,7 +33,7 @@ public class GRBarrierOverloadable : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060022F7 RID: 8951 RVA: 0x000AF0CC File Offset: 0x000AD2CC
+	// Token: 0x060022F7 RID: 8951 RVA: 0x000AF0EC File Offset: 0x000AD2EC
 	public void SetState(GRBarrierOverloadable.State newState)
 	{
 		if (this.state != newState)

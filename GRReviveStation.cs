@@ -5,11 +5,11 @@ using UnityEngine;
 public class GRReviveStation : MonoBehaviour
 {
 	// Token: 0x17000369 RID: 873
-	// (get) Token: 0x060023B6 RID: 9142 RVA: 0x000B3D10 File Offset: 0x000B1F10
-	// (set) Token: 0x060023B7 RID: 9143 RVA: 0x000B3D18 File Offset: 0x000B1F18
+	// (get) Token: 0x060023B6 RID: 9142 RVA: 0x000B3D30 File Offset: 0x000B1F30
+	// (set) Token: 0x060023B7 RID: 9143 RVA: 0x000B3D38 File Offset: 0x000B1F38
 	public int Index { get; set; }
 
-	// Token: 0x060023B8 RID: 9144 RVA: 0x000B3D24 File Offset: 0x000B1F24
+	// Token: 0x060023B8 RID: 9144 RVA: 0x000B3D44 File Offset: 0x000B1F44
 	public void RevivePlayer(GRPlayer player)
 	{
 		if (player.State != GRPlayer.GRPlayerState.Alive)
@@ -26,7 +26,7 @@ public class GRReviveStation : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060023B9 RID: 9145 RVA: 0x000B3D74 File Offset: 0x000B1F74
+	// Token: 0x060023B9 RID: 9145 RVA: 0x000B3D94 File Offset: 0x000B1F94
 	private void OnTriggerEnter(Collider collider)
 	{
 		Rigidbody attachedRigidbody = collider.attachedRigidbody;

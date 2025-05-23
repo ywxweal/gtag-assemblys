@@ -6,7 +6,7 @@ using UnityEngine;
 [Serializable]
 public class VoiceLoudnessReactorRendererColorTarget
 {
-	// Token: 0x06003DF4 RID: 15860 RVA: 0x00126A2C File Offset: 0x00124C2C
+	// Token: 0x06003DF5 RID: 15861 RVA: 0x00126B04 File Offset: 0x00124D04
 	public void Inititialize()
 	{
 		if (this._materials == null)
@@ -18,7 +18,7 @@ public class VoiceLoudnessReactorRendererColorTarget
 		}
 	}
 
-	// Token: 0x06003DF5 RID: 15861 RVA: 0x00126A90 File Offset: 0x00124C90
+	// Token: 0x06003DF6 RID: 15862 RVA: 0x00126B68 File Offset: 0x00124D68
 	public void UpdateMaterialColor(float level)
 	{
 		Color color = this.gradient.Evaluate(level);
@@ -30,28 +30,28 @@ public class VoiceLoudnessReactorRendererColorTarget
 		this._lastColor = color;
 	}
 
-	// Token: 0x0400426D RID: 17005
+	// Token: 0x0400426E RID: 17006
 	[SerializeField]
 	private string colorProperty = "_BaseColor";
 
-	// Token: 0x0400426E RID: 17006
+	// Token: 0x0400426F RID: 17007
 	public Renderer renderer;
 
-	// Token: 0x0400426F RID: 17007
+	// Token: 0x04004270 RID: 17008
 	public int materialIndex;
 
-	// Token: 0x04004270 RID: 17008
+	// Token: 0x04004271 RID: 17009
 	public Gradient gradient;
 
-	// Token: 0x04004271 RID: 17009
+	// Token: 0x04004272 RID: 17010
 	public bool useSmoothedLoudness;
 
-	// Token: 0x04004272 RID: 17010
+	// Token: 0x04004273 RID: 17011
 	public float scale = 1f;
 
-	// Token: 0x04004273 RID: 17011
+	// Token: 0x04004274 RID: 17012
 	private List<Material> _materials;
 
-	// Token: 0x04004274 RID: 17012
+	// Token: 0x04004275 RID: 17013
 	private Color _lastColor = Color.white;
 }

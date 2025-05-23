@@ -6,14 +6,14 @@ namespace GorillaTagScripts.Builder
 	// Token: 0x02000B4E RID: 2894
 	public class BuilderAnimateOnTap : BuilderPieceTappable
 	{
-		// Token: 0x0600475D RID: 18269 RVA: 0x001532FF File Offset: 0x001514FF
+		// Token: 0x0600475E RID: 18270 RVA: 0x001533D7 File Offset: 0x001515D7
 		public override void OnTapReplicated()
 		{
 			this.anim.Rewind();
 			this.anim.Play();
 		}
 
-		// Token: 0x040049AF RID: 18863
+		// Token: 0x040049B0 RID: 18864
 		[SerializeField]
 		private Animation anim;
 	}

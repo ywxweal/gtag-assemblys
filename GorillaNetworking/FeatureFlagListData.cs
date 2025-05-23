@@ -6,7 +6,7 @@ namespace GorillaNetworking
 	[Serializable]
 	internal class FeatureFlagListData
 	{
-		// Token: 0x04005154 RID: 20820
+		// Token: 0x04005155 RID: 20821
 		public FeatureFlagData[] flags;
 	}
 }

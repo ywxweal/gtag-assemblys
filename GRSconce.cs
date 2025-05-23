@@ -4,7 +4,7 @@ using UnityEngine;
 // Token: 0x020005BC RID: 1468
 public class GRSconce : MonoBehaviour
 {
-	// Token: 0x060023BB RID: 9147 RVA: 0x000B3DE8 File Offset: 0x000B1FE8
+	// Token: 0x060023BB RID: 9147 RVA: 0x000B3E08 File Offset: 0x000B2008
 	private void Awake()
 	{
 		if (this.tool != null)
@@ -19,13 +19,13 @@ public class GRSconce : MonoBehaviour
 		this.StopLight();
 	}
 
-	// Token: 0x060023BC RID: 9148 RVA: 0x000ABA91 File Offset: 0x000A9C91
+	// Token: 0x060023BC RID: 9148 RVA: 0x000ABAB1 File Offset: 0x000A9CB1
 	private bool IsAuthority()
 	{
 		return GameEntityManager.instance.IsAuthority();
 	}
 
-	// Token: 0x060023BD RID: 9149 RVA: 0x000B3E4C File Offset: 0x000B204C
+	// Token: 0x060023BD RID: 9149 RVA: 0x000B3E6C File Offset: 0x000B206C
 	private void SetState(GRSconce.State newState)
 	{
 		this.state = newState;
@@ -47,7 +47,7 @@ public class GRSconce : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060023BE RID: 9150 RVA: 0x000B3EA0 File Offset: 0x000B20A0
+	// Token: 0x060023BE RID: 9150 RVA: 0x000B3EC0 File Offset: 0x000B20C0
 	private void StartLight()
 	{
 		this.gameLight.gameObject.SetActive(true);
@@ -57,14 +57,14 @@ public class GRSconce : MonoBehaviour
 		this.meshRenderer.material = this.onMaterial;
 	}
 
-	// Token: 0x060023BF RID: 9151 RVA: 0x000B3EFC File Offset: 0x000B20FC
+	// Token: 0x060023BF RID: 9151 RVA: 0x000B3F1C File Offset: 0x000B211C
 	private void StopLight()
 	{
 		this.gameLight.gameObject.SetActive(false);
 		this.meshRenderer.material = this.offMaterial;
 	}
 
-	// Token: 0x060023C0 RID: 9152 RVA: 0x000B3F20 File Offset: 0x000B2120
+	// Token: 0x060023C0 RID: 9152 RVA: 0x000B3F40 File Offset: 0x000B2140
 	private void OnEnergyChange(GRTool tool, int energy)
 	{
 		if (this.IsAuthority() && this.state == GRSconce.State.Off && tool.IsEnergyFull())
@@ -73,7 +73,7 @@ public class GRSconce : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060023C1 RID: 9153 RVA: 0x000B3F44 File Offset: 0x000B2144
+	// Token: 0x060023C1 RID: 9153 RVA: 0x000B3F64 File Offset: 0x000B2164
 	private void OnStateChange(long prevState, long nextState)
 	{
 		if (!this.IsAuthority())

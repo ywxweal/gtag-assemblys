@@ -8,7 +8,7 @@ namespace Fusion.CodeGen
 	[PreserveInPlugin]
 	internal struct ReaderWriter@System_Boolean : IElementReaderWriter<bool>
 	{
-		// Token: 0x06005DF1 RID: 24049 RVA: 0x001CD5A4 File Offset: 0x001CB7A4
+		// Token: 0x06005DF2 RID: 24050 RVA: 0x001CD67C File Offset: 0x001CB87C
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		[PreserveInPlugin]
 		[WeaverGenerated]
@@ -17,7 +17,7 @@ namespace Fusion.CodeGen
 			return ReadWriteUtilsForWeaver.ReadBoolean((int*)(data + index * 4));
 		}
 
-		// Token: 0x06005DF2 RID: 24050 RVA: 0x001CD5B4 File Offset: 0x001CB7B4
+		// Token: 0x06005DF3 RID: 24051 RVA: 0x001CD68C File Offset: 0x001CB88C
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		[PreserveInPlugin]
 		[WeaverGenerated]
@@ -26,7 +26,7 @@ namespace Fusion.CodeGen
 			throw new NotSupportedException("Only supported for trivially copyable types. System.Boolean is not trivially copyable.");
 		}
 
-		// Token: 0x06005DF3 RID: 24051 RVA: 0x001CD5C0 File Offset: 0x001CB7C0
+		// Token: 0x06005DF4 RID: 24052 RVA: 0x001CD698 File Offset: 0x001CB898
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		[PreserveInPlugin]
 		[WeaverGenerated]
@@ -35,7 +35,7 @@ namespace Fusion.CodeGen
 			ReadWriteUtilsForWeaver.WriteBoolean((int*)(data + index * 4), val);
 		}
 
-		// Token: 0x06005DF4 RID: 24052 RVA: 0x00047642 File Offset: 0x00045842
+		// Token: 0x06005DF5 RID: 24053 RVA: 0x00047642 File Offset: 0x00045842
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		[PreserveInPlugin]
 		[WeaverGenerated]
@@ -44,7 +44,7 @@ namespace Fusion.CodeGen
 			return 1;
 		}
 
-		// Token: 0x06005DF5 RID: 24053 RVA: 0x001CD5D4 File Offset: 0x001CB7D4
+		// Token: 0x06005DF6 RID: 24054 RVA: 0x001CD6AC File Offset: 0x001CB8AC
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		[PreserveInPlugin]
 		[WeaverGenerated]
@@ -53,7 +53,7 @@ namespace Fusion.CodeGen
 			return val.GetHashCode();
 		}
 
-		// Token: 0x06005DF6 RID: 24054 RVA: 0x001CD5E8 File Offset: 0x001CB7E8
+		// Token: 0x06005DF7 RID: 24055 RVA: 0x001CD6C0 File Offset: 0x001CB8C0
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		[WeaverGenerated]
 		public static IElementReaderWriter<bool> GetInstance()
@@ -65,7 +65,7 @@ namespace Fusion.CodeGen
 			return ReaderWriter@System_Boolean.Instance;
 		}
 
-		// Token: 0x040064B3 RID: 25779
+		// Token: 0x040064B4 RID: 25780
 		[WeaverGenerated]
 		public static IElementReaderWriter<bool> Instance;
 	}

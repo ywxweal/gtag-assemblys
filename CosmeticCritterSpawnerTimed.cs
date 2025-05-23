@@ -4,13 +4,13 @@ using UnityEngine;
 // Token: 0x02000536 RID: 1334
 public abstract class CosmeticCritterSpawnerTimed : CosmeticCritterSpawnerIndependent
 {
-	// Token: 0x0600206E RID: 8302 RVA: 0x000A2F3E File Offset: 0x000A113E
+	// Token: 0x0600206E RID: 8302 RVA: 0x000A2F5E File Offset: 0x000A115E
 	protected override CallLimiter CreateCallLimiter()
 	{
 		return new CallLimiter(5, this.spawnIntervalMinMax.x, 0.5f);
 	}
 
-	// Token: 0x0600206F RID: 8303 RVA: 0x000A2F56 File Offset: 0x000A1156
+	// Token: 0x0600206F RID: 8303 RVA: 0x000A2F76 File Offset: 0x000A1176
 	public override bool CanSpawnLocal()
 	{
 		if (Time.time >= this.nextLocalSpawnTime)
@@ -21,13 +21,13 @@ public abstract class CosmeticCritterSpawnerTimed : CosmeticCritterSpawnerIndepe
 		return false;
 	}
 
-	// Token: 0x06002070 RID: 8304 RVA: 0x000A2F94 File Offset: 0x000A1194
+	// Token: 0x06002070 RID: 8304 RVA: 0x000A2FB4 File Offset: 0x000A11B4
 	public override bool CanSpawnRemote(double serverTime)
 	{
 		return base.CanSpawnRemote(serverTime);
 	}
 
-	// Token: 0x06002071 RID: 8305 RVA: 0x000A2F9D File Offset: 0x000A119D
+	// Token: 0x06002071 RID: 8305 RVA: 0x000A2FBD File Offset: 0x000A11BD
 	protected override void OnEnable()
 	{
 		base.OnEnable();
@@ -37,7 +37,7 @@ public abstract class CosmeticCritterSpawnerTimed : CosmeticCritterSpawnerIndepe
 		}
 	}
 
-	// Token: 0x06002072 RID: 8306 RVA: 0x000A2FD4 File Offset: 0x000A11D4
+	// Token: 0x06002072 RID: 8306 RVA: 0x000A2FF4 File Offset: 0x000A11F4
 	protected override void OnDisable()
 	{
 		base.OnDisable();

@@ -9,8 +9,8 @@ namespace Fusion.CodeGen
 	internal class UnityValueSurrogate@ReaderWriter@System_Single : UnityValueSurrogate<float, ReaderWriter@System_Single>
 	{
 		// Token: 0x1700091A RID: 2330
-		// (get) Token: 0x06005DA3 RID: 23971 RVA: 0x001CD15C File Offset: 0x001CB35C
-		// (set) Token: 0x06005DA4 RID: 23972 RVA: 0x001CD164 File Offset: 0x001CB364
+		// (get) Token: 0x06005DA4 RID: 23972 RVA: 0x001CD234 File Offset: 0x001CB434
+		// (set) Token: 0x06005DA5 RID: 23973 RVA: 0x001CD23C File Offset: 0x001CB43C
 		[WeaverGenerated]
 		public override float DataProperty
 		{
@@ -26,13 +26,13 @@ namespace Fusion.CodeGen
 			}
 		}
 
-		// Token: 0x06005DA5 RID: 23973 RVA: 0x001CD16D File Offset: 0x001CB36D
+		// Token: 0x06005DA6 RID: 23974 RVA: 0x001CD245 File Offset: 0x001CB445
 		[WeaverGenerated]
 		public UnityValueSurrogate@ReaderWriter@System_Single()
 		{
 		}
 
-		// Token: 0x0400619C RID: 24988
+		// Token: 0x0400619D RID: 24989
 		[WeaverGenerated]
 		public float Data;
 	}

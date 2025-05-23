@@ -6,7 +6,7 @@ using UnityEngine;
 public class GhostReactorLevelSection : MonoBehaviour
 {
 	// Token: 0x17000357 RID: 855
-	// (get) Token: 0x0600226A RID: 8810 RVA: 0x000AC762 File Offset: 0x000AA962
+	// (get) Token: 0x0600226A RID: 8810 RVA: 0x000AC782 File Offset: 0x000AA982
 	public Transform Anchor
 	{
 		get
@@ -16,7 +16,7 @@ public class GhostReactorLevelSection : MonoBehaviour
 	}
 
 	// Token: 0x17000358 RID: 856
-	// (get) Token: 0x0600226B RID: 8811 RVA: 0x000AC76A File Offset: 0x000AA96A
+	// (get) Token: 0x0600226B RID: 8811 RVA: 0x000AC78A File Offset: 0x000AA98A
 	public BoxCollider BoundingCollider
 	{
 		get
@@ -25,7 +25,7 @@ public class GhostReactorLevelSection : MonoBehaviour
 		}
 	}
 
-	// Token: 0x0600226C RID: 8812 RVA: 0x000AC774 File Offset: 0x000AA974
+	// Token: 0x0600226C RID: 8812 RVA: 0x000AC794 File Offset: 0x000AA994
 	private void Awake()
 	{
 		this.spawnPointGroupLookup = new GhostReactorLevelSection.SpawnPointGroup[4];
@@ -50,7 +50,7 @@ public class GhostReactorLevelSection : MonoBehaviour
 		}
 	}
 
-	// Token: 0x0600226D RID: 8813 RVA: 0x000AC85B File Offset: 0x000AAA5B
+	// Token: 0x0600226D RID: 8813 RVA: 0x000AC87B File Offset: 0x000AAA7B
 	public void DeInit()
 	{
 		if (this.sectionConnector != null)
@@ -60,7 +60,7 @@ public class GhostReactorLevelSection : MonoBehaviour
 		}
 	}
 
-	// Token: 0x0600226E RID: 8814 RVA: 0x000AC888 File Offset: 0x000AAA88
+	// Token: 0x0600226E RID: 8814 RVA: 0x000AC8A8 File Offset: 0x000AAAA8
 	public static void RandomizeIndices(List<int> list, int count, ref SRand randomGenerator)
 	{
 		list.Clear();
@@ -71,13 +71,13 @@ public class GhostReactorLevelSection : MonoBehaviour
 		randomGenerator.Shuffle<int>(list);
 	}
 
-	// Token: 0x0600226F RID: 8815 RVA: 0x000AC8B5 File Offset: 0x000AAAB5
+	// Token: 0x0600226F RID: 8815 RVA: 0x000AC8D5 File Offset: 0x000AAAD5
 	public void InitLevelSection(int sectionIndex)
 	{
 		this.index = sectionIndex;
 	}
 
-	// Token: 0x06002270 RID: 8816 RVA: 0x000AC8C0 File Offset: 0x000AAAC0
+	// Token: 0x06002270 RID: 8816 RVA: 0x000AC8E0 File Offset: 0x000AAAE0
 	public void SpawnSectionEntities(ref SRand randomGenerator)
 	{
 		if (this.spawnConfigs.Count > 0)
@@ -161,7 +161,7 @@ public class GhostReactorLevelSection : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06002271 RID: 8817 RVA: 0x000ACBCD File Offset: 0x000AADCD
+	// Token: 0x06002271 RID: 8817 RVA: 0x000ACBED File Offset: 0x000AADED
 	public GRPatrolPath GetPatrolPath(int patrolPathIndex)
 	{
 		if (patrolPathIndex >= 0 && patrolPathIndex < this.patrolPaths.Count)
@@ -220,8 +220,8 @@ public class GhostReactorLevelSection : MonoBehaviour
 	public class SpawnPointGroup
 	{
 		// Token: 0x17000359 RID: 857
-		// (get) Token: 0x06002274 RID: 8820 RVA: 0x000ACC00 File Offset: 0x000AAE00
-		// (set) Token: 0x06002275 RID: 8821 RVA: 0x000ACC08 File Offset: 0x000AAE08
+		// (get) Token: 0x06002274 RID: 8820 RVA: 0x000ACC20 File Offset: 0x000AAE20
+		// (set) Token: 0x06002275 RID: 8821 RVA: 0x000ACC28 File Offset: 0x000AAE28
 		public bool NeedsRandomization
 		{
 			get
@@ -235,8 +235,8 @@ public class GhostReactorLevelSection : MonoBehaviour
 		}
 
 		// Token: 0x1700035A RID: 858
-		// (get) Token: 0x06002276 RID: 8822 RVA: 0x000ACC11 File Offset: 0x000AAE11
-		// (set) Token: 0x06002277 RID: 8823 RVA: 0x000ACC19 File Offset: 0x000AAE19
+		// (get) Token: 0x06002276 RID: 8822 RVA: 0x000ACC31 File Offset: 0x000AAE31
+		// (set) Token: 0x06002277 RID: 8823 RVA: 0x000ACC39 File Offset: 0x000AAE39
 		public int CurrentIndex
 		{
 			get
@@ -250,8 +250,8 @@ public class GhostReactorLevelSection : MonoBehaviour
 		}
 
 		// Token: 0x1700035B RID: 859
-		// (get) Token: 0x06002278 RID: 8824 RVA: 0x000ACC22 File Offset: 0x000AAE22
-		// (set) Token: 0x06002279 RID: 8825 RVA: 0x000ACC2A File Offset: 0x000AAE2A
+		// (get) Token: 0x06002278 RID: 8824 RVA: 0x000ACC42 File Offset: 0x000AAE42
+		// (set) Token: 0x06002279 RID: 8825 RVA: 0x000ACC4A File Offset: 0x000AAE4A
 		public List<int> SpawnPointIndexes
 		{
 			get
@@ -264,7 +264,7 @@ public class GhostReactorLevelSection : MonoBehaviour
 			}
 		}
 
-		// Token: 0x0600227A RID: 8826 RVA: 0x000ACC33 File Offset: 0x000AAE33
+		// Token: 0x0600227A RID: 8826 RVA: 0x000ACC53 File Offset: 0x000AAE53
 		public GREntitySpawnPoint GetNextSpawnPoint()
 		{
 			GREntitySpawnPoint grentitySpawnPoint = this.spawnPoints[this.spawnPointIndexes[this.currentIndex]];

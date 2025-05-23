@@ -7,11 +7,11 @@ namespace GorillaTag.CosmeticSystem
 	[Serializable]
 	public struct CosmeticPlacementInfo
 	{
-		// Token: 0x0400595C RID: 22876
+		// Token: 0x0400595D RID: 22877
 		[Tooltip("The bone to attach the cosmetic to.")]
 		public GTHardCodedBones.SturdyEBone parentBone;
 
-		// Token: 0x0400595D RID: 22877
+		// Token: 0x0400595E RID: 22878
 		public XformOffset offset;
 	}
 }

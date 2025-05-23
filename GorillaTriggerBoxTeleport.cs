@@ -4,7 +4,7 @@ using UnityEngine;
 // Token: 0x020004A1 RID: 1185
 public class GorillaTriggerBoxTeleport : GorillaTriggerBox
 {
-	// Token: 0x06001CB7 RID: 7351 RVA: 0x0008BA19 File Offset: 0x00089C19
+	// Token: 0x06001CB7 RID: 7351 RVA: 0x0008BA39 File Offset: 0x00089C39
 	public override void OnBoxTriggered()
 	{
 		this.cameraOffest.GetComponent<Rigidbody>().velocity = new Vector3(0f, 0f, 0f);

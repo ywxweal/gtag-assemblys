@@ -7,7 +7,7 @@ using UnityEngine.Networking;
 // Token: 0x020003F0 RID: 1008
 public class CodeRedemption : MonoBehaviour
 {
-	// Token: 0x06001836 RID: 6198 RVA: 0x000759FA File Offset: 0x00073BFA
+	// Token: 0x06001836 RID: 6198 RVA: 0x00075A1A File Offset: 0x00073C1A
 	public void Awake()
 	{
 		if (CodeRedemption.Instance == null)
@@ -21,7 +21,7 @@ public class CodeRedemption : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001837 RID: 6199 RVA: 0x00075A2C File Offset: 0x00073C2C
+	// Token: 0x06001837 RID: 6199 RVA: 0x00075A4C File Offset: 0x00073C4C
 	public void HandleCodeRedemption(string code)
 	{
 		string playFabPlayerId = PlayFabAuthenticator.instance.GetPlayFabPlayerId();
@@ -31,7 +31,7 @@ public class CodeRedemption : MonoBehaviour
 		base.StartCoroutine(CodeRedemption.ProcessWebRequest(PlayFabAuthenticatorSettings.HpPromoApiBaseUrl + "/api/ConsumeCodeItem", text, "application/json", new Action<UnityWebRequest>(this.OnCodeRedemptionResponse)));
 	}
 
-	// Token: 0x06001838 RID: 6200 RVA: 0x00075ACC File Offset: 0x00073CCC
+	// Token: 0x06001838 RID: 6200 RVA: 0x00075AEC File Offset: 0x00073CEC
 	private void OnCodeRedemptionResponse(UnityWebRequest completedRequest)
 	{
 		if (completedRequest.result != UnityWebRequest.Result.Success)
@@ -66,7 +66,7 @@ public class CodeRedemption : MonoBehaviour
 		base.StartCoroutine(this.CheckProcessExternalUnlock(new string[] { text }, true, true, true));
 	}
 
-	// Token: 0x06001839 RID: 6201 RVA: 0x00075BE0 File Offset: 0x00073DE0
+	// Token: 0x06001839 RID: 6201 RVA: 0x00075C00 File Offset: 0x00073E00
 	private IEnumerator CheckProcessExternalUnlock(string[] itemIDs, bool autoEquip, bool isLeftHand, bool destroyOnFinish)
 	{
 		Debug.Log("[CodeRedemption] Checking if we can process external cosmetic unlock...");
@@ -82,7 +82,7 @@ public class CodeRedemption : MonoBehaviour
 		yield break;
 	}
 
-	// Token: 0x0600183A RID: 6202 RVA: 0x00075BFD File Offset: 0x00073DFD
+	// Token: 0x0600183A RID: 6202 RVA: 0x00075C1D File Offset: 0x00073E1D
 	private static IEnumerator ProcessWebRequest(string url, string data, string contentType, Action<UnityWebRequest> callback)
 	{
 		UnityWebRequest request = UnityWebRequest.Post(url, data, contentType);

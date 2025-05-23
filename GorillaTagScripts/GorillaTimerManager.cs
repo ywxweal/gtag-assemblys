@@ -7,7 +7,7 @@ namespace GorillaTagScripts
 	// Token: 0x02000B18 RID: 2840
 	public class GorillaTimerManager : MonoBehaviour
 	{
-		// Token: 0x060045E0 RID: 17888 RVA: 0x0014BD5B File Offset: 0x00149F5B
+		// Token: 0x060045E1 RID: 17889 RVA: 0x0014BE33 File Offset: 0x0014A033
 		protected void Awake()
 		{
 			if (GorillaTimerManager.hasInstance && GorillaTimerManager.instance != null && GorillaTimerManager.instance != this)
@@ -18,13 +18,13 @@ namespace GorillaTagScripts
 			GorillaTimerManager.SetInstance(this);
 		}
 
-		// Token: 0x060045E1 RID: 17889 RVA: 0x0014BD8B File Offset: 0x00149F8B
+		// Token: 0x060045E2 RID: 17890 RVA: 0x0014BE63 File Offset: 0x0014A063
 		public static void CreateManager()
 		{
 			GorillaTimerManager.SetInstance(new GameObject("GorillaTimerManager").AddComponent<GorillaTimerManager>());
 		}
 
-		// Token: 0x060045E2 RID: 17890 RVA: 0x0014BDA1 File Offset: 0x00149FA1
+		// Token: 0x060045E3 RID: 17891 RVA: 0x0014BE79 File Offset: 0x0014A079
 		private static void SetInstance(GorillaTimerManager manager)
 		{
 			GorillaTimerManager.instance = manager;
@@ -35,7 +35,7 @@ namespace GorillaTagScripts
 			}
 		}
 
-		// Token: 0x060045E3 RID: 17891 RVA: 0x0014BDBC File Offset: 0x00149FBC
+		// Token: 0x060045E4 RID: 17892 RVA: 0x0014BE94 File Offset: 0x0014A094
 		public static void RegisterGorillaTimer(GorillaTimer gTimer)
 		{
 			if (!GorillaTimerManager.hasInstance)
@@ -48,7 +48,7 @@ namespace GorillaTagScripts
 			}
 		}
 
-		// Token: 0x060045E4 RID: 17892 RVA: 0x0014BDE2 File Offset: 0x00149FE2
+		// Token: 0x060045E5 RID: 17893 RVA: 0x0014BEBA File Offset: 0x0014A0BA
 		public static void UnregisterGorillaTimer(GorillaTimer gTimer)
 		{
 			if (!GorillaTimerManager.hasInstance)
@@ -61,7 +61,7 @@ namespace GorillaTagScripts
 			}
 		}
 
-		// Token: 0x060045E5 RID: 17893 RVA: 0x0014BE0C File Offset: 0x0014A00C
+		// Token: 0x060045E6 RID: 17894 RVA: 0x0014BEE4 File Offset: 0x0014A0E4
 		public void Update()
 		{
 			for (int i = 0; i < GorillaTimerManager.allTimers.Count; i++)
@@ -70,13 +70,13 @@ namespace GorillaTagScripts
 			}
 		}
 
-		// Token: 0x0400486C RID: 18540
+		// Token: 0x0400486D RID: 18541
 		public static GorillaTimerManager instance;
 
-		// Token: 0x0400486D RID: 18541
+		// Token: 0x0400486E RID: 18542
 		public static bool hasInstance = false;
 
-		// Token: 0x0400486E RID: 18542
+		// Token: 0x0400486F RID: 18543
 		public static List<GorillaTimer> allTimers = new List<GorillaTimer>();
 	}
 }

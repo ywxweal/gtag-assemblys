@@ -4,7 +4,7 @@ using UnityEngine;
 // Token: 0x020005F1 RID: 1521
 public class GorillaBallWall : MonoBehaviour
 {
-	// Token: 0x06002592 RID: 9618 RVA: 0x000BB306 File Offset: 0x000B9506
+	// Token: 0x06002592 RID: 9618 RVA: 0x000BB326 File Offset: 0x000B9526
 	private void Awake()
 	{
 		if (GorillaBallWall.instance == null)

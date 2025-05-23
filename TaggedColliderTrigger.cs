@@ -5,7 +5,7 @@ using UnityEngine.Events;
 // Token: 0x0200077F RID: 1919
 public class TaggedColliderTrigger : MonoBehaviour
 {
-	// Token: 0x06003005 RID: 12293 RVA: 0x000EDEB6 File Offset: 0x000EC0B6
+	// Token: 0x06003006 RID: 12294 RVA: 0x000EDF5A File Offset: 0x000EC15A
 	private void OnTriggerEnter(Collider other)
 	{
 		if (!other.CompareTag(this.tag))
@@ -23,7 +23,7 @@ public class TaggedColliderTrigger : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06003006 RID: 12294 RVA: 0x000EDEEC File Offset: 0x000EC0EC
+	// Token: 0x06003007 RID: 12295 RVA: 0x000EDF90 File Offset: 0x000EC190
 	private void OnTriggerExit(Collider other)
 	{
 		if (!other.CompareTag(this.tag))
@@ -41,24 +41,24 @@ public class TaggedColliderTrigger : MonoBehaviour
 		}
 	}
 
-	// Token: 0x04003641 RID: 13889
+	// Token: 0x04003643 RID: 13891
 	public new UnityTag tag;
 
-	// Token: 0x04003642 RID: 13890
+	// Token: 0x04003644 RID: 13892
 	public UnityEvent<Collider> onEnter = new UnityEvent<Collider>();
 
-	// Token: 0x04003643 RID: 13891
+	// Token: 0x04003645 RID: 13893
 	public UnityEvent<Collider> onExit = new UnityEvent<Collider>();
 
-	// Token: 0x04003644 RID: 13892
+	// Token: 0x04003646 RID: 13894
 	public float enterHysteresis = 0.125f;
 
-	// Token: 0x04003645 RID: 13893
+	// Token: 0x04003647 RID: 13895
 	public float exitHysteresis = 0.125f;
 
-	// Token: 0x04003646 RID: 13894
+	// Token: 0x04003648 RID: 13896
 	private TimeSince _sinceLastEnter;
 
-	// Token: 0x04003647 RID: 13895
+	// Token: 0x04003649 RID: 13897
 	private TimeSince _sinceLastExit;
 }

@@ -9,7 +9,7 @@ namespace Fusion.CodeGen
 	[PreserveInPlugin]
 	internal struct ReaderWriter@UnityEngine_Quaternion : IElementReaderWriter<Quaternion>
 	{
-		// Token: 0x06005DA9 RID: 23977 RVA: 0x001CD199 File Offset: 0x001CB399
+		// Token: 0x06005DAA RID: 23978 RVA: 0x001CD271 File Offset: 0x001CB471
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		[PreserveInPlugin]
 		[WeaverGenerated]
@@ -18,7 +18,7 @@ namespace Fusion.CodeGen
 			return *(Quaternion*)(data + index * 16);
 		}
 
-		// Token: 0x06005DAA RID: 23978 RVA: 0x001CD1A9 File Offset: 0x001CB3A9
+		// Token: 0x06005DAB RID: 23979 RVA: 0x001CD281 File Offset: 0x001CB481
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		[PreserveInPlugin]
 		[WeaverGenerated]
@@ -27,7 +27,7 @@ namespace Fusion.CodeGen
 			return ref *(Quaternion*)(data + index * 16);
 		}
 
-		// Token: 0x06005DAB RID: 23979 RVA: 0x001CD1B4 File Offset: 0x001CB3B4
+		// Token: 0x06005DAC RID: 23980 RVA: 0x001CD28C File Offset: 0x001CB48C
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		[PreserveInPlugin]
 		[WeaverGenerated]
@@ -36,7 +36,7 @@ namespace Fusion.CodeGen
 			*(Quaternion*)(data + index * 16) = val;
 		}
 
-		// Token: 0x06005DAC RID: 23980 RVA: 0x00110F07 File Offset: 0x0010F107
+		// Token: 0x06005DAD RID: 23981 RVA: 0x00110FDF File Offset: 0x0010F1DF
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		[PreserveInPlugin]
 		[WeaverGenerated]
@@ -45,7 +45,7 @@ namespace Fusion.CodeGen
 			return 4;
 		}
 
-		// Token: 0x06005DAD RID: 23981 RVA: 0x001CD1C8 File Offset: 0x001CB3C8
+		// Token: 0x06005DAE RID: 23982 RVA: 0x001CD2A0 File Offset: 0x001CB4A0
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		[PreserveInPlugin]
 		[WeaverGenerated]
@@ -54,7 +54,7 @@ namespace Fusion.CodeGen
 			return val.GetHashCode();
 		}
 
-		// Token: 0x06005DAE RID: 23982 RVA: 0x001CD1E4 File Offset: 0x001CB3E4
+		// Token: 0x06005DAF RID: 23983 RVA: 0x001CD2BC File Offset: 0x001CB4BC
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		[WeaverGenerated]
 		public static IElementReaderWriter<Quaternion> GetInstance()
@@ -66,7 +66,7 @@ namespace Fusion.CodeGen
 			return ReaderWriter@UnityEngine_Quaternion.Instance;
 		}
 
-		// Token: 0x040061AE RID: 25006
+		// Token: 0x040061AF RID: 25007
 		[WeaverGenerated]
 		public static IElementReaderWriter<Quaternion> Instance;
 	}

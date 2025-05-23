@@ -16,7 +16,7 @@ namespace GorillaExtensions
 	// Token: 0x02000CF8 RID: 3320
 	public static class GTExt
 	{
-		// Token: 0x06005253 RID: 21075 RVA: 0x00190AEC File Offset: 0x0018ECEC
+		// Token: 0x06005254 RID: 21076 RVA: 0x00190BC4 File Offset: 0x0018EDC4
 		public static T GetComponentInHierarchy<T>(this Scene scene, bool includeInactive = true) where T : Component
 		{
 			if (!scene.IsValid())
@@ -43,7 +43,7 @@ namespace GorillaExtensions
 			return default(T);
 		}
 
-		// Token: 0x06005254 RID: 21076 RVA: 0x00190B84 File Offset: 0x0018ED84
+		// Token: 0x06005255 RID: 21077 RVA: 0x00190C5C File Offset: 0x0018EE5C
 		public static List<T> GetComponentsInHierarchy<T>(this Scene scene, bool includeInactive = true, int capacity = 64)
 		{
 			List<T> list = new List<T>(capacity);
@@ -60,7 +60,7 @@ namespace GorillaExtensions
 			return list;
 		}
 
-		// Token: 0x06005255 RID: 21077 RVA: 0x00190BCC File Offset: 0x0018EDCC
+		// Token: 0x06005256 RID: 21078 RVA: 0x00190CA4 File Offset: 0x0018EEA4
 		public static List<Object> GetComponentsInHierarchy(this Scene scene, Type type, bool includeInactive = true, int capacity = 64)
 		{
 			List<Object> list = new List<Object>(capacity);
@@ -73,13 +73,13 @@ namespace GorillaExtensions
 			return list;
 		}
 
-		// Token: 0x06005256 RID: 21078 RVA: 0x00190C09 File Offset: 0x0018EE09
+		// Token: 0x06005257 RID: 21079 RVA: 0x00190CE1 File Offset: 0x0018EEE1
 		public static List<GameObject> GetGameObjectsInHierarchy(this Scene scene, bool includeInactive = true, int capacity = 64)
 		{
 			return scene.GetComponentsInHierarchy(includeInactive, capacity);
 		}
 
-		// Token: 0x06005257 RID: 21079 RVA: 0x00190C14 File Offset: 0x0018EE14
+		// Token: 0x06005258 RID: 21080 RVA: 0x00190CEC File Offset: 0x0018EEEC
 		public static List<T> GetComponentsInHierarchyUntil<T, TStop1>(this Scene scene, bool includeInactive = false, bool stopAtRoot = true, int capacity = 64) where T : Component where TStop1 : Component
 		{
 			List<T> list = new List<T>(capacity);
@@ -92,7 +92,7 @@ namespace GorillaExtensions
 			return list;
 		}
 
-		// Token: 0x06005258 RID: 21080 RVA: 0x00190C58 File Offset: 0x0018EE58
+		// Token: 0x06005259 RID: 21081 RVA: 0x00190D30 File Offset: 0x0018EF30
 		public static List<T> GetComponentsInHierarchyUntil<T, TStop1, TStop2>(this Scene scene, bool includeInactive = false, bool stopAtRoot = true, int capacity = 64) where T : Component where TStop1 : Component where TStop2 : Component
 		{
 			List<T> list = new List<T>(capacity);
@@ -105,7 +105,7 @@ namespace GorillaExtensions
 			return list;
 		}
 
-		// Token: 0x06005259 RID: 21081 RVA: 0x00190C9C File Offset: 0x0018EE9C
+		// Token: 0x0600525A RID: 21082 RVA: 0x00190D74 File Offset: 0x0018EF74
 		public static List<T> GetComponentsInHierarchyUntil<T, TStop1, TStop2, TStop3>(this Scene scene, bool includeInactive = false, bool stopAtRoot = true, int capacity = 64) where T : Component where TStop1 : Component where TStop2 : Component where TStop3 : Component
 		{
 			List<T> list = new List<T>(capacity);
@@ -118,7 +118,7 @@ namespace GorillaExtensions
 			return list;
 		}
 
-		// Token: 0x0600525A RID: 21082 RVA: 0x00190CE0 File Offset: 0x0018EEE0
+		// Token: 0x0600525B RID: 21083 RVA: 0x00190DB8 File Offset: 0x0018EFB8
 		public static List<T> GetComponentsInChildrenUntil<T, TStop1>(this Component root, bool includeInactive = false, bool stopAtRoot = true, int capacity = 64) where T : Component where TStop1 : Component
 		{
 			GTExt.<>c__DisplayClass7_0<T, TStop1> CS$<>8__locals1;
@@ -137,7 +137,7 @@ namespace GorillaExtensions
 			return list;
 		}
 
-		// Token: 0x0600525B RID: 21083 RVA: 0x00190D40 File Offset: 0x0018EF40
+		// Token: 0x0600525C RID: 21084 RVA: 0x00190E18 File Offset: 0x0018F018
 		public static List<T> GetComponentsInChildrenUntil<T, TStop1, TStop2>(this Component root, bool includeInactive = false, bool stopAtRoot = true, int capacity = 64) where T : Component where TStop1 : Component where TStop2 : Component
 		{
 			GTExt.<>c__DisplayClass8_0<T, TStop1, TStop2> CS$<>8__locals1;
@@ -156,7 +156,7 @@ namespace GorillaExtensions
 			return list;
 		}
 
-		// Token: 0x0600525C RID: 21084 RVA: 0x00190DB4 File Offset: 0x0018EFB4
+		// Token: 0x0600525D RID: 21085 RVA: 0x00190E8C File Offset: 0x0018F08C
 		public static List<T> GetComponentsInChildrenUntil<T, TStop1, TStop2, TStop3>(this Component root, bool includeInactive = false, bool stopAtRoot = true, int capacity = 64) where T : Component where TStop1 : Component where TStop2 : Component where TStop3 : Component
 		{
 			GTExt.<>c__DisplayClass9_0<T, TStop1, TStop2, TStop3> CS$<>8__locals1;
@@ -175,7 +175,7 @@ namespace GorillaExtensions
 			return list;
 		}
 
-		// Token: 0x0600525D RID: 21085 RVA: 0x00190E3A File Offset: 0x0018F03A
+		// Token: 0x0600525E RID: 21086 RVA: 0x00190F12 File Offset: 0x0018F112
 		public static void GetComponentsInChildrenUntil<T, TStop1, TStop2, TStop3>(this Component root, out List<T> out_included, out HashSet<T> out_excluded, bool includeInactive = false, bool stopAtRoot = true, int capacity = 64) where T : Component where TStop1 : Component where TStop2 : Component where TStop3 : Component
 		{
 			out_included = root.GetComponentsInChildrenUntil(includeInactive, stopAtRoot, capacity);
@@ -183,7 +183,7 @@ namespace GorillaExtensions
 			out_excluded.ExceptWith(new HashSet<T>(out_included));
 		}
 
-		// Token: 0x0600525E RID: 21086 RVA: 0x00190E68 File Offset: 0x0018F068
+		// Token: 0x0600525F RID: 21087 RVA: 0x00190F40 File Offset: 0x0018F140
 		private static void _GetComponentsInChildrenUntil_OutExclusions_GetRecursive<T, TStop1, TStop2, TStop3>(Transform currentTransform, List<T> included, List<Component> excluded, bool includeInactive) where T : Component where TStop1 : Component where TStop2 : Component where TStop3 : Component
 		{
 			foreach (object obj in currentTransform)
@@ -209,7 +209,7 @@ namespace GorillaExtensions
 			}
 		}
 
-		// Token: 0x0600525F RID: 21087 RVA: 0x00190F00 File Offset: 0x0018F100
+		// Token: 0x06005260 RID: 21088 RVA: 0x00190FD8 File Offset: 0x0018F1D8
 		private static bool _HasAnyComponents<TStop1, TStop2, TStop3>(Component component, out Component stopComponent) where TStop1 : Component where TStop2 : Component where TStop3 : Component
 		{
 			stopComponent = component.GetComponent<TStop1>();
@@ -226,7 +226,7 @@ namespace GorillaExtensions
 			return stopComponent != null;
 		}
 
-		// Token: 0x06005260 RID: 21088 RVA: 0x00190F5C File Offset: 0x0018F15C
+		// Token: 0x06005261 RID: 21089 RVA: 0x00191034 File Offset: 0x0018F234
 		public static T GetComponentWithRegex<T>(this Component root, string regexString) where T : Component
 		{
 			T[] componentsInChildren = root.GetComponentsInChildren<T>();
@@ -241,7 +241,7 @@ namespace GorillaExtensions
 			return default(T);
 		}
 
-		// Token: 0x06005261 RID: 21089 RVA: 0x00190FAC File Offset: 0x0018F1AC
+		// Token: 0x06005262 RID: 21090 RVA: 0x00191084 File Offset: 0x0018F284
 		private static List<T> GetComponentsWithRegex_Internal<T>(IEnumerable<T> allComponents, string regexString, bool includeInactive, int capacity = 64) where T : Component
 		{
 			List<T> list = new List<T>(capacity);
@@ -250,7 +250,7 @@ namespace GorillaExtensions
 			return list;
 		}
 
-		// Token: 0x06005262 RID: 21090 RVA: 0x00190FD4 File Offset: 0x0018F1D4
+		// Token: 0x06005263 RID: 21091 RVA: 0x001910AC File Offset: 0x0018F2AC
 		private static void GetComponentsWithRegex_Internal<T>(IEnumerable<T> allComponents, Regex regex, ref List<T> foundComponents) where T : Component
 		{
 			foreach (T t in allComponents)
@@ -263,19 +263,19 @@ namespace GorillaExtensions
 			}
 		}
 
-		// Token: 0x06005263 RID: 21091 RVA: 0x00191034 File Offset: 0x0018F234
+		// Token: 0x06005264 RID: 21092 RVA: 0x0019110C File Offset: 0x0018F30C
 		public static List<T> GetComponentsWithRegex<T>(this Scene scene, string regexString, bool includeInactive, int capacity) where T : Component
 		{
 			return GTExt.GetComponentsWithRegex_Internal<T>(scene.GetComponentsInHierarchy(includeInactive, capacity), regexString, includeInactive, capacity);
 		}
 
-		// Token: 0x06005264 RID: 21092 RVA: 0x00191046 File Offset: 0x0018F246
+		// Token: 0x06005265 RID: 21093 RVA: 0x0019111E File Offset: 0x0018F31E
 		public static List<T> GetComponentsWithRegex<T>(this Component root, string regexString, bool includeInactive, int capacity) where T : Component
 		{
 			return GTExt.GetComponentsWithRegex_Internal<T>(root.GetComponentsInChildren<T>(includeInactive), regexString, includeInactive, capacity);
 		}
 
-		// Token: 0x06005265 RID: 21093 RVA: 0x00191058 File Offset: 0x0018F258
+		// Token: 0x06005266 RID: 21094 RVA: 0x00191130 File Offset: 0x0018F330
 		public static List<GameObject> GetGameObjectsWithRegex(this Scene scene, string regexString, bool includeInactive = true, int capacity = 64)
 		{
 			List<Transform> componentsWithRegex = scene.GetComponentsWithRegex(regexString, includeInactive, capacity);
@@ -287,7 +287,7 @@ namespace GorillaExtensions
 			return list;
 		}
 
-		// Token: 0x06005266 RID: 21094 RVA: 0x001910C0 File Offset: 0x0018F2C0
+		// Token: 0x06005267 RID: 21095 RVA: 0x00191198 File Offset: 0x0018F398
 		public static void GetComponentsWithRegex_Internal<T>(this List<T> allComponents, Regex[] regexes, int maxCount, ref List<T> foundComponents) where T : Component
 		{
 			if (maxCount == 0)
@@ -312,7 +312,7 @@ namespace GorillaExtensions
 			}
 		}
 
-		// Token: 0x06005267 RID: 21095 RVA: 0x00191150 File Offset: 0x0018F350
+		// Token: 0x06005268 RID: 21096 RVA: 0x00191228 File Offset: 0x0018F428
 		public static List<T> GetComponentsWithRegex<T>(this Scene scene, string[] regexStrings, bool includeInactive = true, int maxCount = -1, int capacity = 64) where T : Component
 		{
 			List<T> componentsInHierarchy = scene.GetComponentsInHierarchy(includeInactive, capacity);
@@ -326,7 +326,7 @@ namespace GorillaExtensions
 			return list;
 		}
 
-		// Token: 0x06005268 RID: 21096 RVA: 0x001911A0 File Offset: 0x0018F3A0
+		// Token: 0x06005269 RID: 21097 RVA: 0x00191278 File Offset: 0x0018F478
 		public static List<T> GetComponentsWithRegex<T>(this Scene scene, string[] regexStrings, string[] excludeRegexStrings, bool includeInactive = true, int maxCount = -1) where T : Component
 		{
 			List<T> componentsInHierarchy = scene.GetComponentsInHierarchy(includeInactive, 64);
@@ -365,7 +365,7 @@ namespace GorillaExtensions
 			return list;
 		}
 
-		// Token: 0x06005269 RID: 21097 RVA: 0x001912A4 File Offset: 0x0018F4A4
+		// Token: 0x0600526A RID: 21098 RVA: 0x0019137C File Offset: 0x0018F57C
 		public static List<GameObject> GetGameObjectsWithRegex(this Scene scene, string[] regexStrings, bool includeInactive = true, int maxCount = -1)
 		{
 			List<Transform> componentsWithRegex = scene.GetComponentsWithRegex(regexStrings, includeInactive, maxCount, 64);
@@ -377,7 +377,7 @@ namespace GorillaExtensions
 			return list;
 		}
 
-		// Token: 0x0600526A RID: 21098 RVA: 0x00191310 File Offset: 0x0018F510
+		// Token: 0x0600526B RID: 21099 RVA: 0x001913E8 File Offset: 0x0018F5E8
 		public static List<GameObject> GetGameObjectsWithRegex(this Scene scene, string[] regexStrings, string[] excludeRegexStrings, bool includeInactive = true, int maxCount = -1)
 		{
 			List<Transform> componentsWithRegex = scene.GetComponentsWithRegex(regexStrings, excludeRegexStrings, includeInactive, maxCount);
@@ -389,7 +389,7 @@ namespace GorillaExtensions
 			return list;
 		}
 
-		// Token: 0x0600526B RID: 21099 RVA: 0x0019137C File Offset: 0x0018F57C
+		// Token: 0x0600526C RID: 21100 RVA: 0x00191454 File Offset: 0x0018F654
 		public static List<T> GetComponentsByName<T>(this Transform xform, string name, bool includeInactive = true) where T : Component
 		{
 			T[] componentsInChildren = xform.GetComponentsInChildren<T>(includeInactive);
@@ -404,7 +404,7 @@ namespace GorillaExtensions
 			return list;
 		}
 
-		// Token: 0x0600526C RID: 21100 RVA: 0x001913CC File Offset: 0x0018F5CC
+		// Token: 0x0600526D RID: 21101 RVA: 0x001914A4 File Offset: 0x0018F6A4
 		public static T GetComponentByName<T>(this Transform xform, string name, bool includeInactive = true) where T : Component
 		{
 			foreach (T t in xform.GetComponentsInChildren<T>(includeInactive))
@@ -417,7 +417,7 @@ namespace GorillaExtensions
 			return default(T);
 		}
 
-		// Token: 0x0600526D RID: 21101 RVA: 0x00191418 File Offset: 0x0018F618
+		// Token: 0x0600526E RID: 21102 RVA: 0x001914F0 File Offset: 0x0018F6F0
 		public static List<GameObject> GetGameObjectsInHierarchy(this Scene scene, string name, bool includeInactive = true)
 		{
 			List<GameObject> list = new List<GameObject>();
@@ -438,7 +438,7 @@ namespace GorillaExtensions
 			return list;
 		}
 
-		// Token: 0x0600526E RID: 21102 RVA: 0x0019149A File Offset: 0x0018F69A
+		// Token: 0x0600526F RID: 21103 RVA: 0x00191572 File Offset: 0x0018F772
 		public static T GetOrAddComponent<T>(this GameObject gameObject, ref T component) where T : Component
 		{
 			if (component == null)
@@ -448,7 +448,7 @@ namespace GorillaExtensions
 			return component;
 		}
 
-		// Token: 0x0600526F RID: 21103 RVA: 0x001914C4 File Offset: 0x0018F6C4
+		// Token: 0x06005270 RID: 21104 RVA: 0x0019159C File Offset: 0x0018F79C
 		public static T GetOrAddComponent<T>(this GameObject gameObject) where T : Component
 		{
 			T t;
@@ -459,7 +459,7 @@ namespace GorillaExtensions
 			return t;
 		}
 
-		// Token: 0x06005270 RID: 21104 RVA: 0x001914E4 File Offset: 0x0018F6E4
+		// Token: 0x06005271 RID: 21105 RVA: 0x001915BC File Offset: 0x0018F7BC
 		public static void SetLossyScale(this Transform transform, Vector3 scale)
 		{
 			scale = transform.InverseTransformVector(scale);
@@ -467,25 +467,25 @@ namespace GorillaExtensions
 			transform.localScale = new Vector3(scale.x / lossyScale.x, scale.y / lossyScale.y, scale.z / lossyScale.z);
 		}
 
-		// Token: 0x06005271 RID: 21105 RVA: 0x00191533 File Offset: 0x0018F733
+		// Token: 0x06005272 RID: 21106 RVA: 0x0019160B File Offset: 0x0018F80B
 		public static Quaternion TransformRotation(this Transform transform, Quaternion localRotation)
 		{
 			return transform.rotation * localRotation;
 		}
 
-		// Token: 0x06005272 RID: 21106 RVA: 0x00191541 File Offset: 0x0018F741
+		// Token: 0x06005273 RID: 21107 RVA: 0x00191619 File Offset: 0x0018F819
 		public static Quaternion InverseTransformRotation(this Transform transform, Quaternion localRotation)
 		{
 			return Quaternion.Inverse(transform.rotation) * localRotation;
 		}
 
-		// Token: 0x06005273 RID: 21107 RVA: 0x00191554 File Offset: 0x0018F754
+		// Token: 0x06005274 RID: 21108 RVA: 0x0019162C File Offset: 0x0018F82C
 		public static Vector3 ProjectOnPlane(this Vector3 point, Vector3 planeAnchorPosition, Vector3 planeNormal)
 		{
 			return planeAnchorPosition + Vector3.ProjectOnPlane(point - planeAnchorPosition, planeNormal);
 		}
 
-		// Token: 0x06005274 RID: 21108 RVA: 0x0019156C File Offset: 0x0018F76C
+		// Token: 0x06005275 RID: 21109 RVA: 0x00191644 File Offset: 0x0018F844
 		public static void ForEachBackwards<T>(this List<T> list, Action<T> action)
 		{
 			for (int i = list.Count - 1; i >= 0; i--)
@@ -502,7 +502,7 @@ namespace GorillaExtensions
 			}
 		}
 
-		// Token: 0x06005275 RID: 21109 RVA: 0x001915B4 File Offset: 0x0018F7B4
+		// Token: 0x06005276 RID: 21110 RVA: 0x0019168C File Offset: 0x0018F88C
 		public static void AddSortedUnique<T>(this List<T> list, T item)
 		{
 			int num = list.BinarySearch(item);
@@ -512,7 +512,7 @@ namespace GorillaExtensions
 			}
 		}
 
-		// Token: 0x06005276 RID: 21110 RVA: 0x001915D8 File Offset: 0x0018F7D8
+		// Token: 0x06005277 RID: 21111 RVA: 0x001916B0 File Offset: 0x0018F8B0
 		public static void SafeForEachBackwards<T>(this List<T> list, Action<T> action)
 		{
 			for (int i = list.Count - 1; i >= 0; i--)
@@ -529,7 +529,7 @@ namespace GorillaExtensions
 			}
 		}
 
-		// Token: 0x06005277 RID: 21111 RVA: 0x00191620 File Offset: 0x0018F820
+		// Token: 0x06005278 RID: 21112 RVA: 0x001916F8 File Offset: 0x0018F8F8
 		public static bool CompareAs255Unclamped(this Color a, Color b)
 		{
 			int num = (int)(a.r * 255f);
@@ -543,7 +543,7 @@ namespace GorillaExtensions
 			return num == num5 && num2 == num6 && num3 == num7 && num4 == num8;
 		}
 
-		// Token: 0x06005278 RID: 21112 RVA: 0x001916B4 File Offset: 0x0018F8B4
+		// Token: 0x06005279 RID: 21113 RVA: 0x0019178C File Offset: 0x0018F98C
 		public static Quaternion QuaternionFromToVec(Vector3 toVector, Vector3 fromVector)
 		{
 			Vector3 vector = Vector3.Cross(fromVector, toVector);
@@ -557,7 +557,7 @@ namespace GorillaExtensions
 			return quaternion.normalized;
 		}
 
-		// Token: 0x06005279 RID: 21113 RVA: 0x00191758 File Offset: 0x0018F958
+		// Token: 0x0600527A RID: 21114 RVA: 0x00191830 File Offset: 0x0018FA30
 		public static Vector3 Position(this Matrix4x4 matrix)
 		{
 			float m = matrix.m03;
@@ -566,7 +566,7 @@ namespace GorillaExtensions
 			return new Vector3(m, m2, m3);
 		}
 
-		// Token: 0x0600527A RID: 21114 RVA: 0x00191780 File Offset: 0x0018F980
+		// Token: 0x0600527B RID: 21115 RVA: 0x00191858 File Offset: 0x0018FA58
 		public static Vector3 Scale(this Matrix4x4 m)
 		{
 			Vector3 vector = new Vector3(m.GetColumn(0).magnitude, m.GetColumn(1).magnitude, m.GetColumn(2).magnitude);
@@ -577,12 +577,12 @@ namespace GorillaExtensions
 			return vector;
 		}
 
-		// Token: 0x0600527B RID: 21115 RVA: 0x000023F4 File Offset: 0x000005F4
+		// Token: 0x0600527C RID: 21116 RVA: 0x000023F4 File Offset: 0x000005F4
 		public static void SetLocalRelativeToParentMatrixWithParityAxis(this Matrix4x4 matrix, GTExt.ParityOptions parity = GTExt.ParityOptions.XFlip)
 		{
 		}
 
-		// Token: 0x0600527C RID: 21116 RVA: 0x00191818 File Offset: 0x0018FA18
+		// Token: 0x0600527D RID: 21117 RVA: 0x001918F0 File Offset: 0x0018FAF0
 		public static void MultiplyInPlaceWith(this Vector3 a, in Vector3 b)
 		{
 			a.x *= b.x;
@@ -590,7 +590,7 @@ namespace GorillaExtensions
 			a.z *= b.z;
 		}
 
-		// Token: 0x0600527D RID: 21117 RVA: 0x0019184C File Offset: 0x0018FA4C
+		// Token: 0x0600527E RID: 21118 RVA: 0x00191924 File Offset: 0x0018FB24
 		public static void DecomposeWithXFlip(this Matrix4x4 matrix, out Vector3 transformation, out Quaternion rotation, out Vector3 scale)
 		{
 			Matrix4x4 matrix4x = matrix;
@@ -622,7 +622,7 @@ namespace GorillaExtensions
 			scale = vector2;
 		}
 
-		// Token: 0x0600527E RID: 21118 RVA: 0x001918C8 File Offset: 0x0018FAC8
+		// Token: 0x0600527F RID: 21119 RVA: 0x001919A0 File Offset: 0x0018FBA0
 		public static void SetLocalMatrixRelativeToParentWithXParity(this Transform transform, in Matrix4x4 matrix4X4)
 		{
 			Vector3 vector;
@@ -634,7 +634,7 @@ namespace GorillaExtensions
 			transform.localScale = vector2;
 		}
 
-		// Token: 0x0600527F RID: 21119 RVA: 0x001918F8 File Offset: 0x0018FAF8
+		// Token: 0x06005280 RID: 21120 RVA: 0x001919D0 File Offset: 0x0018FBD0
 		public static Matrix4x4 Matrix4x4Scale(in Vector3 vector)
 		{
 			Matrix4x4 matrix4x;
@@ -657,7 +657,7 @@ namespace GorillaExtensions
 			return matrix4x;
 		}
 
-		// Token: 0x06005280 RID: 21120 RVA: 0x001919CC File Offset: 0x0018FBCC
+		// Token: 0x06005281 RID: 21121 RVA: 0x00191AA4 File Offset: 0x0018FCA4
 		public static Vector4 GetColumnNoCopy(this Matrix4x4 matrix, in int index)
 		{
 			switch (index)
@@ -675,7 +675,7 @@ namespace GorillaExtensions
 			}
 		}
 
-		// Token: 0x06005281 RID: 21121 RVA: 0x00191A78 File Offset: 0x0018FC78
+		// Token: 0x06005282 RID: 21122 RVA: 0x00191B50 File Offset: 0x0018FD50
 		public static Quaternion RotationWithScaleContext(this Matrix4x4 m, in Vector3 scale)
 		{
 			Matrix4x4 matrix4x = m * GTExt.Matrix4x4Scale(in scale);
@@ -685,7 +685,7 @@ namespace GorillaExtensions
 			return Quaternion.LookRotation(vector, (in matrix4x).GetColumnNoCopy(in num2));
 		}
 
-		// Token: 0x06005282 RID: 21122 RVA: 0x00191ABC File Offset: 0x0018FCBC
+		// Token: 0x06005283 RID: 21123 RVA: 0x00191B94 File Offset: 0x0018FD94
 		public static Quaternion Rotation(this Matrix4x4 m)
 		{
 			int num = 2;
@@ -694,49 +694,49 @@ namespace GorillaExtensions
 			return Quaternion.LookRotation(vector, (in m).GetColumnNoCopy(in num2));
 		}
 
-		// Token: 0x06005283 RID: 21123 RVA: 0x00191AEC File Offset: 0x0018FCEC
+		// Token: 0x06005284 RID: 21124 RVA: 0x00191BC4 File Offset: 0x0018FDC4
 		public static Vector3 x0y(this Vector2 v)
 		{
 			return new Vector3(v.x, 0f, v.y);
 		}
 
-		// Token: 0x06005284 RID: 21124 RVA: 0x00191B04 File Offset: 0x0018FD04
+		// Token: 0x06005285 RID: 21125 RVA: 0x00191BDC File Offset: 0x0018FDDC
 		public static Vector3 x0y(this Vector3 v)
 		{
 			return new Vector3(v.x, 0f, v.y);
 		}
 
-		// Token: 0x06005285 RID: 21125 RVA: 0x00191B1C File Offset: 0x0018FD1C
+		// Token: 0x06005286 RID: 21126 RVA: 0x00191BF4 File Offset: 0x0018FDF4
 		public static Vector3 xy0(this Vector2 v)
 		{
 			return new Vector3(v.x, v.y, 0f);
 		}
 
-		// Token: 0x06005286 RID: 21126 RVA: 0x00191B34 File Offset: 0x0018FD34
+		// Token: 0x06005287 RID: 21127 RVA: 0x00191C0C File Offset: 0x0018FE0C
 		public static Vector3 xy0(this Vector3 v)
 		{
 			return new Vector3(v.x, v.y, 0f);
 		}
 
-		// Token: 0x06005287 RID: 21127 RVA: 0x00191B4C File Offset: 0x0018FD4C
+		// Token: 0x06005288 RID: 21128 RVA: 0x00191C24 File Offset: 0x0018FE24
 		public static Vector3 xz0(this Vector3 v)
 		{
 			return new Vector3(v.x, v.z, 0f);
 		}
 
-		// Token: 0x06005288 RID: 21128 RVA: 0x0003A5DA File Offset: 0x000387DA
+		// Token: 0x06005289 RID: 21129 RVA: 0x0003A5DA File Offset: 0x000387DA
 		public static Vector3 x0z(this Vector3 v)
 		{
 			return new Vector3(v.x, 0f, v.z);
 		}
 
-		// Token: 0x06005289 RID: 21129 RVA: 0x00191B64 File Offset: 0x0018FD64
+		// Token: 0x0600528A RID: 21130 RVA: 0x00191C3C File Offset: 0x0018FE3C
 		public static Matrix4x4 LocalMatrixRelativeToParentNoScale(this Transform transform)
 		{
 			return Matrix4x4.TRS(transform.localPosition, transform.localRotation, Vector3.one);
 		}
 
-		// Token: 0x0600528A RID: 21130 RVA: 0x00191B7C File Offset: 0x0018FD7C
+		// Token: 0x0600528B RID: 21131 RVA: 0x00191C54 File Offset: 0x0018FE54
 		public static Matrix4x4 LocalMatrixRelativeToParentWithScale(this Transform transform)
 		{
 			if (transform.parent == null)
@@ -746,7 +746,7 @@ namespace GorillaExtensions
 			return transform.parent.worldToLocalMatrix * transform.localToWorldMatrix;
 		}
 
-		// Token: 0x0600528B RID: 21131 RVA: 0x00191BA9 File Offset: 0x0018FDA9
+		// Token: 0x0600528C RID: 21132 RVA: 0x00191C81 File Offset: 0x0018FE81
 		public static void SetLocalMatrixRelativeToParent(this Transform transform, Matrix4x4 matrix)
 		{
 			transform.localPosition = matrix.Position();
@@ -754,27 +754,27 @@ namespace GorillaExtensions
 			transform.localScale = matrix.Scale();
 		}
 
-		// Token: 0x0600528C RID: 21132 RVA: 0x00191BD0 File Offset: 0x0018FDD0
+		// Token: 0x0600528D RID: 21133 RVA: 0x00191CA8 File Offset: 0x0018FEA8
 		public static void SetLocalMatrixRelativeToParentNoScale(this Transform transform, Matrix4x4 matrix)
 		{
 			transform.localPosition = matrix.Position();
 			transform.localRotation = (in matrix).Rotation();
 		}
 
-		// Token: 0x0600528D RID: 21133 RVA: 0x00191BEB File Offset: 0x0018FDEB
+		// Token: 0x0600528E RID: 21134 RVA: 0x00191CC3 File Offset: 0x0018FEC3
 		public static void SetLocalToWorldMatrixNoScale(this Transform transform, Matrix4x4 matrix)
 		{
 			transform.position = matrix.Position();
 			transform.rotation = (in matrix).Rotation();
 		}
 
-		// Token: 0x0600528E RID: 21134 RVA: 0x00191C06 File Offset: 0x0018FE06
+		// Token: 0x0600528F RID: 21135 RVA: 0x00191CDE File Offset: 0x0018FEDE
 		public static Matrix4x4 localToWorldNoScale(this Transform transform)
 		{
 			return Matrix4x4.TRS(transform.position, transform.rotation, Vector3.one);
 		}
 
-		// Token: 0x0600528F RID: 21135 RVA: 0x00191C1E File Offset: 0x0018FE1E
+		// Token: 0x06005290 RID: 21136 RVA: 0x00191CF6 File Offset: 0x0018FEF6
 		public static void SetLocalToWorldMatrixWithScale(this Transform transform, Matrix4x4 matrix)
 		{
 			transform.position = matrix.Position();
@@ -782,61 +782,61 @@ namespace GorillaExtensions
 			transform.SetLossyScale(matrix.lossyScale);
 		}
 
-		// Token: 0x06005290 RID: 21136 RVA: 0x00191C46 File Offset: 0x0018FE46
+		// Token: 0x06005291 RID: 21137 RVA: 0x00191D1E File Offset: 0x0018FF1E
 		public static Matrix4x4 Matrix4X4LerpNoScale(Matrix4x4 a, Matrix4x4 b, float t)
 		{
 			return Matrix4x4.TRS(Vector3.Lerp(a.Position(), b.Position(), t), Quaternion.Slerp(a.rotation, b.rotation, t), b.lossyScale);
 		}
 
-		// Token: 0x06005291 RID: 21137 RVA: 0x00191C7A File Offset: 0x0018FE7A
+		// Token: 0x06005292 RID: 21138 RVA: 0x00191D52 File Offset: 0x0018FF52
 		public static Matrix4x4 LerpTo(this Matrix4x4 a, Matrix4x4 b, float t)
 		{
 			return GTExt.Matrix4X4LerpNoScale(a, b, t);
 		}
 
-		// Token: 0x06005292 RID: 21138 RVA: 0x00191C84 File Offset: 0x0018FE84
+		// Token: 0x06005293 RID: 21139 RVA: 0x00191D5C File Offset: 0x0018FF5C
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		public static bool IsNaN(this Vector3 v)
 		{
 			return float.IsNaN(v.x) || float.IsNaN(v.y) || float.IsNaN(v.z);
 		}
 
-		// Token: 0x06005293 RID: 21139 RVA: 0x00191CAD File Offset: 0x0018FEAD
+		// Token: 0x06005294 RID: 21140 RVA: 0x00191D85 File Offset: 0x0018FF85
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		public static bool IsNan(this Quaternion q)
 		{
 			return float.IsNaN(q.x) || float.IsNaN(q.y) || float.IsNaN(q.z) || float.IsNaN(q.w);
 		}
 
-		// Token: 0x06005294 RID: 21140 RVA: 0x00191CE3 File Offset: 0x0018FEE3
+		// Token: 0x06005295 RID: 21141 RVA: 0x00191DBB File Offset: 0x0018FFBB
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		public static bool IsInfinity(this Vector3 v)
 		{
 			return float.IsInfinity(v.x) || float.IsInfinity(v.y) || float.IsInfinity(v.z);
 		}
 
-		// Token: 0x06005295 RID: 21141 RVA: 0x00191D0C File Offset: 0x0018FF0C
+		// Token: 0x06005296 RID: 21142 RVA: 0x00191DE4 File Offset: 0x0018FFE4
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		public static bool IsInfinity(this Quaternion q)
 		{
 			return float.IsInfinity(q.x) || float.IsInfinity(q.y) || float.IsInfinity(q.z) || float.IsInfinity(q.w);
 		}
 
-		// Token: 0x06005296 RID: 21142 RVA: 0x00191D42 File Offset: 0x0018FF42
+		// Token: 0x06005297 RID: 21143 RVA: 0x00191E1A File Offset: 0x0019001A
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		public static bool ValuesInRange(this Vector3 v, in float maxVal)
 		{
 			return Mathf.Abs(v.x) < maxVal && Mathf.Abs(v.y) < maxVal && Mathf.Abs(v.z) < maxVal;
 		}
 
-		// Token: 0x06005297 RID: 21143 RVA: 0x00191D73 File Offset: 0x0018FF73
+		// Token: 0x06005298 RID: 21144 RVA: 0x00191E4B File Offset: 0x0019004B
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		public static bool IsValid(this Vector3 v, in float maxVal = 10000f)
 		{
 			return !(in v).IsNaN() && !(in v).IsInfinity() && (in v).ValuesInRange(in maxVal);
 		}
 
-		// Token: 0x06005298 RID: 21144 RVA: 0x00191D90 File Offset: 0x0018FF90
+		// Token: 0x06005299 RID: 21145 RVA: 0x00191E68 File Offset: 0x00190068
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		public static Vector3 GetValidWithFallback(this Vector3 v, in Vector3 safeVal)
 		{
@@ -848,7 +848,7 @@ namespace GorillaExtensions
 			return v;
 		}
 
-		// Token: 0x06005299 RID: 21145 RVA: 0x00191DBC File Offset: 0x0018FFBC
+		// Token: 0x0600529A RID: 21146 RVA: 0x00191E94 File Offset: 0x00190094
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		public static void SetValueSafe(this Vector3 v, in Vector3 newVal)
 		{
@@ -859,14 +859,14 @@ namespace GorillaExtensions
 			}
 		}
 
-		// Token: 0x0600529A RID: 21146 RVA: 0x00191DE5 File Offset: 0x0018FFE5
+		// Token: 0x0600529B RID: 21147 RVA: 0x00191EBD File Offset: 0x001900BD
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		public static bool IsValid(this Quaternion q)
 		{
 			return !(in q).IsNan() && !(in q).IsInfinity();
 		}
 
-		// Token: 0x0600529B RID: 21147 RVA: 0x00191DFA File Offset: 0x0018FFFA
+		// Token: 0x0600529C RID: 21148 RVA: 0x00191ED2 File Offset: 0x001900D2
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		public static Quaternion GetValidWithFallback(this Quaternion q, in Quaternion safeVal)
 		{
@@ -877,7 +877,7 @@ namespace GorillaExtensions
 			return q;
 		}
 
-		// Token: 0x0600529C RID: 21148 RVA: 0x00191E11 File Offset: 0x00190011
+		// Token: 0x0600529D RID: 21149 RVA: 0x00191EE9 File Offset: 0x001900E9
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		public static void SetValueSafe(this Quaternion q, in Quaternion newVal)
 		{
@@ -887,7 +887,7 @@ namespace GorillaExtensions
 			}
 		}
 
-		// Token: 0x0600529D RID: 21149 RVA: 0x00191E28 File Offset: 0x00190028
+		// Token: 0x0600529E RID: 21150 RVA: 0x00191F00 File Offset: 0x00190100
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		public static Vector2 ClampMagnitudeSafe(this Vector2 v2, float magnitude)
 		{
@@ -906,7 +906,7 @@ namespace GorillaExtensions
 			return Vector2.ClampMagnitude(v2, magnitude);
 		}
 
-		// Token: 0x0600529E RID: 21150 RVA: 0x00191E80 File Offset: 0x00190080
+		// Token: 0x0600529F RID: 21151 RVA: 0x00191F58 File Offset: 0x00190158
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		public static void ClampThisMagnitudeSafe(this Vector2 v2, float magnitude)
 		{
@@ -925,7 +925,7 @@ namespace GorillaExtensions
 			v2 = Vector2.ClampMagnitude(v2, magnitude);
 		}
 
-		// Token: 0x0600529F RID: 21151 RVA: 0x00191EE0 File Offset: 0x001900E0
+		// Token: 0x060052A0 RID: 21152 RVA: 0x00191FB8 File Offset: 0x001901B8
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		public static Vector3 ClampMagnitudeSafe(this Vector3 v3, float magnitude)
 		{
@@ -948,7 +948,7 @@ namespace GorillaExtensions
 			return Vector3.ClampMagnitude(v3, magnitude);
 		}
 
-		// Token: 0x060052A0 RID: 21152 RVA: 0x00191F50 File Offset: 0x00190150
+		// Token: 0x060052A1 RID: 21153 RVA: 0x00192028 File Offset: 0x00190228
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		public static void ClampThisMagnitudeSafe(this Vector3 v3, float magnitude)
 		{
@@ -971,7 +971,7 @@ namespace GorillaExtensions
 			v3 = Vector3.ClampMagnitude(v3, magnitude);
 		}
 
-		// Token: 0x060052A1 RID: 21153 RVA: 0x00191FC6 File Offset: 0x001901C6
+		// Token: 0x060052A2 RID: 21154 RVA: 0x0019209E File Offset: 0x0019029E
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		public static float MinSafe(this float value, float min)
 		{
@@ -990,7 +990,7 @@ namespace GorillaExtensions
 			return value;
 		}
 
-		// Token: 0x060052A2 RID: 21154 RVA: 0x00191FED File Offset: 0x001901ED
+		// Token: 0x060052A3 RID: 21155 RVA: 0x001920C5 File Offset: 0x001902C5
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		public static void ThisMinSafe(this float value, float min)
 		{
@@ -1005,7 +1005,7 @@ namespace GorillaExtensions
 			value = ((value < min) ? value : min);
 		}
 
-		// Token: 0x060052A3 RID: 21155 RVA: 0x0019201A File Offset: 0x0019021A
+		// Token: 0x060052A4 RID: 21156 RVA: 0x001920F2 File Offset: 0x001902F2
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		public static double MinSafe(this double value, float min)
 		{
@@ -1024,7 +1024,7 @@ namespace GorillaExtensions
 			return value;
 		}
 
-		// Token: 0x060052A4 RID: 21156 RVA: 0x00192048 File Offset: 0x00190248
+		// Token: 0x060052A5 RID: 21157 RVA: 0x00192120 File Offset: 0x00190320
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		public static void ThisMinSafe(this double value, float min)
 		{
@@ -1039,7 +1039,7 @@ namespace GorillaExtensions
 			value = ((value < (double)min) ? value : ((double)min));
 		}
 
-		// Token: 0x060052A5 RID: 21157 RVA: 0x0019207C File Offset: 0x0019027C
+		// Token: 0x060052A6 RID: 21158 RVA: 0x00192154 File Offset: 0x00190354
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		public static float MaxSafe(this float value, float max)
 		{
@@ -1058,7 +1058,7 @@ namespace GorillaExtensions
 			return value;
 		}
 
-		// Token: 0x060052A6 RID: 21158 RVA: 0x001920A3 File Offset: 0x001902A3
+		// Token: 0x060052A7 RID: 21159 RVA: 0x0019217B File Offset: 0x0019037B
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		public static void ThisMaxSafe(this float value, float max)
 		{
@@ -1073,7 +1073,7 @@ namespace GorillaExtensions
 			value = ((value > max) ? value : max);
 		}
 
-		// Token: 0x060052A7 RID: 21159 RVA: 0x001920D0 File Offset: 0x001902D0
+		// Token: 0x060052A8 RID: 21160 RVA: 0x001921A8 File Offset: 0x001903A8
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		public static double MaxSafe(this double value, float max)
 		{
@@ -1092,7 +1092,7 @@ namespace GorillaExtensions
 			return value;
 		}
 
-		// Token: 0x060052A8 RID: 21160 RVA: 0x001920FE File Offset: 0x001902FE
+		// Token: 0x060052A9 RID: 21161 RVA: 0x001921D6 File Offset: 0x001903D6
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		public static void ThisMaxSafe(this double value, float max)
 		{
@@ -1107,7 +1107,7 @@ namespace GorillaExtensions
 			value = ((value > (double)max) ? value : ((double)max));
 		}
 
-		// Token: 0x060052A9 RID: 21161 RVA: 0x00192132 File Offset: 0x00190332
+		// Token: 0x060052AA RID: 21162 RVA: 0x0019220A File Offset: 0x0019040A
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		public static float ClampSafe(this float value, float min, float max)
 		{
@@ -1134,7 +1134,7 @@ namespace GorillaExtensions
 			return min;
 		}
 
-		// Token: 0x060052AA RID: 21162 RVA: 0x00192170 File Offset: 0x00190370
+		// Token: 0x060052AB RID: 21163 RVA: 0x00192248 File Offset: 0x00190448
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		public static double ClampSafe(this double value, double min, double max)
 		{
@@ -1161,7 +1161,7 @@ namespace GorillaExtensions
 			return min;
 		}
 
-		// Token: 0x060052AB RID: 21163 RVA: 0x001921C3 File Offset: 0x001903C3
+		// Token: 0x060052AC RID: 21164 RVA: 0x0019229B File Offset: 0x0019049B
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		public static float GetFinite(this float value)
 		{
@@ -1172,7 +1172,7 @@ namespace GorillaExtensions
 			return value;
 		}
 
-		// Token: 0x060052AC RID: 21164 RVA: 0x001921D4 File Offset: 0x001903D4
+		// Token: 0x060052AD RID: 21165 RVA: 0x001922AC File Offset: 0x001904AC
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		public static double GetFinite(this double value)
 		{
@@ -1183,842 +1183,842 @@ namespace GorillaExtensions
 			return value;
 		}
 
-		// Token: 0x060052AD RID: 21165 RVA: 0x001921E9 File Offset: 0x001903E9
+		// Token: 0x060052AE RID: 21166 RVA: 0x001922C1 File Offset: 0x001904C1
 		public static Matrix4x4 Matrix4X4LerpHandleNegativeScale(Matrix4x4 a, Matrix4x4 b, float t)
 		{
 			return Matrix4x4.TRS(Vector3.Lerp(a.Position(), b.Position(), t), Quaternion.Slerp((in a).Rotation(), (in b).Rotation(), t), b.lossyScale);
 		}
 
-		// Token: 0x060052AE RID: 21166 RVA: 0x0019221D File Offset: 0x0019041D
+		// Token: 0x060052AF RID: 21167 RVA: 0x001922F5 File Offset: 0x001904F5
 		public static Matrix4x4 LerpTo_HandleNegativeScale(this Matrix4x4 a, Matrix4x4 b, float t)
 		{
 			return GTExt.Matrix4X4LerpHandleNegativeScale(a, b, t);
 		}
 
-		// Token: 0x060052AF RID: 21167 RVA: 0x00192228 File Offset: 0x00190428
+		// Token: 0x060052B0 RID: 21168 RVA: 0x00192300 File Offset: 0x00190500
 		public static Vector3 LerpToUnclamped(this Vector3 a, in Vector3 b, float t)
 		{
 			return new Vector3(a.x + (b.x - a.x) * t, a.y + (b.y - a.y) * t, a.z + (b.z - a.z) * t);
 		}
 
-		// Token: 0x060052B0 RID: 21168 RVA: 0x0019227C File Offset: 0x0019047C
+		// Token: 0x060052B1 RID: 21169 RVA: 0x00192354 File Offset: 0x00190554
 		public static string ToLongString(this Vector3 self)
 		{
 			return string.Format("[{0}, {1}, {2}]", self.x, self.y, self.z);
 		}
 
-		// Token: 0x060052B1 RID: 21169 RVA: 0x001922A9 File Offset: 0x001904A9
+		// Token: 0x060052B2 RID: 21170 RVA: 0x00192381 File Offset: 0x00190581
 		public static int GetRandomIndex<T>(this IReadOnlyList<T> self)
 		{
 			return Random.Range(0, self.Count);
 		}
 
-		// Token: 0x060052B2 RID: 21170 RVA: 0x001922B7 File Offset: 0x001904B7
+		// Token: 0x060052B3 RID: 21171 RVA: 0x0019238F File Offset: 0x0019058F
 		public static T GetRandomItem<T>(this IReadOnlyList<T> self)
 		{
 			return self[self.GetRandomIndex<T>()];
 		}
 
-		// Token: 0x060052B3 RID: 21171 RVA: 0x001922C5 File Offset: 0x001904C5
+		// Token: 0x060052B4 RID: 21172 RVA: 0x0019239D File Offset: 0x0019059D
 		public static Vector2 xx(this float v)
 		{
 			return new Vector2(v, v);
 		}
 
-		// Token: 0x060052B4 RID: 21172 RVA: 0x001922CE File Offset: 0x001904CE
+		// Token: 0x060052B5 RID: 21173 RVA: 0x001923A6 File Offset: 0x001905A6
 		public static Vector2 xx(this Vector2 v)
 		{
 			return new Vector2(v.x, v.x);
 		}
 
-		// Token: 0x060052B5 RID: 21173 RVA: 0x001922E1 File Offset: 0x001904E1
+		// Token: 0x060052B6 RID: 21174 RVA: 0x001923B9 File Offset: 0x001905B9
 		public static Vector2 xy(this Vector2 v)
 		{
 			return new Vector2(v.x, v.y);
 		}
 
-		// Token: 0x060052B6 RID: 21174 RVA: 0x001922F4 File Offset: 0x001904F4
+		// Token: 0x060052B7 RID: 21175 RVA: 0x001923CC File Offset: 0x001905CC
 		public static Vector2 yy(this Vector2 v)
 		{
 			return new Vector2(v.y, v.y);
 		}
 
-		// Token: 0x060052B7 RID: 21175 RVA: 0x00192307 File Offset: 0x00190507
+		// Token: 0x060052B8 RID: 21176 RVA: 0x001923DF File Offset: 0x001905DF
 		public static Vector2 xx(this Vector3 v)
 		{
 			return new Vector2(v.x, v.x);
 		}
 
-		// Token: 0x060052B8 RID: 21176 RVA: 0x0019231A File Offset: 0x0019051A
+		// Token: 0x060052B9 RID: 21177 RVA: 0x001923F2 File Offset: 0x001905F2
 		public static Vector2 xy(this Vector3 v)
 		{
 			return new Vector2(v.x, v.y);
 		}
 
-		// Token: 0x060052B9 RID: 21177 RVA: 0x0019232D File Offset: 0x0019052D
+		// Token: 0x060052BA RID: 21178 RVA: 0x00192405 File Offset: 0x00190605
 		public static Vector2 xz(this Vector3 v)
 		{
 			return new Vector2(v.x, v.z);
 		}
 
-		// Token: 0x060052BA RID: 21178 RVA: 0x00192340 File Offset: 0x00190540
+		// Token: 0x060052BB RID: 21179 RVA: 0x00192418 File Offset: 0x00190618
 		public static Vector2 yy(this Vector3 v)
 		{
 			return new Vector2(v.y, v.y);
 		}
 
-		// Token: 0x060052BB RID: 21179 RVA: 0x00192353 File Offset: 0x00190553
+		// Token: 0x060052BC RID: 21180 RVA: 0x0019242B File Offset: 0x0019062B
 		public static Vector2 yz(this Vector3 v)
 		{
 			return new Vector2(v.y, v.z);
 		}
 
-		// Token: 0x060052BC RID: 21180 RVA: 0x00192366 File Offset: 0x00190566
+		// Token: 0x060052BD RID: 21181 RVA: 0x0019243E File Offset: 0x0019063E
 		public static Vector2 zz(this Vector3 v)
 		{
 			return new Vector2(v.z, v.z);
 		}
 
-		// Token: 0x060052BD RID: 21181 RVA: 0x00192379 File Offset: 0x00190579
+		// Token: 0x060052BE RID: 21182 RVA: 0x00192451 File Offset: 0x00190651
 		public static Vector2 xx(this Vector4 v)
 		{
 			return new Vector2(v.x, v.x);
 		}
 
-		// Token: 0x060052BE RID: 21182 RVA: 0x0019238C File Offset: 0x0019058C
+		// Token: 0x060052BF RID: 21183 RVA: 0x00192464 File Offset: 0x00190664
 		public static Vector2 xy(this Vector4 v)
 		{
 			return new Vector2(v.x, v.y);
 		}
 
-		// Token: 0x060052BF RID: 21183 RVA: 0x0019239F File Offset: 0x0019059F
+		// Token: 0x060052C0 RID: 21184 RVA: 0x00192477 File Offset: 0x00190677
 		public static Vector2 xz(this Vector4 v)
 		{
 			return new Vector2(v.x, v.z);
 		}
 
-		// Token: 0x060052C0 RID: 21184 RVA: 0x001923B2 File Offset: 0x001905B2
+		// Token: 0x060052C1 RID: 21185 RVA: 0x0019248A File Offset: 0x0019068A
 		public static Vector2 xw(this Vector4 v)
 		{
 			return new Vector2(v.x, v.w);
 		}
 
-		// Token: 0x060052C1 RID: 21185 RVA: 0x001923C5 File Offset: 0x001905C5
+		// Token: 0x060052C2 RID: 21186 RVA: 0x0019249D File Offset: 0x0019069D
 		public static Vector2 yy(this Vector4 v)
 		{
 			return new Vector2(v.y, v.y);
 		}
 
-		// Token: 0x060052C2 RID: 21186 RVA: 0x001923D8 File Offset: 0x001905D8
+		// Token: 0x060052C3 RID: 21187 RVA: 0x001924B0 File Offset: 0x001906B0
 		public static Vector2 yz(this Vector4 v)
 		{
 			return new Vector2(v.y, v.z);
 		}
 
-		// Token: 0x060052C3 RID: 21187 RVA: 0x001923EB File Offset: 0x001905EB
+		// Token: 0x060052C4 RID: 21188 RVA: 0x001924C3 File Offset: 0x001906C3
 		public static Vector2 yw(this Vector4 v)
 		{
 			return new Vector2(v.y, v.w);
 		}
 
-		// Token: 0x060052C4 RID: 21188 RVA: 0x001923FE File Offset: 0x001905FE
+		// Token: 0x060052C5 RID: 21189 RVA: 0x001924D6 File Offset: 0x001906D6
 		public static Vector2 zz(this Vector4 v)
 		{
 			return new Vector2(v.z, v.z);
 		}
 
-		// Token: 0x060052C5 RID: 21189 RVA: 0x00192411 File Offset: 0x00190611
+		// Token: 0x060052C6 RID: 21190 RVA: 0x001924E9 File Offset: 0x001906E9
 		public static Vector2 zw(this Vector4 v)
 		{
 			return new Vector2(v.z, v.w);
 		}
 
-		// Token: 0x060052C6 RID: 21190 RVA: 0x00192424 File Offset: 0x00190624
+		// Token: 0x060052C7 RID: 21191 RVA: 0x001924FC File Offset: 0x001906FC
 		public static Vector2 ww(this Vector4 v)
 		{
 			return new Vector2(v.w, v.w);
 		}
 
-		// Token: 0x060052C7 RID: 21191 RVA: 0x00192437 File Offset: 0x00190637
+		// Token: 0x060052C8 RID: 21192 RVA: 0x0019250F File Offset: 0x0019070F
 		public static Vector3 xxx(this float v)
 		{
 			return new Vector3(v, v, v);
 		}
 
-		// Token: 0x060052C8 RID: 21192 RVA: 0x00192441 File Offset: 0x00190641
+		// Token: 0x060052C9 RID: 21193 RVA: 0x00192519 File Offset: 0x00190719
 		public static Vector3 xxx(this Vector2 v)
 		{
 			return new Vector3(v.x, v.x, v.x);
 		}
 
-		// Token: 0x060052C9 RID: 21193 RVA: 0x0019245A File Offset: 0x0019065A
+		// Token: 0x060052CA RID: 21194 RVA: 0x00192532 File Offset: 0x00190732
 		public static Vector3 xxy(this Vector2 v)
 		{
 			return new Vector3(v.x, v.x, v.y);
 		}
 
-		// Token: 0x060052CA RID: 21194 RVA: 0x00192473 File Offset: 0x00190673
+		// Token: 0x060052CB RID: 21195 RVA: 0x0019254B File Offset: 0x0019074B
 		public static Vector3 xyy(this Vector2 v)
 		{
 			return new Vector3(v.x, v.y, v.y);
 		}
 
-		// Token: 0x060052CB RID: 21195 RVA: 0x0019248C File Offset: 0x0019068C
+		// Token: 0x060052CC RID: 21196 RVA: 0x00192564 File Offset: 0x00190764
 		public static Vector3 yyy(this Vector2 v)
 		{
 			return new Vector3(v.y, v.y, v.y);
 		}
 
-		// Token: 0x060052CC RID: 21196 RVA: 0x001924A5 File Offset: 0x001906A5
+		// Token: 0x060052CD RID: 21197 RVA: 0x0019257D File Offset: 0x0019077D
 		public static Vector3 xxx(this Vector3 v)
 		{
 			return new Vector3(v.x, v.x, v.x);
 		}
 
-		// Token: 0x060052CD RID: 21197 RVA: 0x001924BE File Offset: 0x001906BE
+		// Token: 0x060052CE RID: 21198 RVA: 0x00192596 File Offset: 0x00190796
 		public static Vector3 xxy(this Vector3 v)
 		{
 			return new Vector3(v.x, v.x, v.y);
 		}
 
-		// Token: 0x060052CE RID: 21198 RVA: 0x001924D7 File Offset: 0x001906D7
+		// Token: 0x060052CF RID: 21199 RVA: 0x001925AF File Offset: 0x001907AF
 		public static Vector3 xxz(this Vector3 v)
 		{
 			return new Vector3(v.x, v.x, v.z);
 		}
 
-		// Token: 0x060052CF RID: 21199 RVA: 0x001924F0 File Offset: 0x001906F0
+		// Token: 0x060052D0 RID: 21200 RVA: 0x001925C8 File Offset: 0x001907C8
 		public static Vector3 xyy(this Vector3 v)
 		{
 			return new Vector3(v.x, v.y, v.y);
 		}
 
-		// Token: 0x060052D0 RID: 21200 RVA: 0x00192509 File Offset: 0x00190709
+		// Token: 0x060052D1 RID: 21201 RVA: 0x001925E1 File Offset: 0x001907E1
 		public static Vector3 xyz(this Vector3 v)
 		{
 			return new Vector3(v.x, v.y, v.z);
 		}
 
-		// Token: 0x060052D1 RID: 21201 RVA: 0x00192522 File Offset: 0x00190722
+		// Token: 0x060052D2 RID: 21202 RVA: 0x001925FA File Offset: 0x001907FA
 		public static Vector3 xzz(this Vector3 v)
 		{
 			return new Vector3(v.x, v.z, v.z);
 		}
 
-		// Token: 0x060052D2 RID: 21202 RVA: 0x0019253B File Offset: 0x0019073B
+		// Token: 0x060052D3 RID: 21203 RVA: 0x00192613 File Offset: 0x00190813
 		public static Vector3 yyy(this Vector3 v)
 		{
 			return new Vector3(v.y, v.y, v.y);
 		}
 
-		// Token: 0x060052D3 RID: 21203 RVA: 0x00192554 File Offset: 0x00190754
+		// Token: 0x060052D4 RID: 21204 RVA: 0x0019262C File Offset: 0x0019082C
 		public static Vector3 yyz(this Vector3 v)
 		{
 			return new Vector3(v.y, v.y, v.z);
 		}
 
-		// Token: 0x060052D4 RID: 21204 RVA: 0x0019256D File Offset: 0x0019076D
+		// Token: 0x060052D5 RID: 21205 RVA: 0x00192645 File Offset: 0x00190845
 		public static Vector3 yzz(this Vector3 v)
 		{
 			return new Vector3(v.y, v.z, v.z);
 		}
 
-		// Token: 0x060052D5 RID: 21205 RVA: 0x00192586 File Offset: 0x00190786
+		// Token: 0x060052D6 RID: 21206 RVA: 0x0019265E File Offset: 0x0019085E
 		public static Vector3 zzz(this Vector3 v)
 		{
 			return new Vector3(v.z, v.z, v.z);
 		}
 
-		// Token: 0x060052D6 RID: 21206 RVA: 0x0019259F File Offset: 0x0019079F
+		// Token: 0x060052D7 RID: 21207 RVA: 0x00192677 File Offset: 0x00190877
 		public static Vector3 xxx(this Vector4 v)
 		{
 			return new Vector3(v.x, v.x, v.x);
 		}
 
-		// Token: 0x060052D7 RID: 21207 RVA: 0x001925B8 File Offset: 0x001907B8
+		// Token: 0x060052D8 RID: 21208 RVA: 0x00192690 File Offset: 0x00190890
 		public static Vector3 xxy(this Vector4 v)
 		{
 			return new Vector3(v.x, v.x, v.y);
 		}
 
-		// Token: 0x060052D8 RID: 21208 RVA: 0x001925D1 File Offset: 0x001907D1
+		// Token: 0x060052D9 RID: 21209 RVA: 0x001926A9 File Offset: 0x001908A9
 		public static Vector3 xxz(this Vector4 v)
 		{
 			return new Vector3(v.x, v.x, v.z);
 		}
 
-		// Token: 0x060052D9 RID: 21209 RVA: 0x001925EA File Offset: 0x001907EA
+		// Token: 0x060052DA RID: 21210 RVA: 0x001926C2 File Offset: 0x001908C2
 		public static Vector3 xxw(this Vector4 v)
 		{
 			return new Vector3(v.x, v.x, v.w);
 		}
 
-		// Token: 0x060052DA RID: 21210 RVA: 0x00192603 File Offset: 0x00190803
+		// Token: 0x060052DB RID: 21211 RVA: 0x001926DB File Offset: 0x001908DB
 		public static Vector3 xyy(this Vector4 v)
 		{
 			return new Vector3(v.x, v.y, v.y);
 		}
 
-		// Token: 0x060052DB RID: 21211 RVA: 0x0019261C File Offset: 0x0019081C
+		// Token: 0x060052DC RID: 21212 RVA: 0x001926F4 File Offset: 0x001908F4
 		public static Vector3 xyz(this Vector4 v)
 		{
 			return new Vector3(v.x, v.y, v.z);
 		}
 
-		// Token: 0x060052DC RID: 21212 RVA: 0x00192635 File Offset: 0x00190835
+		// Token: 0x060052DD RID: 21213 RVA: 0x0019270D File Offset: 0x0019090D
 		public static Vector3 xyw(this Vector4 v)
 		{
 			return new Vector3(v.x, v.y, v.w);
 		}
 
-		// Token: 0x060052DD RID: 21213 RVA: 0x0019264E File Offset: 0x0019084E
+		// Token: 0x060052DE RID: 21214 RVA: 0x00192726 File Offset: 0x00190926
 		public static Vector3 xzz(this Vector4 v)
 		{
 			return new Vector3(v.x, v.z, v.z);
 		}
 
-		// Token: 0x060052DE RID: 21214 RVA: 0x00192667 File Offset: 0x00190867
+		// Token: 0x060052DF RID: 21215 RVA: 0x0019273F File Offset: 0x0019093F
 		public static Vector3 xzw(this Vector4 v)
 		{
 			return new Vector3(v.x, v.z, v.w);
 		}
 
-		// Token: 0x060052DF RID: 21215 RVA: 0x00192680 File Offset: 0x00190880
+		// Token: 0x060052E0 RID: 21216 RVA: 0x00192758 File Offset: 0x00190958
 		public static Vector3 xww(this Vector4 v)
 		{
 			return new Vector3(v.x, v.w, v.w);
 		}
 
-		// Token: 0x060052E0 RID: 21216 RVA: 0x00192699 File Offset: 0x00190899
+		// Token: 0x060052E1 RID: 21217 RVA: 0x00192771 File Offset: 0x00190971
 		public static Vector3 yyy(this Vector4 v)
 		{
 			return new Vector3(v.y, v.y, v.y);
 		}
 
-		// Token: 0x060052E1 RID: 21217 RVA: 0x001926B2 File Offset: 0x001908B2
+		// Token: 0x060052E2 RID: 21218 RVA: 0x0019278A File Offset: 0x0019098A
 		public static Vector3 yyz(this Vector4 v)
 		{
 			return new Vector3(v.y, v.y, v.z);
 		}
 
-		// Token: 0x060052E2 RID: 21218 RVA: 0x001926CB File Offset: 0x001908CB
+		// Token: 0x060052E3 RID: 21219 RVA: 0x001927A3 File Offset: 0x001909A3
 		public static Vector3 yyw(this Vector4 v)
 		{
 			return new Vector3(v.y, v.y, v.w);
 		}
 
-		// Token: 0x060052E3 RID: 21219 RVA: 0x001926E4 File Offset: 0x001908E4
+		// Token: 0x060052E4 RID: 21220 RVA: 0x001927BC File Offset: 0x001909BC
 		public static Vector3 yzz(this Vector4 v)
 		{
 			return new Vector3(v.y, v.z, v.z);
 		}
 
-		// Token: 0x060052E4 RID: 21220 RVA: 0x001926FD File Offset: 0x001908FD
+		// Token: 0x060052E5 RID: 21221 RVA: 0x001927D5 File Offset: 0x001909D5
 		public static Vector3 yzw(this Vector4 v)
 		{
 			return new Vector3(v.y, v.z, v.w);
 		}
 
-		// Token: 0x060052E5 RID: 21221 RVA: 0x00192716 File Offset: 0x00190916
+		// Token: 0x060052E6 RID: 21222 RVA: 0x001927EE File Offset: 0x001909EE
 		public static Vector3 yww(this Vector4 v)
 		{
 			return new Vector3(v.y, v.w, v.w);
 		}
 
-		// Token: 0x060052E6 RID: 21222 RVA: 0x0019272F File Offset: 0x0019092F
+		// Token: 0x060052E7 RID: 21223 RVA: 0x00192807 File Offset: 0x00190A07
 		public static Vector3 zzz(this Vector4 v)
 		{
 			return new Vector3(v.z, v.z, v.z);
 		}
 
-		// Token: 0x060052E7 RID: 21223 RVA: 0x00192748 File Offset: 0x00190948
+		// Token: 0x060052E8 RID: 21224 RVA: 0x00192820 File Offset: 0x00190A20
 		public static Vector3 zzw(this Vector4 v)
 		{
 			return new Vector3(v.z, v.z, v.w);
 		}
 
-		// Token: 0x060052E8 RID: 21224 RVA: 0x00192761 File Offset: 0x00190961
+		// Token: 0x060052E9 RID: 21225 RVA: 0x00192839 File Offset: 0x00190A39
 		public static Vector3 zww(this Vector4 v)
 		{
 			return new Vector3(v.z, v.w, v.w);
 		}
 
-		// Token: 0x060052E9 RID: 21225 RVA: 0x0019277A File Offset: 0x0019097A
+		// Token: 0x060052EA RID: 21226 RVA: 0x00192852 File Offset: 0x00190A52
 		public static Vector3 www(this Vector4 v)
 		{
 			return new Vector3(v.w, v.w, v.w);
 		}
 
-		// Token: 0x060052EA RID: 21226 RVA: 0x00192793 File Offset: 0x00190993
+		// Token: 0x060052EB RID: 21227 RVA: 0x0019286B File Offset: 0x00190A6B
 		public static Vector4 xxxx(this float v)
 		{
 			return new Vector4(v, v, v, v);
 		}
 
-		// Token: 0x060052EB RID: 21227 RVA: 0x0019279E File Offset: 0x0019099E
+		// Token: 0x060052EC RID: 21228 RVA: 0x00192876 File Offset: 0x00190A76
 		public static Vector4 xxxx(this Vector2 v)
 		{
 			return new Vector4(v.x, v.x, v.x, v.x);
 		}
 
-		// Token: 0x060052EC RID: 21228 RVA: 0x001927BD File Offset: 0x001909BD
+		// Token: 0x060052ED RID: 21229 RVA: 0x00192895 File Offset: 0x00190A95
 		public static Vector4 xxxy(this Vector2 v)
 		{
 			return new Vector4(v.x, v.x, v.x, v.y);
 		}
 
-		// Token: 0x060052ED RID: 21229 RVA: 0x001927DC File Offset: 0x001909DC
+		// Token: 0x060052EE RID: 21230 RVA: 0x001928B4 File Offset: 0x00190AB4
 		public static Vector4 xxyy(this Vector2 v)
 		{
 			return new Vector4(v.x, v.x, v.y, v.y);
 		}
 
-		// Token: 0x060052EE RID: 21230 RVA: 0x001927FB File Offset: 0x001909FB
+		// Token: 0x060052EF RID: 21231 RVA: 0x001928D3 File Offset: 0x00190AD3
 		public static Vector4 xyyy(this Vector2 v)
 		{
 			return new Vector4(v.x, v.y, v.y, v.y);
 		}
 
-		// Token: 0x060052EF RID: 21231 RVA: 0x0019281A File Offset: 0x00190A1A
+		// Token: 0x060052F0 RID: 21232 RVA: 0x001928F2 File Offset: 0x00190AF2
 		public static Vector4 yyyy(this Vector2 v)
 		{
 			return new Vector4(v.y, v.y, v.y, v.y);
 		}
 
-		// Token: 0x060052F0 RID: 21232 RVA: 0x00192839 File Offset: 0x00190A39
+		// Token: 0x060052F1 RID: 21233 RVA: 0x00192911 File Offset: 0x00190B11
 		public static Vector4 xxxx(this Vector3 v)
 		{
 			return new Vector4(v.x, v.x, v.x, v.x);
 		}
 
-		// Token: 0x060052F1 RID: 21233 RVA: 0x00192858 File Offset: 0x00190A58
+		// Token: 0x060052F2 RID: 21234 RVA: 0x00192930 File Offset: 0x00190B30
 		public static Vector4 xxxy(this Vector3 v)
 		{
 			return new Vector4(v.x, v.x, v.x, v.y);
 		}
 
-		// Token: 0x060052F2 RID: 21234 RVA: 0x00192877 File Offset: 0x00190A77
+		// Token: 0x060052F3 RID: 21235 RVA: 0x0019294F File Offset: 0x00190B4F
 		public static Vector4 xxxz(this Vector3 v)
 		{
 			return new Vector4(v.x, v.x, v.x, v.z);
 		}
 
-		// Token: 0x060052F3 RID: 21235 RVA: 0x00192896 File Offset: 0x00190A96
+		// Token: 0x060052F4 RID: 21236 RVA: 0x0019296E File Offset: 0x00190B6E
 		public static Vector4 xxyy(this Vector3 v)
 		{
 			return new Vector4(v.x, v.x, v.y, v.y);
 		}
 
-		// Token: 0x060052F4 RID: 21236 RVA: 0x001928B5 File Offset: 0x00190AB5
+		// Token: 0x060052F5 RID: 21237 RVA: 0x0019298D File Offset: 0x00190B8D
 		public static Vector4 xxyz(this Vector3 v)
 		{
 			return new Vector4(v.x, v.x, v.y, v.z);
 		}
 
-		// Token: 0x060052F5 RID: 21237 RVA: 0x001928D4 File Offset: 0x00190AD4
+		// Token: 0x060052F6 RID: 21238 RVA: 0x001929AC File Offset: 0x00190BAC
 		public static Vector4 xxzz(this Vector3 v)
 		{
 			return new Vector4(v.x, v.x, v.z, v.z);
 		}
 
-		// Token: 0x060052F6 RID: 21238 RVA: 0x001928F3 File Offset: 0x00190AF3
+		// Token: 0x060052F7 RID: 21239 RVA: 0x001929CB File Offset: 0x00190BCB
 		public static Vector4 xyyy(this Vector3 v)
 		{
 			return new Vector4(v.x, v.y, v.y, v.y);
 		}
 
-		// Token: 0x060052F7 RID: 21239 RVA: 0x00192912 File Offset: 0x00190B12
+		// Token: 0x060052F8 RID: 21240 RVA: 0x001929EA File Offset: 0x00190BEA
 		public static Vector4 xyyz(this Vector3 v)
 		{
 			return new Vector4(v.x, v.y, v.y, v.z);
 		}
 
-		// Token: 0x060052F8 RID: 21240 RVA: 0x00192931 File Offset: 0x00190B31
+		// Token: 0x060052F9 RID: 21241 RVA: 0x00192A09 File Offset: 0x00190C09
 		public static Vector4 xyzz(this Vector3 v)
 		{
 			return new Vector4(v.x, v.y, v.z, v.z);
 		}
 
-		// Token: 0x060052F9 RID: 21241 RVA: 0x00192950 File Offset: 0x00190B50
+		// Token: 0x060052FA RID: 21242 RVA: 0x00192A28 File Offset: 0x00190C28
 		public static Vector4 xzzz(this Vector3 v)
 		{
 			return new Vector4(v.x, v.z, v.z, v.z);
 		}
 
-		// Token: 0x060052FA RID: 21242 RVA: 0x0019296F File Offset: 0x00190B6F
+		// Token: 0x060052FB RID: 21243 RVA: 0x00192A47 File Offset: 0x00190C47
 		public static Vector4 yyyy(this Vector3 v)
 		{
 			return new Vector4(v.y, v.y, v.y, v.y);
 		}
 
-		// Token: 0x060052FB RID: 21243 RVA: 0x0019298E File Offset: 0x00190B8E
+		// Token: 0x060052FC RID: 21244 RVA: 0x00192A66 File Offset: 0x00190C66
 		public static Vector4 yyyz(this Vector3 v)
 		{
 			return new Vector4(v.y, v.y, v.y, v.z);
 		}
 
-		// Token: 0x060052FC RID: 21244 RVA: 0x001929AD File Offset: 0x00190BAD
+		// Token: 0x060052FD RID: 21245 RVA: 0x00192A85 File Offset: 0x00190C85
 		public static Vector4 yyzz(this Vector3 v)
 		{
 			return new Vector4(v.y, v.y, v.z, v.z);
 		}
 
-		// Token: 0x060052FD RID: 21245 RVA: 0x001929CC File Offset: 0x00190BCC
+		// Token: 0x060052FE RID: 21246 RVA: 0x00192AA4 File Offset: 0x00190CA4
 		public static Vector4 yzzz(this Vector3 v)
 		{
 			return new Vector4(v.y, v.z, v.z, v.z);
 		}
 
-		// Token: 0x060052FE RID: 21246 RVA: 0x001929EB File Offset: 0x00190BEB
+		// Token: 0x060052FF RID: 21247 RVA: 0x00192AC3 File Offset: 0x00190CC3
 		public static Vector4 zzzz(this Vector3 v)
 		{
 			return new Vector4(v.z, v.z, v.z, v.z);
 		}
 
-		// Token: 0x060052FF RID: 21247 RVA: 0x00192A0A File Offset: 0x00190C0A
+		// Token: 0x06005300 RID: 21248 RVA: 0x00192AE2 File Offset: 0x00190CE2
 		public static Vector4 xxxx(this Vector4 v)
 		{
 			return new Vector4(v.x, v.x, v.x, v.x);
 		}
 
-		// Token: 0x06005300 RID: 21248 RVA: 0x00192A29 File Offset: 0x00190C29
+		// Token: 0x06005301 RID: 21249 RVA: 0x00192B01 File Offset: 0x00190D01
 		public static Vector4 xxxy(this Vector4 v)
 		{
 			return new Vector4(v.x, v.x, v.x, v.y);
 		}
 
-		// Token: 0x06005301 RID: 21249 RVA: 0x00192A48 File Offset: 0x00190C48
+		// Token: 0x06005302 RID: 21250 RVA: 0x00192B20 File Offset: 0x00190D20
 		public static Vector4 xxxz(this Vector4 v)
 		{
 			return new Vector4(v.x, v.x, v.x, v.z);
 		}
 
-		// Token: 0x06005302 RID: 21250 RVA: 0x00192A67 File Offset: 0x00190C67
+		// Token: 0x06005303 RID: 21251 RVA: 0x00192B3F File Offset: 0x00190D3F
 		public static Vector4 xxxw(this Vector4 v)
 		{
 			return new Vector4(v.x, v.x, v.x, v.w);
 		}
 
-		// Token: 0x06005303 RID: 21251 RVA: 0x00192A86 File Offset: 0x00190C86
+		// Token: 0x06005304 RID: 21252 RVA: 0x00192B5E File Offset: 0x00190D5E
 		public static Vector4 xxyy(this Vector4 v)
 		{
 			return new Vector4(v.x, v.x, v.y, v.y);
 		}
 
-		// Token: 0x06005304 RID: 21252 RVA: 0x00192AA5 File Offset: 0x00190CA5
+		// Token: 0x06005305 RID: 21253 RVA: 0x00192B7D File Offset: 0x00190D7D
 		public static Vector4 xxyz(this Vector4 v)
 		{
 			return new Vector4(v.x, v.x, v.y, v.z);
 		}
 
-		// Token: 0x06005305 RID: 21253 RVA: 0x00192AC4 File Offset: 0x00190CC4
+		// Token: 0x06005306 RID: 21254 RVA: 0x00192B9C File Offset: 0x00190D9C
 		public static Vector4 xxyw(this Vector4 v)
 		{
 			return new Vector4(v.x, v.x, v.y, v.w);
 		}
 
-		// Token: 0x06005306 RID: 21254 RVA: 0x00192AE3 File Offset: 0x00190CE3
+		// Token: 0x06005307 RID: 21255 RVA: 0x00192BBB File Offset: 0x00190DBB
 		public static Vector4 xxzz(this Vector4 v)
 		{
 			return new Vector4(v.x, v.x, v.z, v.z);
 		}
 
-		// Token: 0x06005307 RID: 21255 RVA: 0x00192B02 File Offset: 0x00190D02
+		// Token: 0x06005308 RID: 21256 RVA: 0x00192BDA File Offset: 0x00190DDA
 		public static Vector4 xxzw(this Vector4 v)
 		{
 			return new Vector4(v.x, v.x, v.z, v.w);
 		}
 
-		// Token: 0x06005308 RID: 21256 RVA: 0x00192B21 File Offset: 0x00190D21
+		// Token: 0x06005309 RID: 21257 RVA: 0x00192BF9 File Offset: 0x00190DF9
 		public static Vector4 xxww(this Vector4 v)
 		{
 			return new Vector4(v.x, v.x, v.w, v.w);
 		}
 
-		// Token: 0x06005309 RID: 21257 RVA: 0x00192B40 File Offset: 0x00190D40
+		// Token: 0x0600530A RID: 21258 RVA: 0x00192C18 File Offset: 0x00190E18
 		public static Vector4 xyyy(this Vector4 v)
 		{
 			return new Vector4(v.x, v.y, v.y, v.y);
 		}
 
-		// Token: 0x0600530A RID: 21258 RVA: 0x00192B5F File Offset: 0x00190D5F
+		// Token: 0x0600530B RID: 21259 RVA: 0x00192C37 File Offset: 0x00190E37
 		public static Vector4 xyyz(this Vector4 v)
 		{
 			return new Vector4(v.x, v.y, v.y, v.z);
 		}
 
-		// Token: 0x0600530B RID: 21259 RVA: 0x00192B7E File Offset: 0x00190D7E
+		// Token: 0x0600530C RID: 21260 RVA: 0x00192C56 File Offset: 0x00190E56
 		public static Vector4 xyyw(this Vector4 v)
 		{
 			return new Vector4(v.x, v.y, v.y, v.w);
 		}
 
-		// Token: 0x0600530C RID: 21260 RVA: 0x00192B9D File Offset: 0x00190D9D
+		// Token: 0x0600530D RID: 21261 RVA: 0x00192C75 File Offset: 0x00190E75
 		public static Vector4 xyzz(this Vector4 v)
 		{
 			return new Vector4(v.x, v.y, v.z, v.z);
 		}
 
-		// Token: 0x0600530D RID: 21261 RVA: 0x00192BBC File Offset: 0x00190DBC
+		// Token: 0x0600530E RID: 21262 RVA: 0x00192C94 File Offset: 0x00190E94
 		public static Vector4 xyzw(this Vector4 v)
 		{
 			return new Vector4(v.x, v.y, v.z, v.w);
 		}
 
-		// Token: 0x0600530E RID: 21262 RVA: 0x00192BDB File Offset: 0x00190DDB
+		// Token: 0x0600530F RID: 21263 RVA: 0x00192CB3 File Offset: 0x00190EB3
 		public static Vector4 xyww(this Vector4 v)
 		{
 			return new Vector4(v.x, v.y, v.w, v.w);
 		}
 
-		// Token: 0x0600530F RID: 21263 RVA: 0x00192BFA File Offset: 0x00190DFA
+		// Token: 0x06005310 RID: 21264 RVA: 0x00192CD2 File Offset: 0x00190ED2
 		public static Vector4 xzzz(this Vector4 v)
 		{
 			return new Vector4(v.x, v.z, v.z, v.z);
 		}
 
-		// Token: 0x06005310 RID: 21264 RVA: 0x00192C19 File Offset: 0x00190E19
+		// Token: 0x06005311 RID: 21265 RVA: 0x00192CF1 File Offset: 0x00190EF1
 		public static Vector4 xzzw(this Vector4 v)
 		{
 			return new Vector4(v.x, v.z, v.z, v.w);
 		}
 
-		// Token: 0x06005311 RID: 21265 RVA: 0x00192C38 File Offset: 0x00190E38
+		// Token: 0x06005312 RID: 21266 RVA: 0x00192D10 File Offset: 0x00190F10
 		public static Vector4 xzww(this Vector4 v)
 		{
 			return new Vector4(v.x, v.z, v.w, v.w);
 		}
 
-		// Token: 0x06005312 RID: 21266 RVA: 0x00192C57 File Offset: 0x00190E57
+		// Token: 0x06005313 RID: 21267 RVA: 0x00192D2F File Offset: 0x00190F2F
 		public static Vector4 xwww(this Vector4 v)
 		{
 			return new Vector4(v.x, v.w, v.w, v.w);
 		}
 
-		// Token: 0x06005313 RID: 21267 RVA: 0x00192C76 File Offset: 0x00190E76
+		// Token: 0x06005314 RID: 21268 RVA: 0x00192D4E File Offset: 0x00190F4E
 		public static Vector4 yyyy(this Vector4 v)
 		{
 			return new Vector4(v.y, v.y, v.y, v.y);
 		}
 
-		// Token: 0x06005314 RID: 21268 RVA: 0x00192C95 File Offset: 0x00190E95
+		// Token: 0x06005315 RID: 21269 RVA: 0x00192D6D File Offset: 0x00190F6D
 		public static Vector4 yyyz(this Vector4 v)
 		{
 			return new Vector4(v.y, v.y, v.y, v.z);
 		}
 
-		// Token: 0x06005315 RID: 21269 RVA: 0x00192CB4 File Offset: 0x00190EB4
+		// Token: 0x06005316 RID: 21270 RVA: 0x00192D8C File Offset: 0x00190F8C
 		public static Vector4 yyyw(this Vector4 v)
 		{
 			return new Vector4(v.y, v.y, v.y, v.w);
 		}
 
-		// Token: 0x06005316 RID: 21270 RVA: 0x00192CD3 File Offset: 0x00190ED3
+		// Token: 0x06005317 RID: 21271 RVA: 0x00192DAB File Offset: 0x00190FAB
 		public static Vector4 yyzz(this Vector4 v)
 		{
 			return new Vector4(v.y, v.y, v.z, v.z);
 		}
 
-		// Token: 0x06005317 RID: 21271 RVA: 0x00192CF2 File Offset: 0x00190EF2
+		// Token: 0x06005318 RID: 21272 RVA: 0x00192DCA File Offset: 0x00190FCA
 		public static Vector4 yyzw(this Vector4 v)
 		{
 			return new Vector4(v.y, v.y, v.z, v.w);
 		}
 
-		// Token: 0x06005318 RID: 21272 RVA: 0x00192D11 File Offset: 0x00190F11
+		// Token: 0x06005319 RID: 21273 RVA: 0x00192DE9 File Offset: 0x00190FE9
 		public static Vector4 yyww(this Vector4 v)
 		{
 			return new Vector4(v.y, v.y, v.w, v.w);
 		}
 
-		// Token: 0x06005319 RID: 21273 RVA: 0x00192D30 File Offset: 0x00190F30
+		// Token: 0x0600531A RID: 21274 RVA: 0x00192E08 File Offset: 0x00191008
 		public static Vector4 yzzz(this Vector4 v)
 		{
 			return new Vector4(v.y, v.z, v.z, v.z);
 		}
 
-		// Token: 0x0600531A RID: 21274 RVA: 0x00192D4F File Offset: 0x00190F4F
+		// Token: 0x0600531B RID: 21275 RVA: 0x00192E27 File Offset: 0x00191027
 		public static Vector4 yzzw(this Vector4 v)
 		{
 			return new Vector4(v.y, v.z, v.z, v.w);
 		}
 
-		// Token: 0x0600531B RID: 21275 RVA: 0x00192D6E File Offset: 0x00190F6E
+		// Token: 0x0600531C RID: 21276 RVA: 0x00192E46 File Offset: 0x00191046
 		public static Vector4 yzww(this Vector4 v)
 		{
 			return new Vector4(v.y, v.z, v.w, v.w);
 		}
 
-		// Token: 0x0600531C RID: 21276 RVA: 0x00192D8D File Offset: 0x00190F8D
+		// Token: 0x0600531D RID: 21277 RVA: 0x00192E65 File Offset: 0x00191065
 		public static Vector4 ywww(this Vector4 v)
 		{
 			return new Vector4(v.y, v.w, v.w, v.w);
 		}
 
-		// Token: 0x0600531D RID: 21277 RVA: 0x00192DAC File Offset: 0x00190FAC
+		// Token: 0x0600531E RID: 21278 RVA: 0x00192E84 File Offset: 0x00191084
 		public static Vector4 zzzz(this Vector4 v)
 		{
 			return new Vector4(v.z, v.z, v.z, v.z);
 		}
 
-		// Token: 0x0600531E RID: 21278 RVA: 0x00192DCB File Offset: 0x00190FCB
+		// Token: 0x0600531F RID: 21279 RVA: 0x00192EA3 File Offset: 0x001910A3
 		public static Vector4 zzzw(this Vector4 v)
 		{
 			return new Vector4(v.z, v.z, v.z, v.w);
 		}
 
-		// Token: 0x0600531F RID: 21279 RVA: 0x00192DEA File Offset: 0x00190FEA
+		// Token: 0x06005320 RID: 21280 RVA: 0x00192EC2 File Offset: 0x001910C2
 		public static Vector4 zzww(this Vector4 v)
 		{
 			return new Vector4(v.z, v.z, v.w, v.w);
 		}
 
-		// Token: 0x06005320 RID: 21280 RVA: 0x00192E09 File Offset: 0x00191009
+		// Token: 0x06005321 RID: 21281 RVA: 0x00192EE1 File Offset: 0x001910E1
 		public static Vector4 zwww(this Vector4 v)
 		{
 			return new Vector4(v.z, v.w, v.w, v.w);
 		}
 
-		// Token: 0x06005321 RID: 21281 RVA: 0x00192E28 File Offset: 0x00191028
+		// Token: 0x06005322 RID: 21282 RVA: 0x00192F00 File Offset: 0x00191100
 		public static Vector4 wwww(this Vector4 v)
 		{
 			return new Vector4(v.w, v.w, v.w, v.w);
 		}
 
-		// Token: 0x06005322 RID: 21282 RVA: 0x00192E47 File Offset: 0x00191047
+		// Token: 0x06005323 RID: 21283 RVA: 0x00192F1F File Offset: 0x0019111F
 		public static Vector4 WithX(this Vector4 v, float x)
 		{
 			return new Vector4(x, v.y, v.z, v.w);
 		}
 
-		// Token: 0x06005323 RID: 21283 RVA: 0x00192E61 File Offset: 0x00191061
+		// Token: 0x06005324 RID: 21284 RVA: 0x00192F39 File Offset: 0x00191139
 		public static Vector4 WithY(this Vector4 v, float y)
 		{
 			return new Vector4(v.x, y, v.z, v.w);
 		}
 
-		// Token: 0x06005324 RID: 21284 RVA: 0x00192E7B File Offset: 0x0019107B
+		// Token: 0x06005325 RID: 21285 RVA: 0x00192F53 File Offset: 0x00191153
 		public static Vector4 WithZ(this Vector4 v, float z)
 		{
 			return new Vector4(v.x, v.y, z, v.w);
 		}
 
-		// Token: 0x06005325 RID: 21285 RVA: 0x00192E95 File Offset: 0x00191095
+		// Token: 0x06005326 RID: 21286 RVA: 0x00192F6D File Offset: 0x0019116D
 		public static Vector4 WithW(this Vector4 v, float w)
 		{
 			return new Vector4(v.x, v.y, v.z, w);
 		}
 
-		// Token: 0x06005326 RID: 21286 RVA: 0x00192EAF File Offset: 0x001910AF
+		// Token: 0x06005327 RID: 21287 RVA: 0x00192F87 File Offset: 0x00191187
 		public static Vector3 WithX(this Vector3 v, float x)
 		{
 			return new Vector3(x, v.y, v.z);
 		}
 
-		// Token: 0x06005327 RID: 21287 RVA: 0x00192EC3 File Offset: 0x001910C3
+		// Token: 0x06005328 RID: 21288 RVA: 0x00192F9B File Offset: 0x0019119B
 		public static Vector3 WithY(this Vector3 v, float y)
 		{
 			return new Vector3(v.x, y, v.z);
 		}
 
-		// Token: 0x06005328 RID: 21288 RVA: 0x00192ED7 File Offset: 0x001910D7
+		// Token: 0x06005329 RID: 21289 RVA: 0x00192FAF File Offset: 0x001911AF
 		public static Vector3 WithZ(this Vector3 v, float z)
 		{
 			return new Vector3(v.x, v.y, z);
 		}
 
-		// Token: 0x06005329 RID: 21289 RVA: 0x00192EEB File Offset: 0x001910EB
+		// Token: 0x0600532A RID: 21290 RVA: 0x00192FC3 File Offset: 0x001911C3
 		public static Vector4 WithW(this Vector3 v, float w)
 		{
 			return new Vector4(v.x, v.y, v.z, w);
 		}
 
-		// Token: 0x0600532A RID: 21290 RVA: 0x00192F05 File Offset: 0x00191105
+		// Token: 0x0600532B RID: 21291 RVA: 0x00192FDD File Offset: 0x001911DD
 		public static Vector2 WithX(this Vector2 v, float x)
 		{
 			return new Vector2(x, v.y);
 		}
 
-		// Token: 0x0600532B RID: 21291 RVA: 0x00192F13 File Offset: 0x00191113
+		// Token: 0x0600532C RID: 21292 RVA: 0x00192FEB File Offset: 0x001911EB
 		public static Vector2 WithY(this Vector2 v, float y)
 		{
 			return new Vector2(v.x, y);
 		}
 
-		// Token: 0x0600532C RID: 21292 RVA: 0x00192F21 File Offset: 0x00191121
+		// Token: 0x0600532D RID: 21293 RVA: 0x00192FF9 File Offset: 0x001911F9
 		public static Vector3 WithZ(this Vector2 v, float z)
 		{
 			return new Vector3(v.x, v.y, z);
 		}
 
-		// Token: 0x0600532D RID: 21293 RVA: 0x00192F35 File Offset: 0x00191135
+		// Token: 0x0600532E RID: 21294 RVA: 0x0019300D File Offset: 0x0019120D
 		public static bool IsShorterThan(this Vector2 v, float len)
 		{
 			return v.sqrMagnitude < len * len;
 		}
 
-		// Token: 0x0600532E RID: 21294 RVA: 0x00192F43 File Offset: 0x00191143
+		// Token: 0x0600532F RID: 21295 RVA: 0x0019301B File Offset: 0x0019121B
 		public static bool IsShorterThan(this Vector2 v, Vector2 v2)
 		{
 			return v.sqrMagnitude < v2.sqrMagnitude;
 		}
 
-		// Token: 0x0600532F RID: 21295 RVA: 0x00192F55 File Offset: 0x00191155
+		// Token: 0x06005330 RID: 21296 RVA: 0x0019302D File Offset: 0x0019122D
 		public static bool IsShorterThan(this Vector3 v, float len)
 		{
 			return v.sqrMagnitude < len * len;
 		}
 
-		// Token: 0x06005330 RID: 21296 RVA: 0x00192F63 File Offset: 0x00191163
+		// Token: 0x06005331 RID: 21297 RVA: 0x0019303B File Offset: 0x0019123B
 		public static bool IsShorterThan(this Vector3 v, Vector3 v2)
 		{
 			return v.sqrMagnitude < v2.sqrMagnitude;
 		}
 
-		// Token: 0x06005331 RID: 21297 RVA: 0x00192F75 File Offset: 0x00191175
+		// Token: 0x06005332 RID: 21298 RVA: 0x0019304D File Offset: 0x0019124D
 		public static bool IsLongerThan(this Vector2 v, float len)
 		{
 			return v.sqrMagnitude > len * len;
 		}
 
-		// Token: 0x06005332 RID: 21298 RVA: 0x00192F83 File Offset: 0x00191183
+		// Token: 0x06005333 RID: 21299 RVA: 0x0019305B File Offset: 0x0019125B
 		public static bool IsLongerThan(this Vector2 v, Vector2 v2)
 		{
 			return v.sqrMagnitude > v2.sqrMagnitude;
 		}
 
-		// Token: 0x06005333 RID: 21299 RVA: 0x00192F95 File Offset: 0x00191195
+		// Token: 0x06005334 RID: 21300 RVA: 0x0019306D File Offset: 0x0019126D
 		public static bool IsLongerThan(this Vector3 v, float len)
 		{
 			return v.sqrMagnitude > len * len;
 		}
 
-		// Token: 0x06005334 RID: 21300 RVA: 0x00192FA3 File Offset: 0x001911A3
+		// Token: 0x06005335 RID: 21301 RVA: 0x0019307B File Offset: 0x0019127B
 		public static bool IsLongerThan(this Vector3 v, Vector3 v2)
 		{
 			return v.sqrMagnitude > v2.sqrMagnitude;
 		}
 
-		// Token: 0x06005335 RID: 21301 RVA: 0x00192FB8 File Offset: 0x001911B8
+		// Token: 0x06005336 RID: 21302 RVA: 0x00193090 File Offset: 0x00191290
 		public static Vector3 GetClosestPoint(this Ray ray, Vector3 target)
 		{
 			float num = Vector3.Dot(target - ray.origin, ray.direction);
 			return ray.origin + ray.direction * num;
 		}
 
-		// Token: 0x06005336 RID: 21302 RVA: 0x00192FF8 File Offset: 0x001911F8
+		// Token: 0x06005337 RID: 21303 RVA: 0x001930D0 File Offset: 0x001912D0
 		public static float GetClosestDistSqr(this Ray ray, Vector3 target)
 		{
 			return (ray.GetClosestPoint(target) - target).sqrMagnitude;
 		}
 
-		// Token: 0x06005337 RID: 21303 RVA: 0x0019301C File Offset: 0x0019121C
+		// Token: 0x06005338 RID: 21304 RVA: 0x001930F4 File Offset: 0x001912F4
 		public static float GetClosestDistance(this Ray ray, Vector3 target)
 		{
 			return (ray.GetClosestPoint(target) - target).magnitude;
 		}
 
-		// Token: 0x06005338 RID: 21304 RVA: 0x00193040 File Offset: 0x00191240
+		// Token: 0x06005339 RID: 21305 RVA: 0x00193118 File Offset: 0x00191318
 		public static Vector3 ProjectToPlane(this Ray ray, Vector3 planeOrigin, Vector3 planeNormalMustBeLength1)
 		{
 			Vector3 vector = planeOrigin - ray.origin;
@@ -2027,7 +2027,7 @@ namespace GorillaExtensions
 			return ray.origin + ray.direction * num / num2;
 		}
 
-		// Token: 0x06005339 RID: 21305 RVA: 0x00193090 File Offset: 0x00191290
+		// Token: 0x0600533A RID: 21306 RVA: 0x00193168 File Offset: 0x00191368
 		public static Vector3 ProjectToLine(this Ray ray, Vector3 lineStart, Vector3 lineEnd)
 		{
 			Vector3 normalized = (lineEnd - lineStart).normalized;
@@ -2035,19 +2035,19 @@ namespace GorillaExtensions
 			return ray.ProjectToPlane(lineStart, normalized2);
 		}
 
-		// Token: 0x0600533A RID: 21306 RVA: 0x001930D1 File Offset: 0x001912D1
+		// Token: 0x0600533B RID: 21307 RVA: 0x001931A9 File Offset: 0x001913A9
 		public static bool IsNull(this Object mono)
 		{
 			return mono == null || !mono;
 		}
 
-		// Token: 0x0600533B RID: 21307 RVA: 0x001930E1 File Offset: 0x001912E1
+		// Token: 0x0600533C RID: 21308 RVA: 0x001931B9 File Offset: 0x001913B9
 		public static bool IsNotNull(this Object mono)
 		{
 			return !mono.IsNull();
 		}
 
-		// Token: 0x0600533C RID: 21308 RVA: 0x001930EC File Offset: 0x001912EC
+		// Token: 0x0600533D RID: 21309 RVA: 0x001931C4 File Offset: 0x001913C4
 		public static string GetPath(this Transform transform)
 		{
 			string text = transform.name;
@@ -2059,7 +2059,7 @@ namespace GorillaExtensions
 			return "/" + text;
 		}
 
-		// Token: 0x0600533D RID: 21309 RVA: 0x00193134 File Offset: 0x00191334
+		// Token: 0x0600533E RID: 21310 RVA: 0x0019320C File Offset: 0x0019140C
 		public static string GetPathQ(this Transform transform)
 		{
 			Utf16ValueStringBuilder utf16ValueStringBuilder = ZString.CreateStringBuilder();
@@ -2075,7 +2075,7 @@ namespace GorillaExtensions
 			return text;
 		}
 
-		// Token: 0x0600533E RID: 21310 RVA: 0x00193174 File Offset: 0x00191374
+		// Token: 0x0600533F RID: 21311 RVA: 0x0019324C File Offset: 0x0019144C
 		public static void GetPathQ(this Transform transform, ref Utf16ValueStringBuilder sb)
 		{
 			sb.Append("\"");
@@ -2093,7 +2093,7 @@ namespace GorillaExtensions
 			sb.Append("\"");
 		}
 
-		// Token: 0x0600533F RID: 21311 RVA: 0x001931D4 File Offset: 0x001913D4
+		// Token: 0x06005340 RID: 21312 RVA: 0x001932AC File Offset: 0x001914AC
 		public static string GetPath(this Transform transform, int maxDepth)
 		{
 			string text = transform.name;
@@ -2107,7 +2107,7 @@ namespace GorillaExtensions
 			return "/" + text;
 		}
 
-		// Token: 0x06005340 RID: 21312 RVA: 0x00193228 File Offset: 0x00191428
+		// Token: 0x06005341 RID: 21313 RVA: 0x00193300 File Offset: 0x00191500
 		public static string GetPath(this Transform transform, Transform stopper)
 		{
 			string text = transform.name;
@@ -2119,25 +2119,25 @@ namespace GorillaExtensions
 			return "/" + text;
 		}
 
-		// Token: 0x06005341 RID: 21313 RVA: 0x0019327E File Offset: 0x0019147E
+		// Token: 0x06005342 RID: 21314 RVA: 0x00193356 File Offset: 0x00191556
 		public static string GetPath(this GameObject gameObject)
 		{
 			return gameObject.transform.GetPath();
 		}
 
-		// Token: 0x06005342 RID: 21314 RVA: 0x0019328B File Offset: 0x0019148B
+		// Token: 0x06005343 RID: 21315 RVA: 0x00193363 File Offset: 0x00191563
 		public static void GetPath(this GameObject gameObject, ref Utf16ValueStringBuilder sb)
 		{
 			gameObject.transform.GetPathQ(ref sb);
 		}
 
-		// Token: 0x06005343 RID: 21315 RVA: 0x00193299 File Offset: 0x00191499
+		// Token: 0x06005344 RID: 21316 RVA: 0x00193371 File Offset: 0x00191571
 		public static string GetPath(this GameObject gameObject, int limit)
 		{
 			return gameObject.transform.GetPath(limit);
 		}
 
-		// Token: 0x06005344 RID: 21316 RVA: 0x001932A8 File Offset: 0x001914A8
+		// Token: 0x06005345 RID: 21317 RVA: 0x00193380 File Offset: 0x00191580
 		public static string[] GetPaths(this GameObject[] gobj)
 		{
 			string[] array = new string[gobj.Length];
@@ -2148,7 +2148,7 @@ namespace GorillaExtensions
 			return array;
 		}
 
-		// Token: 0x06005345 RID: 21317 RVA: 0x001932D8 File Offset: 0x001914D8
+		// Token: 0x06005346 RID: 21318 RVA: 0x001933B0 File Offset: 0x001915B0
 		public static string[] GetPaths(this Transform[] xform)
 		{
 			string[] array = new string[xform.Length];
@@ -2159,7 +2159,7 @@ namespace GorillaExtensions
 			return array;
 		}
 
-		// Token: 0x06005346 RID: 21318 RVA: 0x00193308 File Offset: 0x00191508
+		// Token: 0x06005347 RID: 21319 RVA: 0x001933E0 File Offset: 0x001915E0
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		public static void GetRelativePath(string fromPath, string toPath, ref Utf16ValueStringBuilder ZStringBuilder)
 		{
@@ -2213,7 +2213,7 @@ namespace GorillaExtensions
 			ZStringBuilder.Append(toPath, num2 + num6, toPath.Length - (num2 + num6));
 		}
 
-		// Token: 0x06005347 RID: 21319 RVA: 0x00193474 File Offset: 0x00191674
+		// Token: 0x06005348 RID: 21320 RVA: 0x0019354C File Offset: 0x0019174C
 		public static string GetRelativePath(string fromPath, string toPath)
 		{
 			Utf16ValueStringBuilder utf16ValueStringBuilder = ZString.CreateStringBuilder();
@@ -2230,14 +2230,14 @@ namespace GorillaExtensions
 			return text;
 		}
 
-		// Token: 0x06005348 RID: 21320 RVA: 0x001934BC File Offset: 0x001916BC
+		// Token: 0x06005349 RID: 21321 RVA: 0x00193594 File Offset: 0x00191794
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		public static void GetRelativePath(this Transform fromXform, Transform toXform, ref Utf16ValueStringBuilder ZStringBuilder)
 		{
 			GTExt.GetRelativePath(fromXform.GetPath(), toXform.GetPath(), ref ZStringBuilder);
 		}
 
-		// Token: 0x06005349 RID: 21321 RVA: 0x001934D0 File Offset: 0x001916D0
+		// Token: 0x0600534A RID: 21322 RVA: 0x001935A8 File Offset: 0x001917A8
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		public static string GetRelativePath(this Transform fromXform, Transform toXform)
 		{
@@ -2255,7 +2255,7 @@ namespace GorillaExtensions
 			return text;
 		}
 
-		// Token: 0x0600534A RID: 21322 RVA: 0x00193518 File Offset: 0x00191718
+		// Token: 0x0600534B RID: 21323 RVA: 0x001935F0 File Offset: 0x001917F0
 		public static void GetPathWithSiblingIndexes(this Transform transform, ref Utf16ValueStringBuilder strBuilder)
 		{
 			int length = strBuilder.Length;
@@ -2269,7 +2269,7 @@ namespace GorillaExtensions
 			}
 		}
 
-		// Token: 0x0600534B RID: 21323 RVA: 0x00193580 File Offset: 0x00191780
+		// Token: 0x0600534C RID: 21324 RVA: 0x00193658 File Offset: 0x00191858
 		public static string GetComponentPath(this Component component, int maxDepth = 2147483647)
 		{
 			Utf16ValueStringBuilder utf16ValueStringBuilder = ZString.CreateStringBuilder();
@@ -2285,7 +2285,7 @@ namespace GorillaExtensions
 			return text;
 		}
 
-		// Token: 0x0600534C RID: 21324 RVA: 0x001935C0 File Offset: 0x001917C0
+		// Token: 0x0600534D RID: 21325 RVA: 0x00193698 File Offset: 0x00191898
 		public static string GetComponentPath<T>(this T component, int maxDepth = 2147483647) where T : Component
 		{
 			Utf16ValueStringBuilder utf16ValueStringBuilder = ZString.CreateStringBuilder();
@@ -2301,7 +2301,7 @@ namespace GorillaExtensions
 			return text;
 		}
 
-		// Token: 0x0600534D RID: 21325 RVA: 0x00193600 File Offset: 0x00191800
+		// Token: 0x0600534E RID: 21326 RVA: 0x001936D8 File Offset: 0x001918D8
 		public static void GetComponentPath<T>(this T component, ref Utf16ValueStringBuilder strBuilder, int maxDepth = 2147483647) where T : Component
 		{
 			Transform transform = component.transform;
@@ -2331,7 +2331,7 @@ namespace GorillaExtensions
 			}
 		}
 
-		// Token: 0x0600534E RID: 21326 RVA: 0x0019368C File Offset: 0x0019188C
+		// Token: 0x0600534F RID: 21327 RVA: 0x00193764 File Offset: 0x00191964
 		public static void GetComponentPathWithSiblingIndexes<T>(this T component, ref Utf16ValueStringBuilder strBuilder) where T : Component
 		{
 			Transform transform = component.transform;
@@ -2349,7 +2349,7 @@ namespace GorillaExtensions
 			}
 		}
 
-		// Token: 0x0600534F RID: 21327 RVA: 0x00193720 File Offset: 0x00191920
+		// Token: 0x06005350 RID: 21328 RVA: 0x001937F8 File Offset: 0x001919F8
 		public static string GetComponentPathWithSiblingIndexes<T>(this T component) where T : Component
 		{
 			Utf16ValueStringBuilder utf16ValueStringBuilder = ZString.CreateStringBuilder();
@@ -2365,7 +2365,7 @@ namespace GorillaExtensions
 			return text;
 		}
 
-		// Token: 0x06005350 RID: 21328 RVA: 0x00193760 File Offset: 0x00191960
+		// Token: 0x06005351 RID: 21329 RVA: 0x00193838 File Offset: 0x00191A38
 		public static T GetComponentByPath<T>(this GameObject root, string path) where T : Component
 		{
 			string[] array = path.Split(new string[] { "/->/" }, StringSplitOptions.None);
@@ -2397,7 +2397,7 @@ namespace GorillaExtensions
 			return component as T;
 		}
 
-		// Token: 0x06005351 RID: 21329 RVA: 0x0019383C File Offset: 0x00191A3C
+		// Token: 0x06005352 RID: 21330 RVA: 0x00193914 File Offset: 0x00191B14
 		public static int GetDepth(this Transform xform)
 		{
 			int num = 0;
@@ -2410,7 +2410,7 @@ namespace GorillaExtensions
 			return num;
 		}
 
-		// Token: 0x06005352 RID: 21330 RVA: 0x0019386C File Offset: 0x00191A6C
+		// Token: 0x06005353 RID: 21331 RVA: 0x00193944 File Offset: 0x00191B44
 		public static string GetPathWithSiblingIndexes(this Transform transform)
 		{
 			Utf16ValueStringBuilder utf16ValueStringBuilder = ZString.CreateStringBuilder();
@@ -2426,32 +2426,32 @@ namespace GorillaExtensions
 			return text;
 		}
 
-		// Token: 0x06005353 RID: 21331 RVA: 0x001938AC File Offset: 0x00191AAC
+		// Token: 0x06005354 RID: 21332 RVA: 0x00193984 File Offset: 0x00191B84
 		public static void GetPathWithSiblingIndexes(this GameObject gameObject, ref Utf16ValueStringBuilder stringBuilder)
 		{
 			gameObject.transform.GetPathWithSiblingIndexes(ref stringBuilder);
 		}
 
-		// Token: 0x06005354 RID: 21332 RVA: 0x001938BA File Offset: 0x00191ABA
+		// Token: 0x06005355 RID: 21333 RVA: 0x00193992 File Offset: 0x00191B92
 		public static string GetPathWithSiblingIndexes(this GameObject gameObject)
 		{
 			return gameObject.transform.GetPathWithSiblingIndexes();
 		}
 
-		// Token: 0x06005355 RID: 21333 RVA: 0x001938C7 File Offset: 0x00191AC7
+		// Token: 0x06005356 RID: 21334 RVA: 0x0019399F File Offset: 0x00191B9F
 		public static void AddDictValue(Transform xForm, Dictionary<string, Transform> dict)
 		{
 			GTExt.caseSenseInner.Add(xForm, dict);
 		}
 
-		// Token: 0x06005356 RID: 21334 RVA: 0x001938D5 File Offset: 0x00191AD5
+		// Token: 0x06005357 RID: 21335 RVA: 0x001939AD File Offset: 0x00191BAD
 		public static void ClearDicts()
 		{
 			GTExt.caseSenseInner = new Dictionary<Transform, Dictionary<string, Transform>>();
 			GTExt.caseInsenseInner = new Dictionary<Transform, Dictionary<string, Transform>>();
 		}
 
-		// Token: 0x06005357 RID: 21335 RVA: 0x001938EC File Offset: 0x00191AEC
+		// Token: 0x06005358 RID: 21336 RVA: 0x001939C4 File Offset: 0x00191BC4
 		public static bool TryFindByExactPath([NotNull] string path, out Transform result, FindObjectsInactive findObjectsInactive = FindObjectsInactive.Include)
 		{
 			if (string.IsNullOrEmpty(path))
@@ -2485,7 +2485,7 @@ namespace GorillaExtensions
 			return false;
 		}
 
-		// Token: 0x06005358 RID: 21336 RVA: 0x00193978 File Offset: 0x00191B78
+		// Token: 0x06005359 RID: 21337 RVA: 0x00193A50 File Offset: 0x00191C50
 		public static bool TryFindByExactPath(this Scene scene, string path, out Transform result)
 		{
 			if (string.IsNullOrEmpty(path))
@@ -2496,7 +2496,7 @@ namespace GorillaExtensions
 			return scene.TryFindByExactPath(array, out result);
 		}
 
-		// Token: 0x06005359 RID: 21337 RVA: 0x001939AC File Offset: 0x00191BAC
+		// Token: 0x0600535A RID: 21338 RVA: 0x00193A84 File Offset: 0x00191C84
 		private static bool TryFindByExactPath(this Scene scene, IReadOnlyList<string> splitPath, out Transform result)
 		{
 			GameObject[] rootGameObjects = scene.GetRootGameObjects();
@@ -2511,7 +2511,7 @@ namespace GorillaExtensions
 			return false;
 		}
 
-		// Token: 0x0600535A RID: 21338 RVA: 0x001939E8 File Offset: 0x00191BE8
+		// Token: 0x0600535B RID: 21339 RVA: 0x00193AC0 File Offset: 0x00191CC0
 		public static bool TryFindByExactPath(this Transform rootXform, string path, out Transform result)
 		{
 			if (string.IsNullOrEmpty(path))
@@ -2533,7 +2533,7 @@ namespace GorillaExtensions
 			return false;
 		}
 
-		// Token: 0x0600535B RID: 21339 RVA: 0x00193A68 File Offset: 0x00191C68
+		// Token: 0x0600535C RID: 21340 RVA: 0x00193B40 File Offset: 0x00191D40
 		public static bool TryFindByExactPath(this Transform rootXform, IReadOnlyList<string> splitPath, out Transform result)
 		{
 			using (IEnumerator enumerator = rootXform.GetEnumerator())
@@ -2550,7 +2550,7 @@ namespace GorillaExtensions
 			return false;
 		}
 
-		// Token: 0x0600535C RID: 21340 RVA: 0x00193AC8 File Offset: 0x00191CC8
+		// Token: 0x0600535D RID: 21341 RVA: 0x00193BA0 File Offset: 0x00191DA0
 		private static bool TryFindByExactPath_Internal(Transform current, IReadOnlyList<string> splitPath, int index, out Transform result)
 		{
 			if (current.name != splitPath[index])
@@ -2577,14 +2577,14 @@ namespace GorillaExtensions
 			return false;
 		}
 
-		// Token: 0x0600535D RID: 21341 RVA: 0x00193B54 File Offset: 0x00191D54
+		// Token: 0x0600535E RID: 21342 RVA: 0x00193C2C File Offset: 0x00191E2C
 		public static bool TryFindByPath(string globPath, out Transform result, bool caseSensitive = false)
 		{
 			string[] array = GTExt._GlobPathToPathPartsRegex(globPath);
 			return GTExt._TryFindByPath(null, array, -1, out result, caseSensitive, true, globPath);
 		}
 
-		// Token: 0x0600535E RID: 21342 RVA: 0x00193B74 File Offset: 0x00191D74
+		// Token: 0x0600535F RID: 21343 RVA: 0x00193C4C File Offset: 0x00191E4C
 		public static bool TryFindByPath(this Scene scene, string globPath, out Transform result, bool caseSensitive = false)
 		{
 			if (string.IsNullOrEmpty(globPath))
@@ -2595,7 +2595,7 @@ namespace GorillaExtensions
 			return scene.TryFindByPath(array, out result, globPath, caseSensitive);
 		}
 
-		// Token: 0x0600535F RID: 21343 RVA: 0x00193BA8 File Offset: 0x00191DA8
+		// Token: 0x06005360 RID: 21344 RVA: 0x00193C80 File Offset: 0x00191E80
 		private static bool TryFindByPath(this Scene scene, IReadOnlyList<string> pathPartsRegex, out Transform result, string globPath, bool caseSensitive = false)
 		{
 			GameObject[] rootGameObjects = scene.GetRootGameObjects();
@@ -2610,7 +2610,7 @@ namespace GorillaExtensions
 			return false;
 		}
 
-		// Token: 0x06005360 RID: 21344 RVA: 0x00193BE8 File Offset: 0x00191DE8
+		// Token: 0x06005361 RID: 21345 RVA: 0x00193CC0 File Offset: 0x00191EC0
 		public static bool TryFindByPath(this Transform rootXform, string globPath, out Transform result, bool caseSensitive = false)
 		{
 			if (string.IsNullOrEmpty(globPath))
@@ -2630,13 +2630,13 @@ namespace GorillaExtensions
 			throw new Exception("TryFindByPath: Provided globPath cannot end or start with whitespace.\nProvided globPath=\"" + globPath + "\"");
 		}
 
-		// Token: 0x06005361 RID: 21345 RVA: 0x00193C6B File Offset: 0x00191E6B
+		// Token: 0x06005362 RID: 21346 RVA: 0x00193D43 File Offset: 0x00191F43
 		public static List<string> ShowAllStringsUsed()
 		{
 			return GTExt.allStringsUsed.Keys.ToList<string>();
 		}
 
-		// Token: 0x06005362 RID: 21346 RVA: 0x00193C7C File Offset: 0x00191E7C
+		// Token: 0x06005363 RID: 21347 RVA: 0x00193D54 File Offset: 0x00191F54
 		private static bool _TryFindByPath(Transform current, IReadOnlyList<string> pathPartsRegex, int index, out Transform result, bool caseSensitive, bool isAtSceneLevel, string joinedPath)
 		{
 			if (joinedPath != null && !GTExt.allStringsUsed.ContainsKey(joinedPath))
@@ -3030,7 +3030,7 @@ namespace GorillaExtensions
 			return flag3;
 		}
 
-		// Token: 0x06005363 RID: 21347 RVA: 0x001945D8 File Offset: 0x001927D8
+		// Token: 0x06005364 RID: 21348 RVA: 0x001946B0 File Offset: 0x001928B0
 		private static bool _TryBreadthFirstSearchNames(Transform root, string regexPattern, out Transform result, bool caseSensitive)
 		{
 			Queue<Transform> queue = new Queue<Transform>();
@@ -3065,7 +3065,7 @@ namespace GorillaExtensions
 			goto IL_003D;
 		}
 
-		// Token: 0x06005364 RID: 21348 RVA: 0x001946AC File Offset: 0x001928AC
+		// Token: 0x06005365 RID: 21349 RVA: 0x00194784 File Offset: 0x00192984
 		public static T[] FindComponentsByExactPath<T>(string path) where T : Component
 		{
 			List<T> list;
@@ -3086,7 +3086,7 @@ namespace GorillaExtensions
 			return array;
 		}
 
-		// Token: 0x06005365 RID: 21349 RVA: 0x00194720 File Offset: 0x00192920
+		// Token: 0x06005366 RID: 21350 RVA: 0x001947F8 File Offset: 0x001929F8
 		public static T[] FindComponentsByExactPath<T>(this Scene scene, string path) where T : Component
 		{
 			if (string.IsNullOrEmpty(path))
@@ -3097,7 +3097,7 @@ namespace GorillaExtensions
 			return scene.FindComponentsByExactPath(array);
 		}
 
-		// Token: 0x06005366 RID: 21350 RVA: 0x00194754 File Offset: 0x00192954
+		// Token: 0x06005367 RID: 21351 RVA: 0x0019482C File Offset: 0x00192A2C
 		private static T[] FindComponentsByExactPath<T>(this Scene scene, string[] splitPath) where T : Component
 		{
 			List<T> list;
@@ -3115,7 +3115,7 @@ namespace GorillaExtensions
 			return array;
 		}
 
-		// Token: 0x06005367 RID: 21351 RVA: 0x001947C4 File Offset: 0x001929C4
+		// Token: 0x06005368 RID: 21352 RVA: 0x0019489C File Offset: 0x00192A9C
 		public static T[] FindComponentsByExactPath<T>(this Transform rootXform, string path) where T : Component
 		{
 			if (string.IsNullOrEmpty(path))
@@ -3137,7 +3137,7 @@ namespace GorillaExtensions
 			return array2;
 		}
 
-		// Token: 0x06005368 RID: 21352 RVA: 0x00194870 File Offset: 0x00192A70
+		// Token: 0x06005369 RID: 21353 RVA: 0x00194948 File Offset: 0x00192B48
 		public static T[] FindComponentsByExactPath<T>(this Transform rootXform, string[] splitPath) where T : Component
 		{
 			List<T> list;
@@ -3154,7 +3154,7 @@ namespace GorillaExtensions
 			return array;
 		}
 
-		// Token: 0x06005369 RID: 21353 RVA: 0x001948FC File Offset: 0x00192AFC
+		// Token: 0x0600536A RID: 21354 RVA: 0x001949D4 File Offset: 0x00192BD4
 		private static void _FindComponentsByExactPath<T>(Transform current, string[] splitPath, int index, List<T> components) where T : Component
 		{
 			if (current.name != splitPath[index])
@@ -3176,7 +3176,7 @@ namespace GorillaExtensions
 			}
 		}
 
-		// Token: 0x0600536A RID: 21354 RVA: 0x00194988 File Offset: 0x00192B88
+		// Token: 0x0600536B RID: 21355 RVA: 0x00194A60 File Offset: 0x00192C60
 		public static T[] FindComponentsByPathInLoadedScenes<T>(string wildcardPath, bool caseSensitive = false) where T : Component
 		{
 			List<T> list;
@@ -3202,7 +3202,7 @@ namespace GorillaExtensions
 			return array2;
 		}
 
-		// Token: 0x0600536B RID: 21355 RVA: 0x00194A28 File Offset: 0x00192C28
+		// Token: 0x0600536C RID: 21356 RVA: 0x00194B00 File Offset: 0x00192D00
 		public static T[] FindComponentsByPath<T>(this Scene scene, string globPath, bool caseSensitive = false) where T : Component
 		{
 			if (string.IsNullOrEmpty(globPath))
@@ -3213,7 +3213,7 @@ namespace GorillaExtensions
 			return scene.FindComponentsByPath(array, caseSensitive);
 		}
 
-		// Token: 0x0600536C RID: 21356 RVA: 0x00194A58 File Offset: 0x00192C58
+		// Token: 0x0600536D RID: 21357 RVA: 0x00194B30 File Offset: 0x00192D30
 		private static T[] FindComponentsByPath<T>(this Scene scene, string[] pathPartsRegex, bool caseSensitive = false) where T : Component
 		{
 			List<T> list;
@@ -3231,7 +3231,7 @@ namespace GorillaExtensions
 			return array;
 		}
 
-		// Token: 0x0600536D RID: 21357 RVA: 0x00194AC8 File Offset: 0x00192CC8
+		// Token: 0x0600536E RID: 21358 RVA: 0x00194BA0 File Offset: 0x00192DA0
 		public static T[] FindComponentsByPath<T>(this Transform rootXform, string globPath, bool caseSensitive = false) where T : Component
 		{
 			if (string.IsNullOrEmpty(globPath))
@@ -3242,7 +3242,7 @@ namespace GorillaExtensions
 			return rootXform.FindComponentsByPath(array, caseSensitive);
 		}
 
-		// Token: 0x0600536E RID: 21358 RVA: 0x00194AF8 File Offset: 0x00192CF8
+		// Token: 0x0600536F RID: 21359 RVA: 0x00194BD0 File Offset: 0x00192DD0
 		public static T[] FindComponentsByPath<T>(this Transform rootXform, string[] pathPartsRegex, bool caseSensitive = false) where T : Component
 		{
 			List<T> list;
@@ -3256,7 +3256,7 @@ namespace GorillaExtensions
 			return array;
 		}
 
-		// Token: 0x0600536F RID: 21359 RVA: 0x00194B48 File Offset: 0x00192D48
+		// Token: 0x06005370 RID: 21360 RVA: 0x00194C20 File Offset: 0x00192E20
 		public static void _FindComponentsByPath<T>(Transform current, string[] pathPartsRegex, List<T> components, bool caseSensitive) where T : Component
 		{
 			List<Transform> list;
@@ -3274,7 +3274,7 @@ namespace GorillaExtensions
 			}
 		}
 
-		// Token: 0x06005370 RID: 21360 RVA: 0x00194BBC File Offset: 0x00192DBC
+		// Token: 0x06005371 RID: 21361 RVA: 0x00194C94 File Offset: 0x00192E94
 		private static bool _TryFindAllByPath(Transform current, IReadOnlyList<string> pathPartsRegex, int index, List<Transform> results, bool caseSensitive, bool isAtSceneLevel = false)
 		{
 			bool flag = false;
@@ -3386,7 +3386,7 @@ namespace GorillaExtensions
 			return flag;
 		}
 
-		// Token: 0x06005371 RID: 21361 RVA: 0x00194EA4 File Offset: 0x001930A4
+		// Token: 0x06005372 RID: 21362 RVA: 0x00194F7C File Offset: 0x0019317C
 		public static string[] _GlobPathToPathPartsRegex(string path)
 		{
 			string[] array = path.Split('/', StringSplitOptions.RemoveEmptyEntries);
@@ -3418,7 +3418,7 @@ namespace GorillaExtensions
 			return array;
 		}
 
-		// Token: 0x06005372 RID: 21362 RVA: 0x00194F64 File Offset: 0x00193164
+		// Token: 0x06005373 RID: 21363 RVA: 0x0019503C File Offset: 0x0019323C
 		private static string _GlobPathPartToRegex(string pattern)
 		{
 			if (pattern == "." || pattern == ".." || pattern == "**" || pattern == "..**" || pattern == "**.." || pattern.StartsWith("^"))
@@ -3428,7 +3428,7 @@ namespace GorillaExtensions
 			return "^" + Regex.Escape(pattern).Replace("\\*", ".*") + "$";
 		}
 
-		// Token: 0x06005374 RID: 21364 RVA: 0x00195008 File Offset: 0x00193208
+		// Token: 0x06005375 RID: 21365 RVA: 0x001950E0 File Offset: 0x001932E0
 		[CompilerGenerated]
 		internal static void <GetComponentsInChildrenUntil>g__GetRecursive|7_0<T, TStop1>(Transform currentTransform, ref List<T> components, ref GTExt.<>c__DisplayClass7_0<T, TStop1> A_2) where T : Component where TStop1 : Component
 		{
@@ -3447,7 +3447,7 @@ namespace GorillaExtensions
 			}
 		}
 
-		// Token: 0x06005375 RID: 21365 RVA: 0x001950A4 File Offset: 0x001932A4
+		// Token: 0x06005376 RID: 21366 RVA: 0x0019517C File Offset: 0x0019337C
 		[CompilerGenerated]
 		internal static void <GetComponentsInChildrenUntil>g__GetRecursive|8_0<T, TStop1, TStop2>(Transform currentTransform, ref List<T> components, ref GTExt.<>c__DisplayClass8_0<T, TStop1, TStop2> A_2) where T : Component where TStop1 : Component where TStop2 : Component
 		{
@@ -3466,7 +3466,7 @@ namespace GorillaExtensions
 			}
 		}
 
-		// Token: 0x06005376 RID: 21366 RVA: 0x00195154 File Offset: 0x00193354
+		// Token: 0x06005377 RID: 21367 RVA: 0x0019522C File Offset: 0x0019342C
 		[CompilerGenerated]
 		internal static void <GetComponentsInChildrenUntil>g__GetRecursive|9_0<T, TStop1, TStop2, TStop3>(Transform currentTransform, ref List<T> components, ref GTExt.<>c__DisplayClass9_0<T, TStop1, TStop2, TStop3> A_2) where T : Component where TStop1 : Component where TStop2 : Component where TStop3 : Component
 		{
@@ -3485,25 +3485,25 @@ namespace GorillaExtensions
 			}
 		}
 
-		// Token: 0x0400567C RID: 22140
+		// Token: 0x0400567D RID: 22141
 		private static Dictionary<Transform, Dictionary<string, Transform>> caseSenseInner = new Dictionary<Transform, Dictionary<string, Transform>>();
 
-		// Token: 0x0400567D RID: 22141
+		// Token: 0x0400567E RID: 22142
 		private static Dictionary<Transform, Dictionary<string, Transform>> caseInsenseInner = new Dictionary<Transform, Dictionary<string, Transform>>();
 
-		// Token: 0x0400567E RID: 22142
+		// Token: 0x0400567F RID: 22143
 		public static Dictionary<string, string> allStringsUsed = new Dictionary<string, string>();
 
 		// Token: 0x02000CF9 RID: 3321
 		public enum ParityOptions
 		{
-			// Token: 0x04005680 RID: 22144
-			XFlip,
 			// Token: 0x04005681 RID: 22145
-			YFlip,
+			XFlip,
 			// Token: 0x04005682 RID: 22146
-			ZFlip,
+			YFlip,
 			// Token: 0x04005683 RID: 22147
+			ZFlip,
+			// Token: 0x04005684 RID: 22148
 			AllFlip
 		}
 	}

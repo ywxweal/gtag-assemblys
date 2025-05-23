@@ -13,7 +13,7 @@ using UnityEngine;
 // Token: 0x020008B2 RID: 2226
 public class LuauVm : MonoBehaviourPunCallbacks, IOnEventCallback
 {
-	// Token: 0x060035D6 RID: 13782 RVA: 0x001045D0 File Offset: 0x001027D0
+	// Token: 0x060035D7 RID: 13783 RVA: 0x001046A8 File Offset: 0x001028A8
 	private void Update()
 	{
 		foreach (LuauScriptRunner luauScriptRunner in LuauScriptRunner.ScriptRunners)
@@ -27,17 +27,17 @@ public class LuauVm : MonoBehaviourPunCallbacks, IOnEventCallback
 		}
 	}
 
-	// Token: 0x060035D7 RID: 13783 RVA: 0x000023F4 File Offset: 0x000005F4
+	// Token: 0x060035D8 RID: 13784 RVA: 0x000023F4 File Offset: 0x000005F4
 	private void Start()
 	{
 	}
 
-	// Token: 0x060035D8 RID: 13784 RVA: 0x000023F4 File Offset: 0x000005F4
+	// Token: 0x060035D9 RID: 13785 RVA: 0x000023F4 File Offset: 0x000005F4
 	private void Awake()
 	{
 	}
 
-	// Token: 0x060035D9 RID: 13785 RVA: 0x00104650 File Offset: 0x00102850
+	// Token: 0x060035DA RID: 13786 RVA: 0x00104728 File Offset: 0x00102928
 	public unsafe void OnEvent(EventData eventData)
 	{
 		if (eventData.Code != 180)
@@ -183,7 +183,7 @@ public class LuauVm : MonoBehaviourPunCallbacks, IOnEventCallback
 		}
 	}
 
-	// Token: 0x060035DA RID: 13786 RVA: 0x00104A70 File Offset: 0x00102C70
+	// Token: 0x060035DB RID: 13787 RVA: 0x00104B48 File Offset: 0x00102D48
 	protected override void Finalize()
 	{
 		try
@@ -214,15 +214,15 @@ public class LuauVm : MonoBehaviourPunCallbacks, IOnEventCallback
 		}
 	}
 
-	// Token: 0x04003B9D RID: 15261
+	// Token: 0x04003B9E RID: 15262
 	public static List<object> ClassBuilders = new List<object>();
 
-	// Token: 0x04003B9E RID: 15262
+	// Token: 0x04003B9F RID: 15263
 	public static List<GCHandle> Handles = new List<GCHandle>();
 
-	// Token: 0x04003B9F RID: 15263
+	// Token: 0x04003BA0 RID: 15264
 	private static Dictionary<int, float> callTimers = new Dictionary<int, float>();
 
-	// Token: 0x04003BA0 RID: 15264
+	// Token: 0x04003BA1 RID: 15265
 	private static float callCount = 25f;
 }

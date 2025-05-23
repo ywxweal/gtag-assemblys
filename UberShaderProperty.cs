@@ -7,7 +7,7 @@ using UnityEngine.Rendering;
 [Serializable]
 public class UberShaderProperty
 {
-	// Token: 0x06002B4C RID: 11084 RVA: 0x000D53CC File Offset: 0x000D35CC
+	// Token: 0x06002B4D RID: 11085 RVA: 0x000D5470 File Offset: 0x000D3670
 	public T GetValue<T>(Material target)
 	{
 		switch (this.type)
@@ -28,7 +28,7 @@ public class UberShaderProperty
 		}
 	}
 
-	// Token: 0x06002B4D RID: 11085 RVA: 0x000D5464 File Offset: 0x000D3664
+	// Token: 0x06002B4E RID: 11086 RVA: 0x000D5508 File Offset: 0x000D3708
 	public void SetValue<T>(Material target, T value)
 	{
 		switch (this.type)
@@ -75,7 +75,7 @@ public class UberShaderProperty
 		target.DisableKeyword(this.keyword);
 	}
 
-	// Token: 0x06002B4E RID: 11086 RVA: 0x000D5550 File Offset: 0x000D3750
+	// Token: 0x06002B4F RID: 11087 RVA: 0x000D55F4 File Offset: 0x000D37F4
 	public void Enable(Material target)
 	{
 		ShaderPropertyType shaderPropertyType = this.type;
@@ -96,7 +96,7 @@ public class UberShaderProperty
 		}
 	}
 
-	// Token: 0x06002B4F RID: 11087 RVA: 0x000D55A0 File Offset: 0x000D37A0
+	// Token: 0x06002B50 RID: 11088 RVA: 0x000D5644 File Offset: 0x000D3844
 	public void Disable(Material target)
 	{
 		ShaderPropertyType shaderPropertyType = this.type;
@@ -117,7 +117,7 @@ public class UberShaderProperty
 		}
 	}
 
-	// Token: 0x06002B50 RID: 11088 RVA: 0x000D55F0 File Offset: 0x000D37F0
+	// Token: 0x06002B51 RID: 11089 RVA: 0x000D5694 File Offset: 0x000D3894
 	public bool TryGetKeywordState(Material target, out bool enabled)
 	{
 		enabled = false;
@@ -129,37 +129,37 @@ public class UberShaderProperty
 		return true;
 	}
 
-	// Token: 0x06002B51 RID: 11089 RVA: 0x000D560E File Offset: 0x000D380E
+	// Token: 0x06002B52 RID: 11090 RVA: 0x000D56B2 File Offset: 0x000D38B2
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	private unsafe static TOut ValueAs<TIn, TOut>(TIn value)
 	{
 		return *Unsafe.As<TIn, TOut>(ref value);
 	}
 
-	// Token: 0x040030F9 RID: 12537
+	// Token: 0x040030FB RID: 12539
 	public int index;
 
-	// Token: 0x040030FA RID: 12538
+	// Token: 0x040030FC RID: 12540
 	public int nameID;
 
-	// Token: 0x040030FB RID: 12539
+	// Token: 0x040030FD RID: 12541
 	public string name;
 
-	// Token: 0x040030FC RID: 12540
+	// Token: 0x040030FE RID: 12542
 	public ShaderPropertyType type;
 
-	// Token: 0x040030FD RID: 12541
+	// Token: 0x040030FF RID: 12543
 	public ShaderPropertyFlags flags;
 
-	// Token: 0x040030FE RID: 12542
+	// Token: 0x04003100 RID: 12544
 	public Vector2 rangeLimits;
 
-	// Token: 0x040030FF RID: 12543
+	// Token: 0x04003101 RID: 12545
 	public string[] attributes;
 
-	// Token: 0x04003100 RID: 12544
+	// Token: 0x04003102 RID: 12546
 	public bool isKeywordToggle;
 
-	// Token: 0x04003101 RID: 12545
+	// Token: 0x04003103 RID: 12547
 	public string keyword;
 }

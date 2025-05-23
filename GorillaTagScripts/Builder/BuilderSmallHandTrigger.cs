@@ -10,7 +10,7 @@ namespace GorillaTagScripts.Builder
 	public class BuilderSmallHandTrigger : MonoBehaviour
 	{
 		// Token: 0x170006F0 RID: 1776
-		// (get) Token: 0x0600486B RID: 18539 RVA: 0x001598C0 File Offset: 0x00157AC0
+		// (get) Token: 0x0600486C RID: 18540 RVA: 0x00159998 File Offset: 0x00157B98
 		public bool TriggeredThisFrame
 		{
 			get
@@ -19,7 +19,7 @@ namespace GorillaTagScripts.Builder
 			}
 		}
 
-		// Token: 0x0600486C RID: 18540 RVA: 0x001598D0 File Offset: 0x00157AD0
+		// Token: 0x0600486D RID: 18541 RVA: 0x001599A8 File Offset: 0x00157BA8
 		private void OnTriggerEnter(Collider other)
 		{
 			if (!base.enabled)
@@ -69,38 +69,38 @@ namespace GorillaTagScripts.Builder
 			}
 		}
 
-		// Token: 0x04004B04 RID: 19204
+		// Token: 0x04004B05 RID: 19205
 		[Tooltip("Optional timeline to play to animate the thing getting activated, play sound, particles, etc...")]
 		public PlayableDirector timeline;
 
-		// Token: 0x04004B05 RID: 19205
+		// Token: 0x04004B06 RID: 19206
 		[Tooltip("Optional animation to play")]
 		public Animation animation;
 
-		// Token: 0x04004B06 RID: 19206
+		// Token: 0x04004B07 RID: 19207
 		private int lastTriggeredFrame = -1;
 
-		// Token: 0x04004B07 RID: 19207
-		public bool onlySmallHands;
-
 		// Token: 0x04004B08 RID: 19208
-		[SerializeField]
-		protected bool requireMinimumVelocity;
+		public bool onlySmallHands;
 
 		// Token: 0x04004B09 RID: 19209
 		[SerializeField]
-		protected float minimumVelocityMagnitude = 0.1f;
+		protected bool requireMinimumVelocity;
 
 		// Token: 0x04004B0A RID: 19210
-		private bool hasCheckedZone;
+		[SerializeField]
+		protected float minimumVelocityMagnitude = 0.1f;
 
 		// Token: 0x04004B0B RID: 19211
-		private bool ignoreScale;
+		private bool hasCheckedZone;
 
 		// Token: 0x04004B0C RID: 19212
-		internal UnityEvent TriggeredEvent = new UnityEvent();
+		private bool ignoreScale;
 
 		// Token: 0x04004B0D RID: 19213
+		internal UnityEvent TriggeredEvent = new UnityEvent();
+
+		// Token: 0x04004B0E RID: 19214
 		[SerializeField]
 		private BuilderPiece myPiece;
 	}

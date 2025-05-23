@@ -6,7 +6,7 @@ namespace GorillaTag.Audio
 	// Token: 0x02000D8B RID: 3467
 	public class PlanarSound : MonoBehaviour
 	{
-		// Token: 0x06005618 RID: 22040 RVA: 0x001A310E File Offset: 0x001A130E
+		// Token: 0x06005619 RID: 22041 RVA: 0x001A31E6 File Offset: 0x001A13E6
 		protected void OnEnable()
 		{
 			if (Camera.main != null)
@@ -16,7 +16,7 @@ namespace GorillaTag.Audio
 			}
 		}
 
-		// Token: 0x06005619 RID: 22041 RVA: 0x001A3134 File Offset: 0x001A1334
+		// Token: 0x0600561A RID: 22042 RVA: 0x001A320C File Offset: 0x001A140C
 		protected void LateUpdate()
 		{
 			if (!this.hasCamera)
@@ -33,17 +33,17 @@ namespace GorillaTag.Audio
 			transform.localPosition = vector;
 		}
 
-		// Token: 0x040059E8 RID: 23016
+		// Token: 0x040059E9 RID: 23017
 		private Transform cameraXform;
 
-		// Token: 0x040059E9 RID: 23017
+		// Token: 0x040059EA RID: 23018
 		private bool hasCamera;
 
-		// Token: 0x040059EA RID: 23018
+		// Token: 0x040059EB RID: 23019
 		[SerializeField]
 		private bool limitDistance;
 
-		// Token: 0x040059EB RID: 23019
+		// Token: 0x040059EC RID: 23020
 		[SerializeField]
 		private float maxDistance = 1f;
 	}

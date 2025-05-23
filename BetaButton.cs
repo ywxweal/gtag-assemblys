@@ -6,7 +6,7 @@ using UnityEngine.UI;
 // Token: 0x020003E0 RID: 992
 public class BetaButton : GorillaPressableButton
 {
-	// Token: 0x060017F7 RID: 6135 RVA: 0x00074E00 File Offset: 0x00073000
+	// Token: 0x060017F7 RID: 6135 RVA: 0x00074E20 File Offset: 0x00073020
 	public override void ButtonActivation()
 	{
 		base.ButtonActivation();
@@ -20,7 +20,7 @@ public class BetaButton : GorillaPressableButton
 		}
 	}
 
-	// Token: 0x060017F8 RID: 6136 RVA: 0x00074E58 File Offset: 0x00073058
+	// Token: 0x060017F8 RID: 6136 RVA: 0x00074E78 File Offset: 0x00073078
 	private IEnumerator ButtonColorUpdate()
 	{
 		this.buttonRenderer.material = this.pressedMaterial;

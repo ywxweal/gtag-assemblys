@@ -9,13 +9,13 @@ namespace OVRTouchSample
 	[RequireComponent(typeof(OVRGrabber))]
 	public class Hand : MonoBehaviour
 	{
-		// Token: 0x06004C13 RID: 19475 RVA: 0x0016868A File Offset: 0x0016688A
+		// Token: 0x06004C14 RID: 19476 RVA: 0x00168762 File Offset: 0x00166962
 		private void Awake()
 		{
 			this.m_grabber = base.GetComponent<OVRGrabber>();
 		}
 
-		// Token: 0x06004C14 RID: 19476 RVA: 0x00168698 File Offset: 0x00166898
+		// Token: 0x06004C15 RID: 19477 RVA: 0x00168770 File Offset: 0x00166970
 		private void Start()
 		{
 			this.m_showAfterInputFocusAcquired = new List<Renderer>();
@@ -31,14 +31,14 @@ namespace OVRTouchSample
 			OVRManager.InputFocusLost += this.OnInputFocusLost;
 		}
 
-		// Token: 0x06004C15 RID: 19477 RVA: 0x0016875A File Offset: 0x0016695A
+		// Token: 0x06004C16 RID: 19478 RVA: 0x00168832 File Offset: 0x00166A32
 		private void OnDestroy()
 		{
 			OVRManager.InputFocusAcquired -= this.OnInputFocusAcquired;
 			OVRManager.InputFocusLost -= this.OnInputFocusLost;
 		}
 
-		// Token: 0x06004C16 RID: 19478 RVA: 0x00168780 File Offset: 0x00166980
+		// Token: 0x06004C17 RID: 19479 RVA: 0x00168858 File Offset: 0x00166A58
 		private void Update()
 		{
 			this.UpdateCapTouchStates();
@@ -50,14 +50,14 @@ namespace OVRTouchSample
 			this.UpdateAnimStates();
 		}
 
-		// Token: 0x06004C17 RID: 19479 RVA: 0x001687FF File Offset: 0x001669FF
+		// Token: 0x06004C18 RID: 19480 RVA: 0x001688D7 File Offset: 0x00166AD7
 		private void UpdateCapTouchStates()
 		{
 			this.m_isPointing = !OVRInput.Get(OVRInput.NearTouch.PrimaryIndexTrigger, this.m_controller);
 			this.m_isGivingThumbsUp = !OVRInput.Get(OVRInput.NearTouch.PrimaryThumbButtons, this.m_controller);
 		}
 
-		// Token: 0x06004C18 RID: 19480 RVA: 0x0016882C File Offset: 0x00166A2C
+		// Token: 0x06004C19 RID: 19481 RVA: 0x00168904 File Offset: 0x00166B04
 		private void LateUpdate()
 		{
 			if (this.m_collisionEnabled && this.m_collisionScaleCurrent + Mathf.Epsilon < 1f)
@@ -70,7 +70,7 @@ namespace OVRTouchSample
 			}
 		}
 
-		// Token: 0x06004C19 RID: 19481 RVA: 0x001688B4 File Offset: 0x00166AB4
+		// Token: 0x06004C1A RID: 19482 RVA: 0x0016898C File Offset: 0x00166B8C
 		private void OnInputFocusLost()
 		{
 			if (base.gameObject.activeInHierarchy)
@@ -90,7 +90,7 @@ namespace OVRTouchSample
 			}
 		}
 
-		// Token: 0x06004C1A RID: 19482 RVA: 0x00168920 File Offset: 0x00166B20
+		// Token: 0x06004C1B RID: 19483 RVA: 0x001689F8 File Offset: 0x00166BF8
 		private void OnInputFocusAcquired()
 		{
 			if (this.m_restoreOnInputAcquired)
@@ -107,7 +107,7 @@ namespace OVRTouchSample
 			}
 		}
 
-		// Token: 0x06004C1B RID: 19483 RVA: 0x00168984 File Offset: 0x00166B84
+		// Token: 0x06004C1C RID: 19484 RVA: 0x00168A5C File Offset: 0x00166C5C
 		private float InputValueRateChange(bool isDown, float value)
 		{
 			float num = Time.deltaTime * 20f;
@@ -115,7 +115,7 @@ namespace OVRTouchSample
 			return Mathf.Clamp01(value + num * num2);
 		}
 
-		// Token: 0x06004C1C RID: 19484 RVA: 0x001689B8 File Offset: 0x00166BB8
+		// Token: 0x06004C1D RID: 19485 RVA: 0x00168A90 File Offset: 0x00166C90
 		private void UpdateAnimStates()
 		{
 			bool flag = this.m_grabber.grabbedObject != null;
@@ -140,7 +140,7 @@ namespace OVRTouchSample
 			this.m_animator.SetFloat("Pinch", num4);
 		}
 
-		// Token: 0x06004C1D RID: 19485 RVA: 0x00168AB4 File Offset: 0x00166CB4
+		// Token: 0x06004C1E RID: 19486 RVA: 0x00168B8C File Offset: 0x00166D8C
 		private void CollisionEnable(bool enabled)
 		{
 			if (this.m_collisionEnabled == enabled)
@@ -168,91 +168,91 @@ namespace OVRTouchSample
 			}
 		}
 
-		// Token: 0x04004ED2 RID: 20178
+		// Token: 0x04004ED3 RID: 20179
 		public const string ANIM_LAYER_NAME_POINT = "Point Layer";
 
-		// Token: 0x04004ED3 RID: 20179
+		// Token: 0x04004ED4 RID: 20180
 		public const string ANIM_LAYER_NAME_THUMB = "Thumb Layer";
 
-		// Token: 0x04004ED4 RID: 20180
+		// Token: 0x04004ED5 RID: 20181
 		public const string ANIM_PARAM_NAME_FLEX = "Flex";
 
-		// Token: 0x04004ED5 RID: 20181
+		// Token: 0x04004ED6 RID: 20182
 		public const string ANIM_PARAM_NAME_POSE = "Pose";
 
-		// Token: 0x04004ED6 RID: 20182
+		// Token: 0x04004ED7 RID: 20183
 		public const float THRESH_COLLISION_FLEX = 0.9f;
 
-		// Token: 0x04004ED7 RID: 20183
+		// Token: 0x04004ED8 RID: 20184
 		public const float INPUT_RATE_CHANGE = 20f;
 
-		// Token: 0x04004ED8 RID: 20184
+		// Token: 0x04004ED9 RID: 20185
 		public const float COLLIDER_SCALE_MIN = 0.01f;
 
-		// Token: 0x04004ED9 RID: 20185
+		// Token: 0x04004EDA RID: 20186
 		public const float COLLIDER_SCALE_MAX = 1f;
 
-		// Token: 0x04004EDA RID: 20186
+		// Token: 0x04004EDB RID: 20187
 		public const float COLLIDER_SCALE_PER_SECOND = 1f;
 
-		// Token: 0x04004EDB RID: 20187
+		// Token: 0x04004EDC RID: 20188
 		public const float TRIGGER_DEBOUNCE_TIME = 0.05f;
 
-		// Token: 0x04004EDC RID: 20188
-		public const float THUMB_DEBOUNCE_TIME = 0.15f;
-
 		// Token: 0x04004EDD RID: 20189
-		[SerializeField]
-		private OVRInput.Controller m_controller;
+		public const float THUMB_DEBOUNCE_TIME = 0.15f;
 
 		// Token: 0x04004EDE RID: 20190
 		[SerializeField]
-		private Animator m_animator;
+		private OVRInput.Controller m_controller;
 
 		// Token: 0x04004EDF RID: 20191
 		[SerializeField]
-		private HandPose m_defaultGrabPose;
+		private Animator m_animator;
 
 		// Token: 0x04004EE0 RID: 20192
-		private Collider[] m_colliders;
+		[SerializeField]
+		private HandPose m_defaultGrabPose;
 
 		// Token: 0x04004EE1 RID: 20193
-		private bool m_collisionEnabled = true;
+		private Collider[] m_colliders;
 
 		// Token: 0x04004EE2 RID: 20194
-		private OVRGrabber m_grabber;
+		private bool m_collisionEnabled = true;
 
 		// Token: 0x04004EE3 RID: 20195
-		private List<Renderer> m_showAfterInputFocusAcquired;
+		private OVRGrabber m_grabber;
 
 		// Token: 0x04004EE4 RID: 20196
-		private int m_animLayerIndexThumb = -1;
+		private List<Renderer> m_showAfterInputFocusAcquired;
 
 		// Token: 0x04004EE5 RID: 20197
-		private int m_animLayerIndexPoint = -1;
+		private int m_animLayerIndexThumb = -1;
 
 		// Token: 0x04004EE6 RID: 20198
-		private int m_animParamIndexFlex = -1;
+		private int m_animLayerIndexPoint = -1;
 
 		// Token: 0x04004EE7 RID: 20199
-		private int m_animParamIndexPose = -1;
+		private int m_animParamIndexFlex = -1;
 
 		// Token: 0x04004EE8 RID: 20200
-		private bool m_isPointing;
+		private int m_animParamIndexPose = -1;
 
 		// Token: 0x04004EE9 RID: 20201
-		private bool m_isGivingThumbsUp;
+		private bool m_isPointing;
 
 		// Token: 0x04004EEA RID: 20202
-		private float m_pointBlend;
+		private bool m_isGivingThumbsUp;
 
 		// Token: 0x04004EEB RID: 20203
-		private float m_thumbsUpBlend;
+		private float m_pointBlend;
 
 		// Token: 0x04004EEC RID: 20204
-		private bool m_restoreOnInputAcquired;
+		private float m_thumbsUpBlend;
 
 		// Token: 0x04004EED RID: 20205
+		private bool m_restoreOnInputAcquired;
+
+		// Token: 0x04004EEE RID: 20206
 		private float m_collisionScaleCurrent;
 	}
 }

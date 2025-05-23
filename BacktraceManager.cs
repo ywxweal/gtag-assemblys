@@ -10,7 +10,7 @@ using UnityEngine;
 // Token: 0x02000970 RID: 2416
 public class BacktraceManager : MonoBehaviour
 {
-	// Token: 0x06003A3A RID: 14906 RVA: 0x001170AE File Offset: 0x001152AE
+	// Token: 0x06003A3B RID: 14907 RVA: 0x00117186 File Offset: 0x00115386
 	public virtual void Awake()
 	{
 		base.GetComponent<BacktraceClient>().BeforeSend = delegate(BacktraceData data)
@@ -23,7 +23,7 @@ public class BacktraceManager : MonoBehaviour
 		};
 	}
 
-	// Token: 0x06003A3B RID: 14907 RVA: 0x001170C7 File Offset: 0x001152C7
+	// Token: 0x06003A3C RID: 14908 RVA: 0x0011719F File Offset: 0x0011539F
 	private void Start()
 	{
 		PlayFabTitleDataCache.Instance.GetTitleData("BacktraceSampleRate", delegate(string data)
@@ -39,6 +39,6 @@ public class BacktraceManager : MonoBehaviour
 		});
 	}
 
-	// Token: 0x04003F3E RID: 16190
+	// Token: 0x04003F3F RID: 16191
 	public double backtraceSampleRate = 0.01;
 }

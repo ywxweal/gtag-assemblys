@@ -7,8 +7,8 @@ using UnityEngine;
 public class VRRigAnchorOverrides : MonoBehaviour
 {
 	// Token: 0x170002DA RID: 730
-	// (get) Token: 0x06001A7A RID: 6778 RVA: 0x00081FA1 File Offset: 0x000801A1
-	// (set) Token: 0x06001A7B RID: 6779 RVA: 0x00081FAC File Offset: 0x000801AC
+	// (get) Token: 0x06001A7A RID: 6778 RVA: 0x00081FC1 File Offset: 0x000801C1
+	// (set) Token: 0x06001A7B RID: 6779 RVA: 0x00081FCC File Offset: 0x000801CC
 	public Transform CurrentBadgeTransform
 	{
 		get
@@ -29,7 +29,7 @@ public class VRRigAnchorOverrides : MonoBehaviour
 	}
 
 	// Token: 0x170002DB RID: 731
-	// (get) Token: 0x06001A7C RID: 6780 RVA: 0x00081FFC File Offset: 0x000801FC
+	// (get) Token: 0x06001A7C RID: 6780 RVA: 0x0008201C File Offset: 0x0008021C
 	public Transform HuntDefaultAnchor
 	{
 		get
@@ -39,7 +39,7 @@ public class VRRigAnchorOverrides : MonoBehaviour
 	}
 
 	// Token: 0x170002DC RID: 732
-	// (get) Token: 0x06001A7D RID: 6781 RVA: 0x00082004 File Offset: 0x00080204
+	// (get) Token: 0x06001A7D RID: 6781 RVA: 0x00082024 File Offset: 0x00080224
 	public Transform HuntComputer
 	{
 		get
@@ -49,7 +49,7 @@ public class VRRigAnchorOverrides : MonoBehaviour
 	}
 
 	// Token: 0x170002DD RID: 733
-	// (get) Token: 0x06001A7E RID: 6782 RVA: 0x0008200C File Offset: 0x0008020C
+	// (get) Token: 0x06001A7E RID: 6782 RVA: 0x0008202C File Offset: 0x0008022C
 	public Transform BuilderWatchAnchor
 	{
 		get
@@ -59,7 +59,7 @@ public class VRRigAnchorOverrides : MonoBehaviour
 	}
 
 	// Token: 0x170002DE RID: 734
-	// (get) Token: 0x06001A7F RID: 6783 RVA: 0x00082014 File Offset: 0x00080214
+	// (get) Token: 0x06001A7F RID: 6783 RVA: 0x00082034 File Offset: 0x00080234
 	public Transform BuilderWatch
 	{
 		get
@@ -68,7 +68,7 @@ public class VRRigAnchorOverrides : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001A80 RID: 6784 RVA: 0x0008201C File Offset: 0x0008021C
+	// Token: 0x06001A80 RID: 6784 RVA: 0x0008203C File Offset: 0x0008023C
 	private void Awake()
 	{
 		for (int i = 0; i < 8; i++)
@@ -81,7 +81,7 @@ public class VRRigAnchorOverrides : MonoBehaviour
 		this.builderResizeButtonDefaultTransform = this.builderResizeButton;
 	}
 
-	// Token: 0x06001A81 RID: 6785 RVA: 0x00082070 File Offset: 0x00080270
+	// Token: 0x06001A81 RID: 6785 RVA: 0x00082090 File Offset: 0x00080290
 	private void OnEnable()
 	{
 		if (this.nameDefaultAnchor && this.nameDefaultAnchor.parent)
@@ -110,7 +110,7 @@ public class VRRigAnchorOverrides : MonoBehaviour
 		Debug.LogError("VRRigAnchorOverrides: could not set parent `builderResizeButton` because `builderResizeButtonDefaultAnchor` or its parent was null! Path: " + base.transform.GetPathQ(), this);
 	}
 
-	// Token: 0x06001A82 RID: 6786 RVA: 0x0008218C File Offset: 0x0008038C
+	// Token: 0x06001A82 RID: 6786 RVA: 0x000821AC File Offset: 0x000803AC
 	private int MapPositionToIndex(TransferrableObject.PositionState pos)
 	{
 		int num = (int)pos;
@@ -122,7 +122,7 @@ public class VRRigAnchorOverrides : MonoBehaviour
 		return num2;
 	}
 
-	// Token: 0x06001A83 RID: 6787 RVA: 0x000821AC File Offset: 0x000803AC
+	// Token: 0x06001A83 RID: 6787 RVA: 0x000821CC File Offset: 0x000803CC
 	public void OverrideAnchor(TransferrableObject.PositionState pos, Transform anchor)
 	{
 		int num = this.MapPositionToIndex(pos);
@@ -136,7 +136,7 @@ public class VRRigAnchorOverrides : MonoBehaviour
 		this.overrideAnchors[num] = anchor;
 	}
 
-	// Token: 0x06001A84 RID: 6788 RVA: 0x00082228 File Offset: 0x00080428
+	// Token: 0x06001A84 RID: 6788 RVA: 0x00082248 File Offset: 0x00080448
 	public Transform AnchorOverride(TransferrableObject.PositionState pos, Transform fallback)
 	{
 		int num = this.MapPositionToIndex(pos);
@@ -148,7 +148,7 @@ public class VRRigAnchorOverrides : MonoBehaviour
 		return fallback;
 	}
 
-	// Token: 0x06001A85 RID: 6789 RVA: 0x0008224C File Offset: 0x0008044C
+	// Token: 0x06001A85 RID: 6789 RVA: 0x0008226C File Offset: 0x0008046C
 	public void UpdateNameAnchor(GameObject nameAnchor, CosmeticsController.CosmeticSlots slot)
 	{
 		if (slot != CosmeticsController.CosmeticSlots.Badge)
@@ -173,7 +173,7 @@ public class VRRigAnchorOverrides : MonoBehaviour
 		this.UpdateName();
 	}
 
-	// Token: 0x06001A86 RID: 6790 RVA: 0x000822A4 File Offset: 0x000804A4
+	// Token: 0x06001A86 RID: 6790 RVA: 0x000822C4 File Offset: 0x000804C4
 	private void UpdateName()
 	{
 		foreach (GameObject gameObject in this.nameAnchors)
@@ -196,7 +196,7 @@ public class VRRigAnchorOverrides : MonoBehaviour
 		Debug.LogError("VRRigAnchorOverrides: could not set parent for `nameTransform` because `nameDefaultAnchor` or its parent was null! Path: " + base.transform.GetPathQ(), this);
 	}
 
-	// Token: 0x06001A87 RID: 6791 RVA: 0x0008235E File Offset: 0x0008055E
+	// Token: 0x06001A87 RID: 6791 RVA: 0x0008237E File Offset: 0x0008057E
 	public void UpdateBadgeAnchor(GameObject badgeAnchor, CosmeticsController.CosmeticSlots slot)
 	{
 		switch (slot)
@@ -214,7 +214,7 @@ public class VRRigAnchorOverrides : MonoBehaviour
 		this.UpdateBadge();
 	}
 
-	// Token: 0x06001A88 RID: 6792 RVA: 0x0008239C File Offset: 0x0008059C
+	// Token: 0x06001A88 RID: 6792 RVA: 0x000823BC File Offset: 0x000805BC
 	private void UpdateBadge()
 	{
 		if (!this.currentBadgeTransform)
@@ -233,7 +233,7 @@ public class VRRigAnchorOverrides : MonoBehaviour
 		this.ResetBadge();
 	}
 
-	// Token: 0x06001A89 RID: 6793 RVA: 0x0008240B File Offset: 0x0008060B
+	// Token: 0x06001A89 RID: 6793 RVA: 0x0008242B File Offset: 0x0008062B
 	private void ResetBadge()
 	{
 		if (!this.currentBadgeTransform)

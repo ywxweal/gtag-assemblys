@@ -5,14 +5,14 @@ using UnityEngine;
 // Token: 0x020005D1 RID: 1489
 public class GRUIScoreboardEntry : MonoBehaviour
 {
-	// Token: 0x0600244F RID: 9295 RVA: 0x000B689C File Offset: 0x000B4A9C
+	// Token: 0x0600244F RID: 9295 RVA: 0x000B68BC File Offset: 0x000B4ABC
 	public void Setup(VRRig vrRig, int playerActorId)
 	{
 		this.playerActorId = playerActorId;
 		this.Refresh(vrRig);
 	}
 
-	// Token: 0x06002450 RID: 9296 RVA: 0x000B68AC File Offset: 0x000B4AAC
+	// Token: 0x06002450 RID: 9296 RVA: 0x000B68CC File Offset: 0x000B4ACC
 	private void Refresh(VRRig vrRig)
 	{
 		GRPlayer grplayer = GRPlayer.Get(vrRig);

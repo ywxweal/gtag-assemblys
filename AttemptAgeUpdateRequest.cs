@@ -4,9 +4,9 @@
 [Serializable]
 public class AttemptAgeUpdateRequest : KIDRequestData
 {
-	// Token: 0x040036F4 RID: 14068
+	// Token: 0x040036F5 RID: 14069
 	public int Age;
 
-	// Token: 0x040036F5 RID: 14069
+	// Token: 0x040036F6 RID: 14070
 	public PlayerPlatform Platform;
 }

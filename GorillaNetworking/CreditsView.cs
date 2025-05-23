@@ -13,7 +13,7 @@ namespace GorillaNetworking
 	public class CreditsView : MonoBehaviour
 	{
 		// Token: 0x170007AA RID: 1962
-		// (get) Token: 0x06004D1B RID: 19739 RVA: 0x0016F075 File Offset: 0x0016D275
+		// (get) Token: 0x06004D1C RID: 19740 RVA: 0x0016F14D File Offset: 0x0016D34D
 		private int TotalPages
 		{
 			get
@@ -22,7 +22,7 @@ namespace GorillaNetworking
 			}
 		}
 
-		// Token: 0x06004D1C RID: 19740 RVA: 0x0016F090 File Offset: 0x0016D290
+		// Token: 0x06004D1D RID: 19741 RVA: 0x0016F168 File Offset: 0x0016D368
 		private void Start()
 		{
 			this.creditsSections = new CreditsSection[]
@@ -56,19 +56,19 @@ namespace GorillaNetworking
 			});
 		}
 
-		// Token: 0x06004D1D RID: 19741 RVA: 0x0016F29D File Offset: 0x0016D49D
+		// Token: 0x06004D1E RID: 19742 RVA: 0x0016F375 File Offset: 0x0016D575
 		private int PagesPerSection(CreditsSection section)
 		{
 			return (int)Math.Ceiling((double)section.Entries.Count / (double)this.pageSize);
 		}
 
-		// Token: 0x06004D1E RID: 19742 RVA: 0x0016F2B9 File Offset: 0x0016D4B9
+		// Token: 0x06004D1F RID: 19743 RVA: 0x0016F391 File Offset: 0x0016D591
 		private IEnumerable<string> PageOfSection(CreditsSection section, int page)
 		{
 			return section.Entries.Skip(this.pageSize * page).Take(this.pageSize);
 		}
 
-		// Token: 0x06004D1F RID: 19743 RVA: 0x0016F2DC File Offset: 0x0016D4DC
+		// Token: 0x06004D20 RID: 19744 RVA: 0x0016F3B4 File Offset: 0x0016D5B4
 		[return: TupleElementNames(new string[] { "creditsSection", "subPage" })]
 		private ValueTuple<CreditsSection, int> GetPageEntries(int page)
 		{
@@ -86,7 +86,7 @@ namespace GorillaNetworking
 			return new ValueTuple<CreditsSection, int>(this.creditsSections.First<CreditsSection>(), 0);
 		}
 
-		// Token: 0x06004D20 RID: 19744 RVA: 0x0016F338 File Offset: 0x0016D538
+		// Token: 0x06004D21 RID: 19745 RVA: 0x0016F410 File Offset: 0x0016D610
 		public void ProcessButtonPress(GorillaKeyboardBindings buttonPressed)
 		{
 			if (buttonPressed == GorillaKeyboardBindings.enter)
@@ -96,13 +96,13 @@ namespace GorillaNetworking
 			}
 		}
 
-		// Token: 0x06004D21 RID: 19745 RVA: 0x0016F360 File Offset: 0x0016D560
+		// Token: 0x06004D22 RID: 19746 RVA: 0x0016F438 File Offset: 0x0016D638
 		public string GetScreenText()
 		{
 			return this.GetPage(this.currentPage);
 		}
 
-		// Token: 0x06004D22 RID: 19746 RVA: 0x0016F370 File Offset: 0x0016D570
+		// Token: 0x06004D23 RID: 19747 RVA: 0x0016F448 File Offset: 0x0016D648
 		private string GetPage(int page)
 		{
 			ValueTuple<CreditsSection, int> pageEntries = this.GetPageEntries(page);
@@ -126,16 +126,16 @@ namespace GorillaNetworking
 			return stringBuilder.ToString();
 		}
 
-		// Token: 0x04005004 RID: 20484
+		// Token: 0x04005005 RID: 20485
 		private CreditsSection[] creditsSections;
 
-		// Token: 0x04005005 RID: 20485
+		// Token: 0x04005006 RID: 20486
 		public int pageSize = 7;
 
-		// Token: 0x04005006 RID: 20486
+		// Token: 0x04005007 RID: 20487
 		private int currentPage;
 
-		// Token: 0x04005007 RID: 20487
+		// Token: 0x04005008 RID: 20488
 		private const string PlayFabKey = "CreditsData";
 	}
 }

@@ -8,7 +8,7 @@ namespace OculusSampleFramework
 	public class RayTool : InteractableTool
 	{
 		// Token: 0x1700076A RID: 1898
-		// (get) Token: 0x06004B3F RID: 19263 RVA: 0x00047642 File Offset: 0x00045842
+		// (get) Token: 0x06004B40 RID: 19264 RVA: 0x00047642 File Offset: 0x00045842
 		public override InteractableToolTags ToolTags
 		{
 			get
@@ -18,7 +18,7 @@ namespace OculusSampleFramework
 		}
 
 		// Token: 0x1700076B RID: 1899
-		// (get) Token: 0x06004B40 RID: 19264 RVA: 0x0016529D File Offset: 0x0016349D
+		// (get) Token: 0x06004B41 RID: 19265 RVA: 0x00165375 File Offset: 0x00163575
 		public override ToolInputState ToolInputState
 		{
 			get
@@ -40,7 +40,7 @@ namespace OculusSampleFramework
 		}
 
 		// Token: 0x1700076C RID: 1900
-		// (get) Token: 0x06004B41 RID: 19265 RVA: 0x00047642 File Offset: 0x00045842
+		// (get) Token: 0x06004B42 RID: 19266 RVA: 0x00047642 File Offset: 0x00045842
 		public override bool IsFarFieldTool
 		{
 			get
@@ -50,8 +50,8 @@ namespace OculusSampleFramework
 		}
 
 		// Token: 0x1700076D RID: 1901
-		// (get) Token: 0x06004B42 RID: 19266 RVA: 0x001652CD File Offset: 0x001634CD
-		// (set) Token: 0x06004B43 RID: 19267 RVA: 0x001652DA File Offset: 0x001634DA
+		// (get) Token: 0x06004B43 RID: 19267 RVA: 0x001653A5 File Offset: 0x001635A5
+		// (set) Token: 0x06004B44 RID: 19268 RVA: 0x001653B2 File Offset: 0x001635B2
 		public override bool EnableState
 		{
 			get
@@ -64,7 +64,7 @@ namespace OculusSampleFramework
 			}
 		}
 
-		// Token: 0x06004B44 RID: 19268 RVA: 0x001652E8 File Offset: 0x001634E8
+		// Token: 0x06004B45 RID: 19269 RVA: 0x001653C0 File Offset: 0x001635C0
 		public override void Initialize()
 		{
 			InteractableToolsInputRouter.Instance.RegisterInteractableTool(this);
@@ -73,7 +73,7 @@ namespace OculusSampleFramework
 			this._initialized = true;
 		}
 
-		// Token: 0x06004B45 RID: 19269 RVA: 0x0016531A File Offset: 0x0016351A
+		// Token: 0x06004B46 RID: 19270 RVA: 0x001653F2 File Offset: 0x001635F2
 		private void OnDestroy()
 		{
 			if (InteractableToolsInputRouter.Instance != null)
@@ -82,7 +82,7 @@ namespace OculusSampleFramework
 			}
 		}
 
-		// Token: 0x06004B46 RID: 19270 RVA: 0x00165334 File Offset: 0x00163534
+		// Token: 0x06004B47 RID: 19271 RVA: 0x0016540C File Offset: 0x0016360C
 		private void Update()
 		{
 			if (!HandsManager.Instance || !HandsManager.Instance.IsInitialized() || !this._initialized)
@@ -101,13 +101,13 @@ namespace OculusSampleFramework
 			this._rayToolView.ToolActivateState = this._pinchStateModule.PinchSteadyOnFocusedObject || this._pinchStateModule.PinchDownOnFocusedObject;
 		}
 
-		// Token: 0x06004B47 RID: 19271 RVA: 0x00165413 File Offset: 0x00163613
+		// Token: 0x06004B48 RID: 19272 RVA: 0x001654EB File Offset: 0x001636EB
 		private Vector3 GetRayCastOrigin()
 		{
 			return base.transform.position + 0.8f * base.transform.forward;
 		}
 
-		// Token: 0x06004B48 RID: 19272 RVA: 0x0016543C File Offset: 0x0016363C
+		// Token: 0x06004B49 RID: 19273 RVA: 0x00165514 File Offset: 0x00163714
 		public override List<InteractableCollisionInfo> GetNextIntersectingObjects()
 		{
 			if (!this._initialized)
@@ -147,7 +147,7 @@ namespace OculusSampleFramework
 			return this._currentIntersectingObjects;
 		}
 
-		// Token: 0x06004B49 RID: 19273 RVA: 0x00165548 File Offset: 0x00163748
+		// Token: 0x06004B4A RID: 19274 RVA: 0x00165620 File Offset: 0x00163820
 		private bool HasRayReleasedInteractable(Interactable focusedInteractable)
 		{
 			Vector3 position = base.transform.position;
@@ -158,7 +158,7 @@ namespace OculusSampleFramework
 			return Vector3.Dot(vector, forward) < num;
 		}
 
-		// Token: 0x06004B4A RID: 19274 RVA: 0x001655A4 File Offset: 0x001637A4
+		// Token: 0x06004B4B RID: 19275 RVA: 0x0016567C File Offset: 0x0016387C
 		private Interactable FindTargetInteractable()
 		{
 			Vector3 rayCastOrigin = this.GetRayCastOrigin();
@@ -171,7 +171,7 @@ namespace OculusSampleFramework
 			return interactable;
 		}
 
-		// Token: 0x06004B4B RID: 19275 RVA: 0x001655E4 File Offset: 0x001637E4
+		// Token: 0x06004B4C RID: 19276 RVA: 0x001656BC File Offset: 0x001638BC
 		private Interactable FindPrimaryRaycastHit(Vector3 rayOrigin, Vector3 rayDirection)
 		{
 			Interactable interactable = null;
@@ -198,7 +198,7 @@ namespace OculusSampleFramework
 			return interactable;
 		}
 
-		// Token: 0x06004B4C RID: 19276 RVA: 0x00165694 File Offset: 0x00163894
+		// Token: 0x06004B4D RID: 19277 RVA: 0x0016576C File Offset: 0x0016396C
 		private Interactable FindInteractableViaConeTest(Vector3 rayOrigin, Vector3 rayDirection)
 		{
 			Interactable interactable = null;
@@ -228,70 +228,70 @@ namespace OculusSampleFramework
 			return interactable;
 		}
 
-		// Token: 0x06004B4D RID: 19277 RVA: 0x001657B7 File Offset: 0x001639B7
+		// Token: 0x06004B4E RID: 19278 RVA: 0x0016588F File Offset: 0x00163A8F
 		public override void FocusOnInteractable(Interactable focusedInteractable, ColliderZone colliderZone)
 		{
 			this._rayToolView.SetFocusedInteractable(focusedInteractable);
 			this._focusedInteractable = focusedInteractable;
 		}
 
-		// Token: 0x06004B4E RID: 19278 RVA: 0x001657CC File Offset: 0x001639CC
+		// Token: 0x06004B4F RID: 19279 RVA: 0x001658A4 File Offset: 0x00163AA4
 		public override void DeFocus()
 		{
 			this._rayToolView.SetFocusedInteractable(null);
 			this._focusedInteractable = null;
 		}
 
-		// Token: 0x04004DDD RID: 19933
+		// Token: 0x04004DDE RID: 19934
 		private const float MINIMUM_RAY_CAST_DISTANCE = 0.8f;
 
-		// Token: 0x04004DDE RID: 19934
+		// Token: 0x04004DDF RID: 19935
 		private const float COLLIDER_RADIUS = 0.01f;
 
-		// Token: 0x04004DDF RID: 19935
+		// Token: 0x04004DE0 RID: 19936
 		private const int NUM_MAX_PRIMARY_HITS = 10;
 
-		// Token: 0x04004DE0 RID: 19936
+		// Token: 0x04004DE1 RID: 19937
 		private const int NUM_MAX_SECONDARY_HITS = 25;
 
-		// Token: 0x04004DE1 RID: 19937
+		// Token: 0x04004DE2 RID: 19938
 		private const int NUM_COLLIDERS_TO_TEST = 20;
 
-		// Token: 0x04004DE2 RID: 19938
+		// Token: 0x04004DE3 RID: 19939
 		[SerializeField]
 		private RayToolView _rayToolView;
 
-		// Token: 0x04004DE3 RID: 19939
+		// Token: 0x04004DE4 RID: 19940
 		[Range(0f, 45f)]
 		[SerializeField]
 		private float _coneAngleDegrees = 20f;
 
-		// Token: 0x04004DE4 RID: 19940
+		// Token: 0x04004DE5 RID: 19941
 		[SerializeField]
 		private float _farFieldMaxDistance = 5f;
 
-		// Token: 0x04004DE5 RID: 19941
+		// Token: 0x04004DE6 RID: 19942
 		private PinchStateModule _pinchStateModule = new PinchStateModule();
 
-		// Token: 0x04004DE6 RID: 19942
+		// Token: 0x04004DE7 RID: 19943
 		private Interactable _focusedInteractable;
 
-		// Token: 0x04004DE7 RID: 19943
+		// Token: 0x04004DE8 RID: 19944
 		private Collider[] _collidersOverlapped = new Collider[20];
 
-		// Token: 0x04004DE8 RID: 19944
+		// Token: 0x04004DE9 RID: 19945
 		private Interactable _currInteractableCastedAgainst;
 
-		// Token: 0x04004DE9 RID: 19945
+		// Token: 0x04004DEA RID: 19946
 		private float _coneAngleReleaseDegrees;
 
-		// Token: 0x04004DEA RID: 19946
+		// Token: 0x04004DEB RID: 19947
 		private RaycastHit[] _primaryHits = new RaycastHit[10];
 
-		// Token: 0x04004DEB RID: 19947
+		// Token: 0x04004DEC RID: 19948
 		private Collider[] _secondaryOverlapResults = new Collider[25];
 
-		// Token: 0x04004DEC RID: 19948
+		// Token: 0x04004DED RID: 19949
 		private bool _initialized;
 	}
 }

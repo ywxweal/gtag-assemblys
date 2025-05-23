@@ -10,12 +10,12 @@ using UnityEngine.XR.Interaction.Toolkit;
 internal class ConnectedControllerHandler : MonoBehaviour
 {
 	// Token: 0x17000337 RID: 823
-	// (get) Token: 0x06001FF5 RID: 8181 RVA: 0x000A11D6 File Offset: 0x0009F3D6
-	// (set) Token: 0x06001FF6 RID: 8182 RVA: 0x000A11DD File Offset: 0x0009F3DD
+	// (get) Token: 0x06001FF5 RID: 8181 RVA: 0x000A11F6 File Offset: 0x0009F3F6
+	// (set) Token: 0x06001FF6 RID: 8182 RVA: 0x000A11FD File Offset: 0x0009F3FD
 	public static ConnectedControllerHandler Instance { get; private set; }
 
 	// Token: 0x17000338 RID: 824
-	// (get) Token: 0x06001FF7 RID: 8183 RVA: 0x000A11E5 File Offset: 0x0009F3E5
+	// (get) Token: 0x06001FF7 RID: 8183 RVA: 0x000A1205 File Offset: 0x0009F405
 	public bool RightValid
 	{
 		get
@@ -25,7 +25,7 @@ internal class ConnectedControllerHandler : MonoBehaviour
 	}
 
 	// Token: 0x17000339 RID: 825
-	// (get) Token: 0x06001FF8 RID: 8184 RVA: 0x000A11ED File Offset: 0x0009F3ED
+	// (get) Token: 0x06001FF8 RID: 8184 RVA: 0x000A120D File Offset: 0x0009F40D
 	public bool LeftValid
 	{
 		get
@@ -34,7 +34,7 @@ internal class ConnectedControllerHandler : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001FF9 RID: 8185 RVA: 0x000A11F8 File Offset: 0x0009F3F8
+	// Token: 0x06001FF9 RID: 8185 RVA: 0x000A1218 File Offset: 0x0009F418
 	private void Awake()
 	{
 		if (ConnectedControllerHandler.Instance != null && ConnectedControllerHandler.Instance != this)
@@ -62,7 +62,7 @@ internal class ConnectedControllerHandler : MonoBehaviour
 		this.UpdateControllerStates();
 	}
 
-	// Token: 0x06001FFA RID: 8186 RVA: 0x000A1320 File Offset: 0x0009F520
+	// Token: 0x06001FFA RID: 8186 RVA: 0x000A1340 File Offset: 0x0009F540
 	private void Start()
 	{
 		if (this.leftHandFollower == null || this.rightHandFollower == null || this.leftXRController == null || this.rightXRController == null || this.snapTurnController == null)
@@ -74,19 +74,19 @@ internal class ConnectedControllerHandler : MonoBehaviour
 		this.leftHandFollower.followTransform = GorillaTagger.Instance.offlineVRRig.transform;
 	}
 
-	// Token: 0x06001FFB RID: 8187 RVA: 0x000A13A7 File Offset: 0x0009F5A7
+	// Token: 0x06001FFB RID: 8187 RVA: 0x000A13C7 File Offset: 0x0009F5C7
 	private void OnEnable()
 	{
 		base.StartCoroutine(this.ControllerValidator());
 	}
 
-	// Token: 0x06001FFC RID: 8188 RVA: 0x000A13B6 File Offset: 0x0009F5B6
+	// Token: 0x06001FFC RID: 8188 RVA: 0x000A13D6 File Offset: 0x0009F5D6
 	private void OnDisable()
 	{
 		base.StopCoroutine(this.ControllerValidator());
 	}
 
-	// Token: 0x06001FFD RID: 8189 RVA: 0x000A13C4 File Offset: 0x0009F5C4
+	// Token: 0x06001FFD RID: 8189 RVA: 0x000A13E4 File Offset: 0x0009F5E4
 	private void OnDestroy()
 	{
 		if (ConnectedControllerHandler.Instance != null && ConnectedControllerHandler.Instance == this)
@@ -97,7 +97,7 @@ internal class ConnectedControllerHandler : MonoBehaviour
 		InputDevices.deviceDisconnected -= this.DeviceDisconnected;
 	}
 
-	// Token: 0x06001FFE RID: 8190 RVA: 0x000A1413 File Offset: 0x0009F613
+	// Token: 0x06001FFE RID: 8190 RVA: 0x000A1433 File Offset: 0x0009F633
 	private void LateUpdate()
 	{
 		if (!this.rightValid)
@@ -110,7 +110,7 @@ internal class ConnectedControllerHandler : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001FFF RID: 8191 RVA: 0x000A143B File Offset: 0x0009F63B
+	// Token: 0x06001FFF RID: 8191 RVA: 0x000A145B File Offset: 0x0009F65B
 	private IEnumerator ControllerValidator()
 	{
 		yield return null;
@@ -168,7 +168,7 @@ internal class ConnectedControllerHandler : MonoBehaviour
 		yield break;
 	}
 
-	// Token: 0x06002000 RID: 8192 RVA: 0x000A144A File Offset: 0x0009F64A
+	// Token: 0x06002000 RID: 8192 RVA: 0x000A146A File Offset: 0x0009F66A
 	private void DeviceDisconnected(InputDevice device)
 	{
 		if ((device.characteristics & (InputDeviceCharacteristics.Controller | InputDeviceCharacteristics.Right)) == (InputDeviceCharacteristics.Controller | InputDeviceCharacteristics.Right))
@@ -182,7 +182,7 @@ internal class ConnectedControllerHandler : MonoBehaviour
 		this.UpdateControllerStates();
 	}
 
-	// Token: 0x06002001 RID: 8193 RVA: 0x000A1488 File Offset: 0x0009F688
+	// Token: 0x06002001 RID: 8193 RVA: 0x000A14A8 File Offset: 0x0009F6A8
 	private void DeviceConnected(InputDevice device)
 	{
 		if ((device.characteristics & (InputDeviceCharacteristics.Controller | InputDeviceCharacteristics.Right)) == (InputDeviceCharacteristics.Controller | InputDeviceCharacteristics.Right))
@@ -196,7 +196,7 @@ internal class ConnectedControllerHandler : MonoBehaviour
 		this.UpdateControllerStates();
 	}
 
-	// Token: 0x06002002 RID: 8194 RVA: 0x000A14C8 File Offset: 0x0009F6C8
+	// Token: 0x06002002 RID: 8194 RVA: 0x000A14E8 File Offset: 0x0009F6E8
 	private void UpdateControllerStates()
 	{
 		if (this.overrideEnabled && this.overrideController != OverrideControllers.None)
@@ -214,7 +214,7 @@ internal class ConnectedControllerHandler : MonoBehaviour
 		this.AssignSnapturnController();
 	}
 
-	// Token: 0x06002003 RID: 8195 RVA: 0x000A1568 File Offset: 0x0009F768
+	// Token: 0x06002003 RID: 8195 RVA: 0x000A1588 File Offset: 0x0009F788
 	private void AssignSnapturnController()
 	{
 		if (!this.leftValid && this.rightValid)
@@ -230,7 +230,7 @@ internal class ConnectedControllerHandler : MonoBehaviour
 		this.snapTurnController.controllers = this.rightControllerList;
 	}
 
-	// Token: 0x06002004 RID: 8196 RVA: 0x000A15CC File Offset: 0x0009F7CC
+	// Token: 0x06002004 RID: 8196 RVA: 0x000A15EC File Offset: 0x0009F7EC
 	public bool GetValidForXRNode(XRNode controllerNode)
 	{
 		bool flag;

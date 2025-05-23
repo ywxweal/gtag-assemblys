@@ -9,10 +9,10 @@ namespace GorillaTag
 	[CreateAssetMenu(fileName = "MaterialDatasSO", menuName = "Gorilla Tag/MaterialDatasSO")]
 	public class MaterialDatasSO : ScriptableObject
 	{
-		// Token: 0x040056D7 RID: 22231
+		// Token: 0x040056D8 RID: 22232
 		public List<GTPlayer.MaterialData> datas;
 
-		// Token: 0x040056D8 RID: 22232
+		// Token: 0x040056D9 RID: 22233
 		public List<HashWrapper> surfaceEffects;
 	}
 }

@@ -9,7 +9,7 @@ namespace GameObjectScheduling
 	// Token: 0x02000E29 RID: 3625
 	public class GameObjectScheduler : MonoBehaviour
 	{
-		// Token: 0x06005AB1 RID: 23217 RVA: 0x001B9A80 File Offset: 0x001B7C80
+		// Token: 0x06005AB2 RID: 23218 RVA: 0x001B9B58 File Offset: 0x001B7D58
 		private void Start()
 		{
 			this.schedule.Validate();
@@ -27,7 +27,7 @@ namespace GameObjectScheduling
 			this.monitor = base.StartCoroutine(this.MonitorTime());
 		}
 
-		// Token: 0x06005AB2 RID: 23218 RVA: 0x001B9B16 File Offset: 0x001B7D16
+		// Token: 0x06005AB3 RID: 23219 RVA: 0x001B9BEE File Offset: 0x001B7DEE
 		private void OnEnable()
 		{
 			if (this.monitor == null && this.scheduledGameObject != null)
@@ -36,7 +36,7 @@ namespace GameObjectScheduling
 			}
 		}
 
-		// Token: 0x06005AB3 RID: 23219 RVA: 0x001B9B3A File Offset: 0x001B7D3A
+		// Token: 0x06005AB4 RID: 23220 RVA: 0x001B9C12 File Offset: 0x001B7E12
 		private void OnDisable()
 		{
 			if (this.monitor != null)
@@ -46,7 +46,7 @@ namespace GameObjectScheduling
 			this.monitor = null;
 		}
 
-		// Token: 0x06005AB4 RID: 23220 RVA: 0x001B9B57 File Offset: 0x001B7D57
+		// Token: 0x06005AB5 RID: 23221 RVA: 0x001B9C2F File Offset: 0x001B7E2F
 		private IEnumerator MonitorTime()
 		{
 			while (GorillaComputer.instance == null || GorillaComputer.instance.startupMillis == 0L)
@@ -71,7 +71,7 @@ namespace GameObjectScheduling
 			yield break;
 		}
 
-		// Token: 0x06005AB5 RID: 23221 RVA: 0x001B9B68 File Offset: 0x001B7D68
+		// Token: 0x06005AB6 RID: 23222 RVA: 0x001B9C40 File Offset: 0x001B7E40
 		private bool getActiveState()
 		{
 			this.currentNodeIndex = this.schedule.GetCurrentNodeIndex(this.getServerTime(), 0);
@@ -91,13 +91,13 @@ namespace GameObjectScheduling
 			return flag;
 		}
 
-		// Token: 0x06005AB6 RID: 23222 RVA: 0x0017C557 File Offset: 0x0017A757
+		// Token: 0x06005AB7 RID: 23223 RVA: 0x0017C62F File Offset: 0x0017A82F
 		private DateTime getServerTime()
 		{
 			return GorillaComputer.instance.GetServerTime();
 		}
 
-		// Token: 0x06005AB7 RID: 23223 RVA: 0x001B9BF8 File Offset: 0x001B7DF8
+		// Token: 0x06005AB8 RID: 23224 RVA: 0x001B9CD0 File Offset: 0x001B7ED0
 		private void changeActiveState(bool state)
 		{
 			if (state)
@@ -126,20 +126,20 @@ namespace GameObjectScheduling
 			}
 		}
 
-		// Token: 0x04005EBD RID: 24253
+		// Token: 0x04005EBE RID: 24254
 		[SerializeField]
 		private GameObjectSchedule schedule;
 
-		// Token: 0x04005EBE RID: 24254
+		// Token: 0x04005EBF RID: 24255
 		private GameObject[] scheduledGameObject;
 
-		// Token: 0x04005EBF RID: 24255
+		// Token: 0x04005EC0 RID: 24256
 		private GameObjectSchedulerEventDispatcher dispatcher;
 
-		// Token: 0x04005EC0 RID: 24256
+		// Token: 0x04005EC1 RID: 24257
 		private int currentNodeIndex = -1;
 
-		// Token: 0x04005EC1 RID: 24257
+		// Token: 0x04005EC2 RID: 24258
 		private Coroutine monitor;
 	}
 }

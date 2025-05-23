@@ -7,7 +7,7 @@ using UnityEngine;
 public class SoundEffects : MonoBehaviour
 {
 	// Token: 0x17000304 RID: 772
-	// (get) Token: 0x06001BF5 RID: 7157 RVA: 0x000898F2 File Offset: 0x00087AF2
+	// (get) Token: 0x06001BF5 RID: 7157 RVA: 0x00089912 File Offset: 0x00087B12
 	public bool isPlaying
 	{
 		get
@@ -16,7 +16,7 @@ public class SoundEffects : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001BF6 RID: 7158 RVA: 0x00089925 File Offset: 0x00087B25
+	// Token: 0x06001BF6 RID: 7158 RVA: 0x00089945 File Offset: 0x00087B45
 	public void Clear()
 	{
 		this.audioClips.Clear();
@@ -24,7 +24,7 @@ public class SoundEffects : MonoBehaviour
 		this._lastClipLength = -1.0;
 	}
 
-	// Token: 0x06001BF7 RID: 7159 RVA: 0x00089948 File Offset: 0x00087B48
+	// Token: 0x06001BF7 RID: 7159 RVA: 0x00089968 File Offset: 0x00087B68
 	public void Stop()
 	{
 		if (this.source)
@@ -34,7 +34,7 @@ public class SoundEffects : MonoBehaviour
 		this._lastClipLength = -1.0;
 	}
 
-	// Token: 0x06001BF8 RID: 7160 RVA: 0x00089974 File Offset: 0x00087B74
+	// Token: 0x06001BF8 RID: 7160 RVA: 0x00089994 File Offset: 0x00087B94
 	public void PlayNext(float delayMin, float delayMax, float volMin, float volMax)
 	{
 		float num = this._rnd.NextFloat(delayMin, delayMax);
@@ -42,7 +42,7 @@ public class SoundEffects : MonoBehaviour
 		this.PlayNext(num, num2);
 	}
 
-	// Token: 0x06001BF9 RID: 7161 RVA: 0x000899A8 File Offset: 0x00087BA8
+	// Token: 0x06001BF9 RID: 7161 RVA: 0x000899C8 File Offset: 0x00087BC8
 	public void PlayNext(float delay = 0f, float volume = 1f)
 	{
 		if (!this.source)
@@ -82,7 +82,7 @@ public class SoundEffects : MonoBehaviour
 		this._lastClipElapsedTime = -num2;
 	}
 
-	// Token: 0x06001BFA RID: 7162 RVA: 0x00089ABC File Offset: 0x00087CBC
+	// Token: 0x06001BFA RID: 7162 RVA: 0x00089ADC File Offset: 0x00087CDC
 	[Conditional("UNITY_EDITOR")]
 	private void OnValidate()
 	{

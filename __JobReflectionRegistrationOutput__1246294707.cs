@@ -9,9 +9,9 @@ using UnityEngine.Jobs;
 
 // Token: 0x02000EDC RID: 3804
 [DOTSCompilerGenerated]
-internal class __JobReflectionRegistrationOutput__1771243044
+internal class __JobReflectionRegistrationOutput__1246294707
 {
-	// Token: 0x06005E00 RID: 24064 RVA: 0x001CD680 File Offset: 0x001CB880
+	// Token: 0x06005E01 RID: 24065 RVA: 0x001CD758 File Offset: 0x001CB958
 	public static void CreateJobReflectionData()
 	{
 		try
@@ -36,10 +36,10 @@ internal class __JobReflectionRegistrationOutput__1771243044
 		}
 	}
 
-	// Token: 0x06005E01 RID: 24065 RVA: 0x001CD6F0 File Offset: 0x001CB8F0
+	// Token: 0x06005E02 RID: 24066 RVA: 0x001CD7C8 File Offset: 0x001CB9C8
 	[RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterAssembliesLoaded)]
 	public static void EarlyInit()
 	{
-		__JobReflectionRegistrationOutput__1771243044.CreateJobReflectionData();
+		__JobReflectionRegistrationOutput__1246294707.CreateJobReflectionData();
 	}
 }

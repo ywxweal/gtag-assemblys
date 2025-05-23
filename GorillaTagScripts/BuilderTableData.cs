@@ -7,7 +7,7 @@ namespace GorillaTagScripts
 	[Serializable]
 	public class BuilderTableData
 	{
-		// Token: 0x060044CB RID: 17611 RVA: 0x00145EF8 File Offset: 0x001440F8
+		// Token: 0x060044CC RID: 17612 RVA: 0x00145FD0 File Offset: 0x001441D0
 		public BuilderTableData()
 		{
 			this.version = 4;
@@ -26,7 +26,7 @@ namespace GorillaTagScripts
 			this.timeOffset = new List<int>(1024);
 		}
 
-		// Token: 0x060044CC RID: 17612 RVA: 0x00145FD0 File Offset: 0x001441D0
+		// Token: 0x060044CD RID: 17613 RVA: 0x001460A8 File Offset: 0x001442A8
 		public void Clear()
 		{
 			this.numPieces = 0;
@@ -43,49 +43,49 @@ namespace GorillaTagScripts
 			this.timeOffset.Clear();
 		}
 
-		// Token: 0x0400477E RID: 18302
+		// Token: 0x0400477F RID: 18303
 		public const int BUILDER_TABLE_DATA_VERSION = 4;
 
-		// Token: 0x0400477F RID: 18303
+		// Token: 0x04004780 RID: 18304
 		public int version;
 
-		// Token: 0x04004780 RID: 18304
+		// Token: 0x04004781 RID: 18305
 		public int numEdits;
 
-		// Token: 0x04004781 RID: 18305
+		// Token: 0x04004782 RID: 18306
 		public int numPieces;
 
-		// Token: 0x04004782 RID: 18306
+		// Token: 0x04004783 RID: 18307
 		public List<int> pieceType;
 
-		// Token: 0x04004783 RID: 18307
+		// Token: 0x04004784 RID: 18308
 		public List<int> pieceId;
 
-		// Token: 0x04004784 RID: 18308
+		// Token: 0x04004785 RID: 18309
 		public List<int> parentId;
 
-		// Token: 0x04004785 RID: 18309
+		// Token: 0x04004786 RID: 18310
 		public List<int> attachIndex;
 
-		// Token: 0x04004786 RID: 18310
+		// Token: 0x04004787 RID: 18311
 		public List<int> parentAttachIndex;
 
-		// Token: 0x04004787 RID: 18311
+		// Token: 0x04004788 RID: 18312
 		public List<int> placement;
 
-		// Token: 0x04004788 RID: 18312
+		// Token: 0x04004789 RID: 18313
 		public List<int> materialType;
 
-		// Token: 0x04004789 RID: 18313
+		// Token: 0x0400478A RID: 18314
 		public List<int> overlapingPieces;
 
-		// Token: 0x0400478A RID: 18314
+		// Token: 0x0400478B RID: 18315
 		public List<int> overlappedPieces;
 
-		// Token: 0x0400478B RID: 18315
+		// Token: 0x0400478C RID: 18316
 		public List<long> overlapInfo;
 
-		// Token: 0x0400478C RID: 18316
+		// Token: 0x0400478D RID: 18317
 		public List<int> timeOffset;
 	}
 }

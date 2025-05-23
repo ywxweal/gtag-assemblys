@@ -6,13 +6,13 @@ using UnityEngine.UI;
 // Token: 0x0200040F RID: 1039
 public class TestManipulatableSpinnerIcons : MonoBehaviour
 {
-	// Token: 0x0600194A RID: 6474 RVA: 0x0007A6B6 File Offset: 0x000788B6
+	// Token: 0x0600194A RID: 6474 RVA: 0x0007A6D6 File Offset: 0x000788D6
 	private void Awake()
 	{
 		this.GenerateRollers();
 	}
 
-	// Token: 0x0600194B RID: 6475 RVA: 0x0007A6BE File Offset: 0x000788BE
+	// Token: 0x0600194B RID: 6475 RVA: 0x0007A6DE File Offset: 0x000788DE
 	private void LateUpdate()
 	{
 		this.currentRotation = this.spinner.angle * this.rotationScale;
@@ -20,7 +20,7 @@ public class TestManipulatableSpinnerIcons : MonoBehaviour
 		this.UpdateRollers();
 	}
 
-	// Token: 0x0600194C RID: 6476 RVA: 0x0007A6E4 File Offset: 0x000788E4
+	// Token: 0x0600194C RID: 6476 RVA: 0x0007A704 File Offset: 0x00078904
 	private void GenerateRollers()
 	{
 		for (int i = 0; i < this.rollerElementCount; i++)
@@ -36,7 +36,7 @@ public class TestManipulatableSpinnerIcons : MonoBehaviour
 		this.UpdateRollers();
 	}
 
-	// Token: 0x0600194D RID: 6477 RVA: 0x0007A7AC File Offset: 0x000789AC
+	// Token: 0x0600194D RID: 6477 RVA: 0x0007A7CC File Offset: 0x000789CC
 	private void UpdateSelectedIndex()
 	{
 		float num = this.currentRotation / this.rollerElementAngle;
@@ -52,7 +52,7 @@ public class TestManipulatableSpinnerIcons : MonoBehaviour
 		}
 	}
 
-	// Token: 0x0600194E RID: 6478 RVA: 0x0007A818 File Offset: 0x00078A18
+	// Token: 0x0600194E RID: 6478 RVA: 0x0007A838 File Offset: 0x00078A38
 	private void UpdateRollers()
 	{
 		float num = this.currentRotation;

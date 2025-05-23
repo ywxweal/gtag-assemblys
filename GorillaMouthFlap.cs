@@ -4,7 +4,7 @@ using UnityEngine;
 // Token: 0x02000623 RID: 1571
 public class GorillaMouthFlap : MonoBehaviour, IGorillaSliceableSimple
 {
-	// Token: 0x060026E4 RID: 9956 RVA: 0x000C11FF File Offset: 0x000BF3FF
+	// Token: 0x060026E4 RID: 9956 RVA: 0x000C121F File Offset: 0x000BF41F
 	private void Start()
 	{
 		this.speaker = base.GetComponent<GorillaSpeakerLoudness>();
@@ -12,13 +12,13 @@ public class GorillaMouthFlap : MonoBehaviour, IGorillaSliceableSimple
 		this.facePropBlock = new MaterialPropertyBlock();
 	}
 
-	// Token: 0x060026E5 RID: 9957 RVA: 0x000C1229 File Offset: 0x000BF429
+	// Token: 0x060026E5 RID: 9957 RVA: 0x000C1249 File Offset: 0x000BF449
 	public void EnableLeafBlower()
 	{
 		this.leafBlowerActiveUntilTimestamp = Time.time + 0.1f;
 	}
 
-	// Token: 0x060026E6 RID: 9958 RVA: 0x000C123C File Offset: 0x000BF43C
+	// Token: 0x060026E6 RID: 9958 RVA: 0x000C125C File Offset: 0x000BF45C
 	public void OnEnable()
 	{
 		GorillaSlicerSimpleManager.RegisterSliceable(this, GorillaSlicerSimpleManager.UpdateStep.LateUpdate);
@@ -32,7 +32,7 @@ public class GorillaMouthFlap : MonoBehaviour, IGorillaSliceableSimple
 		GorillaSlicerSimpleManager.UnregisterSliceable(this, GorillaSlicerSimpleManager.UpdateStep.LateUpdate);
 	}
 
-	// Token: 0x060026E8 RID: 9960 RVA: 0x000C125C File Offset: 0x000BF45C
+	// Token: 0x060026E8 RID: 9960 RVA: 0x000C127C File Offset: 0x000BF47C
 	public void SliceUpdate()
 	{
 		this.deltaTime = Time.time - this.lastTimeUpdated;
@@ -60,7 +60,7 @@ public class GorillaMouthFlap : MonoBehaviour, IGorillaSliceableSimple
 		this.UpdateMouthFlapFlipbook(mouthFlapLevel);
 	}
 
-	// Token: 0x060026E9 RID: 9961 RVA: 0x000C1310 File Offset: 0x000BF510
+	// Token: 0x060026E9 RID: 9961 RVA: 0x000C1330 File Offset: 0x000BF530
 	private void CheckMouthflapChange(bool isMicEnabled, float currentLoudness)
 	{
 		if (isMicEnabled)
@@ -97,7 +97,7 @@ public class GorillaMouthFlap : MonoBehaviour, IGorillaSliceableSimple
 		}
 	}
 
-	// Token: 0x060026EA RID: 9962 RVA: 0x000C139C File Offset: 0x000BF59C
+	// Token: 0x060026EA RID: 9962 RVA: 0x000C13BC File Offset: 0x000BF5BC
 	private void UpdateMouthFlapFlipbook(MouthFlapLevel mouthFlap)
 	{
 		Material material = this.targetFaceRenderer.material;
@@ -107,7 +107,7 @@ public class GorillaMouthFlap : MonoBehaviour, IGorillaSliceableSimple
 		material.SetTextureOffset(this._MouthMap, mouthFlap.faces[num]);
 	}
 
-	// Token: 0x060026EB RID: 9963 RVA: 0x000C1414 File Offset: 0x000BF614
+	// Token: 0x060026EB RID: 9963 RVA: 0x000C1434 File Offset: 0x000BF634
 	public void SetMouthTextureReplacement(Texture2D replacementMouthAtlas)
 	{
 		Material material = this.targetFaceRenderer.material;
@@ -119,13 +119,13 @@ public class GorillaMouthFlap : MonoBehaviour, IGorillaSliceableSimple
 		material.SetTexture(this._MouthMap, replacementMouthAtlas);
 	}
 
-	// Token: 0x060026EC RID: 9964 RVA: 0x000C1465 File Offset: 0x000BF665
+	// Token: 0x060026EC RID: 9964 RVA: 0x000C1485 File Offset: 0x000BF685
 	public void ClearMouthTextureReplacement()
 	{
 		this.targetFaceRenderer.material.SetTexture(this._MouthMap, this.defaultMouthAtlas);
 	}
 
-	// Token: 0x060026ED RID: 9965 RVA: 0x000C1488 File Offset: 0x000BF688
+	// Token: 0x060026ED RID: 9965 RVA: 0x000C14A8 File Offset: 0x000BF6A8
 	public void SetFaceMaterialReplacement(Material replacementFaceMaterial)
 	{
 		if (!this.hasDefaultFaceMaterial)
@@ -136,7 +136,7 @@ public class GorillaMouthFlap : MonoBehaviour, IGorillaSliceableSimple
 		this.targetFaceRenderer.material = replacementFaceMaterial;
 	}
 
-	// Token: 0x060026EE RID: 9966 RVA: 0x000C14B6 File Offset: 0x000BF6B6
+	// Token: 0x060026EE RID: 9966 RVA: 0x000C14D6 File Offset: 0x000BF6D6
 	public void ClearFaceMaterialReplacement()
 	{
 		if (this.hasDefaultFaceMaterial)

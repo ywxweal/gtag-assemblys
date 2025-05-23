@@ -8,7 +8,7 @@ namespace GorillaTagScripts.Builder
 	// Token: 0x02000B6A RID: 2922
 	public class BuilderShootingGallery : MonoBehaviour, IBuilderPieceComponent, IBuilderPieceFunctional
 	{
-		// Token: 0x06004851 RID: 18513 RVA: 0x00159198 File Offset: 0x00157398
+		// Token: 0x06004852 RID: 18514 RVA: 0x00159270 File Offset: 0x00157470
 		private void Awake()
 		{
 			foreach (Collider collider in this.colliders)
@@ -19,14 +19,14 @@ namespace GorillaTagScripts.Builder
 			this.cowboyHitNotifier.OnProjectileHit += this.OnCowboyHit;
 		}
 
-		// Token: 0x06004852 RID: 18514 RVA: 0x0015921C File Offset: 0x0015741C
+		// Token: 0x06004853 RID: 18515 RVA: 0x001592F4 File Offset: 0x001574F4
 		private void OnDestroy()
 		{
 			this.wheelHitNotifier.OnProjectileHit -= this.OnWheelHit;
 			this.cowboyHitNotifier.OnProjectileHit -= this.OnCowboyHit;
 		}
 
-		// Token: 0x06004853 RID: 18515 RVA: 0x0015924C File Offset: 0x0015744C
+		// Token: 0x06004854 RID: 18516 RVA: 0x00159324 File Offset: 0x00157524
 		private void OnWheelHit(SlingshotProjectile projectile, Collision collision)
 		{
 			if (this.myPiece.state != BuilderPiece.State.AttachedAndPlaced)
@@ -43,7 +43,7 @@ namespace GorillaTagScripts.Builder
 			}
 		}
 
-		// Token: 0x06004854 RID: 18516 RVA: 0x001592BC File Offset: 0x001574BC
+		// Token: 0x06004855 RID: 18517 RVA: 0x00159394 File Offset: 0x00157594
 		private void OnCowboyHit(SlingshotProjectile projectile, Collision collision)
 		{
 			if (this.myPiece.state != BuilderPiece.State.AttachedAndPlaced)
@@ -60,7 +60,7 @@ namespace GorillaTagScripts.Builder
 			}
 		}
 
-		// Token: 0x06004855 RID: 18517 RVA: 0x0015932C File Offset: 0x0015752C
+		// Token: 0x06004856 RID: 18518 RVA: 0x00159404 File Offset: 0x00157604
 		private void CowboyHitEffects()
 		{
 			if (this.cowboyHitSound != null)
@@ -73,7 +73,7 @@ namespace GorillaTagScripts.Builder
 			}
 		}
 
-		// Token: 0x06004856 RID: 18518 RVA: 0x00159380 File Offset: 0x00157580
+		// Token: 0x06004857 RID: 18519 RVA: 0x00159458 File Offset: 0x00157658
 		private void WheelHitEffects()
 		{
 			if (this.wheelHitSound != null)
@@ -86,7 +86,7 @@ namespace GorillaTagScripts.Builder
 			}
 		}
 
-		// Token: 0x06004857 RID: 18519 RVA: 0x001593D4 File Offset: 0x001575D4
+		// Token: 0x06004858 RID: 18520 RVA: 0x001594AC File Offset: 0x001576AC
 		public void OnPieceCreate(int pieceType, int pieceId)
 		{
 			this.currentState = BuilderShootingGallery.FunctionalState.Idle;
@@ -98,12 +98,12 @@ namespace GorillaTagScripts.Builder
 			this.wheelCycleDuration = 1f / this.wheelVelocity;
 		}
 
-		// Token: 0x06004858 RID: 18520 RVA: 0x000023F4 File Offset: 0x000005F4
+		// Token: 0x06004859 RID: 18521 RVA: 0x000023F4 File Offset: 0x000005F4
 		public void OnPieceDestroy()
 		{
 		}
 
-		// Token: 0x06004859 RID: 18521 RVA: 0x0015947C File Offset: 0x0015767C
+		// Token: 0x0600485A RID: 18522 RVA: 0x00159554 File Offset: 0x00157754
 		public void OnPiecePlacementDeserialized()
 		{
 			if (!this.activated && this.myPiece.state == BuilderPiece.State.AttachedAndPlaced)
@@ -113,7 +113,7 @@ namespace GorillaTagScripts.Builder
 			}
 		}
 
-		// Token: 0x0600485A RID: 18522 RVA: 0x001594AC File Offset: 0x001576AC
+		// Token: 0x0600485B RID: 18523 RVA: 0x00159584 File Offset: 0x00157784
 		public void OnPieceActivate()
 		{
 			this.cowboyTransform.SetLocalPositionAndRotation(this.cowboyInitLocalPos, this.cowboyInitLocalRotation);
@@ -125,7 +125,7 @@ namespace GorillaTagScripts.Builder
 			}
 		}
 
-		// Token: 0x0600485B RID: 18523 RVA: 0x0015950C File Offset: 0x0015770C
+		// Token: 0x0600485C RID: 18524 RVA: 0x001595E4 File Offset: 0x001577E4
 		public void OnPieceDeactivate()
 		{
 			if (this.currentState != BuilderShootingGallery.FunctionalState.Idle)
@@ -142,7 +142,7 @@ namespace GorillaTagScripts.Builder
 			this.wheelTransform.SetLocalPositionAndRotation(this.wheelTransform.localPosition, this.wheelInitLocalRot);
 		}
 
-		// Token: 0x0600485C RID: 18524 RVA: 0x001595A8 File Offset: 0x001577A8
+		// Token: 0x0600485D RID: 18525 RVA: 0x00159680 File Offset: 0x00157880
 		public void OnStateChanged(byte newState, NetPlayer instigator, int timeStamp)
 		{
 			if (instigator == null)
@@ -168,7 +168,7 @@ namespace GorillaTagScripts.Builder
 			this.currentState = (BuilderShootingGallery.FunctionalState)newState;
 		}
 
-		// Token: 0x0600485D RID: 18525 RVA: 0x0015962C File Offset: 0x0015782C
+		// Token: 0x0600485E RID: 18526 RVA: 0x00159704 File Offset: 0x00157904
 		public void OnStateRequest(byte newState, NetPlayer instigator, int timeStamp)
 		{
 			if (!NetworkSystem.Instance.IsMasterClient)
@@ -185,13 +185,13 @@ namespace GorillaTagScripts.Builder
 			}
 		}
 
-		// Token: 0x0600485E RID: 18526 RVA: 0x00159691 File Offset: 0x00157891
+		// Token: 0x0600485F RID: 18527 RVA: 0x00159769 File Offset: 0x00157969
 		public bool IsStateValid(byte state)
 		{
 			return state <= 2;
 		}
 
-		// Token: 0x0600485F RID: 18527 RVA: 0x0015969C File Offset: 0x0015789C
+		// Token: 0x06004860 RID: 18528 RVA: 0x00159774 File Offset: 0x00157974
 		public void FunctionalPieceUpdate()
 		{
 			if (this.lastHitTime + (double)this.hitCooldown < (double)Time.time)
@@ -201,7 +201,7 @@ namespace GorillaTagScripts.Builder
 			}
 		}
 
-		// Token: 0x06004860 RID: 18528 RVA: 0x001596F0 File Offset: 0x001578F0
+		// Token: 0x06004861 RID: 18529 RVA: 0x001597C8 File Offset: 0x001579C8
 		public void FunctionalPieceFixedUpdate()
 		{
 			if (this.myPiece.state != BuilderPiece.State.AttachedAndPlaced)
@@ -218,7 +218,7 @@ namespace GorillaTagScripts.Builder
 			this.wheelTransform.localRotation = quaternion;
 		}
 
-		// Token: 0x06004861 RID: 18529 RVA: 0x00159797 File Offset: 0x00157997
+		// Token: 0x06004862 RID: 18530 RVA: 0x0015986F File Offset: 0x00157A6F
 		private long NetworkTimeMs()
 		{
 			if (PhotonNetwork.InRoom)
@@ -228,19 +228,19 @@ namespace GorillaTagScripts.Builder
 			return (long)(Time.time * 1000f);
 		}
 
-		// Token: 0x06004862 RID: 18530 RVA: 0x001597B9 File Offset: 0x001579B9
+		// Token: 0x06004863 RID: 18531 RVA: 0x00159891 File Offset: 0x00157A91
 		private long CowboyCycleLengthMs()
 		{
 			return (long)(this.cowboyCycleDuration * 1000f);
 		}
 
-		// Token: 0x06004863 RID: 18531 RVA: 0x001597C8 File Offset: 0x001579C8
+		// Token: 0x06004864 RID: 18532 RVA: 0x001598A0 File Offset: 0x00157AA0
 		private long WheelCycleLengthMs()
 		{
 			return (long)(this.wheelCycleDuration * 1000f);
 		}
 
-		// Token: 0x06004864 RID: 18532 RVA: 0x001597D8 File Offset: 0x001579D8
+		// Token: 0x06004865 RID: 18533 RVA: 0x001598B0 File Offset: 0x00157AB0
 		public double CowboyPlatformTime()
 		{
 			long num = this.NetworkTimeMs();
@@ -248,7 +248,7 @@ namespace GorillaTagScripts.Builder
 			return (double)(num - num / num2 * num2) / 1000.0;
 		}
 
-		// Token: 0x06004865 RID: 18533 RVA: 0x00159804 File Offset: 0x00157A04
+		// Token: 0x06004866 RID: 18534 RVA: 0x001598DC File Offset: 0x00157ADC
 		public double WheelPlatformTime()
 		{
 			long num = this.NetworkTimeMs();
@@ -256,146 +256,146 @@ namespace GorillaTagScripts.Builder
 			return (double)(num - num / num2 * num2) / 1000.0;
 		}
 
-		// Token: 0x06004866 RID: 18534 RVA: 0x0015982F File Offset: 0x00157A2F
+		// Token: 0x06004867 RID: 18535 RVA: 0x00159907 File Offset: 0x00157B07
 		public int CowboyCycleCount()
 		{
 			return (int)(this.NetworkTimeMs() / this.CowboyCycleLengthMs());
 		}
 
-		// Token: 0x06004867 RID: 18535 RVA: 0x0015983F File Offset: 0x00157A3F
+		// Token: 0x06004868 RID: 18536 RVA: 0x00159917 File Offset: 0x00157B17
 		public float CowboyCycleCompletionPercent()
 		{
 			return Mathf.Clamp((float)(this.CowboyPlatformTime() / (double)this.cowboyCycleDuration), 0f, 1f);
 		}
 
-		// Token: 0x06004868 RID: 18536 RVA: 0x0015985F File Offset: 0x00157A5F
+		// Token: 0x06004869 RID: 18537 RVA: 0x00159937 File Offset: 0x00157B37
 		public float WheelCycleCompletionPercent()
 		{
 			return Mathf.Clamp((float)(this.WheelPlatformTime() / (double)this.wheelCycleDuration), 0f, 1f);
 		}
 
-		// Token: 0x06004869 RID: 18537 RVA: 0x0015987F File Offset: 0x00157A7F
+		// Token: 0x0600486A RID: 18538 RVA: 0x00159957 File Offset: 0x00157B57
 		public bool IsEvenCycle()
 		{
 			return this.CowboyCycleCount() % 2 == 0;
 		}
 
-		// Token: 0x04004AE1 RID: 19169
-		public BuilderPiece myPiece;
-
 		// Token: 0x04004AE2 RID: 19170
-		[SerializeField]
-		private Transform wheelTransform;
+		public BuilderPiece myPiece;
 
 		// Token: 0x04004AE3 RID: 19171
 		[SerializeField]
-		private Transform cowboyTransform;
+		private Transform wheelTransform;
 
 		// Token: 0x04004AE4 RID: 19172
 		[SerializeField]
-		private SlingshotProjectileHitNotifier wheelHitNotifier;
+		private Transform cowboyTransform;
 
 		// Token: 0x04004AE5 RID: 19173
 		[SerializeField]
-		private SlingshotProjectileHitNotifier cowboyHitNotifier;
+		private SlingshotProjectileHitNotifier wheelHitNotifier;
 
 		// Token: 0x04004AE6 RID: 19174
 		[SerializeField]
-		protected List<Collider> colliders;
+		private SlingshotProjectileHitNotifier cowboyHitNotifier;
 
 		// Token: 0x04004AE7 RID: 19175
 		[SerializeField]
-		protected SoundBankPlayer wheelHitSound;
+		protected List<Collider> colliders;
 
 		// Token: 0x04004AE8 RID: 19176
 		[SerializeField]
-		protected Animation wheelHitAnimation;
+		protected SoundBankPlayer wheelHitSound;
 
 		// Token: 0x04004AE9 RID: 19177
 		[SerializeField]
-		protected SoundBankPlayer cowboyHitSound;
+		protected Animation wheelHitAnimation;
 
 		// Token: 0x04004AEA RID: 19178
 		[SerializeField]
-		private Animation cowboyHitAnimation;
+		protected SoundBankPlayer cowboyHitSound;
 
 		// Token: 0x04004AEB RID: 19179
 		[SerializeField]
-		private float hitCooldown = 1f;
+		private Animation cowboyHitAnimation;
 
 		// Token: 0x04004AEC RID: 19180
-		private double lastHitTime;
+		[SerializeField]
+		private float hitCooldown = 1f;
 
 		// Token: 0x04004AED RID: 19181
-		private BuilderShootingGallery.FunctionalState currentState;
+		private double lastHitTime;
 
 		// Token: 0x04004AEE RID: 19182
-		private bool activated;
+		private BuilderShootingGallery.FunctionalState currentState;
 
 		// Token: 0x04004AEF RID: 19183
-		[SerializeField]
-		private float cowboyVelocity;
+		private bool activated;
 
 		// Token: 0x04004AF0 RID: 19184
 		[SerializeField]
-		private Transform cowboyStart;
+		private float cowboyVelocity;
 
 		// Token: 0x04004AF1 RID: 19185
 		[SerializeField]
-		private Transform cowboyEnd;
+		private Transform cowboyStart;
 
 		// Token: 0x04004AF2 RID: 19186
 		[SerializeField]
-		private AnimationCurve cowboyCurve;
+		private Transform cowboyEnd;
 
 		// Token: 0x04004AF3 RID: 19187
 		[SerializeField]
-		private float wheelVelocity;
+		private AnimationCurve cowboyCurve;
 
 		// Token: 0x04004AF4 RID: 19188
-		private Quaternion cowboyInitLocalRotation = Quaternion.identity;
+		[SerializeField]
+		private float wheelVelocity;
 
 		// Token: 0x04004AF5 RID: 19189
-		private Vector3 cowboyInitLocalPos = Vector3.zero;
+		private Quaternion cowboyInitLocalRotation = Quaternion.identity;
 
 		// Token: 0x04004AF6 RID: 19190
-		private Quaternion wheelInitLocalRot = Quaternion.identity;
+		private Vector3 cowboyInitLocalPos = Vector3.zero;
 
 		// Token: 0x04004AF7 RID: 19191
-		private float cowboyCycleDuration;
+		private Quaternion wheelInitLocalRot = Quaternion.identity;
 
 		// Token: 0x04004AF8 RID: 19192
-		private float wheelCycleDuration;
+		private float cowboyCycleDuration;
 
 		// Token: 0x04004AF9 RID: 19193
-		private float distance;
+		private float wheelCycleDuration;
 
 		// Token: 0x04004AFA RID: 19194
-		private float currT;
+		private float distance;
 
 		// Token: 0x04004AFB RID: 19195
-		private bool currForward;
+		private float currT;
 
 		// Token: 0x04004AFC RID: 19196
-		private float dtSinceServerUpdate;
+		private bool currForward;
 
 		// Token: 0x04004AFD RID: 19197
-		private int lastServerTimeStamp;
+		private float dtSinceServerUpdate;
 
 		// Token: 0x04004AFE RID: 19198
-		private float rotateStartAmt;
+		private int lastServerTimeStamp;
 
 		// Token: 0x04004AFF RID: 19199
+		private float rotateStartAmt;
+
+		// Token: 0x04004B00 RID: 19200
 		private float rotateAmt;
 
 		// Token: 0x02000B6B RID: 2923
 		private enum FunctionalState
 		{
-			// Token: 0x04004B01 RID: 19201
-			Idle,
 			// Token: 0x04004B02 RID: 19202
-			HitWheel,
+			Idle,
 			// Token: 0x04004B03 RID: 19203
+			HitWheel,
+			// Token: 0x04004B04 RID: 19204
 			HitCowboy
 		}
 	}

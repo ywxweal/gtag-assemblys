@@ -5,14 +5,14 @@ using UnityEngine;
 // Token: 0x0200042F RID: 1071
 public class UmbrellaItem : TransferrableObject
 {
-	// Token: 0x06001A6D RID: 6765 RVA: 0x00081CAB File Offset: 0x0007FEAB
+	// Token: 0x06001A6D RID: 6765 RVA: 0x00081CCB File Offset: 0x0007FECB
 	protected override void Start()
 	{
 		base.Start();
 		this.itemState = TransferrableObject.ItemStates.State1;
 	}
 
-	// Token: 0x06001A6E RID: 6766 RVA: 0x00081CBC File Offset: 0x0007FEBC
+	// Token: 0x06001A6E RID: 6766 RVA: 0x00081CDC File Offset: 0x0007FEDC
 	public override void OnActivate()
 	{
 		base.OnActivate();
@@ -36,21 +36,21 @@ public class UmbrellaItem : TransferrableObject
 		this.OnUmbrellaStateChanged();
 	}
 
-	// Token: 0x06001A6F RID: 6767 RVA: 0x00081D54 File Offset: 0x0007FF54
+	// Token: 0x06001A6F RID: 6767 RVA: 0x00081D74 File Offset: 0x0007FF74
 	internal override void OnEnable()
 	{
 		base.OnEnable();
 		this.OnUmbrellaStateChanged();
 	}
 
-	// Token: 0x06001A70 RID: 6768 RVA: 0x00081D62 File Offset: 0x0007FF62
+	// Token: 0x06001A70 RID: 6768 RVA: 0x00081D82 File Offset: 0x0007FF82
 	internal override void OnDisable()
 	{
 		base.OnDisable();
 		BetterDayNightManager.instance.collidersToAddToWeatherSystems.Remove(this.umbrellaRainDestroyTrigger);
 	}
 
-	// Token: 0x06001A71 RID: 6769 RVA: 0x00081D82 File Offset: 0x0007FF82
+	// Token: 0x06001A71 RID: 6769 RVA: 0x00081DA2 File Offset: 0x0007FFA2
 	public override void ResetToDefaultState()
 	{
 		base.ResetToDefaultState();
@@ -59,7 +59,7 @@ public class UmbrellaItem : TransferrableObject
 		this.OnUmbrellaStateChanged();
 	}
 
-	// Token: 0x06001A72 RID: 6770 RVA: 0x00081DAF File Offset: 0x0007FFAF
+	// Token: 0x06001A72 RID: 6770 RVA: 0x00081DCF File Offset: 0x0007FFCF
 	public override bool OnRelease(DropZone zoneReleased, GameObject releasingHand)
 	{
 		if (!base.OnRelease(zoneReleased, releasingHand))
@@ -77,7 +77,7 @@ public class UmbrellaItem : TransferrableObject
 		return true;
 	}
 
-	// Token: 0x06001A73 RID: 6771 RVA: 0x00081DD8 File Offset: 0x0007FFD8
+	// Token: 0x06001A73 RID: 6771 RVA: 0x00081DF8 File Offset: 0x0007FFF8
 	protected override void LateUpdateShared()
 	{
 		base.LateUpdateShared();
@@ -90,7 +90,7 @@ public class UmbrellaItem : TransferrableObject
 		this.previousUmbrellaState = itemState;
 	}
 
-	// Token: 0x06001A74 RID: 6772 RVA: 0x00081E28 File Offset: 0x00080028
+	// Token: 0x06001A74 RID: 6772 RVA: 0x00081E48 File Offset: 0x00080048
 	protected virtual void OnUmbrellaStateChanged()
 	{
 		bool flag = this.itemState == TransferrableObject.ItemStates.State0;
@@ -116,7 +116,7 @@ public class UmbrellaItem : TransferrableObject
 		}
 	}
 
-	// Token: 0x06001A75 RID: 6773 RVA: 0x00081E9C File Offset: 0x0008009C
+	// Token: 0x06001A75 RID: 6773 RVA: 0x00081EBC File Offset: 0x000800BC
 	protected virtual void UpdateAngles(Quaternion[] toAngles, float t)
 	{
 		for (int i = 0; i < this.umbrellaBones.Length; i++)
@@ -125,7 +125,7 @@ public class UmbrellaItem : TransferrableObject
 		}
 	}
 
-	// Token: 0x06001A76 RID: 6774 RVA: 0x00081EE4 File Offset: 0x000800E4
+	// Token: 0x06001A76 RID: 6774 RVA: 0x00081F04 File Offset: 0x00080104
 	protected void GenerateAngles()
 	{
 		this.startingAngles = new Quaternion[this.umbrellaBones.Length];

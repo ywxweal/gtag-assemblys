@@ -7,7 +7,7 @@ using Valve.VR;
 public class ControllerBehaviour : MonoBehaviour, IBuildValidation
 {
 	// Token: 0x17000528 RID: 1320
-	// (get) Token: 0x06003376 RID: 13174 RVA: 0x000FDF06 File Offset: 0x000FC106
+	// (get) Token: 0x06003377 RID: 13175 RVA: 0x000FDFDE File Offset: 0x000FC1DE
 	public bool ButtonDown
 	{
 		get
@@ -17,7 +17,7 @@ public class ControllerBehaviour : MonoBehaviour, IBuildValidation
 	}
 
 	// Token: 0x17000529 RID: 1321
-	// (get) Token: 0x06003377 RID: 13175 RVA: 0x000FDF0E File Offset: 0x000FC10E
+	// (get) Token: 0x06003378 RID: 13176 RVA: 0x000FDFE6 File Offset: 0x000FC1E6
 	public bool LeftButtonDown
 	{
 		get
@@ -27,7 +27,7 @@ public class ControllerBehaviour : MonoBehaviour, IBuildValidation
 	}
 
 	// Token: 0x1700052A RID: 1322
-	// (get) Token: 0x06003378 RID: 13176 RVA: 0x000FDF16 File Offset: 0x000FC116
+	// (get) Token: 0x06003379 RID: 13177 RVA: 0x000FDFEE File Offset: 0x000FC1EE
 	public bool RightButtonDown
 	{
 		get
@@ -37,7 +37,7 @@ public class ControllerBehaviour : MonoBehaviour, IBuildValidation
 	}
 
 	// Token: 0x1700052B RID: 1323
-	// (get) Token: 0x06003379 RID: 13177 RVA: 0x000FDF1E File Offset: 0x000FC11E
+	// (get) Token: 0x0600337A RID: 13178 RVA: 0x000FDFF6 File Offset: 0x000FC1F6
 	public bool IsLeftStick
 	{
 		get
@@ -47,7 +47,7 @@ public class ControllerBehaviour : MonoBehaviour, IBuildValidation
 	}
 
 	// Token: 0x1700052C RID: 1324
-	// (get) Token: 0x0600337A RID: 13178 RVA: 0x000FDF26 File Offset: 0x000FC126
+	// (get) Token: 0x0600337B RID: 13179 RVA: 0x000FDFFE File Offset: 0x000FC1FE
 	public bool IsRightStick
 	{
 		get
@@ -57,7 +57,7 @@ public class ControllerBehaviour : MonoBehaviour, IBuildValidation
 	}
 
 	// Token: 0x1700052D RID: 1325
-	// (get) Token: 0x0600337B RID: 13179 RVA: 0x000FDF2E File Offset: 0x000FC12E
+	// (get) Token: 0x0600337C RID: 13180 RVA: 0x000FE006 File Offset: 0x000FC206
 	public bool IsUpStick
 	{
 		get
@@ -67,7 +67,7 @@ public class ControllerBehaviour : MonoBehaviour, IBuildValidation
 	}
 
 	// Token: 0x1700052E RID: 1326
-	// (get) Token: 0x0600337C RID: 13180 RVA: 0x000FDF36 File Offset: 0x000FC136
+	// (get) Token: 0x0600337D RID: 13181 RVA: 0x000FE00E File Offset: 0x000FC20E
 	public bool IsDownStick
 	{
 		get
@@ -77,7 +77,7 @@ public class ControllerBehaviour : MonoBehaviour, IBuildValidation
 	}
 
 	// Token: 0x1700052F RID: 1327
-	// (get) Token: 0x0600337D RID: 13181 RVA: 0x000FDF3E File Offset: 0x000FC13E
+	// (get) Token: 0x0600337E RID: 13182 RVA: 0x000FE016 File Offset: 0x000FC216
 	public float StickXValue
 	{
 		get
@@ -87,7 +87,7 @@ public class ControllerBehaviour : MonoBehaviour, IBuildValidation
 	}
 
 	// Token: 0x17000530 RID: 1328
-	// (get) Token: 0x0600337E RID: 13182 RVA: 0x000FDF46 File Offset: 0x000FC146
+	// (get) Token: 0x0600337F RID: 13183 RVA: 0x000FE01E File Offset: 0x000FC21E
 	public float StickYValue
 	{
 		get
@@ -97,16 +97,16 @@ public class ControllerBehaviour : MonoBehaviour, IBuildValidation
 	}
 
 	// Token: 0x17000531 RID: 1329
-	// (get) Token: 0x0600337F RID: 13183 RVA: 0x000FDF4E File Offset: 0x000FC14E
-	// (set) Token: 0x06003380 RID: 13184 RVA: 0x000FDF56 File Offset: 0x000FC156
+	// (get) Token: 0x06003380 RID: 13184 RVA: 0x000FE026 File Offset: 0x000FC226
+	// (set) Token: 0x06003381 RID: 13185 RVA: 0x000FE02E File Offset: 0x000FC22E
 	public bool TriggerDown { get; private set; }
 
 	// Token: 0x1400005D RID: 93
-	// (add) Token: 0x06003381 RID: 13185 RVA: 0x000FDF60 File Offset: 0x000FC160
-	// (remove) Token: 0x06003382 RID: 13186 RVA: 0x000FDF98 File Offset: 0x000FC198
+	// (add) Token: 0x06003382 RID: 13186 RVA: 0x000FE038 File Offset: 0x000FC238
+	// (remove) Token: 0x06003383 RID: 13187 RVA: 0x000FE070 File Offset: 0x000FC270
 	public event ControllerBehaviour.OnActionEvent OnAction;
 
-	// Token: 0x06003383 RID: 13187 RVA: 0x000FDFD0 File Offset: 0x000FC1D0
+	// Token: 0x06003384 RID: 13188 RVA: 0x000FE0A8 File Offset: 0x000FC2A8
 	private void Update()
 	{
 		this.leftHandDevice = InputDevices.GetDeviceAtXRNode(XRNode.LeftHand);
@@ -196,13 +196,13 @@ public class ControllerBehaviour : MonoBehaviour, IBuildValidation
 		}
 	}
 
-	// Token: 0x06003384 RID: 13188 RVA: 0x000FE338 File Offset: 0x000FC538
+	// Token: 0x06003385 RID: 13189 RVA: 0x000FE410 File Offset: 0x000FC610
 	private void OnDisable()
 	{
 		this.buttonDown = (this.isLeftStick = (this.isRightStick = (this.isUpStick = (this.isDownStick = false))));
 	}
 
-	// Token: 0x06003385 RID: 13189 RVA: 0x000FE370 File Offset: 0x000FC570
+	// Token: 0x06003386 RID: 13190 RVA: 0x000FE448 File Offset: 0x000FC648
 	public bool BuildValidationCheck()
 	{
 		if (this.uxSettings == null)
@@ -213,7 +213,7 @@ public class ControllerBehaviour : MonoBehaviour, IBuildValidation
 		return true;
 	}
 
-	// Token: 0x06003386 RID: 13190 RVA: 0x000FE38D File Offset: 0x000FC58D
+	// Token: 0x06003387 RID: 13191 RVA: 0x000FE465 File Offset: 0x000FC665
 	public static ControllerBehaviour CreateNewControllerBehaviour(GameObject gameObject, UXSettings settings)
 	{
 		ControllerBehaviour controllerBehaviour = gameObject.AddComponent<ControllerBehaviour>();
@@ -221,63 +221,63 @@ public class ControllerBehaviour : MonoBehaviour, IBuildValidation
 		return controllerBehaviour;
 	}
 
-	// Token: 0x04003A64 RID: 14948
+	// Token: 0x04003A65 RID: 14949
 	private InputDevice leftHandDevice;
 
-	// Token: 0x04003A65 RID: 14949
+	// Token: 0x04003A66 RID: 14950
 	private InputDevice rightHandDevice;
 
-	// Token: 0x04003A66 RID: 14950
+	// Token: 0x04003A67 RID: 14951
 	private float actionTime;
 
-	// Token: 0x04003A67 RID: 14951
+	// Token: 0x04003A68 RID: 14952
 	private bool buttonDown;
 
-	// Token: 0x04003A68 RID: 14952
+	// Token: 0x04003A69 RID: 14953
 	private bool leftButtonDown;
 
-	// Token: 0x04003A69 RID: 14953
+	// Token: 0x04003A6A RID: 14954
 	private bool rightButtonDown;
 
-	// Token: 0x04003A6A RID: 14954
+	// Token: 0x04003A6B RID: 14955
 	private float repeatAction = 1f;
 
-	// Token: 0x04003A6B RID: 14955
+	// Token: 0x04003A6C RID: 14956
 	private bool isLeftStick;
 
-	// Token: 0x04003A6C RID: 14956
+	// Token: 0x04003A6D RID: 14957
 	private bool isRightStick;
 
-	// Token: 0x04003A6D RID: 14957
+	// Token: 0x04003A6E RID: 14958
 	private bool isUpStick;
 
-	// Token: 0x04003A6E RID: 14958
+	// Token: 0x04003A6F RID: 14959
 	private bool isDownStick;
 
-	// Token: 0x04003A6F RID: 14959
+	// Token: 0x04003A70 RID: 14960
 	private float stickXValue;
 
-	// Token: 0x04003A70 RID: 14960
-	private float stickYValue;
-
 	// Token: 0x04003A71 RID: 14961
-	[SerializeField]
-	private UXSettings uxSettings;
+	private float stickYValue;
 
 	// Token: 0x04003A72 RID: 14962
 	[SerializeField]
-	private float actionDelay = 0.5f;
+	private UXSettings uxSettings;
 
 	// Token: 0x04003A73 RID: 14963
 	[SerializeField]
-	private float actionRepeatDelayReduction = 0.5f;
+	private float actionDelay = 0.5f;
 
 	// Token: 0x04003A74 RID: 14964
+	[SerializeField]
+	private float actionRepeatDelayReduction = 0.5f;
+
+	// Token: 0x04003A75 RID: 14965
 	[Tooltip("Should the triggers modify the x axis like the sticks do?")]
 	[SerializeField]
 	private bool triggersAsSticks = true;
 
 	// Token: 0x0200083F RID: 2111
-	// (Invoke) Token: 0x06003389 RID: 13193
+	// (Invoke) Token: 0x0600338A RID: 13194
 	public delegate void OnActionEvent();
 }

@@ -9,16 +9,16 @@ using UnityEngine;
 public class DrumsItem : MonoBehaviour, ISpawnable
 {
 	// Token: 0x170002BF RID: 703
-	// (get) Token: 0x060018BE RID: 6334 RVA: 0x00077E4E File Offset: 0x0007604E
-	// (set) Token: 0x060018BF RID: 6335 RVA: 0x00077E56 File Offset: 0x00076056
+	// (get) Token: 0x060018BE RID: 6334 RVA: 0x00077E6E File Offset: 0x0007606E
+	// (set) Token: 0x060018BF RID: 6335 RVA: 0x00077E76 File Offset: 0x00076076
 	bool ISpawnable.IsSpawned { get; set; }
 
 	// Token: 0x170002C0 RID: 704
-	// (get) Token: 0x060018C0 RID: 6336 RVA: 0x00077E5F File Offset: 0x0007605F
-	// (set) Token: 0x060018C1 RID: 6337 RVA: 0x00077E67 File Offset: 0x00076067
+	// (get) Token: 0x060018C0 RID: 6336 RVA: 0x00077E7F File Offset: 0x0007607F
+	// (set) Token: 0x060018C1 RID: 6337 RVA: 0x00077E87 File Offset: 0x00076087
 	ECosmeticSelectSide ISpawnable.CosmeticSelectedSide { get; set; }
 
-	// Token: 0x060018C2 RID: 6338 RVA: 0x00077E70 File Offset: 0x00076070
+	// Token: 0x060018C2 RID: 6338 RVA: 0x00077E90 File Offset: 0x00076090
 	void ISpawnable.OnSpawn(VRRig rig)
 	{
 		this.myRig = rig;
@@ -40,14 +40,14 @@ public class DrumsItem : MonoBehaviour, ISpawnable
 	{
 	}
 
-	// Token: 0x060018C4 RID: 6340 RVA: 0x00077F18 File Offset: 0x00076118
+	// Token: 0x060018C4 RID: 6340 RVA: 0x00077F38 File Offset: 0x00076138
 	private void LateUpdate()
 	{
 		this.CheckHandHit(ref this.leftHandIn, ref this.leftHandIndicator, true);
 		this.CheckHandHit(ref this.rightHandIn, ref this.rightHandIndicator, false);
 	}
 
-	// Token: 0x060018C5 RID: 6341 RVA: 0x00077F40 File Offset: 0x00076140
+	// Token: 0x060018C5 RID: 6341 RVA: 0x00077F60 File Offset: 0x00076160
 	private void CheckHandHit(ref bool handIn, ref GorillaTriggerColliderHandIndicator handIndicator, bool isLeftHand)
 	{
 		this.spherecastSweep = handIndicator.transform.position - handIndicator.lastPosition;
@@ -99,7 +99,7 @@ public class DrumsItem : MonoBehaviour, ISpawnable
 		handIn = this.drumHit;
 	}
 
-	// Token: 0x060018C6 RID: 6342 RVA: 0x0007815B File Offset: 0x0007635B
+	// Token: 0x060018C6 RID: 6342 RVA: 0x0007817B File Offset: 0x0007637B
 	private int RayCastHitCompare(RaycastHit a, RaycastHit b)
 	{
 		if (a.distance < b.distance)
@@ -113,7 +113,7 @@ public class DrumsItem : MonoBehaviour, ISpawnable
 		return 1;
 	}
 
-	// Token: 0x060018C7 RID: 6343 RVA: 0x00078184 File Offset: 0x00076384
+	// Token: 0x060018C7 RID: 6343 RVA: 0x000781A4 File Offset: 0x000763A4
 	public void DrumHit(Drum tempDrumInner, bool isLeftHand, float hitVelocity)
 	{
 		if (isLeftHand)

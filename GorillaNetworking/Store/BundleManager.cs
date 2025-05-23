@@ -12,7 +12,7 @@ namespace GorillaNetworking.Store
 	// Token: 0x02000C7C RID: 3196
 	public class BundleManager : MonoBehaviour
 	{
-		// Token: 0x06004F2E RID: 20270 RVA: 0x00179296 File Offset: 0x00177496
+		// Token: 0x06004F2F RID: 20271 RVA: 0x0017936E File Offset: 0x0017756E
 		private IEnumerable GetStoreBundles()
 		{
 			List<StoreBundleData> list = new List<StoreBundleData>();
@@ -21,7 +21,7 @@ namespace GorillaNetworking.Store
 			return list;
 		}
 
-		// Token: 0x06004F2F RID: 20271 RVA: 0x001792B5 File Offset: 0x001774B5
+		// Token: 0x06004F30 RID: 20272 RVA: 0x0017938D File Offset: 0x0017758D
 		public void Awake()
 		{
 			if (BundleManager.instance == null)
@@ -36,14 +36,14 @@ namespace GorillaNetworking.Store
 			}
 		}
 
-		// Token: 0x06004F30 RID: 20272 RVA: 0x001792EA File Offset: 0x001774EA
+		// Token: 0x06004F31 RID: 20273 RVA: 0x001793C2 File Offset: 0x001775C2
 		private void Start()
 		{
 			this.GenerateBundleDictionaries();
 			this.Initialize();
 		}
 
-		// Token: 0x06004F31 RID: 20273 RVA: 0x001792F8 File Offset: 0x001774F8
+		// Token: 0x06004F32 RID: 20274 RVA: 0x001793D0 File Offset: 0x001775D0
 		private void Initialize()
 		{
 			foreach (StoreBundle storeBundle in this._storeBundles)
@@ -52,7 +52,7 @@ namespace GorillaNetworking.Store
 			}
 		}
 
-		// Token: 0x06004F32 RID: 20274 RVA: 0x00179348 File Offset: 0x00177548
+		// Token: 0x06004F33 RID: 20275 RVA: 0x00179420 File Offset: 0x00177620
 		private void ValidateBundleData()
 		{
 			foreach (StoreBundle storeBundle in this._storeBundles)
@@ -61,7 +61,7 @@ namespace GorillaNetworking.Store
 			}
 		}
 
-		// Token: 0x06004F33 RID: 20275 RVA: 0x00179398 File Offset: 0x00177598
+		// Token: 0x06004F34 RID: 20276 RVA: 0x00179470 File Offset: 0x00177670
 		private void SpawnBundleStands()
 		{
 			foreach (StoreBundle storeBundle in this._storeBundles)
@@ -118,7 +118,7 @@ namespace GorillaNetworking.Store
 			}
 		}
 
-		// Token: 0x06004F34 RID: 20276 RVA: 0x001795AC File Offset: 0x001777AC
+		// Token: 0x06004F35 RID: 20277 RVA: 0x00179684 File Offset: 0x00177884
 		public void ClearEverything()
 		{
 			foreach (StoreBundle storeBundle in this._storeBundles)
@@ -148,12 +148,12 @@ namespace GorillaNetworking.Store
 			}
 		}
 
-		// Token: 0x06004F35 RID: 20277 RVA: 0x000023F4 File Offset: 0x000005F4
+		// Token: 0x06004F36 RID: 20278 RVA: 0x000023F4 File Offset: 0x000005F4
 		public void GenerateAllStoreBundleReferences()
 		{
 		}
 
-		// Token: 0x06004F36 RID: 20278 RVA: 0x001796E0 File Offset: 0x001778E0
+		// Token: 0x06004F37 RID: 20279 RVA: 0x001797B8 File Offset: 0x001779B8
 		private void AddNewBundleStand(BundleStand bundleStand)
 		{
 			foreach (StoreBundle storeBundle in this._storeBundles)
@@ -169,7 +169,7 @@ namespace GorillaNetworking.Store
 			this._storeBundles.Add(storeBundle2);
 		}
 
-		// Token: 0x06004F37 RID: 20279 RVA: 0x00179778 File Offset: 0x00177978
+		// Token: 0x06004F38 RID: 20280 RVA: 0x00179850 File Offset: 0x00177A50
 		public void GenerateBundleDictionaries()
 		{
 			this.storeBundlesById.Clear();
@@ -181,13 +181,13 @@ namespace GorillaNetworking.Store
 			}
 		}
 
-		// Token: 0x06004F38 RID: 20280 RVA: 0x00179800 File Offset: 0x00177A00
+		// Token: 0x06004F39 RID: 20281 RVA: 0x001798D8 File Offset: 0x00177AD8
 		public void BundlePurchaseButtonPressed(string playFabItemName)
 		{
 			CosmeticsController.instance.PurchaseBundle(this.storeBundlesById[playFabItemName]);
 		}
 
-		// Token: 0x06004F39 RID: 20281 RVA: 0x0017981C File Offset: 0x00177A1C
+		// Token: 0x06004F3A RID: 20282 RVA: 0x001798F4 File Offset: 0x00177AF4
 		public void FixBundles()
 		{
 			this._storeBundles.Clear();
@@ -223,13 +223,13 @@ namespace GorillaNetworking.Store
 			this.GenerateAllStoreBundleReferences();
 		}
 
-		// Token: 0x06004F3A RID: 20282 RVA: 0x00179947 File Offset: 0x00177B47
+		// Token: 0x06004F3B RID: 20283 RVA: 0x00179A1F File Offset: 0x00177C1F
 		public StoreBundleData[] GetTryOnButtons()
 		{
 			return new StoreBundleData[] { this.tryOnBundleButton1, this.tryOnBundleButton2, this.tryOnBundleButton3, this.tryOnBundleButton4, this.tryOnBundleButton5 };
 		}
 
-		// Token: 0x06004F3B RID: 20283 RVA: 0x0017997C File Offset: 0x00177B7C
+		// Token: 0x06004F3C RID: 20284 RVA: 0x00179A54 File Offset: 0x00177C54
 		public void NotifyBundleOfErrorByPlayFabID(string ItemId)
 		{
 			StoreBundle storeBundle;
@@ -242,7 +242,7 @@ namespace GorillaNetworking.Store
 			}
 		}
 
-		// Token: 0x06004F3C RID: 20284 RVA: 0x001799DC File Offset: 0x00177BDC
+		// Token: 0x06004F3D RID: 20285 RVA: 0x00179AB4 File Offset: 0x00177CB4
 		public void NotifyBundleOfErrorBySKU(string ItemSKU)
 		{
 			StoreBundle storeBundle;
@@ -255,7 +255,7 @@ namespace GorillaNetworking.Store
 			}
 		}
 
-		// Token: 0x06004F3D RID: 20285 RVA: 0x00179A3C File Offset: 0x00177C3C
+		// Token: 0x06004F3E RID: 20286 RVA: 0x00179B14 File Offset: 0x00177D14
 		public void MarkBundleOwnedByPlayFabID(string ItemId)
 		{
 			if (this.storeBundlesById.ContainsKey(ItemId))
@@ -268,7 +268,7 @@ namespace GorillaNetworking.Store
 			}
 		}
 
-		// Token: 0x06004F3E RID: 20286 RVA: 0x00179AB8 File Offset: 0x00177CB8
+		// Token: 0x06004F3F RID: 20287 RVA: 0x00179B90 File Offset: 0x00177D90
 		public void MarkBundleOwnedBySKU(string SKU)
 		{
 			if (this.storeBundlesBySKU.ContainsKey(SKU))
@@ -281,7 +281,7 @@ namespace GorillaNetworking.Store
 			}
 		}
 
-		// Token: 0x06004F3F RID: 20287 RVA: 0x00179B34 File Offset: 0x00177D34
+		// Token: 0x06004F40 RID: 20288 RVA: 0x00179C0C File Offset: 0x00177E0C
 		public void CheckIfBundlesOwned()
 		{
 			foreach (StoreBundle storeBundle in this.storeBundlesById.Values)
@@ -296,7 +296,7 @@ namespace GorillaNetworking.Store
 			}
 		}
 
-		// Token: 0x06004F40 RID: 20288 RVA: 0x00179BCC File Offset: 0x00177DCC
+		// Token: 0x06004F41 RID: 20289 RVA: 0x00179CA4 File Offset: 0x00177EA4
 		public void PressTryOnBundleButton(TryOnBundleButton pressedTryOnBundleButton, bool isLeftHand)
 		{
 			if (this._tryOnBundlesStand.IsNotNull())
@@ -305,13 +305,13 @@ namespace GorillaNetworking.Store
 			}
 		}
 
-		// Token: 0x06004F41 RID: 20289 RVA: 0x00179BE8 File Offset: 0x00177DE8
+		// Token: 0x06004F42 RID: 20290 RVA: 0x00179CC0 File Offset: 0x00177EC0
 		public void PressPurchaseTryOnBundleButton()
 		{
 			this._tryOnBundlesStand.PurchaseButtonPressed();
 		}
 
-		// Token: 0x06004F42 RID: 20290 RVA: 0x00179BF5 File Offset: 0x00177DF5
+		// Token: 0x06004F43 RID: 20291 RVA: 0x00179CCD File Offset: 0x00177ECD
 		public void UpdateBundlePrice(string productSku, string productFormattedPrice)
 		{
 			if (this.storeBundlesBySKU.ContainsKey(productSku))
@@ -320,7 +320,7 @@ namespace GorillaNetworking.Store
 			}
 		}
 
-		// Token: 0x06004F43 RID: 20291 RVA: 0x00179C18 File Offset: 0x00177E18
+		// Token: 0x06004F44 RID: 20292 RVA: 0x00179CF0 File Offset: 0x00177EF0
 		public void CheckForNoPriceBundlesAndDefaultPrice()
 		{
 			foreach (KeyValuePair<string, StoreBundle> keyValuePair in this.storeBundlesBySKU)
@@ -336,57 +336,57 @@ namespace GorillaNetworking.Store
 			}
 		}
 
-		// Token: 0x0400525A RID: 21082
+		// Token: 0x0400525B RID: 21083
 		public static volatile BundleManager instance;
 
-		// Token: 0x0400525B RID: 21083
+		// Token: 0x0400525C RID: 21084
 		[FormerlySerializedAs("_TryOnBundlesStand")]
 		public TryOnBundlesStand _tryOnBundlesStand;
 
-		// Token: 0x0400525C RID: 21084
+		// Token: 0x0400525D RID: 21085
 		[SerializeField]
 		private StoreBundleData nullBundleData;
 
-		// Token: 0x0400525D RID: 21085
+		// Token: 0x0400525E RID: 21086
 		private List<StoreBundleData> _bundleScriptableObjects = new List<StoreBundleData>();
 
-		// Token: 0x0400525E RID: 21086
+		// Token: 0x0400525F RID: 21087
 		[SerializeField]
 		private List<StoreBundle> _storeBundles = new List<StoreBundle>();
 
-		// Token: 0x0400525F RID: 21087
+		// Token: 0x04005260 RID: 21088
 		[FormerlySerializedAs("_SpawnedBundleStands")]
 		[SerializeField]
 		private List<SpawnedBundle> _spawnedBundleStands = new List<SpawnedBundle>();
 
-		// Token: 0x04005260 RID: 21088
+		// Token: 0x04005261 RID: 21089
 		public Dictionary<string, StoreBundle> storeBundlesById = new Dictionary<string, StoreBundle>();
 
-		// Token: 0x04005261 RID: 21089
+		// Token: 0x04005262 RID: 21090
 		public Dictionary<string, StoreBundle> storeBundlesBySKU = new Dictionary<string, StoreBundle>();
 
-		// Token: 0x04005262 RID: 21090
+		// Token: 0x04005263 RID: 21091
 		[Header("Enable Advanced Search window in your settings to easily see all bundle prefabs")]
 		[SerializeField]
 		private List<BundleManager.BundleStandSpawn> BundleStands = new List<BundleManager.BundleStandSpawn>();
 
-		// Token: 0x04005263 RID: 21091
+		// Token: 0x04005264 RID: 21092
 		[SerializeField]
 		private StoreBundleData tryOnBundleButton1;
 
-		// Token: 0x04005264 RID: 21092
+		// Token: 0x04005265 RID: 21093
 		[SerializeField]
 		private StoreBundleData tryOnBundleButton2;
 
-		// Token: 0x04005265 RID: 21093
+		// Token: 0x04005266 RID: 21094
 		[SerializeField]
 		private StoreBundleData tryOnBundleButton3;
 
-		// Token: 0x04005266 RID: 21094
+		// Token: 0x04005267 RID: 21095
 		[SerializeField]
 		private StoreBundleData tryOnBundleButton4;
 
-		// Token: 0x04005267 RID: 21095
+		// Token: 0x04005268 RID: 21096
 		[SerializeField]
 		private StoreBundleData tryOnBundleButton5;
 
@@ -394,7 +394,7 @@ namespace GorillaNetworking.Store
 		[Serializable]
 		public class BundleStandSpawn
 		{
-			// Token: 0x06004F45 RID: 20293 RVA: 0x00179CD9 File Offset: 0x00177ED9
+			// Token: 0x06004F46 RID: 20294 RVA: 0x00179DB1 File Offset: 0x00177FB1
 			private static IEnumerable GetEndCapSpawnPoints()
 			{
 				return from x in Object.FindObjectsOfType<EndCapSpawnPoint>()
@@ -408,10 +408,10 @@ namespace GorillaNetworking.Store
 					}), x);
 			}
 
-			// Token: 0x04005268 RID: 21096
+			// Token: 0x04005269 RID: 21097
 			public EndCapSpawnPoint spawnLocation;
 
-			// Token: 0x04005269 RID: 21097
+			// Token: 0x0400526A RID: 21098
 			public BundleStand bundleStand;
 		}
 	}

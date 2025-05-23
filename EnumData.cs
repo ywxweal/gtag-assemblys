@@ -5,10 +5,10 @@ using System.Collections.Generic;
 public class EnumData<TEnum> where TEnum : struct, Enum
 {
 	// Token: 0x170004AE RID: 1198
-	// (get) Token: 0x06002ED9 RID: 11993 RVA: 0x000EAC39 File Offset: 0x000E8E39
+	// (get) Token: 0x06002EDA RID: 11994 RVA: 0x000EACDD File Offset: 0x000E8EDD
 	public static EnumData<TEnum> Shared { get; } = new EnumData<TEnum>();
 
-	// Token: 0x06002EDA RID: 11994 RVA: 0x000EAC40 File Offset: 0x000E8E40
+	// Token: 0x06002EDB RID: 11995 RVA: 0x000EACE4 File Offset: 0x000E8EE4
 	private EnumData()
 	{
 		this.Names = Enum.GetNames(typeof(TEnum));
@@ -49,33 +49,33 @@ public class EnumData<TEnum> where TEnum : struct, Enum
 		this.IsBitMaskCompatible = flag;
 	}
 
-	// Token: 0x04003557 RID: 13655
+	// Token: 0x04003559 RID: 13657
 	public readonly string[] Names;
 
-	// Token: 0x04003558 RID: 13656
+	// Token: 0x0400355A RID: 13658
 	public readonly TEnum[] Values;
 
-	// Token: 0x04003559 RID: 13657
+	// Token: 0x0400355B RID: 13659
 	public readonly long[] LongValues;
 
-	// Token: 0x0400355A RID: 13658
+	// Token: 0x0400355C RID: 13660
 	public readonly bool IsBitMaskCompatible;
 
-	// Token: 0x0400355B RID: 13659
+	// Token: 0x0400355D RID: 13661
 	public readonly Dictionary<TEnum, string> EnumToName;
 
-	// Token: 0x0400355C RID: 13660
+	// Token: 0x0400355E RID: 13662
 	public readonly Dictionary<string, TEnum> NameToEnum;
 
-	// Token: 0x0400355D RID: 13661
+	// Token: 0x0400355F RID: 13663
 	public readonly Dictionary<TEnum, int> EnumToIndex;
 
-	// Token: 0x0400355E RID: 13662
+	// Token: 0x04003560 RID: 13664
 	public readonly Dictionary<int, TEnum> IndexToEnum;
 
-	// Token: 0x0400355F RID: 13663
+	// Token: 0x04003561 RID: 13665
 	public readonly Dictionary<TEnum, long> EnumToLong;
 
-	// Token: 0x04003560 RID: 13664
+	// Token: 0x04003562 RID: 13666
 	public readonly Dictionary<long, TEnum> LongToEnum;
 }

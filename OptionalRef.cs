@@ -6,8 +6,8 @@ using UnityEngine;
 public class OptionalRef<T> where T : Object
 {
 	// Token: 0x170004BA RID: 1210
-	// (get) Token: 0x06002F8E RID: 12174 RVA: 0x000ECE59 File Offset: 0x000EB059
-	// (set) Token: 0x06002F8F RID: 12175 RVA: 0x000ECE61 File Offset: 0x000EB061
+	// (get) Token: 0x06002F8F RID: 12175 RVA: 0x000ECEFD File Offset: 0x000EB0FD
+	// (set) Token: 0x06002F90 RID: 12176 RVA: 0x000ECF05 File Offset: 0x000EB105
 	public bool enabled
 	{
 		get
@@ -21,8 +21,8 @@ public class OptionalRef<T> where T : Object
 	}
 
 	// Token: 0x170004BB RID: 1211
-	// (get) Token: 0x06002F90 RID: 12176 RVA: 0x000ECE6C File Offset: 0x000EB06C
-	// (set) Token: 0x06002F91 RID: 12177 RVA: 0x000ECE94 File Offset: 0x000EB094
+	// (get) Token: 0x06002F91 RID: 12177 RVA: 0x000ECF10 File Offset: 0x000EB110
+	// (set) Token: 0x06002F92 RID: 12178 RVA: 0x000ECF38 File Offset: 0x000EB138
 	public T Value
 	{
 		get
@@ -39,7 +39,7 @@ public class OptionalRef<T> where T : Object
 		}
 	}
 
-	// Token: 0x06002F92 RID: 12178 RVA: 0x000ECEC0 File Offset: 0x000EB0C0
+	// Token: 0x06002F93 RID: 12179 RVA: 0x000ECF64 File Offset: 0x000EB164
 	public static implicit operator bool(OptionalRef<T> r)
 	{
 		if (r == null)
@@ -54,7 +54,7 @@ public class OptionalRef<T> where T : Object
 		return @object != null && @object;
 	}
 
-	// Token: 0x06002F93 RID: 12179 RVA: 0x000ECEF4 File Offset: 0x000EB0F4
+	// Token: 0x06002F94 RID: 12180 RVA: 0x000ECF98 File Offset: 0x000EB198
 	public static implicit operator T(OptionalRef<T> r)
 	{
 		if (r == null)
@@ -77,7 +77,7 @@ public class OptionalRef<T> where T : Object
 		return @object as T;
 	}
 
-	// Token: 0x06002F94 RID: 12180 RVA: 0x000ECF58 File Offset: 0x000EB158
+	// Token: 0x06002F95 RID: 12181 RVA: 0x000ECFFC File Offset: 0x000EB1FC
 	public static implicit operator Object(OptionalRef<T> r)
 	{
 		if (r == null)
@@ -100,11 +100,11 @@ public class OptionalRef<T> where T : Object
 		return @object;
 	}
 
-	// Token: 0x04003618 RID: 13848
+	// Token: 0x0400361A RID: 13850
 	[SerializeField]
 	private bool _enabled;
 
-	// Token: 0x04003619 RID: 13849
+	// Token: 0x0400361B RID: 13851
 	[SerializeField]
 	private T _target;
 }

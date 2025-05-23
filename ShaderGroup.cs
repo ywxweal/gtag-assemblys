@@ -5,7 +5,7 @@ using UnityEngine;
 [Serializable]
 public struct ShaderGroup
 {
-	// Token: 0x06003DEA RID: 15850 RVA: 0x00126038 File Offset: 0x00124238
+	// Token: 0x06003DEB RID: 15851 RVA: 0x00126110 File Offset: 0x00124310
 	public ShaderGroup(Material material, Shader original, Shader gameplay, Shader baking)
 	{
 		this.material = material;
@@ -14,15 +14,15 @@ public struct ShaderGroup
 		this.bakingShader = baking;
 	}
 
-	// Token: 0x04004256 RID: 16982
+	// Token: 0x04004257 RID: 16983
 	public Material material;
 
-	// Token: 0x04004257 RID: 16983
+	// Token: 0x04004258 RID: 16984
 	public Shader originalShader;
 
-	// Token: 0x04004258 RID: 16984
+	// Token: 0x04004259 RID: 16985
 	public Shader gameplayShader;
 
-	// Token: 0x04004259 RID: 16985
+	// Token: 0x0400425A RID: 16986
 	public Shader bakingShader;
 }

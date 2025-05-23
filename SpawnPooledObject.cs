@@ -6,7 +6,7 @@ using UnityEngine.Serialization;
 // Token: 0x020006B1 RID: 1713
 public class SpawnPooledObject : MonoBehaviour
 {
-	// Token: 0x06002AC8 RID: 10952 RVA: 0x000D221E File Offset: 0x000D041E
+	// Token: 0x06002AC9 RID: 10953 RVA: 0x000D22C2 File Offset: 0x000D04C2
 	private void Awake()
 	{
 		if (this._pooledObject == null)
@@ -16,7 +16,7 @@ public class SpawnPooledObject : MonoBehaviour
 		this._pooledObjectHash = PoolUtils.GameObjHashCode(this._pooledObject);
 	}
 
-	// Token: 0x06002AC9 RID: 10953 RVA: 0x000D2240 File Offset: 0x000D0440
+	// Token: 0x06002ACA RID: 10954 RVA: 0x000D22E4 File Offset: 0x000D04E4
 	public void SpawnObject()
 	{
 		if (!this.ShouldSpawn())
@@ -33,13 +33,13 @@ public class SpawnPooledObject : MonoBehaviour
 		gameObject.transform.localScale = base.transform.lossyScale;
 	}
 
-	// Token: 0x06002ACA RID: 10954 RVA: 0x000D22BB File Offset: 0x000D04BB
+	// Token: 0x06002ACB RID: 10955 RVA: 0x000D235F File Offset: 0x000D055F
 	private Vector3 SpawnLocation()
 	{
 		return this._spawnLocation.transform.position + this.offset;
 	}
 
-	// Token: 0x06002ACB RID: 10955 RVA: 0x000D22D8 File Offset: 0x000D04D8
+	// Token: 0x06002ACC RID: 10956 RVA: 0x000D237C File Offset: 0x000D057C
 	private Quaternion SpawnRotation()
 	{
 		Quaternion quaternion = this._spawnLocation.transform.rotation;
@@ -54,37 +54,37 @@ public class SpawnPooledObject : MonoBehaviour
 		return quaternion;
 	}
 
-	// Token: 0x06002ACC RID: 10956 RVA: 0x000D2358 File Offset: 0x000D0558
+	// Token: 0x06002ACD RID: 10957 RVA: 0x000D23FC File Offset: 0x000D05FC
 	private bool ShouldSpawn()
 	{
 		return Random.Range(0, 100) < this.chanceToSpawn;
 	}
 
-	// Token: 0x04002FA9 RID: 12201
+	// Token: 0x04002FAB RID: 12203
 	[SerializeField]
 	private Transform _spawnLocation;
 
-	// Token: 0x04002FAA RID: 12202
+	// Token: 0x04002FAC RID: 12204
 	[SerializeField]
 	private GameObject _pooledObject;
 
-	// Token: 0x04002FAB RID: 12203
+	// Token: 0x04002FAD RID: 12205
 	[FormerlySerializedAs("_offset")]
 	public Vector3 offset;
 
-	// Token: 0x04002FAC RID: 12204
+	// Token: 0x04002FAE RID: 12206
 	[FormerlySerializedAs("_upright")]
 	public bool upright;
 
-	// Token: 0x04002FAD RID: 12205
+	// Token: 0x04002FAF RID: 12207
 	[FormerlySerializedAs("_facePlayer")]
 	public bool facePlayer;
 
-	// Token: 0x04002FAE RID: 12206
+	// Token: 0x04002FB0 RID: 12208
 	[FormerlySerializedAs("_chanceToSpawn")]
 	[Range(0f, 100f)]
 	public int chanceToSpawn = 100;
 
-	// Token: 0x04002FAF RID: 12207
+	// Token: 0x04002FB1 RID: 12209
 	private int _pooledObjectHash;
 }

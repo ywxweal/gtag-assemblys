@@ -8,7 +8,7 @@ using UnityEngine.Serialization;
 // Token: 0x02000403 RID: 1027
 public class GeodeItem : TransferrableObject
 {
-	// Token: 0x060018D9 RID: 6361 RVA: 0x00078939 File Offset: 0x00076B39
+	// Token: 0x060018D9 RID: 6361 RVA: 0x00078959 File Offset: 0x00076B59
 	public override void OnSpawn(VRRig rig)
 	{
 		base.OnSpawn(rig);
@@ -16,7 +16,7 @@ public class GeodeItem : TransferrableObject
 		this.effectsHaveBeenPlayed = false;
 	}
 
-	// Token: 0x060018DA RID: 6362 RVA: 0x0007895B File Offset: 0x00076B5B
+	// Token: 0x060018DA RID: 6362 RVA: 0x0007897B File Offset: 0x00076B7B
 	protected override void Start()
 	{
 		base.Start();
@@ -25,7 +25,7 @@ public class GeodeItem : TransferrableObject
 		this.InitToDefault();
 	}
 
-	// Token: 0x060018DB RID: 6363 RVA: 0x00078977 File Offset: 0x00076B77
+	// Token: 0x060018DB RID: 6363 RVA: 0x00078997 File Offset: 0x00076B97
 	public override void ResetToDefaultState()
 	{
 		base.ResetToDefaultState();
@@ -33,13 +33,13 @@ public class GeodeItem : TransferrableObject
 		this.itemState = TransferrableObject.ItemStates.State0;
 	}
 
-	// Token: 0x060018DC RID: 6364 RVA: 0x0007898C File Offset: 0x00076B8C
+	// Token: 0x060018DC RID: 6364 RVA: 0x000789AC File Offset: 0x00076BAC
 	public override bool OnRelease(DropZone zoneReleased, GameObject releasingHand)
 	{
 		return base.OnRelease(zoneReleased, releasingHand) && this.itemState != TransferrableObject.ItemStates.State0 && !base.InHand();
 	}
 
-	// Token: 0x060018DD RID: 6365 RVA: 0x000789B0 File Offset: 0x00076BB0
+	// Token: 0x060018DD RID: 6365 RVA: 0x000789D0 File Offset: 0x00076BD0
 	public override void OnGrab(InteractionPoint pointGrabbed, GameObject grabbingHand)
 	{
 		base.OnGrab(pointGrabbed, grabbingHand);
@@ -51,7 +51,7 @@ public class GeodeItem : TransferrableObject
 		onGeodeGrabbed.Invoke(this);
 	}
 
-	// Token: 0x060018DE RID: 6366 RVA: 0x000789CC File Offset: 0x00076BCC
+	// Token: 0x060018DE RID: 6366 RVA: 0x000789EC File Offset: 0x00076BEC
 	private void InitToDefault()
 	{
 		this.cooldownRemaining = 0f;
@@ -68,7 +68,7 @@ public class GeodeItem : TransferrableObject
 		this.hitLastFrame = false;
 	}
 
-	// Token: 0x060018DF RID: 6367 RVA: 0x00078A34 File Offset: 0x00076C34
+	// Token: 0x060018DF RID: 6367 RVA: 0x00078A54 File Offset: 0x00076C54
 	protected override void LateUpdateLocal()
 	{
 		base.LateUpdateLocal();
@@ -109,7 +109,7 @@ public class GeodeItem : TransferrableObject
 		this.index = (this.randomizeGeode ? this.RandomPickCrackedGeode() : 0);
 	}
 
-	// Token: 0x060018E0 RID: 6368 RVA: 0x00078B5C File Offset: 0x00076D5C
+	// Token: 0x060018E0 RID: 6368 RVA: 0x00078B7C File Offset: 0x00076D7C
 	protected override void LateUpdateShared()
 	{
 		base.LateUpdateShared();
@@ -121,7 +121,7 @@ public class GeodeItem : TransferrableObject
 		this.prevItemState = this.currentItemState;
 	}
 
-	// Token: 0x060018E1 RID: 6369 RVA: 0x00078B90 File Offset: 0x00076D90
+	// Token: 0x060018E1 RID: 6369 RVA: 0x00078BB0 File Offset: 0x00076DB0
 	private void OnItemStateChanged()
 	{
 		if (this.itemState == TransferrableObject.ItemStates.State0)
@@ -150,7 +150,7 @@ public class GeodeItem : TransferrableObject
 		}
 	}
 
-	// Token: 0x060018E2 RID: 6370 RVA: 0x00078C89 File Offset: 0x00076E89
+	// Token: 0x060018E2 RID: 6370 RVA: 0x00078CA9 File Offset: 0x00076EA9
 	private int RandomPickCrackedGeode()
 	{
 		return Random.Range(0, this.geodeCrackedMeshes.Length);

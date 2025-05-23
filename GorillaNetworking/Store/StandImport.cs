@@ -7,7 +7,7 @@ namespace GorillaNetworking.Store
 	// Token: 0x02000C8B RID: 3211
 	public class StandImport
 	{
-		// Token: 0x06004FA7 RID: 20391 RVA: 0x0017BCDC File Offset: 0x00179EDC
+		// Token: 0x06004FA8 RID: 20392 RVA: 0x0017BDB4 File Offset: 0x00179FB4
 		public void DecomposeStandData(string dataString)
 		{
 			string[] array = dataString.Split('\t', StringSplitOptions.None);
@@ -29,7 +29,7 @@ namespace GorillaNetworking.Store
 			Debug.LogError("Store Importer Data String is not valid : " + text);
 		}
 
-		// Token: 0x040052B4 RID: 21172
+		// Token: 0x040052B5 RID: 21173
 		public List<StandTypeData> standData = new List<StandTypeData>();
 	}
 }

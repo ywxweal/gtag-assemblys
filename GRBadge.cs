@@ -6,13 +6,13 @@ using UnityEngine;
 // Token: 0x02000590 RID: 1424
 public class GRBadge : MonoBehaviour
 {
-	// Token: 0x060022E6 RID: 8934 RVA: 0x000AEDD5 File Offset: 0x000ACFD5
+	// Token: 0x060022E6 RID: 8934 RVA: 0x000AEDF5 File Offset: 0x000ACFF5
 	private void OnDestroy()
 	{
 		GhostReactor.instance.employeeBadges.RemoveBadge(this);
 	}
 
-	// Token: 0x060022E7 RID: 8935 RVA: 0x000AEDE8 File Offset: 0x000ACFE8
+	// Token: 0x060022E7 RID: 8935 RVA: 0x000AEE08 File Offset: 0x000AD008
 	public void Setup(NetPlayer player, int index)
 	{
 		this.playerName.text = player.SanitizedNickName;
@@ -27,21 +27,21 @@ public class GRBadge : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060022E8 RID: 8936 RVA: 0x000AEE6B File Offset: 0x000AD06B
+	// Token: 0x060022E8 RID: 8936 RVA: 0x000AEE8B File Offset: 0x000AD08B
 	public void Hide()
 	{
 		this.badgeMesh.enabled = false;
 		this.playerName.gameObject.SetActive(false);
 	}
 
-	// Token: 0x060022E9 RID: 8937 RVA: 0x000AEE8A File Offset: 0x000AD08A
+	// Token: 0x060022E9 RID: 8937 RVA: 0x000AEEAA File Offset: 0x000AD0AA
 	public void UnHide()
 	{
 		this.badgeMesh.enabled = true;
 		this.playerName.gameObject.SetActive(true);
 	}
 
-	// Token: 0x060022EA RID: 8938 RVA: 0x000AEEAC File Offset: 0x000AD0AC
+	// Token: 0x060022EA RID: 8938 RVA: 0x000AEECC File Offset: 0x000AD0CC
 	public void StartRetracting()
 	{
 		GameEntityManager.instance.RequestState(this.gameEntity.id, 1L);
@@ -53,7 +53,7 @@ public class GRBadge : MonoBehaviour
 		this.retractCoroutine = base.StartCoroutine(this.RetractCoroutine());
 	}
 
-	// Token: 0x060022EB RID: 8939 RVA: 0x000AEEFE File Offset: 0x000AD0FE
+	// Token: 0x060022EB RID: 8939 RVA: 0x000AEF1E File Offset: 0x000AD11E
 	private IEnumerator RetractCoroutine()
 	{
 		base.transform.localRotation = Quaternion.identity;
@@ -69,7 +69,7 @@ public class GRBadge : MonoBehaviour
 		yield break;
 	}
 
-	// Token: 0x060022EC RID: 8940 RVA: 0x000AEF0D File Offset: 0x000AD10D
+	// Token: 0x060022EC RID: 8940 RVA: 0x000AEF2D File Offset: 0x000AD12D
 	private void PlayAttachFx()
 	{
 		if (this.audioSource != null)

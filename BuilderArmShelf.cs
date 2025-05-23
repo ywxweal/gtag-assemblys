@@ -5,25 +5,25 @@ using UnityEngine;
 // Token: 0x020004DF RID: 1247
 public class BuilderArmShelf : MonoBehaviour
 {
-	// Token: 0x06001E16 RID: 7702 RVA: 0x00092410 File Offset: 0x00090610
+	// Token: 0x06001E16 RID: 7702 RVA: 0x00092430 File Offset: 0x00090630
 	private void Start()
 	{
 		this.ownerRig = base.GetComponentInParent<VRRig>();
 	}
 
-	// Token: 0x06001E17 RID: 7703 RVA: 0x0009241E File Offset: 0x0009061E
+	// Token: 0x06001E17 RID: 7703 RVA: 0x0009243E File Offset: 0x0009063E
 	public bool IsOwnedLocally()
 	{
 		return this.ownerRig != null && this.ownerRig.isLocal;
 	}
 
-	// Token: 0x06001E18 RID: 7704 RVA: 0x0009243B File Offset: 0x0009063B
+	// Token: 0x06001E18 RID: 7704 RVA: 0x0009245B File Offset: 0x0009065B
 	public bool CanAttachToArmPiece()
 	{
 		return this.ownerRig != null && this.ownerRig.scaleFactor >= 1f;
 	}
 
-	// Token: 0x06001E19 RID: 7705 RVA: 0x00092464 File Offset: 0x00090664
+	// Token: 0x06001E19 RID: 7705 RVA: 0x00092484 File Offset: 0x00090684
 	public void DropAttachedPieces()
 	{
 		if (this.ownerRig != null && this.piece != null)

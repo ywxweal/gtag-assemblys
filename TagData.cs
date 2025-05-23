@@ -10,7 +10,7 @@ using UnityEngine;
 public struct TagData : INetworkStruct
 {
 	// Token: 0x17000318 RID: 792
-	// (get) Token: 0x06001C70 RID: 7280 RVA: 0x0008B0F8 File Offset: 0x000892F8
+	// (get) Token: 0x06001C70 RID: 7280 RVA: 0x0008B118 File Offset: 0x00089318
 	[Networked]
 	[Capacity(10)]
 	public NetworkArray<int> infectedPlayerList
@@ -22,8 +22,8 @@ public struct TagData : INetworkStruct
 	}
 
 	// Token: 0x17000319 RID: 793
-	// (get) Token: 0x06001C71 RID: 7281 RVA: 0x0008B11F File Offset: 0x0008931F
-	// (set) Token: 0x06001C72 RID: 7282 RVA: 0x0008B127 File Offset: 0x00089327
+	// (get) Token: 0x06001C71 RID: 7281 RVA: 0x0008B13F File Offset: 0x0008933F
+	// (set) Token: 0x06001C72 RID: 7282 RVA: 0x0008B147 File Offset: 0x00089347
 	public int currentItID { readonly get; set; }
 
 	// Token: 0x04001F89 RID: 8073

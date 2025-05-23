@@ -7,26 +7,26 @@ using UnityEngine.XR;
 // Token: 0x020005C2 RID: 1474
 public class GRToolCollector : MonoBehaviour
 {
-	// Token: 0x060023E5 RID: 9189 RVA: 0x000B4981 File Offset: 0x000B2B81
+	// Token: 0x060023E5 RID: 9189 RVA: 0x000B49A1 File Offset: 0x000B2BA1
 	private void Awake()
 	{
 		this.state = GRToolCollector.State.Idle;
 		this.stateTimeRemaining = -1f;
 	}
 
-	// Token: 0x060023E6 RID: 9190 RVA: 0x000B4995 File Offset: 0x000B2B95
+	// Token: 0x060023E6 RID: 9190 RVA: 0x000B49B5 File Offset: 0x000B2BB5
 	private void OnEnable()
 	{
 		this.SetState(GRToolCollector.State.Idle);
 	}
 
-	// Token: 0x060023E7 RID: 9191 RVA: 0x000B499E File Offset: 0x000B2B9E
+	// Token: 0x060023E7 RID: 9191 RVA: 0x000B49BE File Offset: 0x000B2BBE
 	private bool IsHeldLocal()
 	{
 		return this.gameEntity.heldByActorNumber == PhotonNetwork.LocalPlayer.ActorNumber;
 	}
 
-	// Token: 0x060023E8 RID: 9192 RVA: 0x000B49B7 File Offset: 0x000B2BB7
+	// Token: 0x060023E8 RID: 9192 RVA: 0x000B49D7 File Offset: 0x000B2BD7
 	public void OnUpdate(float dt)
 	{
 		if (this.IsHeldLocal() || this.activatedLocally)
@@ -37,7 +37,7 @@ public class GRToolCollector : MonoBehaviour
 		this.OnUpdateRemote(dt);
 	}
 
-	// Token: 0x060023E9 RID: 9193 RVA: 0x000B49D8 File Offset: 0x000B2BD8
+	// Token: 0x060023E9 RID: 9193 RVA: 0x000B49F8 File Offset: 0x000B2BF8
 	public void Update()
 	{
 		float deltaTime = Time.deltaTime;
@@ -49,7 +49,7 @@ public class GRToolCollector : MonoBehaviour
 		this.OnUpdateRemote(deltaTime);
 	}
 
-	// Token: 0x060023EA RID: 9194 RVA: 0x000B4A0C File Offset: 0x000B2C0C
+	// Token: 0x060023EA RID: 9194 RVA: 0x000B4A2C File Offset: 0x000B2C2C
 	private void OnUpdateAuthority(float dt)
 	{
 		switch (this.state)
@@ -105,7 +105,7 @@ public class GRToolCollector : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060023EB RID: 9195 RVA: 0x000B4AFC File Offset: 0x000B2CFC
+	// Token: 0x060023EB RID: 9195 RVA: 0x000B4B1C File Offset: 0x000B2D1C
 	private void OnUpdateRemote(float dt)
 	{
 		GRToolCollector.State state = (GRToolCollector.State)this.gameEntity.GetState();
@@ -115,14 +115,14 @@ public class GRToolCollector : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060023EC RID: 9196 RVA: 0x000B4B26 File Offset: 0x000B2D26
+	// Token: 0x060023EC RID: 9196 RVA: 0x000B4B46 File Offset: 0x000B2D46
 	private void SetStateAuthority(GRToolCollector.State newState)
 	{
 		this.SetState(newState);
 		GameEntityManager.instance.RequestState(this.gameEntity.id, (long)newState);
 	}
 
-	// Token: 0x060023ED RID: 9197 RVA: 0x000B4B48 File Offset: 0x000B2D48
+	// Token: 0x060023ED RID: 9197 RVA: 0x000B4B68 File Offset: 0x000B2D68
 	private void SetState(GRToolCollector.State newState)
 	{
 		this.state = newState;
@@ -148,7 +148,7 @@ public class GRToolCollector : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060023EE RID: 9198 RVA: 0x000B4BC0 File Offset: 0x000B2DC0
+	// Token: 0x060023EE RID: 9198 RVA: 0x000B4BE0 File Offset: 0x000B2DE0
 	private void StartVacuum()
 	{
 		this.vacuumAudioSource.clip = this.vacuumSound;
@@ -162,7 +162,7 @@ public class GRToolCollector : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060023EF RID: 9199 RVA: 0x000B4C2F File Offset: 0x000B2E2F
+	// Token: 0x060023EF RID: 9199 RVA: 0x000B4C4F File Offset: 0x000B2E4F
 	private void StopVacuum()
 	{
 		this.vacuumAudioSource.loop = false;
@@ -170,7 +170,7 @@ public class GRToolCollector : MonoBehaviour
 		this.vacuumParticleEffect.Stop();
 	}
 
-	// Token: 0x060023F0 RID: 9200 RVA: 0x000B4C54 File Offset: 0x000B2E54
+	// Token: 0x060023F0 RID: 9200 RVA: 0x000B4C74 File Offset: 0x000B2E74
 	private void TryCollect()
 	{
 		if (this.IsHeldLocal())
@@ -224,7 +224,7 @@ public class GRToolCollector : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060023F1 RID: 9201 RVA: 0x000B4DDC File Offset: 0x000B2FDC
+	// Token: 0x060023F1 RID: 9201 RVA: 0x000B4DFC File Offset: 0x000B2FFC
 	public void PerformCollection(GRCollectible collectible)
 	{
 		this.tool.RefillEnergy(collectible.energyValue);
@@ -232,7 +232,7 @@ public class GRToolCollector : MonoBehaviour
 		this.collectAudioSource.PlayOneShot(this.collectSound);
 	}
 
-	// Token: 0x060023F2 RID: 9202 RVA: 0x000B4E14 File Offset: 0x000B3014
+	// Token: 0x060023F2 RID: 9202 RVA: 0x000B4E34 File Offset: 0x000B3034
 	public void PlayChargeEffect(GRTool targetTool)
 	{
 		if (targetTool == null)
@@ -254,7 +254,7 @@ public class GRToolCollector : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060023F3 RID: 9203 RVA: 0x000B4EE8 File Offset: 0x000B30E8
+	// Token: 0x060023F3 RID: 9203 RVA: 0x000B4F08 File Offset: 0x000B3108
 	public void PlayChargeEffect(GRCurrencyDepositor targetDepositor)
 	{
 		if (targetDepositor == null)
@@ -266,7 +266,7 @@ public class GRToolCollector : MonoBehaviour
 		this.lightningDispatcher.DispatchLightning(this.lightningDispatcher.transform.position, targetDepositor.depositingChargePoint.position);
 	}
 
-	// Token: 0x060023F4 RID: 9204 RVA: 0x000B4F48 File Offset: 0x000B3148
+	// Token: 0x060023F4 RID: 9204 RVA: 0x000B4F68 File Offset: 0x000B3168
 	private bool IsButtonHeld()
 	{
 		if (!this.IsHeldLocal())
@@ -282,7 +282,7 @@ public class GRToolCollector : MonoBehaviour
 		return num != -1 && ControllerInputPoller.TriggerFloat(GamePlayer.IsLeftHand(num) ? XRNode.LeftHand : XRNode.RightHand) > 0.25f;
 	}
 
-	// Token: 0x060023F5 RID: 9205 RVA: 0x000B4FAC File Offset: 0x000B31AC
+	// Token: 0x060023F5 RID: 9205 RVA: 0x000B4FCC File Offset: 0x000B31CC
 	private void PlayVibration(float strength, float duration)
 	{
 		if (!this.IsHeldLocal())

@@ -12,7 +12,7 @@ using UnityEngine;
 public class MonkeBallGame : NetworkComponent
 {
 	// Token: 0x17000323 RID: 803
-	// (get) Token: 0x06001D6A RID: 7530 RVA: 0x0008EE42 File Offset: 0x0008D042
+	// (get) Token: 0x06001D6A RID: 7530 RVA: 0x0008EE62 File Offset: 0x0008D062
 	public Transform BallLauncher
 	{
 		get
@@ -21,7 +21,7 @@ public class MonkeBallGame : NetworkComponent
 		}
 	}
 
-	// Token: 0x06001D6B RID: 7531 RVA: 0x0008EE4C File Offset: 0x0008D04C
+	// Token: 0x06001D6B RID: 7531 RVA: 0x0008EE6C File Offset: 0x0008D06C
 	protected override void Awake()
 	{
 		base.Awake();
@@ -39,7 +39,7 @@ public class MonkeBallGame : NetworkComponent
 		this.AssignNetworkListeners();
 	}
 
-	// Token: 0x06001D6C RID: 7532 RVA: 0x0008EF48 File Offset: 0x0008D148
+	// Token: 0x06001D6C RID: 7532 RVA: 0x0008EF68 File Offset: 0x0008D168
 	private bool ValidateCallLimits(MonkeBallGame.RPC rpcCall, PhotonMessageInfo info)
 	{
 		if (rpcCall < MonkeBallGame.RPC.SetGameState || rpcCall >= MonkeBallGame.RPC.Count)
@@ -54,13 +54,13 @@ public class MonkeBallGame : NetworkComponent
 		return flag;
 	}
 
-	// Token: 0x06001D6D RID: 7533 RVA: 0x0008EF83 File Offset: 0x0008D183
+	// Token: 0x06001D6D RID: 7533 RVA: 0x0008EFA3 File Offset: 0x0008D1A3
 	private void ReportRPCCall(MonkeBallGame.RPC rpcCall, PhotonMessageInfo info, string susReason)
 	{
 		GorillaNot.instance.SendReport(string.Format("Reason: {0}   RPC: {1}", susReason, rpcCall), info.Sender.UserId, info.Sender.NickName);
 	}
 
-	// Token: 0x06001D6E RID: 7534 RVA: 0x0008EFB8 File Offset: 0x0008D1B8
+	// Token: 0x06001D6E RID: 7534 RVA: 0x0008EFD8 File Offset: 0x0008D1D8
 	protected override void Start()
 	{
 		base.Start();
@@ -75,14 +75,14 @@ public class MonkeBallGame : NetworkComponent
 		this.gameEndTime = -1.0;
 	}
 
-	// Token: 0x06001D6F RID: 7535 RVA: 0x0008F036 File Offset: 0x0008D236
+	// Token: 0x06001D6F RID: 7535 RVA: 0x0008F056 File Offset: 0x0008D256
 	public override void Despawned(NetworkRunner runner, bool hasState)
 	{
 		base.Despawned(runner, hasState);
 		this.UnassignNetworkListeners();
 	}
 
-	// Token: 0x06001D70 RID: 7536 RVA: 0x0008F048 File Offset: 0x0008D248
+	// Token: 0x06001D70 RID: 7536 RVA: 0x0008F068 File Offset: 0x0008D268
 	public void OnPlayerDestroy()
 	{
 		if (this._setStoredLocalPlayerColor)
@@ -94,7 +94,7 @@ public class MonkeBallGame : NetworkComponent
 		}
 	}
 
-	// Token: 0x06001D71 RID: 7537 RVA: 0x0008F0A4 File Offset: 0x0008D2A4
+	// Token: 0x06001D71 RID: 7537 RVA: 0x0008F0C4 File Offset: 0x0008D2C4
 	private void AssignNetworkListeners()
 	{
 		NetworkSystem.Instance.OnPlayerJoined += this.OnPlayerJoined;
@@ -102,7 +102,7 @@ public class MonkeBallGame : NetworkComponent
 		NetworkSystem.Instance.OnMasterClientSwitchedEvent += this.OnMasterClientSwitched;
 	}
 
-	// Token: 0x06001D72 RID: 7538 RVA: 0x0008F0F4 File Offset: 0x0008D2F4
+	// Token: 0x06001D72 RID: 7538 RVA: 0x0008F114 File Offset: 0x0008D314
 	private void UnassignNetworkListeners()
 	{
 		NetworkSystem.Instance.OnPlayerJoined -= this.OnPlayerJoined;
@@ -110,7 +110,7 @@ public class MonkeBallGame : NetworkComponent
 		NetworkSystem.Instance.OnMasterClientSwitchedEvent -= this.OnMasterClientSwitched;
 	}
 
-	// Token: 0x06001D73 RID: 7539 RVA: 0x0008F144 File Offset: 0x0008D344
+	// Token: 0x06001D73 RID: 7539 RVA: 0x0008F164 File Offset: 0x0008D364
 	private void Update()
 	{
 		if (this.IsMasterClient() && this.gameState != MonkeBallGame.GameState.None && this.gameEndTime >= 0.0 && PhotonNetwork.Time > this.gameEndTime)
@@ -140,7 +140,7 @@ public class MonkeBallGame : NetworkComponent
 		}
 	}
 
-	// Token: 0x06001D74 RID: 7540 RVA: 0x0008F20C File Offset: 0x0008D40C
+	// Token: 0x06001D74 RID: 7540 RVA: 0x0008F22C File Offset: 0x0008D42C
 	private void OnPlayerJoined(NetPlayer player)
 	{
 		this._forceSync = true;
@@ -167,7 +167,7 @@ public class MonkeBallGame : NetworkComponent
 		});
 	}
 
-	// Token: 0x06001D75 RID: 7541 RVA: 0x0008F294 File Offset: 0x0008D494
+	// Token: 0x06001D75 RID: 7541 RVA: 0x0008F2B4 File Offset: 0x0008D4B4
 	private void OnPlayerLeft(NetPlayer player)
 	{
 		this._forceSync = true;
@@ -188,7 +188,7 @@ public class MonkeBallGame : NetworkComponent
 		});
 	}
 
-	// Token: 0x06001D76 RID: 7542 RVA: 0x0008F300 File Offset: 0x0008D500
+	// Token: 0x06001D76 RID: 7542 RVA: 0x0008F320 File Offset: 0x0008D520
 	private void OnMasterClientSwitched(NetPlayer player)
 	{
 		if (!NetworkSystem.Instance.IsMasterClient)
@@ -213,7 +213,7 @@ public class MonkeBallGame : NetworkComponent
 		});
 	}
 
-	// Token: 0x06001D77 RID: 7543 RVA: 0x0008F374 File Offset: 0x0008D574
+	// Token: 0x06001D77 RID: 7543 RVA: 0x0008F394 File Offset: 0x0008D594
 	private void GetCurrentGameState(out int[] playerIds, out int[] playerTeams, out int[] scores, out long[] packedBallPosRot, out long[] packedBallVel)
 	{
 		NetPlayer[] allNetPlayers = NetworkSystem.Instance.AllNetPlayers;
@@ -252,13 +252,13 @@ public class MonkeBallGame : NetworkComponent
 		return PhotonNetwork.IsMasterClient;
 	}
 
-	// Token: 0x06001D79 RID: 7545 RVA: 0x0008F4BA File Offset: 0x0008D6BA
+	// Token: 0x06001D79 RID: 7545 RVA: 0x0008F4DA File Offset: 0x0008D6DA
 	public MonkeBallGame.GameState GetGameState()
 	{
 		return this.gameState;
 	}
 
-	// Token: 0x06001D7A RID: 7546 RVA: 0x0008F4C2 File Offset: 0x0008D6C2
+	// Token: 0x06001D7A RID: 7546 RVA: 0x0008F4E2 File Offset: 0x0008D6E2
 	public void RequestGameState(MonkeBallGame.GameState newGameState)
 	{
 		if (!this.IsMasterClient())
@@ -268,7 +268,7 @@ public class MonkeBallGame : NetworkComponent
 		this.photonView.RPC("SetGameStateRPC", RpcTarget.All, new object[] { (int)newGameState });
 	}
 
-	// Token: 0x06001D7B RID: 7547 RVA: 0x0008F4F0 File Offset: 0x0008D6F0
+	// Token: 0x06001D7B RID: 7547 RVA: 0x0008F510 File Offset: 0x0008D710
 	[PunRPC]
 	private void SetGameStateRPC(int newGameState, PhotonMessageInfo info)
 	{
@@ -293,7 +293,7 @@ public class MonkeBallGame : NetworkComponent
 		}
 	}
 
-	// Token: 0x06001D7C RID: 7548 RVA: 0x0008F558 File Offset: 0x0008D758
+	// Token: 0x06001D7C RID: 7548 RVA: 0x0008F578 File Offset: 0x0008D778
 	private void SetGameState(MonkeBallGame.GameState newGameState)
 	{
 		this.gameState = newGameState;
@@ -316,7 +316,7 @@ public class MonkeBallGame : NetworkComponent
 		}
 	}
 
-	// Token: 0x06001D7D RID: 7549 RVA: 0x0008F5A8 File Offset: 0x0008D7A8
+	// Token: 0x06001D7D RID: 7549 RVA: 0x0008F5C8 File Offset: 0x0008D7C8
 	private void OnEnterStatePreGame()
 	{
 		for (int i = 0; i < this.scoreboards.Count; i++)
@@ -325,7 +325,7 @@ public class MonkeBallGame : NetworkComponent
 		}
 	}
 
-	// Token: 0x06001D7E RID: 7550 RVA: 0x0008F5DC File Offset: 0x0008D7DC
+	// Token: 0x06001D7E RID: 7550 RVA: 0x0008F5FC File Offset: 0x0008D7FC
 	private void OnEnterStatePlaying()
 	{
 		this._forceSync = true;
@@ -337,7 +337,7 @@ public class MonkeBallGame : NetworkComponent
 	{
 	}
 
-	// Token: 0x06001D80 RID: 7552 RVA: 0x0008F5F0 File Offset: 0x0008D7F0
+	// Token: 0x06001D80 RID: 7552 RVA: 0x0008F610 File Offset: 0x0008D810
 	private void OnEnterStatePostGame()
 	{
 		for (int i = 0; i < this.scoreboards.Count; i++)
@@ -346,7 +346,7 @@ public class MonkeBallGame : NetworkComponent
 		}
 	}
 
-	// Token: 0x06001D81 RID: 7553 RVA: 0x0008F624 File Offset: 0x0008D824
+	// Token: 0x06001D81 RID: 7553 RVA: 0x0008F644 File Offset: 0x0008D844
 	[PunRPC]
 	private void RequestSetGameStateRPC(int newGameState, double newGameEndTime, int[] playerIds, int[] playerTeams, int[] scores, long[] packedBallPosRot, long[] packedBallVel, PhotonMessageInfo info)
 	{
@@ -446,13 +446,13 @@ public class MonkeBallGame : NetworkComponent
 		this._forceSyncDelay = 5f;
 	}
 
-	// Token: 0x06001D82 RID: 7554 RVA: 0x0008F98D File Offset: 0x0008DB8D
+	// Token: 0x06001D82 RID: 7554 RVA: 0x0008F9AD File Offset: 0x0008DBAD
 	public void RequestResetGame()
 	{
 		this.photonView.RPC("RequestResetGameRPC", RpcTarget.All, Array.Empty<object>());
 	}
 
-	// Token: 0x06001D83 RID: 7555 RVA: 0x0008F9A8 File Offset: 0x0008DBA8
+	// Token: 0x06001D83 RID: 7555 RVA: 0x0008F9C8 File Offset: 0x0008DBC8
 	[PunRPC]
 	private void RequestResetGameRPC(PhotonMessageInfo info)
 	{
@@ -490,14 +490,14 @@ public class MonkeBallGame : NetworkComponent
 		}
 	}
 
-	// Token: 0x06001D84 RID: 7556 RVA: 0x0008FA88 File Offset: 0x0008DC88
+	// Token: 0x06001D84 RID: 7556 RVA: 0x0008FAA8 File Offset: 0x0008DCA8
 	public void ToggleResetButton(bool toggle, int teamId)
 	{
 		int otherTeam = this.GetOtherTeam(teamId);
 		this.photonView.RPC("SetResetButtonRPC", RpcTarget.All, new object[] { toggle, otherTeam });
 	}
 
-	// Token: 0x06001D85 RID: 7557 RVA: 0x0008FAC8 File Offset: 0x0008DCC8
+	// Token: 0x06001D85 RID: 7557 RVA: 0x0008FAE8 File Offset: 0x0008DCE8
 	[PunRPC]
 	private void SetResetButtonRPC(bool toggleReset, int teamId, PhotonMessageInfo info)
 	{
@@ -522,7 +522,7 @@ public class MonkeBallGame : NetworkComponent
 		}
 	}
 
-	// Token: 0x06001D86 RID: 7558 RVA: 0x0008FB43 File Offset: 0x0008DD43
+	// Token: 0x06001D86 RID: 7558 RVA: 0x0008FB63 File Offset: 0x0008DD63
 	public void OnBallGrabbed(GameBallId gameBallId)
 	{
 		if (this.gameState == MonkeBallGame.GameState.PreGame)
@@ -535,7 +535,7 @@ public class MonkeBallGame : NetworkComponent
 		}
 	}
 
-	// Token: 0x06001D87 RID: 7559 RVA: 0x0008FB68 File Offset: 0x0008DD68
+	// Token: 0x06001D87 RID: 7559 RVA: 0x0008FB88 File Offset: 0x0008DD88
 	private void RefreshTime()
 	{
 		for (int i = 0; i < this.scoreboards.Count; i++)
@@ -544,7 +544,7 @@ public class MonkeBallGame : NetworkComponent
 		}
 	}
 
-	// Token: 0x06001D88 RID: 7560 RVA: 0x0008FB9C File Offset: 0x0008DD9C
+	// Token: 0x06001D88 RID: 7560 RVA: 0x0008FBBC File Offset: 0x0008DDBC
 	public void RequestResetBall(GameBallId gameBallId, int teamId)
 	{
 		if (!this.IsMasterClient())
@@ -559,7 +559,7 @@ public class MonkeBallGame : NetworkComponent
 		this.LaunchBallNeutral(gameBallId);
 	}
 
-	// Token: 0x06001D89 RID: 7561 RVA: 0x0008FC0C File Offset: 0x0008DE0C
+	// Token: 0x06001D89 RID: 7561 RVA: 0x0008FC2C File Offset: 0x0008DE2C
 	public void RequestScore(int teamId)
 	{
 		if (!this.IsMasterClient())
@@ -578,7 +578,7 @@ public class MonkeBallGame : NetworkComponent
 		this.RequestGameState(MonkeBallGame.GameState.PostScore);
 	}
 
-	// Token: 0x06001D8A RID: 7562 RVA: 0x0008FC77 File Offset: 0x0008DE77
+	// Token: 0x06001D8A RID: 7562 RVA: 0x0008FC97 File Offset: 0x0008DE97
 	public void RequestSetScore(int teamId, int score)
 	{
 		if (!this.IsMasterClient())
@@ -588,7 +588,7 @@ public class MonkeBallGame : NetworkComponent
 		this.photonView.RPC("SetScoreRPC", RpcTarget.All, new object[] { teamId, score });
 	}
 
-	// Token: 0x06001D8B RID: 7563 RVA: 0x0008FCAC File Offset: 0x0008DEAC
+	// Token: 0x06001D8B RID: 7563 RVA: 0x0008FCCC File Offset: 0x0008DECC
 	[PunRPC]
 	private void SetScoreRPC(int teamId, int score, PhotonMessageInfo info)
 	{
@@ -614,7 +614,7 @@ public class MonkeBallGame : NetworkComponent
 		this.SetScore(teamId, Mathf.Clamp(score, 0, 999), true);
 	}
 
-	// Token: 0x06001D8C RID: 7564 RVA: 0x0008FD38 File Offset: 0x0008DF38
+	// Token: 0x06001D8C RID: 7564 RVA: 0x0008FD58 File Offset: 0x0008DF58
 	private void SetScore(int teamId, int score, bool playFX = true)
 	{
 		if (teamId < 0 || teamId > this.team.Count)
@@ -636,7 +636,7 @@ public class MonkeBallGame : NetworkComponent
 		this.RefreshScore();
 	}
 
-	// Token: 0x06001D8D RID: 7565 RVA: 0x0008FDD0 File Offset: 0x0008DFD0
+	// Token: 0x06001D8D RID: 7565 RVA: 0x0008FDF0 File Offset: 0x0008DFF0
 	private void RefreshScore()
 	{
 		for (int i = 0; i < this.scoreboards.Count; i++)
@@ -645,7 +645,7 @@ public class MonkeBallGame : NetworkComponent
 		}
 	}
 
-	// Token: 0x06001D8E RID: 7566 RVA: 0x0008FE04 File Offset: 0x0008E004
+	// Token: 0x06001D8E RID: 7566 RVA: 0x0008FE24 File Offset: 0x0008E024
 	private void PlayScoreFx()
 	{
 		for (int i = 0; i < this.scoreboards.Count; i++)
@@ -654,19 +654,19 @@ public class MonkeBallGame : NetworkComponent
 		}
 	}
 
-	// Token: 0x06001D8F RID: 7567 RVA: 0x0008FE38 File Offset: 0x0008E038
+	// Token: 0x06001D8F RID: 7567 RVA: 0x0008FE58 File Offset: 0x0008E058
 	public MonkeBallTeam GetTeam(int teamId)
 	{
 		return this.team[teamId];
 	}
 
-	// Token: 0x06001D90 RID: 7568 RVA: 0x0008FE46 File Offset: 0x0008E046
+	// Token: 0x06001D90 RID: 7568 RVA: 0x0008FE66 File Offset: 0x0008E066
 	public int GetOtherTeam(int teamId)
 	{
 		return (teamId + 1) % this.team.Count;
 	}
 
-	// Token: 0x06001D91 RID: 7569 RVA: 0x0008FE58 File Offset: 0x0008E058
+	// Token: 0x06001D91 RID: 7569 RVA: 0x0008FE78 File Offset: 0x0008E078
 	public void RequestSetTeam(int teamId)
 	{
 		this.photonView.RPC("RequestSetTeamRPC", RpcTarget.MasterClient, new object[] { teamId });
@@ -711,7 +711,7 @@ public class MonkeBallGame : NetworkComponent
 		}
 	}
 
-	// Token: 0x06001D92 RID: 7570 RVA: 0x00090018 File Offset: 0x0008E218
+	// Token: 0x06001D92 RID: 7570 RVA: 0x00090038 File Offset: 0x0008E238
 	private MonkeBall GetMonkeBall(GameBallId gameBallId)
 	{
 		GameBall gameBall = GameBallManager.Instance.GetGameBall(gameBallId);
@@ -722,7 +722,7 @@ public class MonkeBallGame : NetworkComponent
 		return null;
 	}
 
-	// Token: 0x06001D93 RID: 7571 RVA: 0x00090044 File Offset: 0x0008E244
+	// Token: 0x06001D93 RID: 7571 RVA: 0x00090064 File Offset: 0x0008E264
 	[PunRPC]
 	private void RequestSetTeamRPC(int teamId, PhotonMessageInfo info)
 	{
@@ -743,7 +743,7 @@ public class MonkeBallGame : NetworkComponent
 		this.photonView.RPC("SetTeamRPC", RpcTarget.All, new object[] { teamId, info.Sender });
 	}
 
-	// Token: 0x06001D94 RID: 7572 RVA: 0x000900BC File Offset: 0x0008E2BC
+	// Token: 0x06001D94 RID: 7572 RVA: 0x000900DC File Offset: 0x0008E2DC
 	[PunRPC]
 	private void SetTeamRPC(int teamId, Player player, PhotonMessageInfo info)
 	{
@@ -764,7 +764,7 @@ public class MonkeBallGame : NetworkComponent
 		this.SetTeamPlayer(teamId, player);
 	}
 
-	// Token: 0x06001D95 RID: 7573 RVA: 0x00090118 File Offset: 0x0008E318
+	// Token: 0x06001D95 RID: 7573 RVA: 0x00090138 File Offset: 0x0008E338
 	private void SetTeamPlayer(int teamId, Player player)
 	{
 		if (player == null)
@@ -779,7 +779,7 @@ public class MonkeBallGame : NetworkComponent
 		this.RefreshTeamPlayers(true);
 	}
 
-	// Token: 0x06001D96 RID: 7574 RVA: 0x0009014C File Offset: 0x0008E34C
+	// Token: 0x06001D96 RID: 7574 RVA: 0x0009016C File Offset: 0x0008E36C
 	private void RefreshTeamPlayers(bool playSounds)
 	{
 		int[] array = new int[this.team.Count];
@@ -823,7 +823,7 @@ public class MonkeBallGame : NetworkComponent
 		this._currentPlayerTotal = num;
 	}
 
-	// Token: 0x06001D97 RID: 7575 RVA: 0x0009025C File Offset: 0x0008E45C
+	// Token: 0x06001D97 RID: 7575 RVA: 0x0009027C File Offset: 0x0008E47C
 	private void ForceSyncPlayersVisuals()
 	{
 		for (int i = 0; i < NetworkSystem.Instance.AllNetPlayers.Length; i++)
@@ -843,7 +843,7 @@ public class MonkeBallGame : NetworkComponent
 		}
 	}
 
-	// Token: 0x06001D98 RID: 7576 RVA: 0x00090348 File Offset: 0x0008E548
+	// Token: 0x06001D98 RID: 7576 RVA: 0x00090368 File Offset: 0x0008E568
 	private void ForceOriginalColorSync()
 	{
 		GameBallPlayer gamePlayer = GameBallPlayer.GetGamePlayer(VRRigCache.Instance.localRig.Creator.ActorNumber);
@@ -858,19 +858,19 @@ public class MonkeBallGame : NetworkComponent
 		}
 	}
 
-	// Token: 0x06001D99 RID: 7577 RVA: 0x000903ED File Offset: 0x0008E5ED
+	// Token: 0x06001D99 RID: 7577 RVA: 0x0009040D File Offset: 0x0008E60D
 	public void RequestRestrictBallToTeam(GameBallId gameBallId, int teamId)
 	{
 		this.RestrictBallToTeam(gameBallId, teamId, this.restrictBallDuration);
 	}
 
-	// Token: 0x06001D9A RID: 7578 RVA: 0x000903FD File Offset: 0x0008E5FD
+	// Token: 0x06001D9A RID: 7578 RVA: 0x0009041D File Offset: 0x0008E61D
 	public void RequestRestrictBallToTeamOnScore(GameBallId gameBallId, int teamId)
 	{
 		this.RestrictBallToTeam(gameBallId, teamId, this.restrictBallDurationAfterScore);
 	}
 
-	// Token: 0x06001D9B RID: 7579 RVA: 0x00090410 File Offset: 0x0008E610
+	// Token: 0x06001D9B RID: 7579 RVA: 0x00090430 File Offset: 0x0008E630
 	private void RestrictBallToTeam(GameBallId gameBallId, int teamId, float restrictDuration)
 	{
 		if (!this.IsMasterClient())
@@ -880,7 +880,7 @@ public class MonkeBallGame : NetworkComponent
 		this.photonView.RPC("SetRestrictBallToTeam", RpcTarget.All, new object[] { gameBallId.index, teamId, restrictDuration });
 	}
 
-	// Token: 0x06001D9C RID: 7580 RVA: 0x00090460 File Offset: 0x0008E660
+	// Token: 0x06001D9C RID: 7580 RVA: 0x00090480 File Offset: 0x0008E680
 	[PunRPC]
 	private void SetRestrictBallToTeam(int gameBallIndex, int teamId, float restrictDuration, PhotonMessageInfo info)
 	{
@@ -924,19 +924,19 @@ public class MonkeBallGame : NetworkComponent
 		}
 	}
 
-	// Token: 0x06001D9D RID: 7581 RVA: 0x00090560 File Offset: 0x0008E760
+	// Token: 0x06001D9D RID: 7581 RVA: 0x00090580 File Offset: 0x0008E780
 	public void LaunchBallNeutral(GameBallId gameBallId)
 	{
 		this.LaunchBall(gameBallId, this._ballLauncher, this.ballLauncherVelocityRange.x, this.ballLauncherVelocityRange.y, this.ballLaunchAngleXRange.x, this.ballLaunchAngleXRange.y, this.ballLaunchAngleYRange.x, this.ballLaunchAngleYRange.y);
 	}
 
-	// Token: 0x06001D9E RID: 7582 RVA: 0x000905BC File Offset: 0x0008E7BC
+	// Token: 0x06001D9E RID: 7582 RVA: 0x000905DC File Offset: 0x0008E7DC
 	public void LaunchBallWithTeam(GameBallId gameBallId, int teamId, Transform launcher, Vector2 velocityRange, Vector2 angleXRange, Vector2 angleYRange)
 	{
 		this.LaunchBall(gameBallId, launcher, velocityRange.x, velocityRange.y, angleXRange.x, angleXRange.y, angleYRange.x, angleYRange.y);
 	}
 
-	// Token: 0x06001D9F RID: 7583 RVA: 0x000905FC File Offset: 0x0008E7FC
+	// Token: 0x06001D9F RID: 7583 RVA: 0x0009061C File Offset: 0x0008E81C
 	private void LaunchBall(GameBallId gameBallId, Transform launcher, float minVelocity, float maxVelocity, float minXAngle, float maxXAngle, float minYAngle, float maxYAngle)
 	{
 		GameBall gameBall = GameBallManager.Instance.GetGameBall(gameBallId);

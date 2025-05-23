@@ -4,7 +4,7 @@ using UnityEngine;
 // Token: 0x0200098E RID: 2446
 public static class EchoUtils
 {
-	// Token: 0x06003ABF RID: 15039 RVA: 0x00119244 File Offset: 0x00117444
+	// Token: 0x06003AC0 RID: 15040 RVA: 0x0011931C File Offset: 0x0011751C
 	[HideInCallstack]
 	public static T Echo<T>(this T message)
 	{
@@ -12,7 +12,7 @@ public static class EchoUtils
 		return message;
 	}
 
-	// Token: 0x06003AC0 RID: 15040 RVA: 0x00119252 File Offset: 0x00117452
+	// Token: 0x06003AC1 RID: 15041 RVA: 0x0011932A File Offset: 0x0011752A
 	[HideInCallstack]
 	public static T Echo<T>(this T message, Object context)
 	{

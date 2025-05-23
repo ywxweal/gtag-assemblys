@@ -6,7 +6,7 @@ namespace GorillaTag.Audio
 	// Token: 0x02000D97 RID: 3479
 	public class LoudSpeakerVolume : MonoBehaviour
 	{
-		// Token: 0x0600565E RID: 22110 RVA: 0x001A4814 File Offset: 0x001A2A14
+		// Token: 0x0600565F RID: 22111 RVA: 0x001A48EC File Offset: 0x001A2AEC
 		public void OnTriggerEnter(Collider other)
 		{
 			if (other.CompareTag("GorillaPlayer"))
@@ -27,7 +27,7 @@ namespace GorillaTag.Audio
 			}
 		}
 
-		// Token: 0x0600565F RID: 22111 RVA: 0x001A4884 File Offset: 0x001A2A84
+		// Token: 0x06005660 RID: 22112 RVA: 0x001A495C File Offset: 0x001A2B5C
 		public void OnTriggerExit(Collider other)
 		{
 			VRRig component = other.attachedRigidbody.GetComponent<VRRig>();
@@ -45,7 +45,7 @@ namespace GorillaTag.Audio
 			}
 		}
 
-		// Token: 0x04005A27 RID: 23079
+		// Token: 0x04005A28 RID: 23080
 		[SerializeField]
 		private LoudSpeakerTrigger _trigger;
 	}

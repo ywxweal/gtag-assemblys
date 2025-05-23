@@ -29,8 +29,8 @@ using UnityEngine.Video;
 public class CustomMapLoader : MonoBehaviour
 {
 	// Token: 0x1700045B RID: 1115
-	// (get) Token: 0x06002C87 RID: 11399 RVA: 0x000DB7F6 File Offset: 0x000D99F6
-	// (set) Token: 0x06002C86 RID: 11398 RVA: 0x000DB7DF File Offset: 0x000D99DF
+	// (get) Token: 0x06002C88 RID: 11400 RVA: 0x000DB89A File Offset: 0x000D9A9A
+	// (set) Token: 0x06002C87 RID: 11399 RVA: 0x000DB883 File Offset: 0x000D9A83
 	public static string LoadedMapLevelName
 	{
 		get
@@ -44,7 +44,7 @@ public class CustomMapLoader : MonoBehaviour
 	}
 
 	// Token: 0x1700045C RID: 1116
-	// (get) Token: 0x06002C88 RID: 11400 RVA: 0x000DB7FD File Offset: 0x000D99FD
+	// (get) Token: 0x06002C89 RID: 11401 RVA: 0x000DB8A1 File Offset: 0x000D9AA1
 	public static long LoadedMapModId
 	{
 		get
@@ -54,7 +54,7 @@ public class CustomMapLoader : MonoBehaviour
 	}
 
 	// Token: 0x1700045D RID: 1117
-	// (get) Token: 0x06002C89 RID: 11401 RVA: 0x000DB804 File Offset: 0x000D9A04
+	// (get) Token: 0x06002C8A RID: 11402 RVA: 0x000DB8A8 File Offset: 0x000D9AA8
 	public static MapDescriptor LoadedMapDescriptor
 	{
 		get
@@ -64,7 +64,7 @@ public class CustomMapLoader : MonoBehaviour
 	}
 
 	// Token: 0x1700045E RID: 1118
-	// (get) Token: 0x06002C8A RID: 11402 RVA: 0x000DB80B File Offset: 0x000D9A0B
+	// (get) Token: 0x06002C8B RID: 11403 RVA: 0x000DB8AF File Offset: 0x000D9AAF
 	public static long LoadingMapModId
 	{
 		get
@@ -74,7 +74,7 @@ public class CustomMapLoader : MonoBehaviour
 	}
 
 	// Token: 0x1700045F RID: 1119
-	// (get) Token: 0x06002C8B RID: 11403 RVA: 0x000DB812 File Offset: 0x000D9A12
+	// (get) Token: 0x06002C8C RID: 11404 RVA: 0x000DB8B6 File Offset: 0x000D9AB6
 	public static bool IsLoading
 	{
 		get
@@ -83,13 +83,13 @@ public class CustomMapLoader : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06002C8C RID: 11404 RVA: 0x000DB819 File Offset: 0x000D9A19
+	// Token: 0x06002C8D RID: 11405 RVA: 0x000DB8BD File Offset: 0x000D9ABD
 	public static bool IsCustomScene(string sceneName)
 	{
 		return CustomMapLoader.loadedSceneNames.Contains(sceneName);
 	}
 
-	// Token: 0x06002C8D RID: 11405 RVA: 0x000DB826 File Offset: 0x000D9A26
+	// Token: 0x06002C8E RID: 11406 RVA: 0x000DB8CA File Offset: 0x000D9ACA
 	private void Awake()
 	{
 		if (CustomMapLoader.instance == null)
@@ -104,7 +104,7 @@ public class CustomMapLoader : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06002C8E RID: 11406 RVA: 0x000DB860 File Offset: 0x000D9A60
+	// Token: 0x06002C8F RID: 11407 RVA: 0x000DB904 File Offset: 0x000D9B04
 	private void Start()
 	{
 		byte[] array = new byte[]
@@ -134,7 +134,7 @@ public class CustomMapLoader : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06002C8F RID: 11407 RVA: 0x000DB954 File Offset: 0x000D9B54
+	// Token: 0x06002C90 RID: 11408 RVA: 0x000DB9F8 File Offset: 0x000D9BF8
 	public static void LoadMap(long mapModId, string mapFilePath, Action<bool> onLoadComplete, Action<MapLoadStatus, int, string> progressCallback, Action<string> onSceneLoaded)
 	{
 		if (!CustomMapLoader.hasInstance)
@@ -168,7 +168,7 @@ public class CustomMapLoader : MonoBehaviour
 		CustomMapLoader.instance.StartCoroutine(CustomMapLoader.LoadAssetBundle(mapModId, mapFilePath, new Action<bool, bool>(CustomMapLoader.OnAssetBundleLoaded)));
 	}
 
-	// Token: 0x06002C90 RID: 11408 RVA: 0x000DB9D0 File Offset: 0x000D9BD0
+	// Token: 0x06002C91 RID: 11409 RVA: 0x000DBA74 File Offset: 0x000D9C74
 	public static void ResetToInitialZone(Action<string> onSceneLoaded, Action<string> onSceneUnloaded)
 	{
 		int[] array = new int[] { CustomMapLoader.initialSceneIndex };
@@ -191,7 +191,7 @@ public class CustomMapLoader : MonoBehaviour
 		CustomMapLoader.sceneLoadingCoroutine = CustomMapLoader.instance.StartCoroutine(CustomMapLoader.LoadZoneCoroutine(array, list.ToArray()));
 	}
 
-	// Token: 0x06002C91 RID: 11409 RVA: 0x000DBA6C File Offset: 0x000D9C6C
+	// Token: 0x06002C92 RID: 11410 RVA: 0x000DBB10 File Offset: 0x000D9D10
 	public static void LoadZoneTriggered(int[] loadSceneIndexes, int[] unloadSceneIndexes, Action<string> onSceneLoaded, Action<string> onSceneUnloaded)
 	{
 		string text = "";
@@ -229,7 +229,7 @@ public class CustomMapLoader : MonoBehaviour
 		CustomMapLoader.sceneLoadingCoroutine = CustomMapLoader.instance.StartCoroutine(CustomMapLoader.LoadZoneCoroutine(loadSceneIndexes, unloadSceneIndexes));
 	}
 
-	// Token: 0x06002C92 RID: 11410 RVA: 0x000DBB53 File Offset: 0x000D9D53
+	// Token: 0x06002C93 RID: 11411 RVA: 0x000DBBF7 File Offset: 0x000D9DF7
 	private static IEnumerator LoadZoneCoroutine(int[] loadScenes, int[] unloadScenes)
 	{
 		if (!unloadScenes.IsNullOrEmpty<int>())
@@ -254,7 +254,7 @@ public class CustomMapLoader : MonoBehaviour
 		yield break;
 	}
 
-	// Token: 0x06002C93 RID: 11411 RVA: 0x000DBB69 File Offset: 0x000D9D69
+	// Token: 0x06002C94 RID: 11412 RVA: 0x000DBC0D File Offset: 0x000D9E0D
 	private static IEnumerator LoadScenesCoroutine(int[] sceneIndexes)
 	{
 		int num;
@@ -269,7 +269,7 @@ public class CustomMapLoader : MonoBehaviour
 		yield break;
 	}
 
-	// Token: 0x06002C94 RID: 11412 RVA: 0x000DBB78 File Offset: 0x000D9D78
+	// Token: 0x06002C95 RID: 11413 RVA: 0x000DBC1C File Offset: 0x000D9E1C
 	private static IEnumerator UnloadScenesCoroutine(int[] sceneIndexes)
 	{
 		int num;
@@ -281,7 +281,7 @@ public class CustomMapLoader : MonoBehaviour
 		yield break;
 	}
 
-	// Token: 0x06002C95 RID: 11413 RVA: 0x000DBB87 File Offset: 0x000D9D87
+	// Token: 0x06002C96 RID: 11414 RVA: 0x000DBC2B File Offset: 0x000D9E2B
 	private static IEnumerator LoadAssetBundle(long mapModID, string packageInfoFilePath, Action<bool, bool> OnLoadComplete)
 	{
 		if (CustomMapLoader.isLoading)
@@ -431,7 +431,7 @@ public class CustomMapLoader : MonoBehaviour
 		yield break;
 	}
 
-	// Token: 0x06002C96 RID: 11414 RVA: 0x000DBBA4 File Offset: 0x000D9DA4
+	// Token: 0x06002C97 RID: 11415 RVA: 0x000DBC48 File Offset: 0x000D9E48
 	private static void RequestAbortModLoad(Action callback = null)
 	{
 		CustomMapLoader.abortModLoadCallback = callback;
@@ -439,7 +439,7 @@ public class CustomMapLoader : MonoBehaviour
 		CustomMapLoader.shouldUnloadMod = true;
 	}
 
-	// Token: 0x06002C97 RID: 11415 RVA: 0x000DBBB8 File Offset: 0x000D9DB8
+	// Token: 0x06002C98 RID: 11416 RVA: 0x000DBC5C File Offset: 0x000D9E5C
 	private static IEnumerator AbortSceneLoad(int sceneIndex)
 	{
 		if (sceneIndex == -1)
@@ -476,7 +476,7 @@ public class CustomMapLoader : MonoBehaviour
 		yield break;
 	}
 
-	// Token: 0x06002C98 RID: 11416 RVA: 0x000DBBC8 File Offset: 0x000D9DC8
+	// Token: 0x06002C99 RID: 11417 RVA: 0x000DBC6C File Offset: 0x000D9E6C
 	private static int GetSceneIndex(string sceneName)
 	{
 		int num = -1;
@@ -496,7 +496,7 @@ public class CustomMapLoader : MonoBehaviour
 		return num;
 	}
 
-	// Token: 0x06002C99 RID: 11417 RVA: 0x000DBC17 File Offset: 0x000D9E17
+	// Token: 0x06002C9A RID: 11418 RVA: 0x000DBCBB File Offset: 0x000D9EBB
 	private static IEnumerator LoadSceneFromAssetBundle(int sceneIndex, bool useProgressCallback, Action<bool, bool, string> OnLoadComplete)
 	{
 		LoadSceneParameters loadSceneParameters = new LoadSceneParameters
@@ -647,7 +647,7 @@ public class CustomMapLoader : MonoBehaviour
 		yield break;
 	}
 
-	// Token: 0x06002C9A RID: 11418 RVA: 0x000DBC34 File Offset: 0x000D9E34
+	// Token: 0x06002C9B RID: 11419 RVA: 0x000DBCD8 File Offset: 0x000D9ED8
 	public static void CloseDoorAndUnloadMod(Action unloadFinishedCallback = null)
 	{
 		if (!CustomMapLoader.IsModLoaded(0L) && !CustomMapLoader.isLoading)
@@ -675,7 +675,7 @@ public class CustomMapLoader : MonoBehaviour
 		CustomMapLoader.instance.StartCoroutine(CustomMapLoader.UnloadAllScenesCoroutine());
 	}
 
-	// Token: 0x06002C9B RID: 11419 RVA: 0x000DBCCB File Offset: 0x000D9ECB
+	// Token: 0x06002C9C RID: 11420 RVA: 0x000DBD6F File Offset: 0x000D9F6F
 	private static IEnumerator CloseDoorAndUnloadModCoroutine()
 	{
 		if (!CustomMapLoader.IsModLoaded(0L) || CustomMapLoader.IsLoading)
@@ -698,7 +698,7 @@ public class CustomMapLoader : MonoBehaviour
 		yield break;
 	}
 
-	// Token: 0x06002C9C RID: 11420 RVA: 0x000DBCD3 File Offset: 0x000D9ED3
+	// Token: 0x06002C9D RID: 11421 RVA: 0x000DBD77 File Offset: 0x000D9F77
 	private static IEnumerator UnloadAllScenesCoroutine()
 	{
 		CustomMapLoader.isLoading = false;
@@ -747,7 +747,7 @@ public class CustomMapLoader : MonoBehaviour
 		yield break;
 	}
 
-	// Token: 0x06002C9D RID: 11421 RVA: 0x000DBCDB File Offset: 0x000D9EDB
+	// Token: 0x06002C9E RID: 11422 RVA: 0x000DBD7F File Offset: 0x000D9F7F
 	private static IEnumerator UnloadSceneCoroutine(int sceneIndex, Action OnUnloadComplete = null)
 	{
 		if (!CustomMapLoader.hasInstance)
@@ -803,12 +803,12 @@ public class CustomMapLoader : MonoBehaviour
 		yield break;
 	}
 
-	// Token: 0x06002C9E RID: 11422 RVA: 0x000023F4 File Offset: 0x000005F4
+	// Token: 0x06002C9F RID: 11423 RVA: 0x000023F4 File Offset: 0x000005F4
 	private static void RemoveUnloadingHoverboardAreas(Scene unloadingScene)
 	{
 	}
 
-	// Token: 0x06002C9F RID: 11423 RVA: 0x000DBCF1 File Offset: 0x000D9EF1
+	// Token: 0x06002CA0 RID: 11424 RVA: 0x000DBD95 File Offset: 0x000D9F95
 	private static void RemoveCustomMapATM()
 	{
 		if (ATM_Manager.instance.IsNotNull())
@@ -819,7 +819,7 @@ public class CustomMapLoader : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06002CA0 RID: 11424 RVA: 0x000DBD24 File Offset: 0x000D9F24
+	// Token: 0x06002CA1 RID: 11425 RVA: 0x000DBDC8 File Offset: 0x000D9FC8
 	private static IEnumerator ResetLightmaps()
 	{
 		CustomMapLoader.instance.dayNightManager.RequestRepopulateLightmaps();
@@ -835,7 +835,7 @@ public class CustomMapLoader : MonoBehaviour
 		yield break;
 	}
 
-	// Token: 0x06002CA1 RID: 11425 RVA: 0x000DBD2C File Offset: 0x000D9F2C
+	// Token: 0x06002CA2 RID: 11426 RVA: 0x000DBDD0 File Offset: 0x000D9FD0
 	private static void LoadLightmaps(Texture2D[] colorMaps, Texture2D[] dirMaps)
 	{
 		if (colorMaps.Length == 0)
@@ -865,7 +865,7 @@ public class CustomMapLoader : MonoBehaviour
 		LightmapSettings.lightmaps = list.ToArray();
 	}
 
-	// Token: 0x06002CA2 RID: 11426 RVA: 0x000DBDAC File Offset: 0x000D9FAC
+	// Token: 0x06002CA3 RID: 11427 RVA: 0x000DBE50 File Offset: 0x000DA050
 	private static void UnloadLightmaps()
 	{
 		foreach (LightmapData lightmapData in LightmapSettings.lightmaps)
@@ -881,7 +881,7 @@ public class CustomMapLoader : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06002CA3 RID: 11427 RVA: 0x000DBE28 File Offset: 0x000DA028
+	// Token: 0x06002CA4 RID: 11428 RVA: 0x000DBECC File Offset: 0x000DA0CC
 	private static bool SanitizeObject(GameObject gameObject, GameObject mapRoot)
 	{
 		if (gameObject == null)
@@ -940,7 +940,7 @@ public class CustomMapLoader : MonoBehaviour
 		return true;
 	}
 
-	// Token: 0x06002CA4 RID: 11428 RVA: 0x000DBFB4 File Offset: 0x000DA1B4
+	// Token: 0x06002CA5 RID: 11429 RVA: 0x000DC058 File Offset: 0x000DA258
 	private static void SanitizeObjectRecursive(GameObject rootObject, GameObject mapRoot)
 	{
 		if (!CustomMapLoader.SanitizeObject(rootObject, mapRoot))
@@ -958,7 +958,7 @@ public class CustomMapLoader : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06002CA5 RID: 11429 RVA: 0x000DC00E File Offset: 0x000DA20E
+	// Token: 0x06002CA6 RID: 11430 RVA: 0x000DC0B2 File Offset: 0x000DA2B2
 	private static IEnumerator ProcessAndInstantiateMap(GameObject map, bool useProgressCallback)
 	{
 		if (map.IsNull() || !CustomMapLoader.hasInstance)
@@ -1011,7 +1011,7 @@ public class CustomMapLoader : MonoBehaviour
 		yield break;
 	}
 
-	// Token: 0x06002CA6 RID: 11430 RVA: 0x000DC024 File Offset: 0x000DA224
+	// Token: 0x06002CA7 RID: 11431 RVA: 0x000DC0C8 File Offset: 0x000DA2C8
 	private static IEnumerator ProcessChildObjects(GameObject parent, bool useProgressCallback)
 	{
 		if (parent == null || CustomMapLoader.placeholderReplacements.Contains(parent))
@@ -1076,7 +1076,7 @@ public class CustomMapLoader : MonoBehaviour
 		yield break;
 	}
 
-	// Token: 0x06002CA7 RID: 11431 RVA: 0x000DC03C File Offset: 0x000DA23C
+	// Token: 0x06002CA8 RID: 11432 RVA: 0x000DC0E0 File Offset: 0x000DA2E0
 	private static void CheckVirtualStumpOverlap(string sceneName)
 	{
 		Vector3 vector = new Vector3(5.15f, 0.72f, 5.15f);
@@ -1106,7 +1106,7 @@ public class CustomMapLoader : MonoBehaviour
 		Object.DestroyImmediate(gameObject);
 	}
 
-	// Token: 0x06002CA8 RID: 11432 RVA: 0x000DC1C4 File Offset: 0x000DA3C4
+	// Token: 0x06002CA9 RID: 11433 RVA: 0x000DC268 File Offset: 0x000DA468
 	private static void SetupCollisions(GameObject gameObject)
 	{
 		if (gameObject == null || CustomMapLoader.placeholderReplacements.Contains(gameObject))
@@ -1161,7 +1161,7 @@ public class CustomMapLoader : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06002CA9 RID: 11433 RVA: 0x000DC2D8 File Offset: 0x000DA4D8
+	// Token: 0x06002CAA RID: 11434 RVA: 0x000DC37C File Offset: 0x000DA57C
 	private static void ReplaceDataOnlyScripts(GameObject gameObject)
 	{
 		MapBoundarySettings component = gameObject.GetComponent<MapBoundarySettings>();
@@ -1248,7 +1248,7 @@ public class CustomMapLoader : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06002CAA RID: 11434 RVA: 0x000DC4A8 File Offset: 0x000DA6A8
+	// Token: 0x06002CAB RID: 11435 RVA: 0x000DC54C File Offset: 0x000DA74C
 	private static void ReplacePlaceholders(GameObject placeholderGameObject)
 	{
 		if (placeholderGameObject.IsNull())
@@ -1510,12 +1510,12 @@ public class CustomMapLoader : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06002CAB RID: 11435 RVA: 0x000023F4 File Offset: 0x000005F4
+	// Token: 0x06002CAC RID: 11436 RVA: 0x000023F4 File Offset: 0x000005F4
 	private static void InitializeComponentsPhaseOne(GameObject childGameObject)
 	{
 	}
 
-	// Token: 0x06002CAC RID: 11436 RVA: 0x000DCBDC File Offset: 0x000DADDC
+	// Token: 0x06002CAD RID: 11437 RVA: 0x000DCC80 File Offset: 0x000DAE80
 	private static void InitializeComponentsPhaseTwo()
 	{
 		for (int i = 0; i < CustomMapLoader.initializePhaseTwoComponents.Count; i++)
@@ -1524,7 +1524,7 @@ public class CustomMapLoader : MonoBehaviour
 		CustomMapLoader.initializePhaseTwoComponents.Clear();
 	}
 
-	// Token: 0x06002CAD RID: 11437 RVA: 0x000DCC08 File Offset: 0x000DAE08
+	// Token: 0x06002CAE RID: 11438 RVA: 0x000DCCAC File Offset: 0x000DAEAC
 	public static bool OpenDoorToMap()
 	{
 		if (!CustomMapLoader.hasInstance)
@@ -1539,7 +1539,7 @@ public class CustomMapLoader : MonoBehaviour
 		return false;
 	}
 
-	// Token: 0x06002CAE RID: 11438 RVA: 0x000DCC3C File Offset: 0x000DAE3C
+	// Token: 0x06002CAF RID: 11439 RVA: 0x000DCCE0 File Offset: 0x000DAEE0
 	private static void OnAssetBundleLoaded(bool loadSucceeded, bool loadAborted)
 	{
 		if (loadAborted)
@@ -1568,7 +1568,7 @@ public class CustomMapLoader : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06002CAF RID: 11439 RVA: 0x000DCCEA File Offset: 0x000DAEEA
+	// Token: 0x06002CB0 RID: 11440 RVA: 0x000DCD8E File Offset: 0x000DAF8E
 	private static void OnIncrementalLoadComplete(bool loadSucceeded, bool loadAborted, string loadedScene)
 	{
 		if (loadSucceeded)
@@ -1580,7 +1580,7 @@ public class CustomMapLoader : MonoBehaviour
 		CustomMapLoader.isLoading = false;
 	}
 
-	// Token: 0x06002CB0 RID: 11440 RVA: 0x000DCD10 File Offset: 0x000DAF10
+	// Token: 0x06002CB1 RID: 11441 RVA: 0x000DCDB4 File Offset: 0x000DAFB4
 	private static void OnLoadComplete(bool loadSucceeded, bool loadAborted, string loadedScene)
 	{
 		CustomMapLoader.isLoading = false;
@@ -1620,14 +1620,14 @@ public class CustomMapLoader : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06002CB1 RID: 11441 RVA: 0x000DCD98 File Offset: 0x000DAF98
+	// Token: 0x06002CB2 RID: 11442 RVA: 0x000DCE3C File Offset: 0x000DB03C
 	private static string GetSceneNameFromFilePath(string filePath)
 	{
 		string[] array = filePath.Split("/", StringSplitOptions.None);
 		return array[array.Length - 1].Split(".", StringSplitOptions.None)[0];
 	}
 
-	// Token: 0x06002CB2 RID: 11442 RVA: 0x000DCDBC File Offset: 0x000DAFBC
+	// Token: 0x06002CB3 RID: 11443 RVA: 0x000DCE60 File Offset: 0x000DB060
 	public static MapPackageInfo GetPackageInfo(string packageInfoFilePath)
 	{
 		MapPackageInfo mapPackageInfo;
@@ -1638,7 +1638,7 @@ public class CustomMapLoader : MonoBehaviour
 		return mapPackageInfo;
 	}
 
-	// Token: 0x06002CB3 RID: 11443 RVA: 0x000DCE04 File Offset: 0x000DB004
+	// Token: 0x06002CB4 RID: 11444 RVA: 0x000DCEA8 File Offset: 0x000DB0A8
 	public static Transform GetCustomMapsDefaultSpawnLocation()
 	{
 		if (CustomMapLoader.hasInstance)
@@ -1648,7 +1648,7 @@ public class CustomMapLoader : MonoBehaviour
 		return null;
 	}
 
-	// Token: 0x06002CB4 RID: 11444 RVA: 0x000DCE1B File Offset: 0x000DB01B
+	// Token: 0x06002CB5 RID: 11445 RVA: 0x000DCEBF File Offset: 0x000DB0BF
 	public static bool IsModLoaded(long mapModId = 0L)
 	{
 		if (mapModId != 0L)
@@ -1658,204 +1658,204 @@ public class CustomMapLoader : MonoBehaviour
 		return !CustomMapLoader.IsLoading && CustomMapLoader.LoadedMapModId != 0L;
 	}
 
-	// Token: 0x040032CD RID: 13005
+	// Token: 0x040032CF RID: 13007
 	[OnEnterPlay_SetNull]
 	private static volatile CustomMapLoader instance;
 
-	// Token: 0x040032CE RID: 13006
+	// Token: 0x040032D0 RID: 13008
 	[OnEnterPlay_Set(false)]
 	private static bool hasInstance;
 
-	// Token: 0x040032CF RID: 13007
+	// Token: 0x040032D1 RID: 13009
 	public Transform CustomMapsDefaultSpawnLocation;
 
-	// Token: 0x040032D0 RID: 13008
+	// Token: 0x040032D2 RID: 13010
 	public CustomMapAccessDoor accessDoor;
 
-	// Token: 0x040032D1 RID: 13009
-	public GameObject networkTrigger;
-
-	// Token: 0x040032D2 RID: 13010
-	[SerializeField]
-	private BetterDayNightManager dayNightManager;
-
 	// Token: 0x040032D3 RID: 13011
-	[SerializeField]
-	private GameObject placeholderParent;
+	public GameObject networkTrigger;
 
 	// Token: 0x040032D4 RID: 13012
 	[SerializeField]
-	private GliderHoldable[] leafGliders;
+	private BetterDayNightManager dayNightManager;
 
 	// Token: 0x040032D5 RID: 13013
 	[SerializeField]
-	private GameObject leafGlider;
+	private GameObject placeholderParent;
 
 	// Token: 0x040032D6 RID: 13014
 	[SerializeField]
-	private GameObject gliderWindVolume;
+	private GliderHoldable[] leafGliders;
 
 	// Token: 0x040032D7 RID: 13015
+	[SerializeField]
+	private GameObject leafGlider;
+
+	// Token: 0x040032D8 RID: 13016
+	[SerializeField]
+	private GameObject gliderWindVolume;
+
+	// Token: 0x040032D9 RID: 13017
 	[FormerlySerializedAs("waterVolume")]
 	[SerializeField]
 	private GameObject waterVolumePrefab;
 
-	// Token: 0x040032D8 RID: 13016
+	// Token: 0x040032DA RID: 13018
 	[SerializeField]
 	private WaterParameters defaultWaterParameters;
 
-	// Token: 0x040032D9 RID: 13017
+	// Token: 0x040032DB RID: 13019
 	[SerializeField]
 	private WaterParameters defaultLavaParameters;
 
-	// Token: 0x040032DA RID: 13018
+	// Token: 0x040032DC RID: 13020
 	[FormerlySerializedAs("forceVolume")]
 	[SerializeField]
 	private GameObject forceVolumePrefab;
 
-	// Token: 0x040032DB RID: 13019
+	// Token: 0x040032DD RID: 13021
 	[SerializeField]
 	private GameObject atmPrefab;
 
-	// Token: 0x040032DC RID: 13020
+	// Token: 0x040032DE RID: 13022
 	[SerializeField]
 	private GameObject hoverboardDispenserPrefab;
 
-	// Token: 0x040032DD RID: 13021
+	// Token: 0x040032DF RID: 13023
 	[SerializeField]
 	private GameObject zoneShaderSettingsTrigger;
 
-	// Token: 0x040032DE RID: 13022
+	// Token: 0x040032E0 RID: 13024
 	[SerializeField]
 	private AudioMixerGroup masterAudioMixer;
 
-	// Token: 0x040032DF RID: 13023
+	// Token: 0x040032E1 RID: 13025
 	[SerializeField]
 	private ZoneShaderSettings customMapZoneShaderSettings;
 
-	// Token: 0x040032E0 RID: 13024
+	// Token: 0x040032E2 RID: 13026
 	[SerializeField]
 	private GameObject virtualStumpMesh;
 
-	// Token: 0x040032E1 RID: 13025
+	// Token: 0x040032E3 RID: 13027
 	private static readonly int numObjectsToProcessPerFrame = 5;
 
-	// Token: 0x040032E2 RID: 13026
+	// Token: 0x040032E4 RID: 13028
 	private static readonly List<int> APPROVED_LAYERS = new List<int>
 	{
 		0, 1, 2, 4, 5, 9, 11, 18, 22, 27,
 		30
 	};
 
-	// Token: 0x040032E3 RID: 13027
+	// Token: 0x040032E5 RID: 13029
 	private static bool isLoading;
 
-	// Token: 0x040032E4 RID: 13028
+	// Token: 0x040032E6 RID: 13030
 	private static bool isUnloading;
 
-	// Token: 0x040032E5 RID: 13029
+	// Token: 0x040032E7 RID: 13031
 	private static bool runningAsyncLoad = false;
 
-	// Token: 0x040032E6 RID: 13030
+	// Token: 0x040032E8 RID: 13032
 	private static long attemptedLoadID = 0L;
 
-	// Token: 0x040032E7 RID: 13031
+	// Token: 0x040032E9 RID: 13033
 	private static string attemptedSceneToLoad;
 
-	// Token: 0x040032E8 RID: 13032
+	// Token: 0x040032EA RID: 13034
 	private static bool shouldUnloadMod = false;
 
-	// Token: 0x040032E9 RID: 13033
+	// Token: 0x040032EB RID: 13035
 	private static AssetBundle mapBundle;
 
-	// Token: 0x040032EA RID: 13034
+	// Token: 0x040032EC RID: 13036
 	private static string initialSceneName = string.Empty;
 
-	// Token: 0x040032EB RID: 13035
+	// Token: 0x040032ED RID: 13037
 	private static int initialSceneIndex = 0;
 
-	// Token: 0x040032EC RID: 13036
+	// Token: 0x040032EE RID: 13038
 	private static string loadedMapLevelName;
 
-	// Token: 0x040032ED RID: 13037
+	// Token: 0x040032EF RID: 13039
 	private static long loadedMapModId;
 
-	// Token: 0x040032EE RID: 13038
+	// Token: 0x040032F0 RID: 13040
 	private static MapDescriptor loadedMapDescriptor;
 
-	// Token: 0x040032EF RID: 13039
+	// Token: 0x040032F1 RID: 13041
 	private static Action<MapLoadStatus, int, string> modLoadProgressCallback;
 
-	// Token: 0x040032F0 RID: 13040
+	// Token: 0x040032F2 RID: 13042
 	private static Action<bool> modLoadedCallback;
 
-	// Token: 0x040032F1 RID: 13041
+	// Token: 0x040032F3 RID: 13043
 	private static Coroutine sceneLoadingCoroutine;
 
-	// Token: 0x040032F2 RID: 13042
+	// Token: 0x040032F4 RID: 13044
 	private static Action<string> sceneLoadedCallback;
 
-	// Token: 0x040032F3 RID: 13043
+	// Token: 0x040032F5 RID: 13045
 	private static Action<string> sceneUnloadedCallback;
 
-	// Token: 0x040032F4 RID: 13044
+	// Token: 0x040032F6 RID: 13046
 	private static List<CustomMapLoader.LoadZoneRequest> queuedLoadZoneRequests = new List<CustomMapLoader.LoadZoneRequest>();
 
-	// Token: 0x040032F5 RID: 13045
+	// Token: 0x040032F7 RID: 13047
 	private static string[] assetBundleSceneFilePaths;
 
-	// Token: 0x040032F6 RID: 13046
+	// Token: 0x040032F8 RID: 13048
 	private static List<string> loadedSceneFilePaths = new List<string>();
 
-	// Token: 0x040032F7 RID: 13047
+	// Token: 0x040032F9 RID: 13049
 	private static List<string> loadedSceneNames = new List<string>();
 
-	// Token: 0x040032F8 RID: 13048
+	// Token: 0x040032FA RID: 13050
 	private static List<int> loadedSceneIndexes = new List<int>();
 
-	// Token: 0x040032F9 RID: 13049
+	// Token: 0x040032FB RID: 13051
 	private static int leafGliderIndex;
 
-	// Token: 0x040032FA RID: 13050
+	// Token: 0x040032FC RID: 13052
 	private static int totalObjectsInLoadingScene = 0;
 
-	// Token: 0x040032FB RID: 13051
+	// Token: 0x040032FD RID: 13053
 	private static int objectsProcessedForLoadingScene = 0;
 
-	// Token: 0x040032FC RID: 13052
+	// Token: 0x040032FE RID: 13054
 	private static int objectsProcessedThisFrame = 0;
 
-	// Token: 0x040032FD RID: 13053
+	// Token: 0x040032FF RID: 13055
 	private static List<Component> initializePhaseTwoComponents = new List<Component>();
 
-	// Token: 0x040032FE RID: 13054
+	// Token: 0x04003300 RID: 13056
 	private static bool shouldAbortSceneLoad = false;
 
-	// Token: 0x040032FF RID: 13055
+	// Token: 0x04003301 RID: 13057
 	private static Action abortModLoadCallback;
 
-	// Token: 0x04003300 RID: 13056
+	// Token: 0x04003302 RID: 13058
 	private static Action unloadModCallback;
 
-	// Token: 0x04003301 RID: 13057
+	// Token: 0x04003303 RID: 13059
 	private static string cachedExceptionMessage = "";
 
-	// Token: 0x04003302 RID: 13058
+	// Token: 0x04003304 RID: 13060
 	private static LightmapData[] lightmaps;
 
-	// Token: 0x04003303 RID: 13059
+	// Token: 0x04003305 RID: 13061
 	private static List<Texture2D> lightmapsToKeep = new List<Texture2D>();
 
-	// Token: 0x04003304 RID: 13060
+	// Token: 0x04003306 RID: 13062
 	private static List<GameObject> placeholderReplacements = new List<GameObject>();
 
-	// Token: 0x04003305 RID: 13061
+	// Token: 0x04003307 RID: 13063
 	private static ATM_UI customMapATM = null;
 
-	// Token: 0x04003306 RID: 13062
+	// Token: 0x04003308 RID: 13064
 	private string dontDestroyOnLoadSceneName = "";
 
-	// Token: 0x04003307 RID: 13063
+	// Token: 0x04003309 RID: 13065
 	private static List<Type> componentAllowlist = new List<Type>
 	{
 		typeof(MeshRenderer),
@@ -1914,10 +1914,10 @@ public class CustomMapLoader : MonoBehaviour
 		typeof(ftLightmapsStorage)
 	};
 
-	// Token: 0x04003308 RID: 13064
+	// Token: 0x0400330A RID: 13066
 	private static readonly List<string> componentTypeStringAllowList = new List<string> { "UnityEngine.Halo" };
 
-	// Token: 0x04003309 RID: 13065
+	// Token: 0x0400330B RID: 13067
 	private static Type[] badComponents = new Type[]
 	{
 		typeof(EventTrigger),
@@ -1932,16 +1932,16 @@ public class CustomMapLoader : MonoBehaviour
 	// Token: 0x020006FF RID: 1791
 	private struct LoadZoneRequest
 	{
-		// Token: 0x0400330A RID: 13066
+		// Token: 0x0400330C RID: 13068
 		public int[] sceneIndexesToLoad;
 
-		// Token: 0x0400330B RID: 13067
+		// Token: 0x0400330D RID: 13069
 		public int[] sceneIndexesToUnload;
 
-		// Token: 0x0400330C RID: 13068
+		// Token: 0x0400330E RID: 13070
 		public Action<string> onSceneLoadedCallback;
 
-		// Token: 0x0400330D RID: 13069
+		// Token: 0x0400330F RID: 13071
 		public Action<string> onSceneUnloadedCallback;
 	}
 }

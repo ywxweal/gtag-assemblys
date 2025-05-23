@@ -5,7 +5,7 @@ using UnityEngine;
 // Token: 0x020005D0 RID: 1488
 public class GRUIScoreboard : MonoBehaviour
 {
-	// Token: 0x0600244D RID: 9293 RVA: 0x000B67E0 File Offset: 0x000B49E0
+	// Token: 0x0600244D RID: 9293 RVA: 0x000B6800 File Offset: 0x000B4A00
 	public void Refresh(List<VRRig> vrRigs)
 	{
 		for (int i = 0; i < this.entries.Count; i++)

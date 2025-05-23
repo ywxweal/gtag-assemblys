@@ -6,7 +6,7 @@ namespace GorillaTagScripts.Builder
 	// Token: 0x02000B69 RID: 2921
 	public class BuilderScaleParticles : MonoBehaviour
 	{
-		// Token: 0x0600484A RID: 18506 RVA: 0x00158BDC File Offset: 0x00156DDC
+		// Token: 0x0600484B RID: 18507 RVA: 0x00158CB4 File Offset: 0x00156EB4
 		private void OnEnable()
 		{
 			if (this.useLossyScale)
@@ -16,7 +16,7 @@ namespace GorillaTagScripts.Builder
 			}
 		}
 
-		// Token: 0x0600484B RID: 18507 RVA: 0x00158BF8 File Offset: 0x00156DF8
+		// Token: 0x0600484C RID: 18508 RVA: 0x00158CD0 File Offset: 0x00156ED0
 		private void LateUpdate()
 		{
 			if (this.setScaleNextFrame && Time.frameCount > this.enableFrame)
@@ -29,7 +29,7 @@ namespace GorillaTagScripts.Builder
 			}
 		}
 
-		// Token: 0x0600484C RID: 18508 RVA: 0x00158C34 File Offset: 0x00156E34
+		// Token: 0x0600484D RID: 18509 RVA: 0x00158D0C File Offset: 0x00156F0C
 		private void OnDisable()
 		{
 			if (this.useLossyScale)
@@ -38,7 +38,7 @@ namespace GorillaTagScripts.Builder
 			}
 		}
 
-		// Token: 0x0600484D RID: 18509 RVA: 0x00158C44 File Offset: 0x00156E44
+		// Token: 0x0600484E RID: 18510 RVA: 0x00158D1C File Offset: 0x00156F1C
 		public void SetScale(float inScale)
 		{
 			bool isPlaying = this.system.isPlaying;
@@ -145,7 +145,7 @@ namespace GorillaTagScripts.Builder
 			this.shouldRevert = true;
 		}
 
-		// Token: 0x0600484E RID: 18510 RVA: 0x00158FB4 File Offset: 0x001571B4
+		// Token: 0x0600484F RID: 18511 RVA: 0x0015908C File Offset: 0x0015728C
 		private void ScaleCurve(ref ParticleSystem.MinMaxCurve curve, float scale)
 		{
 			switch (curve.mode)
@@ -166,7 +166,7 @@ namespace GorillaTagScripts.Builder
 			}
 		}
 
-		// Token: 0x0600484F RID: 18511 RVA: 0x0015901C File Offset: 0x0015721C
+		// Token: 0x06004850 RID: 18512 RVA: 0x001590F4 File Offset: 0x001572F4
 		public void RevertScale()
 		{
 			if (!this.shouldRevert)
@@ -212,88 +212,88 @@ namespace GorillaTagScripts.Builder
 			this.shouldRevert = false;
 		}
 
-		// Token: 0x04004AC8 RID: 19144
+		// Token: 0x04004AC9 RID: 19145
 		private float scale = 1f;
 
-		// Token: 0x04004AC9 RID: 19145
+		// Token: 0x04004ACA RID: 19146
 		[Tooltip("Scale particles on enable using lossy scale")]
 		[SerializeField]
 		private bool useLossyScale;
 
-		// Token: 0x04004ACA RID: 19146
+		// Token: 0x04004ACB RID: 19147
 		[Tooltip("Play particles after scaling")]
 		[SerializeField]
 		private bool autoPlay;
 
-		// Token: 0x04004ACB RID: 19147
+		// Token: 0x04004ACC RID: 19148
 		[SerializeField]
 		private ParticleSystem system;
 
-		// Token: 0x04004ACC RID: 19148
+		// Token: 0x04004ACD RID: 19149
 		[SerializeField]
 		private bool scaleShape;
 
-		// Token: 0x04004ACD RID: 19149
+		// Token: 0x04004ACE RID: 19150
 		[SerializeField]
 		private bool scaleVelocityLifetime;
 
-		// Token: 0x04004ACE RID: 19150
+		// Token: 0x04004ACF RID: 19151
 		[SerializeField]
 		private bool scaleVelocityLimitLifetime;
 
-		// Token: 0x04004ACF RID: 19151
+		// Token: 0x04004AD0 RID: 19152
 		[SerializeField]
 		private bool scaleForceOverLife;
 
-		// Token: 0x04004AD0 RID: 19152
+		// Token: 0x04004AD1 RID: 19153
 		private float gravityMod = 1f;
 
-		// Token: 0x04004AD1 RID: 19153
+		// Token: 0x04004AD2 RID: 19154
 		private ParticleSystem.MinMaxCurve speedCurveCache;
 
-		// Token: 0x04004AD2 RID: 19154
+		// Token: 0x04004AD3 RID: 19155
 		private ParticleSystem.MinMaxCurve sizeCurveCache;
 
-		// Token: 0x04004AD3 RID: 19155
+		// Token: 0x04004AD4 RID: 19156
 		private ParticleSystem.MinMaxCurve sizeCurveXCache;
 
-		// Token: 0x04004AD4 RID: 19156
+		// Token: 0x04004AD5 RID: 19157
 		private ParticleSystem.MinMaxCurve sizeCurveYCache;
 
-		// Token: 0x04004AD5 RID: 19157
+		// Token: 0x04004AD6 RID: 19158
 		private ParticleSystem.MinMaxCurve sizeCurveZCache;
 
-		// Token: 0x04004AD6 RID: 19158
+		// Token: 0x04004AD7 RID: 19159
 		private ParticleSystem.MinMaxCurve forceX;
 
-		// Token: 0x04004AD7 RID: 19159
+		// Token: 0x04004AD8 RID: 19160
 		private ParticleSystem.MinMaxCurve forceY;
 
-		// Token: 0x04004AD8 RID: 19160
+		// Token: 0x04004AD9 RID: 19161
 		private ParticleSystem.MinMaxCurve forceZ;
 
-		// Token: 0x04004AD9 RID: 19161
+		// Token: 0x04004ADA RID: 19162
 		private Vector3 shapeScale = Vector3.one;
 
-		// Token: 0x04004ADA RID: 19162
+		// Token: 0x04004ADB RID: 19163
 		private ParticleSystem.MinMaxCurve lifetimeVelocityX;
 
-		// Token: 0x04004ADB RID: 19163
+		// Token: 0x04004ADC RID: 19164
 		private ParticleSystem.MinMaxCurve lifetimeVelocityY;
 
-		// Token: 0x04004ADC RID: 19164
+		// Token: 0x04004ADD RID: 19165
 		private ParticleSystem.MinMaxCurve lifetimeVelocityZ;
 
-		// Token: 0x04004ADD RID: 19165
+		// Token: 0x04004ADE RID: 19166
 		private float limitMultiplier = 1f;
 
-		// Token: 0x04004ADE RID: 19166
+		// Token: 0x04004ADF RID: 19167
 		private bool shouldRevert;
 
-		// Token: 0x04004ADF RID: 19167
+		// Token: 0x04004AE0 RID: 19168
 		private bool setScaleNextFrame;
 
-		// Token: 0x04004AE0 RID: 19168
+		// Token: 0x04004AE1 RID: 19169
 		private int enableFrame;
 	}
 }

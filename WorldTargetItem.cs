@@ -5,13 +5,13 @@ using UnityEngine;
 // Token: 0x020003C0 RID: 960
 public class WorldTargetItem
 {
-	// Token: 0x0600164C RID: 5708 RVA: 0x0006C3FC File Offset: 0x0006A5FC
+	// Token: 0x0600164C RID: 5708 RVA: 0x0006C41C File Offset: 0x0006A61C
 	public bool IsValid()
 	{
 		return this.itemIdx != -1 && this.owner != null;
 	}
 
-	// Token: 0x0600164D RID: 5709 RVA: 0x0006C414 File Offset: 0x0006A614
+	// Token: 0x0600164D RID: 5709 RVA: 0x0006C434 File Offset: 0x0006A634
 	[CanBeNull]
 	public static WorldTargetItem GenerateTargetFromPlayerAndID(NetPlayer owner, int itemIdx)
 	{
@@ -25,13 +25,13 @@ public class WorldTargetItem
 		return new WorldTargetItem(owner, itemIdx, component);
 	}
 
-	// Token: 0x0600164E RID: 5710 RVA: 0x0006C45C File Offset: 0x0006A65C
+	// Token: 0x0600164E RID: 5710 RVA: 0x0006C47C File Offset: 0x0006A67C
 	public static WorldTargetItem GenerateTargetFromWorldSharableItem(NetPlayer owner, int itemIdx, Transform transform)
 	{
 		return new WorldTargetItem(owner, itemIdx, transform);
 	}
 
-	// Token: 0x0600164F RID: 5711 RVA: 0x0006C466 File Offset: 0x0006A666
+	// Token: 0x0600164F RID: 5711 RVA: 0x0006C486 File Offset: 0x0006A686
 	private WorldTargetItem(NetPlayer owner, int itemIdx, Transform transform)
 	{
 		this.owner = owner;
@@ -40,7 +40,7 @@ public class WorldTargetItem
 		this.transferrableObject = transform.GetComponent<TransferrableObject>();
 	}
 
-	// Token: 0x06001650 RID: 5712 RVA: 0x0006C48F File Offset: 0x0006A68F
+	// Token: 0x06001650 RID: 5712 RVA: 0x0006C4AF File Offset: 0x0006A6AF
 	public override string ToString()
 	{
 		return string.Format("Id: {0} ({1})", this.itemIdx, this.owner);

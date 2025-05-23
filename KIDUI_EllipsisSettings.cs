@@ -4,6 +4,6 @@
 [Serializable]
 public struct KIDUI_EllipsisSettings
 {
-	// Token: 0x04003986 RID: 14726
+	// Token: 0x04003987 RID: 14727
 	public float startingSize;
 }

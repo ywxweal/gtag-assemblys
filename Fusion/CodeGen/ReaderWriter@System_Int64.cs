@@ -8,7 +8,7 @@ namespace Fusion.CodeGen
 	[PreserveInPlugin]
 	internal struct ReaderWriter@System_Int64 : IElementReaderWriter<long>
 	{
-		// Token: 0x06005DBE RID: 23998 RVA: 0x001CD2C1 File Offset: 0x001CB4C1
+		// Token: 0x06005DBF RID: 23999 RVA: 0x001CD399 File Offset: 0x001CB599
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		[PreserveInPlugin]
 		[WeaverGenerated]
@@ -17,7 +17,7 @@ namespace Fusion.CodeGen
 			return *(long*)(data + index * 8);
 		}
 
-		// Token: 0x06005DBF RID: 23999 RVA: 0x001CD2CD File Offset: 0x001CB4CD
+		// Token: 0x06005DC0 RID: 24000 RVA: 0x001CD3A5 File Offset: 0x001CB5A5
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		[PreserveInPlugin]
 		[WeaverGenerated]
@@ -26,7 +26,7 @@ namespace Fusion.CodeGen
 			return ref *(long*)(data + index * 8);
 		}
 
-		// Token: 0x06005DC0 RID: 24000 RVA: 0x001CD2D8 File Offset: 0x001CB4D8
+		// Token: 0x06005DC1 RID: 24001 RVA: 0x001CD3B0 File Offset: 0x001CB5B0
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		[PreserveInPlugin]
 		[WeaverGenerated]
@@ -35,7 +35,7 @@ namespace Fusion.CodeGen
 			*(long*)(data + index * 8) = val;
 		}
 
-		// Token: 0x06005DC1 RID: 24001 RVA: 0x000121FB File Offset: 0x000103FB
+		// Token: 0x06005DC2 RID: 24002 RVA: 0x000121FB File Offset: 0x000103FB
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		[PreserveInPlugin]
 		[WeaverGenerated]
@@ -44,7 +44,7 @@ namespace Fusion.CodeGen
 			return 2;
 		}
 
-		// Token: 0x06005DC2 RID: 24002 RVA: 0x001CD2E8 File Offset: 0x001CB4E8
+		// Token: 0x06005DC3 RID: 24003 RVA: 0x001CD3C0 File Offset: 0x001CB5C0
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		[PreserveInPlugin]
 		[WeaverGenerated]
@@ -53,7 +53,7 @@ namespace Fusion.CodeGen
 			return val.GetHashCode();
 		}
 
-		// Token: 0x06005DC3 RID: 24003 RVA: 0x001CD2FC File Offset: 0x001CB4FC
+		// Token: 0x06005DC4 RID: 24004 RVA: 0x001CD3D4 File Offset: 0x001CB5D4
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		[WeaverGenerated]
 		public static IElementReaderWriter<long> GetInstance()
@@ -65,7 +65,7 @@ namespace Fusion.CodeGen
 			return ReaderWriter@System_Int64.Instance;
 		}
 
-		// Token: 0x04006283 RID: 25219
+		// Token: 0x04006284 RID: 25220
 		[WeaverGenerated]
 		public static IElementReaderWriter<long> Instance;
 	}

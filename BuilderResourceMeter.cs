@@ -6,7 +6,7 @@ using UnityEngine.Serialization;
 // Token: 0x0200050A RID: 1290
 public class BuilderResourceMeter : MonoBehaviour
 {
-	// Token: 0x06001F4F RID: 8015 RVA: 0x0009D050 File Offset: 0x0009B250
+	// Token: 0x06001F4F RID: 8015 RVA: 0x0009D070 File Offset: 0x0009B270
 	private void Awake()
 	{
 		this.fillColor = this.resourceColors.GetColorForType(this._resourceType);
@@ -19,7 +19,7 @@ public class BuilderResourceMeter : MonoBehaviour
 		this.fillAmount = this.fillTarget;
 	}
 
-	// Token: 0x06001F50 RID: 8016 RVA: 0x0009D0CC File Offset: 0x0009B2CC
+	// Token: 0x06001F50 RID: 8016 RVA: 0x0009D0EC File Offset: 0x0009B2EC
 	private void Start()
 	{
 		ZoneManagement instance = ZoneManagement.instance;
@@ -27,7 +27,7 @@ public class BuilderResourceMeter : MonoBehaviour
 		this.OnZoneChanged();
 	}
 
-	// Token: 0x06001F51 RID: 8017 RVA: 0x0009D0FA File Offset: 0x0009B2FA
+	// Token: 0x06001F51 RID: 8017 RVA: 0x0009D11A File Offset: 0x0009B31A
 	private void OnDestroy()
 	{
 		if (ZoneManagement.instance != null)
@@ -37,7 +37,7 @@ public class BuilderResourceMeter : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001F52 RID: 8018 RVA: 0x0009D130 File Offset: 0x0009B330
+	// Token: 0x06001F52 RID: 8018 RVA: 0x0009D150 File Offset: 0x0009B350
 	private void OnZoneChanged()
 	{
 		bool flag = ZoneManagement.instance.IsZoneActive(GTZone.monkeBlocks);
@@ -56,7 +56,7 @@ public class BuilderResourceMeter : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001F53 RID: 8019 RVA: 0x0009D194 File Offset: 0x0009B394
+	// Token: 0x06001F53 RID: 8019 RVA: 0x0009D1B4 File Offset: 0x0009B3B4
 	public void OnAvailableResourcesChange()
 	{
 		if (this.table == null || this.table.maxResources == null)
@@ -72,7 +72,7 @@ public class BuilderResourceMeter : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001F54 RID: 8020 RVA: 0x0009D214 File Offset: 0x0009B414
+	// Token: 0x06001F54 RID: 8020 RVA: 0x0009D234 File Offset: 0x0009B434
 	public void UpdateMeterFill()
 	{
 		if (this.animatingMeter)
@@ -82,7 +82,7 @@ public class BuilderResourceMeter : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001F55 RID: 8021 RVA: 0x0009D250 File Offset: 0x0009B450
+	// Token: 0x06001F55 RID: 8021 RVA: 0x0009D270 File Offset: 0x0009B470
 	private void UpdateFill(float newFill)
 	{
 		this.fillAmount = newFill;
@@ -131,7 +131,7 @@ public class BuilderResourceMeter : MonoBehaviour
 		this.emptyCube.enabled = true;
 	}
 
-	// Token: 0x06001F56 RID: 8022 RVA: 0x0009D524 File Offset: 0x0009B724
+	// Token: 0x06001F56 RID: 8022 RVA: 0x0009D544 File Offset: 0x0009B744
 	public void SetNormalizedFillTarget(float fill)
 	{
 		this.fillTarget = Mathf.Clamp(fill, 0f, 1f);

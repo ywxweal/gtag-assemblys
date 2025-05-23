@@ -10,7 +10,7 @@ using UnityEngine;
 public struct HuntData : INetworkStruct
 {
 	// Token: 0x17000314 RID: 788
-	// (get) Token: 0x06001C67 RID: 7271 RVA: 0x0008B00C File Offset: 0x0008920C
+	// (get) Token: 0x06001C67 RID: 7271 RVA: 0x0008B02C File Offset: 0x0008922C
 	[Networked]
 	[Capacity(10)]
 	public NetworkArray<int> currentHuntedArray
@@ -22,7 +22,7 @@ public struct HuntData : INetworkStruct
 	}
 
 	// Token: 0x17000315 RID: 789
-	// (get) Token: 0x06001C68 RID: 7272 RVA: 0x0008B034 File Offset: 0x00089234
+	// (get) Token: 0x06001C68 RID: 7272 RVA: 0x0008B054 File Offset: 0x00089254
 	[Networked]
 	[Capacity(10)]
 	public NetworkArray<int> currentTargetArray

@@ -8,7 +8,7 @@ namespace GorillaTagScripts.Builder
 	// Token: 0x02000B96 RID: 2966
 	public class SharedBlocksVotingStation : MonoBehaviour
 	{
-		// Token: 0x0600498D RID: 18829 RVA: 0x0015F56C File Offset: 0x0015D76C
+		// Token: 0x0600498E RID: 18830 RVA: 0x0015F644 File Offset: 0x0015D844
 		private void Start()
 		{
 			BuilderTable builderTable;
@@ -27,7 +27,7 @@ namespace GorillaTagScripts.Builder
 			this.downVoteButton.onPressButton.AddListener(new UnityAction(this.OnDownVotePressed));
 		}
 
-		// Token: 0x0600498E RID: 18830 RVA: 0x0015F620 File Offset: 0x0015D820
+		// Token: 0x0600498F RID: 18831 RVA: 0x0015F6F8 File Offset: 0x0015D8F8
 		private void OnDestroy()
 		{
 			this.upVoteButton.onPressButton.RemoveListener(new UnityAction(this.OnUpVotePressed));
@@ -39,7 +39,7 @@ namespace GorillaTagScripts.Builder
 			}
 		}
 
-		// Token: 0x0600498F RID: 18831 RVA: 0x0015F6AC File Offset: 0x0015D8AC
+		// Token: 0x06004990 RID: 18832 RVA: 0x0015F784 File Offset: 0x0015D984
 		private void OnUpVotePressed()
 		{
 			if (this.voteInProgress)
@@ -59,7 +59,7 @@ namespace GorillaTagScripts.Builder
 			}
 		}
 
-		// Token: 0x06004990 RID: 18832 RVA: 0x0015F76C File Offset: 0x0015D96C
+		// Token: 0x06004991 RID: 18833 RVA: 0x0015F844 File Offset: 0x0015DA44
 		private void OnDownVotePressed()
 		{
 			if (this.voteInProgress)
@@ -79,7 +79,7 @@ namespace GorillaTagScripts.Builder
 			}
 		}
 
-		// Token: 0x06004991 RID: 18833 RVA: 0x0015F82C File Offset: 0x0015DA2C
+		// Token: 0x06004992 RID: 18834 RVA: 0x0015F904 File Offset: 0x0015DB04
 		private void OnVoteResponse(bool success, string message)
 		{
 			this.voteInProgress = false;
@@ -104,7 +104,7 @@ namespace GorillaTagScripts.Builder
 			this.waitingToClearStatus = true;
 		}
 
-		// Token: 0x06004992 RID: 18834 RVA: 0x0015F8ED File Offset: 0x0015DAED
+		// Token: 0x06004993 RID: 18835 RVA: 0x0015F9C5 File Offset: 0x0015DBC5
 		private void LateUpdate()
 		{
 			if (this.waitingToClearStatus && Time.time > this.clearStatusTime)
@@ -115,7 +115,7 @@ namespace GorillaTagScripts.Builder
 			}
 		}
 
-		// Token: 0x06004993 RID: 18835 RVA: 0x0015F92C File Offset: 0x0015DB2C
+		// Token: 0x06004994 RID: 18836 RVA: 0x0015FA04 File Offset: 0x0015DC04
 		private void OnLoadedMapChanged(string mapID)
 		{
 			this.loadedMapID = mapID;
@@ -123,7 +123,7 @@ namespace GorillaTagScripts.Builder
 			this.UpdateScreen();
 		}
 
-		// Token: 0x06004994 RID: 18836 RVA: 0x0015F94C File Offset: 0x0015DB4C
+		// Token: 0x06004995 RID: 18837 RVA: 0x0015FA24 File Offset: 0x0015DC24
 		private void OnMapCleared()
 		{
 			this.loadedMapID = null;
@@ -131,7 +131,7 @@ namespace GorillaTagScripts.Builder
 			this.UpdateScreen();
 		}
 
-		// Token: 0x06004995 RID: 18837 RVA: 0x0015F96C File Offset: 0x0015DB6C
+		// Token: 0x06004996 RID: 18838 RVA: 0x0015FA44 File Offset: 0x0015DC44
 		private void UpdateScreen()
 		{
 			if (!this.loadedMapID.IsNullOrEmpty() && SharedBlocksManager.IsMapIDValid(this.loadedMapID))
@@ -150,50 +150,50 @@ namespace GorillaTagScripts.Builder
 			this.downVoteButton.buttonRenderer.material = this.buttonDisabledMaterial;
 		}
 
-		// Token: 0x04004C5E RID: 19550
+		// Token: 0x04004C5F RID: 19551
 		[SerializeField]
 		private TMP_Text screenText;
 
-		// Token: 0x04004C5F RID: 19551
+		// Token: 0x04004C60 RID: 19552
 		[SerializeField]
 		private TMP_Text statusText;
 
-		// Token: 0x04004C60 RID: 19552
+		// Token: 0x04004C61 RID: 19553
 		[SerializeField]
 		private GorillaPressableButton upVoteButton;
 
-		// Token: 0x04004C61 RID: 19553
+		// Token: 0x04004C62 RID: 19554
 		[SerializeField]
 		private GorillaPressableButton downVoteButton;
 
-		// Token: 0x04004C62 RID: 19554
+		// Token: 0x04004C63 RID: 19555
 		[SerializeField]
 		private GTZone tableZone = GTZone.monkeBlocksShared;
 
-		// Token: 0x04004C63 RID: 19555
+		// Token: 0x04004C64 RID: 19556
 		[SerializeField]
 		private Material buttonDefaultMaterial;
 
-		// Token: 0x04004C64 RID: 19556
+		// Token: 0x04004C65 RID: 19557
 		[SerializeField]
 		private Material buttonDisabledMaterial;
 
-		// Token: 0x04004C65 RID: 19557
+		// Token: 0x04004C66 RID: 19558
 		private BuilderTable table;
 
-		// Token: 0x04004C66 RID: 19558
+		// Token: 0x04004C67 RID: 19559
 		private string loadedMapID = string.Empty;
 
-		// Token: 0x04004C67 RID: 19559
+		// Token: 0x04004C68 RID: 19560
 		private bool voteInProgress;
 
-		// Token: 0x04004C68 RID: 19560
+		// Token: 0x04004C69 RID: 19561
 		private bool waitingToClearStatus;
 
-		// Token: 0x04004C69 RID: 19561
+		// Token: 0x04004C6A RID: 19562
 		private float clearStatusTime;
 
-		// Token: 0x04004C6A RID: 19562
+		// Token: 0x04004C6B RID: 19563
 		private float clearStatusDelay = 2f;
 	}
 }

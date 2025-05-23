@@ -6,10 +6,10 @@ namespace TagEffects
 	[Serializable]
 	public class TagEffectsComboResult
 	{
-		// Token: 0x040053B7 RID: 21431
+		// Token: 0x040053B8 RID: 21432
 		public TagEffectsCombo input;
 
-		// Token: 0x040053B8 RID: 21432
+		// Token: 0x040053B9 RID: 21433
 		public TagEffectPack[] output;
 	}
 }

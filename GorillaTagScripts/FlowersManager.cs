@@ -12,11 +12,11 @@ namespace GorillaTagScripts
 	public class FlowersManager : NetworkComponent
 	{
 		// Token: 0x170006BA RID: 1722
-		// (get) Token: 0x0600451E RID: 17694 RVA: 0x00147619 File Offset: 0x00145819
-		// (set) Token: 0x0600451F RID: 17695 RVA: 0x00147620 File Offset: 0x00145820
+		// (get) Token: 0x0600451F RID: 17695 RVA: 0x001476F1 File Offset: 0x001458F1
+		// (set) Token: 0x06004520 RID: 17696 RVA: 0x001476F8 File Offset: 0x001458F8
 		public static FlowersManager Instance { get; private set; }
 
-		// Token: 0x06004520 RID: 17696 RVA: 0x00147628 File Offset: 0x00145828
+		// Token: 0x06004521 RID: 17697 RVA: 0x00147700 File Offset: 0x00145900
 		protected override void Awake()
 		{
 			base.Awake();
@@ -45,7 +45,7 @@ namespace GorillaTagScripts
 			}
 		}
 
-		// Token: 0x06004521 RID: 17697 RVA: 0x0014774C File Offset: 0x0014594C
+		// Token: 0x06004522 RID: 17698 RVA: 0x00147824 File Offset: 0x00145A24
 		private new void Start()
 		{
 			NetworkSystem.Instance.RegisterSceneNetworkItem(base.gameObject);
@@ -60,7 +60,7 @@ namespace GorillaTagScripts
 			}
 		}
 
-		// Token: 0x06004522 RID: 17698 RVA: 0x001477E0 File Offset: 0x001459E0
+		// Token: 0x06004523 RID: 17699 RVA: 0x001478B8 File Offset: 0x00145AB8
 		private void OnDestroy()
 		{
 			NetworkBehaviourUtils.InternalOnDestroy(this);
@@ -76,7 +76,7 @@ namespace GorillaTagScripts
 			instance.onZoneChanged = (Action)Delegate.Remove(instance.onZoneChanged, new Action(this.HandleOnZoneChanged));
 		}
 
-		// Token: 0x06004523 RID: 17699 RVA: 0x00147853 File Offset: 0x00145A53
+		// Token: 0x06004524 RID: 17700 RVA: 0x0014792B File Offset: 0x00145B2B
 		private void ProjectileHitReceiver(SlingshotProjectile projectile, Collider collider)
 		{
 			if (!projectile.CompareTag("WaterBalloonProjectile"))
@@ -86,7 +86,7 @@ namespace GorillaTagScripts
 			this.WaterFlowers(collider);
 		}
 
-		// Token: 0x06004524 RID: 17700 RVA: 0x0014786C File Offset: 0x00145A6C
+		// Token: 0x06004525 RID: 17701 RVA: 0x00147944 File Offset: 0x00145B44
 		private void WaterFlowers(Collider collider)
 		{
 			if (!base.IsMine)
@@ -105,7 +105,7 @@ namespace GorillaTagScripts
 			}
 		}
 
-		// Token: 0x06004525 RID: 17701 RVA: 0x001478E8 File Offset: 0x00145AE8
+		// Token: 0x06004526 RID: 17702 RVA: 0x001479C0 File Offset: 0x00145BC0
 		private void HandleOnZoneChanged()
 		{
 			foreach (KeyValuePair<GameObject, GTZone> keyValuePair in this.sectionToZonesDict)
@@ -118,7 +118,7 @@ namespace GorillaTagScripts
 			}
 		}
 
-		// Token: 0x06004526 RID: 17702 RVA: 0x00147994 File Offset: 0x00145B94
+		// Token: 0x06004527 RID: 17703 RVA: 0x00147A6C File Offset: 0x00145C6C
 		public int GetHealthyFlowersInZoneCount(GTZone zone)
 		{
 			int num = 0;
@@ -141,7 +141,7 @@ namespace GorillaTagScripts
 			return num;
 		}
 
-		// Token: 0x06004527 RID: 17703 RVA: 0x00147A40 File Offset: 0x00145C40
+		// Token: 0x06004528 RID: 17704 RVA: 0x00147B18 File Offset: 0x00145D18
 		protected override void WriteDataPUN(PhotonStream stream, PhotonMessageInfo info)
 		{
 			if (info.Sender != PhotonNetwork.MasterClient)
@@ -156,7 +156,7 @@ namespace GorillaTagScripts
 			}
 		}
 
-		// Token: 0x06004528 RID: 17704 RVA: 0x00147AC0 File Offset: 0x00145CC0
+		// Token: 0x06004529 RID: 17705 RVA: 0x00147B98 File Offset: 0x00145D98
 		protected override void ReadDataPUN(PhotonStream stream, PhotonMessageInfo info)
 		{
 			if (info.Sender != PhotonNetwork.MasterClient)
@@ -177,8 +177,8 @@ namespace GorillaTagScripts
 		}
 
 		// Token: 0x170006BB RID: 1723
-		// (get) Token: 0x06004529 RID: 17705 RVA: 0x00147B33 File Offset: 0x00145D33
-		// (set) Token: 0x0600452A RID: 17706 RVA: 0x00147B5D File Offset: 0x00145D5D
+		// (get) Token: 0x0600452A RID: 17706 RVA: 0x00147C0B File Offset: 0x00145E0B
+		// (set) Token: 0x0600452B RID: 17707 RVA: 0x00147C35 File Offset: 0x00145E35
 		[Networked]
 		[NetworkedWeaved(0, 13)]
 		private unsafe FlowersDataStruct Data
@@ -201,7 +201,7 @@ namespace GorillaTagScripts
 			}
 		}
 
-		// Token: 0x0600452B RID: 17707 RVA: 0x00147B88 File Offset: 0x00145D88
+		// Token: 0x0600452C RID: 17708 RVA: 0x00147C60 File Offset: 0x00145E60
 		public override void WriteDataFusion()
 		{
 			if (base.HasStateAuthority)
@@ -210,7 +210,7 @@ namespace GorillaTagScripts
 			}
 		}
 
-		// Token: 0x0600452C RID: 17708 RVA: 0x00147BA4 File Offset: 0x00145DA4
+		// Token: 0x0600452D RID: 17709 RVA: 0x00147C7C File Offset: 0x00145E7C
 		public override void ReadDataFusion()
 		{
 			if (this.Data.FlowerCount > 0)
@@ -228,7 +228,7 @@ namespace GorillaTagScripts
 			}
 		}
 
-		// Token: 0x0600452D RID: 17709 RVA: 0x00147C3C File Offset: 0x00145E3C
+		// Token: 0x0600452E RID: 17710 RVA: 0x00147D14 File Offset: 0x00145F14
 		private void Update()
 		{
 			int num = this.flowerCheckIndex + 1;
@@ -240,7 +240,7 @@ namespace GorillaTagScripts
 			this.flowerCheckIndex = ((this.flowerCheckIndex + this.flowersToCheck >= this.allFlowers.Count) ? 0 : (this.flowerCheckIndex + this.flowersToCheck));
 		}
 
-		// Token: 0x0600452F RID: 17711 RVA: 0x00147CE7 File Offset: 0x00145EE7
+		// Token: 0x06004530 RID: 17712 RVA: 0x00147DBF File Offset: 0x00145FBF
 		[WeaverGenerated]
 		public override void CopyBackingFieldsToState(bool A_1)
 		{
@@ -248,7 +248,7 @@ namespace GorillaTagScripts
 			this.Data = this._Data;
 		}
 
-		// Token: 0x06004530 RID: 17712 RVA: 0x00147CFF File Offset: 0x00145EFF
+		// Token: 0x06004531 RID: 17713 RVA: 0x00147DD7 File Offset: 0x00145FD7
 		[WeaverGenerated]
 		public override void CopyStateToBackingFields()
 		{
@@ -256,31 +256,31 @@ namespace GorillaTagScripts
 			this._Data = this.Data;
 		}
 
-		// Token: 0x040047D9 RID: 18393
+		// Token: 0x040047DA RID: 18394
 		public List<FlowersManager.FlowersInZone> sections;
 
-		// Token: 0x040047DA RID: 18394
+		// Token: 0x040047DB RID: 18395
 		public int flowersToCheck = 1;
 
-		// Token: 0x040047DB RID: 18395
+		// Token: 0x040047DC RID: 18396
 		public int flowerCheckIndex;
 
-		// Token: 0x040047DC RID: 18396
+		// Token: 0x040047DD RID: 18397
 		private readonly List<Flower> allFlowers = new List<Flower>();
 
-		// Token: 0x040047DD RID: 18397
+		// Token: 0x040047DE RID: 18398
 		private SlingshotProjectileHitNotifier[] hitNotifiers;
 
-		// Token: 0x040047DE RID: 18398
+		// Token: 0x040047DF RID: 18399
 		private readonly Dictionary<GameObject, List<Flower>> sectionToFlowersDict = new Dictionary<GameObject, List<Flower>>();
 
-		// Token: 0x040047DF RID: 18399
+		// Token: 0x040047E0 RID: 18400
 		private readonly Dictionary<GameObject, GTZone> sectionToZonesDict = new Dictionary<GameObject, GTZone>();
 
-		// Token: 0x040047E0 RID: 18400
+		// Token: 0x040047E1 RID: 18401
 		private bool hasBeenSerialized;
 
-		// Token: 0x040047E1 RID: 18401
+		// Token: 0x040047E2 RID: 18402
 		[WeaverGenerated]
 		[DefaultForProperty("Data", 0, 13)]
 		[DrawIf("IsEditorWritable", true, CompareOperator.Equal, DrawIfMode.ReadOnly)]
@@ -290,10 +290,10 @@ namespace GorillaTagScripts
 		[Serializable]
 		public class FlowersInZone
 		{
-			// Token: 0x040047E2 RID: 18402
+			// Token: 0x040047E3 RID: 18403
 			public GTZone zone;
 
-			// Token: 0x040047E3 RID: 18403
+			// Token: 0x040047E4 RID: 18404
 			public List<GameObject> sections;
 		}
 	}

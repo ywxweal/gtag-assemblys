@@ -9,8 +9,8 @@ namespace Fusion.CodeGen
 	internal class UnityLinkedListSurrogate@ReaderWriter@System_Single : UnityLinkedListSurrogate<float, ReaderWriter@System_Single>
 	{
 		// Token: 0x1700092A RID: 2346
-		// (get) Token: 0x06005DFD RID: 24061 RVA: 0x001CD65C File Offset: 0x001CB85C
-		// (set) Token: 0x06005DFE RID: 24062 RVA: 0x001CD664 File Offset: 0x001CB864
+		// (get) Token: 0x06005DFE RID: 24062 RVA: 0x001CD734 File Offset: 0x001CB934
+		// (set) Token: 0x06005DFF RID: 24063 RVA: 0x001CD73C File Offset: 0x001CB93C
 		[WeaverGenerated]
 		public override float[] DataProperty
 		{
@@ -26,13 +26,13 @@ namespace Fusion.CodeGen
 			}
 		}
 
-		// Token: 0x06005DFF RID: 24063 RVA: 0x001CD66D File Offset: 0x001CB86D
+		// Token: 0x06005E00 RID: 24064 RVA: 0x001CD745 File Offset: 0x001CB945
 		[WeaverGenerated]
 		public UnityLinkedListSurrogate@ReaderWriter@System_Single()
 		{
 		}
 
-		// Token: 0x040064C9 RID: 25801
+		// Token: 0x040064CA RID: 25802
 		[WeaverGenerated]
 		public float[] Data = Array.Empty<float>();
 	}

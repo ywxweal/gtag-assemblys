@@ -10,7 +10,7 @@ namespace GameObjectScheduling
 	public class GameObjectSchedule : ScriptableObject
 	{
 		// Token: 0x170008DA RID: 2266
-		// (get) Token: 0x06005AA3 RID: 23203 RVA: 0x001B97BE File Offset: 0x001B79BE
+		// (get) Token: 0x06005AA4 RID: 23204 RVA: 0x001B9896 File Offset: 0x001B7A96
 		public GameObjectSchedule.GameObjectScheduleNode[] Nodes
 		{
 			get
@@ -20,7 +20,7 @@ namespace GameObjectScheduling
 		}
 
 		// Token: 0x170008DB RID: 2267
-		// (get) Token: 0x06005AA4 RID: 23204 RVA: 0x001B97C6 File Offset: 0x001B79C6
+		// (get) Token: 0x06005AA5 RID: 23205 RVA: 0x001B989E File Offset: 0x001B7A9E
 		public bool InitialState
 		{
 			get
@@ -29,7 +29,7 @@ namespace GameObjectScheduling
 			}
 		}
 
-		// Token: 0x06005AA5 RID: 23205 RVA: 0x001B97D0 File Offset: 0x001B79D0
+		// Token: 0x06005AA6 RID: 23206 RVA: 0x001B98A8 File Offset: 0x001B7AA8
 		public int GetCurrentNodeIndex(DateTime currentDate, int startFrom = 0)
 		{
 			if (startFrom >= this.nodes.Length)
@@ -46,7 +46,7 @@ namespace GameObjectScheduling
 			return int.MaxValue;
 		}
 
-		// Token: 0x06005AA6 RID: 23206 RVA: 0x001B9821 File Offset: 0x001B7A21
+		// Token: 0x06005AA7 RID: 23207 RVA: 0x001B98F9 File Offset: 0x001B7AF9
 		public void Validate()
 		{
 			if (this.validated)
@@ -57,7 +57,7 @@ namespace GameObjectScheduling
 			this.validated = true;
 		}
 
-		// Token: 0x06005AA7 RID: 23207 RVA: 0x001B983C File Offset: 0x001B7A3C
+		// Token: 0x06005AA8 RID: 23208 RVA: 0x001B9914 File Offset: 0x001B7B14
 		private void _validate()
 		{
 			for (int i = 0; i < this.nodes.Length; i++)
@@ -69,7 +69,7 @@ namespace GameObjectScheduling
 			this.nodes = list.ToArray();
 		}
 
-		// Token: 0x06005AA8 RID: 23208 RVA: 0x001B98A8 File Offset: 0x001B7AA8
+		// Token: 0x06005AA9 RID: 23209 RVA: 0x001B9980 File Offset: 0x001B7B80
 		public static void GenerateDailyShuffle(DateTime startDate, DateTime endDate, GameObjectSchedule[] schedules)
 		{
 			TimeSpan timeSpan = TimeSpan.FromDays(1.0);
@@ -125,19 +125,19 @@ namespace GameObjectScheduling
 			}
 		}
 
-		// Token: 0x04005EB4 RID: 24244
+		// Token: 0x04005EB5 RID: 24245
 		[SerializeField]
 		private bool initialState;
 
-		// Token: 0x04005EB5 RID: 24245
+		// Token: 0x04005EB6 RID: 24246
 		[SerializeField]
 		private GameObjectSchedule.GameObjectScheduleNode[] nodes;
 
-		// Token: 0x04005EB6 RID: 24246
+		// Token: 0x04005EB7 RID: 24247
 		[SerializeField]
 		private SchedulingOptions options;
 
-		// Token: 0x04005EB7 RID: 24247
+		// Token: 0x04005EB8 RID: 24248
 		private bool validated;
 
 		// Token: 0x02000E27 RID: 3623
@@ -145,7 +145,7 @@ namespace GameObjectScheduling
 		public class GameObjectScheduleNode
 		{
 			// Token: 0x170008DC RID: 2268
-			// (get) Token: 0x06005AAA RID: 23210 RVA: 0x001B99DF File Offset: 0x001B7BDF
+			// (get) Token: 0x06005AAB RID: 23211 RVA: 0x001B9AB7 File Offset: 0x001B7CB7
 			public bool ActiveState
 			{
 				get
@@ -155,7 +155,7 @@ namespace GameObjectScheduling
 			}
 
 			// Token: 0x170008DD RID: 2269
-			// (get) Token: 0x06005AAB RID: 23211 RVA: 0x001B99E7 File Offset: 0x001B7BE7
+			// (get) Token: 0x06005AAC RID: 23212 RVA: 0x001B9ABF File Offset: 0x001B7CBF
 			public DateTime DateTime
 			{
 				get
@@ -164,7 +164,7 @@ namespace GameObjectScheduling
 				}
 			}
 
-			// Token: 0x06005AAC RID: 23212 RVA: 0x001B99F0 File Offset: 0x001B7BF0
+			// Token: 0x06005AAD RID: 23213 RVA: 0x001B9AC8 File Offset: 0x001B7CC8
 			public void Validate()
 			{
 				try
@@ -177,16 +177,16 @@ namespace GameObjectScheduling
 				}
 			}
 
-			// Token: 0x04005EB8 RID: 24248
+			// Token: 0x04005EB9 RID: 24249
 			[SerializeField]
 			public string activeDateTime = "1/1/0001 00:00:00";
 
-			// Token: 0x04005EB9 RID: 24249
+			// Token: 0x04005EBA RID: 24250
 			[SerializeField]
 			[Tooltip("Check to turn on. Uncheck to turn off.")]
 			public bool activeState = true;
 
-			// Token: 0x04005EBA RID: 24250
+			// Token: 0x04005EBB RID: 24251
 			private DateTime dateTime;
 		}
 	}

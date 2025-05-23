@@ -6,7 +6,7 @@ using UnityEngine;
 public static class AnimationCurves
 {
 	// Token: 0x1700048D RID: 1165
-	// (get) Token: 0x06002EA1 RID: 11937 RVA: 0x000E90E0 File Offset: 0x000E72E0
+	// (get) Token: 0x06002EA2 RID: 11938 RVA: 0x000E9184 File Offset: 0x000E7384
 	public static AnimationCurve EaseInQuad
 	{
 		get
@@ -20,7 +20,7 @@ public static class AnimationCurves
 	}
 
 	// Token: 0x1700048E RID: 1166
-	// (get) Token: 0x06002EA2 RID: 11938 RVA: 0x000E914C File Offset: 0x000E734C
+	// (get) Token: 0x06002EA3 RID: 11939 RVA: 0x000E91F0 File Offset: 0x000E73F0
 	public static AnimationCurve EaseOutQuad
 	{
 		get
@@ -34,7 +34,7 @@ public static class AnimationCurves
 	}
 
 	// Token: 0x1700048F RID: 1167
-	// (get) Token: 0x06002EA3 RID: 11939 RVA: 0x000E91B8 File Offset: 0x000E73B8
+	// (get) Token: 0x06002EA4 RID: 11940 RVA: 0x000E925C File Offset: 0x000E745C
 	public static AnimationCurve EaseInOutQuad
 	{
 		get
@@ -49,7 +49,7 @@ public static class AnimationCurves
 	}
 
 	// Token: 0x17000490 RID: 1168
-	// (get) Token: 0x06002EA4 RID: 11940 RVA: 0x000E9250 File Offset: 0x000E7450
+	// (get) Token: 0x06002EA5 RID: 11941 RVA: 0x000E92F4 File Offset: 0x000E74F4
 	public static AnimationCurve EaseInCubic
 	{
 		get
@@ -63,7 +63,7 @@ public static class AnimationCurves
 	}
 
 	// Token: 0x17000491 RID: 1169
-	// (get) Token: 0x06002EA5 RID: 11941 RVA: 0x000E92BC File Offset: 0x000E74BC
+	// (get) Token: 0x06002EA6 RID: 11942 RVA: 0x000E9360 File Offset: 0x000E7560
 	public static AnimationCurve EaseOutCubic
 	{
 		get
@@ -77,7 +77,7 @@ public static class AnimationCurves
 	}
 
 	// Token: 0x17000492 RID: 1170
-	// (get) Token: 0x06002EA6 RID: 11942 RVA: 0x000E9328 File Offset: 0x000E7528
+	// (get) Token: 0x06002EA7 RID: 11943 RVA: 0x000E93CC File Offset: 0x000E75CC
 	public static AnimationCurve EaseInOutCubic
 	{
 		get
@@ -92,7 +92,7 @@ public static class AnimationCurves
 	}
 
 	// Token: 0x17000493 RID: 1171
-	// (get) Token: 0x06002EA7 RID: 11943 RVA: 0x000E93C0 File Offset: 0x000E75C0
+	// (get) Token: 0x06002EA8 RID: 11944 RVA: 0x000E9464 File Offset: 0x000E7664
 	public static AnimationCurve EaseInQuart
 	{
 		get
@@ -106,7 +106,7 @@ public static class AnimationCurves
 	}
 
 	// Token: 0x17000494 RID: 1172
-	// (get) Token: 0x06002EA8 RID: 11944 RVA: 0x000E942C File Offset: 0x000E762C
+	// (get) Token: 0x06002EA9 RID: 11945 RVA: 0x000E94D0 File Offset: 0x000E76D0
 	public static AnimationCurve EaseOutQuart
 	{
 		get
@@ -120,7 +120,7 @@ public static class AnimationCurves
 	}
 
 	// Token: 0x17000495 RID: 1173
-	// (get) Token: 0x06002EA9 RID: 11945 RVA: 0x000E9498 File Offset: 0x000E7698
+	// (get) Token: 0x06002EAA RID: 11946 RVA: 0x000E953C File Offset: 0x000E773C
 	public static AnimationCurve EaseInOutQuart
 	{
 		get
@@ -135,7 +135,7 @@ public static class AnimationCurves
 	}
 
 	// Token: 0x17000496 RID: 1174
-	// (get) Token: 0x06002EAA RID: 11946 RVA: 0x000E9530 File Offset: 0x000E7730
+	// (get) Token: 0x06002EAB RID: 11947 RVA: 0x000E95D4 File Offset: 0x000E77D4
 	public static AnimationCurve EaseInQuint
 	{
 		get
@@ -149,7 +149,7 @@ public static class AnimationCurves
 	}
 
 	// Token: 0x17000497 RID: 1175
-	// (get) Token: 0x06002EAB RID: 11947 RVA: 0x000E959C File Offset: 0x000E779C
+	// (get) Token: 0x06002EAC RID: 11948 RVA: 0x000E9640 File Offset: 0x000E7840
 	public static AnimationCurve EaseOutQuint
 	{
 		get
@@ -163,7 +163,7 @@ public static class AnimationCurves
 	}
 
 	// Token: 0x17000498 RID: 1176
-	// (get) Token: 0x06002EAC RID: 11948 RVA: 0x000E9608 File Offset: 0x000E7808
+	// (get) Token: 0x06002EAD RID: 11949 RVA: 0x000E96AC File Offset: 0x000E78AC
 	public static AnimationCurve EaseInOutQuint
 	{
 		get
@@ -178,7 +178,7 @@ public static class AnimationCurves
 	}
 
 	// Token: 0x17000499 RID: 1177
-	// (get) Token: 0x06002EAD RID: 11949 RVA: 0x000E96A0 File Offset: 0x000E78A0
+	// (get) Token: 0x06002EAE RID: 11950 RVA: 0x000E9744 File Offset: 0x000E7944
 	public static AnimationCurve EaseInSine
 	{
 		get
@@ -192,7 +192,7 @@ public static class AnimationCurves
 	}
 
 	// Token: 0x1700049A RID: 1178
-	// (get) Token: 0x06002EAE RID: 11950 RVA: 0x000E970C File Offset: 0x000E790C
+	// (get) Token: 0x06002EAF RID: 11951 RVA: 0x000E97B0 File Offset: 0x000E79B0
 	public static AnimationCurve EaseOutSine
 	{
 		get
@@ -206,7 +206,7 @@ public static class AnimationCurves
 	}
 
 	// Token: 0x1700049B RID: 1179
-	// (get) Token: 0x06002EAF RID: 11951 RVA: 0x000E9778 File Offset: 0x000E7978
+	// (get) Token: 0x06002EB0 RID: 11952 RVA: 0x000E981C File Offset: 0x000E7A1C
 	public static AnimationCurve EaseInOutSine
 	{
 		get
@@ -221,7 +221,7 @@ public static class AnimationCurves
 	}
 
 	// Token: 0x1700049C RID: 1180
-	// (get) Token: 0x06002EB0 RID: 11952 RVA: 0x000E9810 File Offset: 0x000E7A10
+	// (get) Token: 0x06002EB1 RID: 11953 RVA: 0x000E98B4 File Offset: 0x000E7AB4
 	public static AnimationCurve EaseInExpo
 	{
 		get
@@ -235,7 +235,7 @@ public static class AnimationCurves
 	}
 
 	// Token: 0x1700049D RID: 1181
-	// (get) Token: 0x06002EB1 RID: 11953 RVA: 0x000E987C File Offset: 0x000E7A7C
+	// (get) Token: 0x06002EB2 RID: 11954 RVA: 0x000E9920 File Offset: 0x000E7B20
 	public static AnimationCurve EaseOutExpo
 	{
 		get
@@ -249,7 +249,7 @@ public static class AnimationCurves
 	}
 
 	// Token: 0x1700049E RID: 1182
-	// (get) Token: 0x06002EB2 RID: 11954 RVA: 0x000E98E8 File Offset: 0x000E7AE8
+	// (get) Token: 0x06002EB3 RID: 11955 RVA: 0x000E998C File Offset: 0x000E7B8C
 	public static AnimationCurve EaseInOutExpo
 	{
 		get
@@ -264,7 +264,7 @@ public static class AnimationCurves
 	}
 
 	// Token: 0x1700049F RID: 1183
-	// (get) Token: 0x06002EB3 RID: 11955 RVA: 0x000E9980 File Offset: 0x000E7B80
+	// (get) Token: 0x06002EB4 RID: 11956 RVA: 0x000E9A24 File Offset: 0x000E7C24
 	public static AnimationCurve EaseInCirc
 	{
 		get
@@ -278,7 +278,7 @@ public static class AnimationCurves
 	}
 
 	// Token: 0x170004A0 RID: 1184
-	// (get) Token: 0x06002EB4 RID: 11956 RVA: 0x000E99EC File Offset: 0x000E7BEC
+	// (get) Token: 0x06002EB5 RID: 11957 RVA: 0x000E9A90 File Offset: 0x000E7C90
 	public static AnimationCurve EaseOutCirc
 	{
 		get
@@ -292,7 +292,7 @@ public static class AnimationCurves
 	}
 
 	// Token: 0x170004A1 RID: 1185
-	// (get) Token: 0x06002EB5 RID: 11957 RVA: 0x000E9A58 File Offset: 0x000E7C58
+	// (get) Token: 0x06002EB6 RID: 11958 RVA: 0x000E9AFC File Offset: 0x000E7CFC
 	public static AnimationCurve EaseInOutCirc
 	{
 		get
@@ -307,7 +307,7 @@ public static class AnimationCurves
 	}
 
 	// Token: 0x170004A2 RID: 1186
-	// (get) Token: 0x06002EB6 RID: 11958 RVA: 0x000E9AF0 File Offset: 0x000E7CF0
+	// (get) Token: 0x06002EB7 RID: 11959 RVA: 0x000E9B94 File Offset: 0x000E7D94
 	public static AnimationCurve EaseInBounce
 	{
 		get
@@ -324,7 +324,7 @@ public static class AnimationCurves
 	}
 
 	// Token: 0x170004A3 RID: 1187
-	// (get) Token: 0x06002EB7 RID: 11959 RVA: 0x000E9BDC File Offset: 0x000E7DDC
+	// (get) Token: 0x06002EB8 RID: 11960 RVA: 0x000E9C80 File Offset: 0x000E7E80
 	public static AnimationCurve EaseOutBounce
 	{
 		get
@@ -341,7 +341,7 @@ public static class AnimationCurves
 	}
 
 	// Token: 0x170004A4 RID: 1188
-	// (get) Token: 0x06002EB8 RID: 11960 RVA: 0x000E9CC8 File Offset: 0x000E7EC8
+	// (get) Token: 0x06002EB9 RID: 11961 RVA: 0x000E9D6C File Offset: 0x000E7F6C
 	public static AnimationCurve EaseInOutBounce
 	{
 		get
@@ -362,7 +362,7 @@ public static class AnimationCurves
 	}
 
 	// Token: 0x170004A5 RID: 1189
-	// (get) Token: 0x06002EB9 RID: 11961 RVA: 0x000E9E5C File Offset: 0x000E805C
+	// (get) Token: 0x06002EBA RID: 11962 RVA: 0x000E9F00 File Offset: 0x000E8100
 	public static AnimationCurve EaseInBack
 	{
 		get
@@ -376,7 +376,7 @@ public static class AnimationCurves
 	}
 
 	// Token: 0x170004A6 RID: 1190
-	// (get) Token: 0x06002EBA RID: 11962 RVA: 0x000E9EC8 File Offset: 0x000E80C8
+	// (get) Token: 0x06002EBB RID: 11963 RVA: 0x000E9F6C File Offset: 0x000E816C
 	public static AnimationCurve EaseOutBack
 	{
 		get
@@ -390,7 +390,7 @@ public static class AnimationCurves
 	}
 
 	// Token: 0x170004A7 RID: 1191
-	// (get) Token: 0x06002EBB RID: 11963 RVA: 0x000E9F34 File Offset: 0x000E8134
+	// (get) Token: 0x06002EBC RID: 11964 RVA: 0x000E9FD8 File Offset: 0x000E81D8
 	public static AnimationCurve EaseInOutBack
 	{
 		get
@@ -405,7 +405,7 @@ public static class AnimationCurves
 	}
 
 	// Token: 0x170004A8 RID: 1192
-	// (get) Token: 0x06002EBC RID: 11964 RVA: 0x000E9FCC File Offset: 0x000E81CC
+	// (get) Token: 0x06002EBD RID: 11965 RVA: 0x000EA070 File Offset: 0x000E8270
 	public static AnimationCurve EaseInElastic
 	{
 		get
@@ -422,7 +422,7 @@ public static class AnimationCurves
 	}
 
 	// Token: 0x170004A9 RID: 1193
-	// (get) Token: 0x06002EBD RID: 11965 RVA: 0x000EA0B8 File Offset: 0x000E82B8
+	// (get) Token: 0x06002EBE RID: 11966 RVA: 0x000EA15C File Offset: 0x000E835C
 	public static AnimationCurve EaseOutElastic
 	{
 		get
@@ -439,7 +439,7 @@ public static class AnimationCurves
 	}
 
 	// Token: 0x170004AA RID: 1194
-	// (get) Token: 0x06002EBE RID: 11966 RVA: 0x000EA1A4 File Offset: 0x000E83A4
+	// (get) Token: 0x06002EBF RID: 11967 RVA: 0x000EA248 File Offset: 0x000E8448
 	public static AnimationCurve EaseInOutElastic
 	{
 		get
@@ -460,7 +460,7 @@ public static class AnimationCurves
 	}
 
 	// Token: 0x170004AB RID: 1195
-	// (get) Token: 0x06002EBF RID: 11967 RVA: 0x000EA338 File Offset: 0x000E8538
+	// (get) Token: 0x06002EC0 RID: 11968 RVA: 0x000EA3DC File Offset: 0x000E85DC
 	public static AnimationCurve Spring
 	{
 		get
@@ -478,7 +478,7 @@ public static class AnimationCurves
 	}
 
 	// Token: 0x170004AC RID: 1196
-	// (get) Token: 0x06002EC0 RID: 11968 RVA: 0x000EA44C File Offset: 0x000E864C
+	// (get) Token: 0x06002EC1 RID: 11969 RVA: 0x000EA4F0 File Offset: 0x000E86F0
 	public static AnimationCurve Linear
 	{
 		get
@@ -492,7 +492,7 @@ public static class AnimationCurves
 	}
 
 	// Token: 0x170004AD RID: 1197
-	// (get) Token: 0x06002EC1 RID: 11969 RVA: 0x000EA4B8 File Offset: 0x000E86B8
+	// (get) Token: 0x06002EC2 RID: 11970 RVA: 0x000EA55C File Offset: 0x000E875C
 	public static AnimationCurve Step
 	{
 		get
@@ -507,7 +507,7 @@ public static class AnimationCurves
 		}
 	}
 
-	// Token: 0x06002EC2 RID: 11970 RVA: 0x000EA578 File Offset: 0x000E8778
+	// Token: 0x06002EC3 RID: 11971 RVA: 0x000EA61C File Offset: 0x000E881C
 	static AnimationCurves()
 	{
 		Dictionary<AnimationCurves.EaseType, AnimationCurve> dictionary = new Dictionary<AnimationCurves.EaseType, AnimationCurve>();
@@ -547,83 +547,83 @@ public static class AnimationCurves
 		AnimationCurves.gEaseTypeToCurve = dictionary;
 	}
 
-	// Token: 0x06002EC3 RID: 11971 RVA: 0x000EA734 File Offset: 0x000E8934
+	// Token: 0x06002EC4 RID: 11972 RVA: 0x000EA7D8 File Offset: 0x000E89D8
 	public static AnimationCurve GetCurveForEase(AnimationCurves.EaseType ease)
 	{
 		return AnimationCurves.gEaseTypeToCurve[ease];
 	}
 
-	// Token: 0x04003527 RID: 13607
+	// Token: 0x04003529 RID: 13609
 	private static Dictionary<AnimationCurves.EaseType, AnimationCurve> gEaseTypeToCurve;
 
 	// Token: 0x0200074B RID: 1867
 	public enum EaseType
 	{
-		// Token: 0x04003529 RID: 13609
-		EaseInQuad = 1,
-		// Token: 0x0400352A RID: 13610
-		EaseOutQuad,
 		// Token: 0x0400352B RID: 13611
-		EaseInOutQuad,
+		EaseInQuad = 1,
 		// Token: 0x0400352C RID: 13612
-		EaseInCubic,
+		EaseOutQuad,
 		// Token: 0x0400352D RID: 13613
-		EaseOutCubic,
+		EaseInOutQuad,
 		// Token: 0x0400352E RID: 13614
-		EaseInOutCubic,
+		EaseInCubic,
 		// Token: 0x0400352F RID: 13615
-		EaseInQuart,
+		EaseOutCubic,
 		// Token: 0x04003530 RID: 13616
-		EaseOutQuart,
+		EaseInOutCubic,
 		// Token: 0x04003531 RID: 13617
-		EaseInOutQuart,
+		EaseInQuart,
 		// Token: 0x04003532 RID: 13618
-		EaseInQuint,
+		EaseOutQuart,
 		// Token: 0x04003533 RID: 13619
-		EaseOutQuint,
+		EaseInOutQuart,
 		// Token: 0x04003534 RID: 13620
-		EaseInOutQuint,
+		EaseInQuint,
 		// Token: 0x04003535 RID: 13621
-		EaseInSine,
+		EaseOutQuint,
 		// Token: 0x04003536 RID: 13622
-		EaseOutSine,
+		EaseInOutQuint,
 		// Token: 0x04003537 RID: 13623
-		EaseInOutSine,
+		EaseInSine,
 		// Token: 0x04003538 RID: 13624
-		EaseInExpo,
+		EaseOutSine,
 		// Token: 0x04003539 RID: 13625
-		EaseOutExpo,
+		EaseInOutSine,
 		// Token: 0x0400353A RID: 13626
-		EaseInOutExpo,
+		EaseInExpo,
 		// Token: 0x0400353B RID: 13627
-		EaseInCirc,
+		EaseOutExpo,
 		// Token: 0x0400353C RID: 13628
-		EaseOutCirc,
+		EaseInOutExpo,
 		// Token: 0x0400353D RID: 13629
-		EaseInOutCirc,
+		EaseInCirc,
 		// Token: 0x0400353E RID: 13630
-		EaseInBounce,
+		EaseOutCirc,
 		// Token: 0x0400353F RID: 13631
-		EaseOutBounce,
+		EaseInOutCirc,
 		// Token: 0x04003540 RID: 13632
-		EaseInOutBounce,
+		EaseInBounce,
 		// Token: 0x04003541 RID: 13633
-		EaseInBack,
+		EaseOutBounce,
 		// Token: 0x04003542 RID: 13634
-		EaseOutBack,
+		EaseInOutBounce,
 		// Token: 0x04003543 RID: 13635
-		EaseInOutBack,
+		EaseInBack,
 		// Token: 0x04003544 RID: 13636
-		EaseInElastic,
+		EaseOutBack,
 		// Token: 0x04003545 RID: 13637
-		EaseOutElastic,
+		EaseInOutBack,
 		// Token: 0x04003546 RID: 13638
-		EaseInOutElastic,
+		EaseInElastic,
 		// Token: 0x04003547 RID: 13639
-		Spring,
+		EaseOutElastic,
 		// Token: 0x04003548 RID: 13640
-		Linear,
+		EaseInOutElastic,
 		// Token: 0x04003549 RID: 13641
+		Spring,
+		// Token: 0x0400354A RID: 13642
+		Linear,
+		// Token: 0x0400354B RID: 13643
 		Step
 	}
 }

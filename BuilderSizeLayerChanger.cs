@@ -6,7 +6,7 @@ using UnityEngine;
 public class BuilderSizeLayerChanger : MonoBehaviour
 {
 	// Token: 0x17000324 RID: 804
-	// (get) Token: 0x06001E01 RID: 7681 RVA: 0x00091CF4 File Offset: 0x0008FEF4
+	// (get) Token: 0x06001E01 RID: 7681 RVA: 0x00091D14 File Offset: 0x0008FF14
 	public int SizeLayerMask
 	{
 		get
@@ -32,13 +32,13 @@ public class BuilderSizeLayerChanger : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001E02 RID: 7682 RVA: 0x00091D34 File Offset: 0x0008FF34
+	// Token: 0x06001E02 RID: 7682 RVA: 0x00091D54 File Offset: 0x0008FF54
 	private void Awake()
 	{
 		this.minScale = Mathf.Max(this.minScale, 0.01f);
 	}
 
-	// Token: 0x06001E03 RID: 7683 RVA: 0x00091D4C File Offset: 0x0008FF4C
+	// Token: 0x06001E03 RID: 7683 RVA: 0x00091D6C File Offset: 0x0008FF6C
 	public void OnTriggerEnter(Collider other)
 	{
 		if (other != GTPlayer.Instance.bodyCollider)
@@ -60,7 +60,7 @@ public class BuilderSizeLayerChanger : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001E04 RID: 7684 RVA: 0x00091DD8 File Offset: 0x0008FFD8
+	// Token: 0x06001E04 RID: 7684 RVA: 0x00091DF8 File Offset: 0x0008FFF8
 	public void OnTriggerExit(Collider other)
 	{
 		if (other != GTPlayer.Instance.bodyCollider)

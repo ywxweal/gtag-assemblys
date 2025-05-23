@@ -5,13 +5,13 @@ using UnityEngine;
 // Token: 0x020003B3 RID: 947
 public class SlingshotProjectileTrail : MonoBehaviour
 {
-	// Token: 0x06001630 RID: 5680 RVA: 0x0006BAF8 File Offset: 0x00069CF8
+	// Token: 0x06001630 RID: 5680 RVA: 0x0006BB18 File Offset: 0x00069D18
 	private void Awake()
 	{
 		this.initialWidthMultiplier = this.trailRenderer.widthMultiplier;
 	}
 
-	// Token: 0x06001631 RID: 5681 RVA: 0x0006BB0C File Offset: 0x00069D0C
+	// Token: 0x06001631 RID: 5681 RVA: 0x0006BB2C File Offset: 0x00069D2C
 	public void AttachTrail(GameObject obj, bool blueTeam, bool redTeam)
 	{
 		this.followObject = obj;
@@ -37,7 +37,7 @@ public class SlingshotProjectileTrail : MonoBehaviour
 		this.timeToDie = -1f;
 	}
 
-	// Token: 0x06001632 RID: 5682 RVA: 0x0006BBD4 File Offset: 0x00069DD4
+	// Token: 0x06001632 RID: 5682 RVA: 0x0006BBF4 File Offset: 0x00069DF4
 	protected void LateUpdate()
 	{
 		if (this.followObject.IsNull())
@@ -57,7 +57,7 @@ public class SlingshotProjectileTrail : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001633 RID: 5683 RVA: 0x0006BC90 File Offset: 0x00069E90
+	// Token: 0x06001633 RID: 5683 RVA: 0x0006BCB0 File Offset: 0x00069EB0
 	public void SetColor(Color color)
 	{
 		TrailRenderer trailRenderer = this.trailRenderer;

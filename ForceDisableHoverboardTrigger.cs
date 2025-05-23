@@ -6,7 +6,7 @@ using UnityEngine;
 // Token: 0x02000710 RID: 1808
 public class ForceDisableHoverboardTrigger : MonoBehaviour
 {
-	// Token: 0x06002D19 RID: 11545 RVA: 0x000DEDBD File Offset: 0x000DCFBD
+	// Token: 0x06002D1A RID: 11546 RVA: 0x000DEE61 File Offset: 0x000DD061
 	public void OnTriggerEnter(Collider other)
 	{
 		if (other == GTPlayer.Instance.headCollider)
@@ -16,7 +16,7 @@ public class ForceDisableHoverboardTrigger : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06002D1A RID: 11546 RVA: 0x000DEDF0 File Offset: 0x000DCFF0
+	// Token: 0x06002D1B RID: 11547 RVA: 0x000DEE94 File Offset: 0x000DD094
 	public void OnTriggerExit(Collider other)
 	{
 		if (!this.reEnableOnExit || !this.wasEnabled)
@@ -33,13 +33,13 @@ public class ForceDisableHoverboardTrigger : MonoBehaviour
 		}
 	}
 
-	// Token: 0x0400335E RID: 13150
+	// Token: 0x04003360 RID: 13152
 	[Tooltip("If TRUE and the Hoverboard was enabled when the player entered this trigger, it will be re-enabled when they exit.")]
 	public bool reEnableOnExit = true;
 
-	// Token: 0x0400335F RID: 13151
+	// Token: 0x04003361 RID: 13153
 	public bool reEnableOnlyInVStump = true;
 
-	// Token: 0x04003360 RID: 13152
+	// Token: 0x04003362 RID: 13154
 	private bool wasEnabled;
 }

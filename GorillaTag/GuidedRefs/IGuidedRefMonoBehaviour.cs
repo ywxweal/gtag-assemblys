@@ -7,7 +7,7 @@ namespace GorillaTag.GuidedRefs
 	public interface IGuidedRefMonoBehaviour : IGuidedRefObject
 	{
 		// Token: 0x1700088D RID: 2189
-		// (get) Token: 0x06005599 RID: 21913
+		// (get) Token: 0x0600559A RID: 21914
 		Transform transform { get; }
 	}
 }

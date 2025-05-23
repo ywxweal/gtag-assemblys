@@ -7,7 +7,7 @@ using UnityEngine;
 internal class HandEffectContext : IFXEffectContextObject
 {
 	// Token: 0x1700029D RID: 669
-	// (get) Token: 0x060017C9 RID: 6089 RVA: 0x000741A3 File Offset: 0x000723A3
+	// (get) Token: 0x060017C9 RID: 6089 RVA: 0x000741C3 File Offset: 0x000723C3
 	public int[] PrefabPoolIds
 	{
 		get
@@ -17,7 +17,7 @@ internal class HandEffectContext : IFXEffectContextObject
 	}
 
 	// Token: 0x1700029E RID: 670
-	// (get) Token: 0x060017CA RID: 6090 RVA: 0x000741AB File Offset: 0x000723AB
+	// (get) Token: 0x060017CA RID: 6090 RVA: 0x000741CB File Offset: 0x000723CB
 	public Vector3 Positon
 	{
 		get
@@ -27,7 +27,7 @@ internal class HandEffectContext : IFXEffectContextObject
 	}
 
 	// Token: 0x1700029F RID: 671
-	// (get) Token: 0x060017CB RID: 6091 RVA: 0x000741B3 File Offset: 0x000723B3
+	// (get) Token: 0x060017CB RID: 6091 RVA: 0x000741D3 File Offset: 0x000723D3
 	public Quaternion Rotation
 	{
 		get
@@ -37,7 +37,7 @@ internal class HandEffectContext : IFXEffectContextObject
 	}
 
 	// Token: 0x170002A0 RID: 672
-	// (get) Token: 0x060017CC RID: 6092 RVA: 0x000741BB File Offset: 0x000723BB
+	// (get) Token: 0x060017CC RID: 6092 RVA: 0x000741DB File Offset: 0x000723DB
 	public AudioSource SoundSource
 	{
 		get
@@ -47,7 +47,7 @@ internal class HandEffectContext : IFXEffectContextObject
 	}
 
 	// Token: 0x170002A1 RID: 673
-	// (get) Token: 0x060017CD RID: 6093 RVA: 0x000741C3 File Offset: 0x000723C3
+	// (get) Token: 0x060017CD RID: 6093 RVA: 0x000741E3 File Offset: 0x000723E3
 	public AudioClip Sound
 	{
 		get
@@ -57,7 +57,7 @@ internal class HandEffectContext : IFXEffectContextObject
 	}
 
 	// Token: 0x170002A2 RID: 674
-	// (get) Token: 0x060017CE RID: 6094 RVA: 0x000741CB File Offset: 0x000723CB
+	// (get) Token: 0x060017CE RID: 6094 RVA: 0x000741EB File Offset: 0x000723EB
 	public float Volume
 	{
 		get
@@ -66,7 +66,7 @@ internal class HandEffectContext : IFXEffectContextObject
 		}
 	}
 
-	// Token: 0x060017CF RID: 6095 RVA: 0x000741D4 File Offset: 0x000723D4
+	// Token: 0x060017CF RID: 6095 RVA: 0x000741F4 File Offset: 0x000723F4
 	public void OnPlayVisualFX(int fxID, GameObject fx)
 	{
 		FXModifier fxmodifier;

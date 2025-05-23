@@ -8,7 +8,7 @@ namespace GorillaExtensions
 	// Token: 0x02000CFD RID: 3325
 	public static class GTTryFindByExactPath
 	{
-		// Token: 0x06005377 RID: 21367 RVA: 0x00195218 File Offset: 0x00193418
+		// Token: 0x06005378 RID: 21368 RVA: 0x001952F0 File Offset: 0x001934F0
 		public static bool WithSiblingIndexAndTypeName<T>(string path, out T out_component) where T : Component
 		{
 			out_component = default(T);
@@ -85,7 +85,7 @@ namespace GorillaExtensions
 			return out_component != null;
 		}
 
-		// Token: 0x06005378 RID: 21368 RVA: 0x00195398 File Offset: 0x00193598
+		// Token: 0x06005379 RID: 21369 RVA: 0x00195470 File Offset: 0x00193670
 		private static bool WithSiblingIndex<T>(string xformPath, out T component) where T : Component
 		{
 			component = default(T);
@@ -98,7 +98,7 @@ namespace GorillaExtensions
 			return false;
 		}
 
-		// Token: 0x06005379 RID: 21369 RVA: 0x001953D8 File Offset: 0x001935D8
+		// Token: 0x0600537A RID: 21370 RVA: 0x001954B0 File Offset: 0x001936B0
 		public static bool XformWithSiblingIndex(string xformPath, out Transform finalXform)
 		{
 			finalXform = null;

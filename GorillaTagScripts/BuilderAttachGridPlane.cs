@@ -7,7 +7,7 @@ namespace GorillaTagScripts
 	// Token: 0x02000AD8 RID: 2776
 	public class BuilderAttachGridPlane : MonoBehaviour
 	{
-		// Token: 0x06004321 RID: 17185 RVA: 0x00135F2A File Offset: 0x0013412A
+		// Token: 0x06004322 RID: 17186 RVA: 0x00136002 File Offset: 0x00134202
 		private void Awake()
 		{
 			if (this.center == null)
@@ -16,7 +16,7 @@ namespace GorillaTagScripts
 			}
 		}
 
-		// Token: 0x06004322 RID: 17186 RVA: 0x00135F48 File Offset: 0x00134148
+		// Token: 0x06004323 RID: 17187 RVA: 0x00136020 File Offset: 0x00134220
 		public void Setup(BuilderPiece piece, int attachIndex, float gridSize)
 		{
 			this.piece = piece;
@@ -33,7 +33,7 @@ namespace GorillaTagScripts
 			this.childPieceCount = 0;
 		}
 
-		// Token: 0x06004323 RID: 17187 RVA: 0x00136034 File Offset: 0x00134234
+		// Token: 0x06004324 RID: 17188 RVA: 0x0013610C File Offset: 0x0013430C
 		public void OnReturnToPool(BuilderPool pool)
 		{
 			SnapOverlap nextOverlap = this.firstOverlap;
@@ -56,7 +56,7 @@ namespace GorillaTagScripts
 			this.childPieceCount = 0;
 		}
 
-		// Token: 0x06004324 RID: 17188 RVA: 0x001360B4 File Offset: 0x001342B4
+		// Token: 0x06004325 RID: 17189 RVA: 0x0013618C File Offset: 0x0013438C
 		public Vector3 GetGridPosition(int x, int z, float gridSize)
 		{
 			float num = ((this.width % 2 == 0) ? (gridSize / 2f) : 0f);
@@ -64,13 +64,13 @@ namespace GorillaTagScripts
 			return this.center.position + this.center.rotation * new Vector3((float)x * gridSize - num, (this.male ? 0.002f : (-0.002f)) * gridSize, (float)z * gridSize - num2);
 		}
 
-		// Token: 0x06004325 RID: 17189 RVA: 0x0013613A File Offset: 0x0013433A
+		// Token: 0x06004326 RID: 17190 RVA: 0x00136212 File Offset: 0x00134412
 		public int GetChildCount()
 		{
 			return this.childPieceCount;
 		}
 
-		// Token: 0x06004326 RID: 17190 RVA: 0x00136144 File Offset: 0x00134344
+		// Token: 0x06004327 RID: 17191 RVA: 0x0013621C File Offset: 0x0013441C
 		public void ChangeChildPieceCount(int delta)
 		{
 			this.childPieceCount += delta;
@@ -85,7 +85,7 @@ namespace GorillaTagScripts
 			this.piece.parentPiece.gridPlanes[this.piece.parentAttachIndex].ChangeChildPieceCount(delta);
 		}
 
-		// Token: 0x06004327 RID: 17191 RVA: 0x001361CA File Offset: 0x001343CA
+		// Token: 0x06004328 RID: 17192 RVA: 0x001362A2 File Offset: 0x001344A2
 		public void AddSnapOverlap(SnapOverlap newOverlap)
 		{
 			if (this.firstOverlap == null)
@@ -100,7 +100,7 @@ namespace GorillaTagScripts
 			this.SetConnected(newOverlap.bounds, true);
 		}
 
-		// Token: 0x06004328 RID: 17192 RVA: 0x00136200 File Offset: 0x00134400
+		// Token: 0x06004329 RID: 17193 RVA: 0x001362D8 File Offset: 0x001344D8
 		public void RemoveSnapsWithDifferentRoot(BuilderPiece root, BuilderPool pool)
 		{
 			if (this.firstOverlap == null)
@@ -156,7 +156,7 @@ namespace GorillaTagScripts
 			}
 		}
 
-		// Token: 0x06004329 RID: 17193 RVA: 0x00136318 File Offset: 0x00134518
+		// Token: 0x0600432A RID: 17194 RVA: 0x001363F0 File Offset: 0x001345F0
 		public void RemoveSnapsWithPiece(BuilderPiece piece, BuilderPool pool)
 		{
 			if (this.firstOverlap == null)
@@ -211,7 +211,7 @@ namespace GorillaTagScripts
 			}
 		}
 
-		// Token: 0x0600432A RID: 17194 RVA: 0x00136418 File Offset: 0x00134618
+		// Token: 0x0600432B RID: 17195 RVA: 0x001364F0 File Offset: 0x001346F0
 		private void SetConnected(SnapBounds bounds, bool connect)
 		{
 			int num = this.width / 2 - ((this.width % 2 == 0) ? 1 : 0);
@@ -235,7 +235,7 @@ namespace GorillaTagScripts
 			}
 		}
 
-		// Token: 0x0600432B RID: 17195 RVA: 0x001364E8 File Offset: 0x001346E8
+		// Token: 0x0600432C RID: 17196 RVA: 0x001365C0 File Offset: 0x001347C0
 		public bool IsConnected(SnapBounds bounds)
 		{
 			int num = this.width / 2 - ((this.width % 2 == 0) ? 1 : 0);
@@ -263,7 +263,7 @@ namespace GorillaTagScripts
 			return false;
 		}
 
-		// Token: 0x0600432C RID: 17196 RVA: 0x001365BC File Offset: 0x001347BC
+		// Token: 0x0600432D RID: 17197 RVA: 0x00136694 File Offset: 0x00134894
 		public void CalcGridOverlap(BuilderAttachGridPlane otherGridPlane, Vector3 otherPieceLocalPos, Quaternion otherPieceLocalRot, float gridSize, out Vector2Int min, out Vector2Int max)
 		{
 			int num = otherGridPlane.width;
@@ -297,18 +297,18 @@ namespace GorillaTagScripts
 			max = new Vector2Int(Mathf.Min(num11, num15), Mathf.Min(num12, num16));
 		}
 
-		// Token: 0x0600432D RID: 17197 RVA: 0x000023F4 File Offset: 0x000005F4
+		// Token: 0x0600432E RID: 17198 RVA: 0x000023F4 File Offset: 0x000005F4
 		protected virtual void OnDrawGizmosSelected()
 		{
 		}
 
-		// Token: 0x0600432E RID: 17198 RVA: 0x00136780 File Offset: 0x00134980
+		// Token: 0x0600432F RID: 17199 RVA: 0x00136858 File Offset: 0x00134A58
 		public bool IsAttachedToMovingGrid()
 		{
 			return this.piece.state == BuilderPiece.State.AttachedAndPlaced && !this.piece.isBuiltIntoTable && (this.isMoving || (!(this.piece.parentPiece == null) && this.piece.parentAttachIndex >= 0 && this.piece.parentAttachIndex < this.piece.parentPiece.gridPlanes.Count && this.piece.parentPiece.gridPlanes[this.piece.parentAttachIndex].IsAttachedToMovingGrid()));
 		}
 
-		// Token: 0x0600432F RID: 17199 RVA: 0x00136824 File Offset: 0x00134A24
+		// Token: 0x06004330 RID: 17200 RVA: 0x001368FC File Offset: 0x00134AFC
 		public BuilderAttachGridPlane GetMovingParentGrid()
 		{
 			if (this.piece.isBuiltIntoTable)
@@ -330,74 +330,74 @@ namespace GorillaTagScripts
 			return this.piece.parentPiece.gridPlanes[this.piece.parentAttachIndex].GetMovingParentGrid();
 		}
 
-		// Token: 0x040045A0 RID: 17824
+		// Token: 0x040045A1 RID: 17825
 		public bool male;
 
-		// Token: 0x040045A1 RID: 17825
+		// Token: 0x040045A2 RID: 17826
 		public Transform center;
 
-		// Token: 0x040045A2 RID: 17826
+		// Token: 0x040045A3 RID: 17827
 		public int width;
 
-		// Token: 0x040045A3 RID: 17827
-		public int length;
-
 		// Token: 0x040045A4 RID: 17828
-		[NonSerialized]
-		public int gridPlaneDataIndex;
+		public int length;
 
 		// Token: 0x040045A5 RID: 17829
 		[NonSerialized]
-		public BuilderItem item;
+		public int gridPlaneDataIndex;
 
 		// Token: 0x040045A6 RID: 17830
 		[NonSerialized]
-		public BuilderPiece piece;
+		public BuilderItem item;
 
 		// Token: 0x040045A7 RID: 17831
 		[NonSerialized]
-		public int attachIndex;
+		public BuilderPiece piece;
 
 		// Token: 0x040045A8 RID: 17832
 		[NonSerialized]
-		public float boundingRadius;
+		public int attachIndex;
 
 		// Token: 0x040045A9 RID: 17833
 		[NonSerialized]
-		public Vector3 pieceToGridPosition;
+		public float boundingRadius;
 
 		// Token: 0x040045AA RID: 17834
 		[NonSerialized]
-		public Quaternion pieceToGridRotation;
+		public Vector3 pieceToGridPosition;
 
 		// Token: 0x040045AB RID: 17835
 		[NonSerialized]
-		public bool[] connected;
+		public Quaternion pieceToGridRotation;
 
 		// Token: 0x040045AC RID: 17836
 		[NonSerialized]
-		public SnapOverlap firstOverlap;
+		public bool[] connected;
 
 		// Token: 0x040045AD RID: 17837
 		[NonSerialized]
-		public float widthOffset;
+		public SnapOverlap firstOverlap;
 
 		// Token: 0x040045AE RID: 17838
 		[NonSerialized]
-		public float lengthOffset;
+		public float widthOffset;
 
 		// Token: 0x040045AF RID: 17839
-		private int childPieceCount;
+		[NonSerialized]
+		public float lengthOffset;
 
 		// Token: 0x040045B0 RID: 17840
-		[HideInInspector]
-		public bool isMoving;
+		private int childPieceCount;
 
 		// Token: 0x040045B1 RID: 17841
 		[HideInInspector]
-		public bool movesOnPlace;
+		public bool isMoving;
 
 		// Token: 0x040045B2 RID: 17842
+		[HideInInspector]
+		public bool movesOnPlace;
+
+		// Token: 0x040045B3 RID: 17843
 		[HideInInspector]
 		public BuilderMovingPart movingPart;
 	}

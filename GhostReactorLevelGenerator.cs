@@ -6,7 +6,7 @@ using UnityEngine;
 public class GhostReactorLevelGenerator : MonoBehaviour
 {
 	// Token: 0x17000355 RID: 853
-	// (get) Token: 0x0600225C RID: 8796 RVA: 0x000ABC81 File Offset: 0x000A9E81
+	// (get) Token: 0x0600225C RID: 8796 RVA: 0x000ABCA1 File Offset: 0x000A9EA1
 	public int MinSections
 	{
 		get
@@ -16,7 +16,7 @@ public class GhostReactorLevelGenerator : MonoBehaviour
 	}
 
 	// Token: 0x17000356 RID: 854
-	// (get) Token: 0x0600225D RID: 8797 RVA: 0x000ABC89 File Offset: 0x000A9E89
+	// (get) Token: 0x0600225D RID: 8797 RVA: 0x000ABCA9 File Offset: 0x000A9EA9
 	public int MaxSections
 	{
 		get
@@ -25,7 +25,7 @@ public class GhostReactorLevelGenerator : MonoBehaviour
 		}
 	}
 
-	// Token: 0x0600225E RID: 8798 RVA: 0x000ABC91 File Offset: 0x000A9E91
+	// Token: 0x0600225E RID: 8798 RVA: 0x000ABCB1 File Offset: 0x000A9EB1
 	private void Awake()
 	{
 		this.randomGenerator = new SRand(Random.Range(0, int.MaxValue));
@@ -33,7 +33,7 @@ public class GhostReactorLevelGenerator : MonoBehaviour
 		this.levelGeneration.anchorOrderIndices = new List<int>();
 	}
 
-	// Token: 0x0600225F RID: 8799 RVA: 0x000ABCCC File Offset: 0x000A9ECC
+	// Token: 0x0600225F RID: 8799 RVA: 0x000ABCEC File Offset: 0x000A9EEC
 	public void GenerateRandomLevelConfiguration(int sectionsToSpawn, int seed)
 	{
 		this.randomGenerator = new SRand(seed);
@@ -61,7 +61,7 @@ public class GhostReactorLevelGenerator : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06002260 RID: 8800 RVA: 0x000ABE74 File Offset: 0x000AA074
+	// Token: 0x06002260 RID: 8800 RVA: 0x000ABE94 File Offset: 0x000AA094
 	public void SpawnSectionsBasedOnLevelGenerationConfig()
 	{
 		if (this.sectionsSpawned)
@@ -134,7 +134,7 @@ public class GhostReactorLevelGenerator : MonoBehaviour
 		this.sectionsSpawned = true;
 	}
 
-	// Token: 0x06002261 RID: 8801 RVA: 0x000AC1C4 File Offset: 0x000AA3C4
+	// Token: 0x06002261 RID: 8801 RVA: 0x000AC1E4 File Offset: 0x000AA3E4
 	public void SpawnEntitiesInEachSection()
 	{
 		for (int i = 0; i < this.alwaysPresentSections.Count; i++)
@@ -147,7 +147,7 @@ public class GhostReactorLevelGenerator : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06002262 RID: 8802 RVA: 0x000AC22C File Offset: 0x000AA42C
+	// Token: 0x06002262 RID: 8802 RVA: 0x000AC24C File Offset: 0x000AA44C
 	public GRPatrolPath GetPatrolPath(int patrolPathId)
 	{
 		int num = patrolPathId / 100;
@@ -171,7 +171,7 @@ public class GhostReactorLevelGenerator : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06002263 RID: 8803 RVA: 0x000AC2AC File Offset: 0x000AA4AC
+	// Token: 0x06002263 RID: 8803 RVA: 0x000AC2CC File Offset: 0x000AA4CC
 	private void RandomizeIndices(List<int> list, int count)
 	{
 		list.Clear();
@@ -182,7 +182,7 @@ public class GhostReactorLevelGenerator : MonoBehaviour
 		this.randomGenerator.Shuffle<int>(list);
 	}
 
-	// Token: 0x06002264 RID: 8804 RVA: 0x000AC2E0 File Offset: 0x000AA4E0
+	// Token: 0x06002264 RID: 8804 RVA: 0x000AC300 File Offset: 0x000AA500
 	private void SpawnSection(int sectionIndex, int anchorIndex, int connectorIndex, GhostReactorLevelSectionConnector.Direction connectorDirection)
 	{
 		Transform transform = this.sectionAnchors[anchorIndex];
@@ -222,7 +222,7 @@ public class GhostReactorLevelGenerator : MonoBehaviour
 		this.spawnedSections.Add(component);
 	}
 
-	// Token: 0x06002265 RID: 8805 RVA: 0x000AC4F0 File Offset: 0x000AA6F0
+	// Token: 0x06002265 RID: 8805 RVA: 0x000AC510 File Offset: 0x000AA710
 	private void SpawnBlockade(int blockadeIndex, int anchorIndex)
 	{
 		Transform transform = this.sectionAnchors[anchorIndex];
@@ -239,7 +239,7 @@ public class GhostReactorLevelGenerator : MonoBehaviour
 		this.spawnedBlockades.Add(component);
 	}
 
-	// Token: 0x06002266 RID: 8806 RVA: 0x000AC5B8 File Offset: 0x000AA7B8
+	// Token: 0x06002266 RID: 8806 RVA: 0x000AC5D8 File Offset: 0x000AA7D8
 	public void ClearLevelSections()
 	{
 		for (int i = 0; i < this.spawnedSections.Count; i++)
@@ -257,7 +257,7 @@ public class GhostReactorLevelGenerator : MonoBehaviour
 		this.sectionsSpawned = false;
 	}
 
-	// Token: 0x06002267 RID: 8807 RVA: 0x000AC65C File Offset: 0x000AA85C
+	// Token: 0x06002267 RID: 8807 RVA: 0x000AC67C File Offset: 0x000AA87C
 	public void DebugSpawnSection()
 	{
 		if (this.debugSectionToSpawn >= this.sections.Count || this.debugSpawnAnchor >= this.sectionAnchors.Count)
@@ -268,7 +268,7 @@ public class GhostReactorLevelGenerator : MonoBehaviour
 		this.SpawnSection(this.debugSectionToSpawn, this.debugSpawnAnchor, 0, GhostReactorLevelSectionConnector.Direction.Forward);
 	}
 
-	// Token: 0x06002268 RID: 8808 RVA: 0x000AC6AE File Offset: 0x000AA8AE
+	// Token: 0x06002268 RID: 8808 RVA: 0x000AC6CE File Offset: 0x000AA8CE
 	public void DebugClearSpawnedSections()
 	{
 		this.ClearLevelSections();

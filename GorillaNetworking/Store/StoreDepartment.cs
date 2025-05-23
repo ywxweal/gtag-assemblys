@@ -6,7 +6,7 @@ namespace GorillaNetworking.Store
 	// Token: 0x02000C8E RID: 3214
 	public class StoreDepartment : MonoBehaviour
 	{
-		// Token: 0x06004FAA RID: 20394 RVA: 0x0017BE54 File Offset: 0x0017A054
+		// Token: 0x06004FAB RID: 20395 RVA: 0x0017BF2C File Offset: 0x0017A12C
 		private void FindAllDisplays()
 		{
 			this.Displays = base.GetComponentsInChildren<StoreDisplay>();
@@ -20,10 +20,10 @@ namespace GorillaNetworking.Store
 			}
 		}
 
-		// Token: 0x040052C1 RID: 21185
+		// Token: 0x040052C2 RID: 21186
 		public StoreDisplay[] Displays;
 
-		// Token: 0x040052C2 RID: 21186
+		// Token: 0x040052C3 RID: 21187
 		public string departmentName = "";
 	}
 }

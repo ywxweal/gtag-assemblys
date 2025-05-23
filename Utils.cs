@@ -10,7 +10,7 @@ using UnityEngine;
 // Token: 0x020009DF RID: 2527
 public static class Utils
 {
-	// Token: 0x06003C60 RID: 15456 RVA: 0x00120460 File Offset: 0x0011E660
+	// Token: 0x06003C61 RID: 15457 RVA: 0x00120538 File Offset: 0x0011E738
 	public static void Disable(this GameObject target)
 	{
 		if (!target.activeSelf)
@@ -35,7 +35,7 @@ public static class Utils
 		Utils.g_listPool.Return(pooledList);
 	}
 
-	// Token: 0x06003C61 RID: 15457 RVA: 0x001204D8 File Offset: 0x0011E6D8
+	// Token: 0x06003C62 RID: 15458 RVA: 0x001205B0 File Offset: 0x0011E7B0
 	public static void AddIfNew<T>(this List<T> list, T item)
 	{
 		if (!list.Contains(item))
@@ -44,13 +44,13 @@ public static class Utils
 		}
 	}
 
-	// Token: 0x06003C62 RID: 15458 RVA: 0x001204EA File Offset: 0x0011E6EA
+	// Token: 0x06003C63 RID: 15459 RVA: 0x001205C2 File Offset: 0x0011E7C2
 	public static bool InRoom(this NetPlayer player)
 	{
 		return NetworkSystem.Instance.InRoom && NetworkSystem.Instance.AllNetPlayers.Contains(player);
 	}
 
-	// Token: 0x06003C63 RID: 15459 RVA: 0x0012050C File Offset: 0x0011E70C
+	// Token: 0x06003C64 RID: 15460 RVA: 0x001205E4 File Offset: 0x0011E7E4
 	public static bool PlayerInRoom(int actorNumber)
 	{
 		if (NetworkSystem.Instance.InRoom)
@@ -67,14 +67,14 @@ public static class Utils
 		return false;
 	}
 
-	// Token: 0x06003C64 RID: 15460 RVA: 0x0012054C File Offset: 0x0011E74C
+	// Token: 0x06003C65 RID: 15461 RVA: 0x00120624 File Offset: 0x0011E824
 	public static bool PlayerInRoom(int actorNumer, out Player photonPlayer)
 	{
 		photonPlayer = null;
 		return PhotonNetwork.InRoom && PhotonNetwork.CurrentRoom.Players.TryGetValue(actorNumer, out photonPlayer);
 	}
 
-	// Token: 0x06003C65 RID: 15461 RVA: 0x0012056B File Offset: 0x0011E76B
+	// Token: 0x06003C66 RID: 15462 RVA: 0x00120643 File Offset: 0x0011E843
 	public static bool PlayerInRoom(int actorNumber, out NetPlayer player)
 	{
 		if (NetworkSystem.Instance == null)
@@ -86,7 +86,7 @@ public static class Utils
 		return NetworkSystem.Instance.InRoom && player != null;
 	}
 
-	// Token: 0x06003C66 RID: 15462 RVA: 0x001205A0 File Offset: 0x0011E7A0
+	// Token: 0x06003C67 RID: 15463 RVA: 0x00120678 File Offset: 0x0011E878
 	public static long PackVector3ToLong(Vector3 vector)
 	{
 		long num = (long)Mathf.Clamp(Mathf.RoundToInt(vector.x * 1024f) + 1048576, 0, 2097151);
@@ -95,7 +95,7 @@ public static class Utils
 		return num + (num2 << 21) + (num3 << 42);
 	}
 
-	// Token: 0x06003C67 RID: 15463 RVA: 0x00120624 File Offset: 0x0011E824
+	// Token: 0x06003C68 RID: 15464 RVA: 0x001206FC File Offset: 0x0011E8FC
 	public static Vector3 UnpackVector3FromLong(long data)
 	{
 		float num = (float)(data & 2097151L);
@@ -104,23 +104,23 @@ public static class Utils
 		return new Vector3((float)((long)num - 1048576L) * 0.0009765625f, (float)(num2 - 1048576L) * 0.0009765625f, (float)(num3 - 1048576L) * 0.0009765625f);
 	}
 
-	// Token: 0x06003C68 RID: 15464 RVA: 0x00120682 File Offset: 0x0011E882
+	// Token: 0x06003C69 RID: 15465 RVA: 0x0012075A File Offset: 0x0011E95A
 	public static bool IsASCIILetterOrDigit(char c)
 	{
 		return (c >= 'A' && c <= 'Z') || (c >= '0' && c <= '9') || (c >= 'a' && c <= 'z');
 	}
 
-	// Token: 0x06003C69 RID: 15465 RVA: 0x000023F4 File Offset: 0x000005F4
+	// Token: 0x06003C6A RID: 15466 RVA: 0x000023F4 File Offset: 0x000005F4
 	public static void Log(object message)
 	{
 	}
 
-	// Token: 0x06003C6A RID: 15466 RVA: 0x000023F4 File Offset: 0x000005F4
+	// Token: 0x06003C6B RID: 15467 RVA: 0x000023F4 File Offset: 0x000005F4
 	public static void Log(object message, Object context)
 	{
 	}
 
-	// Token: 0x06003C6B RID: 15467 RVA: 0x001206AC File Offset: 0x0011E8AC
+	// Token: 0x06003C6C RID: 15468 RVA: 0x00120784 File Offset: 0x0011E984
 	public static bool ValidateServerTime(double time, double maximumLatency)
 	{
 		double simTime = NetworkSystem.Instance.SimTime;
@@ -146,7 +146,7 @@ public static class Utils
 		return num2 <= maximumLatency;
 	}
 
-	// Token: 0x06003C6C RID: 15468 RVA: 0x0012070C File Offset: 0x0011E90C
+	// Token: 0x06003C6D RID: 15469 RVA: 0x001207E4 File Offset: 0x0011E9E4
 	public static double CalculateNetworkDeltaTime(double prevTime, double newTime)
 	{
 		if (newTime >= prevTime)
@@ -157,9 +157,9 @@ public static class Utils
 		return newTime + num;
 	}
 
-	// Token: 0x0400406C RID: 16492
+	// Token: 0x0400406D RID: 16493
 	private static ObjectPool<PooledList<IPreDisable>> g_listPool = new ObjectPool<PooledList<IPreDisable>>(2, 10);
 
-	// Token: 0x0400406D RID: 16493
+	// Token: 0x0400406E RID: 16494
 	private static StringBuilder reusableSB = new StringBuilder();
 }

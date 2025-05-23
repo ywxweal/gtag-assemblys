@@ -4,7 +4,7 @@ using UnityEngine;
 // Token: 0x02000490 RID: 1168
 public class GorillaBodyPhysics : MonoBehaviour
 {
-	// Token: 0x06001C8B RID: 7307 RVA: 0x0008B4BC File Offset: 0x000896BC
+	// Token: 0x06001C8B RID: 7307 RVA: 0x0008B4DC File Offset: 0x000896DC
 	private void FixedUpdate()
 	{
 		this.bodyCollider.transform.position = this.headsetTransform.position + this.bodyColliderOffset;

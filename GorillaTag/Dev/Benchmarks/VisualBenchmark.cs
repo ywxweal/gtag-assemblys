@@ -10,7 +10,7 @@ namespace GorillaTag.Dev.Benchmarks
 	// Token: 0x02000D71 RID: 3441
 	public class VisualBenchmark : MonoBehaviour
 	{
-		// Token: 0x060055D4 RID: 21972 RVA: 0x001A19C8 File Offset: 0x0019FBC8
+		// Token: 0x060055D5 RID: 21973 RVA: 0x001A1AA0 File Offset: 0x0019FCA0
 		protected void Awake()
 		{
 			Application.quitting += delegate
@@ -46,7 +46,7 @@ namespace GorillaTag.Dev.Benchmarks
 			this.benchmarkLocations = list3.ToArray();
 		}
 
-		// Token: 0x060055D5 RID: 21973 RVA: 0x001A1B2C File Offset: 0x0019FD2C
+		// Token: 0x060055D6 RID: 21974 RVA: 0x001A1C04 File Offset: 0x0019FE04
 		protected void OnEnable()
 		{
 			this.renderStatsRecorders = new ProfilerRecorder[this.availableRenderStats.Length];
@@ -57,7 +57,7 @@ namespace GorillaTag.Dev.Benchmarks
 			this.state = VisualBenchmark.EState.Setup;
 		}
 
-		// Token: 0x060055D6 RID: 21974 RVA: 0x001A1B90 File Offset: 0x0019FD90
+		// Token: 0x060055D7 RID: 21975 RVA: 0x001A1C68 File Offset: 0x0019FE68
 		protected void OnDisable()
 		{
 			foreach (ProfilerRecorder profilerRecorder in this.renderStatsRecorders)
@@ -66,7 +66,7 @@ namespace GorillaTag.Dev.Benchmarks
 			}
 		}
 
-		// Token: 0x060055D7 RID: 21975 RVA: 0x001A1BC4 File Offset: 0x0019FDC4
+		// Token: 0x060055D8 RID: 21976 RVA: 0x001A1C9C File Offset: 0x0019FE9C
 		protected void LateUpdate()
 		{
 			if (VisualBenchmark.isQuitting)
@@ -122,7 +122,7 @@ namespace GorillaTag.Dev.Benchmarks
 			}
 		}
 
-		// Token: 0x060055D8 RID: 21976 RVA: 0x001A1D44 File Offset: 0x0019FF44
+		// Token: 0x060055D9 RID: 21977 RVA: 0x001A1E1C File Offset: 0x001A001C
 		private void RecordLocationStats(Transform xform)
 		{
 			this.sb.Append("Location: ");
@@ -163,63 +163,63 @@ namespace GorillaTag.Dev.Benchmarks
 			}
 		}
 
-		// Token: 0x0400591C RID: 22812
+		// Token: 0x0400591D RID: 22813
 		[Tooltip("the camera will be moved and rotated to these spots and record stats.")]
 		public Transform[] benchmarkLocations;
 
-		// Token: 0x0400591D RID: 22813
+		// Token: 0x0400591E RID: 22814
 		[Tooltip("How long to wait before calling GC.Collect() to clean up memory.")]
 		public float collectGarbageDelay = 2f;
 
-		// Token: 0x0400591E RID: 22814
+		// Token: 0x0400591F RID: 22815
 		[Tooltip("How long to wait before recording stats after the camera was moved to a new location.\nThis + collectGarbageDelay is the total time spent at each location.")]
 		private float recordStatsDelay = 2f;
 
-		// Token: 0x0400591F RID: 22815
+		// Token: 0x04005920 RID: 22816
 		[Tooltip("The camera to use for profiling. If null, a new camera will be created.")]
 		private Camera cam;
 
-		// Token: 0x04005920 RID: 22816
+		// Token: 0x04005921 RID: 22817
 		private VisualBenchmark.StatInfo[] availableRenderStats;
 
-		// Token: 0x04005921 RID: 22817
+		// Token: 0x04005922 RID: 22818
 		private ProfilerRecorder[] renderStatsRecorders;
 
-		// Token: 0x04005922 RID: 22818
+		// Token: 0x04005923 RID: 22819
 		private static bool isQuitting = true;
 
-		// Token: 0x04005923 RID: 22819
+		// Token: 0x04005924 RID: 22820
 		private int currentLocationIndex;
 
-		// Token: 0x04005924 RID: 22820
+		// Token: 0x04005925 RID: 22821
 		private VisualBenchmark.EState state = VisualBenchmark.EState.WaitingBeforeCollectingGarbage;
 
-		// Token: 0x04005925 RID: 22821
+		// Token: 0x04005926 RID: 22822
 		private float lastTime;
 
-		// Token: 0x04005926 RID: 22822
+		// Token: 0x04005927 RID: 22823
 		private readonly StringBuilder sb = new StringBuilder(1024);
 
 		// Token: 0x02000D72 RID: 3442
 		private struct StatInfo
 		{
-			// Token: 0x04005927 RID: 22823
+			// Token: 0x04005928 RID: 22824
 			public string name;
 
-			// Token: 0x04005928 RID: 22824
+			// Token: 0x04005929 RID: 22825
 			public ProfilerMarkerDataUnit unit;
 		}
 
 		// Token: 0x02000D73 RID: 3443
 		private enum EState
 		{
-			// Token: 0x0400592A RID: 22826
-			Setup,
 			// Token: 0x0400592B RID: 22827
-			WaitingBeforeCollectingGarbage,
+			Setup,
 			// Token: 0x0400592C RID: 22828
-			WaitingBeforeRecordingStats,
+			WaitingBeforeCollectingGarbage,
 			// Token: 0x0400592D RID: 22829
+			WaitingBeforeRecordingStats,
+			// Token: 0x0400592E RID: 22830
 			TearDown
 		}
 	}

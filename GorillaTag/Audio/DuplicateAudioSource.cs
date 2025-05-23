@@ -6,14 +6,14 @@ namespace GorillaTag.Audio
 	// Token: 0x02000D8E RID: 3470
 	public class DuplicateAudioSource : MonoBehaviour
 	{
-		// Token: 0x06005621 RID: 22049 RVA: 0x001A3256 File Offset: 0x001A1456
+		// Token: 0x06005622 RID: 22050 RVA: 0x001A332E File Offset: 0x001A152E
 		public void SetTargetAudioSource(AudioSource target)
 		{
 			this.TargetAudioSource = target;
 			this.StartDuplicating();
 		}
 
-		// Token: 0x06005622 RID: 22050 RVA: 0x001A3268 File Offset: 0x001A1468
+		// Token: 0x06005623 RID: 22051 RVA: 0x001A3340 File Offset: 0x001A1540
 		[ContextMenu("Start Duplicating")]
 		public void StartDuplicating()
 		{
@@ -26,7 +26,7 @@ namespace GorillaTag.Audio
 			}
 		}
 
-		// Token: 0x06005623 RID: 22051 RVA: 0x001A32C0 File Offset: 0x001A14C0
+		// Token: 0x06005624 RID: 22052 RVA: 0x001A3398 File Offset: 0x001A1598
 		[ContextMenu("Stop Duplicating")]
 		public void StopDuplicating()
 		{
@@ -34,7 +34,7 @@ namespace GorillaTag.Audio
 			this._audioSource.Stop();
 		}
 
-		// Token: 0x06005624 RID: 22052 RVA: 0x001A32D4 File Offset: 0x001A14D4
+		// Token: 0x06005625 RID: 22053 RVA: 0x001A33AC File Offset: 0x001A15AC
 		public void LateUpdate()
 		{
 			if (this._isDuplicating)
@@ -51,14 +51,14 @@ namespace GorillaTag.Audio
 			}
 		}
 
-		// Token: 0x040059EF RID: 23023
+		// Token: 0x040059F0 RID: 23024
 		public AudioSource TargetAudioSource;
 
-		// Token: 0x040059F0 RID: 23024
+		// Token: 0x040059F1 RID: 23025
 		[SerializeField]
 		private AudioSource _audioSource;
 
-		// Token: 0x040059F1 RID: 23025
+		// Token: 0x040059F2 RID: 23026
 		[SerializeField]
 		private bool _isDuplicating;
 	}

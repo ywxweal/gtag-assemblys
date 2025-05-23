@@ -7,19 +7,19 @@ namespace GorillaTag.Cosmetics.Summer
 	// Token: 0x02000E01 RID: 3585
 	public class Projectile : MonoBehaviour, IProjectile
 	{
-		// Token: 0x060058B2 RID: 22706 RVA: 0x001B46FB File Offset: 0x001B28FB
+		// Token: 0x060058B3 RID: 22707 RVA: 0x001B47D3 File Offset: 0x001B29D3
 		protected void Awake()
 		{
 			this.rigidbody = base.GetComponentInChildren<Rigidbody>();
 			this.impactEffectSpawned = false;
 		}
 
-		// Token: 0x060058B3 RID: 22707 RVA: 0x000023F4 File Offset: 0x000005F4
+		// Token: 0x060058B4 RID: 22708 RVA: 0x000023F4 File Offset: 0x000005F4
 		protected void OnEnable()
 		{
 		}
 
-		// Token: 0x060058B4 RID: 22708 RVA: 0x001B4710 File Offset: 0x001B2910
+		// Token: 0x060058B5 RID: 22709 RVA: 0x001B47E8 File Offset: 0x001B29E8
 		public void Launch(Vector3 startPosition, Quaternion startRotation, Vector3 velocity, float scale)
 		{
 			Transform transform = base.transform;
@@ -36,13 +36,13 @@ namespace GorillaTag.Cosmetics.Summer
 			}
 		}
 
-		// Token: 0x060058B5 RID: 22709 RVA: 0x001B477F File Offset: 0x001B297F
+		// Token: 0x060058B6 RID: 22710 RVA: 0x001B4857 File Offset: 0x001B2A57
 		private bool IsTagValid(GameObject obj)
 		{
 			return this.collisionTags.Contains(obj.tag);
 		}
 
-		// Token: 0x060058B6 RID: 22710 RVA: 0x001B4794 File Offset: 0x001B2994
+		// Token: 0x060058B7 RID: 22711 RVA: 0x001B486C File Offset: 0x001B2A6C
 		private void OnCollisionEnter(Collision other)
 		{
 			if (this.impactEffectSpawned)
@@ -76,7 +76,7 @@ namespace GorillaTag.Cosmetics.Summer
 			}
 		}
 
-		// Token: 0x060058B7 RID: 22711 RVA: 0x001B4860 File Offset: 0x001B2A60
+		// Token: 0x060058B8 RID: 22712 RVA: 0x001B4938 File Offset: 0x001B2B38
 		private void OnCollisionStay(Collision other)
 		{
 			if (this.impactEffectSpawned)
@@ -110,7 +110,7 @@ namespace GorillaTag.Cosmetics.Summer
 			}
 		}
 
-		// Token: 0x060058B8 RID: 22712 RVA: 0x001B492C File Offset: 0x001B2B2C
+		// Token: 0x060058B9 RID: 22713 RVA: 0x001B4A04 File Offset: 0x001B2C04
 		private void SpawnImpactEffect(GameObject prefab, Vector3 position, Vector3 normal)
 		{
 			Vector3 vector = position + normal * this.impactEffectOffset;
@@ -119,7 +119,7 @@ namespace GorillaTag.Cosmetics.Summer
 			gameObject.transform.position = vector;
 		}
 
-		// Token: 0x060058B9 RID: 22713 RVA: 0x001B4970 File Offset: 0x001B2B70
+		// Token: 0x060058BA RID: 22714 RVA: 0x001B4A48 File Offset: 0x001B2C48
 		private void DestroyProjectile()
 		{
 			this.impactEffectSpawned = false;
@@ -131,43 +131,43 @@ namespace GorillaTag.Cosmetics.Summer
 			Object.Destroy(base.gameObject);
 		}
 
-		// Token: 0x04005E21 RID: 24097
+		// Token: 0x04005E22 RID: 24098
 		[SerializeField]
 		private AudioSource audioSource;
 
-		// Token: 0x04005E22 RID: 24098
+		// Token: 0x04005E23 RID: 24099
 		[SerializeField]
 		private GameObject impactEffect;
 
-		// Token: 0x04005E23 RID: 24099
+		// Token: 0x04005E24 RID: 24100
 		[SerializeField]
 		private AudioClip launchAudio;
 
-		// Token: 0x04005E24 RID: 24100
+		// Token: 0x04005E25 RID: 24101
 		[SerializeField]
 		private LayerMask collisionLayerMasks;
 
-		// Token: 0x04005E25 RID: 24101
+		// Token: 0x04005E26 RID: 24102
 		[SerializeField]
 		private List<string> collisionTags = new List<string>();
 
-		// Token: 0x04005E26 RID: 24102
+		// Token: 0x04005E27 RID: 24103
 		[SerializeField]
 		private bool destroyOnCollisionEnter;
 
-		// Token: 0x04005E27 RID: 24103
+		// Token: 0x04005E28 RID: 24104
 		[SerializeField]
 		private float destroyDelay = 1f;
 
-		// Token: 0x04005E28 RID: 24104
+		// Token: 0x04005E29 RID: 24105
 		[Tooltip("Distance from the surface that the particle should spawn.")]
 		[SerializeField]
 		private float impactEffectOffset = 0.1f;
 
-		// Token: 0x04005E29 RID: 24105
+		// Token: 0x04005E2A RID: 24106
 		private bool impactEffectSpawned;
 
-		// Token: 0x04005E2A RID: 24106
+		// Token: 0x04005E2B RID: 24107
 		private Rigidbody rigidbody;
 	}
 }

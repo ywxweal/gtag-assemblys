@@ -4,7 +4,7 @@ using UnityEngine;
 // Token: 0x0200043D RID: 1085
 public class ShoppingCart : MonoBehaviour
 {
-	// Token: 0x06001AC0 RID: 6848 RVA: 0x00082E11 File Offset: 0x00081011
+	// Token: 0x06001AC0 RID: 6848 RVA: 0x00082E31 File Offset: 0x00081031
 	public void Awake()
 	{
 		if (ShoppingCart.instance == null)

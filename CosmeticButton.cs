@@ -4,13 +4,13 @@ using UnityEngine;
 // Token: 0x0200044B RID: 1099
 public class CosmeticButton : GorillaPressableButton
 {
-	// Token: 0x06001B24 RID: 6948 RVA: 0x0008533F File Offset: 0x0008353F
+	// Token: 0x06001B24 RID: 6948 RVA: 0x0008535F File Offset: 0x0008355F
 	public void Awake()
 	{
 		this.startingPos = base.transform.localPosition;
 	}
 
-	// Token: 0x06001B25 RID: 6949 RVA: 0x00085354 File Offset: 0x00083554
+	// Token: 0x06001B25 RID: 6949 RVA: 0x00085374 File Offset: 0x00083574
 	public override void UpdateColor()
 	{
 		if (!base.enabled)
@@ -40,7 +40,7 @@ public class CosmeticButton : GorillaPressableButton
 		this.UpdatePosition();
 	}
 
-	// Token: 0x06001B26 RID: 6950 RVA: 0x0008540C File Offset: 0x0008360C
+	// Token: 0x06001B26 RID: 6950 RVA: 0x0008542C File Offset: 0x0008362C
 	public virtual void UpdatePosition()
 	{
 		Vector3 vector = this.startingPos;

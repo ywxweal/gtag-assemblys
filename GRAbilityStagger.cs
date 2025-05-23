@@ -7,7 +7,7 @@ using UnityEngine.AI;
 [Serializable]
 public class GRAbilityStagger
 {
-	// Token: 0x0600232B RID: 9003 RVA: 0x000AFBB4 File Offset: 0x000ADDB4
+	// Token: 0x0600232B RID: 9003 RVA: 0x000AFBD4 File Offset: 0x000ADDD4
 	public void Setup(Vector3 staggerVel, GameAgent agent, Animation anim, Transform root, Rigidbody rb)
 	{
 		this.agent = agent;
@@ -17,7 +17,7 @@ public class GRAbilityStagger
 		this.rb = rb;
 	}
 
-	// Token: 0x0600232C RID: 9004 RVA: 0x000AFBDC File Offset: 0x000ADDDC
+	// Token: 0x0600232C RID: 9004 RVA: 0x000AFBFC File Offset: 0x000ADDFC
 	public void Start()
 	{
 		this.PlayAnim(this.animName, 0.1f, this.animSpeed);
@@ -26,20 +26,20 @@ public class GRAbilityStagger
 		this.agent.SetDisableNetworkSync(true);
 	}
 
-	// Token: 0x0600232D RID: 9005 RVA: 0x000AFC2C File Offset: 0x000ADE2C
+	// Token: 0x0600232D RID: 9005 RVA: 0x000AFC4C File Offset: 0x000ADE4C
 	public void Stop()
 	{
 		this.agent.SetIsPathing(true, true);
 		this.agent.SetDisableNetworkSync(false);
 	}
 
-	// Token: 0x0600232E RID: 9006 RVA: 0x000AFC47 File Offset: 0x000ADE47
+	// Token: 0x0600232E RID: 9006 RVA: 0x000AFC67 File Offset: 0x000ADE67
 	public bool IsDone()
 	{
 		return Time.timeAsDouble >= this.endTime;
 	}
 
-	// Token: 0x0600232F RID: 9007 RVA: 0x000AFC5C File Offset: 0x000ADE5C
+	// Token: 0x0600232F RID: 9007 RVA: 0x000AFC7C File Offset: 0x000ADE7C
 	public void Update(float dt)
 	{
 		Vector3 position = this.root.position;
@@ -60,7 +60,7 @@ public class GRAbilityStagger
 		}
 	}
 
-	// Token: 0x06002330 RID: 9008 RVA: 0x000AFCD8 File Offset: 0x000ADED8
+	// Token: 0x06002330 RID: 9008 RVA: 0x000AFCF8 File Offset: 0x000ADEF8
 	private void PlayAnim(string animName, float blendTime, float speed)
 	{
 		if (this.anim != null)

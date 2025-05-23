@@ -13,11 +13,11 @@ namespace GorillaTagScripts.Builder
 	public class BuilderConveyorManager : MonoBehaviour
 	{
 		// Token: 0x170006EB RID: 1771
-		// (get) Token: 0x0600476A RID: 18282 RVA: 0x00153501 File Offset: 0x00151701
-		// (set) Token: 0x0600476B RID: 18283 RVA: 0x00153508 File Offset: 0x00151708
+		// (get) Token: 0x0600476B RID: 18283 RVA: 0x001535D9 File Offset: 0x001517D9
+		// (set) Token: 0x0600476C RID: 18284 RVA: 0x001535E0 File Offset: 0x001517E0
 		public static BuilderConveyorManager instance { get; private set; }
 
-		// Token: 0x0600476C RID: 18284 RVA: 0x00153510 File Offset: 0x00151710
+		// Token: 0x0600476D RID: 18285 RVA: 0x001535E8 File Offset: 0x001517E8
 		private void Awake()
 		{
 			if (BuilderConveyorManager.instance != null && BuilderConveyorManager.instance != this)
@@ -30,7 +30,7 @@ namespace GorillaTagScripts.Builder
 			}
 		}
 
-		// Token: 0x0600476D RID: 18285 RVA: 0x00153548 File Offset: 0x00151748
+		// Token: 0x0600476E RID: 18286 RVA: 0x00153620 File Offset: 0x00151820
 		public void UpdateManager()
 		{
 			foreach (BuilderConveyor builderConveyor in this.table.conveyors)
@@ -59,7 +59,7 @@ namespace GorillaTagScripts.Builder
 			this.shelfSlice = (this.shelfSlice + 1) % BuilderTable.SHELF_SLICE_BUCKETS;
 		}
 
-		// Token: 0x0600476E RID: 18286 RVA: 0x001536C4 File Offset: 0x001518C4
+		// Token: 0x0600476F RID: 18287 RVA: 0x0015379C File Offset: 0x0015199C
 		public void Setup(BuilderTable mytable)
 		{
 			if (this.isSetup)
@@ -84,7 +84,7 @@ namespace GorillaTagScripts.Builder
 			this.isSetup = true;
 		}
 
-		// Token: 0x0600476F RID: 18287 RVA: 0x00153800 File Offset: 0x00151A00
+		// Token: 0x06004770 RID: 18288 RVA: 0x001538D8 File Offset: 0x00151AD8
 		public float GetSplineProgressForPiece(BuilderPiece piece)
 		{
 			for (int i = 0; i < this.pieceTransforms.length; i++)
@@ -97,7 +97,7 @@ namespace GorillaTagScripts.Builder
 			return 0f;
 		}
 
-		// Token: 0x06004770 RID: 18288 RVA: 0x00153850 File Offset: 0x00151A50
+		// Token: 0x06004771 RID: 18289 RVA: 0x00153928 File Offset: 0x00151B28
 		public int GetPieceCreateTimestamp(BuilderPiece piece)
 		{
 			for (int i = 0; i < this.pieceTransforms.length; i++)
@@ -112,7 +112,7 @@ namespace GorillaTagScripts.Builder
 			return 0;
 		}
 
-		// Token: 0x06004771 RID: 18289 RVA: 0x001538D4 File Offset: 0x00151AD4
+		// Token: 0x06004772 RID: 18290 RVA: 0x001539AC File Offset: 0x00151BAC
 		public void OnClearTable()
 		{
 			if (!this.isSetup)
@@ -132,7 +132,7 @@ namespace GorillaTagScripts.Builder
 			this.conveyorIndices.Clear();
 		}
 
-		// Token: 0x06004772 RID: 18290 RVA: 0x00153978 File Offset: 0x00151B78
+		// Token: 0x06004773 RID: 18291 RVA: 0x00153A50 File Offset: 0x00151C50
 		private void OnDestroy()
 		{
 			this.conveyorSplines.Dispose();
@@ -143,7 +143,7 @@ namespace GorillaTagScripts.Builder
 			this.pieceTransforms.Dispose();
 		}
 
-		// Token: 0x06004773 RID: 18291 RVA: 0x001539C8 File Offset: 0x00151BC8
+		// Token: 0x06004774 RID: 18292 RVA: 0x00153AA0 File Offset: 0x00151CA0
 		public JobHandle ConstructJobHandle()
 		{
 			BuilderConveyorManager.EvaluateSplineJob evaluateSplineJob = new BuilderConveyorManager.EvaluateSplineJob
@@ -160,7 +160,7 @@ namespace GorillaTagScripts.Builder
 			return evaluateSplineJob.Schedule(this.pieceTransforms, default(JobHandle));
 		}
 
-		// Token: 0x06004774 RID: 18292 RVA: 0x00153A54 File Offset: 0x00151C54
+		// Token: 0x06004775 RID: 18293 RVA: 0x00153B2C File Offset: 0x00151D2C
 		public void AddPieceToJob(BuilderPiece piece, float splineTime, int conveyorID)
 		{
 			if (this.pieceTransforms.length >= this.pieceTransforms.capacity)
@@ -173,7 +173,7 @@ namespace GorillaTagScripts.Builder
 			this.jobSplineTimes.Add(in splineTime);
 		}
 
-		// Token: 0x06004775 RID: 18293 RVA: 0x00153ABF File Offset: 0x00151CBF
+		// Token: 0x06004776 RID: 18294 RVA: 0x00153B97 File Offset: 0x00151D97
 		public void RemovePieceFromJobAtIndex(int index)
 		{
 			BuilderRenderer.RemoveAt(this.pieceTransforms, index);
@@ -182,7 +182,7 @@ namespace GorillaTagScripts.Builder
 			this.conveyorIndices.RemoveAt(index);
 		}
 
-		// Token: 0x06004776 RID: 18294 RVA: 0x00153AF4 File Offset: 0x00151CF4
+		// Token: 0x06004777 RID: 18295 RVA: 0x00153BCC File Offset: 0x00151DCC
 		public void RemovePieceFromJob(BuilderPiece piece)
 		{
 			for (int i = 0; i < this.pieceTransforms.length; i++)
@@ -198,41 +198,41 @@ namespace GorillaTagScripts.Builder
 			}
 		}
 
-		// Token: 0x040049B9 RID: 18873
+		// Token: 0x040049BA RID: 18874
 		private NativeArray<NativeSpline> conveyorSplines;
 
-		// Token: 0x040049BA RID: 18874
+		// Token: 0x040049BB RID: 18875
 		private NativeArray<Quaternion> conveyorRotations;
 
-		// Token: 0x040049BB RID: 18875
+		// Token: 0x040049BC RID: 18876
 		private NativeList<int> conveyorIndices;
 
-		// Token: 0x040049BC RID: 18876
+		// Token: 0x040049BD RID: 18877
 		private NativeList<float> jobSplineTimes;
 
-		// Token: 0x040049BD RID: 18877
+		// Token: 0x040049BE RID: 18878
 		private NativeList<Vector3> jobShelfOffsets;
 
-		// Token: 0x040049BE RID: 18878
+		// Token: 0x040049BF RID: 18879
 		private TransformAccessArray pieceTransforms;
 
-		// Token: 0x040049BF RID: 18879
+		// Token: 0x040049C0 RID: 18880
 		private BuilderTable table;
 
-		// Token: 0x040049C0 RID: 18880
+		// Token: 0x040049C1 RID: 18881
 		private bool isSetup;
 
-		// Token: 0x040049C1 RID: 18881
+		// Token: 0x040049C2 RID: 18882
 		private int maxItemCount;
 
-		// Token: 0x040049C2 RID: 18882
+		// Token: 0x040049C3 RID: 18883
 		private int shelfSlice;
 
 		// Token: 0x02000B52 RID: 2898
 		[BurstCompile]
 		public struct EvaluateSplineJob : IJobParallelForTransform
 		{
-			// Token: 0x06004778 RID: 18296 RVA: 0x00153B61 File Offset: 0x00151D61
+			// Token: 0x06004779 RID: 18297 RVA: 0x00153C39 File Offset: 0x00151E39
 			public NativeSpline GetSplineAt(int index)
 			{
 				switch (index)
@@ -250,7 +250,7 @@ namespace GorillaTagScripts.Builder
 				}
 			}
 
-			// Token: 0x06004779 RID: 18297 RVA: 0x00153B9D File Offset: 0x00151D9D
+			// Token: 0x0600477A RID: 18298 RVA: 0x00153C75 File Offset: 0x00151E75
 			public void SetSplineAt(int index, NativeSpline s)
 			{
 				switch (index)
@@ -272,7 +272,7 @@ namespace GorillaTagScripts.Builder
 				}
 			}
 
-			// Token: 0x0600477A RID: 18298 RVA: 0x00153BD8 File Offset: 0x00151DD8
+			// Token: 0x0600477B RID: 18299 RVA: 0x00153CB0 File Offset: 0x00151EB0
 			public void Execute(int index, TransformAccess transform)
 			{
 				float num = this.splineTimes[index];
@@ -285,31 +285,31 @@ namespace GorillaTagScripts.Builder
 				transform.position = vector2;
 			}
 
-			// Token: 0x040049C4 RID: 18884
+			// Token: 0x040049C5 RID: 18885
 			public NativeSpline conveyorSpline0;
 
-			// Token: 0x040049C5 RID: 18885
+			// Token: 0x040049C6 RID: 18886
 			public NativeSpline conveyorSpline1;
 
-			// Token: 0x040049C6 RID: 18886
+			// Token: 0x040049C7 RID: 18887
 			public NativeSpline conveyorSpline2;
 
-			// Token: 0x040049C7 RID: 18887
-			public NativeSpline conveyorSpline3;
-
 			// Token: 0x040049C8 RID: 18888
-			[ReadOnly]
-			public NativeArray<Quaternion> conveyorRotations;
+			public NativeSpline conveyorSpline3;
 
 			// Token: 0x040049C9 RID: 18889
 			[ReadOnly]
-			public NativeList<int> conveyorIndices;
+			public NativeArray<Quaternion> conveyorRotations;
 
 			// Token: 0x040049CA RID: 18890
 			[ReadOnly]
-			public NativeList<float> splineTimes;
+			public NativeList<int> conveyorIndices;
 
 			// Token: 0x040049CB RID: 18891
+			[ReadOnly]
+			public NativeList<float> splineTimes;
+
+			// Token: 0x040049CC RID: 18892
 			[ReadOnly]
 			public NativeList<Vector3> shelfOffsets;
 		}

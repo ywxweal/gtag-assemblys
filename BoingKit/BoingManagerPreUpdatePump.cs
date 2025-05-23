@@ -6,19 +6,19 @@ namespace BoingKit
 	// Token: 0x02000E6B RID: 3691
 	public class BoingManagerPreUpdatePump : MonoBehaviour
 	{
-		// Token: 0x06005C59 RID: 23641 RVA: 0x001C512A File Offset: 0x001C332A
+		// Token: 0x06005C5A RID: 23642 RVA: 0x001C5202 File Offset: 0x001C3402
 		private void FixedUpdate()
 		{
 			this.TryPump();
 		}
 
-		// Token: 0x06005C5A RID: 23642 RVA: 0x001C512A File Offset: 0x001C332A
+		// Token: 0x06005C5B RID: 23643 RVA: 0x001C5202 File Offset: 0x001C3402
 		private void Update()
 		{
 			this.TryPump();
 		}
 
-		// Token: 0x06005C5B RID: 23643 RVA: 0x001C5132 File Offset: 0x001C3332
+		// Token: 0x06005C5C RID: 23644 RVA: 0x001C520A File Offset: 0x001C340A
 		private void TryPump()
 		{
 			if (this.m_lastPumpedFrame >= Time.frameCount)
@@ -32,7 +32,7 @@ namespace BoingKit
 			this.m_lastPumpedFrame = Time.frameCount;
 		}
 
-		// Token: 0x06005C5C RID: 23644 RVA: 0x001C515C File Offset: 0x001C335C
+		// Token: 0x06005C5D RID: 23645 RVA: 0x001C5234 File Offset: 0x001C3434
 		private void DoPump()
 		{
 			BoingManager.RestoreBehaviors();
@@ -41,7 +41,7 @@ namespace BoingKit
 			BoingManager.DispatchReactorFieldCompute();
 		}
 
-		// Token: 0x0400603E RID: 24638
+		// Token: 0x0400603F RID: 24639
 		private int m_lastPumpedFrame = -1;
 	}
 }

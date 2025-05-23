@@ -8,7 +8,7 @@ using UnityEngine;
 internal abstract class GorillaWrappedSerializer : NetworkBehaviour, IPunObservable, IPunInstantiateMagicCallback, IOnPhotonViewPreNetDestroy, IPhotonViewCallback
 {
 	// Token: 0x17000373 RID: 883
-	// (get) Token: 0x060024B0 RID: 9392 RVA: 0x000B8504 File Offset: 0x000B6704
+	// (get) Token: 0x060024B0 RID: 9392 RVA: 0x000B8524 File Offset: 0x000B6724
 	public NetworkView NetView
 	{
 		get
@@ -18,12 +18,12 @@ internal abstract class GorillaWrappedSerializer : NetworkBehaviour, IPunObserva
 	}
 
 	// Token: 0x17000374 RID: 884
-	// (get) Token: 0x060024B1 RID: 9393 RVA: 0x000B850C File Offset: 0x000B670C
-	// (set) Token: 0x060024B2 RID: 9394 RVA: 0x000B8514 File Offset: 0x000B6714
+	// (get) Token: 0x060024B1 RID: 9393 RVA: 0x000B852C File Offset: 0x000B672C
+	// (set) Token: 0x060024B2 RID: 9394 RVA: 0x000B8534 File Offset: 0x000B6734
 	protected virtual object data { get; set; }
 
 	// Token: 0x17000375 RID: 885
-	// (get) Token: 0x060024B3 RID: 9395 RVA: 0x000B851D File Offset: 0x000B671D
+	// (get) Token: 0x060024B3 RID: 9395 RVA: 0x000B853D File Offset: 0x000B673D
 	public bool IsLocallyOwned
 	{
 		get
@@ -33,7 +33,7 @@ internal abstract class GorillaWrappedSerializer : NetworkBehaviour, IPunObserva
 	}
 
 	// Token: 0x17000376 RID: 886
-	// (get) Token: 0x060024B4 RID: 9396 RVA: 0x000B852A File Offset: 0x000B672A
+	// (get) Token: 0x060024B4 RID: 9396 RVA: 0x000B854A File Offset: 0x000B674A
 	public bool IsValid
 	{
 		get
@@ -42,7 +42,7 @@ internal abstract class GorillaWrappedSerializer : NetworkBehaviour, IPunObserva
 		}
 	}
 
-	// Token: 0x060024B5 RID: 9397 RVA: 0x000B8537 File Offset: 0x000B6737
+	// Token: 0x060024B5 RID: 9397 RVA: 0x000B8557 File Offset: 0x000B6757
 	private void Awake()
 	{
 		if (this.netView == null)
@@ -51,7 +51,7 @@ internal abstract class GorillaWrappedSerializer : NetworkBehaviour, IPunObserva
 		}
 	}
 
-	// Token: 0x060024B6 RID: 9398 RVA: 0x000B8554 File Offset: 0x000B6754
+	// Token: 0x060024B6 RID: 9398 RVA: 0x000B8574 File Offset: 0x000B6774
 	void IPunInstantiateMagicCallback.OnPhotonInstantiate(PhotonMessageInfo info)
 	{
 		if (this.netView == null || !this.netView.IsValid)
@@ -62,14 +62,14 @@ internal abstract class GorillaWrappedSerializer : NetworkBehaviour, IPunObserva
 		this.ProcessSpawn(photonMessageInfoWrapped);
 	}
 
-	// Token: 0x060024B7 RID: 9399 RVA: 0x000B858C File Offset: 0x000B678C
+	// Token: 0x060024B7 RID: 9399 RVA: 0x000B85AC File Offset: 0x000B67AC
 	public override void Spawned()
 	{
 		PhotonMessageInfoWrapped photonMessageInfoWrapped = new PhotonMessageInfoWrapped(base.Object.StateAuthority.PlayerId, base.Runner.Tick.Raw);
 		this.ProcessSpawn(photonMessageInfoWrapped);
 	}
 
-	// Token: 0x060024B8 RID: 9400 RVA: 0x000B85CC File Offset: 0x000B67CC
+	// Token: 0x060024B8 RID: 9400 RVA: 0x000B85EC File Offset: 0x000B67EC
 	private void ProcessSpawn(PhotonMessageInfoWrapped wrappedInfo)
 	{
 		this.successfullInstantiate = this.OnSpawnSetupCheck(wrappedInfo, out this.targetObject, out this.targetType);
@@ -94,7 +94,7 @@ internal abstract class GorillaWrappedSerializer : NetworkBehaviour, IPunObserva
 		this.FailedToSpawn();
 	}
 
-	// Token: 0x060024B9 RID: 9401 RVA: 0x000B8647 File Offset: 0x000B6847
+	// Token: 0x060024B9 RID: 9401 RVA: 0x000B8667 File Offset: 0x000B6867
 	protected virtual bool OnSpawnSetupCheck(PhotonMessageInfoWrapped wrappedInfo, out GameObject outTargetObject, out Type outTargetType)
 	{
 		outTargetType = typeof(IWrappedSerializable);
@@ -105,7 +105,7 @@ internal abstract class GorillaWrappedSerializer : NetworkBehaviour, IPunObserva
 	// Token: 0x060024BA RID: 9402
 	protected abstract void OnSuccesfullySpawned(PhotonMessageInfoWrapped info);
 
-	// Token: 0x060024BB RID: 9403 RVA: 0x000B8660 File Offset: 0x000B6860
+	// Token: 0x060024BB RID: 9403 RVA: 0x000B8680 File Offset: 0x000B6880
 	private void FailedToSpawn()
 	{
 		Debug.LogError("Failed to network instantiate");
@@ -121,19 +121,19 @@ internal abstract class GorillaWrappedSerializer : NetworkBehaviour, IPunObserva
 	// Token: 0x060024BC RID: 9404
 	protected abstract void OnFailedSpawn();
 
-	// Token: 0x060024BD RID: 9405 RVA: 0x000B830D File Offset: 0x000B650D
+	// Token: 0x060024BD RID: 9405 RVA: 0x000B832D File Offset: 0x000B652D
 	protected virtual bool ValidOnSerialize(PhotonStream stream, in PhotonMessageInfo info)
 	{
 		return info.Sender == info.photonView.Owner;
 	}
 
-	// Token: 0x060024BE RID: 9406 RVA: 0x000B86B8 File Offset: 0x000B68B8
+	// Token: 0x060024BE RID: 9406 RVA: 0x000B86D8 File Offset: 0x000B68D8
 	public override void FixedUpdateNetwork()
 	{
 		this.data = this.serializeTarget.OnSerializeWrite();
 	}
 
-	// Token: 0x060024BF RID: 9407 RVA: 0x000B86CB File Offset: 0x000B68CB
+	// Token: 0x060024BF RID: 9407 RVA: 0x000B86EB File Offset: 0x000B68EB
 	public override void Render()
 	{
 		if (!base.Object.HasStateAuthority)
@@ -142,7 +142,7 @@ internal abstract class GorillaWrappedSerializer : NetworkBehaviour, IPunObserva
 		}
 	}
 
-	// Token: 0x060024C0 RID: 9408 RVA: 0x000B86EC File Offset: 0x000B68EC
+	// Token: 0x060024C0 RID: 9408 RVA: 0x000B870C File Offset: 0x000B690C
 	void IPunObservable.OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
 	{
 		if (!this.successfullInstantiate || info.Sender != info.photonView.Owner || this.serializeTarget == null)
@@ -157,13 +157,13 @@ internal abstract class GorillaWrappedSerializer : NetworkBehaviour, IPunObserva
 		this.serializeTarget.OnSerializeRead(stream, info);
 	}
 
-	// Token: 0x060024C1 RID: 9409 RVA: 0x000B8740 File Offset: 0x000B6940
+	// Token: 0x060024C1 RID: 9409 RVA: 0x000B8760 File Offset: 0x000B6960
 	public override void Despawned(NetworkRunner runner, bool hasState)
 	{
 		this.OnBeforeDespawn();
 	}
 
-	// Token: 0x060024C2 RID: 9410 RVA: 0x000B8740 File Offset: 0x000B6940
+	// Token: 0x060024C2 RID: 9410 RVA: 0x000B8760 File Offset: 0x000B6960
 	void IOnPhotonViewPreNetDestroy.OnPreNetDestroy(PhotonView rootView)
 	{
 		this.OnBeforeDespawn();
@@ -172,7 +172,7 @@ internal abstract class GorillaWrappedSerializer : NetworkBehaviour, IPunObserva
 	// Token: 0x060024C3 RID: 9411
 	protected abstract void OnBeforeDespawn();
 
-	// Token: 0x060024C4 RID: 9412 RVA: 0x000B8748 File Offset: 0x000B6948
+	// Token: 0x060024C4 RID: 9412 RVA: 0x000B8768 File Offset: 0x000B6968
 	public virtual T AddRPCComponent<T>() where T : RPCNetworkBase
 	{
 		T t = base.gameObject.AddComponent<T>();
@@ -181,7 +181,7 @@ internal abstract class GorillaWrappedSerializer : NetworkBehaviour, IPunObserva
 		return t;
 	}
 
-	// Token: 0x060024C5 RID: 9413 RVA: 0x000B8778 File Offset: 0x000B6978
+	// Token: 0x060024C5 RID: 9413 RVA: 0x000B8798 File Offset: 0x000B6998
 	public void SendRPC(string rpcName, bool targetOthers, params object[] data)
 	{
 		RpcTarget rpcTarget = (targetOthers ? RpcTarget.Others : RpcTarget.MasterClient);
@@ -198,7 +198,7 @@ internal abstract class GorillaWrappedSerializer : NetworkBehaviour, IPunObserva
 	{
 	}
 
-	// Token: 0x060024C8 RID: 9416 RVA: 0x000B879B File Offset: 0x000B699B
+	// Token: 0x060024C8 RID: 9416 RVA: 0x000B87BB File Offset: 0x000B69BB
 	public void SendRPC(string rpcName, NetPlayer targetPlayer, params object[] data)
 	{
 		this.netView.GetView.RPC(rpcName, ((PunNetPlayer)targetPlayer).PlayerRef, data);

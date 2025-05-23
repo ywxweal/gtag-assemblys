@@ -7,13 +7,13 @@ namespace GorillaTag
 	[CreateAssetMenu(fileName = "GorillaButtonColorSettings", menuName = "ScriptableObjects/GorillaButtonColorSettings", order = 0)]
 	public class ButtonColorSettings : ScriptableObject
 	{
-		// Token: 0x0400583A RID: 22586
+		// Token: 0x0400583B RID: 22587
 		public Color UnpressedColor;
 
-		// Token: 0x0400583B RID: 22587
+		// Token: 0x0400583C RID: 22588
 		public Color PressedColor;
 
-		// Token: 0x0400583C RID: 22588
+		// Token: 0x0400583D RID: 22589
 		[Tooltip("Optional\nThe time the change will be in effect")]
 		public float PressedTime;
 	}

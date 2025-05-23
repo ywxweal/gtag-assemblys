@@ -7,7 +7,7 @@ namespace PublicKeyConvert
 	// Token: 0x02000A3E RID: 2622
 	public class PEMKeyLoader
 	{
-		// Token: 0x06003E57 RID: 15959 RVA: 0x00127D28 File Offset: 0x00125F28
+		// Token: 0x06003E58 RID: 15960 RVA: 0x00127E00 File Offset: 0x00126000
 		private static bool CompareBytearrays(byte[] a, byte[] b)
 		{
 			if (a.Length != b.Length)
@@ -26,7 +26,7 @@ namespace PublicKeyConvert
 			return true;
 		}
 
-		// Token: 0x06003E58 RID: 15960 RVA: 0x00127D60 File Offset: 0x00125F60
+		// Token: 0x06003E59 RID: 15961 RVA: 0x00127E38 File Offset: 0x00126038
 		public static RSACryptoServiceProvider CryptoServiceProviderFromPublicKeyInfo(byte[] x509key)
 		{
 			new byte[15];
@@ -141,7 +141,7 @@ namespace PublicKeyConvert
 			return rsacryptoServiceProvider;
 		}
 
-		// Token: 0x06003E59 RID: 15961 RVA: 0x00127F2C File Offset: 0x0012612C
+		// Token: 0x06003E5A RID: 15962 RVA: 0x00128004 File Offset: 0x00126204
 		public static RSACryptoServiceProvider CryptoServiceProviderFromPublicKeyInfo(string base64EncodedKey)
 		{
 			try
@@ -154,7 +154,7 @@ namespace PublicKeyConvert
 			return null;
 		}
 
-		// Token: 0x040042E6 RID: 17126
+		// Token: 0x040042E7 RID: 17127
 		private static byte[] SeqOID = new byte[]
 		{
 			48, 13, 6, 9, 42, 134, 72, 134, 247, 13,

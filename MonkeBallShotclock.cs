@@ -5,7 +5,7 @@ using UnityEngine;
 // Token: 0x020004CA RID: 1226
 public class MonkeBallShotclock : MonoBehaviour
 {
-	// Token: 0x06001DC0 RID: 7616 RVA: 0x00090BA8 File Offset: 0x0008EDA8
+	// Token: 0x06001DC0 RID: 7616 RVA: 0x00090BC8 File Offset: 0x0008EDC8
 	private void Update()
 	{
 		if (this._time >= 0f)
@@ -19,7 +19,7 @@ public class MonkeBallShotclock : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001DC1 RID: 7617 RVA: 0x00090BFC File Offset: 0x0008EDFC
+	// Token: 0x06001DC1 RID: 7617 RVA: 0x00090C1C File Offset: 0x0008EE1C
 	public void SetTime(int teamId, float time)
 	{
 		this._time = time;
@@ -35,7 +35,7 @@ public class MonkeBallShotclock : MonoBehaviour
 		this.UpdateTimeText(time);
 	}
 
-	// Token: 0x06001DC2 RID: 7618 RVA: 0x00090C51 File Offset: 0x0008EE51
+	// Token: 0x06001DC2 RID: 7618 RVA: 0x00090C71 File Offset: 0x0008EE71
 	private void SetBackboard(Material teamMaterial)
 	{
 		if (this.backboard != null)
@@ -44,7 +44,7 @@ public class MonkeBallShotclock : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001DC3 RID: 7619 RVA: 0x00090C70 File Offset: 0x0008EE70
+	// Token: 0x06001DC3 RID: 7619 RVA: 0x00090C90 File Offset: 0x0008EE90
 	private void UpdateTimeText(float time)
 	{
 		int num = Mathf.CeilToInt(time);

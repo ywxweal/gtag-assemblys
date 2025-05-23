@@ -4,7 +4,7 @@ using UnityEngine;
 // Token: 0x02000498 RID: 1176
 public class GorillaPlaySpaceForces : MonoBehaviour
 {
-	// Token: 0x06001CA3 RID: 7331 RVA: 0x0008B858 File Offset: 0x00089A58
+	// Token: 0x06001CA3 RID: 7331 RVA: 0x0008B878 File Offset: 0x00089A78
 	private void Start()
 	{
 		this.playspaceRigidbody = base.GetComponent<Rigidbody>();
@@ -14,7 +14,7 @@ public class GorillaPlaySpaceForces : MonoBehaviour
 		this.rightHandCollider = this.rightHand.GetComponent<Collider>();
 	}
 
-	// Token: 0x06001CA4 RID: 7332 RVA: 0x0008B8B5 File Offset: 0x00089AB5
+	// Token: 0x06001CA4 RID: 7332 RVA: 0x0008B8D5 File Offset: 0x00089AD5
 	private void FixedUpdate()
 	{
 		if (Time.time >= 0.1f)

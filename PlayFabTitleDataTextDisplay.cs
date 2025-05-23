@@ -9,7 +9,7 @@ using UnityEngine.Events;
 public class PlayFabTitleDataTextDisplay : MonoBehaviour, IBuildValidation
 {
 	// Token: 0x17000455 RID: 1109
-	// (get) Token: 0x06002C27 RID: 11303 RVA: 0x000D9A8E File Offset: 0x000D7C8E
+	// (get) Token: 0x06002C28 RID: 11304 RVA: 0x000D9B32 File Offset: 0x000D7D32
 	public string playFabKeyValue
 	{
 		get
@@ -18,7 +18,7 @@ public class PlayFabTitleDataTextDisplay : MonoBehaviour, IBuildValidation
 		}
 	}
 
-	// Token: 0x06002C28 RID: 11304 RVA: 0x000D9A98 File Offset: 0x000D7C98
+	// Token: 0x06002C29 RID: 11305 RVA: 0x000D9B3C File Offset: 0x000D7D3C
 	private void Start()
 	{
 		if (this.textBox != null)
@@ -33,7 +33,7 @@ public class PlayFabTitleDataTextDisplay : MonoBehaviour, IBuildValidation
 		PlayFabTitleDataCache.Instance.GetTitleData(this.playfabKey, new Action<string>(this.OnTitleDataRequestComplete), new Action<PlayFabError>(this.OnPlayFabError));
 	}
 
-	// Token: 0x06002C29 RID: 11305 RVA: 0x000D9B13 File Offset: 0x000D7D13
+	// Token: 0x06002C2A RID: 11306 RVA: 0x000D9BB7 File Offset: 0x000D7DB7
 	private void OnPlayFabError(PlayFabError error)
 	{
 		if (this.textBox != null)
@@ -42,7 +42,7 @@ public class PlayFabTitleDataTextDisplay : MonoBehaviour, IBuildValidation
 		}
 	}
 
-	// Token: 0x06002C2A RID: 11306 RVA: 0x000D9B34 File Offset: 0x000D7D34
+	// Token: 0x06002C2B RID: 11307 RVA: 0x000D9BD8 File Offset: 0x000D7DD8
 	private void OnTitleDataRequestComplete(string titleDataResult)
 	{
 		if (this.textBox != null)
@@ -56,7 +56,7 @@ public class PlayFabTitleDataTextDisplay : MonoBehaviour, IBuildValidation
 		}
 	}
 
-	// Token: 0x06002C2B RID: 11307 RVA: 0x000D9BA8 File Offset: 0x000D7DA8
+	// Token: 0x06002C2C RID: 11308 RVA: 0x000D9C4C File Offset: 0x000D7E4C
 	private void OnNewTitleDataAdded(string key)
 	{
 		if (key == this.playfabKey && this.textBox != null)
@@ -65,13 +65,13 @@ public class PlayFabTitleDataTextDisplay : MonoBehaviour, IBuildValidation
 		}
 	}
 
-	// Token: 0x06002C2C RID: 11308 RVA: 0x000D9BD7 File Offset: 0x000D7DD7
+	// Token: 0x06002C2D RID: 11309 RVA: 0x000D9C7B File Offset: 0x000D7E7B
 	private void OnDestroy()
 	{
 		PlayFabTitleDataCache.Instance.OnTitleDataUpdate.RemoveListener(new UnityAction<string>(this.OnNewTitleDataAdded));
 	}
 
-	// Token: 0x06002C2D RID: 11309 RVA: 0x000D9BF4 File Offset: 0x000D7DF4
+	// Token: 0x06002C2E RID: 11310 RVA: 0x000D9C98 File Offset: 0x000D7E98
 	public bool BuildValidationCheck()
 	{
 		if (this.textBox == null)
@@ -82,7 +82,7 @@ public class PlayFabTitleDataTextDisplay : MonoBehaviour, IBuildValidation
 		return true;
 	}
 
-	// Token: 0x06002C2E RID: 11310 RVA: 0x000D9C14 File Offset: 0x000D7E14
+	// Token: 0x06002C2F RID: 11311 RVA: 0x000D9CB8 File Offset: 0x000D7EB8
 	public void ChangeTitleDataAtRuntime(string newTitleDataKey)
 	{
 		this.playfabKey = newTitleDataKey;
@@ -98,24 +98,24 @@ public class PlayFabTitleDataTextDisplay : MonoBehaviour, IBuildValidation
 		PlayFabTitleDataCache.Instance.GetTitleData(this.playfabKey, new Action<string>(this.OnTitleDataRequestComplete), new Action<PlayFabError>(this.OnPlayFabError));
 	}
 
-	// Token: 0x0400325A RID: 12890
+	// Token: 0x0400325C RID: 12892
 	[SerializeField]
 	private TextMeshPro textBox;
 
-	// Token: 0x0400325B RID: 12891
+	// Token: 0x0400325D RID: 12893
 	[SerializeField]
 	private Color newUpdateColor = Color.magenta;
 
-	// Token: 0x0400325C RID: 12892
+	// Token: 0x0400325E RID: 12894
 	[SerializeField]
 	private Color defaultTextColor = Color.white;
 
-	// Token: 0x0400325D RID: 12893
+	// Token: 0x0400325F RID: 12895
 	[Tooltip("PlayFab Title Data key from where to pull display text")]
 	[SerializeField]
 	private string playfabKey;
 
-	// Token: 0x0400325E RID: 12894
+	// Token: 0x04003260 RID: 12896
 	[Tooltip("Text to display when error occurs during fetch")]
 	[TextArea(3, 5)]
 	[SerializeField]

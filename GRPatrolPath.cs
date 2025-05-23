@@ -5,7 +5,7 @@ using UnityEngine;
 // Token: 0x020005B6 RID: 1462
 public class GRPatrolPath : MonoBehaviour
 {
-	// Token: 0x060023A4 RID: 9124 RVA: 0x000B3578 File Offset: 0x000B1778
+	// Token: 0x060023A4 RID: 9124 RVA: 0x000B3598 File Offset: 0x000B1798
 	private void Awake()
 	{
 		this.patrolNodes = new List<Transform>(base.transform.childCount);
@@ -15,7 +15,7 @@ public class GRPatrolPath : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060023A5 RID: 9125 RVA: 0x000B35C8 File Offset: 0x000B17C8
+	// Token: 0x060023A5 RID: 9125 RVA: 0x000B35E8 File Offset: 0x000B17E8
 	public void OnDrawGizmosSelected()
 	{
 		if (this.patrolNodes == null || base.transform.childCount != this.patrolNodes.Count)

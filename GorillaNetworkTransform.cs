@@ -10,7 +10,7 @@ using UnityEngine;
 internal class GorillaNetworkTransform : NetworkComponent
 {
 	// Token: 0x17000370 RID: 880
-	// (get) Token: 0x06002489 RID: 9353 RVA: 0x000B7AB3 File Offset: 0x000B5CB3
+	// (get) Token: 0x06002489 RID: 9353 RVA: 0x000B7AD3 File Offset: 0x000B5CD3
 	public bool RespectOwnership
 	{
 		get
@@ -20,8 +20,8 @@ internal class GorillaNetworkTransform : NetworkComponent
 	}
 
 	// Token: 0x17000371 RID: 881
-	// (get) Token: 0x0600248A RID: 9354 RVA: 0x000B7ABB File Offset: 0x000B5CBB
-	// (set) Token: 0x0600248B RID: 9355 RVA: 0x000B7AE5 File Offset: 0x000B5CE5
+	// (get) Token: 0x0600248A RID: 9354 RVA: 0x000B7ADB File Offset: 0x000B5CDB
+	// (set) Token: 0x0600248B RID: 9355 RVA: 0x000B7B05 File Offset: 0x000B5D05
 	[Networked]
 	[NetworkedWeaved(0, 15)]
 	private unsafe GorillaNetworkTransform.NetTransformData data
@@ -44,7 +44,7 @@ internal class GorillaNetworkTransform : NetworkComponent
 		}
 	}
 
-	// Token: 0x0600248C RID: 9356 RVA: 0x000B7B10 File Offset: 0x000B5D10
+	// Token: 0x0600248C RID: 9356 RVA: 0x000B7B30 File Offset: 0x000B5D30
 	public new void Awake()
 	{
 		this.m_StoredPosition = base.transform.localPosition;
@@ -54,7 +54,7 @@ internal class GorillaNetworkTransform : NetworkComponent
 		this.maxDistanceSquare = this.maxDistance * this.maxDistance;
 	}
 
-	// Token: 0x0600248D RID: 9357 RVA: 0x000B7B62 File Offset: 0x000B5D62
+	// Token: 0x0600248D RID: 9357 RVA: 0x000B7B82 File Offset: 0x000B5D82
 	private new void OnEnable()
 	{
 		NetworkBehaviourUtils.InternalOnEnable(this);
@@ -65,7 +65,7 @@ internal class GorillaNetworkTransform : NetworkComponent
 		}
 	}
 
-	// Token: 0x0600248E RID: 9358 RVA: 0x000B7BA0 File Offset: 0x000B5DA0
+	// Token: 0x0600248E RID: 9358 RVA: 0x000B7BC0 File Offset: 0x000B5DC0
 	public void Update()
 	{
 		if (!base.IsLocallyOwned)
@@ -81,7 +81,7 @@ internal class GorillaNetworkTransform : NetworkComponent
 		}
 	}
 
-	// Token: 0x0600248F RID: 9359 RVA: 0x000B7CA8 File Offset: 0x000B5EA8
+	// Token: 0x0600248F RID: 9359 RVA: 0x000B7CC8 File Offset: 0x000B5EC8
 	public override void WriteDataFusion()
 	{
 		GorillaNetworkTransform.NetTransformData netTransformData = this.SharedWrite();
@@ -90,13 +90,13 @@ internal class GorillaNetworkTransform : NetworkComponent
 		this.data = netTransformData;
 	}
 
-	// Token: 0x06002490 RID: 9360 RVA: 0x000B7CE2 File Offset: 0x000B5EE2
+	// Token: 0x06002490 RID: 9360 RVA: 0x000B7D02 File Offset: 0x000B5F02
 	public override void ReadDataFusion()
 	{
 		this.SharedRead(this.data);
 	}
 
-	// Token: 0x06002491 RID: 9361 RVA: 0x000B7CF0 File Offset: 0x000B5EF0
+	// Token: 0x06002491 RID: 9361 RVA: 0x000B7D10 File Offset: 0x000B5F10
 	protected override void WriteDataPUN(PhotonStream stream, PhotonMessageInfo info)
 	{
 		NetPlayer player = NetworkSystem.Instance.GetPlayer(info.Sender);
@@ -120,7 +120,7 @@ internal class GorillaNetworkTransform : NetworkComponent
 		}
 	}
 
-	// Token: 0x06002492 RID: 9362 RVA: 0x000B7D84 File Offset: 0x000B5F84
+	// Token: 0x06002492 RID: 9362 RVA: 0x000B7DA4 File Offset: 0x000B5FA4
 	protected override void ReadDataPUN(PhotonStream stream, PhotonMessageInfo info)
 	{
 		NetPlayer player = NetworkSystem.Instance.GetPlayer(info.Sender);
@@ -146,7 +146,7 @@ internal class GorillaNetworkTransform : NetworkComponent
 		this.SharedRead(netTransformData);
 	}
 
-	// Token: 0x06002493 RID: 9363 RVA: 0x000B7E34 File Offset: 0x000B6034
+	// Token: 0x06002493 RID: 9363 RVA: 0x000B7E54 File Offset: 0x000B6054
 	private void SharedRead(GorillaNetworkTransform.NetTransformData data)
 	{
 		if (this.m_SynchronizePosition)
@@ -219,7 +219,7 @@ internal class GorillaNetworkTransform : NetworkComponent
 		}
 	}
 
-	// Token: 0x06002494 RID: 9364 RVA: 0x000B805C File Offset: 0x000B625C
+	// Token: 0x06002494 RID: 9364 RVA: 0x000B807C File Offset: 0x000B627C
 	private GorillaNetworkTransform.NetTransformData SharedWrite()
 	{
 		GorillaNetworkTransform.NetTransformData netTransformData = default(GorillaNetworkTransform.NetTransformData);
@@ -258,13 +258,13 @@ internal class GorillaNetworkTransform : NetworkComponent
 		return netTransformData;
 	}
 
-	// Token: 0x06002495 RID: 9365 RVA: 0x000B816F File Offset: 0x000B636F
+	// Token: 0x06002495 RID: 9365 RVA: 0x000B818F File Offset: 0x000B638F
 	public void GTAddition_DoTeleport()
 	{
 		this.m_firstTake = true;
 	}
 
-	// Token: 0x06002497 RID: 9367 RVA: 0x000B81A7 File Offset: 0x000B63A7
+	// Token: 0x06002497 RID: 9367 RVA: 0x000B81C7 File Offset: 0x000B63C7
 	[WeaverGenerated]
 	public override void CopyBackingFieldsToState(bool A_1)
 	{
@@ -272,7 +272,7 @@ internal class GorillaNetworkTransform : NetworkComponent
 		this.data = this._data;
 	}
 
-	// Token: 0x06002498 RID: 9368 RVA: 0x000B81BF File Offset: 0x000B63BF
+	// Token: 0x06002498 RID: 9368 RVA: 0x000B81DF File Offset: 0x000B63DF
 	[WeaverGenerated]
 	public override void CopyStateToBackingFields()
 	{

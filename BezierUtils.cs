@@ -4,7 +4,7 @@ using UnityEngine;
 // Token: 0x0200097A RID: 2426
 public class BezierUtils
 {
-	// Token: 0x06003A58 RID: 14936 RVA: 0x00117380 File Offset: 0x00115580
+	// Token: 0x06003A59 RID: 14937 RVA: 0x00117458 File Offset: 0x00115658
 	public static Vector3 BezierSolve(float t, Vector3 startPos, Vector3 ctrl1, Vector3 ctrl2, Vector3 endPos)
 	{
 		float num = 1f - t;

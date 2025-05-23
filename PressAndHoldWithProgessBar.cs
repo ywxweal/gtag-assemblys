@@ -7,8 +7,8 @@ using UnityEngine.UI;
 public class PressAndHoldWithProgessBar : MonoBehaviour, IBuildValidation
 {
 	// Token: 0x17000513 RID: 1299
-	// (get) Token: 0x060031ED RID: 12781 RVA: 0x000F70EE File Offset: 0x000F52EE
-	// (set) Token: 0x060031EE RID: 12782 RVA: 0x000F70F6 File Offset: 0x000F52F6
+	// (get) Token: 0x060031EE RID: 12782 RVA: 0x000F71C6 File Offset: 0x000F53C6
+	// (set) Token: 0x060031EF RID: 12783 RVA: 0x000F71CE File Offset: 0x000F53CE
 	public PressAndHoldWithProgessBar.PressAndHoldEvent onHoldComplete
 	{
 		get
@@ -21,19 +21,19 @@ public class PressAndHoldWithProgessBar : MonoBehaviour, IBuildValidation
 		}
 	}
 
-	// Token: 0x060031EF RID: 12783 RVA: 0x000F70FF File Offset: 0x000F52FF
+	// Token: 0x060031F0 RID: 12784 RVA: 0x000F71D7 File Offset: 0x000F53D7
 	private void Awake()
 	{
 		this.controllerBehaviour = base.GetComponentInChildren<ControllerBehaviour>(true);
 	}
 
-	// Token: 0x060031F0 RID: 12784 RVA: 0x000F710E File Offset: 0x000F530E
+	// Token: 0x060031F1 RID: 12785 RVA: 0x000F71E6 File Offset: 0x000F53E6
 	private void OnEnable()
 	{
 		this.progressBarFill.rectTransform.localScale = new Vector3(0f, 1f, 1f);
 	}
 
-	// Token: 0x060031F1 RID: 12785 RVA: 0x000F7134 File Offset: 0x000F5334
+	// Token: 0x060031F2 RID: 12786 RVA: 0x000F720C File Offset: 0x000F540C
 	protected void Update()
 	{
 		if (this.controllerBehaviour.ButtonDown && this._progressBarContainer.activeInHierarchy)
@@ -53,7 +53,7 @@ public class PressAndHoldWithProgessBar : MonoBehaviour, IBuildValidation
 		this.progressBarFill.rectTransform.localScale = new Vector3(this.progress, 1f, 1f);
 	}
 
-	// Token: 0x060031F2 RID: 12786 RVA: 0x000F71DF File Offset: 0x000F53DF
+	// Token: 0x060031F3 RID: 12787 RVA: 0x000F72B7 File Offset: 0x000F54B7
 	public bool BuildValidationCheck()
 	{
 		if (this._progressBarContainer == null)
@@ -64,26 +64,26 @@ public class PressAndHoldWithProgessBar : MonoBehaviour, IBuildValidation
 		return true;
 	}
 
-	// Token: 0x040038B2 RID: 14514
+	// Token: 0x040038B3 RID: 14515
 	[SerializeField]
 	private PressAndHoldWithProgessBar.PressAndHoldEvent m_OnHoldComplete = new PressAndHoldWithProgessBar.PressAndHoldEvent();
 
-	// Token: 0x040038B3 RID: 14515
+	// Token: 0x040038B4 RID: 14516
 	[SerializeField]
 	private GameObject _progressBarContainer;
 
-	// Token: 0x040038B4 RID: 14516
+	// Token: 0x040038B5 RID: 14517
 	[SerializeField]
 	private float holdTime = 5f;
 
-	// Token: 0x040038B5 RID: 14517
+	// Token: 0x040038B6 RID: 14518
 	[SerializeField]
 	private Image progressBarFill;
 
-	// Token: 0x040038B6 RID: 14518
+	// Token: 0x040038B7 RID: 14519
 	private float progress;
 
-	// Token: 0x040038B7 RID: 14519
+	// Token: 0x040038B8 RID: 14520
 	private ControllerBehaviour controllerBehaviour;
 
 	// Token: 0x020007F3 RID: 2035

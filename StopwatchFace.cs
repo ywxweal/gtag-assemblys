@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class StopwatchFace : MonoBehaviour
 {
 	// Token: 0x1700042F RID: 1071
-	// (get) Token: 0x06002AD8 RID: 10968 RVA: 0x000D2581 File Offset: 0x000D0781
+	// (get) Token: 0x06002AD9 RID: 10969 RVA: 0x000D2625 File Offset: 0x000D0825
 	public bool watchActive
 	{
 		get
@@ -16,7 +16,7 @@ public class StopwatchFace : MonoBehaviour
 	}
 
 	// Token: 0x17000430 RID: 1072
-	// (get) Token: 0x06002AD9 RID: 10969 RVA: 0x000D2589 File Offset: 0x000D0789
+	// (get) Token: 0x06002ADA RID: 10970 RVA: 0x000D262D File Offset: 0x000D082D
 	public int millisElapsed
 	{
 		get
@@ -26,7 +26,7 @@ public class StopwatchFace : MonoBehaviour
 	}
 
 	// Token: 0x17000431 RID: 1073
-	// (get) Token: 0x06002ADA RID: 10970 RVA: 0x000D2591 File Offset: 0x000D0791
+	// (get) Token: 0x06002ADB RID: 10971 RVA: 0x000D2635 File Offset: 0x000D0835
 	public Vector3Int digitsMmSsMs
 	{
 		get
@@ -35,7 +35,7 @@ public class StopwatchFace : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06002ADB RID: 10971 RVA: 0x000D25A4 File Offset: 0x000D07A4
+	// Token: 0x06002ADC RID: 10972 RVA: 0x000D2648 File Offset: 0x000D0848
 	public void SetMillisElapsed(int millis, bool updateFace = true)
 	{
 		this._millisElapsed = millis;
@@ -47,7 +47,7 @@ public class StopwatchFace : MonoBehaviour
 		this.UpdateHand();
 	}
 
-	// Token: 0x06002ADC RID: 10972 RVA: 0x000D25BD File Offset: 0x000D07BD
+	// Token: 0x06002ADD RID: 10973 RVA: 0x000D2661 File Offset: 0x000D0861
 	private void Awake()
 	{
 		this._lerpToZero = new LerpTask<int>();
@@ -55,7 +55,7 @@ public class StopwatchFace : MonoBehaviour
 		this._lerpToZero.onLerpEnd = new Action(this.OnLerpEnd);
 	}
 
-	// Token: 0x06002ADD RID: 10973 RVA: 0x000D25F8 File Offset: 0x000D07F8
+	// Token: 0x06002ADE RID: 10974 RVA: 0x000D269C File Offset: 0x000D089C
 	private void OnLerpToZero(int a, int b, float t)
 	{
 		this._millisElapsed = Mathf.FloorToInt(Mathf.Lerp((float)a, (float)b, t * t));
@@ -63,25 +63,25 @@ public class StopwatchFace : MonoBehaviour
 		this.UpdateHand();
 	}
 
-	// Token: 0x06002ADE RID: 10974 RVA: 0x000D261D File Offset: 0x000D081D
+	// Token: 0x06002ADF RID: 10975 RVA: 0x000D26C1 File Offset: 0x000D08C1
 	private void OnLerpEnd()
 	{
 		this.WatchReset(false);
 	}
 
-	// Token: 0x06002ADF RID: 10975 RVA: 0x000D261D File Offset: 0x000D081D
+	// Token: 0x06002AE0 RID: 10976 RVA: 0x000D26C1 File Offset: 0x000D08C1
 	private void OnEnable()
 	{
 		this.WatchReset(false);
 	}
 
-	// Token: 0x06002AE0 RID: 10976 RVA: 0x000D261D File Offset: 0x000D081D
+	// Token: 0x06002AE1 RID: 10977 RVA: 0x000D26C1 File Offset: 0x000D08C1
 	private void OnDisable()
 	{
 		this.WatchReset(false);
 	}
 
-	// Token: 0x06002AE1 RID: 10977 RVA: 0x000D2628 File Offset: 0x000D0828
+	// Token: 0x06002AE2 RID: 10978 RVA: 0x000D26CC File Offset: 0x000D08CC
 	private void Update()
 	{
 		if (this._lerpToZero.active)
@@ -97,7 +97,7 @@ public class StopwatchFace : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06002AE2 RID: 10978 RVA: 0x000D2680 File Offset: 0x000D0880
+	// Token: 0x06002AE3 RID: 10979 RVA: 0x000D2724 File Offset: 0x000D0924
 	private static Vector3Int ParseDigits(TimeSpan time)
 	{
 		int num = (int)time.TotalMinutes % 100;
@@ -110,7 +110,7 @@ public class StopwatchFace : MonoBehaviour
 		return new Vector3Int(num, num3, num4);
 	}
 
-	// Token: 0x06002AE3 RID: 10979 RVA: 0x000D26E8 File Offset: 0x000D08E8
+	// Token: 0x06002AE4 RID: 10980 RVA: 0x000D278C File Offset: 0x000D098C
 	private void UpdateText()
 	{
 		Vector3Int vector3Int = StopwatchFace.ParseDigits(TimeSpan.FromMilliseconds((double)this._millisElapsed));
@@ -120,14 +120,14 @@ public class StopwatchFace : MonoBehaviour
 		this._text.text = string.Concat(new string[] { text, ":", text2, ":", text3 });
 	}
 
-	// Token: 0x06002AE4 RID: 10980 RVA: 0x000D277C File Offset: 0x000D097C
+	// Token: 0x06002AE5 RID: 10981 RVA: 0x000D2820 File Offset: 0x000D0A20
 	private void UpdateHand()
 	{
 		float num = (float)(this._millisElapsed % 60000) / 60000f * 360f;
 		this._hand.localEulerAngles = new Vector3(0f, 0f, num);
 	}
 
-	// Token: 0x06002AE5 RID: 10981 RVA: 0x000D27BE File Offset: 0x000D09BE
+	// Token: 0x06002AE6 RID: 10982 RVA: 0x000D2862 File Offset: 0x000D0A62
 	public void WatchToggle()
 	{
 		if (!this._watchActive)
@@ -138,7 +138,7 @@ public class StopwatchFace : MonoBehaviour
 		this.WatchStop();
 	}
 
-	// Token: 0x06002AE6 RID: 10982 RVA: 0x000D27D5 File Offset: 0x000D09D5
+	// Token: 0x06002AE7 RID: 10983 RVA: 0x000D2879 File Offset: 0x000D0A79
 	public void WatchStart()
 	{
 		if (this._lerpToZero.active)
@@ -148,7 +148,7 @@ public class StopwatchFace : MonoBehaviour
 		this._watchActive = true;
 	}
 
-	// Token: 0x06002AE7 RID: 10983 RVA: 0x000D27EC File Offset: 0x000D09EC
+	// Token: 0x06002AE8 RID: 10984 RVA: 0x000D2890 File Offset: 0x000D0A90
 	public void WatchStop()
 	{
 		if (this._lerpToZero.active)
@@ -158,13 +158,13 @@ public class StopwatchFace : MonoBehaviour
 		this._watchActive = false;
 	}
 
-	// Token: 0x06002AE8 RID: 10984 RVA: 0x000D2803 File Offset: 0x000D0A03
+	// Token: 0x06002AE9 RID: 10985 RVA: 0x000D28A7 File Offset: 0x000D0AA7
 	public void WatchReset()
 	{
 		this.WatchReset(true);
 	}
 
-	// Token: 0x06002AE9 RID: 10985 RVA: 0x000D280C File Offset: 0x000D0A0C
+	// Token: 0x06002AEA RID: 10986 RVA: 0x000D28B0 File Offset: 0x000D0AB0
 	public void WatchReset(bool doLerp)
 	{
 		if (!Application.isPlaying)
@@ -188,42 +188,42 @@ public class StopwatchFace : MonoBehaviour
 		}
 	}
 
-	// Token: 0x04002FC8 RID: 12232
+	// Token: 0x04002FCA RID: 12234
 	[SerializeField]
 	private Transform _hand;
 
-	// Token: 0x04002FC9 RID: 12233
+	// Token: 0x04002FCB RID: 12235
 	[SerializeField]
 	private Text _text;
 
-	// Token: 0x04002FCA RID: 12234
+	// Token: 0x04002FCC RID: 12236
 	[Space]
 	[SerializeField]
 	private StopwatchCosmetic _cosmetic;
 
-	// Token: 0x04002FCB RID: 12235
+	// Token: 0x04002FCD RID: 12237
 	[Space]
 	[SerializeField]
 	private AudioClip _audioClick;
 
-	// Token: 0x04002FCC RID: 12236
+	// Token: 0x04002FCE RID: 12238
 	[SerializeField]
 	private AudioClip _audioReset;
 
-	// Token: 0x04002FCD RID: 12237
+	// Token: 0x04002FCF RID: 12239
 	[SerializeField]
 	private AudioClip _audioTick;
 
-	// Token: 0x04002FCE RID: 12238
+	// Token: 0x04002FD0 RID: 12240
 	[Space]
 	[NonSerialized]
 	private int _millisElapsed;
 
-	// Token: 0x04002FCF RID: 12239
+	// Token: 0x04002FD1 RID: 12241
 	[NonSerialized]
 	private bool _watchActive;
 
-	// Token: 0x04002FD0 RID: 12240
+	// Token: 0x04002FD2 RID: 12242
 	[NonSerialized]
 	private LerpTask<int> _lerpToZero;
 }

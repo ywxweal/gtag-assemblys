@@ -5,19 +5,19 @@ using UnityEngine;
 // Token: 0x020006B4 RID: 1716
 public class StageMicrophone : MonoBehaviour
 {
-	// Token: 0x06002AD4 RID: 10964 RVA: 0x000D253F File Offset: 0x000D073F
+	// Token: 0x06002AD5 RID: 10965 RVA: 0x000D25E3 File Offset: 0x000D07E3
 	private void Awake()
 	{
 		StageMicrophone.Instance = this;
 	}
 
-	// Token: 0x06002AD5 RID: 10965 RVA: 0x000D2547 File Offset: 0x000D0747
+	// Token: 0x06002AD6 RID: 10966 RVA: 0x000D25EB File Offset: 0x000D07EB
 	public bool IsPlayerAmplified(VRRig player)
 	{
 		return (player.GetMouthPosition() - base.transform.position).IsShorterThan(this.PickupRadius);
 	}
 
-	// Token: 0x06002AD6 RID: 10966 RVA: 0x000D256A File Offset: 0x000D076A
+	// Token: 0x06002AD7 RID: 10967 RVA: 0x000D260E File Offset: 0x000D080E
 	public float GetPlayerSpatialBlend(VRRig player)
 	{
 		if (!this.IsPlayerAmplified(player))
@@ -27,14 +27,14 @@ public class StageMicrophone : MonoBehaviour
 		return this.AmplifiedSpatialBlend;
 	}
 
-	// Token: 0x04002FC5 RID: 12229
+	// Token: 0x04002FC7 RID: 12231
 	public static StageMicrophone Instance;
 
-	// Token: 0x04002FC6 RID: 12230
+	// Token: 0x04002FC8 RID: 12232
 	[SerializeField]
 	private float PickupRadius;
 
-	// Token: 0x04002FC7 RID: 12231
+	// Token: 0x04002FC9 RID: 12233
 	[SerializeField]
 	private float AmplifiedSpatialBlend;
 }

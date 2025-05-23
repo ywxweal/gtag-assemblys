@@ -6,10 +6,10 @@ namespace GorillaTag.CosmeticSystem
 	[Serializable]
 	public struct CosmeticAnchorAntiClipEntry
 	{
-		// Token: 0x04005936 RID: 22838
+		// Token: 0x04005937 RID: 22839
 		public bool enabled;
 
-		// Token: 0x04005937 RID: 22839
+		// Token: 0x04005938 RID: 22840
 		public XformOffset offset;
 	}
 }

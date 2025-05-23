@@ -6,34 +6,34 @@ namespace GorillaNetworking
 	// Token: 0x02000C41 RID: 3137
 	public class GorillaNetworkLobbyJoinTrigger : GorillaTriggerBox
 	{
-		// Token: 0x0400511E RID: 20766
+		// Token: 0x0400511F RID: 20767
 		public GameObject[] makeSureThisIsDisabled;
 
-		// Token: 0x0400511F RID: 20767
+		// Token: 0x04005120 RID: 20768
 		public GameObject[] makeSureThisIsEnabled;
 
-		// Token: 0x04005120 RID: 20768
+		// Token: 0x04005121 RID: 20769
 		public string gameModeName;
 
-		// Token: 0x04005121 RID: 20769
+		// Token: 0x04005122 RID: 20770
 		public PhotonNetworkController photonNetworkController;
 
-		// Token: 0x04005122 RID: 20770
+		// Token: 0x04005123 RID: 20771
 		public string componentTypeToRemove;
 
-		// Token: 0x04005123 RID: 20771
+		// Token: 0x04005124 RID: 20772
 		public GameObject componentRemoveTarget;
 
-		// Token: 0x04005124 RID: 20772
+		// Token: 0x04005125 RID: 20773
 		public string componentTypeToAdd;
 
-		// Token: 0x04005125 RID: 20773
+		// Token: 0x04005126 RID: 20774
 		public GameObject componentAddTarget;
 
-		// Token: 0x04005126 RID: 20774
+		// Token: 0x04005127 RID: 20775
 		public GameObject gorillaParent;
 
-		// Token: 0x04005127 RID: 20775
+		// Token: 0x04005128 RID: 20776
 		public GameObject joinFailedBlock;
 	}
 }

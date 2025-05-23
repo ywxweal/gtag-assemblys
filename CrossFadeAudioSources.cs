@@ -4,7 +4,7 @@ using UnityEngine;
 // Token: 0x02000538 RID: 1336
 public class CrossFadeAudioSources : MonoBehaviour, IRangedVariable<float>, IVariable<float>, IVariable
 {
-	// Token: 0x06002075 RID: 8309 RVA: 0x000A3004 File Offset: 0x000A1204
+	// Token: 0x06002075 RID: 8309 RVA: 0x000A3024 File Offset: 0x000A1224
 	public void Play()
 	{
 		if (this.source1)
@@ -17,7 +17,7 @@ public class CrossFadeAudioSources : MonoBehaviour, IRangedVariable<float>, IVar
 		}
 	}
 
-	// Token: 0x06002076 RID: 8310 RVA: 0x000A3036 File Offset: 0x000A1236
+	// Token: 0x06002076 RID: 8310 RVA: 0x000A3056 File Offset: 0x000A1256
 	public void Stop()
 	{
 		if (this.source1)
@@ -30,7 +30,7 @@ public class CrossFadeAudioSources : MonoBehaviour, IRangedVariable<float>, IVar
 		}
 	}
 
-	// Token: 0x06002077 RID: 8311 RVA: 0x000A3068 File Offset: 0x000A1268
+	// Token: 0x06002077 RID: 8311 RVA: 0x000A3088 File Offset: 0x000A1288
 	private void Update()
 	{
 		if (!this.source1 || !this.source2)
@@ -52,20 +52,20 @@ public class CrossFadeAudioSources : MonoBehaviour, IRangedVariable<float>, IVar
 		this.source1.volume = 1f - num2;
 	}
 
-	// Token: 0x06002078 RID: 8312 RVA: 0x000A311E File Offset: 0x000A131E
+	// Token: 0x06002078 RID: 8312 RVA: 0x000A313E File Offset: 0x000A133E
 	public float Get()
 	{
 		return this._lerp;
 	}
 
-	// Token: 0x06002079 RID: 8313 RVA: 0x000A3126 File Offset: 0x000A1326
+	// Token: 0x06002079 RID: 8313 RVA: 0x000A3146 File Offset: 0x000A1346
 	public void Set(float f)
 	{
 		this._lerp = Mathf.Clamp01(f);
 	}
 
 	// Token: 0x17000345 RID: 837
-	// (get) Token: 0x0600207A RID: 8314 RVA: 0x000A3134 File Offset: 0x000A1334
+	// (get) Token: 0x0600207A RID: 8314 RVA: 0x000A3154 File Offset: 0x000A1354
 	// (set) Token: 0x0600207B RID: 8315 RVA: 0x000023F4 File Offset: 0x000005F4
 	public float Min
 	{
@@ -79,7 +79,7 @@ public class CrossFadeAudioSources : MonoBehaviour, IRangedVariable<float>, IVar
 	}
 
 	// Token: 0x17000346 RID: 838
-	// (get) Token: 0x0600207C RID: 8316 RVA: 0x000A313B File Offset: 0x000A133B
+	// (get) Token: 0x0600207C RID: 8316 RVA: 0x000A315B File Offset: 0x000A135B
 	// (set) Token: 0x0600207D RID: 8317 RVA: 0x000023F4 File Offset: 0x000005F4
 	public float Max
 	{
@@ -93,7 +93,7 @@ public class CrossFadeAudioSources : MonoBehaviour, IRangedVariable<float>, IVar
 	}
 
 	// Token: 0x17000347 RID: 839
-	// (get) Token: 0x0600207E RID: 8318 RVA: 0x000A313B File Offset: 0x000A133B
+	// (get) Token: 0x0600207E RID: 8318 RVA: 0x000A315B File Offset: 0x000A135B
 	public float Range
 	{
 		get
@@ -103,7 +103,7 @@ public class CrossFadeAudioSources : MonoBehaviour, IRangedVariable<float>, IVar
 	}
 
 	// Token: 0x17000348 RID: 840
-	// (get) Token: 0x0600207F RID: 8319 RVA: 0x000A3142 File Offset: 0x000A1342
+	// (get) Token: 0x0600207F RID: 8319 RVA: 0x000A3162 File Offset: 0x000A1362
 	public AnimationCurve Curve
 	{
 		get

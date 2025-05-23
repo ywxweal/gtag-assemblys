@@ -9,8 +9,8 @@ using UnityEngine.Serialization;
 public class RubberDuck : TransferrableObject
 {
 	// Token: 0x17000301 RID: 769
-	// (get) Token: 0x06001BDD RID: 7133 RVA: 0x00089067 File Offset: 0x00087267
-	// (set) Token: 0x06001BDE RID: 7134 RVA: 0x00089079 File Offset: 0x00087279
+	// (get) Token: 0x06001BDD RID: 7133 RVA: 0x00089087 File Offset: 0x00087287
+	// (set) Token: 0x06001BDE RID: 7134 RVA: 0x00089099 File Offset: 0x00087299
 	public bool fxActive
 	{
 		get
@@ -29,7 +29,7 @@ public class RubberDuck : TransferrableObject
 	}
 
 	// Token: 0x17000302 RID: 770
-	// (get) Token: 0x06001BDF RID: 7135 RVA: 0x00089097 File Offset: 0x00087297
+	// (get) Token: 0x06001BDF RID: 7135 RVA: 0x000890B7 File Offset: 0x000872B7
 	public int SqueezeSound
 	{
 		get
@@ -47,7 +47,7 @@ public class RubberDuck : TransferrableObject
 	}
 
 	// Token: 0x17000303 RID: 771
-	// (get) Token: 0x06001BE0 RID: 7136 RVA: 0x000890D4 File Offset: 0x000872D4
+	// (get) Token: 0x06001BE0 RID: 7136 RVA: 0x000890F4 File Offset: 0x000872F4
 	public int SqueezeReleaseSound
 	{
 		get
@@ -64,7 +64,7 @@ public class RubberDuck : TransferrableObject
 		}
 	}
 
-	// Token: 0x06001BE1 RID: 7137 RVA: 0x00089114 File Offset: 0x00087314
+	// Token: 0x06001BE1 RID: 7137 RVA: 0x00089134 File Offset: 0x00087334
 	public override void OnSpawn(VRRig rig)
 	{
 		base.OnSpawn(rig);
@@ -84,7 +84,7 @@ public class RubberDuck : TransferrableObject
 		this.fxActive = false;
 	}
 
-	// Token: 0x06001BE2 RID: 7138 RVA: 0x000891B4 File Offset: 0x000873B4
+	// Token: 0x06001BE2 RID: 7138 RVA: 0x000891D4 File Offset: 0x000873D4
 	internal override void OnEnable()
 	{
 		base.OnEnable();
@@ -108,7 +108,7 @@ public class RubberDuck : TransferrableObject
 		}
 	}
 
-	// Token: 0x06001BE3 RID: 7139 RVA: 0x000892A4 File Offset: 0x000874A4
+	// Token: 0x06001BE3 RID: 7139 RVA: 0x000892C4 File Offset: 0x000874C4
 	internal override void OnDisable()
 	{
 		base.OnDisable();
@@ -121,7 +121,7 @@ public class RubberDuck : TransferrableObject
 		}
 	}
 
-	// Token: 0x06001BE4 RID: 7140 RVA: 0x0008931B File Offset: 0x0008751B
+	// Token: 0x06001BE4 RID: 7140 RVA: 0x0008933B File Offset: 0x0008753B
 	private void OnSqueezeActivate(int sender, int target, object[] args, PhotonMessageInfoWrapped info)
 	{
 		if (sender != target)
@@ -135,7 +135,7 @@ public class RubberDuck : TransferrableObject
 		this.SqueezeActivateLocal();
 	}
 
-	// Token: 0x06001BE5 RID: 7141 RVA: 0x00089342 File Offset: 0x00087542
+	// Token: 0x06001BE5 RID: 7141 RVA: 0x00089362 File Offset: 0x00087562
 	private void SqueezeActivateLocal()
 	{
 		this.PlayParticleFX(this.particleFXEmissionSqueeze);
@@ -145,7 +145,7 @@ public class RubberDuck : TransferrableObject
 		}
 	}
 
-	// Token: 0x06001BE6 RID: 7142 RVA: 0x0008937F File Offset: 0x0008757F
+	// Token: 0x06001BE6 RID: 7142 RVA: 0x0008939F File Offset: 0x0008759F
 	private void OnSqueezeDeactivate(int sender, int target, object[] args, PhotonMessageInfoWrapped info)
 	{
 		if (sender != target)
@@ -160,13 +160,13 @@ public class RubberDuck : TransferrableObject
 		this.SqueezeDeactivateLocal();
 	}
 
-	// Token: 0x06001BE7 RID: 7143 RVA: 0x000893B2 File Offset: 0x000875B2
+	// Token: 0x06001BE7 RID: 7143 RVA: 0x000893D2 File Offset: 0x000875D2
 	private void SqueezeDeactivateLocal()
 	{
 		this.PlayParticleFX(this.particleFXEmissionIdle);
 	}
 
-	// Token: 0x06001BE8 RID: 7144 RVA: 0x000893C0 File Offset: 0x000875C0
+	// Token: 0x06001BE8 RID: 7144 RVA: 0x000893E0 File Offset: 0x000875E0
 	public override void TriggeredLateUpdate()
 	{
 		base.TriggeredLateUpdate();
@@ -198,7 +198,7 @@ public class RubberDuck : TransferrableObject
 		}
 	}
 
-	// Token: 0x06001BE9 RID: 7145 RVA: 0x000894DC File Offset: 0x000876DC
+	// Token: 0x06001BE9 RID: 7145 RVA: 0x000894FC File Offset: 0x000876FC
 	public override void OnActivate()
 	{
 		base.OnActivate();
@@ -238,7 +238,7 @@ public class RubberDuck : TransferrableObject
 		}
 	}
 
-	// Token: 0x06001BEA RID: 7146 RVA: 0x000895B8 File Offset: 0x000877B8
+	// Token: 0x06001BEA RID: 7146 RVA: 0x000895D8 File Offset: 0x000877D8
 	public override void OnDeactivate()
 	{
 		base.OnDeactivate();
@@ -279,7 +279,7 @@ public class RubberDuck : TransferrableObject
 		}
 	}
 
-	// Token: 0x06001BEB RID: 7147 RVA: 0x000896C4 File Offset: 0x000878C4
+	// Token: 0x06001BEB RID: 7147 RVA: 0x000896E4 File Offset: 0x000878E4
 	public void PlayParticleFX(float rate)
 	{
 		if (!this.hasParticleFX)
@@ -298,13 +298,13 @@ public class RubberDuck : TransferrableObject
 		this.pFXEmissionModule.rateOverTime = rate;
 	}
 
-	// Token: 0x06001BEC RID: 7148 RVA: 0x00089718 File Offset: 0x00087918
+	// Token: 0x06001BEC RID: 7148 RVA: 0x00089738 File Offset: 0x00087938
 	public override bool CanActivate()
 	{
 		return !this.disableActivation;
 	}
 
-	// Token: 0x06001BED RID: 7149 RVA: 0x00089723 File Offset: 0x00087923
+	// Token: 0x06001BED RID: 7149 RVA: 0x00089743 File Offset: 0x00087943
 	public override bool CanDeactivate()
 	{
 		return !this.disableDeactivation;

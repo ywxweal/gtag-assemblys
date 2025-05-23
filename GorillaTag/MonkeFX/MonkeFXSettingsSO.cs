@@ -7,16 +7,16 @@ namespace GorillaTag.MonkeFX
 	[CreateAssetMenu(fileName = "MeshGenerator", menuName = "ScriptableObjects/MeshGenerator", order = 1)]
 	public class MonkeFXSettingsSO : ScriptableObject
 	{
-		// Token: 0x0600556B RID: 21867 RVA: 0x001A0376 File Offset: 0x0019E576
+		// Token: 0x0600556C RID: 21868 RVA: 0x001A044E File Offset: 0x0019E64E
 		protected void Awake()
 		{
 			MonkeFX.Register(this);
 		}
 
-		// Token: 0x040058DA RID: 22746
+		// Token: 0x040058DB RID: 22747
 		public GTDirectAssetRef<Mesh>[] sourceMeshes;
 
-		// Token: 0x040058DB RID: 22747
+		// Token: 0x040058DC RID: 22748
 		[HideInInspector]
 		public Mesh combinedMesh;
 	}

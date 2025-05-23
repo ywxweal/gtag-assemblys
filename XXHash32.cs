@@ -7,14 +7,14 @@ using System.Text;
 // Token: 0x020009E2 RID: 2530
 public static class XXHash32
 {
-	// Token: 0x06003C8A RID: 15498 RVA: 0x00120E37 File Offset: 0x0011F037
+	// Token: 0x06003C8B RID: 15499 RVA: 0x00120F0F File Offset: 0x0011F10F
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	public static int Compute(string s, uint seed = 0U)
 	{
 		return (int)XXHash32.Compute(Encoding.Unicode.GetBytes(s), seed);
 	}
 
-	// Token: 0x06003C8B RID: 15499 RVA: 0x00120E50 File Offset: 0x0011F050
+	// Token: 0x06003C8C RID: 15500 RVA: 0x00120F28 File Offset: 0x0011F128
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	public unsafe static uint Compute(ReadOnlySpan<byte> input, uint seed = 0U)
 	{
@@ -72,21 +72,21 @@ public static class XXHash32
 		return num9 ^ (num9 >> 16);
 	}
 
-	// Token: 0x04004072 RID: 16498
+	// Token: 0x04004073 RID: 16499
 	private const uint Prime32_1 = 2654435761U;
 
-	// Token: 0x04004073 RID: 16499
+	// Token: 0x04004074 RID: 16500
 	private const uint Prime32_2 = 2246822519U;
 
-	// Token: 0x04004074 RID: 16500
+	// Token: 0x04004075 RID: 16501
 	private const uint Prime32_3 = 3266489917U;
 
-	// Token: 0x04004075 RID: 16501
+	// Token: 0x04004076 RID: 16502
 	private const uint Prime32_4 = 668265263U;
 
-	// Token: 0x04004076 RID: 16502
+	// Token: 0x04004077 RID: 16503
 	private const uint Prime32_5 = 374761393U;
 
-	// Token: 0x04004077 RID: 16503
+	// Token: 0x04004078 RID: 16504
 	private const int StripeSize = 16;
 }

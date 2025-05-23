@@ -10,7 +10,7 @@ namespace GorillaLocomotion.Swimming
 	public class WaterCurrent : MonoBehaviour
 	{
 		// Token: 0x17000839 RID: 2105
-		// (get) Token: 0x06005153 RID: 20819 RVA: 0x00189A71 File Offset: 0x00187C71
+		// (get) Token: 0x06005154 RID: 20820 RVA: 0x00189B49 File Offset: 0x00187D49
 		public float Speed
 		{
 			get
@@ -20,7 +20,7 @@ namespace GorillaLocomotion.Swimming
 		}
 
 		// Token: 0x1700083A RID: 2106
-		// (get) Token: 0x06005154 RID: 20820 RVA: 0x00189A79 File Offset: 0x00187C79
+		// (get) Token: 0x06005155 RID: 20821 RVA: 0x00189B51 File Offset: 0x00187D51
 		public float Accel
 		{
 			get
@@ -30,7 +30,7 @@ namespace GorillaLocomotion.Swimming
 		}
 
 		// Token: 0x1700083B RID: 2107
-		// (get) Token: 0x06005155 RID: 20821 RVA: 0x00189A81 File Offset: 0x00187C81
+		// (get) Token: 0x06005156 RID: 20822 RVA: 0x00189B59 File Offset: 0x00187D59
 		public float InwardSpeed
 		{
 			get
@@ -40,7 +40,7 @@ namespace GorillaLocomotion.Swimming
 		}
 
 		// Token: 0x1700083C RID: 2108
-		// (get) Token: 0x06005156 RID: 20822 RVA: 0x00189A89 File Offset: 0x00187C89
+		// (get) Token: 0x06005157 RID: 20823 RVA: 0x00189B61 File Offset: 0x00187D61
 		public float InwardAccel
 		{
 			get
@@ -49,7 +49,7 @@ namespace GorillaLocomotion.Swimming
 			}
 		}
 
-		// Token: 0x06005157 RID: 20823 RVA: 0x00189A94 File Offset: 0x00187C94
+		// Token: 0x06005158 RID: 20824 RVA: 0x00189B6C File Offset: 0x00187D6C
 		public bool GetCurrentAtPoint(Vector3 worldPoint, Vector3 startingVelocity, float dt, out Vector3 currentVelocity, out Vector3 velocityChange)
 		{
 			float num = (this.fullEffectDistance + this.fadeDistance) * (this.fullEffectDistance + this.fadeDistance);
@@ -109,7 +109,7 @@ namespace GorillaLocomotion.Swimming
 			return flag;
 		}
 
-		// Token: 0x06005158 RID: 20824 RVA: 0x00189D48 File Offset: 0x00187F48
+		// Token: 0x06005159 RID: 20825 RVA: 0x00189E20 File Offset: 0x00188020
 		private void Update()
 		{
 			if (this.debugDrawCurrentQueries)
@@ -119,7 +119,7 @@ namespace GorillaLocomotion.Swimming
 			}
 		}
 
-		// Token: 0x06005159 RID: 20825 RVA: 0x00189DAC File Offset: 0x00187FAC
+		// Token: 0x0600515A RID: 20826 RVA: 0x00189E84 File Offset: 0x00188084
 		private void OnDrawGizmosSelected()
 		{
 			int num = 16;
@@ -141,7 +141,7 @@ namespace GorillaLocomotion.Swimming
 			}
 		}
 
-		// Token: 0x0600515A RID: 20826 RVA: 0x00189E94 File Offset: 0x00188094
+		// Token: 0x0600515B RID: 20827 RVA: 0x00189F6C File Offset: 0x0018816C
 		private void DrawGizmoCircle(Vector3 center, Quaternion rotation, float radius)
 		{
 			Vector3 vector = Vector3.right * radius;
@@ -155,58 +155,58 @@ namespace GorillaLocomotion.Swimming
 			}
 		}
 
-		// Token: 0x04005553 RID: 21843
+		// Token: 0x04005554 RID: 21844
 		[SerializeField]
 		private List<CatmullRomSpline> splines = new List<CatmullRomSpline>();
 
-		// Token: 0x04005554 RID: 21844
+		// Token: 0x04005555 RID: 21845
 		[SerializeField]
 		private float fullEffectDistance = 1f;
 
-		// Token: 0x04005555 RID: 21845
+		// Token: 0x04005556 RID: 21846
 		[SerializeField]
 		private float fadeDistance = 0.5f;
 
-		// Token: 0x04005556 RID: 21846
+		// Token: 0x04005557 RID: 21847
 		[SerializeField]
 		private float currentSpeed = 1f;
 
-		// Token: 0x04005557 RID: 21847
+		// Token: 0x04005558 RID: 21848
 		[SerializeField]
 		private float currentAccel = 10f;
 
-		// Token: 0x04005558 RID: 21848
+		// Token: 0x04005559 RID: 21849
 		[SerializeField]
 		private float velocityAnticipationAdjustment = 0.05f;
 
-		// Token: 0x04005559 RID: 21849
+		// Token: 0x0400555A RID: 21850
 		[SerializeField]
 		private float inwardCurrentFullEffectRadius = 1f;
 
-		// Token: 0x0400555A RID: 21850
+		// Token: 0x0400555B RID: 21851
 		[SerializeField]
 		private float inwardCurrentNoEffectRadius = 0.25f;
 
-		// Token: 0x0400555B RID: 21851
+		// Token: 0x0400555C RID: 21852
 		[SerializeField]
 		private float inwardCurrentSpeed = 1f;
 
-		// Token: 0x0400555C RID: 21852
+		// Token: 0x0400555D RID: 21853
 		[SerializeField]
 		private float inwardCurrentAccel = 10f;
 
-		// Token: 0x0400555D RID: 21853
+		// Token: 0x0400555E RID: 21854
 		[SerializeField]
 		private float dampingHalfLife = 0.25f;
 
-		// Token: 0x0400555E RID: 21854
+		// Token: 0x0400555F RID: 21855
 		[SerializeField]
 		private bool debugDrawCurrentQueries;
 
-		// Token: 0x0400555F RID: 21855
+		// Token: 0x04005560 RID: 21856
 		private Vector3 debugCurrentVelocity = Vector3.zero;
 
-		// Token: 0x04005560 RID: 21856
+		// Token: 0x04005561 RID: 21857
 		private Vector3 debugSplinePoint = Vector3.zero;
 	}
 }

@@ -5,14 +5,14 @@ using UnityEngine;
 // Token: 0x02000A16 RID: 2582
 public class TransformOscilation : MonoBehaviour
 {
-	// Token: 0x06003DB2 RID: 15794 RVA: 0x00124574 File Offset: 0x00122774
+	// Token: 0x06003DB3 RID: 15795 RVA: 0x0012464C File Offset: 0x0012284C
 	private void Start()
 	{
 		this.rootPos = base.transform.localPosition;
 		this.rootRot = base.transform.localRotation.eulerAngles;
 	}
 
-	// Token: 0x06003DB3 RID: 15795 RVA: 0x001245AC File Offset: 0x001227AC
+	// Token: 0x06003DB4 RID: 15796 RVA: 0x00124684 File Offset: 0x00122884
 	private void Update()
 	{
 		if (this.useServerTime && GorillaComputer.instance == null)
@@ -35,38 +35,38 @@ public class TransformOscilation : MonoBehaviour
 		base.transform.localRotation = Quaternion.Euler(this.rootRot + this.offsRot);
 	}
 
-	// Token: 0x04004178 RID: 16760
+	// Token: 0x04004179 RID: 16761
 	[SerializeField]
 	private Vector3 PosAmp;
 
-	// Token: 0x04004179 RID: 16761
+	// Token: 0x0400417A RID: 16762
 	[SerializeField]
 	private Vector3 PosFreq;
 
-	// Token: 0x0400417A RID: 16762
+	// Token: 0x0400417B RID: 16763
 	[SerializeField]
 	private Vector3 RotAmp;
 
-	// Token: 0x0400417B RID: 16763
+	// Token: 0x0400417C RID: 16764
 	[SerializeField]
 	private Vector3 RotFreq;
 
-	// Token: 0x0400417C RID: 16764
+	// Token: 0x0400417D RID: 16765
 	private Vector3 rootPos;
 
-	// Token: 0x0400417D RID: 16765
+	// Token: 0x0400417E RID: 16766
 	private Vector3 rootRot;
 
-	// Token: 0x0400417E RID: 16766
+	// Token: 0x0400417F RID: 16767
 	private Vector3 offsPos = Vector3.zero;
 
-	// Token: 0x0400417F RID: 16767
+	// Token: 0x04004180 RID: 16768
 	private Vector3 offsRot = Vector3.zero;
 
-	// Token: 0x04004180 RID: 16768
+	// Token: 0x04004181 RID: 16769
 	private DateTime dt;
 
-	// Token: 0x04004181 RID: 16769
+	// Token: 0x04004182 RID: 16770
 	[SerializeField]
 	private bool useServerTime;
 }

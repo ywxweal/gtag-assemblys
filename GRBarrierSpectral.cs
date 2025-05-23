@@ -5,14 +5,14 @@ using UnityEngine;
 // Token: 0x02000595 RID: 1429
 public class GRBarrierSpectral : MonoBehaviour
 {
-	// Token: 0x060022F9 RID: 8953 RVA: 0x000AF134 File Offset: 0x000AD334
+	// Token: 0x060022F9 RID: 8953 RVA: 0x000AF154 File Offset: 0x000AD354
 	public void Awake()
 	{
 		this.hitFx.SetActive(false);
 		this.destroyedFx.SetActive(false);
 	}
 
-	// Token: 0x060022FA RID: 8954 RVA: 0x000AF150 File Offset: 0x000AD350
+	// Token: 0x060022FA RID: 8954 RVA: 0x000AF170 File Offset: 0x000AD370
 	public void RefreshVisuals()
 	{
 		if (this.lastVisualUpdateHealth != this.health)
@@ -24,13 +24,13 @@ public class GRBarrierSpectral : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060022FB RID: 8955 RVA: 0x000AF1B9 File Offset: 0x000AD3B9
+	// Token: 0x060022FB RID: 8955 RVA: 0x000AF1D9 File Offset: 0x000AD3D9
 	public void TryFlash(GRTool tool)
 	{
 		GameAgentManager.instance.RequestImpact(this.entity, tool, base.transform.position, Vector3.zero, 1);
 	}
 
-	// Token: 0x060022FC RID: 8956 RVA: 0x000AF1DF File Offset: 0x000AD3DF
+	// Token: 0x060022FC RID: 8956 RVA: 0x000AF1FF File Offset: 0x000AD3FF
 	public void OnImpact(GRTool tool, Vector3 startPos, Vector3 impulse, byte impulseData)
 	{
 		if (impulseData == 1)
@@ -39,7 +39,7 @@ public class GRBarrierSpectral : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060022FD RID: 8957 RVA: 0x000AF1F0 File Offset: 0x000AD3F0
+	// Token: 0x060022FD RID: 8957 RVA: 0x000AF210 File Offset: 0x000AD410
 	public void OnFlash(GRTool tool)
 	{
 		int num = Mathf.Max(this.health - 1, 0);

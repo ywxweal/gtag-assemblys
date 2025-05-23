@@ -7,16 +7,16 @@ namespace GorillaNetworking
 	[Serializable]
 	internal class FeatureFlagData
 	{
-		// Token: 0x04005150 RID: 20816
+		// Token: 0x04005151 RID: 20817
 		public string name;
 
-		// Token: 0x04005151 RID: 20817
+		// Token: 0x04005152 RID: 20818
 		public int value;
 
-		// Token: 0x04005152 RID: 20818
+		// Token: 0x04005153 RID: 20819
 		public string valueType;
 
-		// Token: 0x04005153 RID: 20819
+		// Token: 0x04005154 RID: 20820
 		public List<string> alwaysOnForUsers;
 	}
 }

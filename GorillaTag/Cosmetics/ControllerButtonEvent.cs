@@ -10,33 +10,33 @@ namespace GorillaTag.Cosmetics
 	public class ControllerButtonEvent : MonoBehaviour, ISpawnable
 	{
 		// Token: 0x170008C0 RID: 2240
-		// (get) Token: 0x060057D1 RID: 22481 RVA: 0x001AFB02 File Offset: 0x001ADD02
-		// (set) Token: 0x060057D2 RID: 22482 RVA: 0x001AFB0A File Offset: 0x001ADD0A
+		// (get) Token: 0x060057D2 RID: 22482 RVA: 0x001AFBDA File Offset: 0x001ADDDA
+		// (set) Token: 0x060057D3 RID: 22483 RVA: 0x001AFBE2 File Offset: 0x001ADDE2
 		public bool IsSpawned { get; set; }
 
 		// Token: 0x170008C1 RID: 2241
-		// (get) Token: 0x060057D3 RID: 22483 RVA: 0x001AFB13 File Offset: 0x001ADD13
-		// (set) Token: 0x060057D4 RID: 22484 RVA: 0x001AFB1B File Offset: 0x001ADD1B
+		// (get) Token: 0x060057D4 RID: 22484 RVA: 0x001AFBEB File Offset: 0x001ADDEB
+		// (set) Token: 0x060057D5 RID: 22485 RVA: 0x001AFBF3 File Offset: 0x001ADDF3
 		public ECosmeticSelectSide CosmeticSelectedSide { get; set; }
 
-		// Token: 0x060057D5 RID: 22485 RVA: 0x001AFB24 File Offset: 0x001ADD24
+		// Token: 0x060057D6 RID: 22486 RVA: 0x001AFBFC File Offset: 0x001ADDFC
 		public void OnSpawn(VRRig rig)
 		{
 			this.myRig = rig;
 		}
 
-		// Token: 0x060057D6 RID: 22486 RVA: 0x000023F4 File Offset: 0x000005F4
+		// Token: 0x060057D7 RID: 22487 RVA: 0x000023F4 File Offset: 0x000005F4
 		public void OnDespawn()
 		{
 		}
 
-		// Token: 0x060057D7 RID: 22487 RVA: 0x001AFB2D File Offset: 0x001ADD2D
+		// Token: 0x060057D8 RID: 22488 RVA: 0x001AFC05 File Offset: 0x001ADE05
 		private bool IsMyItem()
 		{
 			return this.myRig != null && this.myRig.isOfflineVRRig;
 		}
 
-		// Token: 0x060057D8 RID: 22488 RVA: 0x001AFB4A File Offset: 0x001ADD4A
+		// Token: 0x060057D9 RID: 22489 RVA: 0x001AFC22 File Offset: 0x001ADE22
 		private void Awake()
 		{
 			this.triggerLastValue = 0f;
@@ -46,7 +46,7 @@ namespace GorillaTag.Cosmetics
 			this.frameCounter = 0;
 		}
 
-		// Token: 0x060057D9 RID: 22489 RVA: 0x001AFB78 File Offset: 0x001ADD78
+		// Token: 0x060057DA RID: 22490 RVA: 0x001AFC50 File Offset: 0x001ADE50
 		public void LateUpdate()
 		{
 			if (!this.IsMyItem())
@@ -205,71 +205,71 @@ namespace GorillaTag.Cosmetics
 			}
 		}
 
-		// Token: 0x04005C9D RID: 23709
+		// Token: 0x04005C9E RID: 23710
 		[SerializeField]
 		private float gripValue = 0.75f;
 
-		// Token: 0x04005C9E RID: 23710
+		// Token: 0x04005C9F RID: 23711
 		[SerializeField]
 		private float gripReleaseValue = 0.01f;
 
-		// Token: 0x04005C9F RID: 23711
+		// Token: 0x04005CA0 RID: 23712
 		[SerializeField]
 		private float triggerValue = 0.75f;
 
-		// Token: 0x04005CA0 RID: 23712
+		// Token: 0x04005CA1 RID: 23713
 		[SerializeField]
 		private float triggerReleaseValue = 0.01f;
 
-		// Token: 0x04005CA1 RID: 23713
+		// Token: 0x04005CA2 RID: 23714
 		[SerializeField]
 		private ControllerButtonEvent.ButtonType buttonType;
 
-		// Token: 0x04005CA2 RID: 23714
+		// Token: 0x04005CA3 RID: 23715
 		[Tooltip("How many frames should pass to trigger a press stayed button")]
 		[SerializeField]
 		private int frameInterval = 20;
 
-		// Token: 0x04005CA3 RID: 23715
+		// Token: 0x04005CA4 RID: 23716
 		public UnityEvent<bool, float> onButtonPressed;
 
-		// Token: 0x04005CA4 RID: 23716
+		// Token: 0x04005CA5 RID: 23717
 		public UnityEvent<bool, float> onButtonReleased;
 
-		// Token: 0x04005CA5 RID: 23717
+		// Token: 0x04005CA6 RID: 23718
 		public UnityEvent<bool, float> onButtonPressStayed;
 
-		// Token: 0x04005CA6 RID: 23718
+		// Token: 0x04005CA7 RID: 23719
 		private float triggerLastValue;
 
-		// Token: 0x04005CA7 RID: 23719
+		// Token: 0x04005CA8 RID: 23720
 		private float gripLastValue;
 
-		// Token: 0x04005CA8 RID: 23720
+		// Token: 0x04005CA9 RID: 23721
 		private bool primaryLastValue;
 
-		// Token: 0x04005CA9 RID: 23721
+		// Token: 0x04005CAA RID: 23722
 		private bool secondaryLastValue;
 
-		// Token: 0x04005CAA RID: 23722
+		// Token: 0x04005CAB RID: 23723
 		private int frameCounter;
 
-		// Token: 0x04005CAB RID: 23723
+		// Token: 0x04005CAC RID: 23724
 		private bool inLeftHand;
 
-		// Token: 0x04005CAC RID: 23724
+		// Token: 0x04005CAD RID: 23725
 		private VRRig myRig;
 
 		// Token: 0x02000DD7 RID: 3543
 		private enum ButtonType
 		{
-			// Token: 0x04005CB0 RID: 23728
-			trigger,
 			// Token: 0x04005CB1 RID: 23729
-			primary,
+			trigger,
 			// Token: 0x04005CB2 RID: 23730
-			secondary,
+			primary,
 			// Token: 0x04005CB3 RID: 23731
+			secondary,
+			// Token: 0x04005CB4 RID: 23732
 			grip
 		}
 	}

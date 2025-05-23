@@ -23,7 +23,7 @@ public abstract class HoldableObject : MonoBehaviour, IHoldableObject
 	// Token: 0x060018EE RID: 6382
 	public abstract void DropItemCleanup();
 
-	// Token: 0x060018EF RID: 6383 RVA: 0x00078E64 File Offset: 0x00077064
+	// Token: 0x060018EF RID: 6383 RVA: 0x00078E84 File Offset: 0x00077084
 	public virtual bool OnRelease(DropZone zoneReleased, GameObject releasingHand)
 	{
 		return (EquipmentInteractor.instance.rightHandHeldEquipment != this || !(releasingHand != EquipmentInteractor.instance.rightHand)) && (EquipmentInteractor.instance.leftHandHeldEquipment != this || !(releasingHand != EquipmentInteractor.instance.leftHand));

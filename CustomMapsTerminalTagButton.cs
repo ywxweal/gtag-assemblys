@@ -3,6 +3,6 @@
 // Token: 0x02000739 RID: 1849
 public class CustomMapsTerminalTagButton : CustomMapsTerminalToggleButton
 {
-	// Token: 0x040034CC RID: 13516
+	// Token: 0x040034CE RID: 13518
 	public string tagText;
 }

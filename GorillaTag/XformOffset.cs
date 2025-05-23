@@ -9,8 +9,8 @@ namespace GorillaTag
 	public struct XformOffset
 	{
 		// Token: 0x1700085B RID: 2139
-		// (get) Token: 0x060053B1 RID: 21425 RVA: 0x0019625D File Offset: 0x0019445D
-		// (set) Token: 0x060053B2 RID: 21426 RVA: 0x00196265 File Offset: 0x00194465
+		// (get) Token: 0x060053B2 RID: 21426 RVA: 0x00196335 File Offset: 0x00194535
+		// (set) Token: 0x060053B3 RID: 21427 RVA: 0x0019633D File Offset: 0x0019453D
 		[Tooltip("The rotation of the cosmetic relative to the parent bone.")]
 		public Quaternion rot
 		{
@@ -24,7 +24,7 @@ namespace GorillaTag
 			}
 		}
 
-		// Token: 0x060053B3 RID: 21427 RVA: 0x0019626E File Offset: 0x0019446E
+		// Token: 0x060053B4 RID: 21428 RVA: 0x00196346 File Offset: 0x00194546
 		public XformOffset(int thisIsAnUnusedDummyValue)
 		{
 			this.pos = Vector3.zero;
@@ -33,7 +33,7 @@ namespace GorillaTag
 			this.scale = Vector3.one;
 		}
 
-		// Token: 0x060053B4 RID: 21428 RVA: 0x0019629C File Offset: 0x0019449C
+		// Token: 0x060053B5 RID: 21429 RVA: 0x00196374 File Offset: 0x00194574
 		public XformOffset(Vector3 pos, Quaternion rot, Vector3 scale)
 		{
 			this.pos = pos;
@@ -42,7 +42,7 @@ namespace GorillaTag
 			this.scale = scale;
 		}
 
-		// Token: 0x060053B5 RID: 21429 RVA: 0x001962C0 File Offset: 0x001944C0
+		// Token: 0x060053B6 RID: 21430 RVA: 0x00196398 File Offset: 0x00194598
 		public XformOffset(Vector3 pos, Vector3 rot, Vector3 scale)
 		{
 			this.pos = pos;
@@ -51,7 +51,7 @@ namespace GorillaTag
 			this.scale = scale;
 		}
 
-		// Token: 0x060053B6 RID: 21430 RVA: 0x001962E3 File Offset: 0x001944E3
+		// Token: 0x060053B7 RID: 21431 RVA: 0x001963BB File Offset: 0x001945BB
 		public XformOffset(Vector3 pos, Quaternion rot)
 		{
 			this.pos = pos;
@@ -60,7 +60,7 @@ namespace GorillaTag
 			this.scale = Vector3.one;
 		}
 
-		// Token: 0x060053B7 RID: 21431 RVA: 0x0019630B File Offset: 0x0019450B
+		// Token: 0x060053B8 RID: 21432 RVA: 0x001963E3 File Offset: 0x001945E3
 		public XformOffset(Vector3 pos, Vector3 rot)
 		{
 			this.pos = pos;
@@ -69,7 +69,7 @@ namespace GorillaTag
 			this.scale = Vector3.one;
 		}
 
-		// Token: 0x060053B8 RID: 21432 RVA: 0x00196334 File Offset: 0x00194534
+		// Token: 0x060053B9 RID: 21433 RVA: 0x0019640C File Offset: 0x0019460C
 		public XformOffset(Transform boneXform, Transform cosmeticXform)
 		{
 			this.pos = boneXform.InverseTransformPoint(cosmeticXform.position);
@@ -80,7 +80,7 @@ namespace GorillaTag
 			this.scale = new Vector3(lossyScale2.x / lossyScale.x, lossyScale2.y / lossyScale.y, lossyScale2.z / lossyScale.z);
 		}
 
-		// Token: 0x060053B9 RID: 21433 RVA: 0x001963C0 File Offset: 0x001945C0
+		// Token: 0x060053BA RID: 21434 RVA: 0x00196498 File Offset: 0x00194698
 		public XformOffset(Matrix4x4 matrix)
 		{
 			this.pos = matrix.GetPosition();
@@ -97,35 +97,35 @@ namespace GorillaTag
 			this._rotEulerAngles = this._rotQuat.eulerAngles;
 		}
 
-		// Token: 0x060053BA RID: 21434 RVA: 0x001964C8 File Offset: 0x001946C8
+		// Token: 0x060053BB RID: 21435 RVA: 0x001965A0 File Offset: 0x001947A0
 		public bool Approx(XformOffset other)
 		{
 			return this.pos.Approx(other.pos, 1E-05f) && this._rotQuat.Approx(other._rotQuat, 1E-06f) && this.scale.Approx(other.scale, 1E-05f);
 		}
 
-		// Token: 0x040056CA RID: 22218
+		// Token: 0x040056CB RID: 22219
 		[Tooltip("The position of the cosmetic relative to the parent bone.")]
 		public Vector3 pos;
 
-		// Token: 0x040056CB RID: 22219
+		// Token: 0x040056CC RID: 22220
 		[FormerlySerializedAs("_edRotQuat")]
 		[FormerlySerializedAs("rot")]
 		[HideInInspector]
 		[SerializeField]
 		private Quaternion _rotQuat;
 
-		// Token: 0x040056CC RID: 22220
+		// Token: 0x040056CD RID: 22221
 		[FormerlySerializedAs("_edRotEulerAngles")]
 		[FormerlySerializedAs("_edRotEuler")]
 		[HideInInspector]
 		[SerializeField]
 		private Vector3 _rotEulerAngles;
 
-		// Token: 0x040056CD RID: 22221
+		// Token: 0x040056CE RID: 22222
 		[Tooltip("The scale of the cosmetic relative to the parent bone.")]
 		public Vector3 scale;
 
-		// Token: 0x040056CE RID: 22222
+		// Token: 0x040056CF RID: 22223
 		public static readonly XformOffset Identity = new XformOffset
 		{
 			_rotQuat = Quaternion.identity,

@@ -9,21 +9,21 @@ namespace DynamicSceneManagerHelper
 	internal class SnapshotComparer
 	{
 		// Token: 0x1700072E RID: 1838
-		// (get) Token: 0x06004A59 RID: 19033 RVA: 0x00161DBB File Offset: 0x0015FFBB
+		// (get) Token: 0x06004A5A RID: 19034 RVA: 0x00161E93 File Offset: 0x00160093
 		public SceneSnapshot BaseSnapshot { get; }
 
 		// Token: 0x1700072F RID: 1839
-		// (get) Token: 0x06004A5A RID: 19034 RVA: 0x00161DC3 File Offset: 0x0015FFC3
+		// (get) Token: 0x06004A5B RID: 19035 RVA: 0x00161E9B File Offset: 0x0016009B
 		public SceneSnapshot NewSnapshot { get; }
 
-		// Token: 0x06004A5B RID: 19035 RVA: 0x00161DCB File Offset: 0x0015FFCB
+		// Token: 0x06004A5C RID: 19036 RVA: 0x00161EA3 File Offset: 0x001600A3
 		public SnapshotComparer(SceneSnapshot baseSnapshot, SceneSnapshot newSnapshot)
 		{
 			this.BaseSnapshot = baseSnapshot;
 			this.NewSnapshot = newSnapshot;
 		}
 
-		// Token: 0x06004A5C RID: 19036 RVA: 0x00161DE4 File Offset: 0x0015FFE4
+		// Token: 0x06004A5D RID: 19037 RVA: 0x00161EBC File Offset: 0x001600BC
 		public List<ValueTuple<OVRAnchor, SnapshotComparer.ChangeType>> Compare()
 		{
 			List<ValueTuple<OVRAnchor, SnapshotComparer.ChangeType>> list = new List<ValueTuple<OVRAnchor, SnapshotComparer.ChangeType>>();
@@ -46,7 +46,7 @@ namespace DynamicSceneManagerHelper
 			return list;
 		}
 
-		// Token: 0x06004A5D RID: 19037 RVA: 0x00161ECC File Offset: 0x001600CC
+		// Token: 0x06004A5E RID: 19038 RVA: 0x00161FA4 File Offset: 0x001601A4
 		private void CheckRoomChanges(List<ValueTuple<OVRAnchor, SnapshotComparer.ChangeType>> changes)
 		{
 			for (int i = 0; i < changes.Count; i++)
@@ -75,7 +75,7 @@ namespace DynamicSceneManagerHelper
 			}
 		}
 
-		// Token: 0x06004A5E RID: 19038 RVA: 0x00161FE8 File Offset: 0x001601E8
+		// Token: 0x06004A5F RID: 19039 RVA: 0x001620C0 File Offset: 0x001602C0
 		private void CheckBoundsChanges(List<ValueTuple<OVRAnchor, SnapshotComparer.ChangeType>> changes)
 		{
 			using (Dictionary<OVRAnchor, SceneSnapshot.Data>.KeyCollection.Enumerator enumerator = this.BaseSnapshot.Anchors.Keys.GetEnumerator())
@@ -99,13 +99,13 @@ namespace DynamicSceneManagerHelper
 			}
 		}
 
-		// Token: 0x06004A5F RID: 19039 RVA: 0x001620FC File Offset: 0x001602FC
+		// Token: 0x06004A60 RID: 19040 RVA: 0x001621D4 File Offset: 0x001603D4
 		private bool Has2DBounds(SceneSnapshot.Data data1, SceneSnapshot.Data data2)
 		{
 			return data1.Rect != null && data2.Rect != null;
 		}
 
-		// Token: 0x06004A60 RID: 19040 RVA: 0x00162118 File Offset: 0x00160318
+		// Token: 0x06004A61 RID: 19041 RVA: 0x001621F0 File Offset: 0x001603F0
 		private bool Are2DBoundsDifferent(SceneSnapshot.Data data1, SceneSnapshot.Data data2)
 		{
 			Vector2? vector = ((data1.Rect != null) ? new Vector2?(data1.Rect.GetValueOrDefault().min) : null);
@@ -117,13 +117,13 @@ namespace DynamicSceneManagerHelper
 			return true;
 		}
 
-		// Token: 0x06004A61 RID: 19041 RVA: 0x00162242 File Offset: 0x00160442
+		// Token: 0x06004A62 RID: 19042 RVA: 0x0016231A File Offset: 0x0016051A
 		private bool Has3DBounds(SceneSnapshot.Data data1, SceneSnapshot.Data data2)
 		{
 			return data1.Bounds != null && data2.Bounds != null;
 		}
 
-		// Token: 0x06004A62 RID: 19042 RVA: 0x00162260 File Offset: 0x00160460
+		// Token: 0x06004A63 RID: 19043 RVA: 0x00162338 File Offset: 0x00160538
 		private bool Are3DBoundsDifferent(SceneSnapshot.Data data1, SceneSnapshot.Data data2)
 		{
 			Vector3? vector = ((data1.Bounds != null) ? new Vector3?(data1.Bounds.GetValueOrDefault().min) : null);
@@ -138,13 +138,13 @@ namespace DynamicSceneManagerHelper
 		// Token: 0x02000BC0 RID: 3008
 		public enum ChangeType
 		{
-			// Token: 0x04004D1E RID: 19742
-			New,
 			// Token: 0x04004D1F RID: 19743
-			Missing,
+			New,
 			// Token: 0x04004D20 RID: 19744
-			ChangedId,
+			Missing,
 			// Token: 0x04004D21 RID: 19745
+			ChangedId,
+			// Token: 0x04004D22 RID: 19746
 			ChangedBounds
 		}
 	}

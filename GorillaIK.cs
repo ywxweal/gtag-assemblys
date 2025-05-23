@@ -4,7 +4,7 @@ using UnityEngine;
 // Token: 0x02000616 RID: 1558
 public class GorillaIK : MonoBehaviour
 {
-	// Token: 0x060026C5 RID: 9925 RVA: 0x000C0358 File Offset: 0x000BE558
+	// Token: 0x060026C5 RID: 9925 RVA: 0x000C0378 File Offset: 0x000BE578
 	private void Awake()
 	{
 		if (Application.isPlaying && !this.testInEditor)
@@ -19,19 +19,19 @@ public class GorillaIK : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060026C6 RID: 9926 RVA: 0x000C042A File Offset: 0x000BE62A
+	// Token: 0x060026C6 RID: 9926 RVA: 0x000C044A File Offset: 0x000BE64A
 	private void OnEnable()
 	{
 		GorillaIKMgr.Instance.RegisterIK(this);
 	}
 
-	// Token: 0x060026C7 RID: 9927 RVA: 0x000C0437 File Offset: 0x000BE637
+	// Token: 0x060026C7 RID: 9927 RVA: 0x000C0457 File Offset: 0x000BE657
 	private void OnDisable()
 	{
 		GorillaIKMgr.Instance.DeregisterIK(this);
 	}
 
-	// Token: 0x060026C8 RID: 9928 RVA: 0x000C0444 File Offset: 0x000BE644
+	// Token: 0x060026C8 RID: 9928 RVA: 0x000C0464 File Offset: 0x000BE664
 	private void ArmIK(ref Transform upperArm, ref Transform lowerArm, ref Transform hand, Quaternion initRotUpper, Quaternion initRotLower, Transform target)
 	{
 		upperArm.localRotation = initRotUpper;

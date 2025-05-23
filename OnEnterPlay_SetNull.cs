@@ -5,7 +5,7 @@ using UnityEngine;
 // Token: 0x020009AA RID: 2474
 public class OnEnterPlay_SetNull : OnEnterPlay_Attribute
 {
-	// Token: 0x06003B54 RID: 15188 RVA: 0x0011B480 File Offset: 0x00119680
+	// Token: 0x06003B55 RID: 15189 RVA: 0x0011B558 File Offset: 0x00119758
 	public override void OnEnterPlay(FieldInfo field)
 	{
 		if (!field.IsStatic)

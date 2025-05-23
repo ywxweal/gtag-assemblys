@@ -6,7 +6,7 @@ using UnityEngine;
 // Token: 0x0200050F RID: 1295
 public class BuilderRoomBoundary : GorillaTriggerBox
 {
-	// Token: 0x06001F5A RID: 8026 RVA: 0x0009D59C File Offset: 0x0009B79C
+	// Token: 0x06001F5A RID: 8026 RVA: 0x0009D5BC File Offset: 0x0009B7BC
 	private void Awake()
 	{
 		foreach (SizeChangerTrigger sizeChangerTrigger in this.enableOnEnterTrigger)
@@ -16,7 +16,7 @@ public class BuilderRoomBoundary : GorillaTriggerBox
 		this.disableOnExitTrigger.OnExit += this.OnExitedBoundary;
 	}
 
-	// Token: 0x06001F5B RID: 8027 RVA: 0x0009D610 File Offset: 0x0009B810
+	// Token: 0x06001F5B RID: 8027 RVA: 0x0009D630 File Offset: 0x0009B830
 	private void OnDestroy()
 	{
 		foreach (SizeChangerTrigger sizeChangerTrigger in this.enableOnEnterTrigger)
@@ -26,7 +26,7 @@ public class BuilderRoomBoundary : GorillaTriggerBox
 		this.disableOnExitTrigger.OnExit -= this.OnExitedBoundary;
 	}
 
-	// Token: 0x06001F5C RID: 8028 RVA: 0x0009D684 File Offset: 0x0009B884
+	// Token: 0x06001F5C RID: 8028 RVA: 0x0009D6A4 File Offset: 0x0009B8A4
 	public void OnEnteredBoundary(Collider other)
 	{
 		if (other.attachedRigidbody == null)
@@ -49,7 +49,7 @@ public class BuilderRoomBoundary : GorillaTriggerBox
 		}
 	}
 
-	// Token: 0x06001F5D RID: 8029 RVA: 0x0009D700 File Offset: 0x0009B900
+	// Token: 0x06001F5D RID: 8029 RVA: 0x0009D720 File Offset: 0x0009B920
 	public void OnExitedBoundary(Collider other)
 	{
 		if (other.attachedRigidbody == null)

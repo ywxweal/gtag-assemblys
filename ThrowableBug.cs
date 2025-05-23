@@ -6,7 +6,7 @@ using UnityEngine.Serialization;
 // Token: 0x02000A09 RID: 2569
 public class ThrowableBug : TransferrableObject
 {
-	// Token: 0x06003D56 RID: 15702 RVA: 0x001232E4 File Offset: 0x001214E4
+	// Token: 0x06003D57 RID: 15703 RVA: 0x001233BC File Offset: 0x001215BC
 	protected override void Start()
 	{
 		base.Start();
@@ -18,7 +18,7 @@ public class ThrowableBug : TransferrableObject
 		this.velocityEstimator = base.GetComponent<GorillaVelocityEstimator>();
 	}
 
-	// Token: 0x06003D57 RID: 15703 RVA: 0x00123360 File Offset: 0x00121560
+	// Token: 0x06003D58 RID: 15704 RVA: 0x00123438 File Offset: 0x00121638
 	internal override void OnEnable()
 	{
 		base.OnEnable();
@@ -29,7 +29,7 @@ public class ThrowableBug : TransferrableObject
 		ThrowableBugBeacon.OnChangeSpeedMultiplier += this.ThrowableBugBeacon_OnChangeSpeedMultiplier;
 	}
 
-	// Token: 0x06003D58 RID: 15704 RVA: 0x001233C8 File Offset: 0x001215C8
+	// Token: 0x06003D59 RID: 15705 RVA: 0x001234A0 File Offset: 0x001216A0
 	internal override void OnDisable()
 	{
 		base.OnDisable();
@@ -40,13 +40,13 @@ public class ThrowableBug : TransferrableObject
 		ThrowableBugBeacon.OnChangeSpeedMultiplier -= this.ThrowableBugBeacon_OnChangeSpeedMultiplier;
 	}
 
-	// Token: 0x06003D59 RID: 15705 RVA: 0x00123430 File Offset: 0x00121630
+	// Token: 0x06003D5A RID: 15706 RVA: 0x00123508 File Offset: 0x00121708
 	private bool isValid(ThrowableBugBeacon tbb)
 	{
 		return tbb.BugName == this.bugName && (tbb.Range <= 0f || Vector3.Distance(tbb.transform.position, base.transform.position) <= tbb.Range);
 	}
 
-	// Token: 0x06003D5A RID: 15706 RVA: 0x00123482 File Offset: 0x00121682
+	// Token: 0x06003D5B RID: 15707 RVA: 0x0012355A File Offset: 0x0012175A
 	private void ThrowableBugBeacon_OnCall(ThrowableBugBeacon tbb)
 	{
 		if (this.isValid(tbb))
@@ -55,7 +55,7 @@ public class ThrowableBug : TransferrableObject
 		}
 	}
 
-	// Token: 0x06003D5B RID: 15707 RVA: 0x001234B4 File Offset: 0x001216B4
+	// Token: 0x06003D5C RID: 15708 RVA: 0x0012358C File Offset: 0x0012178C
 	private void ThrowableBugBeacon_OnLock(ThrowableBugBeacon tbb)
 	{
 		if (this.isValid(tbb))
@@ -66,7 +66,7 @@ public class ThrowableBug : TransferrableObject
 		}
 	}
 
-	// Token: 0x06003D5C RID: 15708 RVA: 0x00123503 File Offset: 0x00121703
+	// Token: 0x06003D5D RID: 15709 RVA: 0x001235DB File Offset: 0x001217DB
 	private void ThrowableBugBeacon_OnDismiss(ThrowableBugBeacon tbb)
 	{
 		if (this.isValid(tbb))
@@ -76,7 +76,7 @@ public class ThrowableBug : TransferrableObject
 		}
 	}
 
-	// Token: 0x06003D5D RID: 15709 RVA: 0x0012353B File Offset: 0x0012173B
+	// Token: 0x06003D5E RID: 15710 RVA: 0x00123613 File Offset: 0x00121813
 	private void ThrowableBugBeacon_OnUnlock(ThrowableBugBeacon tbb)
 	{
 		if (this.isValid(tbb))
@@ -85,7 +85,7 @@ public class ThrowableBug : TransferrableObject
 		}
 	}
 
-	// Token: 0x06003D5E RID: 15710 RVA: 0x0012354D File Offset: 0x0012174D
+	// Token: 0x06003D5F RID: 15711 RVA: 0x00123625 File Offset: 0x00121825
 	private void ThrowableBugBeacon_OnChangeSpeedMultiplier(ThrowableBugBeacon tbb, float f)
 	{
 		if (this.isValid(tbb))
@@ -94,13 +94,13 @@ public class ThrowableBug : TransferrableObject
 		}
 	}
 
-	// Token: 0x06003D5F RID: 15711 RVA: 0x00047642 File Offset: 0x00045842
+	// Token: 0x06003D60 RID: 15712 RVA: 0x00047642 File Offset: 0x00045842
 	public override bool ShouldBeKinematic()
 	{
 		return true;
 	}
 
-	// Token: 0x06003D60 RID: 15712 RVA: 0x00123560 File Offset: 0x00121760
+	// Token: 0x06003D61 RID: 15713 RVA: 0x00123638 File Offset: 0x00121838
 	protected override void LateUpdateShared()
 	{
 		base.LateUpdateShared();
@@ -190,7 +190,7 @@ public class ThrowableBug : TransferrableObject
 		}
 	}
 
-	// Token: 0x06003D61 RID: 15713 RVA: 0x0012374C File Offset: 0x0012194C
+	// Token: 0x06003D62 RID: 15714 RVA: 0x00123824 File Offset: 0x00121A24
 	protected override void LateUpdateLocal()
 	{
 		base.LateUpdateLocal();
@@ -306,13 +306,13 @@ public class ThrowableBug : TransferrableObject
 		}
 	}
 
-	// Token: 0x06003D62 RID: 15714 RVA: 0x00123CC9 File Offset: 0x00121EC9
+	// Token: 0x06003D63 RID: 15715 RVA: 0x00123DA1 File Offset: 0x00121FA1
 	private float RandomizeBobingFrequency()
 	{
 		return Random.Range(this.minRandFrequency, this.maxRandFrequency);
 	}
 
-	// Token: 0x06003D63 RID: 15715 RVA: 0x00123CDC File Offset: 0x00121EDC
+	// Token: 0x06003D64 RID: 15716 RVA: 0x00123DB4 File Offset: 0x00121FB4
 	public override bool OnRelease(DropZone zoneReleased, GameObject releasingHand)
 	{
 		if (!base.OnRelease(zoneReleased, releasingHand))
@@ -330,13 +330,13 @@ public class ThrowableBug : TransferrableObject
 		return true;
 	}
 
-	// Token: 0x06003D64 RID: 15716 RVA: 0x00123D6E File Offset: 0x00121F6E
+	// Token: 0x06003D65 RID: 15717 RVA: 0x00123E46 File Offset: 0x00122046
 	public void OnCollisionEnter(Collision collision)
 	{
 		this.reliableState.travelingDirection *= -1f;
 	}
 
-	// Token: 0x06003D65 RID: 15717 RVA: 0x00123D8C File Offset: 0x00121F8C
+	// Token: 0x06003D66 RID: 15718 RVA: 0x00123E64 File Offset: 0x00122064
 	private void Update()
 	{
 		if (this.updateMultiplier > 0)
@@ -348,173 +348,173 @@ public class ThrowableBug : TransferrableObject
 		}
 	}
 
-	// Token: 0x0400411C RID: 16668
+	// Token: 0x0400411D RID: 16669
 	public ThrowableBugReliableState reliableState;
 
-	// Token: 0x0400411D RID: 16669
+	// Token: 0x0400411E RID: 16670
 	public float slowingDownProgress;
 
-	// Token: 0x0400411E RID: 16670
+	// Token: 0x0400411F RID: 16671
 	public float startingSpeed;
 
-	// Token: 0x0400411F RID: 16671
+	// Token: 0x04004120 RID: 16672
 	public float bobingSpeed = 1f;
 
-	// Token: 0x04004120 RID: 16672
+	// Token: 0x04004121 RID: 16673
 	public float bobMagnintude = 0.1f;
 
-	// Token: 0x04004121 RID: 16673
+	// Token: 0x04004122 RID: 16674
 	public bool shouldRandomizeFrequency;
 
-	// Token: 0x04004122 RID: 16674
+	// Token: 0x04004123 RID: 16675
 	public float minRandFrequency = 0.008f;
 
-	// Token: 0x04004123 RID: 16675
+	// Token: 0x04004124 RID: 16676
 	public float maxRandFrequency = 1f;
 
-	// Token: 0x04004124 RID: 16676
+	// Token: 0x04004125 RID: 16677
 	public float bobingFrequency = 1f;
 
-	// Token: 0x04004125 RID: 16677
+	// Token: 0x04004126 RID: 16678
 	public float bobingState;
 
-	// Token: 0x04004126 RID: 16678
+	// Token: 0x04004127 RID: 16679
 	public float thrownYVelocity;
 
-	// Token: 0x04004127 RID: 16679
+	// Token: 0x04004128 RID: 16680
 	public float collisionHitRadius;
 
-	// Token: 0x04004128 RID: 16680
+	// Token: 0x04004129 RID: 16681
 	public LayerMask collisionCheckMask;
 
-	// Token: 0x04004129 RID: 16681
+	// Token: 0x0400412A RID: 16682
 	public Vector3 thrownVeloicity;
 
-	// Token: 0x0400412A RID: 16682
+	// Token: 0x0400412B RID: 16683
 	public Vector3 targetVelocity;
 
-	// Token: 0x0400412B RID: 16683
+	// Token: 0x0400412C RID: 16684
 	public Quaternion bugRotationalVelocity;
 
-	// Token: 0x0400412C RID: 16684
+	// Token: 0x0400412D RID: 16685
 	private RaycastHit[] rayCastNonAllocColliders;
 
-	// Token: 0x0400412D RID: 16685
+	// Token: 0x0400412E RID: 16686
 	private RaycastHit[] rayCastNonAllocColliders2;
 
-	// Token: 0x0400412E RID: 16686
+	// Token: 0x0400412F RID: 16687
 	public VRRig followingRig;
 
-	// Token: 0x0400412F RID: 16687
+	// Token: 0x04004130 RID: 16688
 	public bool isTooHighTravelingDown;
 
-	// Token: 0x04004130 RID: 16688
+	// Token: 0x04004131 RID: 16689
 	public float descentSlerp;
 
-	// Token: 0x04004131 RID: 16689
+	// Token: 0x04004132 RID: 16690
 	public float ascentSlerp;
 
-	// Token: 0x04004132 RID: 16690
+	// Token: 0x04004133 RID: 16691
 	public float maxNaturalSpeed;
 
-	// Token: 0x04004133 RID: 16691
+	// Token: 0x04004134 RID: 16692
 	public float slowdownAcceleration;
 
-	// Token: 0x04004134 RID: 16692
+	// Token: 0x04004135 RID: 16693
 	public float maximumHeightOffOfTheGroundBeforeStartingDescent = 5f;
 
-	// Token: 0x04004135 RID: 16693
+	// Token: 0x04004136 RID: 16694
 	public float minimumHeightOffOfTheGroundBeforeStoppingDescent = 3f;
 
-	// Token: 0x04004136 RID: 16694
+	// Token: 0x04004137 RID: 16695
 	public float descentRate = 0.2f;
 
-	// Token: 0x04004137 RID: 16695
+	// Token: 0x04004138 RID: 16696
 	public float descentSlerpRate = 0.2f;
 
-	// Token: 0x04004138 RID: 16696
+	// Token: 0x04004139 RID: 16697
 	public float minimumHeightOffOfTheGroundBeforeStartingAscent = 0.5f;
 
-	// Token: 0x04004139 RID: 16697
+	// Token: 0x0400413A RID: 16698
 	public float maximumHeightOffOfTheGroundBeforeStoppingAscent = 0.75f;
 
-	// Token: 0x0400413A RID: 16698
+	// Token: 0x0400413B RID: 16699
 	public float ascentRate = 0.4f;
 
-	// Token: 0x0400413B RID: 16699
+	// Token: 0x0400413C RID: 16700
 	public float ascentSlerpRate = 1f;
 
-	// Token: 0x0400413C RID: 16700
+	// Token: 0x0400413D RID: 16701
 	private bool isTooLowTravelingUp;
 
-	// Token: 0x0400413D RID: 16701
+	// Token: 0x0400413E RID: 16702
 	public Animator animator;
 
-	// Token: 0x0400413E RID: 16702
+	// Token: 0x0400413F RID: 16703
 	[FormerlySerializedAs("grabBugAudioSource")]
 	public AudioClip grabBugAudioClip;
 
-	// Token: 0x0400413F RID: 16703
+	// Token: 0x04004140 RID: 16704
 	[FormerlySerializedAs("releaseBugAudioSource")]
 	public AudioClip releaseBugAudioClip;
 
-	// Token: 0x04004140 RID: 16704
+	// Token: 0x04004141 RID: 16705
 	[FormerlySerializedAs("flyingBugAudioSource")]
 	public AudioClip flyingBugAudioClip;
 
-	// Token: 0x04004141 RID: 16705
+	// Token: 0x04004142 RID: 16706
 	[SerializeField]
 	private AudioSource audioSource;
 
-	// Token: 0x04004142 RID: 16706
+	// Token: 0x04004143 RID: 16707
 	private float bobbingDefaultFrequency = 1f;
 
-	// Token: 0x04004143 RID: 16707
+	// Token: 0x04004144 RID: 16708
 	public int updateMultiplier;
 
-	// Token: 0x04004144 RID: 16708
+	// Token: 0x04004145 RID: 16709
 	private ThrowableBug.AudioState currentAudioState;
 
-	// Token: 0x04004145 RID: 16709
+	// Token: 0x04004146 RID: 16710
 	private float speedMultiplier = 1f;
 
-	// Token: 0x04004146 RID: 16710
+	// Token: 0x04004147 RID: 16711
 	private GorillaVelocityEstimator velocityEstimator;
 
-	// Token: 0x04004147 RID: 16711
+	// Token: 0x04004148 RID: 16712
 	[SerializeField]
 	private ThrowableBug.BugName bugName;
 
-	// Token: 0x04004148 RID: 16712
+	// Token: 0x04004149 RID: 16713
 	private Transform lockedTarget;
 
-	// Token: 0x04004149 RID: 16713
+	// Token: 0x0400414A RID: 16714
 	private bool locked;
 
-	// Token: 0x0400414A RID: 16714
+	// Token: 0x0400414B RID: 16715
 	private static readonly int _g_IsHeld = Animator.StringToHash("isHeld");
 
 	// Token: 0x02000A0A RID: 2570
 	public enum BugName
 	{
-		// Token: 0x0400414C RID: 16716
-		NONE,
 		// Token: 0x0400414D RID: 16717
-		DougTheBug,
+		NONE,
 		// Token: 0x0400414E RID: 16718
+		DougTheBug,
+		// Token: 0x0400414F RID: 16719
 		MattTheBat
 	}
 
 	// Token: 0x02000A0B RID: 2571
 	private enum AudioState
 	{
-		// Token: 0x04004150 RID: 16720
-		JustGrabbed,
 		// Token: 0x04004151 RID: 16721
-		ContinuallyGrabbed,
+		JustGrabbed,
 		// Token: 0x04004152 RID: 16722
-		JustReleased,
+		ContinuallyGrabbed,
 		// Token: 0x04004153 RID: 16723
+		JustReleased,
+		// Token: 0x04004154 RID: 16724
 		NotHeld
 	}
 }

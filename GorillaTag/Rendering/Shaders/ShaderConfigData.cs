@@ -6,7 +6,7 @@ namespace GorillaTag.Rendering.Shaders
 	// Token: 0x02000DA5 RID: 3493
 	public class ShaderConfigData
 	{
-		// Token: 0x060056AE RID: 22190 RVA: 0x001A65B0 File Offset: 0x001A47B0
+		// Token: 0x060056AF RID: 22191 RVA: 0x001A6688 File Offset: 0x001A4888
 		public static ShaderConfigData.MatPropInt[] convertInts(string[] names, int[] vals)
 		{
 			ShaderConfigData.MatPropInt[] array = new ShaderConfigData.MatPropInt[names.Length];
@@ -21,7 +21,7 @@ namespace GorillaTag.Rendering.Shaders
 			return array;
 		}
 
-		// Token: 0x060056AF RID: 22191 RVA: 0x001A65FC File Offset: 0x001A47FC
+		// Token: 0x060056B0 RID: 22192 RVA: 0x001A66D4 File Offset: 0x001A48D4
 		public static ShaderConfigData.MatPropFloat[] convertFloats(string[] names, float[] vals)
 		{
 			ShaderConfigData.MatPropFloat[] array = new ShaderConfigData.MatPropFloat[names.Length];
@@ -36,7 +36,7 @@ namespace GorillaTag.Rendering.Shaders
 			return array;
 		}
 
-		// Token: 0x060056B0 RID: 22192 RVA: 0x001A6648 File Offset: 0x001A4848
+		// Token: 0x060056B1 RID: 22193 RVA: 0x001A6720 File Offset: 0x001A4920
 		public static ShaderConfigData.MatPropMatrix[] convertMatrices(string[] names, Matrix4x4[] vals)
 		{
 			ShaderConfigData.MatPropMatrix[] array = new ShaderConfigData.MatPropMatrix[names.Length];
@@ -51,7 +51,7 @@ namespace GorillaTag.Rendering.Shaders
 			return array;
 		}
 
-		// Token: 0x060056B1 RID: 22193 RVA: 0x001A6698 File Offset: 0x001A4898
+		// Token: 0x060056B2 RID: 22194 RVA: 0x001A6770 File Offset: 0x001A4970
 		public static ShaderConfigData.MatPropVector[] convertVectors(string[] names, Vector4[] vals)
 		{
 			ShaderConfigData.MatPropVector[] array = new ShaderConfigData.MatPropVector[names.Length];
@@ -66,7 +66,7 @@ namespace GorillaTag.Rendering.Shaders
 			return array;
 		}
 
-		// Token: 0x060056B2 RID: 22194 RVA: 0x001A66E8 File Offset: 0x001A48E8
+		// Token: 0x060056B3 RID: 22195 RVA: 0x001A67C0 File Offset: 0x001A49C0
 		public static ShaderConfigData.MatPropTexture[] convertTextures(string[] names, Texture[] vals)
 		{
 			ShaderConfigData.MatPropTexture[] array = new ShaderConfigData.MatPropTexture[names.Length];
@@ -81,7 +81,7 @@ namespace GorillaTag.Rendering.Shaders
 			return array;
 		}
 
-		// Token: 0x060056B3 RID: 22195 RVA: 0x001A6734 File Offset: 0x001A4934
+		// Token: 0x060056B4 RID: 22196 RVA: 0x001A680C File Offset: 0x001A4A0C
 		public static string GetShaderPropertiesStringFromMaterial(Material mat, bool excludeMainTexData)
 		{
 			string text = "";
@@ -135,7 +135,7 @@ namespace GorillaTag.Rendering.Shaders
 			return text;
 		}
 
-		// Token: 0x060056B4 RID: 22196 RVA: 0x001A6900 File Offset: 0x001A4B00
+		// Token: 0x060056B5 RID: 22197 RVA: 0x001A69D8 File Offset: 0x001A4BD8
 		public static ShaderConfigData.ShaderConfig GetConfigDataFromMaterial(Material mat, bool includeMainTexData)
 		{
 			string[] array = mat.GetPropertyNames(MaterialPropertyType.Int);
@@ -213,7 +213,7 @@ namespace GorillaTag.Rendering.Shaders
 		[Serializable]
 		public struct ShaderConfig
 		{
-			// Token: 0x060056B6 RID: 22198 RVA: 0x001A6D28 File Offset: 0x001A4F28
+			// Token: 0x060056B7 RID: 22199 RVA: 0x001A6E00 File Offset: 0x001A5000
 			public ShaderConfig(string shadName, Material fMat, string[] intNames, int[] intVals, string[] floatNames, float[] floatVals, string[] matrixNames, Matrix4x4[] matrixVals, string[] vectorNames, Vector4[] vectorVals, string[] textureNames, Texture[] textureVals)
 			{
 				this.shaderName = shadName;
@@ -225,25 +225,25 @@ namespace GorillaTag.Rendering.Shaders
 				this.textures = ShaderConfigData.convertTextures(textureNames, textureVals);
 			}
 
-			// Token: 0x04005A90 RID: 23184
+			// Token: 0x04005A91 RID: 23185
 			public string shaderName;
 
-			// Token: 0x04005A91 RID: 23185
+			// Token: 0x04005A92 RID: 23186
 			public Material firstMat;
 
-			// Token: 0x04005A92 RID: 23186
+			// Token: 0x04005A93 RID: 23187
 			public ShaderConfigData.MatPropInt[] ints;
 
-			// Token: 0x04005A93 RID: 23187
+			// Token: 0x04005A94 RID: 23188
 			public ShaderConfigData.MatPropFloat[] floats;
 
-			// Token: 0x04005A94 RID: 23188
+			// Token: 0x04005A95 RID: 23189
 			public ShaderConfigData.MatPropMatrix[] matrices;
 
-			// Token: 0x04005A95 RID: 23189
+			// Token: 0x04005A96 RID: 23190
 			public ShaderConfigData.MatPropVector[] vectors;
 
-			// Token: 0x04005A96 RID: 23190
+			// Token: 0x04005A97 RID: 23191
 			public ShaderConfigData.MatPropTexture[] textures;
 		}
 
@@ -251,10 +251,10 @@ namespace GorillaTag.Rendering.Shaders
 		[Serializable]
 		public struct MatPropInt
 		{
-			// Token: 0x04005A97 RID: 23191
+			// Token: 0x04005A98 RID: 23192
 			public string intName;
 
-			// Token: 0x04005A98 RID: 23192
+			// Token: 0x04005A99 RID: 23193
 			public int intVal;
 		}
 
@@ -262,10 +262,10 @@ namespace GorillaTag.Rendering.Shaders
 		[Serializable]
 		public struct MatPropFloat
 		{
-			// Token: 0x04005A99 RID: 23193
+			// Token: 0x04005A9A RID: 23194
 			public string floatName;
 
-			// Token: 0x04005A9A RID: 23194
+			// Token: 0x04005A9B RID: 23195
 			public float floatVal;
 		}
 
@@ -273,10 +273,10 @@ namespace GorillaTag.Rendering.Shaders
 		[Serializable]
 		public struct MatPropMatrix
 		{
-			// Token: 0x04005A9B RID: 23195
+			// Token: 0x04005A9C RID: 23196
 			public string matrixName;
 
-			// Token: 0x04005A9C RID: 23196
+			// Token: 0x04005A9D RID: 23197
 			public Matrix4x4 matrixVal;
 		}
 
@@ -284,10 +284,10 @@ namespace GorillaTag.Rendering.Shaders
 		[Serializable]
 		public struct MatPropVector
 		{
-			// Token: 0x04005A9D RID: 23197
+			// Token: 0x04005A9E RID: 23198
 			public string vectorName;
 
-			// Token: 0x04005A9E RID: 23198
+			// Token: 0x04005A9F RID: 23199
 			public Vector4 vectorVal;
 		}
 
@@ -295,10 +295,10 @@ namespace GorillaTag.Rendering.Shaders
 		[Serializable]
 		public struct MatPropTexture
 		{
-			// Token: 0x04005A9F RID: 23199
+			// Token: 0x04005AA0 RID: 23200
 			public string textureName;
 
-			// Token: 0x04005AA0 RID: 23200
+			// Token: 0x04005AA1 RID: 23201
 			public Texture textureVal;
 		}
 
@@ -306,7 +306,7 @@ namespace GorillaTag.Rendering.Shaders
 		[Serializable]
 		public struct RenderersForShaderWithSameProperties
 		{
-			// Token: 0x04005AA1 RID: 23201
+			// Token: 0x04005AA2 RID: 23202
 			public MeshRenderer[] renderers;
 		}
 	}

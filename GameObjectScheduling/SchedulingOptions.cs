@@ -8,7 +8,7 @@ namespace GameObjectScheduling
 	public class SchedulingOptions : ScriptableObject
 	{
 		// Token: 0x170008E2 RID: 2274
-		// (get) Token: 0x06005AC3 RID: 23235 RVA: 0x001B9DB5 File Offset: 0x001B7FB5
+		// (get) Token: 0x06005AC4 RID: 23236 RVA: 0x001B9E8D File Offset: 0x001B808D
 		public DateTime DtDebugServerTime
 		{
 			get
@@ -17,15 +17,15 @@ namespace GameObjectScheduling
 			}
 		}
 
-		// Token: 0x04005ECA RID: 24266
+		// Token: 0x04005ECB RID: 24267
 		[SerializeField]
 		private string debugServerTime;
 
-		// Token: 0x04005ECB RID: 24267
+		// Token: 0x04005ECC RID: 24268
 		[SerializeField]
 		private DateTime dtDebugServerTime;
 
-		// Token: 0x04005ECC RID: 24268
+		// Token: 0x04005ECD RID: 24269
 		[SerializeField]
 		[Range(-60f, 3660f)]
 		private float timescale = 1f;

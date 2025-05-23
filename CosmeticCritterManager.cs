@@ -7,17 +7,17 @@ using UnityEngine;
 public class CosmeticCritterManager : NetworkSceneObject
 {
 	// Token: 0x17000344 RID: 836
-	// (get) Token: 0x0600204D RID: 8269 RVA: 0x000A262F File Offset: 0x000A082F
-	// (set) Token: 0x0600204E RID: 8270 RVA: 0x000A2636 File Offset: 0x000A0836
+	// (get) Token: 0x0600204D RID: 8269 RVA: 0x000A264F File Offset: 0x000A084F
+	// (set) Token: 0x0600204E RID: 8270 RVA: 0x000A2656 File Offset: 0x000A0856
 	public static CosmeticCritterManager Instance { get; private set; }
 
-	// Token: 0x0600204F RID: 8271 RVA: 0x000A263E File Offset: 0x000A083E
+	// Token: 0x0600204F RID: 8271 RVA: 0x000A265E File Offset: 0x000A085E
 	public void RegisterLocalHoldable(CosmeticCritterHoldable holdable)
 	{
 		this.localHoldables.Add(holdable);
 	}
 
-	// Token: 0x06002050 RID: 8272 RVA: 0x000A264C File Offset: 0x000A084C
+	// Token: 0x06002050 RID: 8272 RVA: 0x000A266C File Offset: 0x000A086C
 	public void RegisterIndependentSpawner(CosmeticCritterSpawnerIndependent spawner)
 	{
 		if (spawner.IsLocal)
@@ -28,7 +28,7 @@ public class CosmeticCritterManager : NetworkSceneObject
 		this.remoteCritterSpawners.AddIfNew(spawner);
 	}
 
-	// Token: 0x06002051 RID: 8273 RVA: 0x000A266F File Offset: 0x000A086F
+	// Token: 0x06002051 RID: 8273 RVA: 0x000A268F File Offset: 0x000A088F
 	public void UnregisterIndependentSpawner(CosmeticCritterSpawnerIndependent spawner)
 	{
 		if (spawner.IsLocal)
@@ -39,7 +39,7 @@ public class CosmeticCritterManager : NetworkSceneObject
 		this.remoteCritterSpawners.Remove(spawner);
 	}
 
-	// Token: 0x06002052 RID: 8274 RVA: 0x000A2694 File Offset: 0x000A0894
+	// Token: 0x06002052 RID: 8274 RVA: 0x000A26B4 File Offset: 0x000A08B4
 	public void RegisterCatcher(CosmeticCritterCatcher catcher)
 	{
 		if (catcher.IsLocal)
@@ -50,7 +50,7 @@ public class CosmeticCritterManager : NetworkSceneObject
 		this.remoteCritterCatchers.AddIfNew(catcher);
 	}
 
-	// Token: 0x06002053 RID: 8275 RVA: 0x000A26B7 File Offset: 0x000A08B7
+	// Token: 0x06002053 RID: 8275 RVA: 0x000A26D7 File Offset: 0x000A08D7
 	public void UnregisterCatcher(CosmeticCritterCatcher catcher)
 	{
 		if (catcher.IsLocal)
@@ -61,7 +61,7 @@ public class CosmeticCritterManager : NetworkSceneObject
 		this.remoteCritterCatchers.Remove(catcher);
 	}
 
-	// Token: 0x06002054 RID: 8276 RVA: 0x000A26DC File Offset: 0x000A08DC
+	// Token: 0x06002054 RID: 8276 RVA: 0x000A26FC File Offset: 0x000A08FC
 	public void RegisterTickForEachCritter(Type type, ICosmeticCritterTickForEach target)
 	{
 		List<ICosmeticCritterTickForEach> list;
@@ -73,7 +73,7 @@ public class CosmeticCritterManager : NetworkSceneObject
 		list.AddIfNew(target);
 	}
 
-	// Token: 0x06002055 RID: 8277 RVA: 0x000A2718 File Offset: 0x000A0918
+	// Token: 0x06002055 RID: 8277 RVA: 0x000A2738 File Offset: 0x000A0938
 	public void UnregisterTickForEachCritter(Type type, ICosmeticCritterTickForEach target)
 	{
 		List<ICosmeticCritterTickForEach> list;
@@ -83,7 +83,7 @@ public class CosmeticCritterManager : NetworkSceneObject
 		}
 	}
 
-	// Token: 0x06002056 RID: 8278 RVA: 0x000A2740 File Offset: 0x000A0940
+	// Token: 0x06002056 RID: 8278 RVA: 0x000A2760 File Offset: 0x000A0960
 	private void ResetLocalCallLimiters()
 	{
 		int i = 0;
@@ -101,7 +101,7 @@ public class CosmeticCritterManager : NetworkSceneObject
 		}
 	}
 
-	// Token: 0x06002057 RID: 8279 RVA: 0x000A2798 File Offset: 0x000A0998
+	// Token: 0x06002057 RID: 8279 RVA: 0x000A27B8 File Offset: 0x000A09B8
 	private void ResetCosmeticCritters(NetPlayer player)
 	{
 		if (NetworkSystem.Instance.LocalPlayer != player)
@@ -115,7 +115,7 @@ public class CosmeticCritterManager : NetworkSceneObject
 		}
 	}
 
-	// Token: 0x06002058 RID: 8280 RVA: 0x000A27E4 File Offset: 0x000A09E4
+	// Token: 0x06002058 RID: 8280 RVA: 0x000A2804 File Offset: 0x000A0A04
 	private void Awake()
 	{
 		if (CosmeticCritterManager.Instance != null && CosmeticCritterManager.Instance != this)
@@ -138,7 +138,7 @@ public class CosmeticCritterManager : NetworkSceneObject
 		NetworkSystem.Instance.OnPlayerLeft += this.ResetCosmeticCritters;
 	}
 
-	// Token: 0x06002059 RID: 8281 RVA: 0x000A28B4 File Offset: 0x000A0AB4
+	// Token: 0x06002059 RID: 8281 RVA: 0x000A28D4 File Offset: 0x000A0AD4
 	private void ReuseOrSpawnNewCritter(CosmeticCritterSpawner spawner, int seed, double time)
 	{
 		Type critterType = spawner.GetCritterType();
@@ -180,7 +180,7 @@ public class CosmeticCritterManager : NetworkSceneObject
 		cosmeticCritter.OnSpawn();
 	}
 
-	// Token: 0x0600205A RID: 8282 RVA: 0x000A29BC File Offset: 0x000A0BBC
+	// Token: 0x0600205A RID: 8282 RVA: 0x000A29DC File Offset: 0x000A0BDC
 	private void FreeCritter(CosmeticCritter critter)
 	{
 		critter.OnDespawn();
@@ -206,7 +206,7 @@ public class CosmeticCritterManager : NetworkSceneObject
 		this.activeCrittersBySeed.Remove(critter.Seed);
 	}
 
-	// Token: 0x0600205B RID: 8283 RVA: 0x000A2A6C File Offset: 0x000A0C6C
+	// Token: 0x0600205B RID: 8283 RVA: 0x000A2A8C File Offset: 0x000A0C8C
 	private void Update()
 	{
 		for (int i = 0; i < this.activeCritters.Count; i++)
@@ -283,7 +283,7 @@ public class CosmeticCritterManager : NetworkSceneObject
 		}
 	}
 
-	// Token: 0x0600205C RID: 8284 RVA: 0x000A2CB4 File Offset: 0x000A0EB4
+	// Token: 0x0600205C RID: 8284 RVA: 0x000A2CD4 File Offset: 0x000A0ED4
 	[PunRPC]
 	private void CosmeticCritterRPC(CosmeticCritterAction action, int holdableID, int seed, PhotonMessageInfo info)
 	{
@@ -301,7 +301,7 @@ public class CosmeticCritterManager : NetworkSceneObject
 		this.CatchCosmeticCritterRPC(action, holdableID, seed, photonMessageInfoWrapped);
 	}
 
-	// Token: 0x0600205D RID: 8285 RVA: 0x000A2CF4 File Offset: 0x000A0EF4
+	// Token: 0x0600205D RID: 8285 RVA: 0x000A2D14 File Offset: 0x000A0F14
 	private void CatchCosmeticCritterRPC(CosmeticCritterAction catchAction, int catcherID, int seed, PhotonMessageInfoWrapped info)
 	{
 		CosmeticCritter cosmeticCritter;
@@ -341,7 +341,7 @@ public class CosmeticCritterManager : NetworkSceneObject
 		}
 	}
 
-	// Token: 0x0600205E RID: 8286 RVA: 0x000A2DD8 File Offset: 0x000A0FD8
+	// Token: 0x0600205E RID: 8286 RVA: 0x000A2DF8 File Offset: 0x000A0FF8
 	private void SpawnCosmeticCritterRPC(int spawnerID, int seed, PhotonMessageInfoWrapped info)
 	{
 		if (this.activeCrittersBySeed.ContainsKey(seed))

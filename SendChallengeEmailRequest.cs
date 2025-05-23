@@ -4,9 +4,9 @@
 [Serializable]
 public class SendChallengeEmailRequest : KIDRequestData
 {
-	// Token: 0x04003702 RID: 14082
+	// Token: 0x04003703 RID: 14083
 	public string Email;
 
-	// Token: 0x04003703 RID: 14083
+	// Token: 0x04003704 RID: 14084
 	public string Locale;
 }

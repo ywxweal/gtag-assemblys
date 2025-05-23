@@ -9,7 +9,7 @@ public class BuilderPieceInteractorFindNearby : MonoBehaviour
 	{
 	}
 
-	// Token: 0x06001DEC RID: 7660 RVA: 0x00091A12 File Offset: 0x0008FC12
+	// Token: 0x06001DEC RID: 7660 RVA: 0x00091A32 File Offset: 0x0008FC32
 	private void LateUpdate()
 	{
 		if (this.pieceInteractor != null)

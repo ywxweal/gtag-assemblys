@@ -8,7 +8,7 @@ using UnityEngine;
 // Token: 0x02000393 RID: 915
 public class BalloonHoldable : TransferrableObject, IFXContext
 {
-	// Token: 0x0600153B RID: 5435 RVA: 0x00067B24 File Offset: 0x00065D24
+	// Token: 0x0600153B RID: 5435 RVA: 0x00067B44 File Offset: 0x00065D44
 	public override void OnSpawn(VRRig rig)
 	{
 		base.OnSpawn(rig);
@@ -22,14 +22,14 @@ public class BalloonHoldable : TransferrableObject, IFXContext
 		this.rb = base.GetComponent<Rigidbody>();
 	}
 
-	// Token: 0x0600153C RID: 5436 RVA: 0x00067B7D File Offset: 0x00065D7D
+	// Token: 0x0600153C RID: 5436 RVA: 0x00067B9D File Offset: 0x00065D9D
 	protected override void Start()
 	{
 		base.Start();
 		this.EnableDynamics(false, false, false);
 	}
 
-	// Token: 0x0600153D RID: 5437 RVA: 0x00067B90 File Offset: 0x00065D90
+	// Token: 0x0600153D RID: 5437 RVA: 0x00067BB0 File Offset: 0x00065DB0
 	internal override void OnEnable()
 	{
 		base.OnEnable();
@@ -55,7 +55,7 @@ public class BalloonHoldable : TransferrableObject, IFXContext
 		}
 	}
 
-	// Token: 0x0600153E RID: 5438 RVA: 0x00067C02 File Offset: 0x00065E02
+	// Token: 0x0600153E RID: 5438 RVA: 0x00067C22 File Offset: 0x00065E22
 	public override void OnJoinedRoom()
 	{
 		base.OnJoinedRoom();
@@ -66,13 +66,13 @@ public class BalloonHoldable : TransferrableObject, IFXContext
 		base.SpawnTransferableObjectViews();
 	}
 
-	// Token: 0x0600153F RID: 5439 RVA: 0x00067C1F File Offset: 0x00065E1F
+	// Token: 0x0600153F RID: 5439 RVA: 0x00067C3F File Offset: 0x00065E3F
 	private bool ShouldSimulate()
 	{
 		return !base.Attached() && this.balloonState == BalloonHoldable.BalloonStates.Normal;
 	}
 
-	// Token: 0x06001540 RID: 5440 RVA: 0x00067C34 File Offset: 0x00065E34
+	// Token: 0x06001540 RID: 5440 RVA: 0x00067C54 File Offset: 0x00065E54
 	internal override void OnDisable()
 	{
 		base.OnDisable();
@@ -80,14 +80,14 @@ public class BalloonHoldable : TransferrableObject, IFXContext
 		this.EnableDynamics(false, false, false);
 	}
 
-	// Token: 0x06001541 RID: 5441 RVA: 0x00067C51 File Offset: 0x00065E51
+	// Token: 0x06001541 RID: 5441 RVA: 0x00067C71 File Offset: 0x00065E71
 	public override void PreDisable()
 	{
 		this.originalOwner = null;
 		base.PreDisable();
 	}
 
-	// Token: 0x06001542 RID: 5442 RVA: 0x00067C60 File Offset: 0x00065E60
+	// Token: 0x06001542 RID: 5442 RVA: 0x00067C80 File Offset: 0x00065E80
 	public override void ResetToDefaultState()
 	{
 		base.ResetToDefaultState();
@@ -95,7 +95,7 @@ public class BalloonHoldable : TransferrableObject, IFXContext
 		base.transform.localScale = Vector3.one;
 	}
 
-	// Token: 0x06001543 RID: 5443 RVA: 0x00067C80 File Offset: 0x00065E80
+	// Token: 0x06001543 RID: 5443 RVA: 0x00067CA0 File Offset: 0x00065EA0
 	protected override void OnWorldShareableItemSpawn()
 	{
 		WorldShareableItem worldShareableInstance = this.worldShareableInstance;
@@ -108,7 +108,7 @@ public class BalloonHoldable : TransferrableObject, IFXContext
 		this.originalOwner = worldShareableInstance.target.owner;
 	}
 
-	// Token: 0x06001544 RID: 5444 RVA: 0x00067CE0 File Offset: 0x00065EE0
+	// Token: 0x06001544 RID: 5444 RVA: 0x00067D00 File Offset: 0x00065F00
 	public override void ResetToHome()
 	{
 		if (base.IsLocalObject() && this.worldShareableInstance != null && !this.worldShareableInstance.guard.isTrulyMine)
@@ -125,14 +125,14 @@ public class BalloonHoldable : TransferrableObject, IFXContext
 		base.ResetToHome();
 	}
 
-	// Token: 0x06001545 RID: 5445 RVA: 0x00067D5E File Offset: 0x00065F5E
+	// Token: 0x06001545 RID: 5445 RVA: 0x00067D7E File Offset: 0x00065F7E
 	protected override void PlayDestroyedOrDisabledEffect()
 	{
 		base.PlayDestroyedOrDisabledEffect();
 		this.PlayPopBalloonFX();
 	}
 
-	// Token: 0x06001546 RID: 5446 RVA: 0x00067D6C File Offset: 0x00065F6C
+	// Token: 0x06001546 RID: 5446 RVA: 0x00067D8C File Offset: 0x00065F8C
 	protected override void OnItemDestroyedOrDisabled()
 	{
 		this.PlayPopBalloonFX();
@@ -144,13 +144,13 @@ public class BalloonHoldable : TransferrableObject, IFXContext
 		base.OnItemDestroyedOrDisabled();
 	}
 
-	// Token: 0x06001547 RID: 5447 RVA: 0x00067DA0 File Offset: 0x00065FA0
+	// Token: 0x06001547 RID: 5447 RVA: 0x00067DC0 File Offset: 0x00065FC0
 	private void PlayPopBalloonFX()
 	{
 		FXSystem.PlayFXForRig(FXType.BalloonPop, this, default(PhotonMessageInfoWrapped));
 	}
 
-	// Token: 0x06001548 RID: 5448 RVA: 0x00067DC0 File Offset: 0x00065FC0
+	// Token: 0x06001548 RID: 5448 RVA: 0x00067DE0 File Offset: 0x00065FE0
 	private void EnableDynamics(bool enable, bool collider, bool forceKinematicOn = false)
 	{
 		bool flag = false;
@@ -172,7 +172,7 @@ public class BalloonHoldable : TransferrableObject, IFXContext
 		}
 	}
 
-	// Token: 0x06001549 RID: 5449 RVA: 0x00067E2C File Offset: 0x0006602C
+	// Token: 0x06001549 RID: 5449 RVA: 0x00067E4C File Offset: 0x0006604C
 	private void PopBalloon()
 	{
 		this.PlayPopBalloonFX();
@@ -205,7 +205,7 @@ public class BalloonHoldable : TransferrableObject, IFXContext
 		}
 	}
 
-	// Token: 0x0600154A RID: 5450 RVA: 0x00067F25 File Offset: 0x00066125
+	// Token: 0x0600154A RID: 5450 RVA: 0x00067F45 File Offset: 0x00066145
 	public void PopBalloonRemote()
 	{
 		if (this.ShouldSimulate())
@@ -219,7 +219,7 @@ public class BalloonHoldable : TransferrableObject, IFXContext
 	{
 	}
 
-	// Token: 0x0600154C RID: 5452 RVA: 0x00067F38 File Offset: 0x00066138
+	// Token: 0x0600154C RID: 5452 RVA: 0x00067F58 File Offset: 0x00066158
 	public override void OnOwnershipTransferred(NetPlayer newOwner, NetPlayer prevOwner)
 	{
 		base.OnOwnershipTransferred(newOwner, prevOwner);
@@ -248,7 +248,7 @@ public class BalloonHoldable : TransferrableObject, IFXContext
 		this.collisionPtAsRemote = Vector3.zero;
 	}
 
-	// Token: 0x0600154D RID: 5453 RVA: 0x00067FE8 File Offset: 0x000661E8
+	// Token: 0x0600154D RID: 5453 RVA: 0x00068008 File Offset: 0x00066208
 	private void OwnerPopBalloon()
 	{
 		if (this.worldShareableInstance != null)
@@ -262,7 +262,7 @@ public class BalloonHoldable : TransferrableObject, IFXContext
 		this.balloonState = BalloonHoldable.BalloonStates.Pop;
 	}
 
-	// Token: 0x0600154E RID: 5454 RVA: 0x00068030 File Offset: 0x00066230
+	// Token: 0x0600154E RID: 5454 RVA: 0x00068050 File Offset: 0x00066250
 	private void RunLocalPopSM()
 	{
 		switch (this.balloonState)
@@ -348,7 +348,7 @@ public class BalloonHoldable : TransferrableObject, IFXContext
 		}
 	}
 
-	// Token: 0x0600154F RID: 5455 RVA: 0x00068248 File Offset: 0x00066448
+	// Token: 0x0600154F RID: 5455 RVA: 0x00068268 File Offset: 0x00066468
 	protected override void OnStateChanged()
 	{
 		if (base.InHand())
@@ -371,7 +371,7 @@ public class BalloonHoldable : TransferrableObject, IFXContext
 		}
 	}
 
-	// Token: 0x06001550 RID: 5456 RVA: 0x000682A8 File Offset: 0x000664A8
+	// Token: 0x06001550 RID: 5456 RVA: 0x000682C8 File Offset: 0x000664C8
 	protected override void LateUpdateShared()
 	{
 		base.LateUpdateShared();
@@ -398,13 +398,13 @@ public class BalloonHoldable : TransferrableObject, IFXContext
 		}
 	}
 
-	// Token: 0x06001551 RID: 5457 RVA: 0x000683D1 File Offset: 0x000665D1
+	// Token: 0x06001551 RID: 5457 RVA: 0x000683F1 File Offset: 0x000665F1
 	protected override void LateUpdateReplicated()
 	{
 		base.LateUpdateReplicated();
 	}
 
-	// Token: 0x06001552 RID: 5458 RVA: 0x000683DC File Offset: 0x000665DC
+	// Token: 0x06001552 RID: 5458 RVA: 0x000683FC File Offset: 0x000665FC
 	private void Grab()
 	{
 		if (this.balloonDynamics == null)
@@ -423,7 +423,7 @@ public class BalloonHoldable : TransferrableObject, IFXContext
 		base.transform.localScale = Vector3.one;
 	}
 
-	// Token: 0x06001553 RID: 5459 RVA: 0x00068470 File Offset: 0x00066670
+	// Token: 0x06001553 RID: 5459 RVA: 0x00068490 File Offset: 0x00066690
 	private void Release()
 	{
 		if (this.disableRelease)
@@ -442,7 +442,7 @@ public class BalloonHoldable : TransferrableObject, IFXContext
 		this.lineRenderer.enabled = false;
 	}
 
-	// Token: 0x06001554 RID: 5460 RVA: 0x000684FC File Offset: 0x000666FC
+	// Token: 0x06001554 RID: 5460 RVA: 0x0006851C File Offset: 0x0006671C
 	public void OnTriggerEnter(Collider other)
 	{
 		if (!this.ShouldSimulate())
@@ -481,7 +481,7 @@ public class BalloonHoldable : TransferrableObject, IFXContext
 		}
 	}
 
-	// Token: 0x06001555 RID: 5461 RVA: 0x000685C0 File Offset: 0x000667C0
+	// Token: 0x06001555 RID: 5461 RVA: 0x000685E0 File Offset: 0x000667E0
 	public void OnCollisionEnter(Collision collision)
 	{
 		if (!this.ShouldSimulate() || this.disableCollisionHandling)
@@ -509,7 +509,7 @@ public class BalloonHoldable : TransferrableObject, IFXContext
 	}
 
 	// Token: 0x17000257 RID: 599
-	// (get) Token: 0x06001556 RID: 5462 RVA: 0x00068638 File Offset: 0x00066838
+	// (get) Token: 0x06001556 RID: 5462 RVA: 0x00068658 File Offset: 0x00066858
 	FXSystemSettings IFXContext.settings
 	{
 		get
@@ -518,7 +518,7 @@ public class BalloonHoldable : TransferrableObject, IFXContext
 		}
 	}
 
-	// Token: 0x06001557 RID: 5463 RVA: 0x00068648 File Offset: 0x00066848
+	// Token: 0x06001557 RID: 5463 RVA: 0x00068668 File Offset: 0x00066868
 	void IFXContext.OnPlayFX()
 	{
 		GameObject gameObject = ObjectPools.instance.Instantiate(this.balloonPopFXPrefab, true);

@@ -10,7 +10,7 @@ namespace GorillaTagScripts.CustomMapSupport
 	// Token: 0x02000B35 RID: 2869
 	public class CMSTeleporter : CMSTrigger
 	{
-		// Token: 0x060046A5 RID: 18085 RVA: 0x0014FFEC File Offset: 0x0014E1EC
+		// Token: 0x060046A6 RID: 18086 RVA: 0x001500C4 File Offset: 0x0014E2C4
 		public override void CopyTriggerSettings(TriggerSettings settings)
 		{
 			if (settings.GetType() == typeof(TeleporterSettings))
@@ -30,7 +30,7 @@ namespace GorillaTagScripts.CustomMapSupport
 			base.CopyTriggerSettings(settings);
 		}
 
-		// Token: 0x060046A6 RID: 18086 RVA: 0x0015007C File Offset: 0x0014E27C
+		// Token: 0x060046A7 RID: 18087 RVA: 0x00150154 File Offset: 0x0014E354
 		public override void Trigger(double triggerTime = -1.0, bool originatedLocally = false, bool ignoreTriggerCount = false)
 		{
 			base.Trigger(triggerTime, originatedLocally, ignoreTriggerCount);
@@ -48,16 +48,16 @@ namespace GorillaTagScripts.CustomMapSupport
 			}
 		}
 
-		// Token: 0x04004928 RID: 18728
+		// Token: 0x04004929 RID: 18729
 		[Tooltip("Teleport points used to return the player to the map. Chosen at random.")]
 		[SerializeField]
 		[NotNull]
 		public List<Transform> TeleportPoints = new List<Transform>();
 
-		// Token: 0x04004929 RID: 18729
+		// Token: 0x0400492A RID: 18730
 		public bool matchTeleportPointRotation;
 
-		// Token: 0x0400492A RID: 18730
+		// Token: 0x0400492B RID: 18731
 		public bool maintainVelocity;
 	}
 }

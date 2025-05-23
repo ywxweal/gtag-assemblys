@@ -5,14 +5,14 @@ using UnityEngine.UI;
 // Token: 0x02000446 RID: 1094
 public class CreatorCodeSmallDisplay : MonoBehaviour
 {
-	// Token: 0x06001AF7 RID: 6903 RVA: 0x000846E0 File Offset: 0x000828E0
+	// Token: 0x06001AF7 RID: 6903 RVA: 0x00084700 File Offset: 0x00082900
 	private void Awake()
 	{
 		this.codeText.text = "Creator Code: <none>";
 		ATM_Manager.instance.smallDisplays.Add(this);
 	}
 
-	// Token: 0x06001AF8 RID: 6904 RVA: 0x00084704 File Offset: 0x00082904
+	// Token: 0x06001AF8 RID: 6904 RVA: 0x00084724 File Offset: 0x00082924
 	public void SetCode(string code)
 	{
 		if (code == "")
@@ -23,7 +23,7 @@ public class CreatorCodeSmallDisplay : MonoBehaviour
 		this.codeText.text = "Creator Code: " + code;
 	}
 
-	// Token: 0x06001AF9 RID: 6905 RVA: 0x0008473A File Offset: 0x0008293A
+	// Token: 0x06001AF9 RID: 6905 RVA: 0x0008475A File Offset: 0x0008295A
 	public void SuccessfulPurchase(string memberName)
 	{
 		if (!string.IsNullOrWhiteSpace(memberName))

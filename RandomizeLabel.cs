@@ -5,7 +5,7 @@ using UnityEngine;
 // Token: 0x02000468 RID: 1128
 public class RandomizeLabel : MonoBehaviour
 {
-	// Token: 0x06001BB9 RID: 7097 RVA: 0x00088220 File Offset: 0x00086420
+	// Token: 0x06001BB9 RID: 7097 RVA: 0x00088240 File Offset: 0x00086440
 	public void Randomize()
 	{
 		this.strings.distinct = this.distinct;

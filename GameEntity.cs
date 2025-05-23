@@ -5,11 +5,11 @@ using UnityEngine;
 public class GameEntity : MonoBehaviour
 {
 	// Token: 0x1400004E RID: 78
-	// (add) Token: 0x0600216B RID: 8555 RVA: 0x000A7374 File Offset: 0x000A5574
-	// (remove) Token: 0x0600216C RID: 8556 RVA: 0x000A73AC File Offset: 0x000A55AC
+	// (add) Token: 0x0600216B RID: 8555 RVA: 0x000A7394 File Offset: 0x000A5594
+	// (remove) Token: 0x0600216C RID: 8556 RVA: 0x000A73CC File Offset: 0x000A55CC
 	public event GameEntity.StateChangedEvent OnStateChanged;
 
-	// Token: 0x0600216D RID: 8557 RVA: 0x000A73E4 File Offset: 0x000A55E4
+	// Token: 0x0600216D RID: 8557 RVA: 0x000A7404 File Offset: 0x000A5604
 	private void Awake()
 	{
 		this.id = GameEntityId.Invalid;
@@ -23,7 +23,7 @@ public class GameEntity : MonoBehaviour
 		this.onlyGrabActorNumber = -1;
 	}
 
-	// Token: 0x0600216E RID: 8558 RVA: 0x000A7443 File Offset: 0x000A5643
+	// Token: 0x0600216E RID: 8558 RVA: 0x000A7463 File Offset: 0x000A5663
 	public Vector3 GetVelocity()
 	{
 		if (this.rigidBody == null)
@@ -33,7 +33,7 @@ public class GameEntity : MonoBehaviour
 		return this.rigidBody.velocity;
 	}
 
-	// Token: 0x0600216F RID: 8559 RVA: 0x000A7464 File Offset: 0x000A5664
+	// Token: 0x0600216F RID: 8559 RVA: 0x000A7484 File Offset: 0x000A5684
 	public void PlayCatchFx()
 	{
 		if (this.audioSource != null)
@@ -43,7 +43,7 @@ public class GameEntity : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06002170 RID: 8560 RVA: 0x000A7496 File Offset: 0x000A5696
+	// Token: 0x06002170 RID: 8560 RVA: 0x000A74B6 File Offset: 0x000A56B6
 	public void PlayThrowFx()
 	{
 		if (this.audioSource != null)
@@ -53,19 +53,19 @@ public class GameEntity : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06002171 RID: 8561 RVA: 0x000A74C8 File Offset: 0x000A56C8
+	// Token: 0x06002171 RID: 8561 RVA: 0x000A74E8 File Offset: 0x000A56E8
 	private bool IsGamePlayer(Collider collider)
 	{
 		return GamePlayer.GetGamePlayer(collider, false) != null;
 	}
 
-	// Token: 0x06002172 RID: 8562 RVA: 0x000A74D7 File Offset: 0x000A56D7
+	// Token: 0x06002172 RID: 8562 RVA: 0x000A74F7 File Offset: 0x000A56F7
 	public long GetState()
 	{
 		return this.state;
 	}
 
-	// Token: 0x06002173 RID: 8563 RVA: 0x000A74E0 File Offset: 0x000A56E0
+	// Token: 0x06002173 RID: 8563 RVA: 0x000A7500 File Offset: 0x000A5700
 	public void SetState(long newState)
 	{
 		if (this.state != newState)
@@ -81,13 +81,13 @@ public class GameEntity : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06002174 RID: 8564 RVA: 0x000A7516 File Offset: 0x000A5716
+	// Token: 0x06002174 RID: 8564 RVA: 0x000A7536 File Offset: 0x000A5736
 	public static int GetNetId(GameEntityId gameEntityId)
 	{
 		return GameEntityManager.instance.GetNetIdFromEntityId(gameEntityId);
 	}
 
-	// Token: 0x06002175 RID: 8565 RVA: 0x000A7525 File Offset: 0x000A5725
+	// Token: 0x06002175 RID: 8565 RVA: 0x000A7545 File Offset: 0x000A5745
 	public static int GetNetId(GameEntity gameEntity)
 	{
 		if (gameEntity == null)
@@ -97,13 +97,13 @@ public class GameEntity : MonoBehaviour
 		return GameEntityManager.instance.GetNetIdFromEntityId(gameEntity.id);
 	}
 
-	// Token: 0x06002176 RID: 8566 RVA: 0x000A7544 File Offset: 0x000A5744
+	// Token: 0x06002176 RID: 8566 RVA: 0x000A7564 File Offset: 0x000A5764
 	public static GameEntityId GetIdFromNetId(int netId)
 	{
 		return GameEntityManager.instance.GetEntityIdFromNetId(netId);
 	}
 
-	// Token: 0x06002177 RID: 8567 RVA: 0x000A7554 File Offset: 0x000A5754
+	// Token: 0x06002177 RID: 8567 RVA: 0x000A7574 File Offset: 0x000A5774
 	public static GameEntity Get(Collider collider)
 	{
 		if (collider == null)

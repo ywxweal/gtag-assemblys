@@ -9,7 +9,7 @@ namespace GorillaTag.Cosmetics
 	// Token: 0x02000DF9 RID: 3577
 	public class SprayCanCosmeticNetworked : MonoBehaviour
 	{
-		// Token: 0x0600588B RID: 22667 RVA: 0x001B3910 File Offset: 0x001B1B10
+		// Token: 0x0600588C RID: 22668 RVA: 0x001B39E8 File Offset: 0x001B1BE8
 		private void OnEnable()
 		{
 			if (this._events == null)
@@ -27,7 +27,7 @@ namespace GorillaTag.Cosmetics
 			}
 		}
 
-		// Token: 0x0600588C RID: 22668 RVA: 0x001B39D8 File Offset: 0x001B1BD8
+		// Token: 0x0600588D RID: 22669 RVA: 0x001B3AB0 File Offset: 0x001B1CB0
 		private void OnDisable()
 		{
 			if (this._events != null)
@@ -38,7 +38,7 @@ namespace GorillaTag.Cosmetics
 			}
 		}
 
-		// Token: 0x0600588D RID: 22669 RVA: 0x001B3A28 File Offset: 0x001B1C28
+		// Token: 0x0600588E RID: 22670 RVA: 0x001B3B00 File Offset: 0x001B1D00
 		private void OnShakeEvent(int sender, int target, object[] args, PhotonMessageInfoWrapped info)
 		{
 			if (sender != target)
@@ -84,7 +84,7 @@ namespace GorillaTag.Cosmetics
 			}
 		}
 
-		// Token: 0x0600588E RID: 22670 RVA: 0x001B3AB4 File Offset: 0x001B1CB4
+		// Token: 0x0600588F RID: 22671 RVA: 0x001B3B8C File Offset: 0x001B1D8C
 		public void OnShakeStart()
 		{
 			if (PhotonNetwork.InRoom && this._events != null && this._events.Activate != null)
@@ -99,7 +99,7 @@ namespace GorillaTag.Cosmetics
 			handleOnShakeStart.Invoke();
 		}
 
-		// Token: 0x0600588F RID: 22671 RVA: 0x001B3B18 File Offset: 0x001B1D18
+		// Token: 0x06005890 RID: 22672 RVA: 0x001B3BF0 File Offset: 0x001B1DF0
 		public void OnShakeEnd()
 		{
 			if (PhotonNetwork.InRoom && this._events != null && this._events.Activate != null)
@@ -114,20 +114,20 @@ namespace GorillaTag.Cosmetics
 			handleOnShakeEnd.Invoke();
 		}
 
-		// Token: 0x04005DD7 RID: 24023
+		// Token: 0x04005DD8 RID: 24024
 		[SerializeField]
 		private TransferrableObject transferrableObject;
 
-		// Token: 0x04005DD8 RID: 24024
+		// Token: 0x04005DD9 RID: 24025
 		private RubberDuckEvents _events;
 
-		// Token: 0x04005DD9 RID: 24025
+		// Token: 0x04005DDA RID: 24026
 		private CallLimiter callLimiter = new CallLimiter(10, 1f, 0.5f);
 
-		// Token: 0x04005DDA RID: 24026
+		// Token: 0x04005DDB RID: 24027
 		public UnityEvent HandleOnShakeStart;
 
-		// Token: 0x04005DDB RID: 24027
+		// Token: 0x04005DDC RID: 24028
 		public UnityEvent HandleOnShakeEnd;
 	}
 }

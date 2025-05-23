@@ -14,29 +14,29 @@ using UnityEngine;
 public class WorldShareableItem : NetworkComponent, IRequestableOwnershipGuardCallbacks
 {
 	// Token: 0x1700026B RID: 619
-	// (get) Token: 0x06001651 RID: 5713 RVA: 0x0006C4AC File Offset: 0x0006A6AC
-	// (set) Token: 0x06001652 RID: 5714 RVA: 0x0006C4B4 File Offset: 0x0006A6B4
+	// (get) Token: 0x06001651 RID: 5713 RVA: 0x0006C4CC File Offset: 0x0006A6CC
+	// (set) Token: 0x06001652 RID: 5714 RVA: 0x0006C4D4 File Offset: 0x0006A6D4
 	[DevInspectorShow]
 	public TransferrableObject.PositionState transferableObjectState { get; set; }
 
 	// Token: 0x1700026C RID: 620
-	// (get) Token: 0x06001653 RID: 5715 RVA: 0x0006C4BD File Offset: 0x0006A6BD
-	// (set) Token: 0x06001654 RID: 5716 RVA: 0x0006C4C5 File Offset: 0x0006A6C5
+	// (get) Token: 0x06001653 RID: 5715 RVA: 0x0006C4DD File Offset: 0x0006A6DD
+	// (set) Token: 0x06001654 RID: 5716 RVA: 0x0006C4E5 File Offset: 0x0006A6E5
 	public TransferrableObject.ItemStates transferableObjectItemState { get; set; }
 
 	// Token: 0x1700026D RID: 621
-	// (get) Token: 0x06001655 RID: 5717 RVA: 0x0006C4CE File Offset: 0x0006A6CE
-	// (set) Token: 0x06001656 RID: 5718 RVA: 0x0006C4D6 File Offset: 0x0006A6D6
+	// (get) Token: 0x06001655 RID: 5717 RVA: 0x0006C4EE File Offset: 0x0006A6EE
+	// (set) Token: 0x06001656 RID: 5718 RVA: 0x0006C4F6 File Offset: 0x0006A6F6
 	public TransferrableObject.PositionState transferableObjectStateNetworked { get; set; }
 
 	// Token: 0x1700026E RID: 622
-	// (get) Token: 0x06001657 RID: 5719 RVA: 0x0006C4DF File Offset: 0x0006A6DF
-	// (set) Token: 0x06001658 RID: 5720 RVA: 0x0006C4E7 File Offset: 0x0006A6E7
+	// (get) Token: 0x06001657 RID: 5719 RVA: 0x0006C4FF File Offset: 0x0006A6FF
+	// (set) Token: 0x06001658 RID: 5720 RVA: 0x0006C507 File Offset: 0x0006A707
 	public TransferrableObject.ItemStates transferableObjectItemStateNetworked { get; set; }
 
 	// Token: 0x1700026F RID: 623
-	// (get) Token: 0x06001659 RID: 5721 RVA: 0x0006C4F0 File Offset: 0x0006A6F0
-	// (set) Token: 0x0600165A RID: 5722 RVA: 0x0006C4F8 File Offset: 0x0006A6F8
+	// (get) Token: 0x06001659 RID: 5721 RVA: 0x0006C510 File Offset: 0x0006A710
+	// (set) Token: 0x0600165A RID: 5722 RVA: 0x0006C518 File Offset: 0x0006A718
 	[DevInspectorShow]
 	public WorldTargetItem target
 	{
@@ -50,7 +50,7 @@ public class WorldShareableItem : NetworkComponent, IRequestableOwnershipGuardCa
 		}
 	}
 
-	// Token: 0x0600165B RID: 5723 RVA: 0x0006C501 File Offset: 0x0006A701
+	// Token: 0x0600165B RID: 5723 RVA: 0x0006C521 File Offset: 0x0006A721
 	protected override void Awake()
 	{
 		base.Awake();
@@ -59,7 +59,7 @@ public class WorldShareableItem : NetworkComponent, IRequestableOwnershipGuardCa
 		NetworkSystem.Instance.RegisterSceneNetworkItem(base.gameObject);
 	}
 
-	// Token: 0x0600165C RID: 5724 RVA: 0x0006C531 File Offset: 0x0006A731
+	// Token: 0x0600165C RID: 5724 RVA: 0x0006C551 File Offset: 0x0006A751
 	internal override void OnEnable()
 	{
 		NetworkBehaviourUtils.InternalOnEnable(this);
@@ -73,7 +73,7 @@ public class WorldShareableItem : NetworkComponent, IRequestableOwnershipGuardCa
 		NetworkSystem.Instance.RegisterSceneNetworkItem(base.gameObject);
 	}
 
-	// Token: 0x0600165D RID: 5725 RVA: 0x0006C56C File Offset: 0x0006A76C
+	// Token: 0x0600165D RID: 5725 RVA: 0x0006C58C File Offset: 0x0006A78C
 	internal override void OnDisable()
 	{
 		NetworkBehaviourUtils.InternalOnDisable(this);
@@ -95,14 +95,14 @@ public class WorldShareableItem : NetworkComponent, IRequestableOwnershipGuardCa
 		WorldShareableItemManager.Unregister(this);
 	}
 
-	// Token: 0x0600165E RID: 5726 RVA: 0x0006C5EC File Offset: 0x0006A7EC
+	// Token: 0x0600165E RID: 5726 RVA: 0x0006C60C File Offset: 0x0006A80C
 	public void OnDestroy()
 	{
 		NetworkBehaviourUtils.InternalOnDestroy(this);
 		WorldShareableItemManager.Unregister(this);
 	}
 
-	// Token: 0x0600165F RID: 5727 RVA: 0x0006C5FC File Offset: 0x0006A7FC
+	// Token: 0x0600165F RID: 5727 RVA: 0x0006C61C File Offset: 0x0006A81C
 	public void SetupSharableViewIDs(NetPlayer player, int slotID)
 	{
 		PhotonView[] components = base.GetComponents<PhotonView>();
@@ -118,7 +118,7 @@ public class WorldShareableItem : NetworkComponent, IRequestableOwnershipGuardCa
 		}
 	}
 
-	// Token: 0x06001660 RID: 5728 RVA: 0x0006C688 File Offset: 0x0006A888
+	// Token: 0x06001660 RID: 5728 RVA: 0x0006C6A8 File Offset: 0x0006A8A8
 	public void ResetViews()
 	{
 		if (ApplicationQuittingState.IsQuitting)
@@ -132,7 +132,7 @@ public class WorldShareableItem : NetworkComponent, IRequestableOwnershipGuardCa
 		photonView2.ViewID = 0;
 	}
 
-	// Token: 0x06001661 RID: 5729 RVA: 0x0006C6B8 File Offset: 0x0006A8B8
+	// Token: 0x06001661 RID: 5729 RVA: 0x0006C6D8 File Offset: 0x0006A8D8
 	public void SetupSharableObject(int itemIDx, NetPlayer owner, Transform targetXform)
 	{
 		this.target = WorldTargetItem.GenerateTargetFromPlayerAndID(owner, itemIDx);
@@ -160,13 +160,13 @@ public class WorldShareableItem : NetworkComponent, IRequestableOwnershipGuardCa
 		component.SetWorldShareableItem(this);
 	}
 
-	// Token: 0x06001662 RID: 5730 RVA: 0x0006C7A9 File Offset: 0x0006A9A9
+	// Token: 0x06001662 RID: 5730 RVA: 0x0006C7C9 File Offset: 0x0006A9C9
 	public override void OnPhotonInstantiate(PhotonMessageInfo info)
 	{
 		base.OnPhotonInstantiate(info);
 	}
 
-	// Token: 0x06001663 RID: 5731 RVA: 0x0006C7B4 File Offset: 0x0006A9B4
+	// Token: 0x06001663 RID: 5731 RVA: 0x0006C7D4 File Offset: 0x0006A9D4
 	public override void OnOwnerChange(Player newOwner, Player previousOwner)
 	{
 		if (this.onOwnerChangeCb != null)
@@ -178,8 +178,8 @@ public class WorldShareableItem : NetworkComponent, IRequestableOwnershipGuardCa
 	}
 
 	// Token: 0x17000270 RID: 624
-	// (get) Token: 0x06001664 RID: 5732 RVA: 0x0006C7EE File Offset: 0x0006A9EE
-	// (set) Token: 0x06001665 RID: 5733 RVA: 0x0006C7F6 File Offset: 0x0006A9F6
+	// (get) Token: 0x06001664 RID: 5732 RVA: 0x0006C80E File Offset: 0x0006AA0E
+	// (set) Token: 0x06001665 RID: 5733 RVA: 0x0006C816 File Offset: 0x0006AA16
 	[DevInspectorShow]
 	public bool EnableRemoteSync
 	{
@@ -193,7 +193,7 @@ public class WorldShareableItem : NetworkComponent, IRequestableOwnershipGuardCa
 		}
 	}
 
-	// Token: 0x06001666 RID: 5734 RVA: 0x0006C800 File Offset: 0x0006AA00
+	// Token: 0x06001666 RID: 5734 RVA: 0x0006C820 File Offset: 0x0006AA20
 	public void TriggeredUpdate()
 	{
 		if (!this.IsTargetValid())
@@ -217,26 +217,26 @@ public class WorldShareableItem : NetworkComponent, IRequestableOwnershipGuardCa
 		}
 	}
 
-	// Token: 0x06001667 RID: 5735 RVA: 0x0006C8C9 File Offset: 0x0006AAC9
+	// Token: 0x06001667 RID: 5735 RVA: 0x0006C8E9 File Offset: 0x0006AAE9
 	public void SyncToSceneObject(TransferrableObject transferrableObject)
 	{
 		this.target = WorldTargetItem.GenerateTargetFromWorldSharableItem(null, -2, transferrableObject.transform);
 		base.transform.parent = null;
 	}
 
-	// Token: 0x06001668 RID: 5736 RVA: 0x0006C8EB File Offset: 0x0006AAEB
+	// Token: 0x06001668 RID: 5736 RVA: 0x0006C90B File Offset: 0x0006AB0B
 	public void SetupSceneObjectOnNetwork(NetPlayer owner)
 	{
 		this.guard.SetOwnership(owner, false, false);
 	}
 
-	// Token: 0x06001669 RID: 5737 RVA: 0x0006C8FB File Offset: 0x0006AAFB
+	// Token: 0x06001669 RID: 5737 RVA: 0x0006C91B File Offset: 0x0006AB1B
 	public bool IsTargetValid()
 	{
 		return this.target != null;
 	}
 
-	// Token: 0x0600166A RID: 5738 RVA: 0x0006C906 File Offset: 0x0006AB06
+	// Token: 0x0600166A RID: 5738 RVA: 0x0006C926 File Offset: 0x0006AB26
 	public void Invalidate()
 	{
 		this.target = null;
@@ -244,7 +244,7 @@ public class WorldShareableItem : NetworkComponent, IRequestableOwnershipGuardCa
 		this.transferableObjectItemState = TransferrableObject.ItemStates.State0;
 	}
 
-	// Token: 0x0600166B RID: 5739 RVA: 0x0006C920 File Offset: 0x0006AB20
+	// Token: 0x0600166B RID: 5739 RVA: 0x0006C940 File Offset: 0x0006AB40
 	public void OnOwnershipTransferred(NetPlayer toPlayer, NetPlayer fromPlayer)
 	{
 		if (toPlayer == null)
@@ -260,28 +260,28 @@ public class WorldShareableItem : NetworkComponent, IRequestableOwnershipGuardCa
 		}
 	}
 
-	// Token: 0x0600166C RID: 5740 RVA: 0x0006C966 File Offset: 0x0006AB66
+	// Token: 0x0600166C RID: 5740 RVA: 0x0006C986 File Offset: 0x0006AB86
 	public override void WriteDataFusion()
 	{
 		this.transferableObjectItemStateNetworked = this.transferableObjectItemState;
 		this.transferableObjectStateNetworked = this.transferableObjectState;
 	}
 
-	// Token: 0x0600166D RID: 5741 RVA: 0x0006C980 File Offset: 0x0006AB80
+	// Token: 0x0600166D RID: 5741 RVA: 0x0006C9A0 File Offset: 0x0006ABA0
 	public override void ReadDataFusion()
 	{
 		this.transferableObjectItemState = this.transferableObjectItemStateNetworked;
 		this.transferableObjectState = this.transferableObjectStateNetworked;
 	}
 
-	// Token: 0x0600166E RID: 5742 RVA: 0x0006C99A File Offset: 0x0006AB9A
+	// Token: 0x0600166E RID: 5742 RVA: 0x0006C9BA File Offset: 0x0006ABBA
 	protected override void WriteDataPUN(PhotonStream stream, PhotonMessageInfo info)
 	{
 		stream.SendNext(this.transferableObjectState);
 		stream.SendNext(this.transferableObjectItemState);
 	}
 
-	// Token: 0x0600166F RID: 5743 RVA: 0x0006C9C0 File Offset: 0x0006ABC0
+	// Token: 0x0600166F RID: 5743 RVA: 0x0006C9E0 File Offset: 0x0006ABE0
 	protected override void ReadDataPUN(PhotonStream stream, PhotonMessageInfo info)
 	{
 		NetPlayer player = NetworkSystem.Instance.GetPlayer(info.Sender);
@@ -299,7 +299,7 @@ public class WorldShareableItem : NetworkComponent, IRequestableOwnershipGuardCa
 		this.transferableObjectItemState = (TransferrableObject.ItemStates)stream.ReceiveNext();
 	}
 
-	// Token: 0x06001670 RID: 5744 RVA: 0x0006CA52 File Offset: 0x0006AC52
+	// Token: 0x06001670 RID: 5744 RVA: 0x0006CA72 File Offset: 0x0006AC72
 	[PunRPC]
 	internal void RPCWorldShareable(PhotonMessageInfo info)
 	{
@@ -334,7 +334,7 @@ public class WorldShareableItem : NetworkComponent, IRequestableOwnershipGuardCa
 	{
 	}
 
-	// Token: 0x06001675 RID: 5749 RVA: 0x0006CA84 File Offset: 0x0006AC84
+	// Token: 0x06001675 RID: 5749 RVA: 0x0006CAA4 File Offset: 0x0006ACA4
 	public void SetWillTeleport()
 	{
 		this.teleportSerializer.SetWillTeleport();

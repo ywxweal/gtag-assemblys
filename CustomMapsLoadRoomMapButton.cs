@@ -6,7 +6,7 @@ using UnityEngine;
 // Token: 0x020006FA RID: 1786
 public class CustomMapsLoadRoomMapButton : GorillaPressableButton
 {
-	// Token: 0x06002C72 RID: 11378 RVA: 0x000DB54E File Offset: 0x000D974E
+	// Token: 0x06002C73 RID: 11379 RVA: 0x000DB5F2 File Offset: 0x000D97F2
 	public override void ButtonActivation()
 	{
 		base.ButtonActivation();
@@ -17,7 +17,7 @@ public class CustomMapsLoadRoomMapButton : GorillaPressableButton
 		}
 	}
 
-	// Token: 0x06002C73 RID: 11379 RVA: 0x000DB56F File Offset: 0x000D976F
+	// Token: 0x06002C74 RID: 11380 RVA: 0x000DB613 File Offset: 0x000D9813
 	private IEnumerator ButtonPressed_Local()
 	{
 		this.isOn = true;
@@ -28,7 +28,7 @@ public class CustomMapsLoadRoomMapButton : GorillaPressableButton
 		yield break;
 	}
 
-	// Token: 0x040032C3 RID: 12995
+	// Token: 0x040032C5 RID: 12997
 	[SerializeField]
 	private float pressedTime = 0.2f;
 }

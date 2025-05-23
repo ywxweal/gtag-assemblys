@@ -10,7 +10,7 @@ namespace GorillaTag.Cosmetics
 	// Token: 0x02000DB5 RID: 3509
 	public class RCBlimp : RCVehicle
 	{
-		// Token: 0x060056DF RID: 22239 RVA: 0x001A85D4 File Offset: 0x001A67D4
+		// Token: 0x060056E0 RID: 22240 RVA: 0x001A86AC File Offset: 0x001A68AC
 		protected override void AuthorityBeginDocked()
 		{
 			base.AuthorityBeginDocked();
@@ -23,7 +23,7 @@ namespace GorillaTag.Cosmetics
 			}
 		}
 
-		// Token: 0x060056E0 RID: 22240 RVA: 0x001A8644 File Offset: 0x001A6844
+		// Token: 0x060056E1 RID: 22241 RVA: 0x001A871C File Offset: 0x001A691C
 		protected override void Awake()
 		{
 			base.Awake();
@@ -33,14 +33,14 @@ namespace GorillaTag.Cosmetics
 			this.tiltAccel = this.maxHorizontalTiltAngle / this.horizontalTiltTime;
 		}
 
-		// Token: 0x060056E1 RID: 22241 RVA: 0x001A86A3 File Offset: 0x001A68A3
+		// Token: 0x060056E2 RID: 22242 RVA: 0x001A877B File Offset: 0x001A697B
 		protected override void OnDisable()
 		{
 			base.OnDisable();
 			this.audioSource.GTStop();
 		}
 
-		// Token: 0x060056E2 RID: 22242 RVA: 0x001A86B8 File Offset: 0x001A68B8
+		// Token: 0x060056E3 RID: 22243 RVA: 0x001A8790 File Offset: 0x001A6990
 		protected override void AuthorityUpdate(float dt)
 		{
 			base.AuthorityUpdate(dt);
@@ -55,7 +55,7 @@ namespace GorillaTag.Cosmetics
 			}
 		}
 
-		// Token: 0x060056E3 RID: 22243 RVA: 0x001A8760 File Offset: 0x001A6960
+		// Token: 0x060056E4 RID: 22244 RVA: 0x001A8838 File Offset: 0x001A6A38
 		protected override void RemoteUpdate(float dt)
 		{
 			base.RemoteUpdate(dt);
@@ -65,7 +65,7 @@ namespace GorillaTag.Cosmetics
 			}
 		}
 
-		// Token: 0x060056E4 RID: 22244 RVA: 0x001A87B0 File Offset: 0x001A69B0
+		// Token: 0x060056E5 RID: 22245 RVA: 0x001A8888 File Offset: 0x001A6A88
 		protected override void SharedUpdate(float dt)
 		{
 			base.SharedUpdate(dt);
@@ -143,7 +143,7 @@ namespace GorillaTag.Cosmetics
 			}
 		}
 
-		// Token: 0x060056E5 RID: 22245 RVA: 0x001A8C00 File Offset: 0x001A6E00
+		// Token: 0x060056E6 RID: 22246 RVA: 0x001A8CD8 File Offset: 0x001A6ED8
 		private void FixedUpdate()
 		{
 			if (!base.HasLocalAuthority)
@@ -189,7 +189,7 @@ namespace GorillaTag.Cosmetics
 			}
 		}
 
-		// Token: 0x060056E6 RID: 22246 RVA: 0x001A8E70 File Offset: 0x001A7070
+		// Token: 0x060056E7 RID: 22247 RVA: 0x001A8F48 File Offset: 0x001A7148
 		private void OnTriggerEnter(Collider other)
 		{
 			bool flag = other.gameObject.IsOnLayer(UnityLayer.GorillaThrowable);
@@ -229,137 +229,137 @@ namespace GorillaTag.Cosmetics
 			}
 		}
 
-		// Token: 0x04005AF0 RID: 23280
+		// Token: 0x04005AF1 RID: 23281
 		[SerializeField]
 		private float maxAscendSpeed = 6f;
 
-		// Token: 0x04005AF1 RID: 23281
+		// Token: 0x04005AF2 RID: 23282
 		[SerializeField]
 		private float ascendAccelTime = 3f;
 
-		// Token: 0x04005AF2 RID: 23282
+		// Token: 0x04005AF3 RID: 23283
 		[SerializeField]
 		private float gravityCompensation = 0.9f;
 
-		// Token: 0x04005AF3 RID: 23283
+		// Token: 0x04005AF4 RID: 23284
 		[SerializeField]
 		private float crashedGravityCompensation = 0.5f;
 
-		// Token: 0x04005AF4 RID: 23284
+		// Token: 0x04005AF5 RID: 23285
 		[SerializeField]
 		private float maxTurnRate = 90f;
 
-		// Token: 0x04005AF5 RID: 23285
+		// Token: 0x04005AF6 RID: 23286
 		[SerializeField]
 		private float turnAccelTime = 0.75f;
 
-		// Token: 0x04005AF6 RID: 23286
+		// Token: 0x04005AF7 RID: 23287
 		[SerializeField]
 		private float maxHorizontalSpeed = 6f;
 
-		// Token: 0x04005AF7 RID: 23287
+		// Token: 0x04005AF8 RID: 23288
 		[SerializeField]
 		private float horizontalAccelTime = 2f;
 
-		// Token: 0x04005AF8 RID: 23288
+		// Token: 0x04005AF9 RID: 23289
 		[SerializeField]
 		private float maxHorizontalTiltAngle = 45f;
 
-		// Token: 0x04005AF9 RID: 23289
+		// Token: 0x04005AFA RID: 23290
 		[SerializeField]
 		private float horizontalTiltTime = 2f;
 
-		// Token: 0x04005AFA RID: 23290
+		// Token: 0x04005AFB RID: 23291
 		[SerializeField]
 		private Vector2 motorSoundVolumeMinMax = new Vector2(0.1f, 0.8f);
 
-		// Token: 0x04005AFB RID: 23291
+		// Token: 0x04005AFC RID: 23292
 		[SerializeField]
 		private float deflateSoundVolume = 0.1f;
 
-		// Token: 0x04005AFC RID: 23292
+		// Token: 0x04005AFD RID: 23293
 		[SerializeField]
 		private Collider crashCollider;
 
-		// Token: 0x04005AFD RID: 23293
+		// Token: 0x04005AFE RID: 23294
 		[SerializeField]
 		private Transform leftPropeller;
 
-		// Token: 0x04005AFE RID: 23294
+		// Token: 0x04005AFF RID: 23295
 		[SerializeField]
 		private Transform rightPropeller;
 
-		// Token: 0x04005AFF RID: 23295
+		// Token: 0x04005B00 RID: 23296
 		[SerializeField]
 		private SkinnedMeshRenderer blimpMesh;
 
-		// Token: 0x04005B00 RID: 23296
+		// Token: 0x04005B01 RID: 23297
 		[SerializeField]
 		private AudioSource audioSource;
 
-		// Token: 0x04005B01 RID: 23297
+		// Token: 0x04005B02 RID: 23298
 		[SerializeField]
 		private AudioClip motorSound;
 
-		// Token: 0x04005B02 RID: 23298
+		// Token: 0x04005B03 RID: 23299
 		[SerializeField]
 		private AudioClip deflateSound;
 
-		// Token: 0x04005B03 RID: 23299
+		// Token: 0x04005B04 RID: 23300
 		private float turnRate;
 
-		// Token: 0x04005B04 RID: 23300
+		// Token: 0x04005B05 RID: 23301
 		private float turnAngle;
 
-		// Token: 0x04005B05 RID: 23301
+		// Token: 0x04005B06 RID: 23302
 		private float tiltAngle;
 
-		// Token: 0x04005B06 RID: 23302
+		// Token: 0x04005B07 RID: 23303
 		private float ascendAccel;
 
-		// Token: 0x04005B07 RID: 23303
+		// Token: 0x04005B08 RID: 23304
 		private float turnAccel;
 
-		// Token: 0x04005B08 RID: 23304
+		// Token: 0x04005B09 RID: 23305
 		private float tiltAccel;
 
-		// Token: 0x04005B09 RID: 23305
+		// Token: 0x04005B0A RID: 23306
 		private float horizontalAccel;
 
-		// Token: 0x04005B0A RID: 23306
+		// Token: 0x04005B0B RID: 23307
 		private float leftPropellerAngle;
 
-		// Token: 0x04005B0B RID: 23307
+		// Token: 0x04005B0C RID: 23308
 		private float rightPropellerAngle;
 
-		// Token: 0x04005B0C RID: 23308
+		// Token: 0x04005B0D RID: 23309
 		private float leftPropellerSpinRate;
 
-		// Token: 0x04005B0D RID: 23309
+		// Token: 0x04005B0E RID: 23310
 		private float rightPropellerSpinRate;
 
-		// Token: 0x04005B0E RID: 23310
+		// Token: 0x04005B0F RID: 23311
 		private float blimpDeflateBlendWeight;
 
-		// Token: 0x04005B0F RID: 23311
+		// Token: 0x04005B10 RID: 23312
 		private float deflateRate = Mathf.Exp(1f);
 
-		// Token: 0x04005B10 RID: 23312
+		// Token: 0x04005B11 RID: 23313
 		private const float propellerIdleAcc = 1f;
 
-		// Token: 0x04005B11 RID: 23313
+		// Token: 0x04005B12 RID: 23314
 		private const float propellerIdleSpinRate = 0.6f;
 
-		// Token: 0x04005B12 RID: 23314
+		// Token: 0x04005B13 RID: 23315
 		private const float propellerMaxAcc = 6.6666665f;
 
-		// Token: 0x04005B13 RID: 23315
+		// Token: 0x04005B14 RID: 23316
 		private const float propellerMaxSpinRate = 5f;
 
-		// Token: 0x04005B14 RID: 23316
+		// Token: 0x04005B15 RID: 23317
 		private float motorVolumeRampTime = 1f;
 
-		// Token: 0x04005B15 RID: 23317
+		// Token: 0x04005B16 RID: 23318
 		private float motorLevel;
 	}
 }

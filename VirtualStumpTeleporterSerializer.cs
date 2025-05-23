@@ -7,7 +7,7 @@ using UnityEngine;
 // Token: 0x0200073E RID: 1854
 internal class VirtualStumpTeleporterSerializer : GorillaSerializer
 {
-	// Token: 0x06002E60 RID: 11872 RVA: 0x000E78F0 File Offset: 0x000E5AF0
+	// Token: 0x06002E61 RID: 11873 RVA: 0x000E7994 File Offset: 0x000E5B94
 	public void NotifyPlayerTeleporting(short teleportVFXIdx, AudioSource localPlayerTeleporterAudioSource)
 	{
 		if ((int)teleportVFXIdx >= this.teleporterVFX.Count)
@@ -26,7 +26,7 @@ internal class VirtualStumpTeleporterSerializer : GorillaSerializer
 		}
 	}
 
-	// Token: 0x06002E61 RID: 11873 RVA: 0x000E797C File Offset: 0x000E5B7C
+	// Token: 0x06002E62 RID: 11874 RVA: 0x000E7A20 File Offset: 0x000E5C20
 	public void NotifyPlayerReturning(short teleportVFXIdx)
 	{
 		if ((int)teleportVFXIdx >= this.returnVFX.Count)
@@ -41,7 +41,7 @@ internal class VirtualStumpTeleporterSerializer : GorillaSerializer
 		this.ActivateReturnVFXLocal(teleportVFXIdx, true);
 	}
 
-	// Token: 0x06002E62 RID: 11874 RVA: 0x000E79E0 File Offset: 0x000E5BE0
+	// Token: 0x06002E63 RID: 11875 RVA: 0x000E7A84 File Offset: 0x000E5C84
 	[PunRPC]
 	private void ActivateTeleportVFX(bool returning, short teleportVFXIdx, PhotonMessageInfo info)
 	{
@@ -60,7 +60,7 @@ internal class VirtualStumpTeleporterSerializer : GorillaSerializer
 		this.ActivateTeleportVFXLocal(teleportVFXIdx, false);
 	}
 
-	// Token: 0x06002E63 RID: 11875 RVA: 0x000E7A54 File Offset: 0x000E5C54
+	// Token: 0x06002E64 RID: 11876 RVA: 0x000E7AF8 File Offset: 0x000E5CF8
 	private void ActivateTeleportVFXLocal(short teleportVFXIdx, bool isTeleporter = false)
 	{
 		if ((int)teleportVFXIdx >= this.teleporterVFX.Count)
@@ -84,7 +84,7 @@ internal class VirtualStumpTeleporterSerializer : GorillaSerializer
 		}
 	}
 
-	// Token: 0x06002E64 RID: 11876 RVA: 0x000E7ACC File Offset: 0x000E5CCC
+	// Token: 0x06002E65 RID: 11877 RVA: 0x000E7B70 File Offset: 0x000E5D70
 	private void ActivateReturnVFXLocal(short teleportVFXIdx, bool isTeleporter = false)
 	{
 		if ((int)teleportVFXIdx >= this.returnVFX.Count)
@@ -104,23 +104,23 @@ internal class VirtualStumpTeleporterSerializer : GorillaSerializer
 		}
 	}
 
-	// Token: 0x040034DB RID: 13531
+	// Token: 0x040034DD RID: 13533
 	[SerializeField]
 	public List<ParticleSystem> teleporterVFX = new List<ParticleSystem>();
 
-	// Token: 0x040034DC RID: 13532
+	// Token: 0x040034DE RID: 13534
 	[SerializeField]
 	public List<ParticleSystem> returnVFX = new List<ParticleSystem>();
 
-	// Token: 0x040034DD RID: 13533
+	// Token: 0x040034DF RID: 13535
 	[SerializeField]
 	public List<AudioSource> teleportAudioSource = new List<AudioSource>();
 
-	// Token: 0x040034DE RID: 13534
+	// Token: 0x040034E0 RID: 13536
 	[SerializeField]
 	public List<AudioClip> teleportingPlayerSoundClips = new List<AudioClip>();
 
-	// Token: 0x040034DF RID: 13535
+	// Token: 0x040034E1 RID: 13537
 	[SerializeField]
 	public List<AudioClip> observerSoundClips = new List<AudioClip>();
 }

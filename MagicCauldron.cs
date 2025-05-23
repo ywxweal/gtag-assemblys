@@ -14,7 +14,7 @@ using UnityEngine.Scripting;
 [NetworkBehaviourWeaved(4)]
 public class MagicCauldron : NetworkComponent
 {
-	// Token: 0x06002944 RID: 10564 RVA: 0x000CD148 File Offset: 0x000CB348
+	// Token: 0x06002945 RID: 10565 RVA: 0x000CD1EC File Offset: 0x000CB3EC
 	private new void Awake()
 	{
 		this.currentIngredients.Clear();
@@ -45,19 +45,19 @@ public class MagicCauldron : NetworkComponent
 		this.reusableFXContext.fxCallBack = new MagicCauldron.IngrediantFXContext.Callback(this.OnIngredientAdd);
 	}
 
-	// Token: 0x06002945 RID: 10565 RVA: 0x000CD226 File Offset: 0x000CB426
+	// Token: 0x06002946 RID: 10566 RVA: 0x000CD2CA File Offset: 0x000CB4CA
 	private new void Start()
 	{
 		this.ChangeState(MagicCauldron.CauldronState.notReady);
 	}
 
-	// Token: 0x06002946 RID: 10566 RVA: 0x000CD22F File Offset: 0x000CB42F
+	// Token: 0x06002947 RID: 10567 RVA: 0x000CD2D3 File Offset: 0x000CB4D3
 	private void LateUpdate()
 	{
 		this.UpdateState();
 	}
 
-	// Token: 0x06002947 RID: 10567 RVA: 0x000CD237 File Offset: 0x000CB437
+	// Token: 0x06002948 RID: 10568 RVA: 0x000CD2DB File Offset: 0x000CB4DB
 	private IEnumerator LevitationSpellCoroutine()
 	{
 		GTPlayer.Instance.SetHalloweenLevitation(this.levitationStrength, this.levitationDuration, this.levitationBlendOutDuration, this.levitationBonusStrength, this.levitationBonusOffAtYSpeed, this.levitationBonusFullAtYSpeed);
@@ -66,7 +66,7 @@ public class MagicCauldron : NetworkComponent
 		yield break;
 	}
 
-	// Token: 0x06002948 RID: 10568 RVA: 0x000CD248 File Offset: 0x000CB448
+	// Token: 0x06002949 RID: 10569 RVA: 0x000CD2EC File Offset: 0x000CB4EC
 	private void ChangeState(MagicCauldron.CauldronState state)
 	{
 		this.currentState = state;
@@ -129,7 +129,7 @@ public class MagicCauldron : NetworkComponent
 		}
 	}
 
-	// Token: 0x06002949 RID: 10569 RVA: 0x000CD440 File Offset: 0x000CB640
+	// Token: 0x0600294A RID: 10570 RVA: 0x000CD4E4 File Offset: 0x000CB6E4
 	private void UpdateState()
 	{
 		if (base.IsMine)
@@ -180,26 +180,26 @@ public class MagicCauldron : NetworkComponent
 		}
 	}
 
-	// Token: 0x0600294A RID: 10570 RVA: 0x000CD509 File Offset: 0x000CB709
+	// Token: 0x0600294B RID: 10571 RVA: 0x000CD5AD File Offset: 0x000CB7AD
 	public void OnEventStart()
 	{
 		this.ChangeState(MagicCauldron.CauldronState.ready);
 	}
 
-	// Token: 0x0600294B RID: 10571 RVA: 0x000CD226 File Offset: 0x000CB426
+	// Token: 0x0600294C RID: 10572 RVA: 0x000CD2CA File Offset: 0x000CB4CA
 	public void OnEventEnd()
 	{
 		this.ChangeState(MagicCauldron.CauldronState.notReady);
 	}
 
-	// Token: 0x0600294C RID: 10572 RVA: 0x000CD512 File Offset: 0x000CB712
+	// Token: 0x0600294D RID: 10573 RVA: 0x000CD5B6 File Offset: 0x000CB7B6
 	[PunRPC]
 	public void OnIngredientAdd(int _ingredientIndex, PhotonMessageInfo info)
 	{
 		this.OnIngredientAddShared(_ingredientIndex, info);
 	}
 
-	// Token: 0x0600294D RID: 10573 RVA: 0x000CD524 File Offset: 0x000CB724
+	// Token: 0x0600294E RID: 10574 RVA: 0x000CD5C8 File Offset: 0x000CB7C8
 	[Rpc(RpcSources.StateAuthority, RpcTargets.All)]
 	public unsafe void RPC_OnIngredientAdd(int _ingredientIndex, RpcInfo info = default(RpcInfo))
 	{
@@ -241,7 +241,7 @@ public class MagicCauldron : NetworkComponent
 		this.OnIngredientAddShared(_ingredientIndex, info);
 	}
 
-	// Token: 0x0600294E RID: 10574 RVA: 0x000CD664 File Offset: 0x000CB864
+	// Token: 0x0600294F RID: 10575 RVA: 0x000CD708 File Offset: 0x000CB908
 	private void OnIngredientAddShared(int _ingredientIndex, PhotonMessageInfoWrapped info)
 	{
 		GorillaNot.IncrementRPCCall(info, "OnIngredientAdd");
@@ -255,7 +255,7 @@ public class MagicCauldron : NetworkComponent
 		FXSystem.PlayFX<MagicCauldron.IngredientArgs>(FXType.HWIngredients, this.reusableFXContext, this.reusableIngrediantArgs, info);
 	}
 
-	// Token: 0x0600294F RID: 10575 RVA: 0x000CD6C8 File Offset: 0x000CB8C8
+	// Token: 0x06002950 RID: 10576 RVA: 0x000CD76C File Offset: 0x000CB96C
 	private void OnIngredientAdd(int _ingredientIndex)
 	{
 		if (this.audioSource)
@@ -298,7 +298,7 @@ public class MagicCauldron : NetworkComponent
 		this.UpdateCauldronColor(magicIngredientType.color);
 	}
 
-	// Token: 0x06002950 RID: 10576 RVA: 0x000CD7FC File Offset: 0x000CB9FC
+	// Token: 0x06002951 RID: 10577 RVA: 0x000CD8A0 File Offset: 0x000CBAA0
 	private bool CheckIngredients()
 	{
 		foreach (MagicCauldron.Recipe recipe in this.recipes)
@@ -312,7 +312,7 @@ public class MagicCauldron : NetworkComponent
 		return false;
 	}
 
-	// Token: 0x06002951 RID: 10577 RVA: 0x000CD874 File Offset: 0x000CBA74
+	// Token: 0x06002952 RID: 10578 RVA: 0x000CD918 File Offset: 0x000CBB18
 	private void UpdateCauldronColor(Color color)
 	{
 		if (this.bubblesParticle)
@@ -345,7 +345,7 @@ public class MagicCauldron : NetworkComponent
 		}
 	}
 
-	// Token: 0x06002952 RID: 10578 RVA: 0x000CD930 File Offset: 0x000CBB30
+	// Token: 0x06002953 RID: 10579 RVA: 0x000CD9D4 File Offset: 0x000CBBD4
 	private void OnTriggerEnter(Collider other)
 	{
 		ThrowableSetDressing componentInParent = other.GetComponentInParent<ThrowableSetDressing>();
@@ -370,7 +370,7 @@ public class MagicCauldron : NetworkComponent
 		}
 	}
 
-	// Token: 0x06002953 RID: 10579 RVA: 0x000CDA0C File Offset: 0x000CBC0C
+	// Token: 0x06002954 RID: 10580 RVA: 0x000CDAB0 File Offset: 0x000CBCB0
 	internal override void OnDisable()
 	{
 		NetworkBehaviourUtils.InternalOnDisable(this);
@@ -379,8 +379,8 @@ public class MagicCauldron : NetworkComponent
 	}
 
 	// Token: 0x170003F5 RID: 1013
-	// (get) Token: 0x06002954 RID: 10580 RVA: 0x000CDA25 File Offset: 0x000CBC25
-	// (set) Token: 0x06002955 RID: 10581 RVA: 0x000CDA4F File Offset: 0x000CBC4F
+	// (get) Token: 0x06002955 RID: 10581 RVA: 0x000CDAC9 File Offset: 0x000CBCC9
+	// (set) Token: 0x06002956 RID: 10582 RVA: 0x000CDAF3 File Offset: 0x000CBCF3
 	[Networked]
 	[NetworkedWeaved(0, 4)]
 	private unsafe MagicCauldron.MagicCauldronData Data
@@ -403,19 +403,19 @@ public class MagicCauldron : NetworkComponent
 		}
 	}
 
-	// Token: 0x06002956 RID: 10582 RVA: 0x000CDA7A File Offset: 0x000CBC7A
+	// Token: 0x06002957 RID: 10583 RVA: 0x000CDB1E File Offset: 0x000CBD1E
 	public override void WriteDataFusion()
 	{
 		this.Data = new MagicCauldron.MagicCauldronData(this.currentStateElapsedTime, this.currentRecipeIndex, this.currentState, this.ingredientIndex);
 	}
 
-	// Token: 0x06002957 RID: 10583 RVA: 0x000CDAA0 File Offset: 0x000CBCA0
+	// Token: 0x06002958 RID: 10584 RVA: 0x000CDB44 File Offset: 0x000CBD44
 	public override void ReadDataFusion()
 	{
 		this.ReadDataShared(this.Data.CurrentStateElapsedTime, this.Data.CurrentRecipeIndex, this.Data.CurrentState, this.Data.IngredientIndex);
 	}
 
-	// Token: 0x06002958 RID: 10584 RVA: 0x000CDAEC File Offset: 0x000CBCEC
+	// Token: 0x06002959 RID: 10585 RVA: 0x000CDB90 File Offset: 0x000CBD90
 	protected override void WriteDataPUN(PhotonStream stream, PhotonMessageInfo info)
 	{
 		if (!info.Sender.IsMasterClient)
@@ -428,7 +428,7 @@ public class MagicCauldron : NetworkComponent
 		stream.SendNext(this.ingredientIndex);
 	}
 
-	// Token: 0x06002959 RID: 10585 RVA: 0x000CDB4C File Offset: 0x000CBD4C
+	// Token: 0x0600295A RID: 10586 RVA: 0x000CDBF0 File Offset: 0x000CBDF0
 	protected override void ReadDataPUN(PhotonStream stream, PhotonMessageInfo info)
 	{
 		if (!info.Sender.IsMasterClient)
@@ -442,7 +442,7 @@ public class MagicCauldron : NetworkComponent
 		this.ReadDataShared(num, num2, cauldronState, num3);
 	}
 
-	// Token: 0x0600295A RID: 10586 RVA: 0x000CDBA4 File Offset: 0x000CBDA4
+	// Token: 0x0600295B RID: 10587 RVA: 0x000CDC48 File Offset: 0x000CBE48
 	private void ReadDataShared(float stateElapsedTime, int recipeIndex, MagicCauldron.CauldronState state, int ingredientIndex)
 	{
 		MagicCauldron.CauldronState cauldronState = this.currentState;
@@ -461,7 +461,7 @@ public class MagicCauldron : NetworkComponent
 		}
 	}
 
-	// Token: 0x0600295C RID: 10588 RVA: 0x000CDCA1 File Offset: 0x000CBEA1
+	// Token: 0x0600295D RID: 10589 RVA: 0x000CDD45 File Offset: 0x000CBF45
 	[WeaverGenerated]
 	public override void CopyBackingFieldsToState(bool A_1)
 	{
@@ -469,7 +469,7 @@ public class MagicCauldron : NetworkComponent
 		this.Data = this._Data;
 	}
 
-	// Token: 0x0600295D RID: 10589 RVA: 0x000CDCB9 File Offset: 0x000CBEB9
+	// Token: 0x0600295E RID: 10590 RVA: 0x000CDD5D File Offset: 0x000CBF5D
 	[WeaverGenerated]
 	public override void CopyStateToBackingFields()
 	{
@@ -477,7 +477,7 @@ public class MagicCauldron : NetworkComponent
 		this._Data = this.Data;
 	}
 
-	// Token: 0x0600295E RID: 10590 RVA: 0x000CDCD0 File Offset: 0x000CBED0
+	// Token: 0x0600295F RID: 10591 RVA: 0x000CDD74 File Offset: 0x000CBF74
 	[NetworkRpcWeavedInvoker(1, 1, 7)]
 	[Preserve]
 	[WeaverGenerated]
@@ -493,126 +493,126 @@ public class MagicCauldron : NetworkComponent
 		((MagicCauldron)behaviour).RPC_OnIngredientAdd(num3, rpcInfo);
 	}
 
-	// Token: 0x04002E45 RID: 11845
+	// Token: 0x04002E47 RID: 11847
 	public List<MagicCauldron.Recipe> recipes = new List<MagicCauldron.Recipe>();
 
-	// Token: 0x04002E46 RID: 11846
+	// Token: 0x04002E48 RID: 11848
 	public float maxTimeToAddAllIngredients = 30f;
 
-	// Token: 0x04002E47 RID: 11847
+	// Token: 0x04002E49 RID: 11849
 	public float summonWitchesDuration = 20f;
 
-	// Token: 0x04002E48 RID: 11848
+	// Token: 0x04002E4A RID: 11850
 	public float recipeFailedDuration = 5f;
 
-	// Token: 0x04002E49 RID: 11849
+	// Token: 0x04002E4B RID: 11851
 	public float cooldownDuration = 30f;
 
-	// Token: 0x04002E4A RID: 11850
+	// Token: 0x04002E4C RID: 11852
 	public MagicIngredientType[] allIngredients;
 
-	// Token: 0x04002E4B RID: 11851
+	// Token: 0x04002E4D RID: 11853
 	public GameObject flyingWitchesContainer;
 
-	// Token: 0x04002E4C RID: 11852
+	// Token: 0x04002E4E RID: 11854
 	[SerializeField]
 	private AudioSource audioSource;
 
-	// Token: 0x04002E4D RID: 11853
+	// Token: 0x04002E4F RID: 11855
 	public AudioClip ingredientAddedAudio;
 
-	// Token: 0x04002E4E RID: 11854
+	// Token: 0x04002E50 RID: 11856
 	public AudioClip recipeFailedAudio;
 
-	// Token: 0x04002E4F RID: 11855
+	// Token: 0x04002E51 RID: 11857
 	public ParticleSystem bubblesParticle;
 
-	// Token: 0x04002E50 RID: 11856
+	// Token: 0x04002E52 RID: 11858
 	public ParticleSystem successParticle;
 
-	// Token: 0x04002E51 RID: 11857
+	// Token: 0x04002E53 RID: 11859
 	public ParticleSystem splashParticle;
 
-	// Token: 0x04002E52 RID: 11858
+	// Token: 0x04002E54 RID: 11860
 	public Color CauldronActiveColor;
 
-	// Token: 0x04002E53 RID: 11859
+	// Token: 0x04002E55 RID: 11861
 	public Color CauldronFailedColor;
 
-	// Token: 0x04002E54 RID: 11860
+	// Token: 0x04002E56 RID: 11862
 	[Tooltip("only if we are using the time of day event")]
 	public Color CauldronNotReadyColor;
 
-	// Token: 0x04002E55 RID: 11861
+	// Token: 0x04002E57 RID: 11863
 	private readonly List<NoncontrollableBroomstick> witchesComponent = new List<NoncontrollableBroomstick>();
 
-	// Token: 0x04002E56 RID: 11862
+	// Token: 0x04002E58 RID: 11864
 	private readonly List<MagicIngredientType> currentIngredients = new List<MagicIngredientType>();
 
-	// Token: 0x04002E57 RID: 11863
+	// Token: 0x04002E59 RID: 11865
 	private float currentStateElapsedTime;
 
-	// Token: 0x04002E58 RID: 11864
+	// Token: 0x04002E5A RID: 11866
 	private MagicCauldron.CauldronState currentState;
 
-	// Token: 0x04002E59 RID: 11865
+	// Token: 0x04002E5B RID: 11867
 	[SerializeField]
 	private Renderer rendr;
 
-	// Token: 0x04002E5A RID: 11866
+	// Token: 0x04002E5C RID: 11868
 	private Color cauldronColor;
 
-	// Token: 0x04002E5B RID: 11867
+	// Token: 0x04002E5D RID: 11869
 	private Color currentColor;
 
-	// Token: 0x04002E5C RID: 11868
+	// Token: 0x04002E5E RID: 11870
 	private int currentRecipeIndex;
 
-	// Token: 0x04002E5D RID: 11869
+	// Token: 0x04002E5F RID: 11871
 	private int ingredientIndex;
 
-	// Token: 0x04002E5E RID: 11870
+	// Token: 0x04002E60 RID: 11872
 	private float waitTimeToSummonWitches = 2f;
 
-	// Token: 0x04002E5F RID: 11871
+	// Token: 0x04002E61 RID: 11873
 	[Space]
 	[SerializeField]
 	private MagicCauldronLiquid _liquid;
 
-	// Token: 0x04002E60 RID: 11872
+	// Token: 0x04002E62 RID: 11874
 	private MagicCauldron.IngrediantFXContext reusableFXContext = new MagicCauldron.IngrediantFXContext();
 
-	// Token: 0x04002E61 RID: 11873
+	// Token: 0x04002E63 RID: 11875
 	private MagicCauldron.IngredientArgs reusableIngrediantArgs = new MagicCauldron.IngredientArgs();
 
-	// Token: 0x04002E62 RID: 11874
+	// Token: 0x04002E64 RID: 11876
 	public bool testLevitationAlwaysOn;
 
-	// Token: 0x04002E63 RID: 11875
+	// Token: 0x04002E65 RID: 11877
 	public float levitationRadius;
 
-	// Token: 0x04002E64 RID: 11876
+	// Token: 0x04002E66 RID: 11878
 	public float levitationSpellDuration;
 
-	// Token: 0x04002E65 RID: 11877
+	// Token: 0x04002E67 RID: 11879
 	public float levitationStrength;
 
-	// Token: 0x04002E66 RID: 11878
+	// Token: 0x04002E68 RID: 11880
 	public float levitationDuration;
 
-	// Token: 0x04002E67 RID: 11879
+	// Token: 0x04002E69 RID: 11881
 	public float levitationBlendOutDuration;
 
-	// Token: 0x04002E68 RID: 11880
+	// Token: 0x04002E6A RID: 11882
 	public float levitationBonusStrength;
 
-	// Token: 0x04002E69 RID: 11881
+	// Token: 0x04002E6B RID: 11883
 	public float levitationBonusOffAtYSpeed;
 
-	// Token: 0x04002E6A RID: 11882
+	// Token: 0x04002E6C RID: 11884
 	public float levitationBonusFullAtYSpeed;
 
-	// Token: 0x04002E6B RID: 11883
+	// Token: 0x04002E6D RID: 11885
 	[WeaverGenerated]
 	[DefaultForProperty("Data", 0, 4)]
 	[DrawIf("IsEditorWritable", true, CompareOperator.Equal, DrawIfMode.ReadOnly)]
@@ -621,19 +621,19 @@ public class MagicCauldron : NetworkComponent
 	// Token: 0x02000675 RID: 1653
 	private enum CauldronState
 	{
-		// Token: 0x04002E6D RID: 11885
-		notReady,
-		// Token: 0x04002E6E RID: 11886
-		ready,
 		// Token: 0x04002E6F RID: 11887
-		recipeCollecting,
+		notReady,
 		// Token: 0x04002E70 RID: 11888
-		recipeActivated,
+		ready,
 		// Token: 0x04002E71 RID: 11889
-		summoned,
+		recipeCollecting,
 		// Token: 0x04002E72 RID: 11890
-		failed,
+		recipeActivated,
 		// Token: 0x04002E73 RID: 11891
+		summoned,
+		// Token: 0x04002E74 RID: 11892
+		failed,
+		// Token: 0x04002E75 RID: 11893
 		cooldown
 	}
 
@@ -641,17 +641,17 @@ public class MagicCauldron : NetworkComponent
 	[Serializable]
 	public struct Recipe
 	{
-		// Token: 0x04002E74 RID: 11892
+		// Token: 0x04002E76 RID: 11894
 		public List<MagicIngredientType> recipeIngredients;
 
-		// Token: 0x04002E75 RID: 11893
+		// Token: 0x04002E77 RID: 11895
 		public AudioClip successAudio;
 	}
 
 	// Token: 0x02000677 RID: 1655
 	private class IngredientArgs : FXSArgs
 	{
-		// Token: 0x04002E76 RID: 11894
+		// Token: 0x04002E78 RID: 11896
 		public int key;
 	}
 
@@ -659,7 +659,7 @@ public class MagicCauldron : NetworkComponent
 	private class IngrediantFXContext : IFXContextParems<MagicCauldron.IngredientArgs>
 	{
 		// Token: 0x170003F6 RID: 1014
-		// (get) Token: 0x06002960 RID: 10592 RVA: 0x000CDD3F File Offset: 0x000CBF3F
+		// (get) Token: 0x06002961 RID: 10593 RVA: 0x000CDDE3 File Offset: 0x000CBFE3
 		FXSystemSettings IFXContextParems<MagicCauldron.IngredientArgs>.settings
 		{
 			get
@@ -668,20 +668,20 @@ public class MagicCauldron : NetworkComponent
 			}
 		}
 
-		// Token: 0x06002961 RID: 10593 RVA: 0x000CDD47 File Offset: 0x000CBF47
+		// Token: 0x06002962 RID: 10594 RVA: 0x000CDDEB File Offset: 0x000CBFEB
 		void IFXContextParems<MagicCauldron.IngredientArgs>.OnPlayFX(MagicCauldron.IngredientArgs args)
 		{
 			this.fxCallBack(args.key);
 		}
 
-		// Token: 0x04002E77 RID: 11895
+		// Token: 0x04002E79 RID: 11897
 		public FXSystemSettings playerSettings;
 
-		// Token: 0x04002E78 RID: 11896
+		// Token: 0x04002E7A RID: 11898
 		public MagicCauldron.IngrediantFXContext.Callback fxCallBack;
 
 		// Token: 0x02000679 RID: 1657
-		// (Invoke) Token: 0x06002964 RID: 10596
+		// (Invoke) Token: 0x06002965 RID: 10597
 		public delegate void Callback(int key);
 	}
 
@@ -691,26 +691,26 @@ public class MagicCauldron : NetworkComponent
 	private struct MagicCauldronData : INetworkStruct
 	{
 		// Token: 0x170003F7 RID: 1015
-		// (get) Token: 0x06002967 RID: 10599 RVA: 0x000CDD5A File Offset: 0x000CBF5A
-		// (set) Token: 0x06002968 RID: 10600 RVA: 0x000CDD62 File Offset: 0x000CBF62
+		// (get) Token: 0x06002968 RID: 10600 RVA: 0x000CDDFE File Offset: 0x000CBFFE
+		// (set) Token: 0x06002969 RID: 10601 RVA: 0x000CDE06 File Offset: 0x000CC006
 		public float CurrentStateElapsedTime { readonly get; set; }
 
 		// Token: 0x170003F8 RID: 1016
-		// (get) Token: 0x06002969 RID: 10601 RVA: 0x000CDD6B File Offset: 0x000CBF6B
-		// (set) Token: 0x0600296A RID: 10602 RVA: 0x000CDD73 File Offset: 0x000CBF73
+		// (get) Token: 0x0600296A RID: 10602 RVA: 0x000CDE0F File Offset: 0x000CC00F
+		// (set) Token: 0x0600296B RID: 10603 RVA: 0x000CDE17 File Offset: 0x000CC017
 		public int CurrentRecipeIndex { readonly get; set; }
 
 		// Token: 0x170003F9 RID: 1017
-		// (get) Token: 0x0600296B RID: 10603 RVA: 0x000CDD7C File Offset: 0x000CBF7C
-		// (set) Token: 0x0600296C RID: 10604 RVA: 0x000CDD84 File Offset: 0x000CBF84
+		// (get) Token: 0x0600296C RID: 10604 RVA: 0x000CDE20 File Offset: 0x000CC020
+		// (set) Token: 0x0600296D RID: 10605 RVA: 0x000CDE28 File Offset: 0x000CC028
 		public MagicCauldron.CauldronState CurrentState { readonly get; set; }
 
 		// Token: 0x170003FA RID: 1018
-		// (get) Token: 0x0600296D RID: 10605 RVA: 0x000CDD8D File Offset: 0x000CBF8D
-		// (set) Token: 0x0600296E RID: 10606 RVA: 0x000CDD95 File Offset: 0x000CBF95
+		// (get) Token: 0x0600296E RID: 10606 RVA: 0x000CDE31 File Offset: 0x000CC031
+		// (set) Token: 0x0600296F RID: 10607 RVA: 0x000CDE39 File Offset: 0x000CC039
 		public int IngredientIndex { readonly get; set; }
 
-		// Token: 0x0600296F RID: 10607 RVA: 0x000CDD9E File Offset: 0x000CBF9E
+		// Token: 0x06002970 RID: 10608 RVA: 0x000CDE42 File Offset: 0x000CC042
 		public MagicCauldronData(float stateElapsedTime, int recipeIndex, MagicCauldron.CauldronState state, int ingredientIndex)
 		{
 			this.CurrentStateElapsedTime = stateElapsedTime;

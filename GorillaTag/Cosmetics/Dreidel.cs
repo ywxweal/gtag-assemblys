@@ -9,7 +9,7 @@ namespace GorillaTag.Cosmetics
 	// Token: 0x02000DDB RID: 3547
 	public class Dreidel : MonoBehaviour
 	{
-		// Token: 0x060057EA RID: 22506 RVA: 0x001B02D8 File Offset: 0x001AE4D8
+		// Token: 0x060057EB RID: 22507 RVA: 0x001B03B0 File Offset: 0x001AE5B0
 		public bool TrySetIdle()
 		{
 			if (this.state == Dreidel.State.Idle || this.state == Dreidel.State.FindingSurface || this.state == Dreidel.State.Fallen)
@@ -20,7 +20,7 @@ namespace GorillaTag.Cosmetics
 			return false;
 		}
 
-		// Token: 0x060057EB RID: 22507 RVA: 0x001B02FD File Offset: 0x001AE4FD
+		// Token: 0x060057EC RID: 22508 RVA: 0x001B03D5 File Offset: 0x001AE5D5
 		public bool TryCheckForSurfaces()
 		{
 			if (this.state == Dreidel.State.Idle || this.state == Dreidel.State.FindingSurface)
@@ -31,13 +31,13 @@ namespace GorillaTag.Cosmetics
 			return false;
 		}
 
-		// Token: 0x060057EC RID: 22508 RVA: 0x001B0319 File Offset: 0x001AE519
+		// Token: 0x060057ED RID: 22509 RVA: 0x001B03F1 File Offset: 0x001AE5F1
 		public void Spin()
 		{
 			this.StartSpin();
 		}
 
-		// Token: 0x060057ED RID: 22509 RVA: 0x001B0324 File Offset: 0x001AE524
+		// Token: 0x060057EE RID: 22510 RVA: 0x001B03FC File Offset: 0x001AE5FC
 		public bool TryGetSpinStartData(out Vector3 surfacePoint, out Vector3 surfaceNormal, out float randomDuration, out Dreidel.Side randomSide, out Dreidel.Variation randomVariation, out double startTime)
 		{
 			if (this.canStartSpin)
@@ -59,7 +59,7 @@ namespace GorillaTag.Cosmetics
 			return false;
 		}
 
-		// Token: 0x060057EE RID: 22510 RVA: 0x001B03D0 File Offset: 0x001AE5D0
+		// Token: 0x060057EF RID: 22511 RVA: 0x001B04A8 File Offset: 0x001AE6A8
 		public void SetSpinStartData(Vector3 surfacePoint, Vector3 surfaceNormal, float duration, bool counterClockwise, Dreidel.Side side, Dreidel.Variation variation, double startTime)
 		{
 			this.surfacePlanePoint = surfacePoint;
@@ -71,7 +71,7 @@ namespace GorillaTag.Cosmetics
 			this.landingVariation = variation;
 		}
 
-		// Token: 0x060057EF RID: 22511 RVA: 0x001B0408 File Offset: 0x001AE608
+		// Token: 0x060057F0 RID: 22512 RVA: 0x001B04E0 File Offset: 0x001AE6E0
 		private void LateUpdate()
 		{
 			float deltaTime = Time.deltaTime;
@@ -244,7 +244,7 @@ namespace GorillaTag.Cosmetics
 			}
 		}
 
-		// Token: 0x060057F0 RID: 22512 RVA: 0x001B0C34 File Offset: 0x001AEE34
+		// Token: 0x060057F1 RID: 22513 RVA: 0x001B0D0C File Offset: 0x001AEF0C
 		private void StartIdle()
 		{
 			this.state = Dreidel.State.Idle;
@@ -264,7 +264,7 @@ namespace GorillaTag.Cosmetics
 			this.UpdateSpinTransform();
 		}
 
-		// Token: 0x060057F1 RID: 22513 RVA: 0x001B0D10 File Offset: 0x001AEF10
+		// Token: 0x060057F2 RID: 22514 RVA: 0x001B0DE8 File Offset: 0x001AEFE8
 		private void StartFindingSurfaces()
 		{
 			this.state = Dreidel.State.FindingSurface;
@@ -284,7 +284,7 @@ namespace GorillaTag.Cosmetics
 			this.UpdateSpinTransform();
 		}
 
-		// Token: 0x060057F2 RID: 22514 RVA: 0x001B0DEC File Offset: 0x001AEFEC
+		// Token: 0x060057F3 RID: 22515 RVA: 0x001B0EC4 File Offset: 0x001AF0C4
 		private void StartSpin()
 		{
 			this.state = Dreidel.State.Spinning;
@@ -303,7 +303,7 @@ namespace GorillaTag.Cosmetics
 			this.pathDir = Vector3.forward;
 		}
 
-		// Token: 0x060057F3 RID: 22515 RVA: 0x001B0EB4 File Offset: 0x001AF0B4
+		// Token: 0x060057F4 RID: 22516 RVA: 0x001B0F8C File Offset: 0x001AF18C
 		private void StartFall()
 		{
 			this.state = Dreidel.State.Falling;
@@ -339,7 +339,7 @@ namespace GorillaTag.Cosmetics
 			this.gimelConfetti.gameObject.SetActive(false);
 		}
 
-		// Token: 0x060057F4 RID: 22516 RVA: 0x001B1004 File Offset: 0x001AF204
+		// Token: 0x060057F5 RID: 22517 RVA: 0x001B10DC File Offset: 0x001AF2DC
 		private Vector3 GetGroundContactPoint()
 		{
 			Vector3 position = this.spinTransform.position;
@@ -354,7 +354,7 @@ namespace GorillaTag.Cosmetics
 			return this.spinTransform.InverseTransformPoint(vector);
 		}
 
-		// Token: 0x060057F5 RID: 22517 RVA: 0x001B1098 File Offset: 0x001AF298
+		// Token: 0x060057F6 RID: 22518 RVA: 0x001B1170 File Offset: 0x001AF370
 		private void GetTiltVectorsForSideWithPrev(Dreidel.Side side, out Vector2 sideTilt, out Vector2 prevSideTilt)
 		{
 			int num = ((side <= Dreidel.Side.Shin) ? 3 : (side - Dreidel.Side.Hey));
@@ -370,7 +370,7 @@ namespace GorillaTag.Cosmetics
 			sideTilt.x = prevSideTilt.x;
 		}
 
-		// Token: 0x060057F6 RID: 22518 RVA: 0x001B111C File Offset: 0x001AF31C
+		// Token: 0x060057F7 RID: 22519 RVA: 0x001B11F4 File Offset: 0x001AF3F4
 		private void GetTiltVectorsForSideWithNext(Dreidel.Side side, out Vector2 sideTilt, out Vector2 nextSideTilt)
 		{
 			int num = (int)((side + 1) % Dreidel.Side.Count);
@@ -386,7 +386,7 @@ namespace GorillaTag.Cosmetics
 			sideTilt.x = nextSideTilt.x;
 		}
 
-		// Token: 0x060057F7 RID: 22519 RVA: 0x001B1198 File Offset: 0x001AF398
+		// Token: 0x060057F8 RID: 22520 RVA: 0x001B1270 File Offset: 0x001AF470
 		private void AlignToSurfacePlane()
 		{
 			Vector3 vector = Vector3.forward;
@@ -400,7 +400,7 @@ namespace GorillaTag.Cosmetics
 			base.transform.rotation = quaternion;
 		}
 
-		// Token: 0x060057F8 RID: 22520 RVA: 0x001B1214 File Offset: 0x001AF414
+		// Token: 0x060057F9 RID: 22521 RVA: 0x001B12EC File Offset: 0x001AF4EC
 		private void UpdateSpinTransform()
 		{
 			Vector3 position = this.spinTransform.position;
@@ -416,243 +416,243 @@ namespace GorillaTag.Cosmetics
 			this.spinTransform.TransformPoint(this.bottomPointOffset);
 		}
 
-		// Token: 0x04005CCB RID: 23755
+		// Token: 0x04005CCC RID: 23756
 		[Header("References")]
 		[SerializeField]
 		private Transform spinTransform;
 
-		// Token: 0x04005CCC RID: 23756
+		// Token: 0x04005CCD RID: 23757
 		[SerializeField]
 		private MeshCollider dreidelCollider;
 
-		// Token: 0x04005CCD RID: 23757
+		// Token: 0x04005CCE RID: 23758
 		[SerializeField]
 		private AudioSource audioSource;
 
-		// Token: 0x04005CCE RID: 23758
+		// Token: 0x04005CCF RID: 23759
 		[SerializeField]
 		private AudioClip spinLoopAudio;
 
-		// Token: 0x04005CCF RID: 23759
+		// Token: 0x04005CD0 RID: 23760
 		[SerializeField]
 		private AudioClip fallSound;
 
-		// Token: 0x04005CD0 RID: 23760
+		// Token: 0x04005CD1 RID: 23761
 		[SerializeField]
 		private AudioClip gimelConfettiSound;
 
-		// Token: 0x04005CD1 RID: 23761
+		// Token: 0x04005CD2 RID: 23762
 		[SerializeField]
 		private ParticleSystem gimelConfetti;
 
-		// Token: 0x04005CD2 RID: 23762
+		// Token: 0x04005CD3 RID: 23763
 		[Header("Offsets")]
 		[SerializeField]
 		private Vector3 centerOfMassOffset = Vector3.zero;
 
-		// Token: 0x04005CD3 RID: 23763
+		// Token: 0x04005CD4 RID: 23764
 		[SerializeField]
 		private Vector3 bottomPointOffset = Vector3.zero;
 
-		// Token: 0x04005CD4 RID: 23764
+		// Token: 0x04005CD5 RID: 23765
 		[SerializeField]
 		private Vector2 bodyRect = Vector2.one;
 
-		// Token: 0x04005CD5 RID: 23765
+		// Token: 0x04005CD6 RID: 23766
 		[SerializeField]
 		private float confettiHeight = 0.125f;
 
-		// Token: 0x04005CD6 RID: 23766
+		// Token: 0x04005CD7 RID: 23767
 		[Header("Surface Detection")]
 		[SerializeField]
 		private float surfaceCheckDistance = 0.15f;
 
-		// Token: 0x04005CD7 RID: 23767
+		// Token: 0x04005CD8 RID: 23768
 		[SerializeField]
 		private float surfaceUprightThreshold = 0.5f;
 
-		// Token: 0x04005CD8 RID: 23768
+		// Token: 0x04005CD9 RID: 23769
 		[SerializeField]
 		private float surfaceDreidelAngleThreshold = 0.9f;
 
-		// Token: 0x04005CD9 RID: 23769
+		// Token: 0x04005CDA RID: 23770
 		[SerializeField]
 		private LayerMask surfaceLayers;
 
-		// Token: 0x04005CDA RID: 23770
+		// Token: 0x04005CDB RID: 23771
 		[Header("Spin Paramss")]
 		[SerializeField]
 		private float spinSpeedStart = 2f;
 
-		// Token: 0x04005CDB RID: 23771
+		// Token: 0x04005CDC RID: 23772
 		[SerializeField]
 		private float spinSpeedEnd = 1f;
 
-		// Token: 0x04005CDC RID: 23772
+		// Token: 0x04005CDD RID: 23773
 		[SerializeField]
 		private float spinTime = 10f;
 
-		// Token: 0x04005CDD RID: 23773
+		// Token: 0x04005CDE RID: 23774
 		[SerializeField]
 		private Vector2 spinTimeRange = new Vector2(7f, 12f);
 
-		// Token: 0x04005CDE RID: 23774
+		// Token: 0x04005CDF RID: 23775
 		[SerializeField]
 		private float spinWobbleFrequency = 0.1f;
 
-		// Token: 0x04005CDF RID: 23775
+		// Token: 0x04005CE0 RID: 23776
 		[SerializeField]
 		private float spinWobbleAmplitude = 0.01f;
 
-		// Token: 0x04005CE0 RID: 23776
+		// Token: 0x04005CE1 RID: 23777
 		[SerializeField]
 		private float spinWobbleAmplitudeEndMin = 0.01f;
 
-		// Token: 0x04005CE1 RID: 23777
+		// Token: 0x04005CE2 RID: 23778
 		[SerializeField]
 		private float tiltFrontBack;
 
-		// Token: 0x04005CE2 RID: 23778
+		// Token: 0x04005CE3 RID: 23779
 		[SerializeField]
 		private float tiltLeftRight;
 
-		// Token: 0x04005CE3 RID: 23779
+		// Token: 0x04005CE4 RID: 23780
 		[SerializeField]
 		private float groundTrackingDampingRatio = 0.9f;
 
-		// Token: 0x04005CE4 RID: 23780
+		// Token: 0x04005CE5 RID: 23781
 		[SerializeField]
 		private float groundTrackingFrequency = 1f;
 
-		// Token: 0x04005CE5 RID: 23781
+		// Token: 0x04005CE6 RID: 23782
 		[Header("Motion Path")]
 		[SerializeField]
 		private float pathMoveSpeed = 0.1f;
 
-		// Token: 0x04005CE6 RID: 23782
+		// Token: 0x04005CE7 RID: 23783
 		[SerializeField]
 		private float pathStartTurnRate = 360f;
 
-		// Token: 0x04005CE7 RID: 23783
+		// Token: 0x04005CE8 RID: 23784
 		[SerializeField]
 		private float pathEndTurnRate = 90f;
 
-		// Token: 0x04005CE8 RID: 23784
+		// Token: 0x04005CE9 RID: 23785
 		[SerializeField]
 		private float pathTurnRateSinOffset = 180f;
 
-		// Token: 0x04005CE9 RID: 23785
+		// Token: 0x04005CEA RID: 23786
 		[Header("Falling Params")]
 		[SerializeField]
 		private float spinSpeedStopRate = 1f;
 
-		// Token: 0x04005CEA RID: 23786
+		// Token: 0x04005CEB RID: 23787
 		[SerializeField]
 		private float tumbleFallDampingRatio = 0.4f;
 
-		// Token: 0x04005CEB RID: 23787
+		// Token: 0x04005CEC RID: 23788
 		[SerializeField]
 		private float tumbleFallFrequency = 6f;
 
-		// Token: 0x04005CEC RID: 23788
+		// Token: 0x04005CED RID: 23789
 		[SerializeField]
 		private float tumbleFallFrontBackDampingRatio = 0.4f;
 
-		// Token: 0x04005CED RID: 23789
+		// Token: 0x04005CEE RID: 23790
 		[SerializeField]
 		private float tumbleFallFrontBackFrequency = 6f;
 
-		// Token: 0x04005CEE RID: 23790
+		// Token: 0x04005CEF RID: 23791
 		[SerializeField]
 		private float smoothFallDampingRatio = 0.9f;
 
-		// Token: 0x04005CEF RID: 23791
+		// Token: 0x04005CF0 RID: 23792
 		[SerializeField]
 		private float smoothFallFrequency = 2f;
 
-		// Token: 0x04005CF0 RID: 23792
+		// Token: 0x04005CF1 RID: 23793
 		[SerializeField]
 		private float slowTurnDampingRatio = 0.9f;
 
-		// Token: 0x04005CF1 RID: 23793
+		// Token: 0x04005CF2 RID: 23794
 		[SerializeField]
 		private float slowTurnFrequency = 2f;
 
-		// Token: 0x04005CF2 RID: 23794
+		// Token: 0x04005CF3 RID: 23795
 		[SerializeField]
 		private float bounceFallSwitchTime = 0.5f;
 
-		// Token: 0x04005CF3 RID: 23795
+		// Token: 0x04005CF4 RID: 23796
 		[SerializeField]
 		private float slowTurnSwitchTime = 0.5f;
 
-		// Token: 0x04005CF4 RID: 23796
+		// Token: 0x04005CF5 RID: 23797
 		[SerializeField]
 		private float respawnTimeAfterLanding = 3f;
 
-		// Token: 0x04005CF5 RID: 23797
+		// Token: 0x04005CF6 RID: 23798
 		[SerializeField]
 		private float fallTimeTumble = 3f;
 
-		// Token: 0x04005CF6 RID: 23798
+		// Token: 0x04005CF7 RID: 23799
 		[SerializeField]
 		private float fallTimeSlowTurn = 5f;
 
-		// Token: 0x04005CF7 RID: 23799
+		// Token: 0x04005CF8 RID: 23800
 		private Dreidel.State state;
 
-		// Token: 0x04005CF8 RID: 23800
+		// Token: 0x04005CF9 RID: 23801
 		private double stateStartTime;
 
-		// Token: 0x04005CF9 RID: 23801
+		// Token: 0x04005CFA RID: 23802
 		private float spinSpeed;
 
-		// Token: 0x04005CFA RID: 23802
+		// Token: 0x04005CFB RID: 23803
 		private float spinAngle;
 
-		// Token: 0x04005CFB RID: 23803
+		// Token: 0x04005CFC RID: 23804
 		private Vector3 spinAxis = Vector3.up;
 
-		// Token: 0x04005CFC RID: 23804
+		// Token: 0x04005CFD RID: 23805
 		private bool canStartSpin;
 
-		// Token: 0x04005CFD RID: 23805
+		// Token: 0x04005CFE RID: 23806
 		private double spinStartTime = -1.0;
 
-		// Token: 0x04005CFE RID: 23806
+		// Token: 0x04005CFF RID: 23807
 		private float tiltWobble;
 
-		// Token: 0x04005CFF RID: 23807
+		// Token: 0x04005D00 RID: 23808
 		private bool falseTargetReached;
 
-		// Token: 0x04005D00 RID: 23808
+		// Token: 0x04005D01 RID: 23809
 		private bool hasLanded;
 
-		// Token: 0x04005D01 RID: 23809
+		// Token: 0x04005D02 RID: 23810
 		private Vector3 pathOffset = Vector3.zero;
 
-		// Token: 0x04005D02 RID: 23810
+		// Token: 0x04005D03 RID: 23811
 		private Vector3 pathDir = Vector3.forward;
 
-		// Token: 0x04005D03 RID: 23811
+		// Token: 0x04005D04 RID: 23812
 		private Vector3 surfacePlanePoint;
 
-		// Token: 0x04005D04 RID: 23812
+		// Token: 0x04005D05 RID: 23813
 		private Vector3 surfacePlaneNormal;
 
-		// Token: 0x04005D05 RID: 23813
+		// Token: 0x04005D06 RID: 23814
 		private FloatSpring tiltFrontBackSpring;
 
-		// Token: 0x04005D06 RID: 23814
+		// Token: 0x04005D07 RID: 23815
 		private FloatSpring tiltLeftRightSpring;
 
-		// Token: 0x04005D07 RID: 23815
+		// Token: 0x04005D08 RID: 23816
 		private FloatSpring spinSpeedSpring;
 
-		// Token: 0x04005D08 RID: 23816
+		// Token: 0x04005D09 RID: 23817
 		private Vector3Spring groundPointSpring;
 
-		// Token: 0x04005D09 RID: 23817
+		// Token: 0x04005D0A RID: 23818
 		private Vector2[] landingTiltValues = new Vector2[]
 		{
 			new Vector2(1f, -1f),
@@ -661,73 +661,73 @@ namespace GorillaTag.Cosmetics
 			new Vector2(-1f, 0f)
 		};
 
-		// Token: 0x04005D0A RID: 23818
+		// Token: 0x04005D0B RID: 23819
 		private Vector2 landingTiltLeadingTarget = Vector2.zero;
 
-		// Token: 0x04005D0B RID: 23819
+		// Token: 0x04005D0C RID: 23820
 		private Vector2 landingTiltTarget = Vector2.zero;
 
-		// Token: 0x04005D0C RID: 23820
+		// Token: 0x04005D0D RID: 23821
 		[Header("Debug Params")]
 		[SerializeField]
 		private Dreidel.Side landingSide;
 
-		// Token: 0x04005D0D RID: 23821
+		// Token: 0x04005D0E RID: 23822
 		[SerializeField]
 		private Dreidel.Variation landingVariation;
 
-		// Token: 0x04005D0E RID: 23822
+		// Token: 0x04005D0F RID: 23823
 		[SerializeField]
 		private bool spinCounterClockwise;
 
-		// Token: 0x04005D0F RID: 23823
+		// Token: 0x04005D10 RID: 23824
 		[SerializeField]
 		private bool debugDraw;
 
 		// Token: 0x02000DDC RID: 3548
 		private enum State
 		{
-			// Token: 0x04005D11 RID: 23825
-			Idle,
 			// Token: 0x04005D12 RID: 23826
-			FindingSurface,
+			Idle,
 			// Token: 0x04005D13 RID: 23827
-			Spinning,
+			FindingSurface,
 			// Token: 0x04005D14 RID: 23828
-			Falling,
+			Spinning,
 			// Token: 0x04005D15 RID: 23829
+			Falling,
+			// Token: 0x04005D16 RID: 23830
 			Fallen
 		}
 
 		// Token: 0x02000DDD RID: 3549
 		public enum Side
 		{
-			// Token: 0x04005D17 RID: 23831
-			Shin,
 			// Token: 0x04005D18 RID: 23832
-			Hey,
+			Shin,
 			// Token: 0x04005D19 RID: 23833
-			Gimel,
+			Hey,
 			// Token: 0x04005D1A RID: 23834
-			Nun,
+			Gimel,
 			// Token: 0x04005D1B RID: 23835
+			Nun,
+			// Token: 0x04005D1C RID: 23836
 			Count
 		}
 
 		// Token: 0x02000DDE RID: 3550
 		public enum Variation
 		{
-			// Token: 0x04005D1D RID: 23837
-			Tumble,
 			// Token: 0x04005D1E RID: 23838
-			Smooth,
+			Tumble,
 			// Token: 0x04005D1F RID: 23839
-			Bounce,
+			Smooth,
 			// Token: 0x04005D20 RID: 23840
-			SlowTurn,
+			Bounce,
 			// Token: 0x04005D21 RID: 23841
-			FalseSlowTurn,
+			SlowTurn,
 			// Token: 0x04005D22 RID: 23842
+			FalseSlowTurn,
+			// Token: 0x04005D23 RID: 23843
 			Count
 		}
 	}

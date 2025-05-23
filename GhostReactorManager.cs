@@ -10,14 +10,14 @@ using UnityEngine;
 [NetworkBehaviourWeaved(0)]
 public class GhostReactorManager : NetworkComponent
 {
-	// Token: 0x0600227F RID: 8831 RVA: 0x000ACCA1 File Offset: 0x000AAEA1
+	// Token: 0x0600227F RID: 8831 RVA: 0x000ACCC1 File Offset: 0x000AAEC1
 	protected override void Awake()
 	{
 		base.Awake();
 		GhostReactorManager.instance = this;
 	}
 
-	// Token: 0x06002280 RID: 8832 RVA: 0x000ACCAF File Offset: 0x000AAEAF
+	// Token: 0x06002280 RID: 8832 RVA: 0x000ACCCF File Offset: 0x000AAECF
 	internal override void OnEnable()
 	{
 		NetworkBehaviourUtils.InternalOnEnable(this);
@@ -26,7 +26,7 @@ public class GhostReactorManager : NetworkComponent
 		this.gameEntityManager.onZoneClear += this.OnEntityZoneClear;
 	}
 
-	// Token: 0x06002281 RID: 8833 RVA: 0x000ACCEB File Offset: 0x000AAEEB
+	// Token: 0x06002281 RID: 8833 RVA: 0x000ACD0B File Offset: 0x000AAF0B
 	internal override void OnDisable()
 	{
 		NetworkBehaviourUtils.InternalOnDisable(this);
@@ -35,91 +35,91 @@ public class GhostReactorManager : NetworkComponent
 		this.gameEntityManager.onZoneClear -= this.OnEntityZoneClear;
 	}
 
-	// Token: 0x06002282 RID: 8834 RVA: 0x000ACD27 File Offset: 0x000AAF27
+	// Token: 0x06002282 RID: 8834 RVA: 0x000ACD47 File Offset: 0x000AAF47
 	private bool IsAuthority()
 	{
 		return this.gameEntityManager.IsAuthority();
 	}
 
-	// Token: 0x06002283 RID: 8835 RVA: 0x000ACD34 File Offset: 0x000AAF34
+	// Token: 0x06002283 RID: 8835 RVA: 0x000ACD54 File Offset: 0x000AAF54
 	private bool IsAuthorityPlayer(NetPlayer player)
 	{
 		return this.gameEntityManager.IsAuthorityPlayer(player);
 	}
 
-	// Token: 0x06002284 RID: 8836 RVA: 0x000ACD42 File Offset: 0x000AAF42
+	// Token: 0x06002284 RID: 8836 RVA: 0x000ACD62 File Offset: 0x000AAF62
 	private bool IsAuthorityPlayer(Player player)
 	{
 		return this.gameEntityManager.IsAuthorityPlayer(player);
 	}
 
-	// Token: 0x06002285 RID: 8837 RVA: 0x000ACD50 File Offset: 0x000AAF50
+	// Token: 0x06002285 RID: 8837 RVA: 0x000ACD70 File Offset: 0x000AAF70
 	private Player GetAuthorityPlayer()
 	{
 		return this.gameEntityManager.GetAuthorityPlayer();
 	}
 
-	// Token: 0x06002286 RID: 8838 RVA: 0x000ACD5D File Offset: 0x000AAF5D
+	// Token: 0x06002286 RID: 8838 RVA: 0x000ACD7D File Offset: 0x000AAF7D
 	public bool IsZoneActive()
 	{
 		return this.gameEntityManager.IsZoneActive();
 	}
 
-	// Token: 0x06002287 RID: 8839 RVA: 0x000ACD6A File Offset: 0x000AAF6A
+	// Token: 0x06002287 RID: 8839 RVA: 0x000ACD8A File Offset: 0x000AAF8A
 	public bool IsPositionInZone(Vector3 pos)
 	{
 		return this.gameEntityManager.IsPositionInZone(pos);
 	}
 
-	// Token: 0x06002288 RID: 8840 RVA: 0x000ACD78 File Offset: 0x000AAF78
+	// Token: 0x06002288 RID: 8840 RVA: 0x000ACD98 File Offset: 0x000AAF98
 	public bool IsValidClientRPC(Player sender)
 	{
 		return this.gameEntityManager.IsValidClientRPC(sender);
 	}
 
-	// Token: 0x06002289 RID: 8841 RVA: 0x000ACD86 File Offset: 0x000AAF86
+	// Token: 0x06002289 RID: 8841 RVA: 0x000ACDA6 File Offset: 0x000AAFA6
 	public bool IsValidClientRPC(Player sender, int entityNetId)
 	{
 		return this.gameEntityManager.IsValidClientRPC(sender, entityNetId);
 	}
 
-	// Token: 0x0600228A RID: 8842 RVA: 0x000ACD95 File Offset: 0x000AAF95
+	// Token: 0x0600228A RID: 8842 RVA: 0x000ACDB5 File Offset: 0x000AAFB5
 	public bool IsValidClientRPC(Player sender, int entityNetId, Vector3 pos)
 	{
 		return this.gameEntityManager.IsValidClientRPC(sender, entityNetId, pos);
 	}
 
-	// Token: 0x0600228B RID: 8843 RVA: 0x000ACDA5 File Offset: 0x000AAFA5
+	// Token: 0x0600228B RID: 8843 RVA: 0x000ACDC5 File Offset: 0x000AAFC5
 	public bool IsValidClientRPC(Player sender, Vector3 pos)
 	{
 		return this.gameEntityManager.IsValidClientRPC(sender, pos);
 	}
 
-	// Token: 0x0600228C RID: 8844 RVA: 0x000ACDB4 File Offset: 0x000AAFB4
+	// Token: 0x0600228C RID: 8844 RVA: 0x000ACDD4 File Offset: 0x000AAFD4
 	public bool IsValidAuthorityRPC()
 	{
 		return this.gameEntityManager.IsValidAuthorityRPC();
 	}
 
-	// Token: 0x0600228D RID: 8845 RVA: 0x000ACDC1 File Offset: 0x000AAFC1
+	// Token: 0x0600228D RID: 8845 RVA: 0x000ACDE1 File Offset: 0x000AAFE1
 	public bool IsValidAuthorityRPC(int entityNetId)
 	{
 		return this.gameEntityManager.IsValidAuthorityRPC(entityNetId);
 	}
 
-	// Token: 0x0600228E RID: 8846 RVA: 0x000ACDCF File Offset: 0x000AAFCF
+	// Token: 0x0600228E RID: 8846 RVA: 0x000ACDEF File Offset: 0x000AAFEF
 	public bool IsValidAuthorityRPC(int entityNetId, Vector3 pos)
 	{
 		return this.gameEntityManager.IsValidAuthorityRPC(entityNetId, pos);
 	}
 
-	// Token: 0x0600228F RID: 8847 RVA: 0x000ACDDE File Offset: 0x000AAFDE
+	// Token: 0x0600228F RID: 8847 RVA: 0x000ACDFE File Offset: 0x000AAFFE
 	public bool IsValidAuthorityRPC(Vector3 pos)
 	{
 		return this.gameEntityManager.IsValidAuthorityRPC(pos);
 	}
 
-	// Token: 0x06002290 RID: 8848 RVA: 0x000ACDEC File Offset: 0x000AAFEC
+	// Token: 0x06002290 RID: 8848 RVA: 0x000ACE0C File Offset: 0x000AB00C
 	public void RequestCollectItem(GameEntityId collectibleEntityId, GameEntityId collectorEntityId)
 	{
 		this.photonView.RPC("RequestCollectItemRPC", this.GetAuthorityPlayer(), new object[]
@@ -129,7 +129,7 @@ public class GhostReactorManager : NetworkComponent
 		});
 	}
 
-	// Token: 0x06002291 RID: 8849 RVA: 0x000ACE28 File Offset: 0x000AB028
+	// Token: 0x06002291 RID: 8849 RVA: 0x000ACE48 File Offset: 0x000AB048
 	public void RequestDepositCollectible(GameEntityId collectibleEntityId)
 	{
 		if (!this.IsValidAuthorityRPC())
@@ -148,7 +148,7 @@ public class GhostReactorManager : NetworkComponent
 		}
 	}
 
-	// Token: 0x06002292 RID: 8850 RVA: 0x000ACE90 File Offset: 0x000AB090
+	// Token: 0x06002292 RID: 8850 RVA: 0x000ACEB0 File Offset: 0x000AB0B0
 	[PunRPC]
 	public void RequestCollectItemRPC(int collectibleEntityNetId, int collectorEntityNetId, PhotonMessageInfo info)
 	{
@@ -176,7 +176,7 @@ public class GhostReactorManager : NetworkComponent
 		}
 	}
 
-	// Token: 0x06002293 RID: 8851 RVA: 0x000ACF30 File Offset: 0x000AB130
+	// Token: 0x06002293 RID: 8851 RVA: 0x000ACF50 File Offset: 0x000AB150
 	[PunRPC]
 	public void ApplyCollectItemRPC(int collectibleEntityNetId, int collectorEntityNetId, int collectingPlayerActorNumber, PhotonMessageInfo info)
 	{
@@ -227,7 +227,7 @@ public class GhostReactorManager : NetworkComponent
 		}
 	}
 
-	// Token: 0x06002294 RID: 8852 RVA: 0x000AD04B File Offset: 0x000AB24B
+	// Token: 0x06002294 RID: 8852 RVA: 0x000AD06B File Offset: 0x000AB26B
 	public void RequestChargeTool(GameEntityId collectorEntityId, GameEntityId targetToolId)
 	{
 		this.photonView.RPC("RequestChargeToolRPC", this.GetAuthorityPlayer(), new object[]
@@ -237,7 +237,7 @@ public class GhostReactorManager : NetworkComponent
 		});
 	}
 
-	// Token: 0x06002295 RID: 8853 RVA: 0x000AD088 File Offset: 0x000AB288
+	// Token: 0x06002295 RID: 8853 RVA: 0x000AD0A8 File Offset: 0x000AB2A8
 	[PunRPC]
 	public void RequestChargeToolRPC(int collectorEntityNetId, int targetToolNetId, PhotonMessageInfo info)
 	{
@@ -256,7 +256,7 @@ public class GhostReactorManager : NetworkComponent
 		}
 	}
 
-	// Token: 0x06002296 RID: 8854 RVA: 0x000AD170 File Offset: 0x000AB370
+	// Token: 0x06002296 RID: 8854 RVA: 0x000AD190 File Offset: 0x000AB390
 	[PunRPC]
 	public void ApplyChargeToolRPC(int collectorEntityNetId, int targetToolNetId, Player collectingPlayer, PhotonMessageInfo info)
 	{
@@ -289,13 +289,13 @@ public class GhostReactorManager : NetworkComponent
 		}
 	}
 
-	// Token: 0x06002297 RID: 8855 RVA: 0x000AD289 File Offset: 0x000AB489
+	// Token: 0x06002297 RID: 8855 RVA: 0x000AD2A9 File Offset: 0x000AB4A9
 	public void RequestDepositCurrency(GameEntityId collectorEntityId)
 	{
 		this.photonView.RPC("RequestDepositCurrencyRPC", this.GetAuthorityPlayer(), new object[] { GameEntity.GetNetId(collectorEntityId) });
 	}
 
-	// Token: 0x06002298 RID: 8856 RVA: 0x000AD2B8 File Offset: 0x000AB4B8
+	// Token: 0x06002298 RID: 8856 RVA: 0x000AD2D8 File Offset: 0x000AB4D8
 	[PunRPC]
 	public void RequestDepositCurrencyRPC(int collectorEntityNetId, PhotonMessageInfo info)
 	{
@@ -320,7 +320,7 @@ public class GhostReactorManager : NetworkComponent
 		}
 	}
 
-	// Token: 0x06002299 RID: 8857 RVA: 0x000AD39C File Offset: 0x000AB59C
+	// Token: 0x06002299 RID: 8857 RVA: 0x000AD3BC File Offset: 0x000AB5BC
 	[PunRPC]
 	public void ApplyDepositCurrencyRPC(int collectorEntityNetId, int targetPlayerActorNumber, PhotonMessageInfo info)
 	{
@@ -355,7 +355,7 @@ public class GhostReactorManager : NetworkComponent
 		}
 	}
 
-	// Token: 0x0600229A RID: 8858 RVA: 0x000AD479 File Offset: 0x000AB679
+	// Token: 0x0600229A RID: 8858 RVA: 0x000AD499 File Offset: 0x000AB699
 	public void RequestEnemyHitPlayer(GhostReactor.EnemyType type, GameEntityId hitByEntityId, GRPlayer player)
 	{
 		this.photonView.RPC("ApplyEnemyHitPlayerRPC", RpcTarget.All, new object[]
@@ -365,7 +365,7 @@ public class GhostReactorManager : NetworkComponent
 		});
 	}
 
-	// Token: 0x0600229B RID: 8859 RVA: 0x000AD4AC File Offset: 0x000AB6AC
+	// Token: 0x0600229B RID: 8859 RVA: 0x000AD4CC File Offset: 0x000AB6CC
 	[PunRPC]
 	private void ApplyEnemyHitPlayerRPC(GhostReactor.EnemyType type, int entityNetId, PhotonMessageInfo info)
 	{
@@ -382,7 +382,7 @@ public class GhostReactorManager : NetworkComponent
 		this.OnEnemyHitPlayerInternal(type, idFromNetId, grplayer);
 	}
 
-	// Token: 0x0600229C RID: 8860 RVA: 0x000AD500 File Offset: 0x000AB700
+	// Token: 0x0600229C RID: 8860 RVA: 0x000AD520 File Offset: 0x000AB720
 	private void OnEnemyHitPlayerInternal(GhostReactor.EnemyType type, GameEntityId entityId, GRPlayer player)
 	{
 		if (type == GhostReactor.EnemyType.Chaser)
@@ -404,13 +404,13 @@ public class GhostReactorManager : NetworkComponent
 		}
 	}
 
-	// Token: 0x0600229D RID: 8861 RVA: 0x000AD543 File Offset: 0x000AB743
+	// Token: 0x0600229D RID: 8861 RVA: 0x000AD563 File Offset: 0x000AB763
 	public void ReportLocalPlayerHit()
 	{
 		base.GetView.RPC("ReportLocalPlayerHitRPC", RpcTarget.All, Array.Empty<object>());
 	}
 
-	// Token: 0x0600229E RID: 8862 RVA: 0x000AD55C File Offset: 0x000AB75C
+	// Token: 0x0600229E RID: 8862 RVA: 0x000AD57C File Offset: 0x000AB77C
 	[PunRPC]
 	private void ReportLocalPlayerHitRPC(PhotonMessageInfo info)
 	{
@@ -422,7 +422,7 @@ public class GhostReactorManager : NetworkComponent
 		grplayer.ChangePlayerState(GRPlayer.GRPlayerState.Ghost);
 	}
 
-	// Token: 0x0600229F RID: 8863 RVA: 0x000AD5A0 File Offset: 0x000AB7A0
+	// Token: 0x0600229F RID: 8863 RVA: 0x000AD5C0 File Offset: 0x000AB7C0
 	public void RequestPlayerRevive(GRReviveStation reviveStation, GRPlayer player)
 	{
 		if ((NetworkSystem.Instance.InRoom && this.IsAuthority()) || !NetworkSystem.Instance.InRoom)
@@ -435,7 +435,7 @@ public class GhostReactorManager : NetworkComponent
 		}
 	}
 
-	// Token: 0x060022A0 RID: 8864 RVA: 0x000AD610 File Offset: 0x000AB810
+	// Token: 0x060022A0 RID: 8864 RVA: 0x000AD630 File Offset: 0x000AB830
 	[PunRPC]
 	private void ApplyPlayerRevivedRPC(int reviveStationIndex, int playerActorNumber, PhotonMessageInfo info)
 	{
@@ -460,7 +460,7 @@ public class GhostReactorManager : NetworkComponent
 		grreviveStation.RevivePlayer(grplayer);
 	}
 
-	// Token: 0x060022A1 RID: 8865 RVA: 0x000AD688 File Offset: 0x000AB888
+	// Token: 0x060022A1 RID: 8865 RVA: 0x000AD6A8 File Offset: 0x000AB8A8
 	public void RequestPlayerStateChange(GRPlayer player, GRPlayer.GRPlayerState newState)
 	{
 		if (NetworkSystem.Instance.InRoom)
@@ -475,7 +475,7 @@ public class GhostReactorManager : NetworkComponent
 		player.ChangePlayerState(newState);
 	}
 
-	// Token: 0x060022A2 RID: 8866 RVA: 0x000AD6E8 File Offset: 0x000AB8E8
+	// Token: 0x060022A2 RID: 8866 RVA: 0x000AD708 File Offset: 0x000AB908
 	[PunRPC]
 	private void PlayerStateChangeRPC(int playerActorNumber, int newState, PhotonMessageInfo info)
 	{
@@ -495,7 +495,7 @@ public class GhostReactorManager : NetworkComponent
 		grplayer.ChangePlayerState((GRPlayer.GRPlayerState)newState);
 	}
 
-	// Token: 0x060022A3 RID: 8867 RVA: 0x000AD76C File Offset: 0x000AB96C
+	// Token: 0x060022A3 RID: 8867 RVA: 0x000AD78C File Offset: 0x000AB98C
 	public void RequestFireProjectile(GameEntityId entityId, Vector3 firingPosition, Vector3 targetPosition, double networkTime)
 	{
 		if (!this.IsAuthority())
@@ -514,7 +514,7 @@ public class GhostReactorManager : NetworkComponent
 		}
 	}
 
-	// Token: 0x060022A4 RID: 8868 RVA: 0x000AD7E4 File Offset: 0x000AB9E4
+	// Token: 0x060022A4 RID: 8868 RVA: 0x000AD804 File Offset: 0x000ABA04
 	[PunRPC]
 	private void RequestFireProjectileRPC(int entityNetId, Vector3 firingPosition, Vector3 targetPosition, double networkTime, PhotonMessageInfo info)
 	{
@@ -526,7 +526,7 @@ public class GhostReactorManager : NetworkComponent
 		this.OnRequestFireProjectileInternal(idFromNetId, firingPosition, targetPosition, networkTime);
 	}
 
-	// Token: 0x060022A5 RID: 8869 RVA: 0x000AD838 File Offset: 0x000ABA38
+	// Token: 0x060022A5 RID: 8869 RVA: 0x000AD858 File Offset: 0x000ABA58
 	private void OnRequestFireProjectileInternal(GameEntityId entityId, Vector3 firingPosition, Vector3 targetPosition, double networkTime)
 	{
 		GREnemyRanged grenemyRanged = GREnemyRanged.Get(entityId);
@@ -536,13 +536,13 @@ public class GhostReactorManager : NetworkComponent
 		}
 	}
 
-	// Token: 0x060022A6 RID: 8870 RVA: 0x000AD85F File Offset: 0x000ABA5F
+	// Token: 0x060022A6 RID: 8870 RVA: 0x000AD87F File Offset: 0x000ABA7F
 	public void RequestShiftStart()
 	{
 		this.photonView.RPC("RequestShiftStartRPC", this.GetAuthorityPlayer(), Array.Empty<object>());
 	}
 
-	// Token: 0x060022A7 RID: 8871 RVA: 0x000AD87C File Offset: 0x000ABA7C
+	// Token: 0x060022A7 RID: 8871 RVA: 0x000AD89C File Offset: 0x000ABA9C
 	[PunRPC]
 	public void RequestShiftStartRPC(PhotonMessageInfo info)
 	{
@@ -570,7 +570,7 @@ public class GhostReactorManager : NetworkComponent
 		}
 	}
 
-	// Token: 0x060022A8 RID: 8872 RVA: 0x000AD948 File Offset: 0x000ABB48
+	// Token: 0x060022A8 RID: 8872 RVA: 0x000AD968 File Offset: 0x000ABB68
 	[PunRPC]
 	public void ApplyShiftStartRPC(double shiftStartTime, int sectionsToSpawn, int randomSeed, PhotonMessageInfo info)
 	{
@@ -603,7 +603,7 @@ public class GhostReactorManager : NetworkComponent
 		shiftManager.OnShiftStarted(shiftStartTime);
 	}
 
-	// Token: 0x060022A9 RID: 8873 RVA: 0x000ADA18 File Offset: 0x000ABC18
+	// Token: 0x060022A9 RID: 8873 RVA: 0x000ADA38 File Offset: 0x000ABC38
 	public void RequestShiftEnd()
 	{
 		if (!this.IsAuthority())
@@ -637,7 +637,7 @@ public class GhostReactorManager : NetworkComponent
 		shiftManager.RevealJudgment(Mathf.FloorToInt((float)shiftManager.EnemyDeaths / 5f));
 	}
 
-	// Token: 0x060022AA RID: 8874 RVA: 0x000ADB00 File Offset: 0x000ABD00
+	// Token: 0x060022AA RID: 8874 RVA: 0x000ADB20 File Offset: 0x000ABD20
 	[PunRPC]
 	public void ApplyShiftEndRPC(PhotonMessageInfo info)
 	{
@@ -657,10 +657,10 @@ public class GhostReactorManager : NetworkComponent
 		}
 		levelGenerator.ClearLevelSections();
 		shiftManager.OnShiftEnded();
-		shiftManager.RevealJudgment(Mathf.FloorToInt((float)shiftManager.EnemyDeaths / 6f));
+		shiftManager.RevealJudgment(Mathf.FloorToInt((float)shiftManager.EnemyDeaths / 5f));
 	}
 
-	// Token: 0x060022AB RID: 8875 RVA: 0x000ADB80 File Offset: 0x000ABD80
+	// Token: 0x060022AB RID: 8875 RVA: 0x000ADBA0 File Offset: 0x000ABDA0
 	private bool ShouldEntitySurviveShift(GameEntity gameEntity)
 	{
 		if (gameEntity == null)
@@ -680,7 +680,7 @@ public class GhostReactorManager : NetworkComponent
 		return safeZoneLimit.bounds.Contains(position) || gameEntity.GetComponent<GRBadge>() != null;
 	}
 
-	// Token: 0x060022AC RID: 8876 RVA: 0x000ADC08 File Offset: 0x000ABE08
+	// Token: 0x060022AC RID: 8876 RVA: 0x000ADC28 File Offset: 0x000ABE28
 	public void ReportEnemyDeath()
 	{
 		if (this.reactor == null)
@@ -692,7 +692,7 @@ public class GhostReactorManager : NetworkComponent
 		shiftManager.RefreshShiftStatsDisplay();
 	}
 
-	// Token: 0x060022AD RID: 8877 RVA: 0x000ADC37 File Offset: 0x000ABE37
+	// Token: 0x060022AD RID: 8877 RVA: 0x000ADC57 File Offset: 0x000ABE57
 	public void ReportCoreCollection()
 	{
 		if (this.reactor == null)
@@ -704,7 +704,7 @@ public class GhostReactorManager : NetworkComponent
 		shiftManager.RefreshShiftStatsDisplay();
 	}
 
-	// Token: 0x060022AE RID: 8878 RVA: 0x000ADC66 File Offset: 0x000ABE66
+	// Token: 0x060022AE RID: 8878 RVA: 0x000ADC86 File Offset: 0x000ABE86
 	public void ReportPlayerDeath()
 	{
 		if (this.reactor == null)
@@ -716,13 +716,13 @@ public class GhostReactorManager : NetworkComponent
 		shiftManager.RefreshShiftStatsDisplay();
 	}
 
-	// Token: 0x060022AF RID: 8879 RVA: 0x000ADC95 File Offset: 0x000ABE95
+	// Token: 0x060022AF RID: 8879 RVA: 0x000ADCB5 File Offset: 0x000ABEB5
 	public void ToolPurchaseStationRequest(int stationIndex, GhostReactorManager.ToolPurchaseStationAction action)
 	{
 		this.photonView.RPC("ToolPurchaseStationRequestRPC", this.GetAuthorityPlayer(), new object[] { stationIndex, action });
 	}
 
-	// Token: 0x060022B0 RID: 8880 RVA: 0x000ADCC8 File Offset: 0x000ABEC8
+	// Token: 0x060022B0 RID: 8880 RVA: 0x000ADCE8 File Offset: 0x000ABEE8
 	[PunRPC]
 	public void ToolPurchaseStationRequestRPC(int stationIndex, GhostReactorManager.ToolPurchaseStationAction action, PhotonMessageInfo info)
 	{
@@ -808,7 +808,7 @@ public class GhostReactorManager : NetworkComponent
 		}
 	}
 
-	// Token: 0x060022B1 RID: 8881 RVA: 0x000ADF08 File Offset: 0x000AC108
+	// Token: 0x060022B1 RID: 8881 RVA: 0x000ADF28 File Offset: 0x000AC128
 	[PunRPC]
 	public void ToolPurchaseStationResponseRPC(int stationIndex, GhostReactorManager.ToolPurchaseStationResponse responseType, int dataA, int dataB, PhotonMessageInfo info)
 	{
@@ -824,7 +824,7 @@ public class GhostReactorManager : NetworkComponent
 		this.ToolPurchaseResponseLocal(stationIndex, responseType, dataA, dataB);
 	}
 
-	// Token: 0x060022B2 RID: 8882 RVA: 0x000ADF68 File Offset: 0x000AC168
+	// Token: 0x060022B2 RID: 8882 RVA: 0x000ADF88 File Offset: 0x000AC188
 	private void ToolPurchaseResponseLocal(int stationIndex, GhostReactorManager.ToolPurchaseStationResponse responseType, int dataA, int dataB)
 	{
 		if (this.reactor == null)
@@ -866,7 +866,7 @@ public class GhostReactorManager : NetworkComponent
 		}
 	}
 
-	// Token: 0x060022B3 RID: 8883 RVA: 0x000AE008 File Offset: 0x000AC208
+	// Token: 0x060022B3 RID: 8883 RVA: 0x000AE028 File Offset: 0x000AC228
 	public void ReportBreakableBroken(GameEntity breakableEntity, GameEntity tool = null)
 	{
 		this.photonView.RPC("ReportBreakableBrokenRPC", this.GetAuthorityPlayer(), new object[]
@@ -876,7 +876,7 @@ public class GhostReactorManager : NetworkComponent
 		});
 	}
 
-	// Token: 0x060022B4 RID: 8884 RVA: 0x000AE064 File Offset: 0x000AC264
+	// Token: 0x060022B4 RID: 8884 RVA: 0x000AE084 File Offset: 0x000AC284
 	[PunRPC]
 	public void ReportBreakableBrokenRPC(int breakableEntityNetId, int toolNetId, PhotonMessageInfo info)
 	{
@@ -912,7 +912,7 @@ public class GhostReactorManager : NetworkComponent
 		}
 	}
 
-	// Token: 0x060022B5 RID: 8885 RVA: 0x000AE1F4 File Offset: 0x000AC3F4
+	// Token: 0x060022B5 RID: 8885 RVA: 0x000AE214 File Offset: 0x000AC414
 	[PunRPC]
 	public void ApplyBreakableBrokenRPC(int breakableEntityNetId, int toolNetId, PhotonMessageInfo info)
 	{
@@ -944,7 +944,7 @@ public class GhostReactorManager : NetworkComponent
 		}
 	}
 
-	// Token: 0x060022B6 RID: 8886 RVA: 0x000AE290 File Offset: 0x000AC490
+	// Token: 0x060022B6 RID: 8886 RVA: 0x000AE2B0 File Offset: 0x000AC4B0
 	public void EntityEnteredDropZone(GameEntity entity)
 	{
 		if (!this.IsAuthority())
@@ -975,7 +975,7 @@ public class GhostReactorManager : NetworkComponent
 		});
 	}
 
-	// Token: 0x060022B7 RID: 8887 RVA: 0x000AE370 File Offset: 0x000AC570
+	// Token: 0x060022B7 RID: 8887 RVA: 0x000AE390 File Offset: 0x000AC590
 	[PunRPC]
 	public void EntityEnteredDropZoneRPC(int entityNetId, long position, int rotation, PhotonMessageInfo info)
 	{
@@ -1006,7 +1006,7 @@ public class GhostReactorManager : NetworkComponent
 		this.LocalEntityEnteredDropZone(GameEntity.GetIdFromNetId(entityNetId), vector, quaternion);
 	}
 
-	// Token: 0x060022B8 RID: 8888 RVA: 0x000AE418 File Offset: 0x000AC618
+	// Token: 0x060022B8 RID: 8888 RVA: 0x000AE438 File Offset: 0x000AC638
 	private void LocalEntityEnteredDropZone(GameEntityId entityId, Vector3 position, Quaternion rotation)
 	{
 		if (this.reactor == null)
@@ -1071,7 +1071,7 @@ public class GhostReactorManager : NetworkComponent
 	{
 	}
 
-	// Token: 0x060022BD RID: 8893 RVA: 0x000AE537 File Offset: 0x000AC737
+	// Token: 0x060022BD RID: 8893 RVA: 0x000AE557 File Offset: 0x000AC757
 	protected void OnNewPlayerEnteredGhostReactor()
 	{
 		if (this.reactor == null)
@@ -1081,7 +1081,7 @@ public class GhostReactorManager : NetworkComponent
 		this.reactor.VRRigRefresh();
 	}
 
-	// Token: 0x060022BE RID: 8894 RVA: 0x000AE553 File Offset: 0x000AC753
+	// Token: 0x060022BE RID: 8894 RVA: 0x000AE573 File Offset: 0x000AC773
 	private void OnEntityZoneStart(GTZone zoneId)
 	{
 		if (this.reactor == null)
@@ -1095,7 +1095,7 @@ public class GhostReactorManager : NetworkComponent
 		}
 	}
 
-	// Token: 0x060022BF RID: 8895 RVA: 0x000AE592 File Offset: 0x000AC792
+	// Token: 0x060022BF RID: 8895 RVA: 0x000AE5B2 File Offset: 0x000AC7B2
 	public void OnEntityZoneClear(GTZone zoneId)
 	{
 		if (this.reactor == null)

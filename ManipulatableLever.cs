@@ -4,13 +4,13 @@ using UnityEngine;
 // Token: 0x0200040A RID: 1034
 public class ManipulatableLever : ManipulatableObject
 {
-	// Token: 0x06001929 RID: 6441 RVA: 0x00079E93 File Offset: 0x00078093
+	// Token: 0x06001929 RID: 6441 RVA: 0x00079EB3 File Offset: 0x000780B3
 	private void Awake()
 	{
 		this.localSpace = base.transform.worldToLocalMatrix;
 	}
 
-	// Token: 0x0600192A RID: 6442 RVA: 0x00079EA8 File Offset: 0x000780A8
+	// Token: 0x0600192A RID: 6442 RVA: 0x00079EC8 File Offset: 0x000780C8
 	protected override bool ShouldHandDetach(GameObject hand)
 	{
 		Vector3 position = this.leverGrip.position;
@@ -18,7 +18,7 @@ public class ManipulatableLever : ManipulatableObject
 		return Vector3.SqrMagnitude(position - position2) > this.breakDistance * this.breakDistance;
 	}
 
-	// Token: 0x0600192B RID: 6443 RVA: 0x00079EE8 File Offset: 0x000780E8
+	// Token: 0x0600192B RID: 6443 RVA: 0x00079F08 File Offset: 0x00078108
 	protected override void OnHeldUpdate(GameObject hand)
 	{
 		Vector3 position = hand.transform.position;
@@ -36,7 +36,7 @@ public class ManipulatableLever : ManipulatableObject
 		base.transform.localEulerAngles = eulerAngles;
 	}
 
-	// Token: 0x0600192C RID: 6444 RVA: 0x00079FA0 File Offset: 0x000781A0
+	// Token: 0x0600192C RID: 6444 RVA: 0x00079FC0 File Offset: 0x000781C0
 	public void SetValue(float value)
 	{
 		float num = Mathf.Lerp(this.minAngle, this.maxAngle, value);
@@ -45,7 +45,7 @@ public class ManipulatableLever : ManipulatableObject
 		base.transform.localEulerAngles = localEulerAngles;
 	}
 
-	// Token: 0x0600192D RID: 6445 RVA: 0x00079FE0 File Offset: 0x000781E0
+	// Token: 0x0600192D RID: 6445 RVA: 0x0007A000 File Offset: 0x00078200
 	public void SetNotch(int notchValue)
 	{
 		if (this.notches == null)
@@ -62,7 +62,7 @@ public class ManipulatableLever : ManipulatableObject
 		}
 	}
 
-	// Token: 0x0600192E RID: 6446 RVA: 0x0007A038 File Offset: 0x00078238
+	// Token: 0x0600192E RID: 6446 RVA: 0x0007A058 File Offset: 0x00078258
 	public float GetValue()
 	{
 		Vector3 localEulerAngles = base.transform.localEulerAngles;
@@ -77,7 +77,7 @@ public class ManipulatableLever : ManipulatableObject
 		return Mathf.InverseLerp(this.minAngle, this.maxAngle, localEulerAngles.z);
 	}
 
-	// Token: 0x0600192F RID: 6447 RVA: 0x0007A0A4 File Offset: 0x000782A4
+	// Token: 0x0600192F RID: 6447 RVA: 0x0007A0C4 File Offset: 0x000782C4
 	public int GetNotch()
 	{
 		if (this.notches == null)

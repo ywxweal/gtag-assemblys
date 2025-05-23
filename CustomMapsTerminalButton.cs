@@ -6,7 +6,7 @@ using UnityEngine;
 // Token: 0x02000735 RID: 1845
 public class CustomMapsTerminalButton : GorillaPressableButton
 {
-	// Token: 0x06002E23 RID: 11811 RVA: 0x000E69BC File Offset: 0x000E4BBC
+	// Token: 0x06002E24 RID: 11812 RVA: 0x000E6A60 File Offset: 0x000E4C60
 	public static string BindingToString(CustomMapsTerminalButton.ModIOKeyboardBindings binding)
 	{
 		if (binding < CustomMapsTerminalButton.ModIOKeyboardBindings.up || (binding > CustomMapsTerminalButton.ModIOKeyboardBindings.option3 && binding < CustomMapsTerminalButton.ModIOKeyboardBindings.at))
@@ -40,14 +40,14 @@ public class CustomMapsTerminalButton : GorillaPressableButton
 		}
 	}
 
-	// Token: 0x06002E24 RID: 11812 RVA: 0x000E6A41 File Offset: 0x000E4C41
+	// Token: 0x06002E25 RID: 11813 RVA: 0x000E6AE5 File Offset: 0x000E4CE5
 	public override void Start()
 	{
 		base.Start();
 		this.ResetButtonColor();
 	}
 
-	// Token: 0x06002E25 RID: 11813 RVA: 0x000E6A50 File Offset: 0x000E4C50
+	// Token: 0x06002E26 RID: 11814 RVA: 0x000E6AF4 File Offset: 0x000E4CF4
 	public override void ButtonActivationWithHand(bool isLeftHand)
 	{
 		GameEvents.OnModIOKeyboardButtonPressedEvent.Invoke(this.modIOBinding);
@@ -60,7 +60,7 @@ public class CustomMapsTerminalButton : GorillaPressableButton
 		}
 	}
 
-	// Token: 0x06002E26 RID: 11814 RVA: 0x000E6B0F File Offset: 0x000E4D0F
+	// Token: 0x06002E27 RID: 11815 RVA: 0x000E6BB3 File Offset: 0x000E4DB3
 	private void ResetButtonColor()
 	{
 		if (this.buttonRenderer != null)
@@ -69,7 +69,7 @@ public class CustomMapsTerminalButton : GorillaPressableButton
 		}
 	}
 
-	// Token: 0x06002E27 RID: 11815 RVA: 0x000E6B30 File Offset: 0x000E4D30
+	// Token: 0x06002E28 RID: 11816 RVA: 0x000E6BD4 File Offset: 0x000E4DD4
 	private IEnumerator PressButtonColorUpdate()
 	{
 		this.isOn = true;
@@ -80,126 +80,126 @@ public class CustomMapsTerminalButton : GorillaPressableButton
 		yield break;
 	}
 
-	// Token: 0x0400348E RID: 13454
+	// Token: 0x04003490 RID: 13456
 	public CustomMapsTerminalButton.ModIOKeyboardBindings modIOBinding;
 
-	// Token: 0x0400348F RID: 13455
+	// Token: 0x04003491 RID: 13457
 	private float pressedTime;
 
 	// Token: 0x02000736 RID: 1846
 	public enum ModIOKeyboardBindings
 	{
-		// Token: 0x04003491 RID: 13457
-		zero,
-		// Token: 0x04003492 RID: 13458
-		one,
 		// Token: 0x04003493 RID: 13459
-		two,
+		zero,
 		// Token: 0x04003494 RID: 13460
-		three,
+		one,
 		// Token: 0x04003495 RID: 13461
-		four,
+		two,
 		// Token: 0x04003496 RID: 13462
-		five,
+		three,
 		// Token: 0x04003497 RID: 13463
-		six,
+		four,
 		// Token: 0x04003498 RID: 13464
-		seven,
+		five,
 		// Token: 0x04003499 RID: 13465
-		eight,
+		six,
 		// Token: 0x0400349A RID: 13466
-		nine,
+		seven,
 		// Token: 0x0400349B RID: 13467
-		up,
+		eight,
 		// Token: 0x0400349C RID: 13468
-		down,
+		nine,
 		// Token: 0x0400349D RID: 13469
-		delete,
+		up,
 		// Token: 0x0400349E RID: 13470
-		enter,
+		down,
 		// Token: 0x0400349F RID: 13471
-		option1,
+		delete,
 		// Token: 0x040034A0 RID: 13472
-		option2,
+		enter,
 		// Token: 0x040034A1 RID: 13473
-		option3,
+		option1,
 		// Token: 0x040034A2 RID: 13474
-		A,
+		option2,
 		// Token: 0x040034A3 RID: 13475
-		B,
+		option3,
 		// Token: 0x040034A4 RID: 13476
-		C,
+		A,
 		// Token: 0x040034A5 RID: 13477
-		D,
+		B,
 		// Token: 0x040034A6 RID: 13478
-		E,
+		C,
 		// Token: 0x040034A7 RID: 13479
-		F,
+		D,
 		// Token: 0x040034A8 RID: 13480
-		G,
+		E,
 		// Token: 0x040034A9 RID: 13481
-		H,
+		F,
 		// Token: 0x040034AA RID: 13482
-		I,
+		G,
 		// Token: 0x040034AB RID: 13483
-		J,
+		H,
 		// Token: 0x040034AC RID: 13484
-		K,
+		I,
 		// Token: 0x040034AD RID: 13485
-		L,
+		J,
 		// Token: 0x040034AE RID: 13486
-		M,
+		K,
 		// Token: 0x040034AF RID: 13487
-		N,
+		L,
 		// Token: 0x040034B0 RID: 13488
-		O,
+		M,
 		// Token: 0x040034B1 RID: 13489
-		P,
+		N,
 		// Token: 0x040034B2 RID: 13490
-		Q,
+		O,
 		// Token: 0x040034B3 RID: 13491
-		R,
+		P,
 		// Token: 0x040034B4 RID: 13492
-		S,
+		Q,
 		// Token: 0x040034B5 RID: 13493
-		T,
+		R,
 		// Token: 0x040034B6 RID: 13494
-		U,
+		S,
 		// Token: 0x040034B7 RID: 13495
-		V,
+		T,
 		// Token: 0x040034B8 RID: 13496
-		W,
+		U,
 		// Token: 0x040034B9 RID: 13497
-		X,
+		V,
 		// Token: 0x040034BA RID: 13498
-		Y,
+		W,
 		// Token: 0x040034BB RID: 13499
-		Z,
+		X,
 		// Token: 0x040034BC RID: 13500
-		at,
+		Y,
 		// Token: 0x040034BD RID: 13501
-		dash,
+		Z,
 		// Token: 0x040034BE RID: 13502
-		period,
+		at,
 		// Token: 0x040034BF RID: 13503
-		underscore,
+		dash,
 		// Token: 0x040034C0 RID: 13504
-		plus,
+		period,
 		// Token: 0x040034C1 RID: 13505
-		space,
+		underscore,
 		// Token: 0x040034C2 RID: 13506
-		goback,
+		plus,
 		// Token: 0x040034C3 RID: 13507
-		left,
+		space,
 		// Token: 0x040034C4 RID: 13508
-		right,
+		goback,
 		// Token: 0x040034C5 RID: 13509
-		option4,
+		left,
 		// Token: 0x040034C6 RID: 13510
-		sort,
+		right,
 		// Token: 0x040034C7 RID: 13511
-		sub,
+		option4,
 		// Token: 0x040034C8 RID: 13512
+		sort,
+		// Token: 0x040034C9 RID: 13513
+		sub,
+		// Token: 0x040034CA RID: 13514
 		map
 	}
 }

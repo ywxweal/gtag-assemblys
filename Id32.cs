@@ -6,7 +6,7 @@ using UnityEngine;
 [Serializable]
 public struct Id32
 {
-	// Token: 0x06002F3A RID: 12090 RVA: 0x000EBD44 File Offset: 0x000E9F44
+	// Token: 0x06002F3B RID: 12091 RVA: 0x000EBDE8 File Offset: 0x000E9FE8
 	public Id32(string idString)
 	{
 		if (idString == null)
@@ -20,19 +20,19 @@ public struct Id32
 		this._id = XXHash32.Compute(idString, 0U);
 	}
 
-	// Token: 0x06002F3B RID: 12091 RVA: 0x000EBD79 File Offset: 0x000E9F79
+	// Token: 0x06002F3C RID: 12092 RVA: 0x000EBE1D File Offset: 0x000EA01D
 	public unsafe static implicit operator int(Id32 i32)
 	{
 		return *Unsafe.As<Id32, int>(ref i32);
 	}
 
-	// Token: 0x06002F3C RID: 12092 RVA: 0x000EBD83 File Offset: 0x000E9F83
+	// Token: 0x06002F3D RID: 12093 RVA: 0x000EBE27 File Offset: 0x000EA027
 	public static implicit operator Id32(string s)
 	{
 		return Id32.ComputeID(s);
 	}
 
-	// Token: 0x06002F3D RID: 12093 RVA: 0x000EBD8C File Offset: 0x000E9F8C
+	// Token: 0x06002F3E RID: 12094 RVA: 0x000EBE30 File Offset: 0x000EA030
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	public unsafe static Id32 ComputeID(string s)
 	{
@@ -40,7 +40,7 @@ public struct Id32
 		return *Unsafe.As<int, Id32>(ref num);
 	}
 
-	// Token: 0x06002F3E RID: 12094 RVA: 0x000EBDAC File Offset: 0x000E9FAC
+	// Token: 0x06002F3F RID: 12095 RVA: 0x000EBE50 File Offset: 0x000EA050
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	public static int ComputeHash(string s)
 	{
@@ -56,19 +56,19 @@ public struct Id32
 		return XXHash32.Compute(s, 0U);
 	}
 
-	// Token: 0x06002F3F RID: 12095 RVA: 0x000EBDCC File Offset: 0x000E9FCC
+	// Token: 0x06002F40 RID: 12096 RVA: 0x000EBE70 File Offset: 0x000EA070
 	public override int GetHashCode()
 	{
 		return this._id;
 	}
 
-	// Token: 0x06002F40 RID: 12096 RVA: 0x000EBDD4 File Offset: 0x000E9FD4
+	// Token: 0x06002F41 RID: 12097 RVA: 0x000EBE78 File Offset: 0x000EA078
 	public override string ToString()
 	{
 		return string.Format("{{ {0} : {1} }}", "Id32", this._id);
 	}
 
-	// Token: 0x040035A6 RID: 13734
+	// Token: 0x040035A8 RID: 13736
 	[SerializeField]
 	private int _id;
 }

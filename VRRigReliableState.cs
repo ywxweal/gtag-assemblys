@@ -10,7 +10,7 @@ using UnityEngine;
 public class VRRigReliableState : MonoBehaviour, IWrappedSerializable, INetworkStruct
 {
 	// Token: 0x170002AC RID: 684
-	// (get) Token: 0x060017E5 RID: 6117 RVA: 0x000742EE File Offset: 0x000724EE
+	// (get) Token: 0x060017E5 RID: 6117 RVA: 0x0007430E File Offset: 0x0007250E
 	public bool HasBracelet
 	{
 		get
@@ -20,36 +20,36 @@ public class VRRigReliableState : MonoBehaviour, IWrappedSerializable, INetworkS
 	}
 
 	// Token: 0x170002AD RID: 685
-	// (get) Token: 0x060017E6 RID: 6118 RVA: 0x000742FE File Offset: 0x000724FE
-	// (set) Token: 0x060017E7 RID: 6119 RVA: 0x00074306 File Offset: 0x00072506
+	// (get) Token: 0x060017E6 RID: 6118 RVA: 0x0007431E File Offset: 0x0007251E
+	// (set) Token: 0x060017E7 RID: 6119 RVA: 0x00074326 File Offset: 0x00072526
 	public bool isDirty { get; private set; } = true;
 
-	// Token: 0x060017E8 RID: 6120 RVA: 0x00074310 File Offset: 0x00072510
+	// Token: 0x060017E8 RID: 6120 RVA: 0x00074330 File Offset: 0x00072530
 	private void Awake()
 	{
 		VRRig.newPlayerJoined = (Action)Delegate.Combine(VRRig.newPlayerJoined, new Action(this.SetIsDirty));
 		RoomSystem.JoinedRoomEvent = (Action)Delegate.Combine(RoomSystem.JoinedRoomEvent, new Action(this.SetIsDirty));
 	}
 
-	// Token: 0x060017E9 RID: 6121 RVA: 0x0007435D File Offset: 0x0007255D
+	// Token: 0x060017E9 RID: 6121 RVA: 0x0007437D File Offset: 0x0007257D
 	private void OnDestroy()
 	{
 		VRRig.newPlayerJoined = (Action)Delegate.Remove(VRRig.newPlayerJoined, new Action(this.SetIsDirty));
 	}
 
-	// Token: 0x060017EA RID: 6122 RVA: 0x0007437F File Offset: 0x0007257F
+	// Token: 0x060017EA RID: 6122 RVA: 0x0007439F File Offset: 0x0007259F
 	public void SetIsDirty()
 	{
 		this.isDirty = true;
 	}
 
-	// Token: 0x060017EB RID: 6123 RVA: 0x00074388 File Offset: 0x00072588
+	// Token: 0x060017EB RID: 6123 RVA: 0x000743A8 File Offset: 0x000725A8
 	public void SetIsNotDirty()
 	{
 		this.isDirty = false;
 	}
 
-	// Token: 0x060017EC RID: 6124 RVA: 0x00074394 File Offset: 0x00072594
+	// Token: 0x060017EC RID: 6124 RVA: 0x000743B4 File Offset: 0x000725B4
 	public void SharedStart(bool isOfflineVRRig_, BodyDockPositions bDock_)
 	{
 		this.isOfflineVRRig = isOfflineVRRig_;
@@ -64,7 +64,7 @@ public class VRRigReliableState : MonoBehaviour, IWrappedSerializable, INetworkS
 		this.transferableDockPositions = new BodyDockPositions.DropPositions[5];
 	}
 
-	// Token: 0x060017ED RID: 6125 RVA: 0x000743FC File Offset: 0x000725FC
+	// Token: 0x060017ED RID: 6125 RVA: 0x0007441C File Offset: 0x0007261C
 	void IWrappedSerializable.OnSerializeRead(object newData)
 	{
 		this.Data = (ReliableStateData)newData;
@@ -122,7 +122,7 @@ public class VRRigReliableState : MonoBehaviour, IWrappedSerializable, INetworkS
 		this.bDock.myRig.UpdateFriendshipBracelet();
 	}
 
-	// Token: 0x060017EE RID: 6126 RVA: 0x000745D8 File Offset: 0x000727D8
+	// Token: 0x060017EE RID: 6126 RVA: 0x000745F8 File Offset: 0x000727F8
 	object IWrappedSerializable.OnSerializeWrite()
 	{
 		this.isDirty = false;
@@ -158,7 +158,7 @@ public class VRRigReliableState : MonoBehaviour, IWrappedSerializable, INetworkS
 		return reliableStateData;
 	}
 
-	// Token: 0x060017EF RID: 6127 RVA: 0x000746F0 File Offset: 0x000728F0
+	// Token: 0x060017EF RID: 6127 RVA: 0x00074710 File Offset: 0x00072910
 	void IWrappedSerializable.OnSerializeWrite(PhotonStream stream, PhotonMessageInfo info)
 	{
 		if (!this.isDirty)
@@ -195,7 +195,7 @@ public class VRRigReliableState : MonoBehaviour, IWrappedSerializable, INetworkS
 		}
 	}
 
-	// Token: 0x060017F0 RID: 6128 RVA: 0x00074844 File Offset: 0x00072A44
+	// Token: 0x060017F0 RID: 6128 RVA: 0x00074864 File Offset: 0x00072A64
 	void IWrappedSerializable.OnSerializeRead(PhotonStream stream, PhotonMessageInfo info)
 	{
 		long num = (long)stream.ReceiveNext();
@@ -264,7 +264,7 @@ public class VRRigReliableState : MonoBehaviour, IWrappedSerializable, INetworkS
 		this.bDock.myRig.EnableBuilderResizeWatch(this.isBuilderWatchEnabled);
 	}
 
-	// Token: 0x060017F1 RID: 6129 RVA: 0x00074AB4 File Offset: 0x00072CB4
+	// Token: 0x060017F1 RID: 6129 RVA: 0x00074AD4 File Offset: 0x00072CD4
 	private long GetHeader()
 	{
 		long num = 0L;
@@ -309,7 +309,7 @@ public class VRRigReliableState : MonoBehaviour, IWrappedSerializable, INetworkS
 		return num | (long)((long)((ulong)this.rThrowableProjectileColor.b) << 56);
 	}
 
-	// Token: 0x060017F2 RID: 6130 RVA: 0x00074BFC File Offset: 0x00072DFC
+	// Token: 0x060017F2 RID: 6130 RVA: 0x00074C1C File Offset: 0x00072E1C
 	private void SetHeader(long header, out int numBeadsToRead)
 	{
 		this.isMicEnabled = (header & 32L) != 0L;
@@ -323,7 +323,7 @@ public class VRRigReliableState : MonoBehaviour, IWrappedSerializable, INetworkS
 		this.rThrowableProjectileColor.b = (byte)(header >> 56);
 	}
 
-	// Token: 0x060017F3 RID: 6131 RVA: 0x00074C94 File Offset: 0x00072E94
+	// Token: 0x060017F3 RID: 6131 RVA: 0x00074CB4 File Offset: 0x00072EB4
 	private List<long> GetTransferrableStates(long header)
 	{
 		List<long> list = new List<long>();
@@ -341,7 +341,7 @@ public class VRRigReliableState : MonoBehaviour, IWrappedSerializable, INetworkS
 		return list;
 	}
 
-	// Token: 0x060017F4 RID: 6132 RVA: 0x00074D10 File Offset: 0x00072F10
+	// Token: 0x060017F4 RID: 6132 RVA: 0x00074D30 File Offset: 0x00072F30
 	private static long PackBeadColors(List<Color> beadColors, int fromIndex)
 	{
 		long num = 0L;
@@ -356,7 +356,7 @@ public class VRRigReliableState : MonoBehaviour, IWrappedSerializable, INetworkS
 		return num;
 	}
 
-	// Token: 0x060017F5 RID: 6133 RVA: 0x00074D5C File Offset: 0x00072F5C
+	// Token: 0x060017F5 RID: 6133 RVA: 0x00074D7C File Offset: 0x00072F7C
 	private static void UnpackBeadColors(long packed, int startIndex, int endIndex, List<Color> beadColorsResult)
 	{
 		int num = Mathf.Min(startIndex + 6, endIndex);

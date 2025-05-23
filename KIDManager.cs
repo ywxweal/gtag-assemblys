@@ -19,7 +19,7 @@ using UnityEngine.XR.Interaction.Toolkit;
 public class KIDManager : MonoBehaviour
 {
 	// Token: 0x170004F7 RID: 1271
-	// (get) Token: 0x06003101 RID: 12545 RVA: 0x000F0E4C File Offset: 0x000EF04C
+	// (get) Token: 0x06003102 RID: 12546 RVA: 0x000F0EF0 File Offset: 0x000EF0F0
 	public static KIDManager Instance
 	{
 		get
@@ -29,32 +29,32 @@ public class KIDManager : MonoBehaviour
 	}
 
 	// Token: 0x170004F8 RID: 1272
-	// (get) Token: 0x06003102 RID: 12546 RVA: 0x000F0E53 File Offset: 0x000EF053
-	// (set) Token: 0x06003103 RID: 12547 RVA: 0x000F0E5A File Offset: 0x000EF05A
+	// (get) Token: 0x06003103 RID: 12547 RVA: 0x000F0EF7 File Offset: 0x000EF0F7
+	// (set) Token: 0x06003104 RID: 12548 RVA: 0x000F0EFE File Offset: 0x000EF0FE
 	public static bool InitialisationComplete { get; private set; } = false;
 
 	// Token: 0x170004F9 RID: 1273
-	// (get) Token: 0x06003104 RID: 12548 RVA: 0x000F0E62 File Offset: 0x000EF062
-	// (set) Token: 0x06003105 RID: 12549 RVA: 0x000F0E69 File Offset: 0x000EF069
+	// (get) Token: 0x06003105 RID: 12549 RVA: 0x000F0F06 File Offset: 0x000EF106
+	// (set) Token: 0x06003106 RID: 12550 RVA: 0x000F0F0D File Offset: 0x000EF10D
 	public static bool InitialisationSuccessful { get; private set; } = false;
 
 	// Token: 0x170004FA RID: 1274
-	// (get) Token: 0x06003106 RID: 12550 RVA: 0x000F0E71 File Offset: 0x000EF071
-	// (set) Token: 0x06003107 RID: 12551 RVA: 0x000F0E78 File Offset: 0x000EF078
+	// (get) Token: 0x06003107 RID: 12551 RVA: 0x000F0F15 File Offset: 0x000EF115
+	// (set) Token: 0x06003108 RID: 12552 RVA: 0x000F0F1C File Offset: 0x000EF11C
 	public static TMPSession CurrentSession { get; private set; }
 
 	// Token: 0x170004FB RID: 1275
-	// (get) Token: 0x06003108 RID: 12552 RVA: 0x000F0E80 File Offset: 0x000EF080
-	// (set) Token: 0x06003109 RID: 12553 RVA: 0x000F0E87 File Offset: 0x000EF087
+	// (get) Token: 0x06003109 RID: 12553 RVA: 0x000F0F24 File Offset: 0x000EF124
+	// (set) Token: 0x0600310A RID: 12554 RVA: 0x000F0F2B File Offset: 0x000EF12B
 	public static SessionStatus PreviousStatus { get; private set; }
 
 	// Token: 0x170004FC RID: 1276
-	// (get) Token: 0x0600310A RID: 12554 RVA: 0x000F0E8F File Offset: 0x000EF08F
-	// (set) Token: 0x0600310B RID: 12555 RVA: 0x000F0E96 File Offset: 0x000EF096
+	// (get) Token: 0x0600310B RID: 12555 RVA: 0x000F0F33 File Offset: 0x000EF133
+	// (set) Token: 0x0600310C RID: 12556 RVA: 0x000F0F3A File Offset: 0x000EF13A
 	public static GetRequirementsData _ageGateRequirements { get; private set; }
 
 	// Token: 0x170004FD RID: 1277
-	// (get) Token: 0x0600310C RID: 12556 RVA: 0x000F0E9E File Offset: 0x000EF09E
+	// (get) Token: 0x0600310D RID: 12557 RVA: 0x000F0F42 File Offset: 0x000EF142
 	public static bool KidTitleDataReady
 	{
 		get
@@ -64,7 +64,7 @@ public class KIDManager : MonoBehaviour
 	}
 
 	// Token: 0x170004FE RID: 1278
-	// (get) Token: 0x0600310D RID: 12557 RVA: 0x000F0EA5 File Offset: 0x000EF0A5
+	// (get) Token: 0x0600310E RID: 12558 RVA: 0x000F0F49 File Offset: 0x000EF149
 	public static bool KidEnabled
 	{
 		get
@@ -74,7 +74,7 @@ public class KIDManager : MonoBehaviour
 	}
 
 	// Token: 0x170004FF RID: 1279
-	// (get) Token: 0x0600310E RID: 12558 RVA: 0x000F0EB5 File Offset: 0x000EF0B5
+	// (get) Token: 0x0600310F RID: 12559 RVA: 0x000F0F59 File Offset: 0x000EF159
 	public static bool KidEnabledAndReady
 	{
 		get
@@ -84,7 +84,7 @@ public class KIDManager : MonoBehaviour
 	}
 
 	// Token: 0x17000500 RID: 1280
-	// (get) Token: 0x0600310F RID: 12559 RVA: 0x000F0EC5 File Offset: 0x000EF0C5
+	// (get) Token: 0x06003110 RID: 12560 RVA: 0x000F0F69 File Offset: 0x000EF169
 	public static bool HasSession
 	{
 		get
@@ -94,7 +94,7 @@ public class KIDManager : MonoBehaviour
 	}
 
 	// Token: 0x17000501 RID: 1281
-	// (get) Token: 0x06003110 RID: 12560 RVA: 0x000F0EE4 File Offset: 0x000EF0E4
+	// (get) Token: 0x06003111 RID: 12561 RVA: 0x000F0F88 File Offset: 0x000EF188
 	public static string PreviousStatusPlayerPrefRef
 	{
 		get
@@ -104,12 +104,12 @@ public class KIDManager : MonoBehaviour
 	}
 
 	// Token: 0x17000502 RID: 1282
-	// (get) Token: 0x06003111 RID: 12561 RVA: 0x000F0EFC File Offset: 0x000EF0FC
-	// (set) Token: 0x06003112 RID: 12562 RVA: 0x000F0F03 File Offset: 0x000EF103
+	// (get) Token: 0x06003112 RID: 12562 RVA: 0x000F0FA0 File Offset: 0x000EF1A0
+	// (set) Token: 0x06003113 RID: 12563 RVA: 0x000F0FA7 File Offset: 0x000EF1A7
 	public static bool HasOptedInToKID { get; private set; }
 
 	// Token: 0x17000503 RID: 1283
-	// (get) Token: 0x06003113 RID: 12563 RVA: 0x000F0F0B File Offset: 0x000EF10B
+	// (get) Token: 0x06003114 RID: 12564 RVA: 0x000F0FAF File Offset: 0x000EF1AF
 	private static string KIDSetupPlayerPref
 	{
 		get
@@ -119,12 +119,12 @@ public class KIDManager : MonoBehaviour
 	}
 
 	// Token: 0x17000504 RID: 1284
-	// (get) Token: 0x06003114 RID: 12564 RVA: 0x000F0F12 File Offset: 0x000EF112
-	// (set) Token: 0x06003115 RID: 12565 RVA: 0x000F0F19 File Offset: 0x000EF119
+	// (get) Token: 0x06003115 RID: 12565 RVA: 0x000F0FB6 File Offset: 0x000EF1B6
+	// (set) Token: 0x06003116 RID: 12566 RVA: 0x000F0FBD File Offset: 0x000EF1BD
 	public static string DbgLocale { get; set; }
 
 	// Token: 0x17000505 RID: 1285
-	// (get) Token: 0x06003116 RID: 12566 RVA: 0x000F0F21 File Offset: 0x000EF121
+	// (get) Token: 0x06003117 RID: 12567 RVA: 0x000F0FC5 File Offset: 0x000EF1C5
 	public static string DebugKIDLocalePlayerPrefRef
 	{
 		get
@@ -134,7 +134,7 @@ public class KIDManager : MonoBehaviour
 	}
 
 	// Token: 0x17000506 RID: 1286
-	// (get) Token: 0x06003117 RID: 12567 RVA: 0x000F0F28 File Offset: 0x000EF128
+	// (get) Token: 0x06003118 RID: 12568 RVA: 0x000F0FCC File Offset: 0x000EF1CC
 	public static string GetEmailForUserPlayerPrefRef
 	{
 		get
@@ -148,7 +148,7 @@ public class KIDManager : MonoBehaviour
 	}
 
 	// Token: 0x17000507 RID: 1287
-	// (get) Token: 0x06003118 RID: 12568 RVA: 0x000F0F56 File Offset: 0x000EF156
+	// (get) Token: 0x06003119 RID: 12569 RVA: 0x000F0FFA File Offset: 0x000EF1FA
 	public static string GetChallengedBeforePlayerPrefRef
 	{
 		get
@@ -157,7 +157,7 @@ public class KIDManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06003119 RID: 12569 RVA: 0x000F0F70 File Offset: 0x000EF170
+	// Token: 0x0600311A RID: 12570 RVA: 0x000F1014 File Offset: 0x000EF214
 	private void Awake()
 	{
 		if (KIDManager._instance != null)
@@ -171,7 +171,7 @@ public class KIDManager : MonoBehaviour
 		KIDManager.DbgLocale = PlayerPrefs.GetString(KIDManager._debugKIDLocalePlayerPrefRef, "");
 	}
 
-	// Token: 0x0600311A RID: 12570 RVA: 0x000F0FDC File Offset: 0x000EF1DC
+	// Token: 0x0600311B RID: 12571 RVA: 0x000F1080 File Offset: 0x000EF280
 	private async void Start()
 	{
 		TaskAwaiter<bool> taskAwaiter = KIDManager.UseKID().GetAwaiter();
@@ -204,13 +204,13 @@ public class KIDManager : MonoBehaviour
 		KIDManager._titleDataReady = true;
 	}
 
-	// Token: 0x0600311B RID: 12571 RVA: 0x000F100B File Offset: 0x000EF20B
+	// Token: 0x0600311C RID: 12572 RVA: 0x000F10AF File Offset: 0x000EF2AF
 	private void OnDestroy()
 	{
 		KIDManager._requestCancellationSource.Cancel();
 	}
 
-	// Token: 0x0600311C RID: 12572 RVA: 0x000F1017 File Offset: 0x000EF217
+	// Token: 0x0600311D RID: 12573 RVA: 0x000F10BB File Offset: 0x000EF2BB
 	public static AgeStatusType GetActiveAccountStatus()
 	{
 		if (KIDManager.CurrentSession != null)
@@ -224,7 +224,7 @@ public class KIDManager : MonoBehaviour
 		return AgeStatusType.DIGITALMINOR;
 	}
 
-	// Token: 0x0600311D RID: 12573 RVA: 0x000F103C File Offset: 0x000EF23C
+	// Token: 0x0600311E RID: 12574 RVA: 0x000F10E0 File Offset: 0x000EF2E0
 	public static List<Permission> GetAllPermissionsData()
 	{
 		if (KIDManager.CurrentSession == null)
@@ -235,7 +235,7 @@ public class KIDManager : MonoBehaviour
 		return KIDManager.CurrentSession.GetAllPermissions();
 	}
 
-	// Token: 0x0600311E RID: 12574 RVA: 0x000F1060 File Offset: 0x000EF260
+	// Token: 0x0600311F RID: 12575 RVA: 0x000F1104 File Offset: 0x000EF304
 	public static bool TryGetAgeStatusTypeFromAge(int age, out AgeStatusType ageType)
 	{
 		if (KIDManager._ageGateRequirements == null)
@@ -258,7 +258,7 @@ public class KIDManager : MonoBehaviour
 		return true;
 	}
 
-	// Token: 0x0600311F RID: 12575 RVA: 0x000F10B8 File Offset: 0x000EF2B8
+	// Token: 0x06003120 RID: 12576 RVA: 0x000F115C File Offset: 0x000EF35C
 	[return: TupleElementNames(new string[] { "requiresOptIn", "hasOptedInPreviously" })]
 	public static ValueTuple<bool, bool> CheckFeatureOptIn(EKIDFeatures feature, Permission permissionData = null)
 	{
@@ -287,7 +287,7 @@ public class KIDManager : MonoBehaviour
 		return new ValueTuple<bool, bool>(true, @int == 1);
 	}
 
-	// Token: 0x06003120 RID: 12576 RVA: 0x000F114C File Offset: 0x000EF34C
+	// Token: 0x06003121 RID: 12577 RVA: 0x000F11F0 File Offset: 0x000EF3F0
 	public static void SetFeatureOptIn(EKIDFeatures feature, bool optedIn)
 	{
 		Permission permissionDataByFeature = KIDManager.GetPermissionDataByFeature(feature);
@@ -312,7 +312,7 @@ public class KIDManager : MonoBehaviour
 		PlayerPrefs.Save();
 	}
 
-	// Token: 0x06003121 RID: 12577 RVA: 0x000F11D8 File Offset: 0x000EF3D8
+	// Token: 0x06003122 RID: 12578 RVA: 0x000F127C File Offset: 0x000EF47C
 	public static bool CheckFeatureSettingEnabled(EKIDFeatures feature)
 	{
 		Permission permissionDataByFeature = KIDManager.GetPermissionDataByFeature(feature);
@@ -343,19 +343,19 @@ public class KIDManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06003122 RID: 12578 RVA: 0x000F1294 File Offset: 0x000EF494
+	// Token: 0x06003123 RID: 12579 RVA: 0x000F1338 File Offset: 0x000EF538
 	private static async Task<GetPlayerData_Data> TryGetPlayerData(bool forceRefresh)
 	{
 		return await KIDManager.Server_GetPlayerData(forceRefresh, null);
 	}
 
-	// Token: 0x06003123 RID: 12579 RVA: 0x000F12D8 File Offset: 0x000EF4D8
+	// Token: 0x06003124 RID: 12580 RVA: 0x000F137C File Offset: 0x000EF57C
 	private static async Task<GetRequirementsData> TryGetRequirements()
 	{
 		return await KIDManager.Server_GetRequirements();
 	}
 
-	// Token: 0x06003124 RID: 12580 RVA: 0x000F1314 File Offset: 0x000EF514
+	// Token: 0x06003125 RID: 12581 RVA: 0x000F13B8 File Offset: 0x000EF5B8
 	private static async Task<VerifyAgeData> TryVerifyAgeResponse()
 	{
 		PlayerPlatform playerPlatform = PlayerPlatform.Steam;
@@ -366,7 +366,7 @@ public class KIDManager : MonoBehaviour
 		return await KIDManager.Server_VerifyAge(verifyAgeRequest, null);
 	}
 
-	// Token: 0x06003125 RID: 12581 RVA: 0x000F1350 File Offset: 0x000EF550
+	// Token: 0x06003126 RID: 12582 RVA: 0x000F13F4 File Offset: 0x000EF5F4
 	[return: TupleElementNames(new string[] { "success", "exception" })]
 	private static async Task<ValueTuple<bool, string>> TrySendChallengeEmailRequest(Action onFailure)
 	{
@@ -411,13 +411,13 @@ public class KIDManager : MonoBehaviour
 		return valueTuple;
 	}
 
-	// Token: 0x06003126 RID: 12582 RVA: 0x000F1394 File Offset: 0x000EF594
+	// Token: 0x06003127 RID: 12583 RVA: 0x000F1438 File Offset: 0x000EF638
 	public static async Task<bool> TrySendUpgradeSessionChallengeEmail()
 	{
 		return await KIDManager.Server_SendChallengeEmail(new SendChallengeEmailRequest(), null);
 	}
 
-	// Token: 0x06003127 RID: 12583 RVA: 0x000F13D0 File Offset: 0x000EF5D0
+	// Token: 0x06003128 RID: 12584 RVA: 0x000F1474 File Offset: 0x000EF674
 	public static async Task<UpgradeSessionData> TryUpgradeSession(List<string> requestedPermissions)
 	{
 		global::UpgradeSessionRequest upgradeSessionRequest = new global::UpgradeSessionRequest();
@@ -427,7 +427,7 @@ public class KIDManager : MonoBehaviour
 		return upgradeSessionData;
 	}
 
-	// Token: 0x06003128 RID: 12584 RVA: 0x000F1414 File Offset: 0x000EF614
+	// Token: 0x06003129 RID: 12585 RVA: 0x000F14B8 File Offset: 0x000EF6B8
 	public static async Task<AttemptAgeUpdateData> TryAttemptAgeUpdate(int age)
 	{
 		PlayerPlatform playerPlatform = PlayerPlatform.Steam;
@@ -438,7 +438,7 @@ public class KIDManager : MonoBehaviour
 		return await KIDManager.Server_AttemptAgeUpdate(attemptAgeUpdateRequest, null);
 	}
 
-	// Token: 0x06003129 RID: 12585 RVA: 0x000F1458 File Offset: 0x000EF658
+	// Token: 0x0600312A RID: 12586 RVA: 0x000F14FC File Offset: 0x000EF6FC
 	public static async Task<bool> TryAppealAge(string email, int newAge)
 	{
 		string text = (string.IsNullOrEmpty(KIDManager.DbgLocale) ? CultureInfo.CurrentCulture.Name : KIDManager.DbgLocale);
@@ -450,7 +450,7 @@ public class KIDManager : MonoBehaviour
 		return await KIDManager.Server_AppealAge(appealAgeRequest, null);
 	}
 
-	// Token: 0x0600312A RID: 12586 RVA: 0x000F14A4 File Offset: 0x000EF6A4
+	// Token: 0x0600312B RID: 12587 RVA: 0x000F1548 File Offset: 0x000EF748
 	public static async Task UpdateSession()
 	{
 		GetPlayerData_Data getPlayerData_Data = await KIDManager.TryGetPlayerData(true);
@@ -468,7 +468,7 @@ public class KIDManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x0600312B RID: 12587 RVA: 0x000F14E0 File Offset: 0x000EF6E0
+	// Token: 0x0600312C RID: 12588 RVA: 0x000F1584 File Offset: 0x000EF784
 	private static async Task<bool> CheckWarningScreensOptedIn()
 	{
 		bool flag;
@@ -536,7 +536,7 @@ public class KIDManager : MonoBehaviour
 		return flag;
 	}
 
-	// Token: 0x0600312C RID: 12588 RVA: 0x000F151B File Offset: 0x000EF71B
+	// Token: 0x0600312D RID: 12589 RVA: 0x000F15BF File Offset: 0x000EF7BF
 	[RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
 	public static void InitialiseBootFlow()
 	{
@@ -544,7 +544,7 @@ public class KIDManager : MonoBehaviour
 		PlayerPrefs.GetInt(KIDManager.KIDSetupPlayerPref, 0);
 	}
 
-	// Token: 0x0600312D RID: 12589 RVA: 0x000F1534 File Offset: 0x000EF734
+	// Token: 0x0600312E RID: 12590 RVA: 0x000F15D8 File Offset: 0x000EF7D8
 	[RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterAssembliesLoaded)]
 	public static async void InitialiseKID()
 	{
@@ -554,7 +554,7 @@ public class KIDManager : MonoBehaviour
 		int num = 0;
 		try
 		{
-			Debug.Log("[KID::MANAGER] PHASE ZERO -- START - Initialising k-ID System");
+			Debug.Log("[KID::MANAGER] PHASE ZERO -- START - Initialising k-ID System - " + Application.version);
 			TaskAwaiter<bool> taskAwaiter = KIDManager.WaitForAuthentication().GetAwaiter();
 			if (!taskAwaiter.IsCompleted)
 			{
@@ -650,7 +650,7 @@ public class KIDManager : MonoBehaviour
 											TMPSession item2 = valueTuple.Item2;
 											if (KIDManager._requestCancellationSource.IsCancellationRequested)
 											{
-												goto IL_0897;
+												goto IL_08A1;
 											}
 											ageStatus = item;
 											newSession = item2;
@@ -663,7 +663,7 @@ public class KIDManager : MonoBehaviour
 											await LegalAgreements.instance.StartLegalAgreements();
 											if (KIDManager._requestCancellationSource.IsCancellationRequested)
 											{
-												goto IL_0897;
+												goto IL_08A1;
 											}
 										}
 										Debug.Log("[KID::MANAGER] PHASE FOUR -- COMPLETE");
@@ -674,13 +674,13 @@ public class KIDManager : MonoBehaviour
 											TMPSession tmpsession = newSession;
 											Debug.LogError(text2 + ((tmpsession != null) ? tmpsession.ToString() : null));
 											Debug.Log(string.Format("[KID::MANAGER] Safeties is: [{0}", PlayFabAuthenticator.instance.GetSafety()));
-											goto IL_0897;
+											goto IL_08A1;
 										}
 										if (KIDManager.CurrentSession == null)
 										{
 											Debug.LogError("[KID::MANAGER] PHASE FIVE -- FAILURE -- CurrentSession is NULL, should at least have a default session!");
 											Debug.Log(string.Format("[KID::MANAGER] Safeties is: [{0}", PlayFabAuthenticator.instance.GetSafety()));
-											goto IL_0897;
+											goto IL_08A1;
 										}
 										if (KIDManager.CurrentSession.IsDefault)
 										{
@@ -688,7 +688,7 @@ public class KIDManager : MonoBehaviour
 										}
 										if (KIDManager._requestCancellationSource.IsCancellationRequested)
 										{
-											goto IL_0897;
+											goto IL_08A1;
 										}
 										UGCPermissionManager.UseKID();
 										Debug.Log("[KID::MANAGER] PHASE FIVE -- COMPLETE");
@@ -703,23 +703,23 @@ public class KIDManager : MonoBehaviour
 												await Task.Yield();
 												if (!KIDUI_Controller.IsKIDUIActive)
 												{
-													goto IL_07AD;
+													goto IL_07B7;
 												}
 											}
-											goto IL_0897;
+											goto IL_08A1;
 										}
-										IL_07AD:
+										IL_07B7:
 										Debug.Log("[KID::MANAGER] PHASE SIX --  COMPLETE");
 										if (KIDManager._requestCancellationSource.IsCancellationRequested)
 										{
-											goto IL_0897;
+											goto IL_08A1;
 										}
 										Debug.Log("[KID::MANAGER] PHASE SEVEN -- START - Finalise setup");
 										if (KIDManager.CurrentSession == null)
 										{
 											Debug.LogError("[KID::MANAGER] PHASE SEVEN -- FAILURE -- CurrentSession is NULL, should at least have a default session!");
 											Debug.Log(string.Format("[KID::MANAGER] Safeties is: [{0}", PlayFabAuthenticator.instance.GetSafety()));
-											goto IL_0897;
+											goto IL_08A1;
 										}
 										await KIDMessagingController.StartKIDConfirmationScreen(KIDManager._requestCancellationSource.Token);
 										PlayerPrefs.SetInt(KIDManager.PreviousStatusPlayerPrefRef, (int)KIDManager.PreviousStatus);
@@ -727,7 +727,7 @@ public class KIDManager : MonoBehaviour
 										KIDManager.InitialisationSuccessful = true;
 										newSessionData = null;
 										newSession = null;
-										goto IL_08AC;
+										goto IL_08B6;
 									}
 								}
 								PrivateUIRoom.ForceStartOverlay();
@@ -738,13 +738,13 @@ public class KIDManager : MonoBehaviour
 					}
 				}
 			}
-			IL_0897:
+			IL_08A1:
 			num = 1;
 		}
 		catch (object obj)
 		{
 		}
-		IL_08AC:
+		IL_08B6:
 		KIDManager.InitialisationComplete = true;
 		if (!KIDManager.InitialisationSuccessful)
 		{
@@ -800,7 +800,7 @@ public class KIDManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x0600312E RID: 12590 RVA: 0x000F1564 File Offset: 0x000EF764
+	// Token: 0x0600312F RID: 12591 RVA: 0x000F1608 File Offset: 0x000EF808
 	private static bool UpdatePermissions(TMPSession newSession)
 	{
 		Debug.Log("[KID::MANAGER] Updating Permissions to reflect session.");
@@ -830,24 +830,24 @@ public class KIDManager : MonoBehaviour
 		return true;
 	}
 
-	// Token: 0x0600312F RID: 12591 RVA: 0x000F15FF File Offset: 0x000EF7FF
+	// Token: 0x06003130 RID: 12592 RVA: 0x000F16A3 File Offset: 0x000EF8A3
 	private static void ClearSession()
 	{
 		KIDManager.CurrentSession = null;
 		KIDManager.DeleteStoredPermissions();
 	}
 
-	// Token: 0x06003130 RID: 12592 RVA: 0x000023F4 File Offset: 0x000005F4
+	// Token: 0x06003131 RID: 12593 RVA: 0x000023F4 File Offset: 0x000005F4
 	private static void SaveStoredPermissions()
 	{
 	}
 
-	// Token: 0x06003131 RID: 12593 RVA: 0x000023F4 File Offset: 0x000005F4
+	// Token: 0x06003132 RID: 12594 RVA: 0x000023F4 File Offset: 0x000005F4
 	private static void DeleteStoredPermissions()
 	{
 	}
 
-	// Token: 0x06003132 RID: 12594 RVA: 0x000F160C File Offset: 0x000EF80C
+	// Token: 0x06003133 RID: 12595 RVA: 0x000F16B0 File Offset: 0x000EF8B0
 	public static CancellationTokenSource ResetCancellationToken()
 	{
 		KIDManager._requestCancellationSource.Dispose();
@@ -855,7 +855,7 @@ public class KIDManager : MonoBehaviour
 		return KIDManager._requestCancellationSource;
 	}
 
-	// Token: 0x06003133 RID: 12595 RVA: 0x000F1628 File Offset: 0x000EF828
+	// Token: 0x06003134 RID: 12596 RVA: 0x000F16CC File Offset: 0x000EF8CC
 	public static Permission GetPermissionDataByFeature(EKIDFeatures feature)
 	{
 		if (KIDManager.CurrentSession == null)
@@ -878,13 +878,13 @@ public class KIDManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06003134 RID: 12596 RVA: 0x000F100B File Offset: 0x000EF20B
+	// Token: 0x06003135 RID: 12597 RVA: 0x000F10AF File Offset: 0x000EF2AF
 	public static void CancelToken()
 	{
 		KIDManager._requestCancellationSource.Cancel();
 	}
 
-	// Token: 0x06003135 RID: 12597 RVA: 0x000F16A4 File Offset: 0x000EF8A4
+	// Token: 0x06003136 RID: 12598 RVA: 0x000F1748 File Offset: 0x000EF948
 	public static async Task<bool> UseKID()
 	{
 		Debug.Log("[KID::MANAGER] K-ID CURRENTLY DISABLED");
@@ -906,7 +906,7 @@ public class KIDManager : MonoBehaviour
 		return isEnabled;
 	}
 
-	// Token: 0x06003136 RID: 12598 RVA: 0x000F16E0 File Offset: 0x000EF8E0
+	// Token: 0x06003137 RID: 12599 RVA: 0x000F1784 File Offset: 0x000EF984
 	public static async Task<int> CheckKIDPhase()
 	{
 		int num;
@@ -937,7 +937,7 @@ public class KIDManager : MonoBehaviour
 		return num;
 	}
 
-	// Token: 0x06003137 RID: 12599 RVA: 0x000F171C File Offset: 0x000EF91C
+	// Token: 0x06003138 RID: 12600 RVA: 0x000F17C0 File Offset: 0x000EF9C0
 	public static async Task<DateTime?> CheckKIDNewPlayerDateTime()
 	{
 		DateTime? dateTime;
@@ -968,7 +968,7 @@ public class KIDManager : MonoBehaviour
 		return dateTime;
 	}
 
-	// Token: 0x06003138 RID: 12600 RVA: 0x000F1758 File Offset: 0x000EF958
+	// Token: 0x06003139 RID: 12601 RVA: 0x000F17FC File Offset: 0x000EF9FC
 	private static bool GetIsEnabled(string jsonTxt)
 	{
 		KIDTitleData kidtitleData = JsonConvert.DeserializeObject<KIDTitleData>(jsonTxt);
@@ -986,7 +986,7 @@ public class KIDManager : MonoBehaviour
 		return flag;
 	}
 
-	// Token: 0x06003139 RID: 12601 RVA: 0x000F17A0 File Offset: 0x000EF9A0
+	// Token: 0x0600313A RID: 12602 RVA: 0x000F1844 File Offset: 0x000EFA44
 	private static int GetPhase(string jsonTxt)
 	{
 		KIDTitleData kidtitleData = JsonConvert.DeserializeObject<KIDTitleData>(jsonTxt);
@@ -998,7 +998,7 @@ public class KIDManager : MonoBehaviour
 		return kidtitleData.KIDPhase;
 	}
 
-	// Token: 0x0600313A RID: 12602 RVA: 0x000F17D0 File Offset: 0x000EF9D0
+	// Token: 0x0600313B RID: 12603 RVA: 0x000F1874 File Offset: 0x000EFA74
 	private static DateTime? GetNewPlayerDateTime(string jsonTxt)
 	{
 		KIDTitleData kidtitleData = JsonConvert.DeserializeObject<KIDTitleData>(jsonTxt);
@@ -1016,13 +1016,13 @@ public class KIDManager : MonoBehaviour
 		return new DateTime?(dateTime);
 	}
 
-	// Token: 0x0600313B RID: 12603 RVA: 0x000F1834 File Offset: 0x000EFA34
+	// Token: 0x0600313C RID: 12604 RVA: 0x000F18D8 File Offset: 0x000EFAD8
 	public static bool IsAdult()
 	{
 		return KIDManager.CurrentSession.IsValidSession && KIDManager.CurrentSession.AgeStatus == AgeStatusType.LEGALADULT;
 	}
 
-	// Token: 0x0600313C RID: 12604 RVA: 0x000F1854 File Offset: 0x000EFA54
+	// Token: 0x0600313D RID: 12605 RVA: 0x000F18F8 File Offset: 0x000EFAF8
 	public static bool HasAllPermissions()
 	{
 		List<Permission> allPermissions = KIDManager.CurrentSession.GetAllPermissions();
@@ -1036,13 +1036,13 @@ public class KIDManager : MonoBehaviour
 		return true;
 	}
 
-	// Token: 0x0600313D RID: 12605 RVA: 0x000F18A0 File Offset: 0x000EFAA0
+	// Token: 0x0600313E RID: 12606 RVA: 0x000F1944 File Offset: 0x000EFB44
 	public static async Task<bool> SetKIDOptIn()
 	{
 		return await KIDManager.Server_OptIn();
 	}
 
-	// Token: 0x0600313E RID: 12606 RVA: 0x000F18DC File Offset: 0x000EFADC
+	// Token: 0x0600313F RID: 12607 RVA: 0x000F1980 File Offset: 0x000EFB80
 	[return: TupleElementNames(new string[] { "success", "message" })]
 	public static async Task<ValueTuple<bool, string>> SetAndSendEmail(string email, Action onFailure)
 	{
@@ -1050,7 +1050,7 @@ public class KIDManager : MonoBehaviour
 		return await KIDManager.TrySendChallengeEmailRequest(onFailure);
 	}
 
-	// Token: 0x0600313F RID: 12607 RVA: 0x000F1928 File Offset: 0x000EFB28
+	// Token: 0x06003140 RID: 12608 RVA: 0x000F19CC File Offset: 0x000EFBCC
 	public static bool HasPermissionToUseFeature(EKIDFeatures feature)
 	{
 		if (!KIDManager.KidEnabledAndReady)
@@ -1061,7 +1061,7 @@ public class KIDManager : MonoBehaviour
 		return (permissionDataByFeature.Enabled || permissionDataByFeature.ManagedBy == Permission.ManagedByEnum.PLAYER) && permissionDataByFeature.ManagedBy != Permission.ManagedByEnum.PROHIBITED;
 	}
 
-	// Token: 0x06003140 RID: 12608 RVA: 0x000F1974 File Offset: 0x000EFB74
+	// Token: 0x06003141 RID: 12609 RVA: 0x000F1A18 File Offset: 0x000EFC18
 	private static async Task<bool> WaitForAuthentication()
 	{
 		Debug.Log("[KID] Starting Age-Gate process.");
@@ -1105,7 +1105,7 @@ public class KIDManager : MonoBehaviour
 		return true;
 	}
 
-	// Token: 0x06003141 RID: 12609 RVA: 0x000F19B0 File Offset: 0x000EFBB0
+	// Token: 0x06003142 RID: 12610 RVA: 0x000F1A54 File Offset: 0x000EFC54
 	[return: TupleElementNames(new string[] { "ageStatus", "resp" })]
 	private static async Task<ValueTuple<AgeStatusType, TMPSession>> AgeGateFlow(GetPlayerData_Data newPlayerData)
 	{
@@ -1137,7 +1137,7 @@ public class KIDManager : MonoBehaviour
 		return new ValueTuple<AgeStatusType, TMPSession>(ageStatusType.Value, tmpsession);
 	}
 
-	// Token: 0x06003142 RID: 12610 RVA: 0x000F19F4 File Offset: 0x000EFBF4
+	// Token: 0x06003143 RID: 12611 RVA: 0x000F1A98 File Offset: 0x000EFC98
 	private static async Task<VerifyAgeData> ProcessAgeGate()
 	{
 		Debug.Log("[KID::MANAGER] PHASE THREE (B) -- IN PROGRESS - Beginning Age-Gate");
@@ -1190,20 +1190,20 @@ public class KIDManager : MonoBehaviour
 		return verifyAgeData;
 	}
 
-	// Token: 0x06003143 RID: 12611 RVA: 0x000F1A2F File Offset: 0x000EFC2F
+	// Token: 0x06003144 RID: 12612 RVA: 0x000F1AD3 File Offset: 0x000EFCD3
 	public static string GetOptInKey(EKIDFeatures feature)
 	{
 		return feature.ToStandardisedString() + "-opt-in-" + PlayFabAuthenticator.instance.GetPlayFabPlayerId();
 	}
 
-	// Token: 0x06003144 RID: 12612 RVA: 0x000F1A4D File Offset: 0x000EFC4D
+	// Token: 0x06003145 RID: 12613 RVA: 0x000F1AF1 File Offset: 0x000EFCF1
 	private static bool CanSendEmail()
 	{
 		Debug.LogError("[KID::MANAGER] TEMP: For now will do cooldown checks on the client. But eventually should move to server");
 		return true;
 	}
 
-	// Token: 0x06003145 RID: 12613 RVA: 0x000F1A5C File Offset: 0x000EFC5C
+	// Token: 0x06003146 RID: 12614 RVA: 0x000F1B00 File Offset: 0x000EFD00
 	private static async Task<GetPlayerData_Data> Server_GetPlayerData(bool forceRefresh, Action failureCallback)
 	{
 		string text = string.Format("sessionRefresh={0}", forceRefresh ? "true" : "false");
@@ -1240,7 +1240,7 @@ public class KIDManager : MonoBehaviour
 		return getPlayerData_Data;
 	}
 
-	// Token: 0x06003146 RID: 12614 RVA: 0x000F1AA8 File Offset: 0x000EFCA8
+	// Token: 0x06003147 RID: 12615 RVA: 0x000F1B4C File Offset: 0x000EFD4C
 	private static async Task<UpgradeSessionData> Server_UpgradeSession(global::UpgradeSessionRequest request)
 	{
 		ValueTuple<long, global::UpgradeSessionResponse> valueTuple = await KIDManager.KIDServerWebRequest<global::UpgradeSessionResponse, global::UpgradeSessionRequest>("UpgradeSession", "POST", request, null, null);
@@ -1253,7 +1253,7 @@ public class KIDManager : MonoBehaviour
 		return new UpgradeSessionData(item2);
 	}
 
-	// Token: 0x06003147 RID: 12615 RVA: 0x000F1AEC File Offset: 0x000EFCEC
+	// Token: 0x06003148 RID: 12616 RVA: 0x000F1B90 File Offset: 0x000EFD90
 	private static async Task<VerifyAgeData> Server_VerifyAge(VerifyAgeRequest request, Action failureCallback)
 	{
 		ValueTuple<long, VerifyAgeResponse> valueTuple = await KIDManager.KIDServerWebRequest<VerifyAgeResponse, VerifyAgeRequest>("VerifyAge", "POST", request, null, null);
@@ -1269,7 +1269,7 @@ public class KIDManager : MonoBehaviour
 		return verifyAgeData;
 	}
 
-	// Token: 0x06003148 RID: 12616 RVA: 0x000F1B38 File Offset: 0x000EFD38
+	// Token: 0x06003149 RID: 12617 RVA: 0x000F1BDC File Offset: 0x000EFDDC
 	private static async Task<AttemptAgeUpdateData> Server_AttemptAgeUpdate(AttemptAgeUpdateRequest request, Action failureCallback)
 	{
 		ValueTuple<long, AttemptAgeUpdateResponse> valueTuple = await KIDManager.KIDServerWebRequest<AttemptAgeUpdateResponse, AttemptAgeUpdateRequest>("AttemptAgeUpdate", "POST", request, null, null);
@@ -1282,7 +1282,7 @@ public class KIDManager : MonoBehaviour
 		return new AttemptAgeUpdateData(item2.Status);
 	}
 
-	// Token: 0x06003149 RID: 12617 RVA: 0x000F1B7C File Offset: 0x000EFD7C
+	// Token: 0x0600314A RID: 12618 RVA: 0x000F1C20 File Offset: 0x000EFE20
 	private static async Task<bool> Server_AppealAge(AppealAgeRequest request, Action failureCallback)
 	{
 		bool success = false;
@@ -1298,7 +1298,7 @@ public class KIDManager : MonoBehaviour
 		return success;
 	}
 
-	// Token: 0x0600314A RID: 12618 RVA: 0x000F1BC0 File Offset: 0x000EFDC0
+	// Token: 0x0600314B RID: 12619 RVA: 0x000F1C64 File Offset: 0x000EFE64
 	private static async Task<bool> Server_SendChallengeEmail(SendChallengeEmailRequest request, Action failureCallback)
 	{
 		bool success = false;
@@ -1330,7 +1330,7 @@ public class KIDManager : MonoBehaviour
 		return success;
 	}
 
-	// Token: 0x0600314B RID: 12619 RVA: 0x000F1C0C File Offset: 0x000EFE0C
+	// Token: 0x0600314C RID: 12620 RVA: 0x000F1CB0 File Offset: 0x000EFEB0
 	private static async Task<bool> Server_OptIn()
 	{
 		long num = await KIDManager.KIDServerWebRequestNoResponse<KIDRequestData>("OptIn", "POST", null, null);
@@ -1347,7 +1347,7 @@ public class KIDManager : MonoBehaviour
 		return flag;
 	}
 
-	// Token: 0x0600314C RID: 12620 RVA: 0x000F1C48 File Offset: 0x000EFE48
+	// Token: 0x0600314D RID: 12621 RVA: 0x000F1CEC File Offset: 0x000EFEEC
 	private static async Task<GetRequirementsData> Server_GetRequirements()
 	{
 		ValueTuple<long, GetAgeGateRequirementsResponse> valueTuple = await KIDManager.KIDServerWebRequest<GetAgeGateRequirementsResponse, KIDRequestData>("GetRequirements", "GET", null, null, null);
@@ -1370,7 +1370,7 @@ public class KIDManager : MonoBehaviour
 		return getRequirementsData2;
 	}
 
-	// Token: 0x0600314D RID: 12621 RVA: 0x000F1C84 File Offset: 0x000EFE84
+	// Token: 0x0600314E RID: 12622 RVA: 0x000F1D28 File Offset: 0x000EFF28
 	[return: TupleElementNames(new string[] { "code", "responseModel" })]
 	private static async Task<ValueTuple<long, T>> KIDServerWebRequest<T, Q>(string endpoint, string operationType, Q requestData, string queryParams = null, Func<long, bool> responseCodeIsRetryable = null) where T : class where Q : KIDRequestData
 	{
@@ -1401,6 +1401,10 @@ public class KIDManager : MonoBehaviour
 				request.SetRequestHeader("X-Mothership-Token", MothershipClientContext.Token);
 				request.SetRequestHeader("X-Mothership-Player-Id", MothershipClientContext.MothershipId);
 				request.SetRequestHeader("X-Mothership-Env-Id", MothershipClientApiUnity.EnvironmentId);
+				if (!PlayFabAuthenticatorSettings.KidApiBaseUrl.Contains("gtag-cf.com"))
+				{
+					request.SetRequestHeader("CF-IPCountry", RegionInfo.CurrentRegion.TwoLetterISORegionName);
+				}
 				UnityWebRequest unityWebRequest = await request.SendWebRequest();
 				if (unityWebRequest.result == UnityWebRequest.Result.Success)
 				{
@@ -1437,18 +1441,18 @@ public class KIDManager : MonoBehaviour
 						{
 							if (responseCode >= 600L)
 							{
-								goto IL_02FF;
+								goto IL_032A;
 							}
 						}
 						else if (responseCode != 408L && responseCode != 429L)
 						{
-							goto IL_02FF;
+							goto IL_032A;
 						}
 						bool flag3 = true;
-						goto IL_0302;
-						IL_02FF:
+						goto IL_032D;
+						IL_032A:
 						flag3 = false;
-						IL_0302:
+						IL_032D:
 						flag2 = flag3;
 					}
 					flag = flag2;
@@ -1485,7 +1489,7 @@ public class KIDManager : MonoBehaviour
 		return valueTuple;
 	}
 
-	// Token: 0x0600314E RID: 12622 RVA: 0x000F1CE8 File Offset: 0x000EFEE8
+	// Token: 0x0600314F RID: 12623 RVA: 0x000F1D8C File Offset: 0x000EFF8C
 	private static async Task<long> KIDServerWebRequestNoResponse<Q>(string endpoint, string operationType, Q requestData, Func<long, bool> responseCodeIsRetryable = null) where Q : KIDRequestData
 	{
 		TaskAwaiter<ValueTuple<long, object>> taskAwaiter = KIDManager.KIDServerWebRequest<object, Q>(endpoint, operationType, requestData, null, responseCodeIsRetryable).GetAwaiter();
@@ -1499,84 +1503,84 @@ public class KIDManager : MonoBehaviour
 		return taskAwaiter.GetResult().Item1;
 	}
 
-	// Token: 0x0600314F RID: 12623 RVA: 0x000F1D43 File Offset: 0x000EFF43
+	// Token: 0x06003150 RID: 12624 RVA: 0x000F1DE7 File Offset: 0x000EFFE7
 	public static void RegisterSessionUpdateCallback_AnyPermission(Action callback)
 	{
 		Debug.Log("[KID] Successfully registered a new callback to SessionUpdate which monitors any permission change");
 		KIDManager._onSessionUpdated_AnyPermission = (Action)Delegate.Combine(KIDManager._onSessionUpdated_AnyPermission, callback);
 	}
 
-	// Token: 0x06003150 RID: 12624 RVA: 0x000F1D64 File Offset: 0x000EFF64
+	// Token: 0x06003151 RID: 12625 RVA: 0x000F1E08 File Offset: 0x000F0008
 	public static void UnregisterSessionUpdateCallback_AnyPermission(Action callback)
 	{
 		Debug.Log("[KID] Successfully unregistered a new callback to SessionUpdate which monitors any permission change");
 		KIDManager._onSessionUpdated_AnyPermission = (Action)Delegate.Remove(KIDManager._onSessionUpdated_AnyPermission, callback);
 	}
 
-	// Token: 0x06003151 RID: 12625 RVA: 0x000F1D85 File Offset: 0x000EFF85
+	// Token: 0x06003152 RID: 12626 RVA: 0x000F1E29 File Offset: 0x000F0029
 	public static void RegisterSessionUpdatedCallback_VoiceChat(Action<bool, Permission.ManagedByEnum> callback)
 	{
 		Debug.Log("[KID] Successfully registered a new callback to SessionUpdate which monitors the Voice Chat permission");
 		KIDManager._onSessionUpdated_VoiceChat = (Action<bool, Permission.ManagedByEnum>)Delegate.Combine(KIDManager._onSessionUpdated_VoiceChat, callback);
 	}
 
-	// Token: 0x06003152 RID: 12626 RVA: 0x000F1DA6 File Offset: 0x000EFFA6
+	// Token: 0x06003153 RID: 12627 RVA: 0x000F1E4A File Offset: 0x000F004A
 	public static void UnregisterSessionUpdatedCallback_VoiceChat(Action<bool, Permission.ManagedByEnum> callback)
 	{
 		Debug.Log("[KID] Successfully unregistered a callback to SessionUpdate which monitors the Voice Chat permission");
 		KIDManager._onSessionUpdated_VoiceChat = (Action<bool, Permission.ManagedByEnum>)Delegate.Remove(KIDManager._onSessionUpdated_VoiceChat, callback);
 	}
 
-	// Token: 0x06003153 RID: 12627 RVA: 0x000F1DC7 File Offset: 0x000EFFC7
+	// Token: 0x06003154 RID: 12628 RVA: 0x000F1E6B File Offset: 0x000F006B
 	public static void RegisterSessionUpdatedCallback_CustomUsernames(Action<bool, Permission.ManagedByEnum> callback)
 	{
 		Debug.Log("[KID] Successfully registered a new callback to SessionUpdate which monitors the Custom Usernames permission");
 		KIDManager._onSessionUpdated_CustomUsernames = (Action<bool, Permission.ManagedByEnum>)Delegate.Combine(KIDManager._onSessionUpdated_CustomUsernames, callback);
 	}
 
-	// Token: 0x06003154 RID: 12628 RVA: 0x000F1DE8 File Offset: 0x000EFFE8
+	// Token: 0x06003155 RID: 12629 RVA: 0x000F1E8C File Offset: 0x000F008C
 	public static void UnregisterSessionUpdatedCallback_CustomUsernames(Action<bool, Permission.ManagedByEnum> callback)
 	{
 		Debug.Log("[KID] Successfully unregistered a callback to SessionUpdate which monitors the Custom Usernames permission");
 		KIDManager._onSessionUpdated_CustomUsernames = (Action<bool, Permission.ManagedByEnum>)Delegate.Remove(KIDManager._onSessionUpdated_CustomUsernames, callback);
 	}
 
-	// Token: 0x06003155 RID: 12629 RVA: 0x000F1E09 File Offset: 0x000F0009
+	// Token: 0x06003156 RID: 12630 RVA: 0x000F1EAD File Offset: 0x000F00AD
 	public static void RegisterSessionUpdatedCallback_PrivateRooms(Action<bool, Permission.ManagedByEnum> callback)
 	{
 		Debug.Log("[KID] Successfully registered a new callback to SessionUpdate which monitors the Private Rooms permission");
 		KIDManager._onSessionUpdated_PrivateRooms = (Action<bool, Permission.ManagedByEnum>)Delegate.Combine(KIDManager._onSessionUpdated_PrivateRooms, callback);
 	}
 
-	// Token: 0x06003156 RID: 12630 RVA: 0x000F1E2A File Offset: 0x000F002A
+	// Token: 0x06003157 RID: 12631 RVA: 0x000F1ECE File Offset: 0x000F00CE
 	public static void UnregisterSessionUpdatedCallback_PrivateRooms(Action<bool, Permission.ManagedByEnum> callback)
 	{
 		Debug.Log("[KID] Successfully unregistered a callback to SessionUpdate which monitors the Private Rooms permission");
 		KIDManager._onSessionUpdated_PrivateRooms = (Action<bool, Permission.ManagedByEnum>)Delegate.Remove(KIDManager._onSessionUpdated_PrivateRooms, callback);
 	}
 
-	// Token: 0x06003157 RID: 12631 RVA: 0x000F1E4B File Offset: 0x000F004B
+	// Token: 0x06003158 RID: 12632 RVA: 0x000F1EEF File Offset: 0x000F00EF
 	public static void RegisterSessionUpdatedCallback_Multiplayer(Action<bool, Permission.ManagedByEnum> callback)
 	{
 		Debug.Log("[KID] Successfully registered a new callback to SessionUpdate which monitors the Multiplayer permission");
 		KIDManager._onSessionUpdated_Multiplayer = (Action<bool, Permission.ManagedByEnum>)Delegate.Combine(KIDManager._onSessionUpdated_Multiplayer, callback);
 	}
 
-	// Token: 0x06003158 RID: 12632 RVA: 0x000F1E6C File Offset: 0x000F006C
+	// Token: 0x06003159 RID: 12633 RVA: 0x000F1F10 File Offset: 0x000F0110
 	public static void UnregisterSessionUpdatedCallback_Multiplayer(Action<bool, Permission.ManagedByEnum> callback)
 	{
 		Debug.Log("[KID] Successfully unregistered a callback to SessionUpdate which monitors the Multiplayer permission");
 		KIDManager._onSessionUpdated_Multiplayer = (Action<bool, Permission.ManagedByEnum>)Delegate.Remove(KIDManager._onSessionUpdated_Multiplayer, callback);
 	}
 
-	// Token: 0x06003159 RID: 12633 RVA: 0x000F1E8D File Offset: 0x000F008D
+	// Token: 0x0600315A RID: 12634 RVA: 0x000F1F31 File Offset: 0x000F0131
 	public static void RegisterSessionUpdatedCallback_UGC(Action<bool, Permission.ManagedByEnum> callback)
 	{
 		Debug.Log("[KID] Successfully registered a new callback to SessionUpdate which monitors the UGC permission");
 		KIDManager._onSessionUpdated_UGC = (Action<bool, Permission.ManagedByEnum>)Delegate.Combine(KIDManager._onSessionUpdated_UGC, callback);
 	}
 
-	// Token: 0x0600315A RID: 12634 RVA: 0x000F1EB0 File Offset: 0x000F00B0
+	// Token: 0x0600315B RID: 12635 RVA: 0x000F1F54 File Offset: 0x000F0154
 	private static async Task<bool> WaitForAndUpdateNewSession(bool forceRefresh)
 	{
 		bool flag;
@@ -1638,7 +1642,7 @@ public class KIDManager : MonoBehaviour
 		return flag;
 	}
 
-	// Token: 0x0600315B RID: 12635 RVA: 0x000F1EF4 File Offset: 0x000F00F4
+	// Token: 0x0600315C RID: 12636 RVA: 0x000F1F98 File Offset: 0x000F0198
 	private static bool HasSessionChanged(TMPSession newSession)
 	{
 		if (newSession == null)
@@ -1661,7 +1665,7 @@ public class KIDManager : MonoBehaviour
 		return KIDManager.CurrentSession.IsDefault || !newSession.Etag.Equals(KIDManager.CurrentSession.Etag);
 	}
 
-	// Token: 0x0600315C RID: 12636 RVA: 0x000F1F68 File Offset: 0x000F0168
+	// Token: 0x0600315D RID: 12637 RVA: 0x000F200C File Offset: 0x000F020C
 	private static void OnSessionUpdated()
 	{
 		Action onSessionUpdated_AnyPermission = KIDManager._onSessionUpdated_AnyPermission;
@@ -1759,7 +1763,7 @@ public class KIDManager : MonoBehaviour
 		GorillaTelemetry.PostKidEvent(flag2, flag, flag3, KIDManager.CurrentSession.AgeStatus, GTKidEventType.permission_update);
 	}
 
-	// Token: 0x0600315D RID: 12637 RVA: 0x000F219C File Offset: 0x000F039C
+	// Token: 0x0600315E RID: 12638 RVA: 0x000F2240 File Offset: 0x000F0440
 	private static bool HasPermissionChanged(Permission newValue)
 	{
 		Permission permission;
@@ -1771,158 +1775,158 @@ public class KIDManager : MonoBehaviour
 		return true;
 	}
 
-	// Token: 0x0400376F RID: 14191
+	// Token: 0x04003770 RID: 14192
 	public const string MULTIPLAYER_PERMISSION_NAME = "multiplayer";
 
-	// Token: 0x04003770 RID: 14192
+	// Token: 0x04003771 RID: 14193
 	public const string UGC_PERMISSION_NAME = "mods";
 
-	// Token: 0x04003771 RID: 14193
+	// Token: 0x04003772 RID: 14194
 	public const string PRIVATE_ROOM_PERMISSION_NAME = "join-groups";
 
-	// Token: 0x04003772 RID: 14194
+	// Token: 0x04003773 RID: 14195
 	public const string VOICE_CHAT_PERMISSION_NAME = "voice-chat";
 
-	// Token: 0x04003773 RID: 14195
+	// Token: 0x04003774 RID: 14196
 	public const string CUSTOM_USERNAME_PERMISSION_NAME = "custom-username";
 
-	// Token: 0x04003774 RID: 14196
+	// Token: 0x04003775 RID: 14197
 	public const string PREVIOUS_STATUS_PREF_KEY_PREFIX = "previous-status-";
 
-	// Token: 0x04003775 RID: 14197
+	// Token: 0x04003776 RID: 14198
 	public const string KID_DATA_KEY = "KIDData";
 
-	// Token: 0x04003776 RID: 14198
+	// Token: 0x04003777 RID: 14199
 	private const string KID_EMAIL_KEY = "k-id_EmailAddress";
 
-	// Token: 0x04003777 RID: 14199
+	// Token: 0x04003778 RID: 14200
 	private const int SECONDS_BETWEEN_UPDATE_ATTEMPTS = 30;
 
-	// Token: 0x04003778 RID: 14200
+	// Token: 0x04003779 RID: 14201
 	private const string KID_SETUP_FLAG = "KID-Setup-";
 
-	// Token: 0x04003779 RID: 14201
+	// Token: 0x0400377A RID: 14202
 	[OnEnterPlay_SetNull]
 	private static KIDManager _instance;
 
-	// Token: 0x0400377E RID: 14206
+	// Token: 0x0400377F RID: 14207
 	private static string _emailAddress;
 
-	// Token: 0x0400377F RID: 14207
+	// Token: 0x04003780 RID: 14208
 	private static CancellationTokenSource _requestCancellationSource = new CancellationTokenSource();
 
-	// Token: 0x04003780 RID: 14208
+	// Token: 0x04003781 RID: 14209
 	private static bool _titleDataReady = false;
 
-	// Token: 0x04003781 RID: 14209
+	// Token: 0x04003782 RID: 14210
 	private static bool _useKid = false;
 
-	// Token: 0x04003782 RID: 14210
+	// Token: 0x04003783 RID: 14211
 	private static int _kIDPhase = 0;
 
-	// Token: 0x04003783 RID: 14211
+	// Token: 0x04003784 RID: 14212
 	private static DateTime? _kIDNewPlayerDateTime = null;
 
-	// Token: 0x04003787 RID: 14215
+	// Token: 0x04003788 RID: 14216
 	private static string _debugKIDLocalePlayerPrefRef = "KID_SPOOF_LOCALE";
 
-	// Token: 0x04003788 RID: 14216
-	private static string parentEmailForUserPlayerPrefRef;
-
 	// Token: 0x04003789 RID: 14217
-	[OnEnterPlay_SetNull]
-	private static Action _sessionUpdatedCallback = null;
+	private static string parentEmailForUserPlayerPrefRef;
 
 	// Token: 0x0400378A RID: 14218
 	[OnEnterPlay_SetNull]
-	private static Action _onKIDInitialisationComplete = null;
+	private static Action _sessionUpdatedCallback = null;
 
 	// Token: 0x0400378B RID: 14219
-	public static KIDManager.OnEmailResultReceived onEmailResultReceived;
+	[OnEnterPlay_SetNull]
+	private static Action _onKIDInitialisationComplete = null;
 
 	// Token: 0x0400378C RID: 14220
-	private const string KID_GET_SESSION = "GetPlayerData";
+	public static KIDManager.OnEmailResultReceived onEmailResultReceived;
 
 	// Token: 0x0400378D RID: 14221
-	private const string KID_VERIFY_AGE = "VerifyAge";
+	private const string KID_GET_SESSION = "GetPlayerData";
 
 	// Token: 0x0400378E RID: 14222
-	private const string KID_UPGRADE_SESSION = "UpgradeSession";
+	private const string KID_VERIFY_AGE = "VerifyAge";
 
 	// Token: 0x0400378F RID: 14223
-	private const string KID_SEND_CHALLENGE_EMAIL = "SendChallengeEmail";
+	private const string KID_UPGRADE_SESSION = "UpgradeSession";
 
 	// Token: 0x04003790 RID: 14224
-	private const string KID_ATTEMPT_AGE_UPDATE = "AttemptAgeUpdate";
+	private const string KID_SEND_CHALLENGE_EMAIL = "SendChallengeEmail";
 
 	// Token: 0x04003791 RID: 14225
-	private const string KID_APPEAL_AGE = "AppealAge";
+	private const string KID_ATTEMPT_AGE_UPDATE = "AttemptAgeUpdate";
 
 	// Token: 0x04003792 RID: 14226
-	private const string KID_OPT_IN = "OptIn";
+	private const string KID_APPEAL_AGE = "AppealAge";
 
 	// Token: 0x04003793 RID: 14227
-	private const string KID_GET_REQUIREMENTS = "GetRequirements";
+	private const string KID_OPT_IN = "OptIn";
 
 	// Token: 0x04003794 RID: 14228
-	private const string KID_FORCE_REFRESH = "sessionRefresh";
+	private const string KID_GET_REQUIREMENTS = "GetRequirements";
 
 	// Token: 0x04003795 RID: 14229
-	private const int KID_SERVER_RETRIES = 3;
+	private const string KID_FORCE_REFRESH = "sessionRefresh";
 
 	// Token: 0x04003796 RID: 14230
-	public const string KID_PERMISSION__VOICE_CHAT = "voice-chat";
+	private const int KID_SERVER_RETRIES = 3;
 
 	// Token: 0x04003797 RID: 14231
-	public const string KID_PERMISSION__CUSTOM_NAMES = "custom-username";
+	public const string KID_PERMISSION__VOICE_CHAT = "voice-chat";
 
 	// Token: 0x04003798 RID: 14232
-	public const string KID_PERMISSION__PRIVATE_ROOMS = "join-groups";
+	public const string KID_PERMISSION__CUSTOM_NAMES = "custom-username";
 
 	// Token: 0x04003799 RID: 14233
-	public const string KID_PERMISSION__MULTIPLAYER = "multiplayer";
+	public const string KID_PERMISSION__PRIVATE_ROOMS = "join-groups";
 
 	// Token: 0x0400379A RID: 14234
-	public const string KID_PERMISSION__UGC = "mods";
+	public const string KID_PERMISSION__MULTIPLAYER = "multiplayer";
 
 	// Token: 0x0400379B RID: 14235
-	private const float MAX_SESSION_UPDATE_TIME = 600f;
+	public const string KID_PERMISSION__UGC = "mods";
 
 	// Token: 0x0400379C RID: 14236
-	private const int TIME_BETWEEN_SESSION_UPDATE_ATTEMPTS = 30;
+	private const float MAX_SESSION_UPDATE_TIME = 600f;
 
 	// Token: 0x0400379D RID: 14237
-	[OnEnterPlay_SetNull]
-	private static Action _onSessionUpdated_AnyPermission;
+	private const int TIME_BETWEEN_SESSION_UPDATE_ATTEMPTS = 30;
 
 	// Token: 0x0400379E RID: 14238
 	[OnEnterPlay_SetNull]
-	private static Action<bool, Permission.ManagedByEnum> _onSessionUpdated_VoiceChat;
+	private static Action _onSessionUpdated_AnyPermission;
 
 	// Token: 0x0400379F RID: 14239
 	[OnEnterPlay_SetNull]
-	private static Action<bool, Permission.ManagedByEnum> _onSessionUpdated_CustomUsernames;
+	private static Action<bool, Permission.ManagedByEnum> _onSessionUpdated_VoiceChat;
 
 	// Token: 0x040037A0 RID: 14240
 	[OnEnterPlay_SetNull]
-	private static Action<bool, Permission.ManagedByEnum> _onSessionUpdated_PrivateRooms;
+	private static Action<bool, Permission.ManagedByEnum> _onSessionUpdated_CustomUsernames;
 
 	// Token: 0x040037A1 RID: 14241
 	[OnEnterPlay_SetNull]
-	private static Action<bool, Permission.ManagedByEnum> _onSessionUpdated_Multiplayer;
+	private static Action<bool, Permission.ManagedByEnum> _onSessionUpdated_PrivateRooms;
 
 	// Token: 0x040037A2 RID: 14242
 	[OnEnterPlay_SetNull]
-	private static Action<bool, Permission.ManagedByEnum> _onSessionUpdated_UGC;
+	private static Action<bool, Permission.ManagedByEnum> _onSessionUpdated_Multiplayer;
 
 	// Token: 0x040037A3 RID: 14243
-	private static bool _isUpdatingNewSession = false;
+	[OnEnterPlay_SetNull]
+	private static Action<bool, Permission.ManagedByEnum> _onSessionUpdated_UGC;
 
 	// Token: 0x040037A4 RID: 14244
+	private static bool _isUpdatingNewSession = false;
+
+	// Token: 0x040037A5 RID: 14245
 	[OnEnterPlay_SetNull]
 	private static Dictionary<string, Permission> _previousPermissionSettings = new Dictionary<string, Permission>();
 
 	// Token: 0x020007C2 RID: 1986
-	// (Invoke) Token: 0x06003161 RID: 12641
+	// (Invoke) Token: 0x06003162 RID: 12642
 	public delegate void OnEmailResultReceived(bool result);
 }

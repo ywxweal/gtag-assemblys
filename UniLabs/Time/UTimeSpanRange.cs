@@ -10,8 +10,8 @@ namespace UniLabs.Time
 	public class UTimeSpanRange
 	{
 		// Token: 0x17000696 RID: 1686
-		// (get) Token: 0x060041EA RID: 16874 RVA: 0x00130D57 File Offset: 0x0012EF57
-		// (set) Token: 0x060041EB RID: 16875 RVA: 0x00130D64 File Offset: 0x0012EF64
+		// (get) Token: 0x060041EB RID: 16875 RVA: 0x00130E2F File Offset: 0x0012F02F
+		// (set) Token: 0x060041EC RID: 16876 RVA: 0x00130E3C File Offset: 0x0012F03C
 		public TimeSpan Start
 		{
 			get
@@ -25,8 +25,8 @@ namespace UniLabs.Time
 		}
 
 		// Token: 0x17000697 RID: 1687
-		// (get) Token: 0x060041EC RID: 16876 RVA: 0x00130D72 File Offset: 0x0012EF72
-		// (set) Token: 0x060041ED RID: 16877 RVA: 0x00130D7F File Offset: 0x0012EF7F
+		// (get) Token: 0x060041ED RID: 16877 RVA: 0x00130E4A File Offset: 0x0012F04A
+		// (set) Token: 0x060041EE RID: 16878 RVA: 0x00130E57 File Offset: 0x0012F057
 		public TimeSpan End
 		{
 			get
@@ -40,7 +40,7 @@ namespace UniLabs.Time
 		}
 
 		// Token: 0x17000698 RID: 1688
-		// (get) Token: 0x060041EE RID: 16878 RVA: 0x00130D8D File Offset: 0x0012EF8D
+		// (get) Token: 0x060041EF RID: 16879 RVA: 0x00130E65 File Offset: 0x0012F065
 		public TimeSpan Duration
 		{
 			get
@@ -49,33 +49,33 @@ namespace UniLabs.Time
 			}
 		}
 
-		// Token: 0x060041EF RID: 16879 RVA: 0x00130DA0 File Offset: 0x0012EFA0
+		// Token: 0x060041F0 RID: 16880 RVA: 0x00130E78 File Offset: 0x0012F078
 		public bool IsInRange(TimeSpan time)
 		{
 			return time >= this.Start && time <= this.End;
 		}
 
-		// Token: 0x060041F0 RID: 16880 RVA: 0x00002050 File Offset: 0x00000250
+		// Token: 0x060041F1 RID: 16881 RVA: 0x00002050 File Offset: 0x00000250
 		[JsonConstructor]
 		public UTimeSpanRange()
 		{
 		}
 
-		// Token: 0x060041F1 RID: 16881 RVA: 0x00130DBE File Offset: 0x0012EFBE
+		// Token: 0x060041F2 RID: 16882 RVA: 0x00130E96 File Offset: 0x0012F096
 		public UTimeSpanRange(TimeSpan start)
 		{
 			this._Start = start;
 			this._End = start;
 		}
 
-		// Token: 0x060041F2 RID: 16882 RVA: 0x00130DDE File Offset: 0x0012EFDE
+		// Token: 0x060041F3 RID: 16883 RVA: 0x00130EB6 File Offset: 0x0012F0B6
 		public UTimeSpanRange(TimeSpan start, TimeSpan end)
 		{
 			this._Start = start;
 			this._End = end;
 		}
 
-		// Token: 0x060041F3 RID: 16883 RVA: 0x00130DFE File Offset: 0x0012EFFE
+		// Token: 0x060041F4 RID: 16884 RVA: 0x00130ED6 File Offset: 0x0012F0D6
 		private void OnStartChanged()
 		{
 			if (this._Start.CompareTo(this._End) > 0)
@@ -84,7 +84,7 @@ namespace UniLabs.Time
 			}
 		}
 
-		// Token: 0x060041F4 RID: 16884 RVA: 0x00130E2A File Offset: 0x0012F02A
+		// Token: 0x060041F5 RID: 16885 RVA: 0x00130F02 File Offset: 0x0012F102
 		private void OnEndChanged()
 		{
 			if (this._End.CompareTo(this._Start) < 0)
@@ -93,12 +93,12 @@ namespace UniLabs.Time
 			}
 		}
 
-		// Token: 0x04004488 RID: 17544
+		// Token: 0x04004489 RID: 17545
 		[JsonProperty("Start")]
 		[SerializeField]
 		private UTimeSpan _Start;
 
-		// Token: 0x04004489 RID: 17545
+		// Token: 0x0400448A RID: 17546
 		[JsonProperty("End")]
 		[SerializeField]
 		private UTimeSpan _End;

@@ -4,7 +4,7 @@ using UnityEngine;
 // Token: 0x020003CF RID: 975
 public class PuppetFollow : MonoBehaviour
 {
-	// Token: 0x060016B9 RID: 5817 RVA: 0x0006D484 File Offset: 0x0006B684
+	// Token: 0x060016B9 RID: 5817 RVA: 0x0006D4A4 File Offset: 0x0006B6A4
 	private void FixedUpdate()
 	{
 		base.transform.position = this.sourceTarget.position - this.sourceBase.position + this.puppetBase.position;

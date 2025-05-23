@@ -8,7 +8,7 @@ using UnityEngine;
 public class MockFriendServer : MonoBehaviourPun
 {
 	// Token: 0x17000577 RID: 1399
-	// (get) Token: 0x0600370D RID: 14093 RVA: 0x0010A25A File Offset: 0x0010845A
+	// (get) Token: 0x0600370E RID: 14094 RVA: 0x0010A332 File Offset: 0x00108532
 	public int LocalPlayerId
 	{
 		get
@@ -17,7 +17,7 @@ public class MockFriendServer : MonoBehaviourPun
 		}
 	}
 
-	// Token: 0x0600370E RID: 14094 RVA: 0x0010A26B File Offset: 0x0010846B
+	// Token: 0x0600370F RID: 14095 RVA: 0x0010A343 File Offset: 0x00108543
 	private void Awake()
 	{
 		if (MockFriendServer.Instance == null)
@@ -30,13 +30,13 @@ public class MockFriendServer : MonoBehaviourPun
 		Object.Destroy(this);
 	}
 
-	// Token: 0x0600370F RID: 14095 RVA: 0x0010A2A9 File Offset: 0x001084A9
+	// Token: 0x06003710 RID: 14096 RVA: 0x0010A381 File Offset: 0x00108581
 	private void OnMultiplayerStarted()
 	{
 		this.RegisterLocalPlayer(this.LocalPlayerId);
 	}
 
-	// Token: 0x06003710 RID: 14096 RVA: 0x0010A2B8 File Offset: 0x001084B8
+	// Token: 0x06003711 RID: 14097 RVA: 0x0010A390 File Offset: 0x00108590
 	private void Update()
 	{
 		if (PhotonNetwork.InRoom && base.photonView.IsMine)
@@ -90,7 +90,7 @@ public class MockFriendServer : MonoBehaviourPun
 		}
 	}
 
-	// Token: 0x06003711 RID: 14097 RVA: 0x0010A564 File Offset: 0x00108764
+	// Token: 0x06003712 RID: 14098 RVA: 0x0010A63C File Offset: 0x0010883C
 	public void RegisterLocalPlayer(int localPlayerPublicId)
 	{
 		int hashCode = PlayFabAuthenticator.instance.GetPlayFabPlayerId().GetHashCode();
@@ -102,7 +102,7 @@ public class MockFriendServer : MonoBehaviourPun
 		base.photonView.RPC("RegisterLocalPlayerRPC", RpcTarget.MasterClient, new object[] { localPlayerPublicId, hashCode });
 	}
 
-	// Token: 0x06003712 RID: 14098 RVA: 0x0010A5C4 File Offset: 0x001087C4
+	// Token: 0x06003713 RID: 14099 RVA: 0x0010A69C File Offset: 0x0010889C
 	public void RequestAddFriend(int targetPlayerId)
 	{
 		if (base.photonView.IsMine)
@@ -113,7 +113,7 @@ public class MockFriendServer : MonoBehaviourPun
 		base.photonView.RPC("RequestAddFriendRPC", RpcTarget.MasterClient, new object[] { this.LocalPlayerId, targetPlayerId });
 	}
 
-	// Token: 0x06003713 RID: 14099 RVA: 0x0010A61C File Offset: 0x0010881C
+	// Token: 0x06003714 RID: 14100 RVA: 0x0010A6F4 File Offset: 0x001088F4
 	public void RequestRemoveFriend(int targetPlayerId)
 	{
 		if (base.photonView.IsMine)
@@ -124,7 +124,7 @@ public class MockFriendServer : MonoBehaviourPun
 		base.photonView.RPC("RequestRemoveFriendRPC", RpcTarget.MasterClient, new object[] { this.LocalPlayerId, targetPlayerId });
 	}
 
-	// Token: 0x06003714 RID: 14100 RVA: 0x0010A674 File Offset: 0x00108874
+	// Token: 0x06003715 RID: 14101 RVA: 0x0010A74C File Offset: 0x0010894C
 	public void GetFriendList(List<int> friendListResult)
 	{
 		int localPlayerId = this.LocalPlayerId;
@@ -142,7 +142,7 @@ public class MockFriendServer : MonoBehaviourPun
 		}
 	}
 
-	// Token: 0x06003715 RID: 14101 RVA: 0x0010A6FC File Offset: 0x001088FC
+	// Token: 0x06003716 RID: 14102 RVA: 0x0010A7D4 File Offset: 0x001089D4
 	private void RequestAddFriendInternal(int localPlayerPublicId, int otherPlayerPublicId)
 	{
 		if (base.photonView.IsMine)
@@ -171,14 +171,14 @@ public class MockFriendServer : MonoBehaviourPun
 		}
 	}
 
-	// Token: 0x06003716 RID: 14102 RVA: 0x0010A7B9 File Offset: 0x001089B9
+	// Token: 0x06003717 RID: 14103 RVA: 0x0010A891 File Offset: 0x00108A91
 	[PunRPC]
 	public void RequestAddFriendRPC(int localPlayerPublicId, int otherPlayerPublicId, PhotonMessageInfo info)
 	{
 		this.RequestAddFriendInternal(localPlayerPublicId, otherPlayerPublicId);
 	}
 
-	// Token: 0x06003717 RID: 14103 RVA: 0x0010A7C4 File Offset: 0x001089C4
+	// Token: 0x06003718 RID: 14104 RVA: 0x0010A89C File Offset: 0x00108A9C
 	private void RequestRemoveFriendInternal(int localPlayerPublicId, int otherPlayerPublicId)
 	{
 		int num;
@@ -189,14 +189,14 @@ public class MockFriendServer : MonoBehaviourPun
 		}
 	}
 
-	// Token: 0x06003718 RID: 14104 RVA: 0x0010A7FC File Offset: 0x001089FC
+	// Token: 0x06003719 RID: 14105 RVA: 0x0010A8D4 File Offset: 0x00108AD4
 	[PunRPC]
 	public void RequestRemoveFriendRPC(int localPlayerPublicId, int otherPlayerPublicId, PhotonMessageInfo info)
 	{
 		this.RequestRemoveFriendInternal(localPlayerPublicId, otherPlayerPublicId);
 	}
 
-	// Token: 0x06003719 RID: 14105 RVA: 0x0010A808 File Offset: 0x00108A08
+	// Token: 0x0600371A RID: 14106 RVA: 0x0010A8E0 File Offset: 0x00108AE0
 	private void RegisterLocalPlayerInternal(int publicId, int privateId)
 	{
 		if (base.photonView.IsMine)
@@ -225,21 +225,21 @@ public class MockFriendServer : MonoBehaviourPun
 		}
 	}
 
-	// Token: 0x0600371A RID: 14106 RVA: 0x0010A8BA File Offset: 0x00108ABA
+	// Token: 0x0600371B RID: 14107 RVA: 0x0010A992 File Offset: 0x00108B92
 	[PunRPC]
 	public void RegisterLocalPlayerRPC(int playerPublicId, int playerPrivateId, PhotonMessageInfo info)
 	{
 		this.RegisterLocalPlayerInternal(playerPublicId, playerPrivateId);
 	}
 
-	// Token: 0x0600371B RID: 14107 RVA: 0x0010A8C4 File Offset: 0x00108AC4
+	// Token: 0x0600371C RID: 14108 RVA: 0x0010A99C File Offset: 0x00108B9C
 	[PunRPC]
 	public void AddFriendPairRPC(int publicIdA, int publicIdB, int privateIdA, int privateIdB, PhotonMessageInfo info)
 	{
 		this.AddFriend(publicIdA, publicIdB, privateIdA, privateIdB);
 	}
 
-	// Token: 0x0600371C RID: 14108 RVA: 0x0010A8D4 File Offset: 0x00108AD4
+	// Token: 0x0600371D RID: 14109 RVA: 0x0010A9AC File Offset: 0x00108BAC
 	private void AddFriend(int publicIdA, int publicIdB, int privateIdA, int privateIdB)
 	{
 		for (int i = 0; i < this.friendPairList.Count; i++)
@@ -258,7 +258,7 @@ public class MockFriendServer : MonoBehaviourPun
 		});
 	}
 
-	// Token: 0x0600371D RID: 14109 RVA: 0x0010A980 File Offset: 0x00108B80
+	// Token: 0x0600371E RID: 14110 RVA: 0x0010AA58 File Offset: 0x00108C58
 	private void RemoveFriend(int privateIdA, int privateIdB)
 	{
 		this.indexesToRemove.Clear();
@@ -275,7 +275,7 @@ public class MockFriendServer : MonoBehaviourPun
 		}
 	}
 
-	// Token: 0x0600371E RID: 14110 RVA: 0x0010AA38 File Offset: 0x00108C38
+	// Token: 0x0600371F RID: 14111 RVA: 0x0010AB10 File Offset: 0x00108D10
 	private bool TryLookupPrivateId(int publicId, out int privateId)
 	{
 		for (int i = 0; i < this.privateIdLookup.Count; i++)
@@ -290,69 +290,69 @@ public class MockFriendServer : MonoBehaviourPun
 		return false;
 	}
 
-	// Token: 0x04003C96 RID: 15510
+	// Token: 0x04003C97 RID: 15511
 	[OnEnterPlay_SetNull]
 	public static volatile MockFriendServer Instance;
 
-	// Token: 0x04003C97 RID: 15511
+	// Token: 0x04003C98 RID: 15512
 	[SerializeField]
 	private Vector2 friendRequestCompletionDelayRange = new Vector2(0.5f, 1f);
 
-	// Token: 0x04003C98 RID: 15512
+	// Token: 0x04003C99 RID: 15513
 	[SerializeField]
 	private float friendRequestExpirationTime = 10f;
 
-	// Token: 0x04003C99 RID: 15513
+	// Token: 0x04003C9A RID: 15514
 	private List<MockFriendServer.FriendPair> friendPairList = new List<MockFriendServer.FriendPair>();
 
-	// Token: 0x04003C9A RID: 15514
+	// Token: 0x04003C9B RID: 15515
 	private List<MockFriendServer.PrivateIdEncryptionPlaceholder> privateIdLookup = new List<MockFriendServer.PrivateIdEncryptionPlaceholder>();
 
-	// Token: 0x04003C9B RID: 15515
+	// Token: 0x04003C9C RID: 15516
 	private List<MockFriendServer.FriendRequest> friendRequests = new List<MockFriendServer.FriendRequest>();
 
-	// Token: 0x04003C9C RID: 15516
+	// Token: 0x04003C9D RID: 15517
 	private List<int> indexesToRemove = new List<int>();
 
 	// Token: 0x020008D7 RID: 2263
 	public struct FriendPair
 	{
-		// Token: 0x04003C9D RID: 15517
+		// Token: 0x04003C9E RID: 15518
 		public int publicIdPlayerA;
 
-		// Token: 0x04003C9E RID: 15518
+		// Token: 0x04003C9F RID: 15519
 		public int publicIdPlayerB;
 
-		// Token: 0x04003C9F RID: 15519
+		// Token: 0x04003CA0 RID: 15520
 		public int privateIdPlayerA;
 
-		// Token: 0x04003CA0 RID: 15520
+		// Token: 0x04003CA1 RID: 15521
 		public int privateIdPlayerB;
 	}
 
 	// Token: 0x020008D8 RID: 2264
 	public struct PrivateIdEncryptionPlaceholder
 	{
-		// Token: 0x04003CA1 RID: 15521
+		// Token: 0x04003CA2 RID: 15522
 		public int playerPublicId;
 
-		// Token: 0x04003CA2 RID: 15522
+		// Token: 0x04003CA3 RID: 15523
 		public int playerPrivateId;
 	}
 
 	// Token: 0x020008D9 RID: 2265
 	public struct FriendRequest
 	{
-		// Token: 0x04003CA3 RID: 15523
+		// Token: 0x04003CA4 RID: 15524
 		public int requestorPublicId;
 
-		// Token: 0x04003CA4 RID: 15524
+		// Token: 0x04003CA5 RID: 15525
 		public int requesteePublicId;
 
-		// Token: 0x04003CA5 RID: 15525
+		// Token: 0x04003CA6 RID: 15526
 		public float requestTime;
 
-		// Token: 0x04003CA6 RID: 15526
+		// Token: 0x04003CA7 RID: 15527
 		public float completionTime;
 	}
 }

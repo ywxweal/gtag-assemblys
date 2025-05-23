@@ -9,7 +9,7 @@ namespace GorillaTagScripts.CustomMapSupport
 	// Token: 0x02000B32 RID: 2866
 	public class CMSObjectActivationTrigger : CMSTrigger
 	{
-		// Token: 0x0600468A RID: 18058 RVA: 0x0014F464 File Offset: 0x0014D664
+		// Token: 0x0600468B RID: 18059 RVA: 0x0014F53C File Offset: 0x0014D73C
 		public override void CopyTriggerSettings(TriggerSettings settings)
 		{
 			if (settings.GetType() == typeof(ObjectActivationTriggerSettings))
@@ -44,7 +44,7 @@ namespace GorillaTagScripts.CustomMapSupport
 			base.CopyTriggerSettings(settings);
 		}
 
-		// Token: 0x0600468B RID: 18059 RVA: 0x0014F570 File Offset: 0x0014D770
+		// Token: 0x0600468C RID: 18060 RVA: 0x0014F648 File Offset: 0x0014D848
 		public override void Trigger(double triggerTime = -1.0, bool originatedLocally = false, bool ignoreTriggerCount = false)
 		{
 			base.Trigger(triggerTime, originatedLocally, ignoreTriggerCount);
@@ -75,16 +75,16 @@ namespace GorillaTagScripts.CustomMapSupport
 			}
 		}
 
-		// Token: 0x04004919 RID: 18713
+		// Token: 0x0400491A RID: 18714
 		public List<GameObject> objectsToActivate = new List<GameObject>();
 
-		// Token: 0x0400491A RID: 18714
+		// Token: 0x0400491B RID: 18715
 		public List<GameObject> objectsToDeactivate = new List<GameObject>();
 
-		// Token: 0x0400491B RID: 18715
+		// Token: 0x0400491C RID: 18716
 		public List<GameObject> triggersToReset = new List<GameObject>();
 
-		// Token: 0x0400491C RID: 18716
+		// Token: 0x0400491D RID: 18717
 		public bool onlyResetTriggerCount;
 	}
 }

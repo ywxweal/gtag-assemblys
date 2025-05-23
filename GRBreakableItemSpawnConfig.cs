@@ -7,7 +7,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "GhostReactorBreakableItemSpawnConfig", menuName = "ScriptableObjects/GhostReactorBreakableItemSpawnConfig")]
 public class GRBreakableItemSpawnConfig : ScriptableObject
 {
-	// Token: 0x06002307 RID: 8967 RVA: 0x000AF4AC File Offset: 0x000AD6AC
+	// Token: 0x06002307 RID: 8967 RVA: 0x000AF4CC File Offset: 0x000AD6CC
 	public bool TryForRandomItem(out GameEntity entity)
 	{
 		float num = this.precomputedItemTotalWeight / this.spawnAnythingProbability;
@@ -29,7 +29,7 @@ public class GRBreakableItemSpawnConfig : ScriptableObject
 		return false;
 	}
 
-	// Token: 0x06002308 RID: 8968 RVA: 0x000AF52C File Offset: 0x000AD72C
+	// Token: 0x06002308 RID: 8968 RVA: 0x000AF54C File Offset: 0x000AD74C
 	private void OnValidate()
 	{
 		this.precomputedItemTotalWeight = 0f;

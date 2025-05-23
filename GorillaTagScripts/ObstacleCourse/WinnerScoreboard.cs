@@ -7,7 +7,7 @@ namespace GorillaTagScripts.ObstacleCourse
 	// Token: 0x02000B4D RID: 2893
 	public class WinnerScoreboard : MonoBehaviour
 	{
-		// Token: 0x0600475B RID: 18267 RVA: 0x00153258 File Offset: 0x00151458
+		// Token: 0x0600475C RID: 18268 RVA: 0x00153330 File Offset: 0x00151530
 		public void UpdateBoard(string winner, ObstacleCourse.RaceState _currentState)
 		{
 			if (this.output == null)
@@ -33,13 +33,13 @@ namespace GorillaTagScripts.ObstacleCourse
 			}
 		}
 
-		// Token: 0x040049AC RID: 18860
+		// Token: 0x040049AD RID: 18861
 		public string raceStarted = "RACE STARTED!";
 
-		// Token: 0x040049AD RID: 18861
+		// Token: 0x040049AE RID: 18862
 		public string raceLoading = "RACE LOADING...";
 
-		// Token: 0x040049AE RID: 18862
+		// Token: 0x040049AF RID: 18863
 		[SerializeField]
 		private TextMeshPro output;
 	}

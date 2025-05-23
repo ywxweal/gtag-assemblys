@@ -5,7 +5,7 @@ using UnityEngine;
 // Token: 0x02000791 RID: 1937
 public class GetPlayerData_Data
 {
-	// Token: 0x06003075 RID: 12405 RVA: 0x000EF408 File Offset: 0x000ED608
+	// Token: 0x06003076 RID: 12406 RVA: 0x000EF4AC File Offset: 0x000ED6AC
 	public GetPlayerData_Data(GetSessionResponseType type, GetPlayerDataResponse response)
 	{
 		this.responseType = type;
@@ -26,15 +26,15 @@ public class GetPlayerData_Data
 		}
 	}
 
-	// Token: 0x040036B3 RID: 14003
+	// Token: 0x040036B5 RID: 14005
 	public readonly AgeStatusType? AgeStatus;
 
-	// Token: 0x040036B4 RID: 14004
+	// Token: 0x040036B6 RID: 14006
 	public readonly GetSessionResponseType responseType;
 
-	// Token: 0x040036B5 RID: 14005
+	// Token: 0x040036B7 RID: 14007
 	public readonly SessionStatus? status;
 
-	// Token: 0x040036B6 RID: 14006
+	// Token: 0x040036B8 RID: 14008
 	public readonly TMPSession session;
 }

@@ -6,7 +6,7 @@ namespace GorillaTagScripts
 	// Token: 0x02000AF5 RID: 2805
 	public class BuilderTableJobs
 	{
-		// Token: 0x06004478 RID: 17528 RVA: 0x001431F8 File Offset: 0x001413F8
+		// Token: 0x06004479 RID: 17529 RVA: 0x001432D0 File Offset: 0x001414D0
 		public static void BuildTestPieceListForJob(BuilderPiece testPiece, NativeList<BuilderPieceData> testPieceList, NativeList<BuilderGridPlaneData> testGridPlaneList)
 		{
 			if (testPiece == null)
@@ -29,7 +29,7 @@ namespace GorillaTagScripts
 			}
 		}
 
-		// Token: 0x06004479 RID: 17529 RVA: 0x00143280 File Offset: 0x00141480
+		// Token: 0x0600447A RID: 17530 RVA: 0x00143358 File Offset: 0x00141558
 		public static void BuildTestPieceListForJob(BuilderPiece testPiece, NativeList<BuilderGridPlaneData> testGridPlaneList)
 		{
 			if (testPiece == null)

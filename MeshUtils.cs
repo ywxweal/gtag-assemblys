@@ -5,7 +5,7 @@ using UnityEngine.Rendering;
 // Token: 0x020009A3 RID: 2467
 public static class MeshUtils
 {
-	// Token: 0x06003B2D RID: 15149 RVA: 0x0011ADC8 File Offset: 0x00118FC8
+	// Token: 0x06003B2E RID: 15150 RVA: 0x0011AEA0 File Offset: 0x001190A0
 	public static Mesh CreateReadableMeshCopy(this Mesh sourceMesh)
 	{
 		Mesh mesh = new Mesh();

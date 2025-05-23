@@ -7,13 +7,13 @@ namespace GorillaTag.CosmeticSystem
 	[CreateAssetMenu(fileName = "Untitled_CosmeticSO", menuName = "- Gorilla Tag/CosmeticSO", order = 0)]
 	public class CosmeticSO : ScriptableObject
 	{
-		// Token: 0x060055EB RID: 21995 RVA: 0x001A2267 File Offset: 0x001A0467
+		// Token: 0x060055EC RID: 21996 RVA: 0x001A233F File Offset: 0x001A053F
 		public void OnEnable()
 		{
 			this.info.debugCosmeticSOName = base.name;
 		}
 
-		// Token: 0x0400595E RID: 22878
+		// Token: 0x0400595F RID: 22879
 		public CosmeticInfoV2 info = new CosmeticInfoV2("UNNAMED");
 	}
 }

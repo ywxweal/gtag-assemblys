@@ -6,7 +6,7 @@ using UnityEngine.UI;
 // Token: 0x02000663 RID: 1635
 public class HeldButton : MonoBehaviour
 {
-	// Token: 0x060028DB RID: 10459 RVA: 0x000CB798 File Offset: 0x000C9998
+	// Token: 0x060028DC RID: 10460 RVA: 0x000CB83C File Offset: 0x000C9A3C
 	private void OnTriggerEnter(Collider other)
 	{
 		if (!base.enabled)
@@ -38,7 +38,7 @@ public class HeldButton : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060028DC RID: 10460 RVA: 0x000CB858 File Offset: 0x000C9A58
+	// Token: 0x060028DD RID: 10461 RVA: 0x000CB8FC File Offset: 0x000C9AFC
 	private void LateUpdate()
 	{
 		if (!this.pendingPress)
@@ -84,7 +84,7 @@ public class HeldButton : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060028DD RID: 10461 RVA: 0x000CB9B7 File Offset: 0x000C9BB7
+	// Token: 0x060028DE RID: 10462 RVA: 0x000CBA5B File Offset: 0x000C9C5B
 	private void OnTriggerExit(Collider other)
 	{
 		if (this.pendingPress && this.pendingPressCollider == other)
@@ -99,7 +99,7 @@ public class HeldButton : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060028DE RID: 10462 RVA: 0x000CB9EC File Offset: 0x000C9BEC
+	// Token: 0x060028DF RID: 10463 RVA: 0x000CBA90 File Offset: 0x000C9C90
 	public void SetOn(bool inOn)
 	{
 		if (inOn == this.isOn)
@@ -126,62 +126,62 @@ public class HeldButton : MonoBehaviour
 		}
 	}
 
-	// Token: 0x04002DDF RID: 11743
+	// Token: 0x04002DE1 RID: 11745
 	public Material pressedMaterial;
 
-	// Token: 0x04002DE0 RID: 11744
+	// Token: 0x04002DE2 RID: 11746
 	public Material unpressedMaterial;
 
-	// Token: 0x04002DE1 RID: 11745
+	// Token: 0x04002DE3 RID: 11747
 	public MeshRenderer buttonRenderer;
 
-	// Token: 0x04002DE2 RID: 11746
+	// Token: 0x04002DE4 RID: 11748
 	private bool isOn;
 
-	// Token: 0x04002DE3 RID: 11747
+	// Token: 0x04002DE5 RID: 11749
 	public float debounceTime = 0.25f;
 
-	// Token: 0x04002DE4 RID: 11748
+	// Token: 0x04002DE6 RID: 11750
 	public bool leftHandPressable;
 
-	// Token: 0x04002DE5 RID: 11749
+	// Token: 0x04002DE7 RID: 11751
 	public bool rightHandPressable = true;
 
-	// Token: 0x04002DE6 RID: 11750
+	// Token: 0x04002DE8 RID: 11752
 	public float pressDuration = 0.5f;
 
-	// Token: 0x04002DE7 RID: 11751
+	// Token: 0x04002DE9 RID: 11753
 	public UnityEvent onStartPressingButton;
 
-	// Token: 0x04002DE8 RID: 11752
+	// Token: 0x04002DEA RID: 11754
 	public UnityEvent onStopPressingButton;
 
-	// Token: 0x04002DE9 RID: 11753
+	// Token: 0x04002DEB RID: 11755
 	public UnityEvent onPressButton;
 
-	// Token: 0x04002DEA RID: 11754
+	// Token: 0x04002DEC RID: 11756
 	[TextArea]
 	public string offText;
 
-	// Token: 0x04002DEB RID: 11755
+	// Token: 0x04002DED RID: 11757
 	[TextArea]
 	public string onText;
 
-	// Token: 0x04002DEC RID: 11756
+	// Token: 0x04002DEE RID: 11758
 	public Text myText;
 
-	// Token: 0x04002DED RID: 11757
+	// Token: 0x04002DEF RID: 11759
 	private float touchTime;
 
-	// Token: 0x04002DEE RID: 11758
+	// Token: 0x04002DF0 RID: 11760
 	private float releaseTime;
 
-	// Token: 0x04002DEF RID: 11759
+	// Token: 0x04002DF1 RID: 11761
 	private bool pendingPress;
 
-	// Token: 0x04002DF0 RID: 11760
+	// Token: 0x04002DF2 RID: 11762
 	private Collider pendingPressCollider;
 
-	// Token: 0x04002DF1 RID: 11761
+	// Token: 0x04002DF3 RID: 11763
 	private GorillaTriggerColliderHandIndicator pressingHand;
 }

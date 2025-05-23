@@ -10,7 +10,7 @@ using UnityEngine.AI;
 [RequireComponent(typeof(Rigidbody))]
 public class GorillaEnemyAI : MonoBehaviourPun, IPunObservable, IInRoomCallbacks
 {
-	// Token: 0x06002C30 RID: 11312 RVA: 0x000D9CB4 File Offset: 0x000D7EB4
+	// Token: 0x06002C31 RID: 11313 RVA: 0x000D9D58 File Offset: 0x000D7F58
 	private void Start()
 	{
 		this.agent = base.GetComponent<NavMeshAgent>();
@@ -23,7 +23,7 @@ public class GorillaEnemyAI : MonoBehaviourPun, IPunObservable, IInRoomCallbacks
 		}
 	}
 
-	// Token: 0x06002C31 RID: 11313 RVA: 0x000D9D0C File Offset: 0x000D7F0C
+	// Token: 0x06002C32 RID: 11314 RVA: 0x000D9DB0 File Offset: 0x000D7FB0
 	void IPunObservable.OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
 	{
 		if (stream.IsWriting)
@@ -36,7 +36,7 @@ public class GorillaEnemyAI : MonoBehaviourPun, IPunObservable, IInRoomCallbacks
 		this.targetRotation = (Vector3)stream.ReceiveNext();
 	}
 
-	// Token: 0x06002C32 RID: 11314 RVA: 0x000D9D70 File Offset: 0x000D7F70
+	// Token: 0x06002C33 RID: 11315 RVA: 0x000D9E14 File Offset: 0x000D8014
 	private void Update()
 	{
 		if (PhotonNetwork.IsMasterClient)
@@ -54,7 +54,7 @@ public class GorillaEnemyAI : MonoBehaviourPun, IPunObservable, IInRoomCallbacks
 		base.transform.eulerAngles = Vector3.Lerp(base.transform.eulerAngles, this.targetRotation, this.lerpValue);
 	}
 
-	// Token: 0x06002C33 RID: 11315 RVA: 0x000D9E60 File Offset: 0x000D8060
+	// Token: 0x06002C34 RID: 11316 RVA: 0x000D9F04 File Offset: 0x000D8104
 	private void FindClosestPlayer()
 	{
 		VRRig[] array = Object.FindObjectsOfType<VRRig>();
@@ -72,7 +72,7 @@ public class GorillaEnemyAI : MonoBehaviourPun, IPunObservable, IInRoomCallbacks
 		this.playerTransform = vrrig.transform;
 	}
 
-	// Token: 0x06002C34 RID: 11316 RVA: 0x000D9ED1 File Offset: 0x000D80D1
+	// Token: 0x06002C35 RID: 11317 RVA: 0x000D9F75 File Offset: 0x000D8175
 	private void OnCollisionEnter(Collision collision)
 	{
 		if (collision.gameObject.layer == 19)
@@ -81,7 +81,7 @@ public class GorillaEnemyAI : MonoBehaviourPun, IPunObservable, IInRoomCallbacks
 		}
 	}
 
-	// Token: 0x06002C35 RID: 11317 RVA: 0x000D9EED File Offset: 0x000D80ED
+	// Token: 0x06002C36 RID: 11318 RVA: 0x000D9F91 File Offset: 0x000D8191
 	void IInRoomCallbacks.OnMasterClientSwitched(Player newMasterClient)
 	{
 		if (PhotonNetwork.IsMasterClient)
@@ -91,41 +91,41 @@ public class GorillaEnemyAI : MonoBehaviourPun, IPunObservable, IInRoomCallbacks
 		}
 	}
 
-	// Token: 0x06002C36 RID: 11318 RVA: 0x000023F4 File Offset: 0x000005F4
+	// Token: 0x06002C37 RID: 11319 RVA: 0x000023F4 File Offset: 0x000005F4
 	void IInRoomCallbacks.OnPlayerEnteredRoom(Player newPlayer)
 	{
 	}
 
-	// Token: 0x06002C37 RID: 11319 RVA: 0x000023F4 File Offset: 0x000005F4
+	// Token: 0x06002C38 RID: 11320 RVA: 0x000023F4 File Offset: 0x000005F4
 	void IInRoomCallbacks.OnPlayerLeftRoom(Player otherPlayer)
 	{
 	}
 
-	// Token: 0x06002C38 RID: 11320 RVA: 0x000023F4 File Offset: 0x000005F4
+	// Token: 0x06002C39 RID: 11321 RVA: 0x000023F4 File Offset: 0x000005F4
 	void IInRoomCallbacks.OnRoomPropertiesUpdate(Hashtable propertiesThatChanged)
 	{
 	}
 
-	// Token: 0x06002C39 RID: 11321 RVA: 0x000023F4 File Offset: 0x000005F4
+	// Token: 0x06002C3A RID: 11322 RVA: 0x000023F4 File Offset: 0x000005F4
 	void IInRoomCallbacks.OnPlayerPropertiesUpdate(Player targetPlayer, Hashtable changedProps)
 	{
 	}
 
-	// Token: 0x0400325F RID: 12895
+	// Token: 0x04003261 RID: 12897
 	public Transform playerTransform;
 
-	// Token: 0x04003260 RID: 12896
+	// Token: 0x04003262 RID: 12898
 	private NavMeshAgent agent;
 
-	// Token: 0x04003261 RID: 12897
+	// Token: 0x04003263 RID: 12899
 	private Rigidbody r;
 
-	// Token: 0x04003262 RID: 12898
+	// Token: 0x04003264 RID: 12900
 	private Vector3 targetPosition;
 
-	// Token: 0x04003263 RID: 12899
+	// Token: 0x04003265 RID: 12901
 	private Vector3 targetRotation;
 
-	// Token: 0x04003264 RID: 12900
+	// Token: 0x04003266 RID: 12902
 	public float lerpValue;
 }

@@ -5,7 +5,7 @@ using UnityEngine;
 // Token: 0x020009F9 RID: 2553
 public class TeleportNode : GorillaTriggerBox
 {
-	// Token: 0x06003D11 RID: 15633 RVA: 0x001221AC File Offset: 0x001203AC
+	// Token: 0x06003D12 RID: 15634 RVA: 0x00122284 File Offset: 0x00120484
 	public override void OnBoxTriggered()
 	{
 		if (Time.time - this.teleportTime < 0.1f)
@@ -24,14 +24,14 @@ public class TeleportNode : GorillaTriggerBox
 		}
 	}
 
-	// Token: 0x040040CD RID: 16589
+	// Token: 0x040040CE RID: 16590
 	[SerializeField]
 	private XSceneRef teleportFromRef;
 
-	// Token: 0x040040CE RID: 16590
+	// Token: 0x040040CF RID: 16591
 	[SerializeField]
 	private XSceneRef teleportToRef;
 
-	// Token: 0x040040CF RID: 16591
+	// Token: 0x040040D0 RID: 16592
 	private float teleportTime;
 }

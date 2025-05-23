@@ -7,7 +7,7 @@ using UnityEngine.XR;
 // Token: 0x020006F2 RID: 1778
 public class GorillaThrowable : MonoBehaviourPun, IPunObservable, IPhotonViewCallback
 {
-	// Token: 0x06002C49 RID: 11337 RVA: 0x000DA2C8 File Offset: 0x000D84C8
+	// Token: 0x06002C4A RID: 11338 RVA: 0x000DA36C File Offset: 0x000D856C
 	public virtual void Start()
 	{
 		this.offset = Vector3.zero;
@@ -29,7 +29,7 @@ public class GorillaThrowable : MonoBehaviourPun, IPunObservable, IPhotonViewCal
 		this.rigidbody = base.GetComponentInChildren<Rigidbody>();
 	}
 
-	// Token: 0x06002C4A RID: 11338 RVA: 0x000DA3E8 File Offset: 0x000D85E8
+	// Token: 0x06002C4B RID: 11339 RVA: 0x000DA48C File Offset: 0x000D868C
 	public virtual void LateUpdate()
 	{
 		if (this.isHeld && base.photonView.IsMine)
@@ -54,12 +54,12 @@ public class GorillaThrowable : MonoBehaviourPun, IPunObservable, IPhotonViewCal
 		this.StoreHistories();
 	}
 
-	// Token: 0x06002C4B RID: 11339 RVA: 0x000023F4 File Offset: 0x000005F4
+	// Token: 0x06002C4C RID: 11340 RVA: 0x000023F4 File Offset: 0x000005F4
 	private void IsHandPushing(XRNode node)
 	{
 	}
 
-	// Token: 0x06002C4C RID: 11340 RVA: 0x000DA554 File Offset: 0x000D8754
+	// Token: 0x06002C4D RID: 11341 RVA: 0x000DA5F8 File Offset: 0x000D87F8
 	private void StoreHistories()
 	{
 		this.previousPosition = this.positionHistory[this.currentIndex];
@@ -87,7 +87,7 @@ public class GorillaThrowable : MonoBehaviourPun, IPunObservable, IPhotonViewCal
 		this.rotationalVelocityHistory[this.currentIndex] = this.currentRotationalVelocity;
 	}
 
-	// Token: 0x06002C4D RID: 11341 RVA: 0x000DA780 File Offset: 0x000D8980
+	// Token: 0x06002C4E RID: 11342 RVA: 0x000DA824 File Offset: 0x000D8A24
 	public virtual void Grabbed(Transform grabTransform)
 	{
 		this.grabbingTransform = grabTransform;
@@ -100,7 +100,7 @@ public class GorillaThrowable : MonoBehaviourPun, IPunObservable, IPhotonViewCal
 		base.photonView.RequestOwnership();
 	}
 
-	// Token: 0x06002C4E RID: 11342 RVA: 0x000DA7F8 File Offset: 0x000D89F8
+	// Token: 0x06002C4F RID: 11343 RVA: 0x000DA89C File Offset: 0x000D8A9C
 	public virtual void ThrowThisThingo()
 	{
 		this.transformToFollow = null;
@@ -128,7 +128,7 @@ public class GorillaThrowable : MonoBehaviourPun, IPunObservable, IPhotonViewCal
 		this.rigidbody.MovePosition(this.rigidbody.transform.position + this.rigidbody.velocity * Time.deltaTime);
 	}
 
-	// Token: 0x06002C4F RID: 11343 RVA: 0x000DA994 File Offset: 0x000D8B94
+	// Token: 0x06002C50 RID: 11344 RVA: 0x000DAA38 File Offset: 0x000D8C38
 	void IPunObservable.OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
 	{
 		if (stream.IsWriting)
@@ -143,7 +143,7 @@ public class GorillaThrowable : MonoBehaviourPun, IPunObservable, IPhotonViewCal
 		this.rigidbody.velocity = (Vector3)stream.ReceiveNext();
 	}
 
-	// Token: 0x06002C50 RID: 11344 RVA: 0x000DAA24 File Offset: 0x000D8C24
+	// Token: 0x06002C51 RID: 11345 RVA: 0x000DAAC8 File Offset: 0x000D8CC8
 	public virtual void OnCollisionEnter(Collision collision)
 	{
 		if (collision.collider.GetComponent<GorillaSurfaceOverride>() != null)
@@ -160,7 +160,7 @@ public class GorillaThrowable : MonoBehaviourPun, IPunObservable, IPhotonViewCal
 		}
 	}
 
-	// Token: 0x06002C51 RID: 11345 RVA: 0x000DAAA0 File Offset: 0x000D8CA0
+	// Token: 0x06002C52 RID: 11346 RVA: 0x000DAB44 File Offset: 0x000D8D44
 	[PunRPC]
 	public void PlaySurfaceHit(int soundIndex, float tapVolume)
 	{
@@ -172,144 +172,144 @@ public class GorillaThrowable : MonoBehaviourPun, IPunObservable, IPhotonViewCal
 		}
 	}
 
-	// Token: 0x06002C52 RID: 11346 RVA: 0x000DAB3C File Offset: 0x000D8D3C
+	// Token: 0x06002C53 RID: 11347 RVA: 0x000DABE0 File Offset: 0x000D8DE0
 	public float InterpolateVolume()
 	{
 		return (Mathf.Clamp(this.rigidbody.velocity.magnitude, this.minVelocity, this.maxVelocity) - this.minVelocity) / (this.maxVelocity - this.minVelocity) * (this.maxVolume - this.minVolume) + this.minVolume;
 	}
 
-	// Token: 0x04003270 RID: 12912
+	// Token: 0x04003272 RID: 12914
 	public int trackingHistorySize;
 
-	// Token: 0x04003271 RID: 12913
+	// Token: 0x04003273 RID: 12915
 	public float throwMultiplier;
 
-	// Token: 0x04003272 RID: 12914
+	// Token: 0x04003274 RID: 12916
 	public float throwMagnitudeLimit;
 
-	// Token: 0x04003273 RID: 12915
+	// Token: 0x04003275 RID: 12917
 	private Vector3[] velocityHistory;
 
-	// Token: 0x04003274 RID: 12916
+	// Token: 0x04003276 RID: 12918
 	private Vector3[] headsetVelocityHistory;
 
-	// Token: 0x04003275 RID: 12917
+	// Token: 0x04003277 RID: 12919
 	private Vector3[] positionHistory;
 
-	// Token: 0x04003276 RID: 12918
+	// Token: 0x04003278 RID: 12920
 	private Vector3[] headsetPositionHistory;
 
-	// Token: 0x04003277 RID: 12919
+	// Token: 0x04003279 RID: 12921
 	private Vector3[] rotationHistory;
 
-	// Token: 0x04003278 RID: 12920
+	// Token: 0x0400327A RID: 12922
 	private Vector3[] rotationalVelocityHistory;
 
-	// Token: 0x04003279 RID: 12921
+	// Token: 0x0400327B RID: 12923
 	private Vector3 previousPosition;
 
-	// Token: 0x0400327A RID: 12922
+	// Token: 0x0400327C RID: 12924
 	private Vector3 previousRotation;
 
-	// Token: 0x0400327B RID: 12923
+	// Token: 0x0400327D RID: 12925
 	private Vector3 previousHeadsetPosition;
 
-	// Token: 0x0400327C RID: 12924
+	// Token: 0x0400327E RID: 12926
 	private int currentIndex;
 
-	// Token: 0x0400327D RID: 12925
+	// Token: 0x0400327F RID: 12927
 	private Vector3 currentVelocity;
 
-	// Token: 0x0400327E RID: 12926
+	// Token: 0x04003280 RID: 12928
 	private Vector3 currentHeadsetVelocity;
 
-	// Token: 0x0400327F RID: 12927
+	// Token: 0x04003281 RID: 12929
 	private Vector3 currentRotationalVelocity;
 
-	// Token: 0x04003280 RID: 12928
+	// Token: 0x04003282 RID: 12930
 	public Vector3 denormalizedVelocityAverage;
 
-	// Token: 0x04003281 RID: 12929
+	// Token: 0x04003283 RID: 12931
 	private Vector3 denormalizedHeadsetVelocityAverage;
 
-	// Token: 0x04003282 RID: 12930
+	// Token: 0x04003284 RID: 12932
 	private Vector3 denormalizedRotationalVelocityAverage;
 
-	// Token: 0x04003283 RID: 12931
+	// Token: 0x04003285 RID: 12933
 	private Transform headsetTransform;
 
-	// Token: 0x04003284 RID: 12932
+	// Token: 0x04003286 RID: 12934
 	private Vector3 targetPosition;
 
-	// Token: 0x04003285 RID: 12933
+	// Token: 0x04003287 RID: 12935
 	private Quaternion targetRotation;
 
-	// Token: 0x04003286 RID: 12934
+	// Token: 0x04003288 RID: 12936
 	public bool initialLerp;
 
-	// Token: 0x04003287 RID: 12935
+	// Token: 0x04003289 RID: 12937
 	public float lerpValue = 0.4f;
 
-	// Token: 0x04003288 RID: 12936
+	// Token: 0x0400328A RID: 12938
 	public float lerpDistanceLimit = 0.01f;
 
-	// Token: 0x04003289 RID: 12937
+	// Token: 0x0400328B RID: 12939
 	public bool isHeld;
 
-	// Token: 0x0400328A RID: 12938
+	// Token: 0x0400328C RID: 12940
 	public Rigidbody rigidbody;
 
-	// Token: 0x0400328B RID: 12939
+	// Token: 0x0400328D RID: 12941
 	private int loopIndex;
 
-	// Token: 0x0400328C RID: 12940
+	// Token: 0x0400328E RID: 12942
 	private Transform transformToFollow;
 
-	// Token: 0x0400328D RID: 12941
+	// Token: 0x0400328F RID: 12943
 	private Vector3 offset;
 
-	// Token: 0x0400328E RID: 12942
+	// Token: 0x04003290 RID: 12944
 	private Quaternion offsetRotation;
 
-	// Token: 0x0400328F RID: 12943
+	// Token: 0x04003291 RID: 12945
 	public AudioSource audioSource;
 
-	// Token: 0x04003290 RID: 12944
+	// Token: 0x04003292 RID: 12946
 	public int timeLastReceived;
 
-	// Token: 0x04003291 RID: 12945
+	// Token: 0x04003293 RID: 12947
 	public bool synchThrow;
 
-	// Token: 0x04003292 RID: 12946
+	// Token: 0x04003294 RID: 12948
 	public float tempFloat;
 
-	// Token: 0x04003293 RID: 12947
+	// Token: 0x04003295 RID: 12949
 	public Transform grabbingTransform;
 
-	// Token: 0x04003294 RID: 12948
+	// Token: 0x04003296 RID: 12950
 	public float pickupLerp;
 
-	// Token: 0x04003295 RID: 12949
+	// Token: 0x04003297 RID: 12951
 	public float minVelocity;
 
-	// Token: 0x04003296 RID: 12950
+	// Token: 0x04003298 RID: 12952
 	public float maxVelocity;
 
-	// Token: 0x04003297 RID: 12951
+	// Token: 0x04003299 RID: 12953
 	public float minVolume;
 
-	// Token: 0x04003298 RID: 12952
+	// Token: 0x0400329A RID: 12954
 	public float maxVolume;
 
-	// Token: 0x04003299 RID: 12953
+	// Token: 0x0400329B RID: 12955
 	public bool isLinear;
 
-	// Token: 0x0400329A RID: 12954
+	// Token: 0x0400329C RID: 12956
 	public float linearMax;
 
-	// Token: 0x0400329B RID: 12955
+	// Token: 0x0400329D RID: 12957
 	public float exponThrowMultMax;
 
-	// Token: 0x0400329C RID: 12956
+	// Token: 0x0400329E RID: 12958
 	public int bounceAudioClip;
 }

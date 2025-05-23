@@ -6,7 +6,7 @@ using UnityEngine;
 // Token: 0x0200092C RID: 2348
 public static class FXSystem
 {
-	// Token: 0x0600391F RID: 14623 RVA: 0x00112D40 File Offset: 0x00110F40
+	// Token: 0x06003920 RID: 14624 RVA: 0x00112E18 File Offset: 0x00111018
 	public static void PlayFXForRig(FXType fxType, IFXContext context, PhotonMessageInfoWrapped info = default(PhotonMessageInfoWrapped))
 	{
 		FXSystemSettings settings = context.settings;
@@ -21,7 +21,7 @@ public static class FXSystem
 		}
 	}
 
-	// Token: 0x06003920 RID: 14624 RVA: 0x00112D7C File Offset: 0x00110F7C
+	// Token: 0x06003921 RID: 14625 RVA: 0x00112E54 File Offset: 0x00111054
 	public static void PlayFXForRigValidated(List<int> hashes, FXType fxType, IFXContext context, PhotonMessageInfoWrapped info = default(PhotonMessageInfoWrapped))
 	{
 		for (int i = 0; i < hashes.Count; i++)
@@ -34,7 +34,7 @@ public static class FXSystem
 		FXSystem.PlayFXForRig(fxType, context, info);
 	}
 
-	// Token: 0x06003921 RID: 14625 RVA: 0x00112DB8 File Offset: 0x00110FB8
+	// Token: 0x06003922 RID: 14626 RVA: 0x00112E90 File Offset: 0x00111090
 	public static void PlayFX<T>(FXType fxType, IFXContextParems<T> context, T args, PhotonMessageInfoWrapped info) where T : FXSArgs
 	{
 		FXSystemSettings settings = context.settings;
@@ -49,7 +49,7 @@ public static class FXSystem
 		}
 	}
 
-	// Token: 0x06003922 RID: 14626 RVA: 0x00112DF4 File Offset: 0x00110FF4
+	// Token: 0x06003923 RID: 14627 RVA: 0x00112ECC File Offset: 0x001110CC
 	public static void PlayFXForRig<T>(FXType fxType, IFXEffectContext<T> context, PhotonMessageInfoWrapped info) where T : IFXEffectContextObject
 	{
 		FXSystemSettings settings = context.settings;
@@ -60,7 +60,7 @@ public static class FXSystem
 		FXSystem.PlayFX(context.effectContext);
 	}
 
-	// Token: 0x06003923 RID: 14627 RVA: 0x00112E34 File Offset: 0x00111034
+	// Token: 0x06003924 RID: 14628 RVA: 0x00112F0C File Offset: 0x0011110C
 	public static void PlayFX(IFXEffectContextObject effectContext)
 	{
 		int[] prefabPoolIds = effectContext.PrefabPoolIds;
@@ -92,7 +92,7 @@ public static class FXSystem
 		}
 	}
 
-	// Token: 0x06003924 RID: 14628 RVA: 0x00112ED8 File Offset: 0x001110D8
+	// Token: 0x06003925 RID: 14629 RVA: 0x00112FB0 File Offset: 0x001111B0
 	public static bool CheckCallSpam(FXSystemSettings settings, int index, double serverTime)
 	{
 		CallLimitType<CallLimiter> callLimitType = settings.callSettings[index];

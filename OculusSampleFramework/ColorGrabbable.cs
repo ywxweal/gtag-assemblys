@@ -7,8 +7,8 @@ namespace OculusSampleFramework
 	public class ColorGrabbable : OVRGrabbable
 	{
 		// Token: 0x17000730 RID: 1840
-		// (get) Token: 0x06004A6A RID: 19050 RVA: 0x00162666 File Offset: 0x00160866
-		// (set) Token: 0x06004A6B RID: 19051 RVA: 0x0016266E File Offset: 0x0016086E
+		// (get) Token: 0x06004A6B RID: 19051 RVA: 0x0016273E File Offset: 0x0016093E
+		// (set) Token: 0x06004A6C RID: 19052 RVA: 0x00162746 File Offset: 0x00160946
 		public bool Highlight
 		{
 			get
@@ -22,7 +22,7 @@ namespace OculusSampleFramework
 			}
 		}
 
-		// Token: 0x06004A6C RID: 19052 RVA: 0x0016267D File Offset: 0x0016087D
+		// Token: 0x06004A6D RID: 19053 RVA: 0x00162755 File Offset: 0x00160955
 		protected void UpdateColor()
 		{
 			if (base.isGrabbed)
@@ -38,21 +38,21 @@ namespace OculusSampleFramework
 			this.SetColor(this.m_color);
 		}
 
-		// Token: 0x06004A6D RID: 19053 RVA: 0x001626B3 File Offset: 0x001608B3
+		// Token: 0x06004A6E RID: 19054 RVA: 0x0016278B File Offset: 0x0016098B
 		public override void GrabBegin(OVRGrabber hand, Collider grabPoint)
 		{
 			base.GrabBegin(hand, grabPoint);
 			this.UpdateColor();
 		}
 
-		// Token: 0x06004A6E RID: 19054 RVA: 0x001626C3 File Offset: 0x001608C3
+		// Token: 0x06004A6F RID: 19055 RVA: 0x0016279B File Offset: 0x0016099B
 		public override void GrabEnd(Vector3 linearVelocity, Vector3 angularVelocity)
 		{
 			base.GrabEnd(linearVelocity, angularVelocity);
 			this.UpdateColor();
 		}
 
-		// Token: 0x06004A6F RID: 19055 RVA: 0x001626D4 File Offset: 0x001608D4
+		// Token: 0x06004A70 RID: 19056 RVA: 0x001627AC File Offset: 0x001609AC
 		private void Awake()
 		{
 			if (this.m_grabPoints.Length == 0)
@@ -74,7 +74,7 @@ namespace OculusSampleFramework
 			this.SetColor(this.m_color);
 		}
 
-		// Token: 0x06004A70 RID: 19056 RVA: 0x00162788 File Offset: 0x00160988
+		// Token: 0x06004A71 RID: 19057 RVA: 0x00162860 File Offset: 0x00160A60
 		private void SetColor(Color color)
 		{
 			for (int i = 0; i < this.m_meshRenderers.Length; i++)
@@ -87,19 +87,19 @@ namespace OculusSampleFramework
 			}
 		}
 
-		// Token: 0x04004D29 RID: 19753
+		// Token: 0x04004D2A RID: 19754
 		public static readonly Color COLOR_GRAB = new Color(1f, 0.5f, 0f, 1f);
 
-		// Token: 0x04004D2A RID: 19754
+		// Token: 0x04004D2B RID: 19755
 		public static readonly Color COLOR_HIGHLIGHT = new Color(1f, 0f, 1f, 1f);
 
-		// Token: 0x04004D2B RID: 19755
+		// Token: 0x04004D2C RID: 19756
 		private Color m_color = Color.black;
 
-		// Token: 0x04004D2C RID: 19756
+		// Token: 0x04004D2D RID: 19757
 		private MeshRenderer[] m_meshRenderers;
 
-		// Token: 0x04004D2D RID: 19757
+		// Token: 0x04004D2E RID: 19758
 		private bool m_highlight;
 	}
 }

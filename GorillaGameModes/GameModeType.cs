@@ -6,25 +6,25 @@ namespace GorillaGameModes
 	[Serializable]
 	public enum GameModeType
 	{
-		// Token: 0x04004491 RID: 17553
-		Casual,
 		// Token: 0x04004492 RID: 17554
-		Infection,
+		Casual,
 		// Token: 0x04004493 RID: 17555
-		Hunt,
+		Infection,
 		// Token: 0x04004494 RID: 17556
-		Paintbrawl,
+		Hunt,
 		// Token: 0x04004495 RID: 17557
-		Ambush,
+		Paintbrawl,
 		// Token: 0x04004496 RID: 17558
-		FreezeTag,
+		Ambush,
 		// Token: 0x04004497 RID: 17559
-		Ghost,
+		FreezeTag,
 		// Token: 0x04004498 RID: 17560
-		Custom,
+		Ghost,
 		// Token: 0x04004499 RID: 17561
-		Guardian,
+		Custom,
 		// Token: 0x0400449A RID: 17562
+		Guardian,
+		// Token: 0x0400449B RID: 17563
 		Count
 	}
 }

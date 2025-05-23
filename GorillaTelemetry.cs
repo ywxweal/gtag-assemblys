@@ -14,7 +14,7 @@ using UnityEngine;
 // Token: 0x02000643 RID: 1603
 public static class GorillaTelemetry
 {
-	// Token: 0x06002821 RID: 10273 RVA: 0x000C81E0 File Offset: 0x000C63E0
+	// Token: 0x06002821 RID: 10273 RVA: 0x000C8200 File Offset: 0x000C6400
 	static GorillaTelemetry()
 	{
 		Dictionary<string, object> dictionary = new Dictionary<string, object>();
@@ -23,82 +23,86 @@ public static class GorillaTelemetry
 		dictionary["ZoneId"] = null;
 		dictionary["SubZoneId"] = null;
 		GorillaTelemetry.gZoneEventArgs = dictionary;
-		GorillaTelemetry.CurrentZone = GTZone.none;
-		GorillaTelemetry.CurrentSubZone = GTSubZone.none;
 		Dictionary<string, object> dictionary2 = new Dictionary<string, object>();
 		dictionary2["User"] = null;
 		dictionary2["EventType"] = null;
-		dictionary2["Items"] = null;
-		GorillaTelemetry.gShopEventArgs = dictionary2;
-		GorillaTelemetry.gSingleItemParam = new CosmeticsController.CosmeticItem[1];
-		GorillaTelemetry.gSingleItemBuilderParam = new BuilderSetManager.BuilderSetStoreItem[1];
+		GorillaTelemetry.gNotifEventArgs = dictionary2;
+		GorillaTelemetry.CurrentZone = GTZone.none;
+		GorillaTelemetry.CurrentSubZone = GTSubZone.none;
 		Dictionary<string, object> dictionary3 = new Dictionary<string, object>();
 		dictionary3["User"] = null;
 		dictionary3["EventType"] = null;
-		dictionary3["AgeCategory"] = null;
-		dictionary3["VoiceChatEnabled"] = null;
-		dictionary3["CustomUsernameEnabled"] = null;
-		dictionary3["JoinGroups"] = null;
-		GorillaTelemetry.gKidEventArgs = dictionary3;
+		dictionary3["Items"] = null;
+		GorillaTelemetry.gShopEventArgs = dictionary3;
+		GorillaTelemetry.gSingleItemParam = new CosmeticsController.CosmeticItem[1];
+		GorillaTelemetry.gSingleItemBuilderParam = new BuilderSetManager.BuilderSetStoreItem[1];
 		Dictionary<string, object> dictionary4 = new Dictionary<string, object>();
 		dictionary4["User"] = null;
-		dictionary4["WamGameId"] = null;
-		dictionary4["WamMachineId"] = null;
-		GorillaTelemetry.gWamGameStartArgs = dictionary4;
+		dictionary4["EventType"] = null;
+		dictionary4["AgeCategory"] = null;
+		dictionary4["VoiceChatEnabled"] = null;
+		dictionary4["CustomUsernameEnabled"] = null;
+		dictionary4["JoinGroups"] = null;
+		GorillaTelemetry.gKidEventArgs = dictionary4;
 		Dictionary<string, object> dictionary5 = new Dictionary<string, object>();
 		dictionary5["User"] = null;
 		dictionary5["WamGameId"] = null;
 		dictionary5["WamMachineId"] = null;
-		dictionary5["WamMLevelNumber"] = null;
-		dictionary5["WamGoodMolesShown"] = null;
-		dictionary5["WamHazardMolesShown"] = null;
-		dictionary5["WamLevelMinScore"] = null;
-		dictionary5["WamLevelScore"] = null;
-		dictionary5["WamHazardMolesHit"] = null;
-		dictionary5["WamGameState"] = null;
-		GorillaTelemetry.gWamLevelEndArgs = dictionary5;
+		GorillaTelemetry.gWamGameStartArgs = dictionary5;
 		Dictionary<string, object> dictionary6 = new Dictionary<string, object>();
-		dictionary6["CustomMapName"] = null;
-		dictionary6["CustomMapModId"] = null;
-		dictionary6["LowestFPS"] = null;
-		dictionary6["LowestFPSDrawCalls"] = null;
-		dictionary6["LowestFPSPlayerCount"] = null;
-		dictionary6["AverageFPS"] = null;
-		dictionary6["AverageDrawCalls"] = null;
-		dictionary6["AveragePlayerCount"] = null;
-		dictionary6["HighestFPS"] = null;
-		dictionary6["HighestFPSDrawCalls"] = null;
-		dictionary6["HighestFPSPlayerCount"] = null;
-		dictionary6["PlaytimeInSeconds"] = null;
-		GorillaTelemetry.gCustomMapPerfArgs = dictionary6;
+		dictionary6["User"] = null;
+		dictionary6["WamGameId"] = null;
+		dictionary6["WamMachineId"] = null;
+		dictionary6["WamMLevelNumber"] = null;
+		dictionary6["WamGoodMolesShown"] = null;
+		dictionary6["WamHazardMolesShown"] = null;
+		dictionary6["WamLevelMinScore"] = null;
+		dictionary6["WamLevelScore"] = null;
+		dictionary6["WamHazardMolesHit"] = null;
+		dictionary6["WamGameState"] = null;
+		GorillaTelemetry.gWamLevelEndArgs = dictionary6;
 		Dictionary<string, object> dictionary7 = new Dictionary<string, object>();
-		dictionary7["User"] = null;
 		dictionary7["CustomMapName"] = null;
 		dictionary7["CustomMapModId"] = null;
-		dictionary7["CustomMapCreator"] = null;
-		dictionary7["MinPlayerCount"] = null;
-		dictionary7["MaxPlayerCount"] = null;
-		dictionary7["PlaytimeOnMap"] = null;
-		dictionary7["PrivateRoom"] = null;
-		GorillaTelemetry.gCustomMapTrackingMetrics = dictionary7;
+		dictionary7["LowestFPS"] = null;
+		dictionary7["LowestFPSDrawCalls"] = null;
+		dictionary7["LowestFPSPlayerCount"] = null;
+		dictionary7["AverageFPS"] = null;
+		dictionary7["AverageDrawCalls"] = null;
+		dictionary7["AveragePlayerCount"] = null;
+		dictionary7["HighestFPS"] = null;
+		dictionary7["HighestFPSDrawCalls"] = null;
+		dictionary7["HighestFPSPlayerCount"] = null;
+		dictionary7["PlaytimeInSeconds"] = null;
+		GorillaTelemetry.gCustomMapPerfArgs = dictionary7;
 		Dictionary<string, object> dictionary8 = new Dictionary<string, object>();
 		dictionary8["User"] = null;
 		dictionary8["CustomMapName"] = null;
 		dictionary8["CustomMapModId"] = null;
 		dictionary8["CustomMapCreator"] = null;
-		GorillaTelemetry.gCustomMapDownloadMetrics = dictionary8;
+		dictionary8["MinPlayerCount"] = null;
+		dictionary8["MaxPlayerCount"] = null;
+		dictionary8["PlaytimeOnMap"] = null;
+		dictionary8["PrivateRoom"] = null;
+		GorillaTelemetry.gCustomMapTrackingMetrics = dictionary8;
+		Dictionary<string, object> dictionary9 = new Dictionary<string, object>();
+		dictionary9["User"] = null;
+		dictionary9["CustomMapName"] = null;
+		dictionary9["CustomMapModId"] = null;
+		dictionary9["CustomMapCreator"] = null;
+		GorillaTelemetry.gCustomMapDownloadMetrics = dictionary9;
 		GameObject gameObject = new GameObject("GorillaTelemetryBatcher");
 		Object.DontDestroyOnLoad(gameObject);
 		gameObject.AddComponent<GorillaTelemetry.BatchRunner>();
 	}
 
-	// Token: 0x06002822 RID: 10274 RVA: 0x000C850F File Offset: 0x000C670F
+	// Token: 0x06002822 RID: 10274 RVA: 0x000C8551 File Offset: 0x000C6751
 	private static void QueueTelemetryEvent(EventContents eventContent)
 	{
 		GorillaTelemetry.telemetryEventsQueue.Enqueue(eventContent);
 	}
 
-	// Token: 0x06002823 RID: 10275 RVA: 0x000C851C File Offset: 0x000C671C
+	// Token: 0x06002823 RID: 10275 RVA: 0x000C8560 File Offset: 0x000C6760
 	private static void FlushTelemetry()
 	{
 		int count = GorillaTelemetry.telemetryEventsQueue.Count;
@@ -136,7 +140,7 @@ public static class GorillaTelemetry
 		}
 	}
 
-	// Token: 0x06002824 RID: 10276 RVA: 0x000C85EC File Offset: 0x000C67EC
+	// Token: 0x06002824 RID: 10276 RVA: 0x000C8630 File Offset: 0x000C6830
 	private static List<EventContents> GetEventListForArray(EventContents[] array, int count)
 	{
 		int num = 0;
@@ -167,7 +171,7 @@ public static class GorillaTelemetry
 		return list;
 	}
 
-	// Token: 0x06002825 RID: 10277 RVA: 0x000C8656 File Offset: 0x000C6856
+	// Token: 0x06002825 RID: 10277 RVA: 0x000C869A File Offset: 0x000C689A
 	private static bool IsConnected()
 	{
 		if (!NetworkSystem.Instance.InRoom)
@@ -181,13 +185,13 @@ public static class GorillaTelemetry
 		return !(GorillaTelemetry.gPlayFabAuth == null);
 	}
 
-	// Token: 0x06002826 RID: 10278 RVA: 0x000C8689 File Offset: 0x000C6889
+	// Token: 0x06002826 RID: 10278 RVA: 0x000C86CD File Offset: 0x000C68CD
 	private static string PlayFabUserId()
 	{
 		return GorillaTelemetry.gPlayFabAuth.GetPlayFabPlayerId();
 	}
 
-	// Token: 0x06002827 RID: 10279 RVA: 0x000C8698 File Offset: 0x000C6898
+	// Token: 0x06002827 RID: 10279 RVA: 0x000C86DC File Offset: 0x000C68DC
 	public static void PostZoneEvent(GTZone zone, GTSubZone subZone, GTZoneEventType zoneEvent)
 	{
 		if (!GorillaTelemetry.IsConnected())
@@ -211,7 +215,7 @@ public static class GorillaTelemetry
 		});
 	}
 
-	// Token: 0x06002828 RID: 10280 RVA: 0x000C872B File Offset: 0x000C692B
+	// Token: 0x06002828 RID: 10280 RVA: 0x000C876F File Offset: 0x000C696F
 	public static void PostShopEvent(VRRig playerRig, GTShopEventType shopEvent, CosmeticsController.CosmeticItem item)
 	{
 		GorillaTelemetry.gSingleItemParam[0] = item;
@@ -219,7 +223,7 @@ public static class GorillaTelemetry
 		GorillaTelemetry.gSingleItemParam[0] = default(CosmeticsController.CosmeticItem);
 	}
 
-	// Token: 0x06002829 RID: 10281 RVA: 0x000C8758 File Offset: 0x000C6958
+	// Token: 0x06002829 RID: 10281 RVA: 0x000C879C File Offset: 0x000C699C
 	private static string[] FetchItemArgs(IList<CosmeticsController.CosmeticItem> items)
 	{
 		int count = items.Count;
@@ -246,7 +250,7 @@ public static class GorillaTelemetry
 		return array;
 	}
 
-	// Token: 0x0600282A RID: 10282 RVA: 0x000C87E4 File Offset: 0x000C69E4
+	// Token: 0x0600282A RID: 10282 RVA: 0x000C8828 File Offset: 0x000C6A28
 	public static void PostShopEvent(VRRig playerRig, GTShopEventType shopEvent, IList<CosmeticsController.CosmeticItem> items)
 	{
 		if (!GorillaTelemetry.IsConnected())
@@ -281,7 +285,7 @@ public static class GorillaTelemetry
 	{
 	}
 
-	// Token: 0x0600282D RID: 10285 RVA: 0x000C8876 File Offset: 0x000C6A76
+	// Token: 0x0600282D RID: 10285 RVA: 0x000C88BA File Offset: 0x000C6ABA
 	public static void PostBuilderKioskEvent(VRRig playerRig, GTShopEventType shopEvent, BuilderSetManager.BuilderSetStoreItem item)
 	{
 		GorillaTelemetry.gSingleItemBuilderParam[0] = item;
@@ -289,7 +293,7 @@ public static class GorillaTelemetry
 		GorillaTelemetry.gSingleItemBuilderParam[0] = default(BuilderSetManager.BuilderSetStoreItem);
 	}
 
-	// Token: 0x0600282E RID: 10286 RVA: 0x000C88A4 File Offset: 0x000C6AA4
+	// Token: 0x0600282E RID: 10286 RVA: 0x000C88E8 File Offset: 0x000C6AE8
 	private static string[] BuilderItemsToStrings(IList<BuilderSetManager.BuilderSetStoreItem> items)
 	{
 		int count = items.Count;
@@ -316,7 +320,7 @@ public static class GorillaTelemetry
 		return array;
 	}
 
-	// Token: 0x0600282F RID: 10287 RVA: 0x000C8930 File Offset: 0x000C6B30
+	// Token: 0x0600282F RID: 10287 RVA: 0x000C8974 File Offset: 0x000C6B74
 	public static void PostBuilderKioskEvent(VRRig playerRig, GTShopEventType shopEvent, IList<BuilderSetManager.BuilderSetStoreItem> items)
 	{
 		if (!GorillaTelemetry.IsConnected())
@@ -341,7 +345,7 @@ public static class GorillaTelemetry
 		}, new Action<WriteEventResponse>(GorillaTelemetry.PostShopEvent_OnResult), new Action<PlayFabError>(GorillaTelemetry.PostShopEvent_OnError), null, null);
 	}
 
-	// Token: 0x06002830 RID: 10288 RVA: 0x000C89C4 File Offset: 0x000C6BC4
+	// Token: 0x06002830 RID: 10288 RVA: 0x000C8A08 File Offset: 0x000C6C08
 	public static void PostKidEvent(bool joinGroupsEnabled, bool voiceChatEnabled, bool customUsernamesEnabled, AgeStatusType ageCategory, GTKidEventType kidEvent)
 	{
 		if ((double)Random.value < 0.1)
@@ -373,7 +377,7 @@ public static class GorillaTelemetry
 		});
 	}
 
-	// Token: 0x06002831 RID: 10289 RVA: 0x000C8AB4 File Offset: 0x000C6CB4
+	// Token: 0x06002831 RID: 10289 RVA: 0x000C8AF8 File Offset: 0x000C6CF8
 	public static void WamGameStart(string playerId, string gameId, string machineId)
 	{
 		if (!GorillaTelemetry.IsConnected())
@@ -391,7 +395,7 @@ public static class GorillaTelemetry
 		});
 	}
 
-	// Token: 0x06002832 RID: 10290 RVA: 0x000C8B24 File Offset: 0x000C6D24
+	// Token: 0x06002832 RID: 10290 RVA: 0x000C8B68 File Offset: 0x000C6D68
 	public static void WamLevelEnd(string playerId, int gameId, string machineId, int currentLevelNumber, int levelGoodMolesShown, int levelHazardMolesShown, int levelMinScore, int currentScore, int levelHazardMolesHit, string currentGameResult)
 	{
 		if (!GorillaTelemetry.IsConnected())
@@ -416,7 +420,7 @@ public static class GorillaTelemetry
 		});
 	}
 
-	// Token: 0x06002833 RID: 10291 RVA: 0x000C8C30 File Offset: 0x000C6E30
+	// Token: 0x06002833 RID: 10291 RVA: 0x000C8C74 File Offset: 0x000C6E74
 	public static void PostCustomMapPerformance(string mapName, long mapModId, int lowestFPS, int lowestDC, int lowestPC, int avgFPS, int avgDC, int avgPC, int highestFPS, int highestDC, int highestPC, int playtime)
 	{
 		if (!GorillaTelemetry.IsConnected())
@@ -444,7 +448,7 @@ public static class GorillaTelemetry
 		});
 	}
 
-	// Token: 0x06002834 RID: 10292 RVA: 0x000C8D44 File Offset: 0x000C6F44
+	// Token: 0x06002834 RID: 10292 RVA: 0x000C8D88 File Offset: 0x000C6F88
 	public static void PostCustomMapTracking(string mapName, long mapModId, string mapCreatorUsername, int minPlayers, int maxPlayers, int playtime, bool privateRoom)
 	{
 		if (!GorillaTelemetry.IsConnected())
@@ -479,7 +483,7 @@ public static class GorillaTelemetry
 	{
 	}
 
-	// Token: 0x06002836 RID: 10294 RVA: 0x000C8E54 File Offset: 0x000C7054
+	// Token: 0x06002836 RID: 10294 RVA: 0x000C8E98 File Offset: 0x000C7098
 	public static void SendMothershipAnalytics(KIDTelemetryData data)
 	{
 		if (string.IsNullOrEmpty(data.EventName))
@@ -528,6 +532,25 @@ public static class GorillaTelemetry
 		});
 	}
 
+	// Token: 0x06002837 RID: 10295 RVA: 0x000C901C File Offset: 0x000C721C
+	public static void PostNotificationEvent(string notificationType)
+	{
+		if (!GorillaTelemetry.IsConnected())
+		{
+			return;
+		}
+		string text = GorillaTelemetry.PlayFabUserId();
+		Dictionary<string, object> dictionary = GorillaTelemetry.gNotifEventArgs;
+		dictionary["User"] = text;
+		dictionary["EventType"] = notificationType;
+		GorillaTelemetry.QueueTelemetryEvent(new EventContents
+		{
+			Name = "telemetry_ggwp_event",
+			EventNamespace = GorillaTelemetry.EVENT_NAMESPACE,
+			Payload = dictionary
+		});
+	}
+
 	// Token: 0x04002CE4 RID: 11492
 	private static readonly float TELEMETRY_FLUSH_SEC = 10f;
 
@@ -550,169 +573,175 @@ public static class GorillaTelemetry
 	private static readonly Dictionary<string, object> gZoneEventArgs;
 
 	// Token: 0x04002CEB RID: 11499
-	public static GTZone CurrentZone;
+	private static readonly Dictionary<string, object> gNotifEventArgs;
 
 	// Token: 0x04002CEC RID: 11500
-	public static GTSubZone CurrentSubZone;
+	public static GTZone CurrentZone;
 
 	// Token: 0x04002CED RID: 11501
-	private static readonly Dictionary<string, object> gShopEventArgs;
+	public static GTSubZone CurrentSubZone;
 
 	// Token: 0x04002CEE RID: 11502
-	private static CosmeticsController.CosmeticItem[] gSingleItemParam;
+	private static readonly Dictionary<string, object> gShopEventArgs;
 
 	// Token: 0x04002CEF RID: 11503
-	private static BuilderSetManager.BuilderSetStoreItem[] gSingleItemBuilderParam;
+	private static CosmeticsController.CosmeticItem[] gSingleItemParam;
 
 	// Token: 0x04002CF0 RID: 11504
-	private static Dictionary<string, object> gKidEventArgs;
+	private static BuilderSetManager.BuilderSetStoreItem[] gSingleItemBuilderParam;
 
 	// Token: 0x04002CF1 RID: 11505
-	private static readonly Dictionary<string, object> gWamGameStartArgs;
+	private static Dictionary<string, object> gKidEventArgs;
 
 	// Token: 0x04002CF2 RID: 11506
-	private static readonly Dictionary<string, object> gWamLevelEndArgs;
+	private static readonly Dictionary<string, object> gWamGameStartArgs;
 
 	// Token: 0x04002CF3 RID: 11507
-	private static Dictionary<string, object> gCustomMapPerfArgs;
+	private static readonly Dictionary<string, object> gWamLevelEndArgs;
 
 	// Token: 0x04002CF4 RID: 11508
-	private static Dictionary<string, object> gCustomMapTrackingMetrics;
+	private static Dictionary<string, object> gCustomMapPerfArgs;
 
 	// Token: 0x04002CF5 RID: 11509
+	private static Dictionary<string, object> gCustomMapTrackingMetrics;
+
+	// Token: 0x04002CF6 RID: 11510
 	private static Dictionary<string, object> gCustomMapDownloadMetrics;
 
 	// Token: 0x02000644 RID: 1604
 	public static class k
 	{
-		// Token: 0x04002CF6 RID: 11510
+		// Token: 0x04002CF7 RID: 11511
 		public const string User = "User";
 
-		// Token: 0x04002CF7 RID: 11511
+		// Token: 0x04002CF8 RID: 11512
 		public const string ZoneId = "ZoneId";
 
-		// Token: 0x04002CF8 RID: 11512
+		// Token: 0x04002CF9 RID: 11513
 		public const string SubZoneId = "SubZoneId";
 
-		// Token: 0x04002CF9 RID: 11513
+		// Token: 0x04002CFA RID: 11514
 		public const string EventType = "EventType";
 
-		// Token: 0x04002CFA RID: 11514
+		// Token: 0x04002CFB RID: 11515
 		public const string Items = "Items";
 
-		// Token: 0x04002CFB RID: 11515
+		// Token: 0x04002CFC RID: 11516
 		public const string VoiceChatEnabled = "VoiceChatEnabled";
 
-		// Token: 0x04002CFC RID: 11516
+		// Token: 0x04002CFD RID: 11517
 		public const string JoinGroups = "JoinGroups";
 
-		// Token: 0x04002CFD RID: 11517
+		// Token: 0x04002CFE RID: 11518
 		public const string CustomUsernameEnabled = "CustomUsernameEnabled";
 
-		// Token: 0x04002CFE RID: 11518
+		// Token: 0x04002CFF RID: 11519
 		public const string AgeCategory = "AgeCategory";
 
-		// Token: 0x04002CFF RID: 11519
+		// Token: 0x04002D00 RID: 11520
 		public const string telemetry_zone_event = "telemetry_zone_event";
 
-		// Token: 0x04002D00 RID: 11520
+		// Token: 0x04002D01 RID: 11521
 		public const string telemetry_shop_event = "telemetry_shop_event";
 
-		// Token: 0x04002D01 RID: 11521
+		// Token: 0x04002D02 RID: 11522
 		public const string telemetry_kid_event = "telemetry_kid_event";
 
-		// Token: 0x04002D02 RID: 11522
-		public const string NOTHING = "NOTHING";
-
 		// Token: 0x04002D03 RID: 11523
-		public const string telemetry_wam_gameStartEvent = "telemetry_wam_gameStartEvent";
+		public const string telemetry_ggwp_event = "telemetry_ggwp_event";
 
 		// Token: 0x04002D04 RID: 11524
-		public const string telemetry_wam_levelEndEvent = "telemetry_wam_levelEndEvent";
+		public const string NOTHING = "NOTHING";
 
 		// Token: 0x04002D05 RID: 11525
-		public const string WamMachineId = "WamMachineId";
+		public const string telemetry_wam_gameStartEvent = "telemetry_wam_gameStartEvent";
 
 		// Token: 0x04002D06 RID: 11526
-		public const string WamGameId = "WamGameId";
+		public const string telemetry_wam_levelEndEvent = "telemetry_wam_levelEndEvent";
 
 		// Token: 0x04002D07 RID: 11527
-		public const string WamMLevelNumber = "WamMLevelNumber";
+		public const string WamMachineId = "WamMachineId";
 
 		// Token: 0x04002D08 RID: 11528
-		public const string WamGoodMolesShown = "WamGoodMolesShown";
+		public const string WamGameId = "WamGameId";
 
 		// Token: 0x04002D09 RID: 11529
-		public const string WamHazardMolesShown = "WamHazardMolesShown";
+		public const string WamMLevelNumber = "WamMLevelNumber";
 
 		// Token: 0x04002D0A RID: 11530
-		public const string WamLevelMinScore = "WamLevelMinScore";
+		public const string WamGoodMolesShown = "WamGoodMolesShown";
 
 		// Token: 0x04002D0B RID: 11531
-		public const string WamLevelScore = "WamLevelScore";
+		public const string WamHazardMolesShown = "WamHazardMolesShown";
 
 		// Token: 0x04002D0C RID: 11532
-		public const string WamHazardMolesHit = "WamHazardMolesHit";
+		public const string WamLevelMinScore = "WamLevelMinScore";
 
 		// Token: 0x04002D0D RID: 11533
-		public const string WamGameState = "WamGameState";
+		public const string WamLevelScore = "WamLevelScore";
 
 		// Token: 0x04002D0E RID: 11534
-		public const string CustomMapName = "CustomMapName";
+		public const string WamHazardMolesHit = "WamHazardMolesHit";
 
 		// Token: 0x04002D0F RID: 11535
-		public const string LowestFPS = "LowestFPS";
+		public const string WamGameState = "WamGameState";
 
 		// Token: 0x04002D10 RID: 11536
-		public const string LowestFPSDrawCalls = "LowestFPSDrawCalls";
+		public const string CustomMapName = "CustomMapName";
 
 		// Token: 0x04002D11 RID: 11537
-		public const string LowestFPSPlayerCount = "LowestFPSPlayerCount";
+		public const string LowestFPS = "LowestFPS";
 
 		// Token: 0x04002D12 RID: 11538
-		public const string AverageFPS = "AverageFPS";
+		public const string LowestFPSDrawCalls = "LowestFPSDrawCalls";
 
 		// Token: 0x04002D13 RID: 11539
-		public const string AverageDrawCalls = "AverageDrawCalls";
+		public const string LowestFPSPlayerCount = "LowestFPSPlayerCount";
 
 		// Token: 0x04002D14 RID: 11540
-		public const string AveragePlayerCount = "AveragePlayerCount";
+		public const string AverageFPS = "AverageFPS";
 
 		// Token: 0x04002D15 RID: 11541
-		public const string HighestFPS = "HighestFPS";
+		public const string AverageDrawCalls = "AverageDrawCalls";
 
 		// Token: 0x04002D16 RID: 11542
-		public const string HighestFPSDrawCalls = "HighestFPSDrawCalls";
+		public const string AveragePlayerCount = "AveragePlayerCount";
 
 		// Token: 0x04002D17 RID: 11543
-		public const string HighestFPSPlayerCount = "HighestFPSPlayerCount";
+		public const string HighestFPS = "HighestFPS";
 
 		// Token: 0x04002D18 RID: 11544
-		public const string CustomMapCreator = "CustomMapCreator";
+		public const string HighestFPSDrawCalls = "HighestFPSDrawCalls";
 
 		// Token: 0x04002D19 RID: 11545
-		public const string CustomMapModId = "CustomMapModId";
+		public const string HighestFPSPlayerCount = "HighestFPSPlayerCount";
 
 		// Token: 0x04002D1A RID: 11546
-		public const string MinPlayerCount = "MinPlayerCount";
+		public const string CustomMapCreator = "CustomMapCreator";
 
 		// Token: 0x04002D1B RID: 11547
-		public const string MaxPlayerCount = "MaxPlayerCount";
+		public const string CustomMapModId = "CustomMapModId";
 
 		// Token: 0x04002D1C RID: 11548
-		public const string PlaytimeOnMap = "PlaytimeOnMap";
+		public const string MinPlayerCount = "MinPlayerCount";
 
 		// Token: 0x04002D1D RID: 11549
-		public const string PlaytimeInSeconds = "PlaytimeInSeconds";
+		public const string MaxPlayerCount = "MaxPlayerCount";
 
 		// Token: 0x04002D1E RID: 11550
+		public const string PlaytimeOnMap = "PlaytimeOnMap";
+
+		// Token: 0x04002D1F RID: 11551
+		public const string PlaytimeInSeconds = "PlaytimeInSeconds";
+
+		// Token: 0x04002D20 RID: 11552
 		public const string PrivateRoom = "PrivateRoom";
 	}
 
 	// Token: 0x02000645 RID: 1605
 	private class BatchRunner : MonoBehaviour
 	{
-		// Token: 0x06002837 RID: 10295 RVA: 0x000C8FD8 File Offset: 0x000C71D8
+		// Token: 0x06002838 RID: 10296 RVA: 0x000C907C File Offset: 0x000C727C
 		private IEnumerator Start()
 		{
 			for (;;)

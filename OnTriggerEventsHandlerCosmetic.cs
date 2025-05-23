@@ -7,7 +7,7 @@ using UnityEngine.Events;
 [RequireComponent(typeof(OnTriggerEventsCosmetic))]
 public class OnTriggerEventsHandlerCosmetic : MonoBehaviour
 {
-	// Token: 0x06001B8F RID: 7055 RVA: 0x0008750E File Offset: 0x0008570E
+	// Token: 0x06001B8F RID: 7055 RVA: 0x0008752E File Offset: 0x0008572E
 	public void OnTriggerEntered()
 	{
 		if (this.toggleOnceOnly && this.triggerEntered)
@@ -23,7 +23,7 @@ public class OnTriggerEventsHandlerCosmetic : MonoBehaviour
 		this.ToggleEffects();
 	}
 
-	// Token: 0x06001B90 RID: 7056 RVA: 0x00087540 File Offset: 0x00085740
+	// Token: 0x06001B90 RID: 7056 RVA: 0x00087560 File Offset: 0x00085760
 	public void ToggleEffects()
 	{
 		if (this.particleToPlay)
@@ -45,7 +45,7 @@ public class OnTriggerEventsHandlerCosmetic : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001B91 RID: 7057 RVA: 0x000875AA File Offset: 0x000857AA
+	// Token: 0x06001B91 RID: 7057 RVA: 0x000875CA File Offset: 0x000857CA
 	private void Destroy()
 	{
 		this.triggerEntered = false;

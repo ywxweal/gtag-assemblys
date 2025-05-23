@@ -4,7 +4,7 @@ using UnityEngine;
 // Token: 0x02000584 RID: 1412
 public class GhostReactorLevelSectionConnector : MonoBehaviour
 {
-	// Token: 0x0600227C RID: 8828 RVA: 0x000ACC6B File Offset: 0x000AAE6B
+	// Token: 0x0600227C RID: 8828 RVA: 0x000ACC8B File Offset: 0x000AAE8B
 	public void Init()
 	{
 		GameEntityManager.instance.RequestCreateItem(this.gateEntity.name.GetStaticHash(), this.gateSpawnPoint.position, this.gateSpawnPoint.rotation, 0L);

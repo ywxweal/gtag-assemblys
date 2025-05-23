@@ -4,10 +4,10 @@
 internal interface ITickSystemPost
 {
 	// Token: 0x170005B9 RID: 1465
-	// (get) Token: 0x060039BD RID: 14781
-	// (set) Token: 0x060039BE RID: 14782
+	// (get) Token: 0x060039BE RID: 14782
+	// (set) Token: 0x060039BF RID: 14783
 	bool PostTickRunning { get; set; }
 
-	// Token: 0x060039BF RID: 14783
+	// Token: 0x060039C0 RID: 14784
 	void PostTick();
 }

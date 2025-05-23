@@ -9,7 +9,7 @@ namespace GorillaTagScripts.Builder
 	// Token: 0x02000B5C RID: 2908
 	public class BuilderPieceDoorSwinging : MonoBehaviour, IBuilderPieceComponent, IBuilderPieceFunctional
 	{
-		// Token: 0x060047D6 RID: 18390 RVA: 0x0015675C File Offset: 0x0015495C
+		// Token: 0x060047D7 RID: 18391 RVA: 0x00156834 File Offset: 0x00154A34
 		private void Awake()
 		{
 			foreach (BuilderSmallMonkeTrigger builderSmallMonkeTrigger in this.doorHoldTriggers)
@@ -21,7 +21,7 @@ namespace GorillaTagScripts.Builder
 			this.backTrigger.TriggeredEvent.AddListener(new UnityAction(this.OnBackTriggerEntered));
 		}
 
-		// Token: 0x060047D7 RID: 18391 RVA: 0x001567DC File Offset: 0x001549DC
+		// Token: 0x060047D8 RID: 18392 RVA: 0x001568B4 File Offset: 0x00154AB4
 		private void OnDestroy()
 		{
 			foreach (BuilderSmallMonkeTrigger builderSmallMonkeTrigger in this.doorHoldTriggers)
@@ -33,7 +33,7 @@ namespace GorillaTagScripts.Builder
 			this.backTrigger.TriggeredEvent.RemoveListener(new UnityAction(this.OnBackTriggerEntered));
 		}
 
-		// Token: 0x060047D8 RID: 18392 RVA: 0x0015685C File Offset: 0x00154A5C
+		// Token: 0x060047D9 RID: 18393 RVA: 0x00156934 File Offset: 0x00154B34
 		private void OnFrontTriggerEntered()
 		{
 			if (this.currentState == BuilderPieceDoorSwinging.SwingingDoorState.Closed)
@@ -47,7 +47,7 @@ namespace GorillaTagScripts.Builder
 			}
 		}
 
-		// Token: 0x060047D9 RID: 18393 RVA: 0x001568D0 File Offset: 0x00154AD0
+		// Token: 0x060047DA RID: 18394 RVA: 0x001569A8 File Offset: 0x00154BA8
 		private void OnBackTriggerEntered()
 		{
 			if (this.currentState == BuilderPieceDoorSwinging.SwingingDoorState.Closed)
@@ -61,7 +61,7 @@ namespace GorillaTagScripts.Builder
 			}
 		}
 
-		// Token: 0x060047DA RID: 18394 RVA: 0x00156944 File Offset: 0x00154B44
+		// Token: 0x060047DB RID: 18395 RVA: 0x00156A1C File Offset: 0x00154C1C
 		private void OnHoldTriggerEntered()
 		{
 			this.peopleInHoldOpenVolume = true;
@@ -87,7 +87,7 @@ namespace GorillaTagScripts.Builder
 			}
 		}
 
-		// Token: 0x060047DB RID: 18395 RVA: 0x001569F4 File Offset: 0x00154BF4
+		// Token: 0x060047DC RID: 18396 RVA: 0x00156ACC File Offset: 0x00154CCC
 		private void OnHoldTriggerExited()
 		{
 			this.peopleInHoldOpenVolume = false;
@@ -115,7 +115,7 @@ namespace GorillaTagScripts.Builder
 			}
 		}
 
-		// Token: 0x060047DC RID: 18396 RVA: 0x00156AC8 File Offset: 0x00154CC8
+		// Token: 0x060047DD RID: 18397 RVA: 0x00156BA0 File Offset: 0x00154DA0
 		private void SetDoorState(BuilderPieceDoorSwinging.SwingingDoorState value)
 		{
 			bool flag = this.currentState == BuilderPieceDoorSwinging.SwingingDoorState.Closed;
@@ -142,7 +142,7 @@ namespace GorillaTagScripts.Builder
 			}
 		}
 
-		// Token: 0x060047DD RID: 18397 RVA: 0x00156B50 File Offset: 0x00154D50
+		// Token: 0x060047DE RID: 18398 RVA: 0x00156C28 File Offset: 0x00154E28
 		private void UpdateDoorStateMaster()
 		{
 			switch (this.currentState)
@@ -222,7 +222,7 @@ namespace GorillaTagScripts.Builder
 			}
 		}
 
-		// Token: 0x060047DE RID: 18398 RVA: 0x00156D98 File Offset: 0x00154F98
+		// Token: 0x060047DF RID: 18399 RVA: 0x00156E70 File Offset: 0x00155070
 		private void UpdateDoorState()
 		{
 			switch (this.currentState)
@@ -257,7 +257,7 @@ namespace GorillaTagScripts.Builder
 			}
 		}
 
-		// Token: 0x060047DF RID: 18399 RVA: 0x00156E48 File Offset: 0x00155048
+		// Token: 0x060047E0 RID: 18400 RVA: 0x00156F20 File Offset: 0x00155120
 		private void CloseDoor()
 		{
 			switch (this.currentState)
@@ -281,7 +281,7 @@ namespace GorillaTagScripts.Builder
 			}
 		}
 
-		// Token: 0x060047E0 RID: 18400 RVA: 0x00156EA6 File Offset: 0x001550A6
+		// Token: 0x060047E1 RID: 18401 RVA: 0x00156F7E File Offset: 0x0015517E
 		private void OpenDoor(bool openIn)
 		{
 			if (this.currentState == BuilderPieceDoorSwinging.SwingingDoorState.Closed)
@@ -292,7 +292,7 @@ namespace GorillaTagScripts.Builder
 			}
 		}
 
-		// Token: 0x060047E1 RID: 18401 RVA: 0x00156ED4 File Offset: 0x001550D4
+		// Token: 0x060047E2 RID: 18402 RVA: 0x00156FAC File Offset: 0x001551AC
 		private void UpdateDoorAnimation()
 		{
 			switch (this.currentState)
@@ -328,7 +328,7 @@ namespace GorillaTagScripts.Builder
 			}
 		}
 
-		// Token: 0x060047E2 RID: 18402 RVA: 0x001570C4 File Offset: 0x001552C4
+		// Token: 0x060047E3 RID: 18403 RVA: 0x0015719C File Offset: 0x0015539C
 		public void OnPieceCreate(int pieceType, int pieceId)
 		{
 			this.tLastOpened = 0f;
@@ -341,17 +341,17 @@ namespace GorillaTagScripts.Builder
 			}
 		}
 
-		// Token: 0x060047E3 RID: 18403 RVA: 0x000023F4 File Offset: 0x000005F4
+		// Token: 0x060047E4 RID: 18404 RVA: 0x000023F4 File Offset: 0x000005F4
 		public void OnPieceDestroy()
 		{
 		}
 
-		// Token: 0x060047E4 RID: 18404 RVA: 0x000023F4 File Offset: 0x000005F4
+		// Token: 0x060047E5 RID: 18405 RVA: 0x000023F4 File Offset: 0x000005F4
 		public void OnPiecePlacementDeserialized()
 		{
 		}
 
-		// Token: 0x060047E5 RID: 18405 RVA: 0x0015710C File Offset: 0x0015530C
+		// Token: 0x060047E6 RID: 18406 RVA: 0x001571E4 File Offset: 0x001553E4
 		public void OnPieceActivate()
 		{
 			Collider[] array = this.triggerVolumes;
@@ -361,7 +361,7 @@ namespace GorillaTagScripts.Builder
 			}
 		}
 
-		// Token: 0x060047E6 RID: 18406 RVA: 0x00157138 File Offset: 0x00155338
+		// Token: 0x060047E7 RID: 18407 RVA: 0x00157210 File Offset: 0x00155410
 		public void OnPieceDeactivate()
 		{
 			Collider[] array = this.triggerVolumes;
@@ -379,7 +379,7 @@ namespace GorillaTagScripts.Builder
 			}
 		}
 
-		// Token: 0x060047E7 RID: 18407 RVA: 0x001571E4 File Offset: 0x001553E4
+		// Token: 0x060047E8 RID: 18408 RVA: 0x001572BC File Offset: 0x001554BC
 		public void OnStateChanged(byte newState, NetPlayer instigator, int timeStamp)
 		{
 			if (!this.IsStateValid(newState))
@@ -428,7 +428,7 @@ namespace GorillaTagScripts.Builder
 			this.SetDoorState((BuilderPieceDoorSwinging.SwingingDoorState)newState);
 		}
 
-		// Token: 0x060047E8 RID: 18408 RVA: 0x001572B4 File Offset: 0x001554B4
+		// Token: 0x060047E9 RID: 18409 RVA: 0x0015738C File Offset: 0x0015558C
 		public void OnStateRequest(byte newState, NetPlayer instigator, int timeStamp)
 		{
 			if (!NetworkSystem.Instance.IsMasterClient)
@@ -441,13 +441,13 @@ namespace GorillaTagScripts.Builder
 			}
 		}
 
-		// Token: 0x060047E9 RID: 18409 RVA: 0x00157312 File Offset: 0x00155512
+		// Token: 0x060047EA RID: 18410 RVA: 0x001573EA File Offset: 0x001555EA
 		public bool IsStateValid(byte state)
 		{
 			return state <= 8;
 		}
 
-		// Token: 0x060047EA RID: 18410 RVA: 0x0015731C File Offset: 0x0015551C
+		// Token: 0x060047EB RID: 18411 RVA: 0x001573F4 File Offset: 0x001555F4
 		public void FunctionalPieceUpdate()
 		{
 			if (this.myPiece != null && this.myPiece.state == BuilderPiece.State.AttachedAndPlaced)
@@ -468,121 +468,121 @@ namespace GorillaTagScripts.Builder
 			}
 		}
 
-		// Token: 0x04004A53 RID: 19027
+		// Token: 0x04004A54 RID: 19028
 		[SerializeField]
 		private BuilderPiece myPiece;
 
-		// Token: 0x04004A54 RID: 19028
+		// Token: 0x04004A55 RID: 19029
 		[SerializeField]
 		private Vector3 rotateAxis = Vector3.up;
 
-		// Token: 0x04004A55 RID: 19029
+		// Token: 0x04004A56 RID: 19030
 		[SerializeField]
 		private Transform doorTransform;
 
-		// Token: 0x04004A56 RID: 19030
+		// Token: 0x04004A57 RID: 19031
 		[SerializeField]
 		private Collider[] triggerVolumes;
 
-		// Token: 0x04004A57 RID: 19031
+		// Token: 0x04004A58 RID: 19032
 		[SerializeField]
 		private BuilderSmallMonkeTrigger[] doorHoldTriggers;
 
-		// Token: 0x04004A58 RID: 19032
+		// Token: 0x04004A59 RID: 19033
 		[SerializeField]
 		private BuilderSmallHandTrigger frontTrigger;
 
-		// Token: 0x04004A59 RID: 19033
+		// Token: 0x04004A5A RID: 19034
 		[SerializeField]
 		private BuilderSmallHandTrigger backTrigger;
 
-		// Token: 0x04004A5A RID: 19034
+		// Token: 0x04004A5B RID: 19035
 		[SerializeField]
 		private AudioSource audioSource;
 
-		// Token: 0x04004A5B RID: 19035
+		// Token: 0x04004A5C RID: 19036
 		[SerializeField]
 		private SoundBankPlayer openSound;
 
-		// Token: 0x04004A5C RID: 19036
+		// Token: 0x04004A5D RID: 19037
 		[SerializeField]
 		private SoundBankPlayer closeSound;
 
-		// Token: 0x04004A5D RID: 19037
+		// Token: 0x04004A5E RID: 19038
 		[SerializeField]
 		private float doorOpenSpeed = 1f;
 
-		// Token: 0x04004A5E RID: 19038
+		// Token: 0x04004A5F RID: 19039
 		[SerializeField]
 		private float doorCloseSpeed = 1f;
 
-		// Token: 0x04004A5F RID: 19039
+		// Token: 0x04004A60 RID: 19040
 		[SerializeField]
 		[Range(1.5f, 10f)]
 		private float timeUntilDoorCloses = 3f;
 
-		// Token: 0x04004A60 RID: 19040
+		// Token: 0x04004A61 RID: 19041
 		[SerializeField]
 		private float doorClosedVelocityMag = 30f;
 
-		// Token: 0x04004A61 RID: 19041
+		// Token: 0x04004A62 RID: 19042
 		[SerializeField]
 		private float dampingRatio = 0.5f;
 
-		// Token: 0x04004A62 RID: 19042
+		// Token: 0x04004A63 RID: 19043
 		[Header("Double Door Settings")]
 		[SerializeField]
 		private bool isDoubleDoor;
 
-		// Token: 0x04004A63 RID: 19043
+		// Token: 0x04004A64 RID: 19044
 		[SerializeField]
 		private Vector3 rotateAxisB = Vector3.down;
 
-		// Token: 0x04004A64 RID: 19044
+		// Token: 0x04004A65 RID: 19045
 		[SerializeField]
 		private Transform doorTransformB;
 
-		// Token: 0x04004A65 RID: 19045
+		// Token: 0x04004A66 RID: 19046
 		private BuilderPieceDoorSwinging.SwingingDoorState currentState;
 
-		// Token: 0x04004A66 RID: 19046
+		// Token: 0x04004A67 RID: 19047
 		private float tLastOpened;
 
-		// Token: 0x04004A67 RID: 19047
+		// Token: 0x04004A68 RID: 19048
 		private FloatSpring doorSpring;
 
-		// Token: 0x04004A68 RID: 19048
+		// Token: 0x04004A69 RID: 19049
 		private bool peopleInHoldOpenVolume;
 
-		// Token: 0x04004A69 RID: 19049
+		// Token: 0x04004A6A RID: 19050
 		private double checkHoldTriggersTime;
 
-		// Token: 0x04004A6A RID: 19050
+		// Token: 0x04004A6B RID: 19051
 		private float checkHoldTriggersDelay = 3f;
 
-		// Token: 0x04004A6B RID: 19051
+		// Token: 0x04004A6C RID: 19052
 		private int pushDirection = 1;
 
 		// Token: 0x02000B5D RID: 2909
 		private enum SwingingDoorState
 		{
-			// Token: 0x04004A6D RID: 19053
-			Closed,
 			// Token: 0x04004A6E RID: 19054
-			ClosingOut,
+			Closed,
 			// Token: 0x04004A6F RID: 19055
-			OpenOut,
+			ClosingOut,
 			// Token: 0x04004A70 RID: 19056
-			OpeningOut,
+			OpenOut,
 			// Token: 0x04004A71 RID: 19057
-			HeldOpenOut,
+			OpeningOut,
 			// Token: 0x04004A72 RID: 19058
-			ClosingIn,
+			HeldOpenOut,
 			// Token: 0x04004A73 RID: 19059
-			OpenIn,
+			ClosingIn,
 			// Token: 0x04004A74 RID: 19060
-			OpeningIn,
+			OpenIn,
 			// Token: 0x04004A75 RID: 19061
+			OpeningIn,
+			// Token: 0x04004A76 RID: 19062
 			HeldOpenIn
 		}
 	}

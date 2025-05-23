@@ -4,7 +4,7 @@ using UnityEngine;
 // Token: 0x0200082E RID: 2094
 public class KIDUI_RestrictedAccessScreen : MonoBehaviour
 {
-	// Token: 0x06003347 RID: 13127 RVA: 0x000FCEE4 File Offset: 0x000FB0E4
+	// Token: 0x06003348 RID: 13128 RVA: 0x000FCFBC File Offset: 0x000FB1BC
 	public void ShowRestrictedAccessScreen(SessionStatus? sessionStatus)
 	{
 		base.gameObject.SetActive(true);
@@ -34,7 +34,7 @@ public class KIDUI_RestrictedAccessScreen : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06003348 RID: 13128 RVA: 0x000FCF64 File Offset: 0x000FB164
+	// Token: 0x06003349 RID: 13129 RVA: 0x000FD03C File Offset: 0x000FB23C
 	public void OnChangeAgePressed()
 	{
 		PrivateUIRoom.RemoveUI(base.transform);
@@ -42,15 +42,15 @@ public class KIDUI_RestrictedAccessScreen : MonoBehaviour
 		this._ageAppealScreen.ShowAgeAppealScreen();
 	}
 
-	// Token: 0x04003A1B RID: 14875
+	// Token: 0x04003A1C RID: 14876
 	[SerializeField]
 	private KIDAgeAppeal _ageAppealScreen;
 
-	// Token: 0x04003A1C RID: 14876
+	// Token: 0x04003A1D RID: 14877
 	[SerializeField]
 	private GameObject _pendingStatusIndicator;
 
-	// Token: 0x04003A1D RID: 14877
+	// Token: 0x04003A1E RID: 14878
 	[SerializeField]
 	private GameObject _prohibitedStatusIndicator;
 }

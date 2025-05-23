@@ -7,8 +7,8 @@ namespace BoingKit
 	public struct Aabb
 	{
 		// Token: 0x17000909 RID: 2313
-		// (get) Token: 0x06005CE6 RID: 23782 RVA: 0x001CAB03 File Offset: 0x001C8D03
-		// (set) Token: 0x06005CE7 RID: 23783 RVA: 0x001CAB10 File Offset: 0x001C8D10
+		// (get) Token: 0x06005CE7 RID: 23783 RVA: 0x001CABDB File Offset: 0x001C8DDB
+		// (set) Token: 0x06005CE8 RID: 23784 RVA: 0x001CABE8 File Offset: 0x001C8DE8
 		public float MinX
 		{
 			get
@@ -22,8 +22,8 @@ namespace BoingKit
 		}
 
 		// Token: 0x1700090A RID: 2314
-		// (get) Token: 0x06005CE8 RID: 23784 RVA: 0x001CAB1E File Offset: 0x001C8D1E
-		// (set) Token: 0x06005CE9 RID: 23785 RVA: 0x001CAB2B File Offset: 0x001C8D2B
+		// (get) Token: 0x06005CE9 RID: 23785 RVA: 0x001CABF6 File Offset: 0x001C8DF6
+		// (set) Token: 0x06005CEA RID: 23786 RVA: 0x001CAC03 File Offset: 0x001C8E03
 		public float MinY
 		{
 			get
@@ -37,8 +37,8 @@ namespace BoingKit
 		}
 
 		// Token: 0x1700090B RID: 2315
-		// (get) Token: 0x06005CEA RID: 23786 RVA: 0x001CAB39 File Offset: 0x001C8D39
-		// (set) Token: 0x06005CEB RID: 23787 RVA: 0x001CAB46 File Offset: 0x001C8D46
+		// (get) Token: 0x06005CEB RID: 23787 RVA: 0x001CAC11 File Offset: 0x001C8E11
+		// (set) Token: 0x06005CEC RID: 23788 RVA: 0x001CAC1E File Offset: 0x001C8E1E
 		public float MinZ
 		{
 			get
@@ -52,8 +52,8 @@ namespace BoingKit
 		}
 
 		// Token: 0x1700090C RID: 2316
-		// (get) Token: 0x06005CEC RID: 23788 RVA: 0x001CAB54 File Offset: 0x001C8D54
-		// (set) Token: 0x06005CED RID: 23789 RVA: 0x001CAB61 File Offset: 0x001C8D61
+		// (get) Token: 0x06005CED RID: 23789 RVA: 0x001CAC2C File Offset: 0x001C8E2C
+		// (set) Token: 0x06005CEE RID: 23790 RVA: 0x001CAC39 File Offset: 0x001C8E39
 		public float MaxX
 		{
 			get
@@ -67,8 +67,8 @@ namespace BoingKit
 		}
 
 		// Token: 0x1700090D RID: 2317
-		// (get) Token: 0x06005CEE RID: 23790 RVA: 0x001CAB6F File Offset: 0x001C8D6F
-		// (set) Token: 0x06005CEF RID: 23791 RVA: 0x001CAB7C File Offset: 0x001C8D7C
+		// (get) Token: 0x06005CEF RID: 23791 RVA: 0x001CAC47 File Offset: 0x001C8E47
+		// (set) Token: 0x06005CF0 RID: 23792 RVA: 0x001CAC54 File Offset: 0x001C8E54
 		public float MaxY
 		{
 			get
@@ -82,8 +82,8 @@ namespace BoingKit
 		}
 
 		// Token: 0x1700090E RID: 2318
-		// (get) Token: 0x06005CF0 RID: 23792 RVA: 0x001CAB8A File Offset: 0x001C8D8A
-		// (set) Token: 0x06005CF1 RID: 23793 RVA: 0x001CAB97 File Offset: 0x001C8D97
+		// (get) Token: 0x06005CF1 RID: 23793 RVA: 0x001CAC62 File Offset: 0x001C8E62
+		// (set) Token: 0x06005CF2 RID: 23794 RVA: 0x001CAC6F File Offset: 0x001C8E6F
 		public float MaxZ
 		{
 			get
@@ -97,7 +97,7 @@ namespace BoingKit
 		}
 
 		// Token: 0x1700090F RID: 2319
-		// (get) Token: 0x06005CF2 RID: 23794 RVA: 0x001CABA5 File Offset: 0x001C8DA5
+		// (get) Token: 0x06005CF3 RID: 23795 RVA: 0x001CAC7D File Offset: 0x001C8E7D
 		public Vector3 Center
 		{
 			get
@@ -107,7 +107,7 @@ namespace BoingKit
 		}
 
 		// Token: 0x17000910 RID: 2320
-		// (get) Token: 0x06005CF3 RID: 23795 RVA: 0x001CABC4 File Offset: 0x001C8DC4
+		// (get) Token: 0x06005CF4 RID: 23796 RVA: 0x001CAC9C File Offset: 0x001C8E9C
 		public Vector3 Size
 		{
 			get
@@ -121,7 +121,7 @@ namespace BoingKit
 		}
 
 		// Token: 0x17000911 RID: 2321
-		// (get) Token: 0x06005CF4 RID: 23796 RVA: 0x001CAC29 File Offset: 0x001C8E29
+		// (get) Token: 0x06005CF5 RID: 23797 RVA: 0x001CAD01 File Offset: 0x001C8F01
 		public static Aabb Empty
 		{
 			get
@@ -130,7 +130,7 @@ namespace BoingKit
 			}
 		}
 
-		// Token: 0x06005CF5 RID: 23797 RVA: 0x001CAC58 File Offset: 0x001C8E58
+		// Token: 0x06005CF6 RID: 23798 RVA: 0x001CAD30 File Offset: 0x001C8F30
 		public static Aabb FromPoint(Vector3 p)
 		{
 			Aabb empty = Aabb.Empty;
@@ -138,7 +138,7 @@ namespace BoingKit
 			return empty;
 		}
 
-		// Token: 0x06005CF6 RID: 23798 RVA: 0x001CAC74 File Offset: 0x001C8E74
+		// Token: 0x06005CF7 RID: 23799 RVA: 0x001CAD4C File Offset: 0x001C8F4C
 		public static Aabb FromPoints(Vector3 a, Vector3 b)
 		{
 			Aabb empty = Aabb.Empty;
@@ -147,14 +147,14 @@ namespace BoingKit
 			return empty;
 		}
 
-		// Token: 0x06005CF7 RID: 23799 RVA: 0x001CAC98 File Offset: 0x001C8E98
+		// Token: 0x06005CF8 RID: 23800 RVA: 0x001CAD70 File Offset: 0x001C8F70
 		public Aabb(Vector3 min, Vector3 max)
 		{
 			this.Min = min;
 			this.Max = max;
 		}
 
-		// Token: 0x06005CF8 RID: 23800 RVA: 0x001CACA8 File Offset: 0x001C8EA8
+		// Token: 0x06005CF9 RID: 23801 RVA: 0x001CAD80 File Offset: 0x001C8F80
 		public void Include(Vector3 p)
 		{
 			this.MinX = Mathf.Min(this.MinX, p.x);
@@ -165,37 +165,37 @@ namespace BoingKit
 			this.MaxZ = Mathf.Max(this.MaxZ, p.z);
 		}
 
-		// Token: 0x06005CF9 RID: 23801 RVA: 0x001CAD40 File Offset: 0x001C8F40
+		// Token: 0x06005CFA RID: 23802 RVA: 0x001CAE18 File Offset: 0x001C9018
 		public bool Contains(Vector3 p)
 		{
 			return this.MinX <= p.x && this.MinY <= p.y && this.MinZ <= p.z && this.MaxX >= p.x && this.MaxY >= p.y && this.MaxZ >= p.z;
 		}
 
-		// Token: 0x06005CFA RID: 23802 RVA: 0x001CADA6 File Offset: 0x001C8FA6
+		// Token: 0x06005CFB RID: 23803 RVA: 0x001CAE7E File Offset: 0x001C907E
 		public bool ContainsX(Vector3 p)
 		{
 			return this.MinX <= p.x && this.MaxX >= p.x;
 		}
 
-		// Token: 0x06005CFB RID: 23803 RVA: 0x001CADC9 File Offset: 0x001C8FC9
+		// Token: 0x06005CFC RID: 23804 RVA: 0x001CAEA1 File Offset: 0x001C90A1
 		public bool ContainsY(Vector3 p)
 		{
 			return this.MinY <= p.y && this.MaxY >= p.y;
 		}
 
-		// Token: 0x06005CFC RID: 23804 RVA: 0x001CADEC File Offset: 0x001C8FEC
+		// Token: 0x06005CFD RID: 23805 RVA: 0x001CAEC4 File Offset: 0x001C90C4
 		public bool ContainsZ(Vector3 p)
 		{
 			return this.MinZ <= p.z && this.MaxZ >= p.z;
 		}
 
-		// Token: 0x06005CFD RID: 23805 RVA: 0x001CAE10 File Offset: 0x001C9010
+		// Token: 0x06005CFE RID: 23806 RVA: 0x001CAEE8 File Offset: 0x001C90E8
 		public bool Intersects(Aabb rhs)
 		{
 			return this.MinX <= rhs.MaxX && this.MinY <= rhs.MaxY && this.MinZ <= rhs.MaxZ && this.MaxX >= rhs.MinX && this.MaxY >= rhs.MinY && this.MaxZ >= rhs.MinZ;
 		}
 
-		// Token: 0x06005CFE RID: 23806 RVA: 0x001CAE7C File Offset: 0x001C907C
+		// Token: 0x06005CFF RID: 23807 RVA: 0x001CAF54 File Offset: 0x001C9154
 		public bool Intersects(ref BoingEffector.Params effector)
 		{
 			if (!effector.Bits.IsBitSet(0))
@@ -205,7 +205,7 @@ namespace BoingKit
 			return this.Intersects(Aabb.FromPoints(effector.PrevPosition, effector.CurrPosition).Expand(effector.Radius));
 		}
 
-		// Token: 0x06005CFF RID: 23807 RVA: 0x001CAEDC File Offset: 0x001C90DC
+		// Token: 0x06005D00 RID: 23808 RVA: 0x001CAFB4 File Offset: 0x001C91B4
 		public Aabb Expand(float amount)
 		{
 			this.MinX -= amount;
@@ -217,10 +217,10 @@ namespace BoingKit
 			return this;
 		}
 
-		// Token: 0x0400611C RID: 24860
+		// Token: 0x0400611D RID: 24861
 		public Vector3 Min;
 
-		// Token: 0x0400611D RID: 24861
+		// Token: 0x0400611E RID: 24862
 		public Vector3 Max;
 	}
 }

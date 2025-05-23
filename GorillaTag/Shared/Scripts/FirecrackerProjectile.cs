@@ -9,11 +9,11 @@ namespace GorillaTag.Shared.Scripts
 	public class FirecrackerProjectile : MonoBehaviour, ITickSystemTick, IProjectile
 	{
 		// Token: 0x17000897 RID: 2199
-		// (get) Token: 0x060055C1 RID: 21953 RVA: 0x001A1639 File Offset: 0x0019F839
-		// (set) Token: 0x060055C2 RID: 21954 RVA: 0x001A1641 File Offset: 0x0019F841
+		// (get) Token: 0x060055C2 RID: 21954 RVA: 0x001A1711 File Offset: 0x0019F911
+		// (set) Token: 0x060055C3 RID: 21955 RVA: 0x001A1719 File Offset: 0x0019F919
 		public bool TickRunning { get; set; }
 
-		// Token: 0x060055C3 RID: 21955 RVA: 0x001A164A File Offset: 0x0019F84A
+		// Token: 0x060055C4 RID: 21956 RVA: 0x001A1722 File Offset: 0x0019F922
 		public void Tick()
 		{
 			if (Time.time - this.timeCreated > this.forceBackToPoolAfterSec || Time.time - this.timeExploded > this.explosionTime)
@@ -27,7 +27,7 @@ namespace GorillaTag.Shared.Scripts
 			}
 		}
 
-		// Token: 0x060055C4 RID: 21956 RVA: 0x001A1688 File Offset: 0x0019F888
+		// Token: 0x060055C5 RID: 21957 RVA: 0x001A1760 File Offset: 0x0019F960
 		private void OnEnable()
 		{
 			TickSystem<object>.AddCallbackTarget(this);
@@ -41,14 +41,14 @@ namespace GorillaTag.Shared.Scripts
 			}
 		}
 
-		// Token: 0x060055C5 RID: 21957 RVA: 0x001A16DC File Offset: 0x0019F8DC
+		// Token: 0x060055C6 RID: 21958 RVA: 0x001A17B4 File Offset: 0x0019F9B4
 		private void OnDisable()
 		{
 			TickSystem<object>.RemoveCallbackTarget(this);
 			this.m_timer.Stop();
 		}
 
-		// Token: 0x060055C6 RID: 21958 RVA: 0x001A16EF File Offset: 0x0019F8EF
+		// Token: 0x060055C7 RID: 21959 RVA: 0x001A17C7 File Offset: 0x0019F9C7
 		private void Awake()
 		{
 			this.rb = base.GetComponent<Rigidbody>();
@@ -56,7 +56,7 @@ namespace GorillaTag.Shared.Scripts
 			this.m_timer.callback = new Action(this.Detonate);
 		}
 
-		// Token: 0x060055C7 RID: 21959 RVA: 0x001A1720 File Offset: 0x0019F920
+		// Token: 0x060055C8 RID: 21960 RVA: 0x001A17F8 File Offset: 0x0019F9F8
 		private void Detonate()
 		{
 			this.m_timer.Stop();
@@ -68,7 +68,7 @@ namespace GorillaTag.Shared.Scripts
 			this.collisionEntered = false;
 		}
 
-		// Token: 0x060055C8 RID: 21960 RVA: 0x001A1758 File Offset: 0x0019F958
+		// Token: 0x060055C9 RID: 21961 RVA: 0x001A1830 File Offset: 0x0019FA30
 		public void Launch(Vector3 startPosition, Quaternion startRotation, Vector3 velocity, float scale)
 		{
 			base.transform.position = startPosition;
@@ -77,7 +77,7 @@ namespace GorillaTag.Shared.Scripts
 			this.rb.velocity = velocity;
 		}
 
-		// Token: 0x060055C9 RID: 21961 RVA: 0x001A1798 File Offset: 0x0019F998
+		// Token: 0x060055CA RID: 21962 RVA: 0x001A1870 File Offset: 0x0019FA70
 		private void OnCollisionEnter(Collision other)
 		{
 			if (this.collisionEntered)
@@ -102,7 +102,7 @@ namespace GorillaTag.Shared.Scripts
 			this.collisionEntered = true;
 		}
 
-		// Token: 0x060055CA RID: 21962 RVA: 0x001A1812 File Offset: 0x0019FA12
+		// Token: 0x060055CB RID: 21963 RVA: 0x001A18EA File Offset: 0x0019FAEA
 		private IEnumerator Sizzle(Vector3 contactPoint, Vector3 normal)
 		{
 			if (this.audioSource && this.sizzleAudioClip != null)
@@ -119,7 +119,7 @@ namespace GorillaTag.Shared.Scripts
 			yield break;
 		}
 
-		// Token: 0x060055CB RID: 21963 RVA: 0x001A1830 File Offset: 0x0019FA30
+		// Token: 0x060055CC RID: 21964 RVA: 0x001A1908 File Offset: 0x0019FB08
 		private void Detonate(Vector3 contactPoint, Vector3 normal)
 		{
 			this.timeExploded = Time.time;
@@ -138,52 +138,52 @@ namespace GorillaTag.Shared.Scripts
 			this.collisionEntered = false;
 		}
 
-		// Token: 0x04005908 RID: 22792
+		// Token: 0x04005909 RID: 22793
 		[SerializeField]
 		private GameObject explosionEffect;
 
-		// Token: 0x04005909 RID: 22793
+		// Token: 0x0400590A RID: 22794
 		[SerializeField]
 		private float forceBackToPoolAfterSec = 20f;
 
-		// Token: 0x0400590A RID: 22794
+		// Token: 0x0400590B RID: 22795
 		[SerializeField]
 		private float explosionTime = 5f;
 
-		// Token: 0x0400590B RID: 22795
+		// Token: 0x0400590C RID: 22796
 		[SerializeField]
 		private GameObject disableWhenHit;
 
-		// Token: 0x0400590C RID: 22796
+		// Token: 0x0400590D RID: 22797
 		[SerializeField]
 		private float sizzleDuration;
 
-		// Token: 0x0400590D RID: 22797
+		// Token: 0x0400590E RID: 22798
 		[SerializeField]
 		private AudioClip sizzleAudioClip;
 
-		// Token: 0x0400590E RID: 22798
+		// Token: 0x0400590F RID: 22799
 		public Action<FirecrackerProjectile> OnHitComplete;
 
-		// Token: 0x0400590F RID: 22799
+		// Token: 0x04005910 RID: 22800
 		public Action<FirecrackerProjectile, Vector3> OnHitStart;
 
-		// Token: 0x04005910 RID: 22800
+		// Token: 0x04005911 RID: 22801
 		private Rigidbody rb;
 
-		// Token: 0x04005911 RID: 22801
+		// Token: 0x04005912 RID: 22802
 		private float timeCreated = float.PositiveInfinity;
 
-		// Token: 0x04005912 RID: 22802
+		// Token: 0x04005913 RID: 22803
 		private float timeExploded = float.PositiveInfinity;
 
-		// Token: 0x04005913 RID: 22803
+		// Token: 0x04005914 RID: 22804
 		private AudioSource audioSource;
 
-		// Token: 0x04005914 RID: 22804
+		// Token: 0x04005915 RID: 22805
 		private TickSystemTimer m_timer = new TickSystemTimer(40f);
 
-		// Token: 0x04005915 RID: 22805
+		// Token: 0x04005916 RID: 22806
 		private bool collisionEntered;
 	}
 }

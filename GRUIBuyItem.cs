@@ -6,7 +6,7 @@ using UnityEngine.UI;
 // Token: 0x020005CD RID: 1485
 public class GRUIBuyItem : MonoBehaviour
 {
-	// Token: 0x06002436 RID: 9270 RVA: 0x000B641B File Offset: 0x000B461B
+	// Token: 0x06002436 RID: 9270 RVA: 0x000B643B File Offset: 0x000B463B
 	public void Setup(int standId)
 	{
 		this.standId = standId;
@@ -14,14 +14,14 @@ public class GRUIBuyItem : MonoBehaviour
 		this.entityTypeId = this.entityPrefab.gameObject.name.GetStaticHash();
 	}
 
-	// Token: 0x06002437 RID: 9271 RVA: 0x000B645C File Offset: 0x000B465C
+	// Token: 0x06002437 RID: 9271 RVA: 0x000B647C File Offset: 0x000B467C
 	public void OnBuyItem()
 	{
 		int itemCost = GhostReactor.instance.GetItemCost(this.entityTypeId);
 		int currency = VRRig.LocalRig.GetComponent<GRPlayer>().currency;
 	}
 
-	// Token: 0x06002438 RID: 9272 RVA: 0x000B648C File Offset: 0x000B468C
+	// Token: 0x06002438 RID: 9272 RVA: 0x000B64AC File Offset: 0x000B46AC
 	public Transform GetSpawnMarker()
 	{
 		return this.spawnMarker;

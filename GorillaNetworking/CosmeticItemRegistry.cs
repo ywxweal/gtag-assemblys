@@ -7,7 +7,7 @@ namespace GorillaNetworking
 	// Token: 0x02000C0C RID: 3084
 	public class CosmeticItemRegistry
 	{
-		// Token: 0x06004C2B RID: 19499 RVA: 0x00168DB0 File Offset: 0x00166FB0
+		// Token: 0x06004C2C RID: 19500 RVA: 0x00168E88 File Offset: 0x00167088
 		public void Initialize(GameObject[] cosmeticGObjs)
 		{
 			if (this._isInitialized)
@@ -45,7 +45,7 @@ namespace GorillaNetworking
 			}
 		}
 
-		// Token: 0x06004C2C RID: 19500 RVA: 0x00168E98 File Offset: 0x00167098
+		// Token: 0x06004C2D RID: 19501 RVA: 0x00168F70 File Offset: 0x00167170
 		public CosmeticItemInstance Cosmetic(string itemName)
 		{
 			if (!this._isInitialized)
@@ -65,13 +65,13 @@ namespace GorillaNetworking
 			return cosmeticItemInstance;
 		}
 
-		// Token: 0x04004F17 RID: 20247
+		// Token: 0x04004F18 RID: 20248
 		private bool _isInitialized;
 
-		// Token: 0x04004F18 RID: 20248
+		// Token: 0x04004F19 RID: 20249
 		private Dictionary<string, CosmeticItemInstance> nameToCosmeticMap = new Dictionary<string, CosmeticItemInstance>();
 
-		// Token: 0x04004F19 RID: 20249
+		// Token: 0x04004F1A RID: 20250
 		private GameObject nullItem;
 	}
 }

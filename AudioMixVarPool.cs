@@ -5,7 +5,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "New AudioMixVarPool", menuName = "ScriptableObjects/AudioMixVarPool", order = 0)]
 public class AudioMixVarPool : ScriptableObject
 {
-	// Token: 0x06001CE7 RID: 7399 RVA: 0x0008C284 File Offset: 0x0008A484
+	// Token: 0x06001CE7 RID: 7399 RVA: 0x0008C2A4 File Offset: 0x0008A4A4
 	public bool Rent(out AudioMixVar mixVar)
 	{
 		for (int i = 0; i < this._vars.Length; i++)
@@ -21,7 +21,7 @@ public class AudioMixVarPool : ScriptableObject
 		return false;
 	}
 
-	// Token: 0x06001CE8 RID: 7400 RVA: 0x0008C2D4 File Offset: 0x0008A4D4
+	// Token: 0x06001CE8 RID: 7400 RVA: 0x0008C2F4 File Offset: 0x0008A4F4
 	public void Return(AudioMixVar mixVar)
 	{
 		if (mixVar == null)

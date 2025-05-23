@@ -9,7 +9,7 @@ namespace GorillaTagScripts.Builder
 	// Token: 0x02000B91 RID: 2961
 	public class SharedBlocksScreenSearch : SharedBlocksScreen, IGorillaSliceableSimple
 	{
-		// Token: 0x0600494B RID: 18763 RVA: 0x0015E1FC File Offset: 0x0015C3FC
+		// Token: 0x0600494C RID: 18764 RVA: 0x0015E2D4 File Offset: 0x0015C4D4
 		public override void OnSelectPressed()
 		{
 			if (SharedBlocksManager.IsMapIDValid(this.currentMapCode))
@@ -26,7 +26,7 @@ namespace GorillaTagScripts.Builder
 			this.terminal.SetStatusText("INVALID MAP ID");
 		}
 
-		// Token: 0x0600494C RID: 18764 RVA: 0x0015E263 File Offset: 0x0015C463
+		// Token: 0x0600494D RID: 18765 RVA: 0x0015E33B File Offset: 0x0015C53B
 		public override void OnDeletePressed()
 		{
 			if (this.currentMapCode.Length > 0)
@@ -36,7 +36,7 @@ namespace GorillaTagScripts.Builder
 			}
 		}
 
-		// Token: 0x0600494D RID: 18765 RVA: 0x0015E298 File Offset: 0x0015C498
+		// Token: 0x0600494E RID: 18766 RVA: 0x0015E370 File Offset: 0x0015C570
 		public override void OnNumberPressed(int number)
 		{
 			if (this.currentMapCode.Length < 8)
@@ -46,7 +46,7 @@ namespace GorillaTagScripts.Builder
 			}
 		}
 
-		// Token: 0x0600494E RID: 18766 RVA: 0x0015E2C6 File Offset: 0x0015C4C6
+		// Token: 0x0600494F RID: 18767 RVA: 0x0015E39E File Offset: 0x0015C59E
 		public override void OnLetterPressed(string letter)
 		{
 			if (this.currentMapCode.Length < 8)
@@ -56,7 +56,7 @@ namespace GorillaTagScripts.Builder
 			}
 		}
 
-		// Token: 0x0600494F RID: 18767 RVA: 0x0015E2F0 File Offset: 0x0015C4F0
+		// Token: 0x06004950 RID: 18768 RVA: 0x0015E3C8 File Offset: 0x0015C5C8
 		public override void Show()
 		{
 			SharedBlocksManager.OnRecentMapIdsUpdated += this.DrawScreen;
@@ -73,7 +73,7 @@ namespace GorillaTagScripts.Builder
 			}
 		}
 
-		// Token: 0x06004950 RID: 18768 RVA: 0x0015E37C File Offset: 0x0015C57C
+		// Token: 0x06004951 RID: 18769 RVA: 0x0015E454 File Offset: 0x0015C654
 		public override void Hide()
 		{
 			BuilderTable table = this.terminal.GetTable();
@@ -88,25 +88,25 @@ namespace GorillaTagScripts.Builder
 			base.Hide();
 		}
 
-		// Token: 0x06004951 RID: 18769 RVA: 0x0015E404 File Offset: 0x0015C604
+		// Token: 0x06004952 RID: 18770 RVA: 0x0015E4DC File Offset: 0x0015C6DC
 		private void OnMapLoaded(string mapID)
 		{
 			this.loadedMap.text = "LOADED MAP : " + (SharedBlocksManager.IsMapIDValid(mapID) ? SharedBlocksTerminal.MapIDToDisplayedString(mapID) : "NONE");
 		}
 
-		// Token: 0x06004952 RID: 18770 RVA: 0x0015E430 File Offset: 0x0015C630
+		// Token: 0x06004953 RID: 18771 RVA: 0x0015E508 File Offset: 0x0015C708
 		private void OnMapCleared()
 		{
 			this.loadedMap.text = "LOADED MAP : NONE";
 		}
 
-		// Token: 0x06004953 RID: 18771 RVA: 0x0015E442 File Offset: 0x0015C642
+		// Token: 0x06004954 RID: 18772 RVA: 0x0015E51A File Offset: 0x0015C71A
 		private void UpdateInput()
 		{
 			this.inputText.text = "MAP SEARCH : " + SharedBlocksTerminal.MapIDToDisplayedString(this.currentMapCode);
 		}
 
-		// Token: 0x06004954 RID: 18772 RVA: 0x0015E464 File Offset: 0x0015C664
+		// Token: 0x06004955 RID: 18773 RVA: 0x0015E53C File Offset: 0x0015C73C
 		public void SetMapCode(string mapCode)
 		{
 			if (mapCode == null)
@@ -120,7 +120,7 @@ namespace GorillaTagScripts.Builder
 			this.UpdateInput();
 		}
 
-		// Token: 0x06004955 RID: 18773 RVA: 0x0015E483 File Offset: 0x0015C683
+		// Token: 0x06004956 RID: 18774 RVA: 0x0015E55B File Offset: 0x0015C75B
 		public void SetInputTextEnabled(bool enabled)
 		{
 			if (enabled)
@@ -131,7 +131,7 @@ namespace GorillaTagScripts.Builder
 			this.inputText.color = Color.gray;
 		}
 
-		// Token: 0x06004956 RID: 18774 RVA: 0x0015E4AC File Offset: 0x0015C6AC
+		// Token: 0x06004957 RID: 18775 RVA: 0x0015E584 File Offset: 0x0015C784
 		private void DrawScreen()
 		{
 			this.UpdateInput();
@@ -159,7 +159,7 @@ namespace GorillaTagScripts.Builder
 			this.myScanList.text = this.sb.ToString();
 		}
 
-		// Token: 0x06004957 RID: 18775 RVA: 0x0015E5F4 File Offset: 0x0015C7F4
+		// Token: 0x06004958 RID: 18776 RVA: 0x0015E6CC File Offset: 0x0015C8CC
 		private void RefreshPlayerCounter()
 		{
 			this.terminal.RefreshLobbyCount();
@@ -167,13 +167,13 @@ namespace GorillaTagScripts.Builder
 			this.playersInLobbyWarning.gameObject.SetActive(!this.terminal.AreAllPlayersInLobby());
 		}
 
-		// Token: 0x06004958 RID: 18776 RVA: 0x0015E640 File Offset: 0x0015C840
+		// Token: 0x06004959 RID: 18777 RVA: 0x0015E718 File Offset: 0x0015C918
 		public void SliceUpdate()
 		{
 			this.RefreshPlayerCounter();
 		}
 
-		// Token: 0x06004959 RID: 18777 RVA: 0x0015E648 File Offset: 0x0015C848
+		// Token: 0x0600495A RID: 18778 RVA: 0x0015E720 File Offset: 0x0015C920
 		public void OnEnable()
 		{
 			if (!this.updating)
@@ -185,13 +185,13 @@ namespace GorillaTagScripts.Builder
 			RoomSystem.PlayersChangedEvent = (Action)Delegate.Combine(RoomSystem.PlayersChangedEvent, new Action(this.PlayersChangedEvent));
 		}
 
-		// Token: 0x0600495A RID: 18778 RVA: 0x0015E640 File Offset: 0x0015C840
+		// Token: 0x0600495B RID: 18779 RVA: 0x0015E718 File Offset: 0x0015C918
 		private void PlayersChangedEvent()
 		{
 			this.RefreshPlayerCounter();
 		}
 
-		// Token: 0x0600495B RID: 18779 RVA: 0x0015E686 File Offset: 0x0015C886
+		// Token: 0x0600495C RID: 18780 RVA: 0x0015E75E File Offset: 0x0015C95E
 		public void OnDisable()
 		{
 			if (this.updating)
@@ -202,50 +202,50 @@ namespace GorillaTagScripts.Builder
 			RoomSystem.PlayersChangedEvent = (Action)Delegate.Remove(RoomSystem.PlayersChangedEvent, new Action(this.PlayersChangedEvent));
 		}
 
-		// Token: 0x0600495D RID: 18781 RVA: 0x00011040 File Offset: 0x0000F240
+		// Token: 0x0600495E RID: 18782 RVA: 0x00011040 File Offset: 0x0000F240
 		bool IGorillaSliceableSimple.get_isActiveAndEnabled()
 		{
 			return base.isActiveAndEnabled;
 		}
 
-		// Token: 0x04004C24 RID: 19492
+		// Token: 0x04004C25 RID: 19493
 		[SerializeField]
 		private TMP_Text loadedMap;
 
-		// Token: 0x04004C25 RID: 19493
+		// Token: 0x04004C26 RID: 19494
 		[SerializeField]
 		private TMP_Text inputText;
 
-		// Token: 0x04004C26 RID: 19494
+		// Token: 0x04004C27 RID: 19495
 		[SerializeField]
 		private TMP_Text statusText;
 
-		// Token: 0x04004C27 RID: 19495
+		// Token: 0x04004C28 RID: 19496
 		[SerializeField]
 		private TMP_Text recentList;
 
-		// Token: 0x04004C28 RID: 19496
+		// Token: 0x04004C29 RID: 19497
 		[SerializeField]
 		private TMP_Text myScanList;
 
-		// Token: 0x04004C29 RID: 19497
+		// Token: 0x04004C2A RID: 19498
 		[SerializeField]
 		private TMP_Text playerCountText;
 
-		// Token: 0x04004C2A RID: 19498
+		// Token: 0x04004C2B RID: 19499
 		[SerializeField]
 		private TMP_Text playersInLobbyWarning;
 
-		// Token: 0x04004C2B RID: 19499
+		// Token: 0x04004C2C RID: 19500
 		private string currentMapCode;
 
-		// Token: 0x04004C2C RID: 19500
+		// Token: 0x04004C2D RID: 19501
 		private string savedMapCode;
 
-		// Token: 0x04004C2D RID: 19501
+		// Token: 0x04004C2E RID: 19502
 		private StringBuilder sb = new StringBuilder();
 
-		// Token: 0x04004C2E RID: 19502
+		// Token: 0x04004C2F RID: 19503
 		private bool updating;
 	}
 }

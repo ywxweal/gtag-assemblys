@@ -5,12 +5,12 @@ using UnityEngine;
 [Serializable]
 public class VoiceLoudnessReactorAnimatorTarget
 {
-	// Token: 0x04004294 RID: 17044
+	// Token: 0x04004295 RID: 17045
 	public Animator animator;
 
-	// Token: 0x04004295 RID: 17045
+	// Token: 0x04004296 RID: 17046
 	public bool useSmoothedLoudness;
 
-	// Token: 0x04004296 RID: 17046
+	// Token: 0x04004297 RID: 17047
 	public float animatorSpeedToLoudness = 1f;
 }

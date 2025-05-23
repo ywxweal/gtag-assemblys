@@ -9,8 +9,8 @@ namespace Fusion.CodeGen
 	internal class UnityLinkedListSurrogate@ReaderWriter@System_Byte : UnityLinkedListSurrogate<byte, ReaderWriter@System_Byte>
 	{
 		// Token: 0x17000926 RID: 2342
-		// (get) Token: 0x06005DEB RID: 24043 RVA: 0x001CD55C File Offset: 0x001CB75C
-		// (set) Token: 0x06005DEC RID: 24044 RVA: 0x001CD564 File Offset: 0x001CB764
+		// (get) Token: 0x06005DEC RID: 24044 RVA: 0x001CD634 File Offset: 0x001CB834
+		// (set) Token: 0x06005DED RID: 24045 RVA: 0x001CD63C File Offset: 0x001CB83C
 		[WeaverGenerated]
 		public override byte[] DataProperty
 		{
@@ -26,13 +26,13 @@ namespace Fusion.CodeGen
 			}
 		}
 
-		// Token: 0x06005DED RID: 24045 RVA: 0x001CD56D File Offset: 0x001CB76D
+		// Token: 0x06005DEE RID: 24046 RVA: 0x001CD645 File Offset: 0x001CB845
 		[WeaverGenerated]
 		public UnityLinkedListSurrogate@ReaderWriter@System_Byte()
 		{
 		}
 
-		// Token: 0x040064B1 RID: 25777
+		// Token: 0x040064B2 RID: 25778
 		[WeaverGenerated]
 		public byte[] Data = Array.Empty<byte>();
 	}

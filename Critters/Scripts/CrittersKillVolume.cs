@@ -7,7 +7,7 @@ namespace Critters.Scripts
 	// Token: 0x02000E1C RID: 3612
 	public class CrittersKillVolume : MonoBehaviour
 	{
-		// Token: 0x06005A75 RID: 23157 RVA: 0x001B8FF8 File Offset: 0x001B71F8
+		// Token: 0x06005A76 RID: 23158 RVA: 0x001B90D0 File Offset: 0x001B72D0
 		private void OnTriggerEnter(Collider other)
 		{
 			if (other.attachedRigidbody)

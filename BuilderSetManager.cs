@@ -16,11 +16,11 @@ using UnityEngine.Events;
 public class BuilderSetManager : MonoBehaviour
 {
 	// Token: 0x1700032D RID: 813
-	// (get) Token: 0x06001F72 RID: 8050 RVA: 0x0009E124 File Offset: 0x0009C324
-	// (set) Token: 0x06001F73 RID: 8051 RVA: 0x0009E12B File Offset: 0x0009C32B
+	// (get) Token: 0x06001F72 RID: 8050 RVA: 0x0009E144 File Offset: 0x0009C344
+	// (set) Token: 0x06001F73 RID: 8051 RVA: 0x0009E14B File Offset: 0x0009C34B
 	public static bool hasInstance { get; private set; }
 
-	// Token: 0x06001F74 RID: 8052 RVA: 0x0009E134 File Offset: 0x0009C334
+	// Token: 0x06001F74 RID: 8052 RVA: 0x0009E154 File Offset: 0x0009C354
 	public string GetStarterSetsConcat()
 	{
 		if (BuilderSetManager.concatStarterSets.Length > 0)
@@ -35,7 +35,7 @@ public class BuilderSetManager : MonoBehaviour
 		return BuilderSetManager.concatStarterSets;
 	}
 
-	// Token: 0x06001F75 RID: 8053 RVA: 0x0009E1B8 File Offset: 0x0009C3B8
+	// Token: 0x06001F75 RID: 8053 RVA: 0x0009E1D8 File Offset: 0x0009C3D8
 	public string GetAllSetsConcat()
 	{
 		if (BuilderSetManager.concatAllSets.Length > 0)
@@ -50,7 +50,7 @@ public class BuilderSetManager : MonoBehaviour
 		return BuilderSetManager.concatAllSets;
 	}
 
-	// Token: 0x06001F76 RID: 8054 RVA: 0x0009E23C File Offset: 0x0009C43C
+	// Token: 0x06001F76 RID: 8054 RVA: 0x0009E25C File Offset: 0x0009C45C
 	public void Awake()
 	{
 		if (BuilderSetManager.instance == null)
@@ -70,7 +70,7 @@ public class BuilderSetManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001F77 RID: 8055 RVA: 0x0009E2A4 File Offset: 0x0009C4A4
+	// Token: 0x06001F77 RID: 8055 RVA: 0x0009E2C4 File Offset: 0x0009C4C4
 	private void Init()
 	{
 		this.catalog = "DLC";
@@ -158,7 +158,7 @@ public class BuilderSetManager : MonoBehaviour
 		this._unlockedPieceSets.AddRange(this._starterPieceSets);
 	}
 
-	// Token: 0x06001F78 RID: 8056 RVA: 0x0009E5FC File Offset: 0x0009C7FC
+	// Token: 0x06001F78 RID: 8056 RVA: 0x0009E61C File Offset: 0x0009C81C
 	private void OnEnable()
 	{
 		if (this.monitor == null && this.scheduledPieceSets.Count > 0)
@@ -167,7 +167,7 @@ public class BuilderSetManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001F79 RID: 8057 RVA: 0x0009E626 File Offset: 0x0009C826
+	// Token: 0x06001F79 RID: 8057 RVA: 0x0009E646 File Offset: 0x0009C846
 	private void OnDisable()
 	{
 		if (this.monitor != null)
@@ -177,7 +177,7 @@ public class BuilderSetManager : MonoBehaviour
 		this.monitor = null;
 	}
 
-	// Token: 0x06001F7A RID: 8058 RVA: 0x0009E643 File Offset: 0x0009C843
+	// Token: 0x06001F7A RID: 8058 RVA: 0x0009E663 File Offset: 0x0009C863
 	private IEnumerator MonitorTime()
 	{
 		while (GorillaComputer.instance == null || GorillaComputer.instance.startupMillis == 0L)
@@ -207,7 +207,7 @@ public class BuilderSetManager : MonoBehaviour
 		yield break;
 	}
 
-	// Token: 0x06001F7B RID: 8059 RVA: 0x0009E654 File Offset: 0x0009C854
+	// Token: 0x06001F7B RID: 8059 RVA: 0x0009E674 File Offset: 0x0009C874
 	private void AddPieceToInfoMap(int pieceType, int pieceMaterial, int setID)
 	{
 		int num;
@@ -231,13 +231,13 @@ public class BuilderSetManager : MonoBehaviour
 		BuilderSetManager.pieceSetInfos.Add(builderPieceSetInfo2);
 	}
 
-	// Token: 0x06001F7C RID: 8060 RVA: 0x0009E6FC File Offset: 0x0009C8FC
+	// Token: 0x06001F7C RID: 8060 RVA: 0x0009E71C File Offset: 0x0009C91C
 	public static bool IsItemIDBuilderItem(string playfabID)
 	{
 		return BuilderSetManager.instance.GetAllSetsConcat().Contains(playfabID);
 	}
 
-	// Token: 0x06001F7D RID: 8061 RVA: 0x0009E710 File Offset: 0x0009C910
+	// Token: 0x06001F7D RID: 8061 RVA: 0x0009E730 File Offset: 0x0009C930
 	public void OnGotInventoryItems(GetUserInventoryResult inventoryResult, GetCatalogItemsResult catalogResult)
 	{
 		CosmeticsController cosmeticsController = CosmeticsController.instance;
@@ -288,13 +288,13 @@ public class BuilderSetManager : MonoBehaviour
 		onOwnedSetsUpdated.Invoke();
 	}
 
-	// Token: 0x06001F7E RID: 8062 RVA: 0x0009E8F4 File Offset: 0x0009CAF4
+	// Token: 0x06001F7E RID: 8062 RVA: 0x0009E914 File Offset: 0x0009CB14
 	public BuilderSetManager.BuilderSetStoreItem GetStoreItemFromSetID(int setID)
 	{
 		return BuilderSetManager._setIdToStoreItem.GetValueOrDefault(setID, BuilderKiosk.nullItem);
 	}
 
-	// Token: 0x06001F7F RID: 8063 RVA: 0x0009E908 File Offset: 0x0009CB08
+	// Token: 0x06001F7F RID: 8063 RVA: 0x0009E928 File Offset: 0x0009CB28
 	public BuilderPieceSet GetPieceSetFromID(int setID)
 	{
 		BuilderSetManager.BuilderSetStoreItem builderSetStoreItem;
@@ -305,43 +305,43 @@ public class BuilderSetManager : MonoBehaviour
 		return null;
 	}
 
-	// Token: 0x06001F80 RID: 8064 RVA: 0x0009E92C File Offset: 0x0009CB2C
+	// Token: 0x06001F80 RID: 8064 RVA: 0x0009E94C File Offset: 0x0009CB4C
 	public List<BuilderPieceSet> GetAllPieceSets()
 	{
 		return this._allPieceSets;
 	}
 
-	// Token: 0x06001F81 RID: 8065 RVA: 0x0009E934 File Offset: 0x0009CB34
+	// Token: 0x06001F81 RID: 8065 RVA: 0x0009E954 File Offset: 0x0009CB54
 	public List<BuilderPieceSet> GetLivePieceSets()
 	{
 		return this.livePieceSets;
 	}
 
-	// Token: 0x06001F82 RID: 8066 RVA: 0x0009E93C File Offset: 0x0009CB3C
+	// Token: 0x06001F82 RID: 8066 RVA: 0x0009E95C File Offset: 0x0009CB5C
 	public List<BuilderPieceSet> GetUnlockedPieceSets()
 	{
 		return this._unlockedPieceSets;
 	}
 
-	// Token: 0x06001F83 RID: 8067 RVA: 0x0009E944 File Offset: 0x0009CB44
+	// Token: 0x06001F83 RID: 8067 RVA: 0x0009E964 File Offset: 0x0009CB64
 	public List<BuilderPieceSet> GetPermanentSetsForSale()
 	{
 		return this._setsAlwaysForSale;
 	}
 
-	// Token: 0x06001F84 RID: 8068 RVA: 0x0009E94C File Offset: 0x0009CB4C
+	// Token: 0x06001F84 RID: 8068 RVA: 0x0009E96C File Offset: 0x0009CB6C
 	public List<BuilderPieceSet> GetSeasonalSetsForSale()
 	{
 		return this._seasonalSetsForSale;
 	}
 
-	// Token: 0x06001F85 RID: 8069 RVA: 0x0009E954 File Offset: 0x0009CB54
+	// Token: 0x06001F85 RID: 8069 RVA: 0x0009E974 File Offset: 0x0009CB74
 	public bool IsSetSeasonal(string playfabID)
 	{
 		return !this._seasonalSetsForSale.IsNullOrEmpty<BuilderPieceSet>() && this._seasonalSetsForSale.FindIndex((BuilderPieceSet x) => x.playfabID.Equals(playfabID)) >= 0;
 	}
 
-	// Token: 0x06001F86 RID: 8070 RVA: 0x0009E99C File Offset: 0x0009CB9C
+	// Token: 0x06001F86 RID: 8070 RVA: 0x0009E9BC File Offset: 0x0009CBBC
 	public bool DoesPlayerOwnPieceSet(Player player, int setID)
 	{
 		BuilderPieceSet pieceSetFromID = this.GetPieceSetFromID(setID);
@@ -360,7 +360,7 @@ public class BuilderSetManager : MonoBehaviour
 		return false;
 	}
 
-	// Token: 0x06001F87 RID: 8071 RVA: 0x0009EA30 File Offset: 0x0009CC30
+	// Token: 0x06001F87 RID: 8071 RVA: 0x0009EA50 File Offset: 0x0009CC50
 	public bool DoesAnyPlayerInRoomOwnPieceSet(int setID)
 	{
 		BuilderPieceSet pieceSetFromID = this.GetPieceSetFromID(setID);
@@ -383,7 +383,7 @@ public class BuilderSetManager : MonoBehaviour
 		return false;
 	}
 
-	// Token: 0x06001F88 RID: 8072 RVA: 0x0009EAD0 File Offset: 0x0009CCD0
+	// Token: 0x06001F88 RID: 8072 RVA: 0x0009EAF0 File Offset: 0x0009CCF0
 	public bool IsPieceOwnedByRoom(int pieceType, int materialType)
 	{
 		int num;
@@ -401,7 +401,7 @@ public class BuilderSetManager : MonoBehaviour
 		return false;
 	}
 
-	// Token: 0x06001F89 RID: 8073 RVA: 0x0009EB50 File Offset: 0x0009CD50
+	// Token: 0x06001F89 RID: 8073 RVA: 0x0009EB70 File Offset: 0x0009CD70
 	public bool IsPieceOwnedLocally(int pieceType, int materialType)
 	{
 		int num;
@@ -419,13 +419,13 @@ public class BuilderSetManager : MonoBehaviour
 		return false;
 	}
 
-	// Token: 0x06001F8A RID: 8074 RVA: 0x0009EBD0 File Offset: 0x0009CDD0
+	// Token: 0x06001F8A RID: 8074 RVA: 0x0009EBF0 File Offset: 0x0009CDF0
 	public bool IsPieceSetOwnedLocally(int setID)
 	{
 		return this._unlockedPieceSets.FindIndex((BuilderPieceSet x) => setID == x.GetIntIdentifier()) >= 0;
 	}
 
-	// Token: 0x06001F8B RID: 8075 RVA: 0x0009EC08 File Offset: 0x0009CE08
+	// Token: 0x06001F8B RID: 8075 RVA: 0x0009EC28 File Offset: 0x0009CE28
 	public void UnlockSet(int setID)
 	{
 		int num = this._allPieceSets.FindIndex((BuilderPieceSet x) => setID == x.GetIntIdentifier());
@@ -442,7 +442,7 @@ public class BuilderSetManager : MonoBehaviour
 		onOwnedSetsUpdated.Invoke();
 	}
 
-	// Token: 0x06001F8C RID: 8076 RVA: 0x0009ECA0 File Offset: 0x0009CEA0
+	// Token: 0x06001F8C RID: 8076 RVA: 0x0009ECC0 File Offset: 0x0009CEC0
 	public void TryPurchaseItem(int setID, Action<bool> resultCallback)
 	{
 		BuilderSetManager.BuilderSetStoreItem storeItem;
@@ -523,7 +523,7 @@ public class BuilderSetManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001F8D RID: 8077 RVA: 0x0009EDA4 File Offset: 0x0009CFA4
+	// Token: 0x06001F8D RID: 8077 RVA: 0x0009EDC4 File Offset: 0x0009CFC4
 	private IEnumerator CheckIfMyCosmeticsUpdated(string itemToBuyID)
 	{
 		yield return new WaitForSeconds(1f);

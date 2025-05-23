@@ -13,7 +13,7 @@ using UnityEngine;
 // Token: 0x02000624 RID: 1572
 public class Gorillanalytics : MonoBehaviour
 {
-	// Token: 0x060026F1 RID: 9969 RVA: 0x000C14F9 File Offset: 0x000BF6F9
+	// Token: 0x060026F1 RID: 9969 RVA: 0x000C1519 File Offset: 0x000BF719
 	private IEnumerator Start()
 	{
 		PlayFabTitleDataCache.Instance.GetTitleData("GorillanalyticsChance", delegate(string s)
@@ -37,7 +37,7 @@ public class Gorillanalytics : MonoBehaviour
 		yield break;
 	}
 
-	// Token: 0x060026F2 RID: 9970 RVA: 0x000C1508 File Offset: 0x000BF708
+	// Token: 0x060026F2 RID: 9970 RVA: 0x000C1528 File Offset: 0x000BF728
 	private void UploadGorillanalytics()
 	{
 		try
@@ -70,7 +70,7 @@ public class Gorillanalytics : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060026F3 RID: 9971 RVA: 0x000C16D8 File Offset: 0x000BF8D8
+	// Token: 0x060026F3 RID: 9971 RVA: 0x000C16F8 File Offset: 0x000BF8F8
 	private void GetMapModeQueue(out string map, out string mode, out string queue)
 	{
 		if (!PhotonNetwork.InRoom)

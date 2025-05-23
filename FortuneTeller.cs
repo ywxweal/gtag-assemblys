@@ -10,7 +10,7 @@ using UnityEngine.Playables;
 // Token: 0x02000554 RID: 1364
 public class FortuneTeller : MonoBehaviourPunCallbacks
 {
-	// Token: 0x060020FD RID: 8445 RVA: 0x000A5BF4 File Offset: 0x000A3DF4
+	// Token: 0x060020FD RID: 8445 RVA: 0x000A5C14 File Offset: 0x000A3E14
 	private void Awake()
 	{
 		if (this.changeMaterialsInGreyZone && GreyZoneManager.Instance != null)
@@ -22,7 +22,7 @@ public class FortuneTeller : MonoBehaviourPunCallbacks
 		}
 	}
 
-	// Token: 0x060020FE RID: 8446 RVA: 0x000A5C68 File Offset: 0x000A3E68
+	// Token: 0x060020FE RID: 8446 RVA: 0x000A5C88 File Offset: 0x000A3E88
 	private void OnDestroy()
 	{
 		if (GreyZoneManager.Instance != null)
@@ -34,7 +34,7 @@ public class FortuneTeller : MonoBehaviourPunCallbacks
 		}
 	}
 
-	// Token: 0x060020FF RID: 8447 RVA: 0x000A5CD4 File Offset: 0x000A3ED4
+	// Token: 0x060020FF RID: 8447 RVA: 0x000A5CF4 File Offset: 0x000A3EF4
 	public override void OnEnable()
 	{
 		base.OnEnable();
@@ -45,7 +45,7 @@ public class FortuneTeller : MonoBehaviourPunCallbacks
 		}
 	}
 
-	// Token: 0x06002100 RID: 8448 RVA: 0x000A5D12 File Offset: 0x000A3F12
+	// Token: 0x06002100 RID: 8448 RVA: 0x000A5D32 File Offset: 0x000A3F32
 	public override void OnDisable()
 	{
 		base.OnDisable();
@@ -55,7 +55,7 @@ public class FortuneTeller : MonoBehaviourPunCallbacks
 		}
 	}
 
-	// Token: 0x06002101 RID: 8449 RVA: 0x000A5D3E File Offset: 0x000A3F3E
+	// Token: 0x06002101 RID: 8449 RVA: 0x000A5D5E File Offset: 0x000A3F5E
 	private void GreyZoneActivated()
 	{
 		this.boothRenderer.material = this.boothGreyZoneMaterial;
@@ -63,7 +63,7 @@ public class FortuneTeller : MonoBehaviourPunCallbacks
 		this.tellerRenderer.SetMaterials(this.tellerGreyZoneMaterials);
 	}
 
-	// Token: 0x06002102 RID: 8450 RVA: 0x000A5D73 File Offset: 0x000A3F73
+	// Token: 0x06002102 RID: 8450 RVA: 0x000A5D93 File Offset: 0x000A3F93
 	private void GreyZoneDeactivated()
 	{
 		this.boothRenderer.material = this.boothDefaultMaterial;
@@ -71,7 +71,7 @@ public class FortuneTeller : MonoBehaviourPunCallbacks
 		this.tellerRenderer.SetMaterials(this.tellerDefaultMaterials);
 	}
 
-	// Token: 0x06002103 RID: 8451 RVA: 0x000A5DA8 File Offset: 0x000A3FA8
+	// Token: 0x06002103 RID: 8451 RVA: 0x000A5DC8 File Offset: 0x000A3FC8
 	public override void OnPlayerEnteredRoom(Player newPlayer)
 	{
 		base.OnPlayerEnteredRoom(newPlayer);
@@ -85,7 +85,7 @@ public class FortuneTeller : MonoBehaviourPunCallbacks
 		}
 	}
 
-	// Token: 0x06002104 RID: 8452 RVA: 0x000A5E0C File Offset: 0x000A400C
+	// Token: 0x06002104 RID: 8452 RVA: 0x000A5E2C File Offset: 0x000A402C
 	public override void OnMasterClientSwitched(Player newMasterClient)
 	{
 		if (PhotonNetwork.IsMasterClient)
@@ -94,7 +94,7 @@ public class FortuneTeller : MonoBehaviourPunCallbacks
 		}
 	}
 
-	// Token: 0x06002105 RID: 8453 RVA: 0x000A5E0C File Offset: 0x000A400C
+	// Token: 0x06002105 RID: 8453 RVA: 0x000A5E2C File Offset: 0x000A402C
 	public override void OnJoinedRoom()
 	{
 		if (PhotonNetwork.IsMasterClient)
@@ -103,7 +103,7 @@ public class FortuneTeller : MonoBehaviourPunCallbacks
 		}
 	}
 
-	// Token: 0x06002106 RID: 8454 RVA: 0x000A5E1B File Offset: 0x000A401B
+	// Token: 0x06002106 RID: 8454 RVA: 0x000A5E3B File Offset: 0x000A403B
 	private void HandlePressedButton(GorillaPressableButton button, bool isLeft)
 	{
 		if (base.photonView.IsMine)
@@ -117,7 +117,7 @@ public class FortuneTeller : MonoBehaviourPunCallbacks
 		}
 	}
 
-	// Token: 0x06002107 RID: 8455 RVA: 0x000A5E50 File Offset: 0x000A4050
+	// Token: 0x06002107 RID: 8455 RVA: 0x000A5E70 File Offset: 0x000A4070
 	[PunRPC]
 	private void RequestFortuneRPC(PhotonMessageInfo info)
 	{
@@ -133,7 +133,7 @@ public class FortuneTeller : MonoBehaviourPunCallbacks
 		}
 	}
 
-	// Token: 0x06002108 RID: 8456 RVA: 0x000A5ED0 File Offset: 0x000A40D0
+	// Token: 0x06002108 RID: 8456 RVA: 0x000A5EF0 File Offset: 0x000A40F0
 	private void SendNewFortune()
 	{
 		if (this.playable.time > 0.0 && this.playable.time < this.playable.duration)
@@ -152,7 +152,7 @@ public class FortuneTeller : MonoBehaviourPunCallbacks
 		}
 	}
 
-	// Token: 0x06002109 RID: 8457 RVA: 0x000A5F70 File Offset: 0x000A4170
+	// Token: 0x06002109 RID: 8457 RVA: 0x000A5F90 File Offset: 0x000A4190
 	[PunRPC]
 	private void TriggerUpdateFortuneRPC(int fortuneType, int resultIndex, PhotonMessageInfo info)
 	{
@@ -170,7 +170,7 @@ public class FortuneTeller : MonoBehaviourPunCallbacks
 		this.UpdateFortune(this.latestFortune, false);
 	}
 
-	// Token: 0x0600210A RID: 8458 RVA: 0x000A5FEC File Offset: 0x000A41EC
+	// Token: 0x0600210A RID: 8458 RVA: 0x000A600C File Offset: 0x000A420C
 	[PunRPC]
 	private void TriggerNewFortuneRPC(int fortuneType, int resultIndex, PhotonMessageInfo info)
 	{
@@ -189,7 +189,7 @@ public class FortuneTeller : MonoBehaviourPunCallbacks
 		this.UpdateFortune(this.latestFortune, true);
 	}
 
-	// Token: 0x0600210B RID: 8459 RVA: 0x000A6078 File Offset: 0x000A4278
+	// Token: 0x0600210B RID: 8459 RVA: 0x000A6098 File Offset: 0x000A4298
 	private void StartAttractModeMonitor()
 	{
 		if (this.attractModeMonitor == null)
@@ -198,7 +198,7 @@ public class FortuneTeller : MonoBehaviourPunCallbacks
 		}
 	}
 
-	// Token: 0x0600210C RID: 8460 RVA: 0x000A6094 File Offset: 0x000A4294
+	// Token: 0x0600210C RID: 8460 RVA: 0x000A60B4 File Offset: 0x000A42B4
 	private IEnumerator AttractModeMonitor()
 	{
 		while (PhotonNetwork.IsMasterClient && PhotonNetwork.InRoom)
@@ -213,7 +213,7 @@ public class FortuneTeller : MonoBehaviourPunCallbacks
 		yield break;
 	}
 
-	// Token: 0x0600210D RID: 8461 RVA: 0x000A60A3 File Offset: 0x000A42A3
+	// Token: 0x0600210D RID: 8461 RVA: 0x000A60C3 File Offset: 0x000A42C3
 	private void SendAttractAnim()
 	{
 		if (PhotonNetwork.InRoom && PhotonNetwork.IsMasterClient)
@@ -222,7 +222,7 @@ public class FortuneTeller : MonoBehaviourPunCallbacks
 		}
 	}
 
-	// Token: 0x0600210E RID: 8462 RVA: 0x000A60CC File Offset: 0x000A42CC
+	// Token: 0x0600210E RID: 8462 RVA: 0x000A60EC File Offset: 0x000A42EC
 	[PunRPC]
 	private void TriggerAttractAnimRPC(PhotonMessageInfo info)
 	{
@@ -236,7 +236,7 @@ public class FortuneTeller : MonoBehaviourPunCallbacks
 		this.nextAttractAnimTimestamp = Time.time + this.waitDurationBeforeAttractAnim;
 	}
 
-	// Token: 0x0600210F RID: 8463 RVA: 0x000A6144 File Offset: 0x000A4344
+	// Token: 0x0600210F RID: 8463 RVA: 0x000A6164 File Offset: 0x000A4364
 	private void UpdateFortune(FortuneResults.FortuneResult result, bool newFortune)
 	{
 		if (this.results)
@@ -252,13 +252,13 @@ public class FortuneTeller : MonoBehaviourPunCallbacks
 		}
 	}
 
-	// Token: 0x06002110 RID: 8464 RVA: 0x000A61C7 File Offset: 0x000A43C7
+	// Token: 0x06002110 RID: 8464 RVA: 0x000A61E7 File Offset: 0x000A43E7
 	public void ApplyFortuneText()
 	{
 		this.text.text = this.results.GetResultText(this.latestFortune).ToUpper();
 	}
 
-	// Token: 0x06002111 RID: 8465 RVA: 0x000A61EC File Offset: 0x000A43EC
+	// Token: 0x06002111 RID: 8465 RVA: 0x000A620C File Offset: 0x000A440C
 	private PlayableAsset GetResultFanfare(FortuneResults.FortuneCategoryType fortuneType)
 	{
 		foreach (FortuneTeller.FortuneTellerResultFanfare fortuneTellerResultFanfare in this.resultFanfares)

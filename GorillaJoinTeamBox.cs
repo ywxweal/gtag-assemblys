@@ -5,7 +5,7 @@ using UnityEngine;
 // Token: 0x0200061E RID: 1566
 public class GorillaJoinTeamBox : GorillaTriggerBox
 {
-	// Token: 0x060026DA RID: 9946 RVA: 0x000C10A5 File Offset: 0x000BF2A5
+	// Token: 0x060026DA RID: 9946 RVA: 0x000C10C5 File Offset: 0x000BF2C5
 	public override void OnBoxTriggered()
 	{
 		base.OnBoxTriggered();

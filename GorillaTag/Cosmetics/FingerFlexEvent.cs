@@ -7,20 +7,20 @@ namespace GorillaTag.Cosmetics
 	// Token: 0x02000DE0 RID: 3552
 	public class FingerFlexEvent : MonoBehaviour
 	{
-		// Token: 0x0600580A RID: 22538 RVA: 0x001B1B4B File Offset: 0x001AFD4B
+		// Token: 0x0600580B RID: 22539 RVA: 0x001B1C23 File Offset: 0x001AFE23
 		private void Awake()
 		{
 			this._rig = base.GetComponentInParent<VRRig>();
 			this.parentTransferable = base.GetComponentInParent<TransferrableObject>();
 		}
 
-		// Token: 0x0600580B RID: 22539 RVA: 0x001B1B65 File Offset: 0x001AFD65
+		// Token: 0x0600580C RID: 22540 RVA: 0x001B1C3D File Offset: 0x001AFE3D
 		private bool IsMyItem()
 		{
 			return this._rig != null && this._rig.isOfflineVRRig;
 		}
 
-		// Token: 0x0600580C RID: 22540 RVA: 0x001B1B84 File Offset: 0x001AFD84
+		// Token: 0x0600580D RID: 22541 RVA: 0x001B1C5C File Offset: 0x001AFE5C
 		private void Update()
 		{
 			for (int i = 0; i < this.eventListeners.Length; i++)
@@ -30,7 +30,7 @@ namespace GorillaTag.Cosmetics
 			}
 		}
 
-		// Token: 0x0600580D RID: 22541 RVA: 0x001B1BB4 File Offset: 0x001AFDB4
+		// Token: 0x0600580E RID: 22542 RVA: 0x001B1C8C File Offset: 0x001AFE8C
 		private void FireEvents(FingerFlexEvent.Listener listener)
 		{
 			if (!listener.syncForEveryoneInRoom && !this.IsMyItem())
@@ -90,7 +90,7 @@ namespace GorillaTag.Cosmetics
 			}
 		}
 
-		// Token: 0x0600580E RID: 22542 RVA: 0x001B1D1C File Offset: 0x001AFF1C
+		// Token: 0x0600580F RID: 22543 RVA: 0x001B1DF4 File Offset: 0x001AFFF4
 		private void FireEvents(FingerFlexEvent.Listener listener, float leftFinger, float rightFinger)
 		{
 			if (this.parentTransferable && this.FingerFlexValidation(true))
@@ -107,7 +107,7 @@ namespace GorillaTag.Cosmetics
 			this.CheckFingerValue(listener, rightFinger, false, ref listener.fingerRightLastValue);
 		}
 
-		// Token: 0x0600580F RID: 22543 RVA: 0x001B1D94 File Offset: 0x001AFF94
+		// Token: 0x06005810 RID: 22544 RVA: 0x001B1E6C File Offset: 0x001B006C
 		private void CheckFingerValue(FingerFlexEvent.Listener listener, float fingerValue, bool isLeft, ref float lastValue)
 		{
 			if (fingerValue > listener.fingerFlexValue)
@@ -152,82 +152,82 @@ namespace GorillaTag.Cosmetics
 			lastValue = fingerValue;
 		}
 
-		// Token: 0x06005810 RID: 22544 RVA: 0x001B1E76 File Offset: 0x001B0076
+		// Token: 0x06005811 RID: 22545 RVA: 0x001B1F4E File Offset: 0x001B014E
 		private bool FingerFlexValidation(bool isLeftHand)
 		{
 			return (!this.parentTransferable.InLeftHand() || isLeftHand) && (this.parentTransferable.InLeftHand() || !isLeftHand);
 		}
 
-		// Token: 0x04005D35 RID: 23861
+		// Token: 0x04005D36 RID: 23862
 		[SerializeField]
 		private FingerFlexEvent.FingerType fingerType = FingerFlexEvent.FingerType.Index;
 
-		// Token: 0x04005D36 RID: 23862
+		// Token: 0x04005D37 RID: 23863
 		public FingerFlexEvent.Listener[] eventListeners = new FingerFlexEvent.Listener[0];
 
-		// Token: 0x04005D37 RID: 23863
+		// Token: 0x04005D38 RID: 23864
 		private VRRig _rig;
 
-		// Token: 0x04005D38 RID: 23864
+		// Token: 0x04005D39 RID: 23865
 		private TransferrableObject parentTransferable;
 
 		// Token: 0x02000DE1 RID: 3553
 		[Serializable]
 		public class Listener
 		{
-			// Token: 0x04005D39 RID: 23865
+			// Token: 0x04005D3A RID: 23866
 			public FingerFlexEvent.EventType eventType;
 
-			// Token: 0x04005D3A RID: 23866
+			// Token: 0x04005D3B RID: 23867
 			public UnityEvent<bool, float> listenerComponent;
 
-			// Token: 0x04005D3B RID: 23867
+			// Token: 0x04005D3C RID: 23868
 			public float fingerFlexValue = 0.75f;
 
-			// Token: 0x04005D3C RID: 23868
+			// Token: 0x04005D3D RID: 23869
 			public float fingerReleaseValue = 0.01f;
 
-			// Token: 0x04005D3D RID: 23869
+			// Token: 0x04005D3E RID: 23870
 			[Tooltip("How many frames should pass to fire a finger flex stayed event")]
 			public int frameInterval = 20;
 
-			// Token: 0x04005D3E RID: 23870
+			// Token: 0x04005D3F RID: 23871
 			[Tooltip("This event will be fired for everyone in the room (synced) by default unless you uncheck this box so that it will be fired only for the local player.")]
 			public bool syncForEveryoneInRoom = true;
 
-			// Token: 0x04005D3F RID: 23871
+			// Token: 0x04005D40 RID: 23872
 			[Tooltip("Fire these events only when the item is held in hand, only works if there is a transferable component somewhere on the object or its parent.")]
 			public bool fireOnlyWhileHeld = true;
 
-			// Token: 0x04005D40 RID: 23872
+			// Token: 0x04005D41 RID: 23873
 			internal int frameCounter;
 
-			// Token: 0x04005D41 RID: 23873
+			// Token: 0x04005D42 RID: 23874
 			internal float fingerRightLastValue;
 
-			// Token: 0x04005D42 RID: 23874
+			// Token: 0x04005D43 RID: 23875
 			internal float fingerLeftLastValue;
 		}
 
 		// Token: 0x02000DE2 RID: 3554
 		public enum EventType
 		{
-			// Token: 0x04005D44 RID: 23876
-			OnFingerFlexed,
 			// Token: 0x04005D45 RID: 23877
-			OnFingerReleased,
+			OnFingerFlexed,
 			// Token: 0x04005D46 RID: 23878
+			OnFingerReleased,
+			// Token: 0x04005D47 RID: 23879
 			OnFingerFlexStayed
 		}
 
 		// Token: 0x02000DE3 RID: 3555
 		private enum FingerType
 		{
-			// Token: 0x04005D48 RID: 23880
-			Thumb,
 			// Token: 0x04005D49 RID: 23881
-			Index,
+			Thumb,
 			// Token: 0x04005D4A RID: 23882
+			Index,
+			// Token: 0x04005D4B RID: 23883
 			Middle
 		}
 	}

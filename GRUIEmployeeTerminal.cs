@@ -10,7 +10,7 @@ using UnityEngine.Events;
 // Token: 0x020005CF RID: 1487
 public class GRUIEmployeeTerminal : MonoBehaviour
 {
-	// Token: 0x06002444 RID: 9284 RVA: 0x000B6604 File Offset: 0x000B4804
+	// Token: 0x06002444 RID: 9284 RVA: 0x000B6624 File Offset: 0x000B4824
 	public void Setup()
 	{
 		this.signupButton.onPressButton.AddListener(new UnityAction(this.OnSignup));
@@ -22,7 +22,7 @@ public class GRUIEmployeeTerminal : MonoBehaviour
 		this.Refresh();
 	}
 
-	// Token: 0x06002445 RID: 9285 RVA: 0x000B6688 File Offset: 0x000B4888
+	// Token: 0x06002445 RID: 9285 RVA: 0x000B66A8 File Offset: 0x000B48A8
 	public void OnSignup()
 	{
 		if (this.isSigningUp || this.isEmployee)
@@ -45,13 +45,13 @@ public class GRUIEmployeeTerminal : MonoBehaviour
 		PlayFabClientAPI.UpdateUserData(updateUserDataRequest, new Action<UpdateUserDataResult>(this.OnSaveTableSuccess), new Action<PlayFabError>(this.OnSaveTableFailure), null, null);
 	}
 
-	// Token: 0x06002446 RID: 9286 RVA: 0x000B6711 File Offset: 0x000B4911
+	// Token: 0x06002446 RID: 9286 RVA: 0x000B6731 File Offset: 0x000B4931
 	public Transform GetSpawnMarker()
 	{
 		return this.spawnMarker;
 	}
 
-	// Token: 0x06002447 RID: 9287 RVA: 0x000B671C File Offset: 0x000B491C
+	// Token: 0x06002447 RID: 9287 RVA: 0x000B673C File Offset: 0x000B493C
 	public void Refresh()
 	{
 		if (this.isSigningUp)
@@ -67,7 +67,7 @@ public class GRUIEmployeeTerminal : MonoBehaviour
 		this.signupButtonText.text = "APPLY";
 	}
 
-	// Token: 0x06002448 RID: 9288 RVA: 0x000B676C File Offset: 0x000B496C
+	// Token: 0x06002448 RID: 9288 RVA: 0x000B678C File Offset: 0x000B498C
 	private void OnGetUserDataInitialState(GetUserDataResult result)
 	{
 		UserDataRecord userDataRecord;
@@ -84,7 +84,7 @@ public class GRUIEmployeeTerminal : MonoBehaviour
 		this.Refresh();
 	}
 
-	// Token: 0x06002449 RID: 9289 RVA: 0x000B67B1 File Offset: 0x000B49B1
+	// Token: 0x06002449 RID: 9289 RVA: 0x000B67D1 File Offset: 0x000B49D1
 	private void OnGetUserDataInitialStateFail(PlayFabError error)
 	{
 		this.isEmployee = false;
@@ -92,7 +92,7 @@ public class GRUIEmployeeTerminal : MonoBehaviour
 		this.Refresh();
 	}
 
-	// Token: 0x0600244A RID: 9290 RVA: 0x000B67C7 File Offset: 0x000B49C7
+	// Token: 0x0600244A RID: 9290 RVA: 0x000B67E7 File Offset: 0x000B49E7
 	private void OnSaveTableSuccess(UpdateUserDataResult result)
 	{
 		this.isEmployee = true;
@@ -100,7 +100,7 @@ public class GRUIEmployeeTerminal : MonoBehaviour
 		this.Refresh();
 	}
 
-	// Token: 0x0600244B RID: 9291 RVA: 0x000B67B1 File Offset: 0x000B49B1
+	// Token: 0x0600244B RID: 9291 RVA: 0x000B67D1 File Offset: 0x000B49D1
 	private void OnSaveTableFailure(PlayFabError error)
 	{
 		this.isEmployee = false;

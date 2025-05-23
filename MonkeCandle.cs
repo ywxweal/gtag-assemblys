@@ -5,7 +5,7 @@ using UnityEngine;
 // Token: 0x0200046E RID: 1134
 public class MonkeCandle : RubberDuck
 {
-	// Token: 0x06001BDA RID: 7130 RVA: 0x00088DB4 File Offset: 0x00086FB4
+	// Token: 0x06001BDA RID: 7130 RVA: 0x00088DD4 File Offset: 0x00086FD4
 	protected override void Start()
 	{
 		base.Start();
@@ -16,7 +16,7 @@ public class MonkeCandle : RubberDuck
 		}
 	}
 
-	// Token: 0x06001BDB RID: 7131 RVA: 0x00088E08 File Offset: 0x00087008
+	// Token: 0x06001BDB RID: 7131 RVA: 0x00088E28 File Offset: 0x00087028
 	public override void TriggeredLateUpdate()
 	{
 		base.TriggeredLateUpdate();

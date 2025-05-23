@@ -7,13 +7,13 @@ namespace OculusSampleFramework
 	public class TrackSegment : MonoBehaviour
 	{
 		// Token: 0x17000776 RID: 1910
-		// (get) Token: 0x06004B83 RID: 19331 RVA: 0x0016614F File Offset: 0x0016434F
-		// (set) Token: 0x06004B84 RID: 19332 RVA: 0x00166157 File Offset: 0x00164357
+		// (get) Token: 0x06004B84 RID: 19332 RVA: 0x00166227 File Offset: 0x00164427
+		// (set) Token: 0x06004B85 RID: 19333 RVA: 0x0016622F File Offset: 0x0016442F
 		public float StartDistance { get; set; }
 
 		// Token: 0x17000777 RID: 1911
-		// (get) Token: 0x06004B85 RID: 19333 RVA: 0x00166160 File Offset: 0x00164360
-		// (set) Token: 0x06004B86 RID: 19334 RVA: 0x00166168 File Offset: 0x00164368
+		// (get) Token: 0x06004B86 RID: 19334 RVA: 0x00166238 File Offset: 0x00164438
+		// (set) Token: 0x06004B87 RID: 19335 RVA: 0x00166240 File Offset: 0x00164440
 		public float GridSize
 		{
 			get
@@ -27,8 +27,8 @@ namespace OculusSampleFramework
 		}
 
 		// Token: 0x17000778 RID: 1912
-		// (get) Token: 0x06004B87 RID: 19335 RVA: 0x00166171 File Offset: 0x00164371
-		// (set) Token: 0x06004B88 RID: 19336 RVA: 0x00166179 File Offset: 0x00164379
+		// (get) Token: 0x06004B88 RID: 19336 RVA: 0x00166249 File Offset: 0x00164449
+		// (set) Token: 0x06004B89 RID: 19337 RVA: 0x00166251 File Offset: 0x00164451
 		public int SubDivCount
 		{
 			get
@@ -42,7 +42,7 @@ namespace OculusSampleFramework
 		}
 
 		// Token: 0x17000779 RID: 1913
-		// (get) Token: 0x06004B89 RID: 19337 RVA: 0x00166182 File Offset: 0x00164382
+		// (get) Token: 0x06004B8A RID: 19338 RVA: 0x0016625A File Offset: 0x0016445A
 		public TrackSegment.SegmentType Type
 		{
 			get
@@ -52,7 +52,7 @@ namespace OculusSampleFramework
 		}
 
 		// Token: 0x1700077A RID: 1914
-		// (get) Token: 0x06004B8A RID: 19338 RVA: 0x0016618A File Offset: 0x0016438A
+		// (get) Token: 0x06004B8B RID: 19339 RVA: 0x00166262 File Offset: 0x00164462
 		public Pose EndPose
 		{
 			get
@@ -63,7 +63,7 @@ namespace OculusSampleFramework
 		}
 
 		// Token: 0x1700077B RID: 1915
-		// (get) Token: 0x06004B8B RID: 19339 RVA: 0x001661A4 File Offset: 0x001643A4
+		// (get) Token: 0x06004B8C RID: 19340 RVA: 0x0016627C File Offset: 0x0016447C
 		public float Radius
 		{
 			get
@@ -72,7 +72,7 @@ namespace OculusSampleFramework
 			}
 		}
 
-		// Token: 0x06004B8C RID: 19340 RVA: 0x001661B2 File Offset: 0x001643B2
+		// Token: 0x06004B8D RID: 19341 RVA: 0x0016628A File Offset: 0x0016448A
 		public float setGridSize(float size)
 		{
 			this.GridSize = size;
@@ -80,7 +80,7 @@ namespace OculusSampleFramework
 		}
 
 		// Token: 0x1700077C RID: 1916
-		// (get) Token: 0x06004B8D RID: 19341 RVA: 0x001661C8 File Offset: 0x001643C8
+		// (get) Token: 0x06004B8E RID: 19342 RVA: 0x001662A0 File Offset: 0x001644A0
 		public float SegmentLength
 		{
 			get
@@ -98,12 +98,12 @@ namespace OculusSampleFramework
 			}
 		}
 
-		// Token: 0x06004B8E RID: 19342 RVA: 0x000023F4 File Offset: 0x000005F4
+		// Token: 0x06004B8F RID: 19343 RVA: 0x000023F4 File Offset: 0x000005F4
 		private void Awake()
 		{
 		}
 
-		// Token: 0x06004B8F RID: 19343 RVA: 0x00166200 File Offset: 0x00164400
+		// Token: 0x06004B90 RID: 19344 RVA: 0x001662D8 File Offset: 0x001644D8
 		public void UpdatePose(float distanceIntoSegment, Pose pose)
 		{
 			if (this.Type == TrackSegment.SegmentType.Straight)
@@ -135,18 +135,18 @@ namespace OculusSampleFramework
 			pose.Rotation = Quaternion.identity;
 		}
 
-		// Token: 0x06004B90 RID: 19344 RVA: 0x000023F4 File Offset: 0x000005F4
+		// Token: 0x06004B91 RID: 19345 RVA: 0x000023F4 File Offset: 0x000005F4
 		private void Update()
 		{
 		}
 
-		// Token: 0x06004B91 RID: 19345 RVA: 0x0016638C File Offset: 0x0016458C
+		// Token: 0x06004B92 RID: 19346 RVA: 0x00166464 File Offset: 0x00164664
 		private void OnDisable()
 		{
 			Object.Destroy(this._mesh);
 		}
 
-		// Token: 0x06004B92 RID: 19346 RVA: 0x0016639C File Offset: 0x0016459C
+		// Token: 0x06004B93 RID: 19347 RVA: 0x00166474 File Offset: 0x00164674
 		private void DrawDebugLines()
 		{
 			for (int i = 1; i < this.SubDivCount + 1; i++)
@@ -164,7 +164,7 @@ namespace OculusSampleFramework
 			Debug.DrawLine(base.transform.position - 0.5f * this.GridSize * base.transform.right + this.GridSize * base.transform.forward, base.transform.position + 0.5f * this.GridSize * base.transform.right + this.GridSize * base.transform.forward, Color.yellow);
 		}
 
-		// Token: 0x06004B93 RID: 19347 RVA: 0x001666A4 File Offset: 0x001648A4
+		// Token: 0x06004B94 RID: 19348 RVA: 0x0016677C File Offset: 0x0016497C
 		public void RegenerateTrackAndMesh()
 		{
 			if (base.transform.childCount > 0 && !this._mesh)
@@ -192,56 +192,56 @@ namespace OculusSampleFramework
 			this._mesh.transform.localScale = new Vector3(this.GridSize / 0.8f, this.GridSize / 0.8f, this.GridSize / 0.8f);
 		}
 
-		// Token: 0x04004E18 RID: 19992
+		// Token: 0x04004E19 RID: 19993
 		[SerializeField]
 		private TrackSegment.SegmentType _segmentType;
 
-		// Token: 0x04004E19 RID: 19993
+		// Token: 0x04004E1A RID: 19994
 		[SerializeField]
 		private MeshFilter _straight;
 
-		// Token: 0x04004E1A RID: 19994
+		// Token: 0x04004E1B RID: 19995
 		[SerializeField]
 		private MeshFilter _leftTurn;
 
-		// Token: 0x04004E1B RID: 19995
+		// Token: 0x04004E1C RID: 19996
 		[SerializeField]
 		private MeshFilter _rightTurn;
 
-		// Token: 0x04004E1C RID: 19996
+		// Token: 0x04004E1D RID: 19997
 		private float _gridSize = 0.8f;
 
-		// Token: 0x04004E1D RID: 19997
+		// Token: 0x04004E1E RID: 19998
 		private int _subDivCount = 20;
 
-		// Token: 0x04004E1E RID: 19998
+		// Token: 0x04004E1F RID: 19999
 		private const float _originalGridSize = 0.8f;
 
-		// Token: 0x04004E1F RID: 19999
+		// Token: 0x04004E20 RID: 20000
 		private const float _trackWidth = 0.15f;
 
-		// Token: 0x04004E20 RID: 20000
+		// Token: 0x04004E21 RID: 20001
 		private GameObject _mesh;
 
-		// Token: 0x04004E22 RID: 20002
+		// Token: 0x04004E23 RID: 20003
 		private Pose _p1 = new Pose();
 
-		// Token: 0x04004E23 RID: 20003
+		// Token: 0x04004E24 RID: 20004
 		private Pose _p2 = new Pose();
 
-		// Token: 0x04004E24 RID: 20004
+		// Token: 0x04004E25 RID: 20005
 		private Pose _endPose = new Pose();
 
 		// Token: 0x02000BF3 RID: 3059
 		public enum SegmentType
 		{
-			// Token: 0x04004E26 RID: 20006
-			Straight,
 			// Token: 0x04004E27 RID: 20007
-			LeftTurn,
+			Straight,
 			// Token: 0x04004E28 RID: 20008
-			RightTurn,
+			LeftTurn,
 			// Token: 0x04004E29 RID: 20009
+			RightTurn,
+			// Token: 0x04004E2A RID: 20010
 			Switch
 		}
 	}

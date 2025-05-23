@@ -6,7 +6,7 @@ using UnityEngine;
 public class SizeLayerChanger : MonoBehaviour
 {
 	// Token: 0x1700040C RID: 1036
-	// (get) Token: 0x060029E0 RID: 10720 RVA: 0x000CF2A8 File Offset: 0x000CD4A8
+	// (get) Token: 0x060029E1 RID: 10721 RVA: 0x000CF34C File Offset: 0x000CD54C
 	public int SizeLayerMask
 	{
 		get
@@ -32,13 +32,13 @@ public class SizeLayerChanger : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060029E1 RID: 10721 RVA: 0x000CF2E8 File Offset: 0x000CD4E8
+	// Token: 0x060029E2 RID: 10722 RVA: 0x000CF38C File Offset: 0x000CD58C
 	private void Awake()
 	{
 		this.minScale = Mathf.Max(this.minScale, 0.01f);
 	}
 
-	// Token: 0x060029E2 RID: 10722 RVA: 0x000CF300 File Offset: 0x000CD500
+	// Token: 0x060029E3 RID: 10723 RVA: 0x000CF3A4 File Offset: 0x000CD5A4
 	public void OnTriggerEnter(Collider other)
 	{
 		if (!this.triggerWithBodyCollider && !other.GetComponent<SphereCollider>())
@@ -68,7 +68,7 @@ public class SizeLayerChanger : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060029E3 RID: 10723 RVA: 0x000CF380 File Offset: 0x000CD580
+	// Token: 0x060029E4 RID: 10724 RVA: 0x000CF424 File Offset: 0x000CD624
 	public void OnTriggerExit(Collider other)
 	{
 		if (!this.triggerWithBodyCollider && !other.GetComponent<SphereCollider>())
@@ -98,36 +98,36 @@ public class SizeLayerChanger : MonoBehaviour
 		}
 	}
 
-	// Token: 0x04002EF7 RID: 12023
+	// Token: 0x04002EF9 RID: 12025
 	public float maxScale;
 
-	// Token: 0x04002EF8 RID: 12024
+	// Token: 0x04002EFA RID: 12026
 	public float minScale;
 
-	// Token: 0x04002EF9 RID: 12025
+	// Token: 0x04002EFB RID: 12027
 	public bool isAssurance;
 
-	// Token: 0x04002EFA RID: 12026
+	// Token: 0x04002EFC RID: 12028
 	public bool affectLayerA = true;
 
-	// Token: 0x04002EFB RID: 12027
+	// Token: 0x04002EFD RID: 12029
 	public bool affectLayerB = true;
 
-	// Token: 0x04002EFC RID: 12028
+	// Token: 0x04002EFE RID: 12030
 	public bool affectLayerC = true;
 
-	// Token: 0x04002EFD RID: 12029
+	// Token: 0x04002EFF RID: 12031
 	public bool affectLayerD = true;
 
-	// Token: 0x04002EFE RID: 12030
+	// Token: 0x04002F00 RID: 12032
 	[SerializeField]
 	private bool applyOnTriggerEnter = true;
 
-	// Token: 0x04002EFF RID: 12031
+	// Token: 0x04002F01 RID: 12033
 	[SerializeField]
 	private bool applyOnTriggerExit;
 
-	// Token: 0x04002F00 RID: 12032
+	// Token: 0x04002F02 RID: 12034
 	[SerializeField]
 	private bool triggerWithBodyCollider;
 }

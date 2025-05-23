@@ -5,6 +5,6 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "IngredientTypeSO", menuName = "ScriptableObjects/Add New Magic Ingredient Type")]
 public class MagicIngredientType : ScriptableObject
 {
-	// Token: 0x04002E92 RID: 11922
+	// Token: 0x04002E94 RID: 11924
 	public Color color;
 }

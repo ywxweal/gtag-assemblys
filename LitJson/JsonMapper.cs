@@ -10,14 +10,14 @@ namespace LitJson
 	// Token: 0x02000A96 RID: 2710
 	public class JsonMapper
 	{
-		// Token: 0x0600410C RID: 16652 RVA: 0x0012C840 File Offset: 0x0012AA40
+		// Token: 0x0600410D RID: 16653 RVA: 0x0012C918 File Offset: 0x0012AB18
 		static JsonMapper()
 		{
 			JsonMapper.RegisterBaseExporters();
 			JsonMapper.RegisterBaseImporters();
 		}
 
-		// Token: 0x0600410D RID: 16653 RVA: 0x0012C8F4 File Offset: 0x0012AAF4
+		// Token: 0x0600410E RID: 16654 RVA: 0x0012C9CC File Offset: 0x0012ABCC
 		private static void AddArrayMetadata(Type type)
 		{
 			if (JsonMapper.array_metadata.ContainsKey(type))
@@ -54,7 +54,7 @@ namespace LitJson
 			}
 		}
 
-		// Token: 0x0600410E RID: 16654 RVA: 0x0012C9EC File Offset: 0x0012ABEC
+		// Token: 0x0600410F RID: 16655 RVA: 0x0012CAC4 File Offset: 0x0012ACC4
 		private static void AddObjectMetadata(Type type)
 		{
 			if (JsonMapper.object_metadata.ContainsKey(type))
@@ -106,7 +106,7 @@ namespace LitJson
 			}
 		}
 
-		// Token: 0x0600410F RID: 16655 RVA: 0x0012CB78 File Offset: 0x0012AD78
+		// Token: 0x06004110 RID: 16656 RVA: 0x0012CC50 File Offset: 0x0012AE50
 		private static void AddTypeProperties(Type type)
 		{
 			if (JsonMapper.type_properties.ContainsKey(type))
@@ -146,7 +146,7 @@ namespace LitJson
 			}
 		}
 
-		// Token: 0x06004110 RID: 16656 RVA: 0x0012CC70 File Offset: 0x0012AE70
+		// Token: 0x06004111 RID: 16657 RVA: 0x0012CD48 File Offset: 0x0012AF48
 		private static MethodInfo GetConvOp(Type t1, Type t2)
 		{
 			object obj = JsonMapper.conv_ops_lock;
@@ -177,7 +177,7 @@ namespace LitJson
 			return method;
 		}
 
-		// Token: 0x06004111 RID: 16657 RVA: 0x0012CD60 File Offset: 0x0012AF60
+		// Token: 0x06004112 RID: 16658 RVA: 0x0012CE38 File Offset: 0x0012B038
 		private static object ReadValue(Type inst_type, JsonReader reader)
 		{
 			reader.Read();
@@ -314,7 +314,7 @@ namespace LitJson
 			}
 		}
 
-		// Token: 0x06004112 RID: 16658 RVA: 0x0012D0B4 File Offset: 0x0012B2B4
+		// Token: 0x06004113 RID: 16659 RVA: 0x0012D18C File Offset: 0x0012B38C
 		private static IJsonWrapper ReadValue(WrapperFactory factory, JsonReader reader)
 		{
 			reader.Read();
@@ -378,7 +378,7 @@ namespace LitJson
 			return jsonWrapper;
 		}
 
-		// Token: 0x06004113 RID: 16659 RVA: 0x0012D1DC File Offset: 0x0012B3DC
+		// Token: 0x06004114 RID: 16660 RVA: 0x0012D2B4 File Offset: 0x0012B4B4
 		private static void RegisterBaseExporters()
 		{
 			JsonMapper.base_exporters_table[typeof(byte)] = delegate(object obj, JsonWriter writer)
@@ -423,7 +423,7 @@ namespace LitJson
 			};
 		}
 
-		// Token: 0x06004114 RID: 16660 RVA: 0x0012D3E8 File Offset: 0x0012B5E8
+		// Token: 0x06004115 RID: 16661 RVA: 0x0012D4C0 File Offset: 0x0012B6C0
 		private static void RegisterBaseImporters()
 		{
 			ImporterFunc importerFunc = (object input) => Convert.ToByte((int)input);
@@ -454,7 +454,7 @@ namespace LitJson
 			JsonMapper.RegisterImporter(JsonMapper.base_importers_table, typeof(string), typeof(DateTime), importerFunc);
 		}
 
-		// Token: 0x06004115 RID: 16661 RVA: 0x0012D728 File Offset: 0x0012B928
+		// Token: 0x06004116 RID: 16662 RVA: 0x0012D800 File Offset: 0x0012BA00
 		private static void RegisterImporter(IDictionary<Type, IDictionary<Type, ImporterFunc>> table, Type json_type, Type value_type, ImporterFunc importer)
 		{
 			if (!table.ContainsKey(json_type))
@@ -464,7 +464,7 @@ namespace LitJson
 			table[json_type][value_type] = importer;
 		}
 
-		// Token: 0x06004116 RID: 16662 RVA: 0x0012D750 File Offset: 0x0012B950
+		// Token: 0x06004117 RID: 16663 RVA: 0x0012D828 File Offset: 0x0012BA28
 		private static void WriteValue(object obj, JsonWriter writer, bool writer_is_private, int depth)
 		{
 			if (depth > JsonMapper.max_nesting_depth)
@@ -592,7 +592,7 @@ namespace LitJson
 			}
 		}
 
-		// Token: 0x06004117 RID: 16663 RVA: 0x0012DAC4 File Offset: 0x0012BCC4
+		// Token: 0x06004118 RID: 16664 RVA: 0x0012DB9C File Offset: 0x0012BD9C
 		public static string ToJson(object obj)
 		{
 			object obj2 = JsonMapper.static_writer_lock;
@@ -606,65 +606,65 @@ namespace LitJson
 			return text;
 		}
 
-		// Token: 0x06004118 RID: 16664 RVA: 0x0012DB20 File Offset: 0x0012BD20
+		// Token: 0x06004119 RID: 16665 RVA: 0x0012DBF8 File Offset: 0x0012BDF8
 		public static void ToJson(object obj, JsonWriter writer)
 		{
 			JsonMapper.WriteValue(obj, writer, false, 0);
 		}
 
-		// Token: 0x06004119 RID: 16665 RVA: 0x0012DB2B File Offset: 0x0012BD2B
+		// Token: 0x0600411A RID: 16666 RVA: 0x0012DC03 File Offset: 0x0012BE03
 		public static JsonData ToObject(JsonReader reader)
 		{
 			return (JsonData)JsonMapper.ToWrapper(() => new JsonData(), reader);
 		}
 
-		// Token: 0x0600411A RID: 16666 RVA: 0x0012DB58 File Offset: 0x0012BD58
+		// Token: 0x0600411B RID: 16667 RVA: 0x0012DC30 File Offset: 0x0012BE30
 		public static JsonData ToObject(TextReader reader)
 		{
 			JsonReader jsonReader = new JsonReader(reader);
 			return (JsonData)JsonMapper.ToWrapper(() => new JsonData(), jsonReader);
 		}
 
-		// Token: 0x0600411B RID: 16667 RVA: 0x0012DB96 File Offset: 0x0012BD96
+		// Token: 0x0600411C RID: 16668 RVA: 0x0012DC6E File Offset: 0x0012BE6E
 		public static JsonData ToObject(string json)
 		{
 			return (JsonData)JsonMapper.ToWrapper(() => new JsonData(), json);
 		}
 
-		// Token: 0x0600411C RID: 16668 RVA: 0x0012DBC2 File Offset: 0x0012BDC2
+		// Token: 0x0600411D RID: 16669 RVA: 0x0012DC9A File Offset: 0x0012BE9A
 		public static T ToObject<T>(JsonReader reader)
 		{
 			return (T)((object)JsonMapper.ReadValue(typeof(T), reader));
 		}
 
-		// Token: 0x0600411D RID: 16669 RVA: 0x0012DBDC File Offset: 0x0012BDDC
+		// Token: 0x0600411E RID: 16670 RVA: 0x0012DCB4 File Offset: 0x0012BEB4
 		public static T ToObject<T>(TextReader reader)
 		{
 			JsonReader jsonReader = new JsonReader(reader);
 			return (T)((object)JsonMapper.ReadValue(typeof(T), jsonReader));
 		}
 
-		// Token: 0x0600411E RID: 16670 RVA: 0x0012DC08 File Offset: 0x0012BE08
+		// Token: 0x0600411F RID: 16671 RVA: 0x0012DCE0 File Offset: 0x0012BEE0
 		public static T ToObject<T>(string json)
 		{
 			JsonReader jsonReader = new JsonReader(json);
 			return (T)((object)JsonMapper.ReadValue(typeof(T), jsonReader));
 		}
 
-		// Token: 0x0600411F RID: 16671 RVA: 0x0012DC31 File Offset: 0x0012BE31
+		// Token: 0x06004120 RID: 16672 RVA: 0x0012DD09 File Offset: 0x0012BF09
 		public static IJsonWrapper ToWrapper(WrapperFactory factory, JsonReader reader)
 		{
 			return JsonMapper.ReadValue(factory, reader);
 		}
 
-		// Token: 0x06004120 RID: 16672 RVA: 0x0012DC3C File Offset: 0x0012BE3C
+		// Token: 0x06004121 RID: 16673 RVA: 0x0012DD14 File Offset: 0x0012BF14
 		public static IJsonWrapper ToWrapper(WrapperFactory factory, string json)
 		{
 			JsonReader jsonReader = new JsonReader(json);
 			return JsonMapper.ReadValue(factory, jsonReader);
 		}
 
-		// Token: 0x06004121 RID: 16673 RVA: 0x0012DC58 File Offset: 0x0012BE58
+		// Token: 0x06004122 RID: 16674 RVA: 0x0012DD30 File Offset: 0x0012BF30
 		public static void RegisterExporter<T>(ExporterFunc<T> exporter)
 		{
 			ExporterFunc exporterFunc = delegate(object obj, JsonWriter writer)
@@ -674,71 +674,71 @@ namespace LitJson
 			JsonMapper.custom_exporters_table[typeof(T)] = exporterFunc;
 		}
 
-		// Token: 0x06004122 RID: 16674 RVA: 0x0012DC94 File Offset: 0x0012BE94
+		// Token: 0x06004123 RID: 16675 RVA: 0x0012DD6C File Offset: 0x0012BF6C
 		public static void RegisterImporter<TJson, TValue>(ImporterFunc<TJson, TValue> importer)
 		{
 			ImporterFunc importerFunc = (object input) => importer((TJson)((object)input));
 			JsonMapper.RegisterImporter(JsonMapper.custom_importers_table, typeof(TJson), typeof(TValue), importerFunc);
 		}
 
-		// Token: 0x06004123 RID: 16675 RVA: 0x0012DCD8 File Offset: 0x0012BED8
+		// Token: 0x06004124 RID: 16676 RVA: 0x0012DDB0 File Offset: 0x0012BFB0
 		public static void UnregisterExporters()
 		{
 			JsonMapper.custom_exporters_table.Clear();
 		}
 
-		// Token: 0x06004124 RID: 16676 RVA: 0x0012DCE4 File Offset: 0x0012BEE4
+		// Token: 0x06004125 RID: 16677 RVA: 0x0012DDBC File Offset: 0x0012BFBC
 		public static void UnregisterImporters()
 		{
 			JsonMapper.custom_importers_table.Clear();
 		}
 
-		// Token: 0x040043E3 RID: 17379
+		// Token: 0x040043E4 RID: 17380
 		private static int max_nesting_depth = 100;
 
-		// Token: 0x040043E4 RID: 17380
+		// Token: 0x040043E5 RID: 17381
 		private static IFormatProvider datetime_format = DateTimeFormatInfo.InvariantInfo;
 
-		// Token: 0x040043E5 RID: 17381
+		// Token: 0x040043E6 RID: 17382
 		private static IDictionary<Type, ExporterFunc> base_exporters_table = new Dictionary<Type, ExporterFunc>();
 
-		// Token: 0x040043E6 RID: 17382
+		// Token: 0x040043E7 RID: 17383
 		private static IDictionary<Type, ExporterFunc> custom_exporters_table = new Dictionary<Type, ExporterFunc>();
 
-		// Token: 0x040043E7 RID: 17383
+		// Token: 0x040043E8 RID: 17384
 		private static IDictionary<Type, IDictionary<Type, ImporterFunc>> base_importers_table = new Dictionary<Type, IDictionary<Type, ImporterFunc>>();
 
-		// Token: 0x040043E8 RID: 17384
+		// Token: 0x040043E9 RID: 17385
 		private static IDictionary<Type, IDictionary<Type, ImporterFunc>> custom_importers_table = new Dictionary<Type, IDictionary<Type, ImporterFunc>>();
 
-		// Token: 0x040043E9 RID: 17385
+		// Token: 0x040043EA RID: 17386
 		private static IDictionary<Type, ArrayMetadata> array_metadata = new Dictionary<Type, ArrayMetadata>();
 
-		// Token: 0x040043EA RID: 17386
+		// Token: 0x040043EB RID: 17387
 		private static readonly object array_metadata_lock = new object();
 
-		// Token: 0x040043EB RID: 17387
+		// Token: 0x040043EC RID: 17388
 		private static IDictionary<Type, IDictionary<Type, MethodInfo>> conv_ops = new Dictionary<Type, IDictionary<Type, MethodInfo>>();
 
-		// Token: 0x040043EC RID: 17388
+		// Token: 0x040043ED RID: 17389
 		private static readonly object conv_ops_lock = new object();
 
-		// Token: 0x040043ED RID: 17389
+		// Token: 0x040043EE RID: 17390
 		private static IDictionary<Type, ObjectMetadata> object_metadata = new Dictionary<Type, ObjectMetadata>();
 
-		// Token: 0x040043EE RID: 17390
+		// Token: 0x040043EF RID: 17391
 		private static readonly object object_metadata_lock = new object();
 
-		// Token: 0x040043EF RID: 17391
+		// Token: 0x040043F0 RID: 17392
 		private static IDictionary<Type, IList<PropertyMetadata>> type_properties = new Dictionary<Type, IList<PropertyMetadata>>();
 
-		// Token: 0x040043F0 RID: 17392
+		// Token: 0x040043F1 RID: 17393
 		private static readonly object type_properties_lock = new object();
 
-		// Token: 0x040043F1 RID: 17393
+		// Token: 0x040043F2 RID: 17394
 		private static JsonWriter static_writer = new JsonWriter();
 
-		// Token: 0x040043F2 RID: 17394
+		// Token: 0x040043F3 RID: 17395
 		private static readonly object static_writer_lock = new object();
 	}
 }

@@ -8,11 +8,11 @@ namespace GorillaTagScripts
 	public class Flower : MonoBehaviour
 	{
 		// Token: 0x170006B9 RID: 1721
-		// (get) Token: 0x0600450F RID: 17679 RVA: 0x0014728B File Offset: 0x0014548B
-		// (set) Token: 0x06004510 RID: 17680 RVA: 0x00147293 File Offset: 0x00145493
+		// (get) Token: 0x06004510 RID: 17680 RVA: 0x00147363 File Offset: 0x00145563
+		// (set) Token: 0x06004511 RID: 17681 RVA: 0x0014736B File Offset: 0x0014556B
 		public bool IsWatered { get; private set; }
 
-		// Token: 0x06004511 RID: 17681 RVA: 0x0014729C File Offset: 0x0014549C
+		// Token: 0x06004512 RID: 17682 RVA: 0x00147374 File Offset: 0x00145574
 		private void Awake()
 		{
 			this.shouldUpdateVisuals = true;
@@ -28,13 +28,13 @@ namespace GorillaTagScripts
 			this.anim.enabled = false;
 		}
 
-		// Token: 0x06004512 RID: 17682 RVA: 0x00147333 File Offset: 0x00145533
+		// Token: 0x06004513 RID: 17683 RVA: 0x0014740B File Offset: 0x0014560B
 		private void OnDestroy()
 		{
 			this.timer.onTimerStopped.RemoveListener(new UnityAction<GorillaTimer>(this.HandleOnFlowerTimerEnded));
 		}
 
-		// Token: 0x06004513 RID: 17683 RVA: 0x00147354 File Offset: 0x00145554
+		// Token: 0x06004514 RID: 17684 RVA: 0x0014742C File Offset: 0x0014562C
 		public void WaterFlower(bool isWatered = false)
 		{
 			this.IsWatered = isWatered;
@@ -69,7 +69,7 @@ namespace GorillaTagScripts
 			}
 		}
 
-		// Token: 0x06004514 RID: 17684 RVA: 0x001473C4 File Offset: 0x001455C4
+		// Token: 0x06004515 RID: 17685 RVA: 0x0014749C File Offset: 0x0014569C
 		public void UpdateFlowerState(Flower.FlowerState newState, bool isWatered = false, bool updateVisual = true)
 		{
 			if (FlowersManager.Instance.IsMine)
@@ -87,7 +87,7 @@ namespace GorillaTagScripts
 			}
 		}
 
-		// Token: 0x06004515 RID: 17685 RVA: 0x0014741C File Offset: 0x0014561C
+		// Token: 0x06004516 RID: 17686 RVA: 0x001474F4 File Offset: 0x001456F4
 		private void LocalUpdateFlowers(Flower.FlowerState state, bool isWatered = false)
 		{
 			GameObject[] array = this.meshStates;
@@ -127,7 +127,7 @@ namespace GorillaTagScripts
 			}
 		}
 
-		// Token: 0x06004516 RID: 17686 RVA: 0x001474F5 File Offset: 0x001456F5
+		// Token: 0x06004517 RID: 17687 RVA: 0x001475CD File Offset: 0x001457CD
 		private void HandleOnFlowerTimerEnded(GorillaTimer _timer)
 		{
 			if (!FlowersManager.Instance.IsMine)
@@ -140,20 +140,20 @@ namespace GorillaTagScripts
 			}
 		}
 
-		// Token: 0x06004517 RID: 17687 RVA: 0x00147519 File Offset: 0x00145719
+		// Token: 0x06004518 RID: 17688 RVA: 0x001475F1 File Offset: 0x001457F1
 		private void ChangeState(Flower.FlowerState state)
 		{
 			this.lastState = this.currentState;
 			this.currentState = state;
 		}
 
-		// Token: 0x06004518 RID: 17688 RVA: 0x0014752E File Offset: 0x0014572E
+		// Token: 0x06004519 RID: 17689 RVA: 0x00147606 File Offset: 0x00145806
 		public Flower.FlowerState GetCurrentState()
 		{
 			return this.currentState;
 		}
 
-		// Token: 0x06004519 RID: 17689 RVA: 0x00147538 File Offset: 0x00145738
+		// Token: 0x0600451A RID: 17690 RVA: 0x00147610 File Offset: 0x00145810
 		public void OnAnimationIsDone(int state)
 		{
 			if (this.meshRenderer.enabled)
@@ -168,14 +168,14 @@ namespace GorillaTagScripts
 			}
 		}
 
-		// Token: 0x0600451A RID: 17690 RVA: 0x00147595 File Offset: 0x00145795
+		// Token: 0x0600451B RID: 17691 RVA: 0x0014766D File Offset: 0x0014586D
 		public void UpdateVisuals(bool enable)
 		{
 			this.shouldUpdateVisuals = enable;
 			this.meshStatesGameObject.SetActive(enable);
 		}
 
-		// Token: 0x0600451B RID: 17691 RVA: 0x001475AC File Offset: 0x001457AC
+		// Token: 0x0600451C RID: 17692 RVA: 0x00147684 File Offset: 0x00145884
 		public void AnimCatch()
 		{
 			if (this.anim.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1f)
@@ -184,65 +184,65 @@ namespace GorillaTagScripts
 			}
 		}
 
-		// Token: 0x040047C2 RID: 18370
+		// Token: 0x040047C3 RID: 18371
 		private Animator anim;
 
-		// Token: 0x040047C3 RID: 18371
+		// Token: 0x040047C4 RID: 18372
 		private SkinnedMeshRenderer meshRenderer;
 
-		// Token: 0x040047C4 RID: 18372
+		// Token: 0x040047C5 RID: 18373
 		[HideInInspector]
 		public GorillaTimer timer;
 
-		// Token: 0x040047C5 RID: 18373
+		// Token: 0x040047C6 RID: 18374
 		private BeePerchPoint perchPoint;
 
-		// Token: 0x040047C6 RID: 18374
+		// Token: 0x040047C7 RID: 18375
 		public ParticleSystem wateredFx;
 
-		// Token: 0x040047C7 RID: 18375
+		// Token: 0x040047C8 RID: 18376
 		public ParticleSystem sparkleFx;
 
-		// Token: 0x040047C8 RID: 18376
+		// Token: 0x040047C9 RID: 18377
 		public GameObject meshStatesGameObject;
 
-		// Token: 0x040047C9 RID: 18377
+		// Token: 0x040047CA RID: 18378
 		public GameObject[] meshStates;
 
-		// Token: 0x040047CA RID: 18378
+		// Token: 0x040047CB RID: 18379
 		private static readonly int healthy_to_middle = Animator.StringToHash("healthy_to_middle");
 
-		// Token: 0x040047CB RID: 18379
+		// Token: 0x040047CC RID: 18380
 		private static readonly int middle_to_healthy = Animator.StringToHash("middle_to_healthy");
 
-		// Token: 0x040047CC RID: 18380
+		// Token: 0x040047CD RID: 18381
 		private static readonly int wilted_to_middle = Animator.StringToHash("wilted_to_middle");
 
-		// Token: 0x040047CD RID: 18381
+		// Token: 0x040047CE RID: 18382
 		private static readonly int middle_to_wilted = Animator.StringToHash("middle_to_wilted");
 
-		// Token: 0x040047CE RID: 18382
+		// Token: 0x040047CF RID: 18383
 		private Flower.FlowerState currentState;
 
-		// Token: 0x040047CF RID: 18383
+		// Token: 0x040047D0 RID: 18384
 		private string id;
 
-		// Token: 0x040047D0 RID: 18384
+		// Token: 0x040047D1 RID: 18385
 		private bool shouldUpdateVisuals;
 
-		// Token: 0x040047D1 RID: 18385
+		// Token: 0x040047D2 RID: 18386
 		private Flower.FlowerState lastState;
 
 		// Token: 0x02000B06 RID: 2822
 		public enum FlowerState
 		{
-			// Token: 0x040047D4 RID: 18388
-			None = -1,
 			// Token: 0x040047D5 RID: 18389
-			Healthy,
+			None = -1,
 			// Token: 0x040047D6 RID: 18390
-			Middle,
+			Healthy,
 			// Token: 0x040047D7 RID: 18391
+			Middle,
+			// Token: 0x040047D8 RID: 18392
 			Wilted
 		}
 	}

@@ -8,7 +8,7 @@ namespace GorillaTag
 	[ExecuteAlways]
 	public class TextureTransitioner : MonoBehaviour, IResettableItem
 	{
-		// Token: 0x06005400 RID: 21504 RVA: 0x0019723B File Offset: 0x0019543B
+		// Token: 0x06005401 RID: 21505 RVA: 0x00197313 File Offset: 0x00195513
 		protected void Awake()
 		{
 			if (Application.isPlaying || this.editorPreview)
@@ -20,7 +20,7 @@ namespace GorillaTag
 			this.ResetToDefaultState();
 		}
 
-		// Token: 0x06005401 RID: 21505 RVA: 0x00197270 File Offset: 0x00195470
+		// Token: 0x06005402 RID: 21506 RVA: 0x00197348 File Offset: 0x00195548
 		protected void OnEnable()
 		{
 			TextureTransitionerManager.Register(this);
@@ -49,13 +49,13 @@ namespace GorillaTag
 			}
 		}
 
-		// Token: 0x06005402 RID: 21506 RVA: 0x0019735E File Offset: 0x0019555E
+		// Token: 0x06005403 RID: 21507 RVA: 0x00197436 File Offset: 0x00195636
 		protected void OnDisable()
 		{
 			TextureTransitionerManager.Unregister(this);
 		}
 
-		// Token: 0x06005403 RID: 21507 RVA: 0x00197366 File Offset: 0x00195566
+		// Token: 0x06005404 RID: 21508 RVA: 0x0019743E File Offset: 0x0019563E
 		private void RefreshShaderParams()
 		{
 			this.texTransitionShaderParam = Shader.PropertyToID(this.texTransitionShaderParamName);
@@ -63,7 +63,7 @@ namespace GorillaTag
 			this.tex2ShaderParam = Shader.PropertyToID(this.tex2ShaderParamName);
 		}
 
-		// Token: 0x06005404 RID: 21508 RVA: 0x0019739B File Offset: 0x0019559B
+		// Token: 0x06005405 RID: 21509 RVA: 0x00197473 File Offset: 0x00195673
 		public void ResetToDefaultState()
 		{
 			this.normalizedValue = 0f;
@@ -72,67 +72,67 @@ namespace GorillaTag
 			this.tex2Index = 0;
 		}
 
-		// Token: 0x040056F5 RID: 22261
+		// Token: 0x040056F6 RID: 22262
 		public bool editorPreview;
 
-		// Token: 0x040056F6 RID: 22262
+		// Token: 0x040056F7 RID: 22263
 		[Tooltip("The component that will drive the texture transitions.")]
 		public MonoBehaviour dynamicFloatComponent;
 
-		// Token: 0x040056F7 RID: 22263
+		// Token: 0x040056F8 RID: 22264
 		[Tooltip("Set these values so that after remap 0 is the first texture in the textures list and 1 is the last.")]
 		public GorillaMath.RemapFloatInfo remapInfo;
 
-		// Token: 0x040056F8 RID: 22264
+		// Token: 0x040056F9 RID: 22265
 		public TextureTransitioner.DirectionRetentionMode directionRetentionMode;
 
-		// Token: 0x040056F9 RID: 22265
+		// Token: 0x040056FA RID: 22266
 		public string texTransitionShaderParamName = "_TexTransition";
 
-		// Token: 0x040056FA RID: 22266
+		// Token: 0x040056FB RID: 22267
 		public string tex1ShaderParamName = "_MainTex";
 
-		// Token: 0x040056FB RID: 22267
+		// Token: 0x040056FC RID: 22268
 		public string tex2ShaderParamName = "_Tex2";
 
-		// Token: 0x040056FC RID: 22268
+		// Token: 0x040056FD RID: 22269
 		public Texture[] textures;
 
-		// Token: 0x040056FD RID: 22269
-		public Renderer[] renderers;
-
 		// Token: 0x040056FE RID: 22270
-		[NonSerialized]
-		public IDynamicFloat iDynamicFloat;
+		public Renderer[] renderers;
 
 		// Token: 0x040056FF RID: 22271
 		[NonSerialized]
-		public int texTransitionShaderParam;
+		public IDynamicFloat iDynamicFloat;
 
 		// Token: 0x04005700 RID: 22272
 		[NonSerialized]
-		public int tex1ShaderParam;
+		public int texTransitionShaderParam;
 
 		// Token: 0x04005701 RID: 22273
 		[NonSerialized]
-		public int tex2ShaderParam;
+		public int tex1ShaderParam;
 
 		// Token: 0x04005702 RID: 22274
-		[DebugReadout]
 		[NonSerialized]
-		public float normalizedValue;
+		public int tex2ShaderParam;
 
 		// Token: 0x04005703 RID: 22275
 		[DebugReadout]
 		[NonSerialized]
-		public int transitionPercent;
+		public float normalizedValue;
 
 		// Token: 0x04005704 RID: 22276
 		[DebugReadout]
 		[NonSerialized]
-		public int tex1Index;
+		public int transitionPercent;
 
 		// Token: 0x04005705 RID: 22277
+		[DebugReadout]
+		[NonSerialized]
+		public int tex1Index;
+
+		// Token: 0x04005706 RID: 22278
 		[DebugReadout]
 		[NonSerialized]
 		public int tex2Index;
@@ -140,11 +140,11 @@ namespace GorillaTag
 		// Token: 0x02000D20 RID: 3360
 		public enum DirectionRetentionMode
 		{
-			// Token: 0x04005707 RID: 22279
-			None,
 			// Token: 0x04005708 RID: 22280
-			IncreaseOnly,
+			None,
 			// Token: 0x04005709 RID: 22281
+			IncreaseOnly,
+			// Token: 0x0400570A RID: 22282
 			DecreaseOnly
 		}
 	}

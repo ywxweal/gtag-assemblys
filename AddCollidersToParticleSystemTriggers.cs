@@ -4,7 +4,7 @@ using UnityEngine;
 // Token: 0x020004A8 RID: 1192
 public class AddCollidersToParticleSystemTriggers : MonoBehaviour
 {
-	// Token: 0x06001CCD RID: 7373 RVA: 0x0008BED4 File Offset: 0x0008A0D4
+	// Token: 0x06001CCD RID: 7373 RVA: 0x0008BEF4 File Offset: 0x0008A0F4
 	private void Update()
 	{
 		this.count = 0;

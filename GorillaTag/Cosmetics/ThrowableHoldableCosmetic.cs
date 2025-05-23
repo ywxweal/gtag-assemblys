@@ -10,7 +10,7 @@ namespace GorillaTag.Cosmetics
 	// Token: 0x02000DCC RID: 3532
 	public class ThrowableHoldableCosmetic : TransferrableObject
 	{
-		// Token: 0x06005794 RID: 22420 RVA: 0x001ADE38 File Offset: 0x001AC038
+		// Token: 0x06005795 RID: 22421 RVA: 0x001ADF10 File Offset: 0x001AC110
 		internal override void OnEnable()
 		{
 			base.OnEnable();
@@ -29,7 +29,7 @@ namespace GorillaTag.Cosmetics
 			}
 		}
 
-		// Token: 0x06005795 RID: 22421 RVA: 0x001ADEFA File Offset: 0x001AC0FA
+		// Token: 0x06005796 RID: 22422 RVA: 0x001ADFD2 File Offset: 0x001AC1D2
 		protected override void Awake()
 		{
 			base.Awake();
@@ -37,7 +37,7 @@ namespace GorillaTag.Cosmetics
 			this.playersEffect = base.GetComponentInChildren<CosmeticEffectsOnPlayers>();
 		}
 
-		// Token: 0x06005796 RID: 22422 RVA: 0x001ADF1F File Offset: 0x001AC11F
+		// Token: 0x06005797 RID: 22423 RVA: 0x001ADFF7 File Offset: 0x001AC1F7
 		public override void OnGrab(InteractionPoint pointGrabbed, GameObject grabbingHand)
 		{
 			if (!this.disableWhenThrown.gameObject.activeSelf)
@@ -47,7 +47,7 @@ namespace GorillaTag.Cosmetics
 			base.OnGrab(pointGrabbed, grabbingHand);
 		}
 
-		// Token: 0x06005797 RID: 22423 RVA: 0x001ADF3C File Offset: 0x001AC13C
+		// Token: 0x06005798 RID: 22424 RVA: 0x001AE014 File Offset: 0x001AC214
 		public override bool OnRelease(DropZone zoneReleased, GameObject releasingHand)
 		{
 			if (!base.OnRelease(zoneReleased, releasingHand))
@@ -70,7 +70,7 @@ namespace GorillaTag.Cosmetics
 			return true;
 		}
 
-		// Token: 0x06005798 RID: 22424 RVA: 0x001AE048 File Offset: 0x001AC248
+		// Token: 0x06005799 RID: 22425 RVA: 0x001AE120 File Offset: 0x001AC320
 		internal override void OnDisable()
 		{
 			base.OnDisable();
@@ -82,7 +82,7 @@ namespace GorillaTag.Cosmetics
 			}
 		}
 
-		// Token: 0x06005799 RID: 22425 RVA: 0x001AE0A0 File Offset: 0x001AC2A0
+		// Token: 0x0600579A RID: 22426 RVA: 0x001AE178 File Offset: 0x001AC378
 		private void OnThrowEvent(int sender, int target, object[] args, PhotonMessageInfoWrapped info)
 		{
 			if (sender != target)
@@ -136,7 +136,7 @@ namespace GorillaTag.Cosmetics
 			}
 		}
 
-		// Token: 0x0600579A RID: 22426 RVA: 0x001AE1AC File Offset: 0x001AC3AC
+		// Token: 0x0600579B RID: 22427 RVA: 0x001AE284 File Offset: 0x001AC484
 		private void OnThrowLocal(Vector3 startPos, Quaternion rotation, Vector3 velocity, float playerScale)
 		{
 			this.disableWhenThrown.SetActive(false);
@@ -161,7 +161,7 @@ namespace GorillaTag.Cosmetics
 			component.Launch(startPos, rotation, velocity, playerScale);
 		}
 
-		// Token: 0x0600579B RID: 22427 RVA: 0x001AE25A File Offset: 0x001AC45A
+		// Token: 0x0600579C RID: 22428 RVA: 0x001AE332 File Offset: 0x001AC532
 		private void HitStart(FirecrackerProjectile firecracker, Vector3 contactPos)
 		{
 			if (firecracker == null)
@@ -175,7 +175,7 @@ namespace GorillaTag.Cosmetics
 			this.playersEffect.ApplyAllEffectsByDistance(contactPos);
 		}
 
-		// Token: 0x0600579C RID: 22428 RVA: 0x001AE284 File Offset: 0x001AC484
+		// Token: 0x0600579D RID: 22429 RVA: 0x001AE35C File Offset: 0x001AC55C
 		private void HitComplete(IProjectile projectile)
 		{
 			if (projectile == null)
@@ -201,24 +201,24 @@ namespace GorillaTag.Cosmetics
 			}
 		}
 
-		// Token: 0x04005C34 RID: 23604
+		// Token: 0x04005C35 RID: 23605
 		[SerializeField]
 		private GameObject firecrackerProjectilePrefab;
 
-		// Token: 0x04005C35 RID: 23605
+		// Token: 0x04005C36 RID: 23606
 		[SerializeField]
 		private GameObject disableWhenThrown;
 
-		// Token: 0x04005C36 RID: 23606
+		// Token: 0x04005C37 RID: 23607
 		private CallLimiter firecrackerCallLimiter = new CallLimiter(10, 3f, 0.5f);
 
-		// Token: 0x04005C37 RID: 23607
+		// Token: 0x04005C38 RID: 23608
 		private CosmeticEffectsOnPlayers playersEffect;
 
-		// Token: 0x04005C38 RID: 23608
+		// Token: 0x04005C39 RID: 23609
 		private int firecrackerProjectileHash;
 
-		// Token: 0x04005C39 RID: 23609
+		// Token: 0x04005C3A RID: 23610
 		private RubberDuckEvents _events;
 	}
 }

@@ -5,7 +5,7 @@ using UnityEngine;
 // Token: 0x020005CE RID: 1486
 public class GRUIEmployeeBadgeDispenser : MonoBehaviour
 {
-	// Token: 0x0600243A RID: 9274 RVA: 0x000B6494 File Offset: 0x000B4694
+	// Token: 0x0600243A RID: 9274 RVA: 0x000B64B4 File Offset: 0x000B46B4
 	public void Refresh()
 	{
 		NetPlayer player = NetworkSystem.Instance.GetPlayer(this.actorNr);
@@ -24,7 +24,7 @@ public class GRUIEmployeeBadgeDispenser : MonoBehaviour
 		}
 	}
 
-	// Token: 0x0600243B RID: 9275 RVA: 0x000B6504 File Offset: 0x000B4704
+	// Token: 0x0600243B RID: 9275 RVA: 0x000B6524 File Offset: 0x000B4724
 	public void CreateBadge(NetPlayer player)
 	{
 		if (GameEntityManager.instance.IsAuthority())
@@ -33,38 +33,38 @@ public class GRUIEmployeeBadgeDispenser : MonoBehaviour
 		}
 	}
 
-	// Token: 0x0600243C RID: 9276 RVA: 0x000B6562 File Offset: 0x000B4762
+	// Token: 0x0600243C RID: 9276 RVA: 0x000B6582 File Offset: 0x000B4782
 	public Transform GetSpawnMarker()
 	{
 		return this.spawnLocation;
 	}
 
-	// Token: 0x0600243D RID: 9277 RVA: 0x000B656A File Offset: 0x000B476A
+	// Token: 0x0600243D RID: 9277 RVA: 0x000B658A File Offset: 0x000B478A
 	public bool IsDispenserForBadge(GRBadge badge)
 	{
 		return badge == this.idBadge;
 	}
 
-	// Token: 0x0600243E RID: 9278 RVA: 0x000B6578 File Offset: 0x000B4778
+	// Token: 0x0600243E RID: 9278 RVA: 0x000B6598 File Offset: 0x000B4798
 	public Vector3 GetSpawnPosition()
 	{
 		return this.spawnLocation.position;
 	}
 
-	// Token: 0x0600243F RID: 9279 RVA: 0x000B6585 File Offset: 0x000B4785
+	// Token: 0x0600243F RID: 9279 RVA: 0x000B65A5 File Offset: 0x000B47A5
 	public Quaternion GetSpawnRotation()
 	{
 		return this.spawnLocation.rotation;
 	}
 
-	// Token: 0x06002440 RID: 9280 RVA: 0x000B6592 File Offset: 0x000B4792
+	// Token: 0x06002440 RID: 9280 RVA: 0x000B65B2 File Offset: 0x000B47B2
 	public void ClearBadge()
 	{
 		this.actorNr = -1;
 		this.idBadge = null;
 	}
 
-	// Token: 0x06002441 RID: 9281 RVA: 0x000B65A4 File Offset: 0x000B47A4
+	// Token: 0x06002441 RID: 9281 RVA: 0x000B65C4 File Offset: 0x000B47C4
 	public void AttachIDBadge(GRBadge linkedBadge, NetPlayer _player)
 	{
 		this.actorNr = ((_player == null) ? (-1) : _player.ActorNumber);

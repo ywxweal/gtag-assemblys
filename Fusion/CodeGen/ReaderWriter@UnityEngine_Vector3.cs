@@ -9,7 +9,7 @@ namespace Fusion.CodeGen
 	[PreserveInPlugin]
 	internal struct ReaderWriter@UnityEngine_Vector3 : IElementReaderWriter<Vector3>
 	{
-		// Token: 0x06005D94 RID: 23956 RVA: 0x001CD071 File Offset: 0x001CB271
+		// Token: 0x06005D95 RID: 23957 RVA: 0x001CD149 File Offset: 0x001CB349
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		[PreserveInPlugin]
 		[WeaverGenerated]
@@ -18,7 +18,7 @@ namespace Fusion.CodeGen
 			return *(Vector3*)(data + index * 12);
 		}
 
-		// Token: 0x06005D95 RID: 23957 RVA: 0x001CD081 File Offset: 0x001CB281
+		// Token: 0x06005D96 RID: 23958 RVA: 0x001CD159 File Offset: 0x001CB359
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		[PreserveInPlugin]
 		[WeaverGenerated]
@@ -27,7 +27,7 @@ namespace Fusion.CodeGen
 			return ref *(Vector3*)(data + index * 12);
 		}
 
-		// Token: 0x06005D96 RID: 23958 RVA: 0x001CD08C File Offset: 0x001CB28C
+		// Token: 0x06005D97 RID: 23959 RVA: 0x001CD164 File Offset: 0x001CB364
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		[PreserveInPlugin]
 		[WeaverGenerated]
@@ -36,7 +36,7 @@ namespace Fusion.CodeGen
 			*(Vector3*)(data + index * 12) = val;
 		}
 
-		// Token: 0x06005D97 RID: 23959 RVA: 0x000C23EE File Offset: 0x000C05EE
+		// Token: 0x06005D98 RID: 23960 RVA: 0x000C240E File Offset: 0x000C060E
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		[PreserveInPlugin]
 		[WeaverGenerated]
@@ -45,7 +45,7 @@ namespace Fusion.CodeGen
 			return 3;
 		}
 
-		// Token: 0x06005D98 RID: 23960 RVA: 0x001CD0A0 File Offset: 0x001CB2A0
+		// Token: 0x06005D99 RID: 23961 RVA: 0x001CD178 File Offset: 0x001CB378
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		[PreserveInPlugin]
 		[WeaverGenerated]
@@ -54,7 +54,7 @@ namespace Fusion.CodeGen
 			return val.GetHashCode();
 		}
 
-		// Token: 0x06005D99 RID: 23961 RVA: 0x001CD0BC File Offset: 0x001CB2BC
+		// Token: 0x06005D9A RID: 23962 RVA: 0x001CD194 File Offset: 0x001CB394
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		[WeaverGenerated]
 		public static IElementReaderWriter<Vector3> GetInstance()
@@ -66,7 +66,7 @@ namespace Fusion.CodeGen
 			return ReaderWriter@UnityEngine_Vector3.Instance;
 		}
 
-		// Token: 0x04006199 RID: 24985
+		// Token: 0x0400619A RID: 24986
 		[WeaverGenerated]
 		public static IElementReaderWriter<Vector3> Instance;
 	}

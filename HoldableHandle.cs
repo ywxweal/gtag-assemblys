@@ -5,7 +5,7 @@ using UnityEngine;
 public class HoldableHandle : InteractionPoint
 {
 	// Token: 0x170002C2 RID: 706
-	// (get) Token: 0x060018E8 RID: 6376 RVA: 0x00078E4B File Offset: 0x0007704B
+	// (get) Token: 0x060018E8 RID: 6376 RVA: 0x00078E6B File Offset: 0x0007706B
 	public new HoldableObject Holdable
 	{
 		get
@@ -15,7 +15,7 @@ public class HoldableHandle : InteractionPoint
 	}
 
 	// Token: 0x170002C3 RID: 707
-	// (get) Token: 0x060018E9 RID: 6377 RVA: 0x00078E53 File Offset: 0x00077053
+	// (get) Token: 0x060018E9 RID: 6377 RVA: 0x00078E73 File Offset: 0x00077073
 	public CapsuleCollider Capsule
 	{
 		get

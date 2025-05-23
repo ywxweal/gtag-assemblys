@@ -8,7 +8,7 @@ using UnityEngine;
 // Token: 0x020008B3 RID: 2227
 public class LuauScriptRunner
 {
-	// Token: 0x060035DD RID: 13789 RVA: 0x00104B9C File Offset: 0x00102D9C
+	// Token: 0x060035DE RID: 13790 RVA: 0x00104C74 File Offset: 0x00102E74
 	public unsafe static bool ErrorCheck(lua_State* L, int status)
 	{
 		if (status == 2)
@@ -23,7 +23,7 @@ public class LuauScriptRunner
 		return false;
 	}
 
-	// Token: 0x060035DE RID: 13790 RVA: 0x00104BE8 File Offset: 0x00102DE8
+	// Token: 0x060035DF RID: 13791 RVA: 0x00104CC0 File Offset: 0x00102EC0
 	public bool Tick(float deltaTime)
 	{
 		if (!this.ShouldTick)
@@ -47,7 +47,7 @@ public class LuauScriptRunner
 		return false;
 	}
 
-	// Token: 0x060035DF RID: 13791 RVA: 0x00104C98 File Offset: 0x00102E98
+	// Token: 0x060035E0 RID: 13792 RVA: 0x00104D70 File Offset: 0x00102F70
 	public unsafe LuauScriptRunner(string script, string name, [CanBeNull] lua_CFunction bindings = null, [CanBeNull] lua_CFunction preTick = null, [CanBeNull] lua_CFunction postTick = null)
 	{
 		this.Script = script;
@@ -72,13 +72,13 @@ public class LuauScriptRunner
 		this.ShouldTick = !LuauScriptRunner.ErrorCheck(this.L, num);
 	}
 
-	// Token: 0x060035E0 RID: 13792 RVA: 0x00104D7F File Offset: 0x00102F7F
+	// Token: 0x060035E1 RID: 13793 RVA: 0x00104E57 File Offset: 0x00103057
 	public LuauScriptRunner FromFile(string filePath, [CanBeNull] lua_CFunction bindings = null, [CanBeNull] lua_CFunction tick = null)
 	{
 		return new LuauScriptRunner(File.ReadAllText(Path.Join(Application.persistentDataPath, "Scripts", filePath)), filePath, bindings, tick, null);
 	}
 
-	// Token: 0x060035E1 RID: 13793 RVA: 0x00104DB0 File Offset: 0x00102FB0
+	// Token: 0x060035E2 RID: 13794 RVA: 0x00104E88 File Offset: 0x00103088
 	~LuauScriptRunner()
 	{
 		LuauVm.ClassBuilders.Clear();
@@ -92,24 +92,24 @@ public class LuauScriptRunner
 		}
 	}
 
-	// Token: 0x04003BA1 RID: 15265
+	// Token: 0x04003BA2 RID: 15266
 	public static List<LuauScriptRunner> ScriptRunners = new List<LuauScriptRunner>();
 
-	// Token: 0x04003BA2 RID: 15266
+	// Token: 0x04003BA3 RID: 15267
 	public bool ShouldTick;
 
-	// Token: 0x04003BA3 RID: 15267
+	// Token: 0x04003BA4 RID: 15268
 	private lua_CFunction postTickCallback;
 
-	// Token: 0x04003BA4 RID: 15268
+	// Token: 0x04003BA5 RID: 15269
 	private lua_CFunction preTickCallback;
 
-	// Token: 0x04003BA5 RID: 15269
+	// Token: 0x04003BA6 RID: 15270
 	public string ScriptName;
 
-	// Token: 0x04003BA6 RID: 15270
+	// Token: 0x04003BA7 RID: 15271
 	public string Script;
 
-	// Token: 0x04003BA7 RID: 15271
+	// Token: 0x04003BA8 RID: 15272
 	public unsafe lua_State* L;
 }

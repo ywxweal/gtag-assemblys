@@ -4,9 +4,9 @@
 [Serializable]
 public class VerifyAgeRequest : KIDRequestData
 {
-	// Token: 0x04003707 RID: 14087
+	// Token: 0x04003708 RID: 14088
 	public int? Age;
 
-	// Token: 0x04003708 RID: 14088
+	// Token: 0x04003709 RID: 14089
 	public PlayerPlatform? Platform;
 }

@@ -10,7 +10,7 @@ namespace GorillaTag.Cosmetics
 	public class NearbyCosmeticsManager : MonoBehaviour, ITickSystemTick
 	{
 		// Token: 0x170008CA RID: 2250
-		// (get) Token: 0x06005834 RID: 22580 RVA: 0x001B245D File Offset: 0x001B065D
+		// (get) Token: 0x06005835 RID: 22581 RVA: 0x001B2535 File Offset: 0x001B0735
 		public static NearbyCosmeticsManager Instance
 		{
 			get
@@ -20,11 +20,11 @@ namespace GorillaTag.Cosmetics
 		}
 
 		// Token: 0x170008CB RID: 2251
-		// (get) Token: 0x06005835 RID: 22581 RVA: 0x001B2464 File Offset: 0x001B0664
-		// (set) Token: 0x06005836 RID: 22582 RVA: 0x001B246C File Offset: 0x001B066C
+		// (get) Token: 0x06005836 RID: 22582 RVA: 0x001B253C File Offset: 0x001B073C
+		// (set) Token: 0x06005837 RID: 22583 RVA: 0x001B2544 File Offset: 0x001B0744
 		public bool TickRunning { get; set; }
 
-		// Token: 0x06005837 RID: 22583 RVA: 0x001B2475 File Offset: 0x001B0675
+		// Token: 0x06005838 RID: 22584 RVA: 0x001B254D File Offset: 0x001B074D
 		private void Awake()
 		{
 			if (NearbyCosmeticsManager._instance != null && NearbyCosmeticsManager._instance != this)
@@ -35,19 +35,19 @@ namespace GorillaTag.Cosmetics
 			NearbyCosmeticsManager._instance = this;
 		}
 
-		// Token: 0x06005838 RID: 22584 RVA: 0x0001C94F File Offset: 0x0001AB4F
+		// Token: 0x06005839 RID: 22585 RVA: 0x0001C94F File Offset: 0x0001AB4F
 		private void OnEnable()
 		{
 			TickSystem<object>.AddCallbackTarget(this);
 		}
 
-		// Token: 0x06005839 RID: 22585 RVA: 0x0001C957 File Offset: 0x0001AB57
+		// Token: 0x0600583A RID: 22586 RVA: 0x0001C957 File Offset: 0x0001AB57
 		private void OnDisable()
 		{
 			TickSystem<object>.RemoveCallbackTarget(this);
 		}
 
-		// Token: 0x0600583A RID: 22586 RVA: 0x001B24A3 File Offset: 0x001B06A3
+		// Token: 0x0600583B RID: 22587 RVA: 0x001B257B File Offset: 0x001B077B
 		private void OnDestroy()
 		{
 			if (NearbyCosmeticsManager._instance == this)
@@ -56,19 +56,19 @@ namespace GorillaTag.Cosmetics
 			}
 		}
 
-		// Token: 0x0600583B RID: 22587 RVA: 0x001B24B8 File Offset: 0x001B06B8
+		// Token: 0x0600583C RID: 22588 RVA: 0x001B2590 File Offset: 0x001B0790
 		public void Register(NearbyCosmeticsEffect cosmetic)
 		{
 			this.cosmetics.Add(cosmetic);
 		}
 
-		// Token: 0x0600583C RID: 22588 RVA: 0x001B24C6 File Offset: 0x001B06C6
+		// Token: 0x0600583D RID: 22589 RVA: 0x001B259E File Offset: 0x001B079E
 		public void Unregister(NearbyCosmeticsEffect cosmetic)
 		{
 			this.cosmetics.Remove(cosmetic);
 		}
 
-		// Token: 0x0600583D RID: 22589 RVA: 0x001B24D8 File Offset: 0x001B06D8
+		// Token: 0x0600583E RID: 22590 RVA: 0x001B25B0 File Offset: 0x001B07B0
 		public void Tick()
 		{
 			if (this.cosmetics.Count == 0)
@@ -86,7 +86,7 @@ namespace GorillaTag.Cosmetics
 			}
 		}
 
-		// Token: 0x0600583E RID: 22590 RVA: 0x001B2564 File Offset: 0x001B0764
+		// Token: 0x0600583F RID: 22591 RVA: 0x001B263C File Offset: 0x001B083C
 		private void CheckProximity()
 		{
 			for (int i = 0; i < this.cosmetics.Count; i++)
@@ -106,7 +106,7 @@ namespace GorillaTag.Cosmetics
 			}
 		}
 
-		// Token: 0x0600583F RID: 22591 RVA: 0x001B265C File Offset: 0x001B085C
+		// Token: 0x06005840 RID: 22592 RVA: 0x001B2734 File Offset: 0x001B0934
 		private void BreakTheBound()
 		{
 			for (int i = 0; i < this.cosmetics.Count; i++)
@@ -132,18 +132,18 @@ namespace GorillaTag.Cosmetics
 			}
 		}
 
-		// Token: 0x04005D6B RID: 23915
+		// Token: 0x04005D6C RID: 23916
 		[SerializeField]
 		private float proximityThreshold = 0.1f;
 
-		// Token: 0x04005D6C RID: 23916
+		// Token: 0x04005D6D RID: 23917
 		[SerializeField]
 		private bool debug;
 
-		// Token: 0x04005D6D RID: 23917
+		// Token: 0x04005D6E RID: 23918
 		private List<NearbyCosmeticsEffect> cosmetics = new List<NearbyCosmeticsEffect>();
 
-		// Token: 0x04005D6E RID: 23918
+		// Token: 0x04005D6F RID: 23919
 		private static NearbyCosmeticsManager _instance;
 	}
 }

@@ -7,24 +7,24 @@ using UnityEngine;
 // Token: 0x0200078C RID: 1932
 public class AnnouncementManager : MonoBehaviour
 {
-	// Token: 0x06003065 RID: 12389 RVA: 0x000EF128 File Offset: 0x000ED328
+	// Token: 0x06003066 RID: 12390 RVA: 0x000EF1CC File Offset: 0x000ED3CC
 	public bool ShowAnnouncement()
 	{
 		return this._showAnnouncement;
 	}
 
 	// Token: 0x170004D5 RID: 1237
-	// (get) Token: 0x06003066 RID: 12390 RVA: 0x000EF130 File Offset: 0x000ED330
-	// (set) Token: 0x06003067 RID: 12391 RVA: 0x000EF138 File Offset: 0x000ED338
+	// (get) Token: 0x06003067 RID: 12391 RVA: 0x000EF1D4 File Offset: 0x000ED3D4
+	// (set) Token: 0x06003068 RID: 12392 RVA: 0x000EF1DC File Offset: 0x000ED3DC
 	public bool _completedSetup { get; private set; }
 
 	// Token: 0x170004D6 RID: 1238
-	// (get) Token: 0x06003068 RID: 12392 RVA: 0x000EF141 File Offset: 0x000ED341
-	// (set) Token: 0x06003069 RID: 12393 RVA: 0x000EF149 File Offset: 0x000ED349
+	// (get) Token: 0x06003069 RID: 12393 RVA: 0x000EF1E5 File Offset: 0x000ED3E5
+	// (set) Token: 0x0600306A RID: 12394 RVA: 0x000EF1ED File Offset: 0x000ED3ED
 	public bool _announcementActive { get; private set; }
 
 	// Token: 0x170004D7 RID: 1239
-	// (get) Token: 0x0600306A RID: 12394 RVA: 0x000EF152 File Offset: 0x000ED352
+	// (get) Token: 0x0600306B RID: 12395 RVA: 0x000EF1F6 File Offset: 0x000ED3F6
 	public static AnnouncementManager Instance
 	{
 		get
@@ -38,7 +38,7 @@ public class AnnouncementManager : MonoBehaviour
 	}
 
 	// Token: 0x170004D8 RID: 1240
-	// (get) Token: 0x0600306B RID: 12395 RVA: 0x000EF170 File Offset: 0x000ED370
+	// (get) Token: 0x0600306C RID: 12396 RVA: 0x000EF214 File Offset: 0x000ED414
 	private static string AnnouncementDPlayerPref
 	{
 		get
@@ -51,7 +51,7 @@ public class AnnouncementManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x0600306C RID: 12396 RVA: 0x000EF19E File Offset: 0x000ED39E
+	// Token: 0x0600306D RID: 12397 RVA: 0x000EF242 File Offset: 0x000ED442
 	private void Awake()
 	{
 		if (AnnouncementManager._instance != null)
@@ -66,7 +66,7 @@ public class AnnouncementManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x0600306D RID: 12397 RVA: 0x000EF1D8 File Offset: 0x000ED3D8
+	// Token: 0x0600306E RID: 12398 RVA: 0x000EF27C File Offset: 0x000ED47C
 	private void Start()
 	{
 		if (this._announcementMessageBox == null)
@@ -78,7 +78,7 @@ public class AnnouncementManager : MonoBehaviour
 		PlayFabTitleDataCache.Instance.GetTitleData("AnnouncementData", new Action<string>(this.ConfigureAnnouncement), new Action<PlayFabError>(this.OnError));
 	}
 
-	// Token: 0x0600306E RID: 12398 RVA: 0x000EF23C File Offset: 0x000ED43C
+	// Token: 0x0600306F RID: 12399 RVA: 0x000EF2E0 File Offset: 0x000ED4E0
 	public void OnContinuePressed()
 	{
 		HandRayController.Instance.DisableHandRays();
@@ -93,14 +93,14 @@ public class AnnouncementManager : MonoBehaviour
 		PlayerPrefs.Save();
 	}
 
-	// Token: 0x0600306F RID: 12399 RVA: 0x000EF29D File Offset: 0x000ED49D
+	// Token: 0x06003070 RID: 12400 RVA: 0x000EF341 File Offset: 0x000ED541
 	private void OnError(PlayFabError error)
 	{
 		Debug.LogError("[ANNOUNCEMENT] Failed to Get Title Data for key [AnnouncementData]. Error:\n[" + error.ErrorMessage);
 		this._completedSetup = true;
 	}
 
-	// Token: 0x06003070 RID: 12400 RVA: 0x000EF2BC File Offset: 0x000ED4BC
+	// Token: 0x06003071 RID: 12401 RVA: 0x000EF360 File Offset: 0x000ED560
 	private void ConfigureAnnouncement(string data)
 	{
 		this._announcementString = data;
@@ -137,34 +137,34 @@ public class AnnouncementManager : MonoBehaviour
 		this._completedSetup = true;
 	}
 
-	// Token: 0x04003697 RID: 13975
+	// Token: 0x04003699 RID: 13977
 	private const string ANNOUNCEMENT_ID_PLAYERPREF_PREFIX = "announcement-id-";
 
-	// Token: 0x04003698 RID: 13976
+	// Token: 0x0400369A RID: 13978
 	private const string ANNOUNCEMENT_TITLE_DATA_KEY = "AnnouncementData";
 
-	// Token: 0x04003699 RID: 13977
+	// Token: 0x0400369B RID: 13979
 	private const string ANNOUNCEMENT_HEADING = "Announcement!";
 
-	// Token: 0x0400369A RID: 13978
+	// Token: 0x0400369C RID: 13980
 	private const string ANNOUNCEMENT_BUTTON_TEXT = "Continue";
 
-	// Token: 0x0400369B RID: 13979
+	// Token: 0x0400369D RID: 13981
 	[SerializeField]
 	private MessageBox _announcementMessageBox;
 
-	// Token: 0x0400369C RID: 13980
+	// Token: 0x0400369E RID: 13982
 	private string _announcementString = string.Empty;
 
-	// Token: 0x0400369D RID: 13981
+	// Token: 0x0400369F RID: 13983
 	private SAnnouncementData _announcementData;
 
-	// Token: 0x0400369E RID: 13982
+	// Token: 0x040036A0 RID: 13984
 	private bool _showAnnouncement;
 
-	// Token: 0x040036A1 RID: 13985
+	// Token: 0x040036A3 RID: 13987
 	private static AnnouncementManager _instance;
 
-	// Token: 0x040036A2 RID: 13986
+	// Token: 0x040036A4 RID: 13988
 	private static string _announcementIDPref = "";
 }

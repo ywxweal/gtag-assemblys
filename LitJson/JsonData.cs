@@ -10,7 +10,7 @@ namespace LitJson
 	public class JsonData : IJsonWrapper, IList, ICollection, IEnumerable, IOrderedDictionary, IDictionary, IEquatable<JsonData>
 	{
 		// Token: 0x1700065E RID: 1630
-		// (get) Token: 0x06004081 RID: 16513 RVA: 0x0012B886 File Offset: 0x00129A86
+		// (get) Token: 0x06004082 RID: 16514 RVA: 0x0012B95E File Offset: 0x00129B5E
 		public int Count
 		{
 			get
@@ -20,7 +20,7 @@ namespace LitJson
 		}
 
 		// Token: 0x1700065F RID: 1631
-		// (get) Token: 0x06004082 RID: 16514 RVA: 0x0012B893 File Offset: 0x00129A93
+		// (get) Token: 0x06004083 RID: 16515 RVA: 0x0012B96B File Offset: 0x00129B6B
 		public bool IsArray
 		{
 			get
@@ -30,7 +30,7 @@ namespace LitJson
 		}
 
 		// Token: 0x17000660 RID: 1632
-		// (get) Token: 0x06004083 RID: 16515 RVA: 0x0012B89E File Offset: 0x00129A9E
+		// (get) Token: 0x06004084 RID: 16516 RVA: 0x0012B976 File Offset: 0x00129B76
 		public bool IsBoolean
 		{
 			get
@@ -40,7 +40,7 @@ namespace LitJson
 		}
 
 		// Token: 0x17000661 RID: 1633
-		// (get) Token: 0x06004084 RID: 16516 RVA: 0x0012B8A9 File Offset: 0x00129AA9
+		// (get) Token: 0x06004085 RID: 16517 RVA: 0x0012B981 File Offset: 0x00129B81
 		public bool IsDouble
 		{
 			get
@@ -50,7 +50,7 @@ namespace LitJson
 		}
 
 		// Token: 0x17000662 RID: 1634
-		// (get) Token: 0x06004085 RID: 16517 RVA: 0x0012B8B4 File Offset: 0x00129AB4
+		// (get) Token: 0x06004086 RID: 16518 RVA: 0x0012B98C File Offset: 0x00129B8C
 		public bool IsInt
 		{
 			get
@@ -60,7 +60,7 @@ namespace LitJson
 		}
 
 		// Token: 0x17000663 RID: 1635
-		// (get) Token: 0x06004086 RID: 16518 RVA: 0x0012B8BF File Offset: 0x00129ABF
+		// (get) Token: 0x06004087 RID: 16519 RVA: 0x0012B997 File Offset: 0x00129B97
 		public bool IsLong
 		{
 			get
@@ -70,7 +70,7 @@ namespace LitJson
 		}
 
 		// Token: 0x17000664 RID: 1636
-		// (get) Token: 0x06004087 RID: 16519 RVA: 0x0012B8CA File Offset: 0x00129ACA
+		// (get) Token: 0x06004088 RID: 16520 RVA: 0x0012B9A2 File Offset: 0x00129BA2
 		public bool IsObject
 		{
 			get
@@ -80,7 +80,7 @@ namespace LitJson
 		}
 
 		// Token: 0x17000665 RID: 1637
-		// (get) Token: 0x06004088 RID: 16520 RVA: 0x0012B8D5 File Offset: 0x00129AD5
+		// (get) Token: 0x06004089 RID: 16521 RVA: 0x0012B9AD File Offset: 0x00129BAD
 		public bool IsString
 		{
 			get
@@ -90,7 +90,7 @@ namespace LitJson
 		}
 
 		// Token: 0x17000666 RID: 1638
-		// (get) Token: 0x06004089 RID: 16521 RVA: 0x0012B8E0 File Offset: 0x00129AE0
+		// (get) Token: 0x0600408A RID: 16522 RVA: 0x0012B9B8 File Offset: 0x00129BB8
 		int ICollection.Count
 		{
 			get
@@ -100,7 +100,7 @@ namespace LitJson
 		}
 
 		// Token: 0x17000667 RID: 1639
-		// (get) Token: 0x0600408A RID: 16522 RVA: 0x0012B8E8 File Offset: 0x00129AE8
+		// (get) Token: 0x0600408B RID: 16523 RVA: 0x0012B9C0 File Offset: 0x00129BC0
 		bool ICollection.IsSynchronized
 		{
 			get
@@ -110,7 +110,7 @@ namespace LitJson
 		}
 
 		// Token: 0x17000668 RID: 1640
-		// (get) Token: 0x0600408B RID: 16523 RVA: 0x0012B8F5 File Offset: 0x00129AF5
+		// (get) Token: 0x0600408C RID: 16524 RVA: 0x0012B9CD File Offset: 0x00129BCD
 		object ICollection.SyncRoot
 		{
 			get
@@ -120,7 +120,7 @@ namespace LitJson
 		}
 
 		// Token: 0x17000669 RID: 1641
-		// (get) Token: 0x0600408C RID: 16524 RVA: 0x0012B902 File Offset: 0x00129B02
+		// (get) Token: 0x0600408D RID: 16525 RVA: 0x0012B9DA File Offset: 0x00129BDA
 		bool IDictionary.IsFixedSize
 		{
 			get
@@ -130,7 +130,7 @@ namespace LitJson
 		}
 
 		// Token: 0x1700066A RID: 1642
-		// (get) Token: 0x0600408D RID: 16525 RVA: 0x0012B90F File Offset: 0x00129B0F
+		// (get) Token: 0x0600408E RID: 16526 RVA: 0x0012B9E7 File Offset: 0x00129BE7
 		bool IDictionary.IsReadOnly
 		{
 			get
@@ -140,7 +140,7 @@ namespace LitJson
 		}
 
 		// Token: 0x1700066B RID: 1643
-		// (get) Token: 0x0600408E RID: 16526 RVA: 0x0012B91C File Offset: 0x00129B1C
+		// (get) Token: 0x0600408F RID: 16527 RVA: 0x0012B9F4 File Offset: 0x00129BF4
 		ICollection IDictionary.Keys
 		{
 			get
@@ -156,7 +156,7 @@ namespace LitJson
 		}
 
 		// Token: 0x1700066C RID: 1644
-		// (get) Token: 0x0600408F RID: 16527 RVA: 0x0012B984 File Offset: 0x00129B84
+		// (get) Token: 0x06004090 RID: 16528 RVA: 0x0012BA5C File Offset: 0x00129C5C
 		ICollection IDictionary.Values
 		{
 			get
@@ -172,7 +172,7 @@ namespace LitJson
 		}
 
 		// Token: 0x1700066D RID: 1645
-		// (get) Token: 0x06004090 RID: 16528 RVA: 0x0012B9EC File Offset: 0x00129BEC
+		// (get) Token: 0x06004091 RID: 16529 RVA: 0x0012BAC4 File Offset: 0x00129CC4
 		bool IJsonWrapper.IsArray
 		{
 			get
@@ -182,7 +182,7 @@ namespace LitJson
 		}
 
 		// Token: 0x1700066E RID: 1646
-		// (get) Token: 0x06004091 RID: 16529 RVA: 0x0012B9F4 File Offset: 0x00129BF4
+		// (get) Token: 0x06004092 RID: 16530 RVA: 0x0012BACC File Offset: 0x00129CCC
 		bool IJsonWrapper.IsBoolean
 		{
 			get
@@ -192,7 +192,7 @@ namespace LitJson
 		}
 
 		// Token: 0x1700066F RID: 1647
-		// (get) Token: 0x06004092 RID: 16530 RVA: 0x0012B9FC File Offset: 0x00129BFC
+		// (get) Token: 0x06004093 RID: 16531 RVA: 0x0012BAD4 File Offset: 0x00129CD4
 		bool IJsonWrapper.IsDouble
 		{
 			get
@@ -202,7 +202,7 @@ namespace LitJson
 		}
 
 		// Token: 0x17000670 RID: 1648
-		// (get) Token: 0x06004093 RID: 16531 RVA: 0x0012BA04 File Offset: 0x00129C04
+		// (get) Token: 0x06004094 RID: 16532 RVA: 0x0012BADC File Offset: 0x00129CDC
 		bool IJsonWrapper.IsInt
 		{
 			get
@@ -212,7 +212,7 @@ namespace LitJson
 		}
 
 		// Token: 0x17000671 RID: 1649
-		// (get) Token: 0x06004094 RID: 16532 RVA: 0x0012BA0C File Offset: 0x00129C0C
+		// (get) Token: 0x06004095 RID: 16533 RVA: 0x0012BAE4 File Offset: 0x00129CE4
 		bool IJsonWrapper.IsLong
 		{
 			get
@@ -222,7 +222,7 @@ namespace LitJson
 		}
 
 		// Token: 0x17000672 RID: 1650
-		// (get) Token: 0x06004095 RID: 16533 RVA: 0x0012BA14 File Offset: 0x00129C14
+		// (get) Token: 0x06004096 RID: 16534 RVA: 0x0012BAEC File Offset: 0x00129CEC
 		bool IJsonWrapper.IsObject
 		{
 			get
@@ -232,7 +232,7 @@ namespace LitJson
 		}
 
 		// Token: 0x17000673 RID: 1651
-		// (get) Token: 0x06004096 RID: 16534 RVA: 0x0012BA1C File Offset: 0x00129C1C
+		// (get) Token: 0x06004097 RID: 16535 RVA: 0x0012BAF4 File Offset: 0x00129CF4
 		bool IJsonWrapper.IsString
 		{
 			get
@@ -242,7 +242,7 @@ namespace LitJson
 		}
 
 		// Token: 0x17000674 RID: 1652
-		// (get) Token: 0x06004097 RID: 16535 RVA: 0x0012BA24 File Offset: 0x00129C24
+		// (get) Token: 0x06004098 RID: 16536 RVA: 0x0012BAFC File Offset: 0x00129CFC
 		bool IList.IsFixedSize
 		{
 			get
@@ -252,7 +252,7 @@ namespace LitJson
 		}
 
 		// Token: 0x17000675 RID: 1653
-		// (get) Token: 0x06004098 RID: 16536 RVA: 0x0012BA31 File Offset: 0x00129C31
+		// (get) Token: 0x06004099 RID: 16537 RVA: 0x0012BB09 File Offset: 0x00129D09
 		bool IList.IsReadOnly
 		{
 			get
@@ -375,40 +375,40 @@ namespace LitJson
 			}
 		}
 
-		// Token: 0x060040A3 RID: 16547 RVA: 0x00002050 File Offset: 0x00000250
+		// Token: 0x060040A4 RID: 16548 RVA: 0x00002050 File Offset: 0x00000250
 		public JsonData()
 		{
 		}
 
-		// Token: 0x060040A4 RID: 16548 RVA: 0x0012BC8F File Offset: 0x00129E8F
+		// Token: 0x060040A5 RID: 16549 RVA: 0x0012BD67 File Offset: 0x00129F67
 		public JsonData(bool boolean)
 		{
 			this.type = JsonType.Boolean;
 			this.inst_boolean = boolean;
 		}
 
-		// Token: 0x060040A5 RID: 16549 RVA: 0x0012BCA5 File Offset: 0x00129EA5
+		// Token: 0x060040A6 RID: 16550 RVA: 0x0012BD7D File Offset: 0x00129F7D
 		public JsonData(double number)
 		{
 			this.type = JsonType.Double;
 			this.inst_double = number;
 		}
 
-		// Token: 0x060040A6 RID: 16550 RVA: 0x0012BCBB File Offset: 0x00129EBB
+		// Token: 0x060040A7 RID: 16551 RVA: 0x0012BD93 File Offset: 0x00129F93
 		public JsonData(int number)
 		{
 			this.type = JsonType.Int;
 			this.inst_int = number;
 		}
 
-		// Token: 0x060040A7 RID: 16551 RVA: 0x0012BCD1 File Offset: 0x00129ED1
+		// Token: 0x060040A8 RID: 16552 RVA: 0x0012BDA9 File Offset: 0x00129FA9
 		public JsonData(long number)
 		{
 			this.type = JsonType.Long;
 			this.inst_long = number;
 		}
 
-		// Token: 0x060040A8 RID: 16552 RVA: 0x0012BCE8 File Offset: 0x00129EE8
+		// Token: 0x060040A9 RID: 16553 RVA: 0x0012BDC0 File Offset: 0x00129FC0
 		public JsonData(object obj)
 		{
 			if (obj is bool)
@@ -444,44 +444,44 @@ namespace LitJson
 			throw new ArgumentException("Unable to wrap the given object with JsonData");
 		}
 
-		// Token: 0x060040A9 RID: 16553 RVA: 0x0012BD91 File Offset: 0x00129F91
+		// Token: 0x060040AA RID: 16554 RVA: 0x0012BE69 File Offset: 0x0012A069
 		public JsonData(string str)
 		{
 			this.type = JsonType.String;
 			this.inst_string = str;
 		}
 
-		// Token: 0x060040AA RID: 16554 RVA: 0x0012BDA7 File Offset: 0x00129FA7
+		// Token: 0x060040AB RID: 16555 RVA: 0x0012BE7F File Offset: 0x0012A07F
 		public static implicit operator JsonData(bool data)
 		{
 			return new JsonData(data);
 		}
 
-		// Token: 0x060040AB RID: 16555 RVA: 0x0012BDAF File Offset: 0x00129FAF
+		// Token: 0x060040AC RID: 16556 RVA: 0x0012BE87 File Offset: 0x0012A087
 		public static implicit operator JsonData(double data)
 		{
 			return new JsonData(data);
 		}
 
-		// Token: 0x060040AC RID: 16556 RVA: 0x0012BDB7 File Offset: 0x00129FB7
+		// Token: 0x060040AD RID: 16557 RVA: 0x0012BE8F File Offset: 0x0012A08F
 		public static implicit operator JsonData(int data)
 		{
 			return new JsonData(data);
 		}
 
-		// Token: 0x060040AD RID: 16557 RVA: 0x0012BDBF File Offset: 0x00129FBF
+		// Token: 0x060040AE RID: 16558 RVA: 0x0012BE97 File Offset: 0x0012A097
 		public static implicit operator JsonData(long data)
 		{
 			return new JsonData(data);
 		}
 
-		// Token: 0x060040AE RID: 16558 RVA: 0x0012BDC7 File Offset: 0x00129FC7
+		// Token: 0x060040AF RID: 16559 RVA: 0x0012BE9F File Offset: 0x0012A09F
 		public static implicit operator JsonData(string data)
 		{
 			return new JsonData(data);
 		}
 
-		// Token: 0x060040AF RID: 16559 RVA: 0x0012BDCF File Offset: 0x00129FCF
+		// Token: 0x060040B0 RID: 16560 RVA: 0x0012BEA7 File Offset: 0x0012A0A7
 		public static explicit operator bool(JsonData data)
 		{
 			if (data.type != JsonType.Boolean)
@@ -491,7 +491,7 @@ namespace LitJson
 			return data.inst_boolean;
 		}
 
-		// Token: 0x060040B0 RID: 16560 RVA: 0x0012BDEB File Offset: 0x00129FEB
+		// Token: 0x060040B1 RID: 16561 RVA: 0x0012BEC3 File Offset: 0x0012A0C3
 		public static explicit operator double(JsonData data)
 		{
 			if (data.type != JsonType.Double)
@@ -501,7 +501,7 @@ namespace LitJson
 			return data.inst_double;
 		}
 
-		// Token: 0x060040B1 RID: 16561 RVA: 0x0012BE07 File Offset: 0x0012A007
+		// Token: 0x060040B2 RID: 16562 RVA: 0x0012BEDF File Offset: 0x0012A0DF
 		public static explicit operator int(JsonData data)
 		{
 			if (data.type != JsonType.Int)
@@ -511,7 +511,7 @@ namespace LitJson
 			return data.inst_int;
 		}
 
-		// Token: 0x060040B2 RID: 16562 RVA: 0x0012BE23 File Offset: 0x0012A023
+		// Token: 0x060040B3 RID: 16563 RVA: 0x0012BEFB File Offset: 0x0012A0FB
 		public static explicit operator long(JsonData data)
 		{
 			if (data.type != JsonType.Long)
@@ -521,7 +521,7 @@ namespace LitJson
 			return data.inst_long;
 		}
 
-		// Token: 0x060040B3 RID: 16563 RVA: 0x0012BE3F File Offset: 0x0012A03F
+		// Token: 0x060040B4 RID: 16564 RVA: 0x0012BF17 File Offset: 0x0012A117
 		public static explicit operator string(JsonData data)
 		{
 			if (data.type != JsonType.String)
@@ -531,13 +531,13 @@ namespace LitJson
 			return data.inst_string;
 		}
 
-		// Token: 0x060040B4 RID: 16564 RVA: 0x0012BE5B File Offset: 0x0012A05B
+		// Token: 0x060040B5 RID: 16565 RVA: 0x0012BF33 File Offset: 0x0012A133
 		void ICollection.CopyTo(Array array, int index)
 		{
 			this.EnsureCollection().CopyTo(array, index);
 		}
 
-		// Token: 0x060040B5 RID: 16565 RVA: 0x0012BE6C File Offset: 0x0012A06C
+		// Token: 0x060040B6 RID: 16566 RVA: 0x0012BF44 File Offset: 0x0012A144
 		void IDictionary.Add(object key, object value)
 		{
 			JsonData jsonData = this.ToJsonData(value);
@@ -547,7 +547,7 @@ namespace LitJson
 			this.json = null;
 		}
 
-		// Token: 0x060040B6 RID: 16566 RVA: 0x0012BEAF File Offset: 0x0012A0AF
+		// Token: 0x060040B7 RID: 16567 RVA: 0x0012BF87 File Offset: 0x0012A187
 		void IDictionary.Clear()
 		{
 			this.EnsureDictionary().Clear();
@@ -555,19 +555,19 @@ namespace LitJson
 			this.json = null;
 		}
 
-		// Token: 0x060040B7 RID: 16567 RVA: 0x0012BECE File Offset: 0x0012A0CE
+		// Token: 0x060040B8 RID: 16568 RVA: 0x0012BFA6 File Offset: 0x0012A1A6
 		bool IDictionary.Contains(object key)
 		{
 			return this.EnsureDictionary().Contains(key);
 		}
 
-		// Token: 0x060040B8 RID: 16568 RVA: 0x0012BEDC File Offset: 0x0012A0DC
+		// Token: 0x060040B9 RID: 16569 RVA: 0x0012BFB4 File Offset: 0x0012A1B4
 		IDictionaryEnumerator IDictionary.GetEnumerator()
 		{
 			return ((IOrderedDictionary)this).GetEnumerator();
 		}
 
-		// Token: 0x060040B9 RID: 16569 RVA: 0x0012BEE4 File Offset: 0x0012A0E4
+		// Token: 0x060040BA RID: 16570 RVA: 0x0012BFBC File Offset: 0x0012A1BC
 		void IDictionary.Remove(object key)
 		{
 			this.EnsureDictionary().Remove(key);
@@ -582,13 +582,13 @@ namespace LitJson
 			this.json = null;
 		}
 
-		// Token: 0x060040BA RID: 16570 RVA: 0x0012BF49 File Offset: 0x0012A149
+		// Token: 0x060040BB RID: 16571 RVA: 0x0012C021 File Offset: 0x0012A221
 		IEnumerator IEnumerable.GetEnumerator()
 		{
 			return this.EnsureCollection().GetEnumerator();
 		}
 
-		// Token: 0x060040BB RID: 16571 RVA: 0x0012BF56 File Offset: 0x0012A156
+		// Token: 0x060040BC RID: 16572 RVA: 0x0012C02E File Offset: 0x0012A22E
 		bool IJsonWrapper.GetBoolean()
 		{
 			if (this.type != JsonType.Boolean)
@@ -598,7 +598,7 @@ namespace LitJson
 			return this.inst_boolean;
 		}
 
-		// Token: 0x060040BC RID: 16572 RVA: 0x0012BF72 File Offset: 0x0012A172
+		// Token: 0x060040BD RID: 16573 RVA: 0x0012C04A File Offset: 0x0012A24A
 		double IJsonWrapper.GetDouble()
 		{
 			if (this.type != JsonType.Double)
@@ -608,7 +608,7 @@ namespace LitJson
 			return this.inst_double;
 		}
 
-		// Token: 0x060040BD RID: 16573 RVA: 0x0012BF8E File Offset: 0x0012A18E
+		// Token: 0x060040BE RID: 16574 RVA: 0x0012C066 File Offset: 0x0012A266
 		int IJsonWrapper.GetInt()
 		{
 			if (this.type != JsonType.Int)
@@ -618,7 +618,7 @@ namespace LitJson
 			return this.inst_int;
 		}
 
-		// Token: 0x060040BE RID: 16574 RVA: 0x0012BFAA File Offset: 0x0012A1AA
+		// Token: 0x060040BF RID: 16575 RVA: 0x0012C082 File Offset: 0x0012A282
 		long IJsonWrapper.GetLong()
 		{
 			if (this.type != JsonType.Long)
@@ -628,7 +628,7 @@ namespace LitJson
 			return this.inst_long;
 		}
 
-		// Token: 0x060040BF RID: 16575 RVA: 0x0012BFC6 File Offset: 0x0012A1C6
+		// Token: 0x060040C0 RID: 16576 RVA: 0x0012C09E File Offset: 0x0012A29E
 		string IJsonWrapper.GetString()
 		{
 			if (this.type != JsonType.String)
@@ -638,7 +638,7 @@ namespace LitJson
 			return this.inst_string;
 		}
 
-		// Token: 0x060040C0 RID: 16576 RVA: 0x0012BFE2 File Offset: 0x0012A1E2
+		// Token: 0x060040C1 RID: 16577 RVA: 0x0012C0BA File Offset: 0x0012A2BA
 		void IJsonWrapper.SetBoolean(bool val)
 		{
 			this.type = JsonType.Boolean;
@@ -646,7 +646,7 @@ namespace LitJson
 			this.json = null;
 		}
 
-		// Token: 0x060040C1 RID: 16577 RVA: 0x0012BFF9 File Offset: 0x0012A1F9
+		// Token: 0x060040C2 RID: 16578 RVA: 0x0012C0D1 File Offset: 0x0012A2D1
 		void IJsonWrapper.SetDouble(double val)
 		{
 			this.type = JsonType.Double;
@@ -654,7 +654,7 @@ namespace LitJson
 			this.json = null;
 		}
 
-		// Token: 0x060040C2 RID: 16578 RVA: 0x0012C010 File Offset: 0x0012A210
+		// Token: 0x060040C3 RID: 16579 RVA: 0x0012C0E8 File Offset: 0x0012A2E8
 		void IJsonWrapper.SetInt(int val)
 		{
 			this.type = JsonType.Int;
@@ -662,7 +662,7 @@ namespace LitJson
 			this.json = null;
 		}
 
-		// Token: 0x060040C3 RID: 16579 RVA: 0x0012C027 File Offset: 0x0012A227
+		// Token: 0x060040C4 RID: 16580 RVA: 0x0012C0FF File Offset: 0x0012A2FF
 		void IJsonWrapper.SetLong(long val)
 		{
 			this.type = JsonType.Long;
@@ -670,7 +670,7 @@ namespace LitJson
 			this.json = null;
 		}
 
-		// Token: 0x060040C4 RID: 16580 RVA: 0x0012C03E File Offset: 0x0012A23E
+		// Token: 0x060040C5 RID: 16581 RVA: 0x0012C116 File Offset: 0x0012A316
 		void IJsonWrapper.SetString(string val)
 		{
 			this.type = JsonType.String;
@@ -678,72 +678,72 @@ namespace LitJson
 			this.json = null;
 		}
 
-		// Token: 0x060040C5 RID: 16581 RVA: 0x0012C055 File Offset: 0x0012A255
+		// Token: 0x060040C6 RID: 16582 RVA: 0x0012C12D File Offset: 0x0012A32D
 		string IJsonWrapper.ToJson()
 		{
 			return this.ToJson();
 		}
 
-		// Token: 0x060040C6 RID: 16582 RVA: 0x0012C05D File Offset: 0x0012A25D
+		// Token: 0x060040C7 RID: 16583 RVA: 0x0012C135 File Offset: 0x0012A335
 		void IJsonWrapper.ToJson(JsonWriter writer)
 		{
 			this.ToJson(writer);
 		}
 
-		// Token: 0x060040C7 RID: 16583 RVA: 0x0012C066 File Offset: 0x0012A266
+		// Token: 0x060040C8 RID: 16584 RVA: 0x0012C13E File Offset: 0x0012A33E
 		int IList.Add(object value)
 		{
 			return this.Add(value);
 		}
 
-		// Token: 0x060040C8 RID: 16584 RVA: 0x0012C06F File Offset: 0x0012A26F
+		// Token: 0x060040C9 RID: 16585 RVA: 0x0012C147 File Offset: 0x0012A347
 		void IList.Clear()
 		{
 			this.EnsureList().Clear();
 			this.json = null;
 		}
 
-		// Token: 0x060040C9 RID: 16585 RVA: 0x0012C083 File Offset: 0x0012A283
+		// Token: 0x060040CA RID: 16586 RVA: 0x0012C15B File Offset: 0x0012A35B
 		bool IList.Contains(object value)
 		{
 			return this.EnsureList().Contains(value);
 		}
 
-		// Token: 0x060040CA RID: 16586 RVA: 0x0012C091 File Offset: 0x0012A291
+		// Token: 0x060040CB RID: 16587 RVA: 0x0012C169 File Offset: 0x0012A369
 		int IList.IndexOf(object value)
 		{
 			return this.EnsureList().IndexOf(value);
 		}
 
-		// Token: 0x060040CB RID: 16587 RVA: 0x0012C09F File Offset: 0x0012A29F
+		// Token: 0x060040CC RID: 16588 RVA: 0x0012C177 File Offset: 0x0012A377
 		void IList.Insert(int index, object value)
 		{
 			this.EnsureList().Insert(index, value);
 			this.json = null;
 		}
 
-		// Token: 0x060040CC RID: 16588 RVA: 0x0012C0B5 File Offset: 0x0012A2B5
+		// Token: 0x060040CD RID: 16589 RVA: 0x0012C18D File Offset: 0x0012A38D
 		void IList.Remove(object value)
 		{
 			this.EnsureList().Remove(value);
 			this.json = null;
 		}
 
-		// Token: 0x060040CD RID: 16589 RVA: 0x0012C0CA File Offset: 0x0012A2CA
+		// Token: 0x060040CE RID: 16590 RVA: 0x0012C1A2 File Offset: 0x0012A3A2
 		void IList.RemoveAt(int index)
 		{
 			this.EnsureList().RemoveAt(index);
 			this.json = null;
 		}
 
-		// Token: 0x060040CE RID: 16590 RVA: 0x0012C0DF File Offset: 0x0012A2DF
+		// Token: 0x060040CF RID: 16591 RVA: 0x0012C1B7 File Offset: 0x0012A3B7
 		IDictionaryEnumerator IOrderedDictionary.GetEnumerator()
 		{
 			this.EnsureDictionary();
 			return new OrderedDictionaryEnumerator(this.object_list.GetEnumerator());
 		}
 
-		// Token: 0x060040CF RID: 16591 RVA: 0x0012C0F8 File Offset: 0x0012A2F8
+		// Token: 0x060040D0 RID: 16592 RVA: 0x0012C1D0 File Offset: 0x0012A3D0
 		void IOrderedDictionary.Insert(int idx, object key, object value)
 		{
 			string text = (string)key;
@@ -753,7 +753,7 @@ namespace LitJson
 			this.object_list.Insert(idx, keyValuePair);
 		}
 
-		// Token: 0x060040D0 RID: 16592 RVA: 0x0012C134 File Offset: 0x0012A334
+		// Token: 0x060040D1 RID: 16593 RVA: 0x0012C20C File Offset: 0x0012A40C
 		void IOrderedDictionary.RemoveAt(int idx)
 		{
 			this.EnsureDictionary();
@@ -761,7 +761,7 @@ namespace LitJson
 			this.object_list.RemoveAt(idx);
 		}
 
-		// Token: 0x060040D1 RID: 16593 RVA: 0x0012C174 File Offset: 0x0012A374
+		// Token: 0x060040D2 RID: 16594 RVA: 0x0012C24C File Offset: 0x0012A44C
 		private ICollection EnsureCollection()
 		{
 			if (this.type == JsonType.Array)
@@ -775,7 +775,7 @@ namespace LitJson
 			throw new InvalidOperationException("The JsonData instance has to be initialized first");
 		}
 
-		// Token: 0x060040D2 RID: 16594 RVA: 0x0012C1AC File Offset: 0x0012A3AC
+		// Token: 0x060040D3 RID: 16595 RVA: 0x0012C284 File Offset: 0x0012A484
 		private IDictionary EnsureDictionary()
 		{
 			if (this.type == JsonType.Object)
@@ -792,7 +792,7 @@ namespace LitJson
 			return (IDictionary)this.inst_object;
 		}
 
-		// Token: 0x060040D3 RID: 16595 RVA: 0x0012C20C File Offset: 0x0012A40C
+		// Token: 0x060040D4 RID: 16596 RVA: 0x0012C2E4 File Offset: 0x0012A4E4
 		private IList EnsureList()
 		{
 			if (this.type == JsonType.Array)
@@ -808,7 +808,7 @@ namespace LitJson
 			return (IList)this.inst_array;
 		}
 
-		// Token: 0x060040D4 RID: 16596 RVA: 0x0012C25E File Offset: 0x0012A45E
+		// Token: 0x060040D5 RID: 16597 RVA: 0x0012C336 File Offset: 0x0012A536
 		private JsonData ToJsonData(object obj)
 		{
 			if (obj == null)
@@ -822,7 +822,7 @@ namespace LitJson
 			return new JsonData(obj);
 		}
 
-		// Token: 0x060040D5 RID: 16597 RVA: 0x0012C27C File Offset: 0x0012A47C
+		// Token: 0x060040D6 RID: 16598 RVA: 0x0012C354 File Offset: 0x0012A554
 		private static void WriteJson(IJsonWrapper obj, JsonWriter writer)
 		{
 			if (obj.IsString)
@@ -874,7 +874,7 @@ namespace LitJson
 			}
 		}
 
-		// Token: 0x060040D6 RID: 16598 RVA: 0x0012C3C4 File Offset: 0x0012A5C4
+		// Token: 0x060040D7 RID: 16599 RVA: 0x0012C49C File Offset: 0x0012A69C
 		public int Add(object value)
 		{
 			JsonData jsonData = this.ToJsonData(value);
@@ -882,7 +882,7 @@ namespace LitJson
 			return this.EnsureList().Add(jsonData);
 		}
 
-		// Token: 0x060040D7 RID: 16599 RVA: 0x0012C3EC File Offset: 0x0012A5EC
+		// Token: 0x060040D8 RID: 16600 RVA: 0x0012C4C4 File Offset: 0x0012A6C4
 		public void Clear()
 		{
 			if (this.IsObject)
@@ -897,7 +897,7 @@ namespace LitJson
 			}
 		}
 
-		// Token: 0x060040D8 RID: 16600 RVA: 0x0012C40C File Offset: 0x0012A60C
+		// Token: 0x060040D9 RID: 16601 RVA: 0x0012C4E4 File Offset: 0x0012A6E4
 		public bool Equals(JsonData x)
 		{
 			if (x == null)
@@ -931,13 +931,13 @@ namespace LitJson
 			}
 		}
 
-		// Token: 0x060040D9 RID: 16601 RVA: 0x0012C4E1 File Offset: 0x0012A6E1
+		// Token: 0x060040DA RID: 16602 RVA: 0x0012C5B9 File Offset: 0x0012A7B9
 		public JsonType GetJsonType()
 		{
 			return this.type;
 		}
 
-		// Token: 0x060040DA RID: 16602 RVA: 0x0012C4EC File Offset: 0x0012A6EC
+		// Token: 0x060040DB RID: 16603 RVA: 0x0012C5C4 File Offset: 0x0012A7C4
 		public void SetJsonType(JsonType type)
 		{
 			if (this.type == type)
@@ -972,7 +972,7 @@ namespace LitJson
 			this.type = type;
 		}
 
-		// Token: 0x060040DB RID: 16603 RVA: 0x0012C58C File Offset: 0x0012A78C
+		// Token: 0x060040DC RID: 16604 RVA: 0x0012C664 File Offset: 0x0012A864
 		public string ToJson()
 		{
 			if (this.json != null)
@@ -988,7 +988,7 @@ namespace LitJson
 			return this.json;
 		}
 
-		// Token: 0x060040DC RID: 16604 RVA: 0x0012C5D8 File Offset: 0x0012A7D8
+		// Token: 0x060040DD RID: 16605 RVA: 0x0012C6B0 File Offset: 0x0012A8B0
 		public void ToJson(JsonWriter writer)
 		{
 			bool validate = writer.Validate;
@@ -997,7 +997,7 @@ namespace LitJson
 			writer.Validate = validate;
 		}
 
-		// Token: 0x060040DD RID: 16605 RVA: 0x0012C604 File Offset: 0x0012A804
+		// Token: 0x060040DE RID: 16606 RVA: 0x0012C6DC File Offset: 0x0012A8DC
 		public override string ToString()
 		{
 			switch (this.type)
@@ -1021,34 +1021,34 @@ namespace LitJson
 			}
 		}
 
-		// Token: 0x040043CF RID: 17359
+		// Token: 0x040043D0 RID: 17360
 		private IList<JsonData> inst_array;
 
-		// Token: 0x040043D0 RID: 17360
+		// Token: 0x040043D1 RID: 17361
 		private bool inst_boolean;
 
-		// Token: 0x040043D1 RID: 17361
+		// Token: 0x040043D2 RID: 17362
 		private double inst_double;
 
-		// Token: 0x040043D2 RID: 17362
+		// Token: 0x040043D3 RID: 17363
 		private int inst_int;
 
-		// Token: 0x040043D3 RID: 17363
+		// Token: 0x040043D4 RID: 17364
 		private long inst_long;
 
-		// Token: 0x040043D4 RID: 17364
+		// Token: 0x040043D5 RID: 17365
 		private IDictionary<string, JsonData> inst_object;
 
-		// Token: 0x040043D5 RID: 17365
+		// Token: 0x040043D6 RID: 17366
 		private string inst_string;
 
-		// Token: 0x040043D6 RID: 17366
+		// Token: 0x040043D7 RID: 17367
 		private string json;
 
-		// Token: 0x040043D7 RID: 17367
+		// Token: 0x040043D8 RID: 17368
 		private JsonType type;
 
-		// Token: 0x040043D8 RID: 17368
+		// Token: 0x040043D9 RID: 17369
 		private IList<KeyValuePair<string, JsonData>> object_list;
 	}
 }

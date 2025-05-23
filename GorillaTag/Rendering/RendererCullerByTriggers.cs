@@ -6,7 +6,7 @@ namespace GorillaTag.Rendering
 	// Token: 0x02000D99 RID: 3481
 	public class RendererCullerByTriggers : MonoBehaviour, IBuildValidation
 	{
-		// Token: 0x06005665 RID: 22117 RVA: 0x001A4B14 File Offset: 0x001A2D14
+		// Token: 0x06005666 RID: 22118 RVA: 0x001A4BEC File Offset: 0x001A2DEC
 		protected void OnEnable()
 		{
 			this.camWasTouching = false;
@@ -23,7 +23,7 @@ namespace GorillaTag.Rendering
 			}
 		}
 
-		// Token: 0x06005666 RID: 22118 RVA: 0x001A4B70 File Offset: 0x001A2D70
+		// Token: 0x06005667 RID: 22119 RVA: 0x001A4C48 File Offset: 0x001A2E48
 		protected void LateUpdate()
 		{
 			if (this.mainCameraTransform == null)
@@ -54,7 +54,7 @@ namespace GorillaTag.Rendering
 			}
 		}
 
-		// Token: 0x06005667 RID: 22119 RVA: 0x001A4C30 File Offset: 0x001A2E30
+		// Token: 0x06005668 RID: 22120 RVA: 0x001A4D08 File Offset: 0x001A2F08
 		public bool BuildValidationCheck()
 		{
 			for (int i = 0; i < this.renderers.Length; i++)
@@ -76,20 +76,20 @@ namespace GorillaTag.Rendering
 			return true;
 		}
 
-		// Token: 0x04005A2D RID: 23085
+		// Token: 0x04005A2E RID: 23086
 		[Tooltip("These renderers will be enabled/disabled depending on if the main camera is the colliders.")]
 		public Renderer[] renderers;
 
-		// Token: 0x04005A2E RID: 23086
+		// Token: 0x04005A2F RID: 23087
 		public Collider[] colliders;
 
-		// Token: 0x04005A2F RID: 23087
+		// Token: 0x04005A30 RID: 23088
 		private bool camWasTouching;
 
-		// Token: 0x04005A30 RID: 23088
+		// Token: 0x04005A31 RID: 23089
 		private const float cameraRadiusSq = 0.010000001f;
 
-		// Token: 0x04005A31 RID: 23089
+		// Token: 0x04005A32 RID: 23090
 		private Transform mainCameraTransform;
 	}
 }

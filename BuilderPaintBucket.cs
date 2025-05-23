@@ -4,7 +4,7 @@ using UnityEngine;
 // Token: 0x020004D0 RID: 1232
 public class BuilderPaintBucket : MonoBehaviour
 {
-	// Token: 0x06001DE7 RID: 7655 RVA: 0x0009194C File Offset: 0x0008FB4C
+	// Token: 0x06001DE7 RID: 7655 RVA: 0x0009196C File Offset: 0x0008FB6C
 	private void Awake()
 	{
 		if (string.IsNullOrEmpty(this.materialId))
@@ -24,7 +24,7 @@ public class BuilderPaintBucket : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001DE8 RID: 7656 RVA: 0x000919C0 File Offset: 0x0008FBC0
+	// Token: 0x06001DE8 RID: 7656 RVA: 0x000919E0 File Offset: 0x0008FBE0
 	private void OnTriggerEnter(Collider other)
 	{
 		if (this.materialType == -1)

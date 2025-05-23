@@ -8,7 +8,7 @@ namespace GorillaTagScripts.AI
 	// Token: 0x02000B97 RID: 2967
 	public class AIEntity : MonoBehaviour
 	{
-		// Token: 0x06004997 RID: 18839 RVA: 0x0015FA74 File Offset: 0x0015DC74
+		// Token: 0x06004998 RID: 18840 RVA: 0x0015FB4C File Offset: 0x0015DD4C
 		protected void Awake()
 		{
 			this.navMeshAgent = base.gameObject.GetComponent<NavMeshAgent>();
@@ -22,7 +22,7 @@ namespace GorillaTagScripts.AI
 			}
 		}
 
-		// Token: 0x06004998 RID: 18840 RVA: 0x0015FADC File Offset: 0x0015DCDC
+		// Token: 0x06004999 RID: 18841 RVA: 0x0015FBB4 File Offset: 0x0015DDB4
 		protected void ChooseRandomTarget()
 		{
 			int randomTarget = Random.Range(0, GorillaParent.instance.vrrigs.Count);
@@ -43,7 +43,7 @@ namespace GorillaTagScripts.AI
 			this.followTarget = null;
 		}
 
-		// Token: 0x06004999 RID: 18841 RVA: 0x0015FBCC File Offset: 0x0015DDCC
+		// Token: 0x0600499A RID: 18842 RVA: 0x0015FCA4 File Offset: 0x0015DEA4
 		protected void ChooseClosestTarget()
 		{
 			VRRig vrrig = null;
@@ -72,58 +72,58 @@ namespace GorillaTagScripts.AI
 			this.followTarget = null;
 		}
 
-		// Token: 0x04004C6B RID: 19563
+		// Token: 0x04004C6C RID: 19564
 		public GameObject waypointsContainer;
 
-		// Token: 0x04004C6C RID: 19564
+		// Token: 0x04004C6D RID: 19565
 		public Transform circleCenter;
 
-		// Token: 0x04004C6D RID: 19565
+		// Token: 0x04004C6E RID: 19566
 		public float circleRadius;
 
-		// Token: 0x04004C6E RID: 19566
+		// Token: 0x04004C6F RID: 19567
 		public float angularSpeed;
 
-		// Token: 0x04004C6F RID: 19567
+		// Token: 0x04004C70 RID: 19568
 		public float patrolSpeed;
 
-		// Token: 0x04004C70 RID: 19568
+		// Token: 0x04004C71 RID: 19569
 		public float fleeSpeed;
 
-		// Token: 0x04004C71 RID: 19569
+		// Token: 0x04004C72 RID: 19570
 		public NavMeshAgent navMeshAgent;
 
-		// Token: 0x04004C72 RID: 19570
+		// Token: 0x04004C73 RID: 19571
 		public Animator animator;
 
-		// Token: 0x04004C73 RID: 19571
+		// Token: 0x04004C74 RID: 19572
 		public float fleeRang;
 
-		// Token: 0x04004C74 RID: 19572
+		// Token: 0x04004C75 RID: 19573
 		public float fleeSpeedMult;
 
-		// Token: 0x04004C75 RID: 19573
+		// Token: 0x04004C76 RID: 19574
 		public float minChaseRange;
 
-		// Token: 0x04004C76 RID: 19574
+		// Token: 0x04004C77 RID: 19575
 		public float attackDistance;
 
-		// Token: 0x04004C77 RID: 19575
+		// Token: 0x04004C78 RID: 19576
 		public float navMeshSampleRange = 5f;
 
-		// Token: 0x04004C78 RID: 19576
+		// Token: 0x04004C79 RID: 19577
 		internal readonly List<Transform> waypoints = new List<Transform>();
 
-		// Token: 0x04004C79 RID: 19577
+		// Token: 0x04004C7A RID: 19578
 		internal float defaultSpeed;
 
-		// Token: 0x04004C7A RID: 19578
+		// Token: 0x04004C7B RID: 19579
 		public Transform followTarget;
 
-		// Token: 0x04004C7B RID: 19579
+		// Token: 0x04004C7C RID: 19580
 		public NetPlayer targetPlayer;
 
-		// Token: 0x04004C7C RID: 19580
+		// Token: 0x04004C7D RID: 19581
 		public bool targetIsOnNavMesh;
 	}
 }

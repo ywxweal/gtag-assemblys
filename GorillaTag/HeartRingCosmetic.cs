@@ -8,7 +8,7 @@ namespace GorillaTag
 	[DefaultExecutionOrder(1250)]
 	public class HeartRingCosmetic : MonoBehaviour
 	{
-		// Token: 0x0600537A RID: 21370 RVA: 0x00195517 File Offset: 0x00193717
+		// Token: 0x0600537B RID: 21371 RVA: 0x001955EF File Offset: 0x001937EF
 		protected void Awake()
 		{
 			Application.quitting += delegate
@@ -17,7 +17,7 @@ namespace GorillaTag
 			};
 		}
 
-		// Token: 0x0600537B RID: 21371 RVA: 0x0019552C File Offset: 0x0019372C
+		// Token: 0x0600537C RID: 21372 RVA: 0x00195604 File Offset: 0x00193804
 		protected void OnEnable()
 		{
 			this.particleSystem = this.effects.GetComponentInChildren<ParticleSystem>(true);
@@ -36,7 +36,7 @@ namespace GorillaTag
 			this.maxVolume = this.audioSource.volume;
 		}
 
-		// Token: 0x0600537C RID: 21372 RVA: 0x00195634 File Offset: 0x00193834
+		// Token: 0x0600537D RID: 21373 RVA: 0x0019570C File Offset: 0x0019390C
 		protected void LateUpdate()
 		{
 			Transform transform = base.transform;
@@ -54,46 +54,46 @@ namespace GorillaTag
 			}
 		}
 
-		// Token: 0x04005687 RID: 22151
-		public GameObject effects;
-
 		// Token: 0x04005688 RID: 22152
-		[SerializeField]
-		private bool isHauntedVoiceChanger;
+		public GameObject effects;
 
 		// Token: 0x04005689 RID: 22153
 		[SerializeField]
-		private float hauntedVoicePitch = 0.75f;
+		private bool isHauntedVoiceChanger;
 
 		// Token: 0x0400568A RID: 22154
+		[SerializeField]
+		private float hauntedVoicePitch = 0.75f;
+
+		// Token: 0x0400568B RID: 22155
 		[AssignInCorePrefab]
 		public float effectActivationRadius = 0.15f;
 
-		// Token: 0x0400568B RID: 22155
+		// Token: 0x0400568C RID: 22156
 		private readonly Vector3 headToMouthOffset = new Vector3(0f, 0.0208f, 0.171f);
 
-		// Token: 0x0400568C RID: 22156
+		// Token: 0x0400568D RID: 22157
 		private VRRig ownerRig;
 
-		// Token: 0x0400568D RID: 22157
+		// Token: 0x0400568E RID: 22158
 		private Transform ownerHead;
 
-		// Token: 0x0400568E RID: 22158
+		// Token: 0x0400568F RID: 22159
 		private ParticleSystem particleSystem;
 
-		// Token: 0x0400568F RID: 22159
+		// Token: 0x04005690 RID: 22160
 		private AudioSource audioSource;
 
-		// Token: 0x04005690 RID: 22160
+		// Token: 0x04005691 RID: 22161
 		private float maxEmissionRate;
 
-		// Token: 0x04005691 RID: 22161
+		// Token: 0x04005692 RID: 22162
 		private float maxVolume;
 
-		// Token: 0x04005692 RID: 22162
+		// Token: 0x04005693 RID: 22163
 		private const float emissionFadeTime = 0.1f;
 
-		// Token: 0x04005693 RID: 22163
+		// Token: 0x04005694 RID: 22164
 		private const float volumeFadeTime = 2f;
 	}
 }

@@ -12,45 +12,45 @@ using UnityEngine;
 // Token: 0x02000854 RID: 2132
 public class CustomGameMode : GorillaGameManager
 {
-	// Token: 0x060033CF RID: 13263 RVA: 0x000023F4 File Offset: 0x000005F4
+	// Token: 0x060033D0 RID: 13264 RVA: 0x000023F4 File Offset: 0x000005F4
 	public override void OnSerializeRead(PhotonStream stream, PhotonMessageInfo info)
 	{
 	}
 
-	// Token: 0x060033D0 RID: 13264 RVA: 0x000023F4 File Offset: 0x000005F4
+	// Token: 0x060033D1 RID: 13265 RVA: 0x000023F4 File Offset: 0x000005F4
 	public override void OnSerializeRead(object obj)
 	{
 	}
 
-	// Token: 0x060033D1 RID: 13265 RVA: 0x000023F4 File Offset: 0x000005F4
+	// Token: 0x060033D2 RID: 13266 RVA: 0x000023F4 File Offset: 0x000005F4
 	public override void OnSerializeWrite(PhotonStream stream, PhotonMessageInfo info)
 	{
 	}
 
-	// Token: 0x060033D2 RID: 13266 RVA: 0x00045F91 File Offset: 0x00044191
+	// Token: 0x060033D3 RID: 13267 RVA: 0x00045F91 File Offset: 0x00044191
 	public override object OnSerializeWrite()
 	{
 		return null;
 	}
 
-	// Token: 0x060033D3 RID: 13267 RVA: 0x000023F4 File Offset: 0x000005F4
+	// Token: 0x060033D4 RID: 13268 RVA: 0x000023F4 File Offset: 0x000005F4
 	public override void AddFusionDataBehaviour(NetworkObject obj)
 	{
 	}
 
-	// Token: 0x060033D4 RID: 13268 RVA: 0x000FFBEA File Offset: 0x000FDDEA
+	// Token: 0x060033D5 RID: 13269 RVA: 0x000FFCC2 File Offset: 0x000FDEC2
 	public override GameModeType GameType()
 	{
 		return GameModeType.Custom;
 	}
 
-	// Token: 0x060033D5 RID: 13269 RVA: 0x000FFBED File Offset: 0x000FDDED
+	// Token: 0x060033D6 RID: 13270 RVA: 0x000FFCC5 File Offset: 0x000FDEC5
 	public override string GameModeName()
 	{
 		return "CUSTOM";
 	}
 
-	// Token: 0x060033D6 RID: 13270 RVA: 0x000FFBF4 File Offset: 0x000FDDF4
+	// Token: 0x060033D7 RID: 13271 RVA: 0x000FFCCC File Offset: 0x000FDECC
 	public unsafe override int MyMatIndex(NetPlayer forPlayer)
 	{
 		IntPtr intPtr;
@@ -61,7 +61,7 @@ public class CustomGameMode : GorillaGameManager
 		return 0;
 	}
 
-	// Token: 0x060033D7 RID: 13271 RVA: 0x000FFC24 File Offset: 0x000FDE24
+	// Token: 0x060033D8 RID: 13272 RVA: 0x000FFCFC File Offset: 0x000FDEFC
 	public unsafe override void OnPlayerEnteredRoom(NetPlayer player)
 	{
 		try
@@ -101,7 +101,7 @@ public class CustomGameMode : GorillaGameManager
 		}
 	}
 
-	// Token: 0x060033D8 RID: 13272 RVA: 0x000FFD60 File Offset: 0x000FDF60
+	// Token: 0x060033D9 RID: 13273 RVA: 0x000FFE38 File Offset: 0x000FE038
 	public unsafe override void OnPlayerLeftRoom(NetPlayer player)
 	{
 		try
@@ -141,7 +141,7 @@ public class CustomGameMode : GorillaGameManager
 		}
 	}
 
-	// Token: 0x060033D9 RID: 13273 RVA: 0x000FFE4C File Offset: 0x000FE04C
+	// Token: 0x060033DA RID: 13274 RVA: 0x000FFF24 File Offset: 0x000FE124
 	public unsafe override void OnMasterClientSwitched(NetPlayer newMasterClient)
 	{
 		try
@@ -168,7 +168,7 @@ public class CustomGameMode : GorillaGameManager
 		}
 	}
 
-	// Token: 0x060033DA RID: 13274 RVA: 0x000FFF04 File Offset: 0x000FE104
+	// Token: 0x060033DB RID: 13275 RVA: 0x000FFFDC File Offset: 0x000FE1DC
 	public override void StartPlaying()
 	{
 		base.StartPlaying();
@@ -187,7 +187,7 @@ public class CustomGameMode : GorillaGameManager
 		}
 	}
 
-	// Token: 0x060033DB RID: 13275 RVA: 0x000FFF58 File Offset: 0x000FE158
+	// Token: 0x060033DC RID: 13276 RVA: 0x00100030 File Offset: 0x000FE230
 	public unsafe static void LuaStart()
 	{
 		if (CustomGameMode.LuaScript == "")
@@ -240,7 +240,7 @@ public class CustomGameMode : GorillaGameManager
 		}
 	}
 
-	// Token: 0x060033DC RID: 13276 RVA: 0x001000DC File Offset: 0x000FE2DC
+	// Token: 0x060033DD RID: 13277 RVA: 0x001001B4 File Offset: 0x000FE3B4
 	public override void StopPlaying()
 	{
 		base.StopPlaying();
@@ -258,7 +258,7 @@ public class CustomGameMode : GorillaGameManager
 		}
 	}
 
-	// Token: 0x060033DD RID: 13277 RVA: 0x00100120 File Offset: 0x000FE320
+	// Token: 0x060033DE RID: 13278 RVA: 0x001001F8 File Offset: 0x000FE3F8
 	public static void StopScript()
 	{
 		CustomGameMode.GameModeInitialized = false;
@@ -280,7 +280,7 @@ public class CustomGameMode : GorillaGameManager
 		}
 	}
 
-	// Token: 0x060033DE RID: 13278 RVA: 0x001001C4 File Offset: 0x000FE3C4
+	// Token: 0x060033DF RID: 13279 RVA: 0x0010029C File Offset: 0x000FE49C
 	public unsafe static void TouchPlayer(NetPlayer touchedPlayer)
 	{
 		if (CustomGameMode.gameScriptRunner == null)
@@ -310,7 +310,7 @@ public class CustomGameMode : GorillaGameManager
 		}
 	}
 
-	// Token: 0x060033DF RID: 13279 RVA: 0x00100250 File Offset: 0x000FE450
+	// Token: 0x060033E0 RID: 13280 RVA: 0x00100328 File Offset: 0x000FE528
 	public unsafe static void TaggedByEnvironment()
 	{
 		if (CustomGameMode.gameScriptRunner == null)
@@ -333,7 +333,7 @@ public class CustomGameMode : GorillaGameManager
 		Luau.lua_pop(l, 1);
 	}
 
-	// Token: 0x060033E0 RID: 13280 RVA: 0x001002BC File Offset: 0x000FE4BC
+	// Token: 0x060033E1 RID: 13281 RVA: 0x00100394 File Offset: 0x000FE594
 	[MonoPInvokeCallback(typeof(lua_CFunction))]
 	public unsafe static int GameModeBindings(lua_State* L)
 	{
@@ -348,7 +348,7 @@ public class CustomGameMode : GorillaGameManager
 		return 0;
 	}
 
-	// Token: 0x060033E1 RID: 13281 RVA: 0x00100338 File Offset: 0x000FE538
+	// Token: 0x060033E2 RID: 13282 RVA: 0x00100410 File Offset: 0x000FE610
 	public unsafe override float[] LocalPlayerSpeed()
 	{
 		if (Bindings.LocomotionSettings == null || CustomGameMode.gameScriptRunner == null || !CustomGameMode.gameScriptRunner.ShouldTick)
@@ -364,7 +364,7 @@ public class CustomGameMode : GorillaGameManager
 		return this.playerSpeed;
 	}
 
-	// Token: 0x060033E2 RID: 13282 RVA: 0x001003C8 File Offset: 0x000FE5C8
+	// Token: 0x060033E3 RID: 13283 RVA: 0x001004A0 File Offset: 0x000FE6A0
 	[MonoPInvokeCallback(typeof(lua_CFunction))]
 	public unsafe static int AfterTickGamemode(lua_State* L)
 	{
@@ -390,7 +390,7 @@ public class CustomGameMode : GorillaGameManager
 		return 0;
 	}
 
-	// Token: 0x060033E3 RID: 13283 RVA: 0x001004A4 File Offset: 0x000FE6A4
+	// Token: 0x060033E4 RID: 13284 RVA: 0x0010057C File Offset: 0x000FE77C
 	[MonoPInvokeCallback(typeof(lua_CFunction))]
 	public unsafe static int PreTickGamemode(lua_State* L)
 	{
@@ -438,27 +438,27 @@ public class CustomGameMode : GorillaGameManager
 		return 0;
 	}
 
-	// Token: 0x060033E4 RID: 13284 RVA: 0x00100684 File Offset: 0x000FE884
+	// Token: 0x060033E5 RID: 13285 RVA: 0x0010075C File Offset: 0x000FE95C
 	private static void RunGamemodeScript(string script)
 	{
 		CustomGameMode.gameScriptRunner = new LuauScriptRunner(script, "GameMode", new lua_CFunction(CustomGameMode.GameModeBindings), new lua_CFunction(CustomGameMode.PreTickGamemode), new lua_CFunction(CustomGameMode.AfterTickGamemode));
 	}
 
-	// Token: 0x060033E5 RID: 13285 RVA: 0x001006BA File Offset: 0x000FE8BA
+	// Token: 0x060033E6 RID: 13286 RVA: 0x00100792 File Offset: 0x000FE992
 	private static void RunGamemodeScriptFromFile(string filename)
 	{
 		CustomGameMode.RunGamemodeScript(File.ReadAllText(Path.Join(Application.persistentDataPath, "Scripts", filename)));
 	}
 
-	// Token: 0x04003AF1 RID: 15089
+	// Token: 0x04003AF2 RID: 15090
 	public static LuauScriptRunner gameScriptRunner;
 
-	// Token: 0x04003AF2 RID: 15090
+	// Token: 0x04003AF3 RID: 15091
 	public static string LuaScript = "";
 
-	// Token: 0x04003AF3 RID: 15091
+	// Token: 0x04003AF4 RID: 15092
 	private static bool WasInRoom = false;
 
-	// Token: 0x04003AF4 RID: 15092
+	// Token: 0x04003AF5 RID: 15093
 	public static bool GameModeInitialized;
 }

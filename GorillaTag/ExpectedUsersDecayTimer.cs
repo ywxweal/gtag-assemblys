@@ -9,7 +9,7 @@ namespace GorillaTag
 	[Serializable]
 	internal class ExpectedUsersDecayTimer : TickSystemTimerAbstract
 	{
-		// Token: 0x060054FA RID: 21754 RVA: 0x0019DE58 File Offset: 0x0019C058
+		// Token: 0x060054FB RID: 21755 RVA: 0x0019DF30 File Offset: 0x0019C130
 		public override void OnTimedEvent()
 		{
 			if (NetworkSystem.Instance.InRoom && NetworkSystem.Instance.IsMasterClient)
@@ -41,17 +41,17 @@ namespace GorillaTag
 			}
 		}
 
-		// Token: 0x060054FB RID: 21755 RVA: 0x0019DF1F File Offset: 0x0019C11F
+		// Token: 0x060054FC RID: 21756 RVA: 0x0019DFF7 File Offset: 0x0019C1F7
 		public override void Stop()
 		{
 			base.Stop();
 			this.expectedUsers.Clear();
 		}
 
-		// Token: 0x0400584A RID: 22602
+		// Token: 0x0400584B RID: 22603
 		public float decayTime = 15f;
 
-		// Token: 0x0400584B RID: 22603
+		// Token: 0x0400584C RID: 22604
 		private Dictionary<string, float> expectedUsers = new Dictionary<string, float>(10);
 	}
 }

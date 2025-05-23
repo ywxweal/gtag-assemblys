@@ -4,7 +4,7 @@
 [Serializable]
 public struct GTSignalID : IEquatable<GTSignalID>, IEquatable<int>
 {
-	// Token: 0x06002871 RID: 10353 RVA: 0x000C973C File Offset: 0x000C793C
+	// Token: 0x06002872 RID: 10354 RVA: 0x000C97E0 File Offset: 0x000C79E0
 	public override bool Equals(object obj)
 	{
 		if (obj is GTSignalID)
@@ -20,43 +20,43 @@ public struct GTSignalID : IEquatable<GTSignalID>, IEquatable<int>
 		return false;
 	}
 
-	// Token: 0x06002872 RID: 10354 RVA: 0x000C9778 File Offset: 0x000C7978
+	// Token: 0x06002873 RID: 10355 RVA: 0x000C981C File Offset: 0x000C7A1C
 	public bool Equals(GTSignalID other)
 	{
 		return this._id == other._id;
 	}
 
-	// Token: 0x06002873 RID: 10355 RVA: 0x000C9788 File Offset: 0x000C7988
+	// Token: 0x06002874 RID: 10356 RVA: 0x000C982C File Offset: 0x000C7A2C
 	public bool Equals(int other)
 	{
 		return this._id == other;
 	}
 
-	// Token: 0x06002874 RID: 10356 RVA: 0x000C9793 File Offset: 0x000C7993
+	// Token: 0x06002875 RID: 10357 RVA: 0x000C9837 File Offset: 0x000C7A37
 	public override int GetHashCode()
 	{
 		return this._id;
 	}
 
-	// Token: 0x06002875 RID: 10357 RVA: 0x000C979B File Offset: 0x000C799B
+	// Token: 0x06002876 RID: 10358 RVA: 0x000C983F File Offset: 0x000C7A3F
 	public static bool operator ==(GTSignalID x, GTSignalID y)
 	{
 		return x.Equals(y);
 	}
 
-	// Token: 0x06002876 RID: 10358 RVA: 0x000C97A5 File Offset: 0x000C79A5
+	// Token: 0x06002877 RID: 10359 RVA: 0x000C9849 File Offset: 0x000C7A49
 	public static bool operator !=(GTSignalID x, GTSignalID y)
 	{
 		return !x.Equals(y);
 	}
 
-	// Token: 0x06002877 RID: 10359 RVA: 0x000C9793 File Offset: 0x000C7993
+	// Token: 0x06002878 RID: 10360 RVA: 0x000C9837 File Offset: 0x000C7A37
 	public static implicit operator int(GTSignalID sid)
 	{
 		return sid._id;
 	}
 
-	// Token: 0x06002878 RID: 10360 RVA: 0x000C97B4 File Offset: 0x000C79B4
+	// Token: 0x06002879 RID: 10361 RVA: 0x000C9858 File Offset: 0x000C7A58
 	public static implicit operator GTSignalID(string s)
 	{
 		return new GTSignalID
@@ -65,6 +65,6 @@ public struct GTSignalID : IEquatable<GTSignalID>, IEquatable<int>
 		};
 	}
 
-	// Token: 0x04002D4B RID: 11595
+	// Token: 0x04002D4D RID: 11597
 	private int _id;
 }

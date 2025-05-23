@@ -7,10 +7,10 @@ namespace GorillaTag
 	public class GTStripGameObjectFromBuildAttribute : Attribute
 	{
 		// Token: 0x17000850 RID: 2128
-		// (get) Token: 0x0600538A RID: 21386 RVA: 0x00195837 File Offset: 0x00193A37
+		// (get) Token: 0x0600538B RID: 21387 RVA: 0x0019590F File Offset: 0x00193B0F
 		public string Condition { get; }
 
-		// Token: 0x0600538B RID: 21387 RVA: 0x0019583F File Offset: 0x00193A3F
+		// Token: 0x0600538C RID: 21388 RVA: 0x00195917 File Offset: 0x00193B17
 		public GTStripGameObjectFromBuildAttribute(string condition = "")
 		{
 			this.Condition = condition;

@@ -7,7 +7,7 @@ using UnityEngine;
 public class GorillaHandSocket : MonoBehaviour
 {
 	// Token: 0x170003A6 RID: 934
-	// (get) Token: 0x0600266F RID: 9839 RVA: 0x000BE304 File Offset: 0x000BC504
+	// (get) Token: 0x0600266F RID: 9839 RVA: 0x000BE324 File Offset: 0x000BC524
 	public GorillaHandNode attachedHand
 	{
 		get
@@ -17,7 +17,7 @@ public class GorillaHandSocket : MonoBehaviour
 	}
 
 	// Token: 0x170003A7 RID: 935
-	// (get) Token: 0x06002670 RID: 9840 RVA: 0x000BE30C File Offset: 0x000BC50C
+	// (get) Token: 0x06002670 RID: 9840 RVA: 0x000BE32C File Offset: 0x000BC52C
 	public bool inUse
 	{
 		get
@@ -26,19 +26,19 @@ public class GorillaHandSocket : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06002671 RID: 9841 RVA: 0x000BE314 File Offset: 0x000BC514
+	// Token: 0x06002671 RID: 9841 RVA: 0x000BE334 File Offset: 0x000BC534
 	public static bool FetchSocket(Collider collider, out GorillaHandSocket socket)
 	{
 		return GorillaHandSocket.gColliderToSocket.TryGetValue(collider, out socket);
 	}
 
-	// Token: 0x06002672 RID: 9842 RVA: 0x000BE322 File Offset: 0x000BC522
+	// Token: 0x06002672 RID: 9842 RVA: 0x000BE342 File Offset: 0x000BC542
 	public bool CanAttach()
 	{
 		return !this._inUse && this._sinceSocketStateChange.HasElapsed(this.attachCooldown, true);
 	}
 
-	// Token: 0x06002673 RID: 9843 RVA: 0x000BE340 File Offset: 0x000BC540
+	// Token: 0x06002673 RID: 9843 RVA: 0x000BE360 File Offset: 0x000BC560
 	public void Attach(GorillaHandNode hand)
 	{
 		if (!this.CanAttach())
@@ -55,14 +55,14 @@ public class GorillaHandSocket : MonoBehaviour
 		this.OnHandAttach();
 	}
 
-	// Token: 0x06002674 RID: 9844 RVA: 0x000BE370 File Offset: 0x000BC570
+	// Token: 0x06002674 RID: 9844 RVA: 0x000BE390 File Offset: 0x000BC590
 	public void Detach()
 	{
 		GorillaHandNode gorillaHandNode;
 		this.Detach(out gorillaHandNode);
 	}
 
-	// Token: 0x06002675 RID: 9845 RVA: 0x000BE388 File Offset: 0x000BC588
+	// Token: 0x06002675 RID: 9845 RVA: 0x000BE3A8 File Offset: 0x000BC5A8
 	public void Detach(out GorillaHandNode hand)
 	{
 		if (this._inUse)
@@ -91,13 +91,13 @@ public class GorillaHandSocket : MonoBehaviour
 	{
 	}
 
-	// Token: 0x06002678 RID: 9848 RVA: 0x000BE3DE File Offset: 0x000BC5DE
+	// Token: 0x06002678 RID: 9848 RVA: 0x000BE3FE File Offset: 0x000BC5FE
 	protected virtual void OnUpdateAttached()
 	{
 		this._attachedHand.transform.position = base.transform.position;
 	}
 
-	// Token: 0x06002679 RID: 9849 RVA: 0x000BE3FB File Offset: 0x000BC5FB
+	// Token: 0x06002679 RID: 9849 RVA: 0x000BE41B File Offset: 0x000BC61B
 	private void OnEnable()
 	{
 		if (this.collider == null)
@@ -107,7 +107,7 @@ public class GorillaHandSocket : MonoBehaviour
 		GorillaHandSocket.gColliderToSocket.TryAdd(this.collider, this);
 	}
 
-	// Token: 0x0600267A RID: 9850 RVA: 0x000BE41E File Offset: 0x000BC61E
+	// Token: 0x0600267A RID: 9850 RVA: 0x000BE43E File Offset: 0x000BC63E
 	private void OnDisable()
 	{
 		if (this.collider == null)
@@ -117,13 +117,13 @@ public class GorillaHandSocket : MonoBehaviour
 		GorillaHandSocket.gColliderToSocket.Remove(this.collider);
 	}
 
-	// Token: 0x0600267B RID: 9851 RVA: 0x000BE440 File Offset: 0x000BC640
+	// Token: 0x0600267B RID: 9851 RVA: 0x000BE460 File Offset: 0x000BC660
 	private void Awake()
 	{
 		this.Setup();
 	}
 
-	// Token: 0x0600267C RID: 9852 RVA: 0x000BE448 File Offset: 0x000BC648
+	// Token: 0x0600267C RID: 9852 RVA: 0x000BE468 File Offset: 0x000BC668
 	private void FixedUpdate()
 	{
 		if (!this._inUse)
@@ -137,7 +137,7 @@ public class GorillaHandSocket : MonoBehaviour
 		this.OnUpdateAttached();
 	}
 
-	// Token: 0x0600267D RID: 9853 RVA: 0x000BE468 File Offset: 0x000BC668
+	// Token: 0x0600267D RID: 9853 RVA: 0x000BE488 File Offset: 0x000BC688
 	private void Setup()
 	{
 		if (this.collider == null)

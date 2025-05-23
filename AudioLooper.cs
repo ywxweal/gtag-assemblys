@@ -5,13 +5,13 @@ using UnityEngine;
 [RequireComponent(typeof(AudioSource))]
 public class AudioLooper : MonoBehaviour
 {
-	// Token: 0x06003A32 RID: 14898 RVA: 0x00116EEB File Offset: 0x001150EB
+	// Token: 0x06003A33 RID: 14899 RVA: 0x00116FC3 File Offset: 0x001151C3
 	protected virtual void Awake()
 	{
 		this.audioSource = base.GetComponent<AudioSource>();
 	}
 
-	// Token: 0x06003A33 RID: 14899 RVA: 0x00116EFC File Offset: 0x001150FC
+	// Token: 0x06003A34 RID: 14900 RVA: 0x00116FD4 File Offset: 0x001151D4
 	private void Update()
 	{
 		if (!this.audioSource.isPlaying)
@@ -28,18 +28,18 @@ public class AudioLooper : MonoBehaviour
 		}
 	}
 
-	// Token: 0x04003F36 RID: 16182
-	private AudioSource audioSource;
-
 	// Token: 0x04003F37 RID: 16183
-	[SerializeField]
-	private AudioClip loopClip;
+	private AudioSource audioSource;
 
 	// Token: 0x04003F38 RID: 16184
 	[SerializeField]
-	private AudioClip[] interjectionClips;
+	private AudioClip loopClip;
 
 	// Token: 0x04003F39 RID: 16185
+	[SerializeField]
+	private AudioClip[] interjectionClips;
+
+	// Token: 0x04003F3A RID: 16186
 	[SerializeField]
 	private float interjectionLikelyhood = 0.5f;
 }

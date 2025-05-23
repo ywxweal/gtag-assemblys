@@ -7,10 +7,10 @@ namespace GameObjectScheduling
 	[CreateAssetMenu(fileName = "New Mesh Material Replacement", menuName = "Game Object Scheduling/New Mesh Material Replacement", order = 1)]
 	public class MeshMaterialReplacement : ScriptableObject
 	{
-		// Token: 0x04005EC8 RID: 24264
+		// Token: 0x04005EC9 RID: 24265
 		public Mesh mesh;
 
-		// Token: 0x04005EC9 RID: 24265
+		// Token: 0x04005ECA RID: 24266
 		public Material[] materials;
 	}
 }

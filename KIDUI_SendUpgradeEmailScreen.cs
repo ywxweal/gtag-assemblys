@@ -6,7 +6,7 @@ using UnityEngine;
 // Token: 0x0200082F RID: 2095
 public class KIDUI_SendUpgradeEmailScreen : MonoBehaviour
 {
-	// Token: 0x0600334A RID: 13130 RVA: 0x000FCF88 File Offset: 0x000FB188
+	// Token: 0x0600334B RID: 13131 RVA: 0x000FD060 File Offset: 0x000FB260
 	public async void SendUpgradeEmail(List<string> requestedPermissions)
 	{
 		if (requestedPermissions.Count == 0)
@@ -54,40 +54,40 @@ public class KIDUI_SendUpgradeEmailScreen : MonoBehaviour
 		}
 	}
 
-	// Token: 0x0600334B RID: 13131 RVA: 0x000FCFC7 File Offset: 0x000FB1C7
+	// Token: 0x0600334C RID: 13132 RVA: 0x000FD09F File Offset: 0x000FB29F
 	public void OnCancel()
 	{
 		base.gameObject.SetActive(false);
 		this._mainScreen.ShowMainScreen(EMainScreenStatus.None);
 	}
 
-	// Token: 0x0600334C RID: 13132 RVA: 0x000FCFE1 File Offset: 0x000FB1E1
+	// Token: 0x0600334D RID: 13133 RVA: 0x000FD0B9 File Offset: 0x000FB2B9
 	private void OnSuccess()
 	{
 		base.gameObject.SetActive(false);
 		this._successScreen.Show();
 	}
 
-	// Token: 0x0600334D RID: 13133 RVA: 0x000FCFFA File Offset: 0x000FB1FA
+	// Token: 0x0600334E RID: 13134 RVA: 0x000FD0D2 File Offset: 0x000FB2D2
 	private void OnFailure()
 	{
 		base.gameObject.SetActive(false);
 		this._errorScreen.Show();
 	}
 
-	// Token: 0x04003A1E RID: 14878
+	// Token: 0x04003A1F RID: 14879
 	[SerializeField]
 	private KIDUI_AnimatedEllipsis _animatedEllipsis;
 
-	// Token: 0x04003A1F RID: 14879
+	// Token: 0x04003A20 RID: 14880
 	[SerializeField]
 	private KIDUI_MessageScreen _successScreen;
 
-	// Token: 0x04003A20 RID: 14880
+	// Token: 0x04003A21 RID: 14881
 	[SerializeField]
 	private KIDUI_MessageScreen _errorScreen;
 
-	// Token: 0x04003A21 RID: 14881
+	// Token: 0x04003A22 RID: 14882
 	[SerializeField]
 	private KIDUI_MainScreen _mainScreen;
 }

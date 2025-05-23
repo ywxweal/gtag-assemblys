@@ -9,7 +9,7 @@ using UnityEngine;
 internal class MockWarningServer : WarningsServer
 {
 	// Token: 0x17000512 RID: 1298
-	// (get) Token: 0x060031C8 RID: 12744 RVA: 0x000F5D9B File Offset: 0x000F3F9B
+	// (get) Token: 0x060031C9 RID: 12745 RVA: 0x000F5E73 File Offset: 0x000F4073
 	public static string ShownScreenPlayerPref
 	{
 		get
@@ -18,7 +18,7 @@ internal class MockWarningServer : WarningsServer
 		}
 	}
 
-	// Token: 0x060031C9 RID: 12745 RVA: 0x000F5DB3 File Offset: 0x000F3FB3
+	// Token: 0x060031CA RID: 12746 RVA: 0x000F5E8B File Offset: 0x000F408B
 	private void Awake()
 	{
 		if (WarningsServer.Instance == null)
@@ -29,7 +29,7 @@ internal class MockWarningServer : WarningsServer
 		Object.Destroy(this);
 	}
 
-	// Token: 0x060031CA RID: 12746 RVA: 0x000F5DD4 File Offset: 0x000F3FD4
+	// Token: 0x060031CB RID: 12747 RVA: 0x000F5EAC File Offset: 0x000F40AC
 	private PlayerAgeGateWarningStatus CreateWarningStatus(string header, string body, MockWarningServer.ButtonSetup? leftButtonSetup, MockWarningServer.ButtonSetup? rightButtonSetup, bool showImage, Action leftButtonCallback, Action rightButtonCallback)
 	{
 		PlayerAgeGateWarningStatus playerAgeGateWarningStatus;
@@ -55,7 +55,7 @@ internal class MockWarningServer : WarningsServer
 		return playerAgeGateWarningStatus;
 	}
 
-	// Token: 0x060031CB RID: 12747 RVA: 0x000F5E94 File Offset: 0x000F4094
+	// Token: 0x060031CC RID: 12748 RVA: 0x000F5F6C File Offset: 0x000F416C
 	public override async Task<PlayerAgeGateWarningStatus?> FetchPlayerData(CancellationToken token)
 	{
 		int num = await KIDManager.CheckKIDPhase();
@@ -228,7 +228,7 @@ internal class MockWarningServer : WarningsServer
 		return playerAgeGateWarningStatus;
 	}
 
-	// Token: 0x060031CC RID: 12748 RVA: 0x000F5EE0 File Offset: 0x000F40E0
+	// Token: 0x060031CD RID: 12749 RVA: 0x000F5FB8 File Offset: 0x000F41B8
 	public override async Task<PlayerAgeGateWarningStatus?> GetOptInFollowUpMessage(CancellationToken token)
 	{
 		int num = await KIDManager.CheckKIDPhase();
@@ -267,7 +267,7 @@ internal class MockWarningServer : WarningsServer
 		return playerAgeGateWarningStatus;
 	}
 
-	// Token: 0x060031CD RID: 12749 RVA: 0x000F5F2B File Offset: 0x000F412B
+	// Token: 0x060031CE RID: 12750 RVA: 0x000F6003 File Offset: 0x000F4203
 	private bool ShouldShowWarningScreen(int phase, bool inOptInCohort)
 	{
 		if (PlayerPrefs.GetInt(string.Format("phase-{0}-{1}", phase, MockWarningServer.ShownScreenPlayerPref), 0) == 0)
@@ -286,23 +286,23 @@ internal class MockWarningServer : WarningsServer
 		}
 	}
 
-	// Token: 0x04003880 RID: 14464
+	// Token: 0x04003881 RID: 14465
 	private const string SHOWN_SCREEN_PREFIX = "screen-shown-";
 
 	// Token: 0x020007EB RID: 2027
 	public struct ButtonSetup
 	{
-		// Token: 0x060031CF RID: 12751 RVA: 0x000F5F71 File Offset: 0x000F4171
+		// Token: 0x060031D0 RID: 12752 RVA: 0x000F6049 File Offset: 0x000F4249
 		public ButtonSetup(string txt, WarningButtonResult result)
 		{
 			this.buttonText = txt;
 			this.buttonResult = result;
 		}
 
-		// Token: 0x04003881 RID: 14465
+		// Token: 0x04003882 RID: 14466
 		public string buttonText;
 
-		// Token: 0x04003882 RID: 14466
+		// Token: 0x04003883 RID: 14467
 		public WarningButtonResult buttonResult;
 	}
 }

@@ -11,7 +11,7 @@ namespace GorillaGameModes
 	public class GameModeZoneMapping : ScriptableObject
 	{
 		// Token: 0x1700069D RID: 1693
-		// (get) Token: 0x06004255 RID: 16981 RVA: 0x0013224F File Offset: 0x0013044F
+		// (get) Token: 0x06004256 RID: 16982 RVA: 0x00132327 File Offset: 0x00130527
 		public HashSet<GameModeType> AllModes
 		{
 			get
@@ -21,7 +21,7 @@ namespace GorillaGameModes
 			}
 		}
 
-		// Token: 0x06004256 RID: 16982 RVA: 0x00132260 File Offset: 0x00130460
+		// Token: 0x06004257 RID: 16983 RVA: 0x00132338 File Offset: 0x00130538
 		private void init()
 		{
 			if (this.allModes != null)
@@ -80,7 +80,7 @@ namespace GorillaGameModes
 			}
 		}
 
-		// Token: 0x06004257 RID: 16983 RVA: 0x00132538 File Offset: 0x00130738
+		// Token: 0x06004258 RID: 16984 RVA: 0x00132610 File Offset: 0x00130810
 		public HashSet<GameModeType> GetModesForZone(GTZone zone, bool isPrivate)
 		{
 			this.init();
@@ -95,7 +95,7 @@ namespace GorillaGameModes
 			return new HashSet<GameModeType>(this.defaultGameModes);
 		}
 
-		// Token: 0x06004258 RID: 16984 RVA: 0x0013258F File Offset: 0x0013078F
+		// Token: 0x06004259 RID: 16985 RVA: 0x00132667 File Offset: 0x00130867
 		internal string GetModeName(GameModeType mode)
 		{
 			this.init();
@@ -106,14 +106,14 @@ namespace GorillaGameModes
 			return mode.ToString().ToUpper();
 		}
 
-		// Token: 0x06004259 RID: 16985 RVA: 0x001325C4 File Offset: 0x001307C4
+		// Token: 0x0600425A RID: 16986 RVA: 0x0013269C File Offset: 0x0013089C
 		internal bool IsNew(GameModeType mode)
 		{
 			this.init();
 			return this.isNewLookup.Contains(mode);
 		}
 
-		// Token: 0x0600425A RID: 16986 RVA: 0x001325D8 File Offset: 0x001307D8
+		// Token: 0x0600425B RID: 16987 RVA: 0x001326B0 File Offset: 0x001308B0
 		internal CountdownTextDate GetCountdown(GameModeType mode)
 		{
 			this.init();
@@ -124,7 +124,7 @@ namespace GorillaGameModes
 			return null;
 		}
 
-		// Token: 0x0600425B RID: 16987 RVA: 0x001325FC File Offset: 0x001307FC
+		// Token: 0x0600425C RID: 16988 RVA: 0x001326D4 File Offset: 0x001308D4
 		internal GameModeType VerifyModeForZone(GTZone zone, GameModeType mode, bool isPrivate)
 		{
 			if (GorillaComputer.instance.IsPlayerInVirtualStump())
@@ -162,42 +162,42 @@ namespace GorillaGameModes
 			return GameModeType.Casual;
 		}
 
-		// Token: 0x040044AA RID: 17578
+		// Token: 0x040044AB RID: 17579
 		[SerializeField]
 		private GameModeNameOverrides[] gameModeNameOverrides;
 
-		// Token: 0x040044AB RID: 17579
+		// Token: 0x040044AC RID: 17580
 		[SerializeField]
 		private GameModeType[] defaultGameModes;
 
-		// Token: 0x040044AC RID: 17580
+		// Token: 0x040044AD RID: 17581
 		[SerializeField]
 		private ZoneGameModes[] zoneGameModes;
 
-		// Token: 0x040044AD RID: 17581
+		// Token: 0x040044AE RID: 17582
 		[SerializeField]
 		private GameModeTypeCountdown[] gameModeTypeCountdowns;
 
-		// Token: 0x040044AE RID: 17582
+		// Token: 0x040044AF RID: 17583
 		[SerializeField]
 		private GameModeType[] newThisUpdate;
 
-		// Token: 0x040044AF RID: 17583
+		// Token: 0x040044B0 RID: 17584
 		private Dictionary<GTZone, HashSet<GameModeType>> publicZoneGameModesLookup;
 
-		// Token: 0x040044B0 RID: 17584
+		// Token: 0x040044B1 RID: 17585
 		private Dictionary<GTZone, HashSet<GameModeType>> privateZoneGameModesLookup;
 
-		// Token: 0x040044B1 RID: 17585
+		// Token: 0x040044B2 RID: 17586
 		private Dictionary<GameModeType, string> modeNameLookup;
 
-		// Token: 0x040044B2 RID: 17586
+		// Token: 0x040044B3 RID: 17587
 		private HashSet<GameModeType> isNewLookup;
 
-		// Token: 0x040044B3 RID: 17587
+		// Token: 0x040044B4 RID: 17588
 		private Dictionary<GameModeType, CountdownTextDate> gameModeTypeCountdownsLookup;
 
-		// Token: 0x040044B4 RID: 17588
+		// Token: 0x040044B5 RID: 17589
 		private HashSet<GameModeType> allModes;
 	}
 }

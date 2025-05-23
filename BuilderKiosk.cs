@@ -11,7 +11,7 @@ using UnityEngine.Events;
 // Token: 0x020004E9 RID: 1257
 public class BuilderKiosk : MonoBehaviour
 {
-	// Token: 0x06001E6C RID: 7788 RVA: 0x000941B8 File Offset: 0x000923B8
+	// Token: 0x06001E6C RID: 7788 RVA: 0x000941D8 File Offset: 0x000923D8
 	private void Awake()
 	{
 		BuilderKiosk.nullItem = new BuilderSetManager.BuilderSetStoreItem
@@ -22,7 +22,7 @@ public class BuilderKiosk : MonoBehaviour
 		};
 	}
 
-	// Token: 0x06001E6D RID: 7789 RVA: 0x000941F4 File Offset: 0x000923F4
+	// Token: 0x06001E6D RID: 7789 RVA: 0x00094214 File Offset: 0x00092414
 	private void Start()
 	{
 		this.purchaseParticles.Stop();
@@ -73,7 +73,7 @@ public class BuilderKiosk : MonoBehaviour
 		this.ProcessPurchaseItemState(null, false);
 	}
 
-	// Token: 0x06001E6E RID: 7790 RVA: 0x000943A8 File Offset: 0x000925A8
+	// Token: 0x06001E6E RID: 7790 RVA: 0x000943C8 File Offset: 0x000925C8
 	private void UpdateCountdown()
 	{
 		if (!this.useTitleCountDown)
@@ -89,7 +89,7 @@ public class BuilderKiosk : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001E6F RID: 7791 RVA: 0x0009440C File Offset: 0x0009260C
+	// Token: 0x06001E6F RID: 7791 RVA: 0x0009442C File Offset: 0x0009262C
 	private void SetupSetButtons()
 	{
 		this.setsPerPage = this.setButtons.Length;
@@ -112,7 +112,7 @@ public class BuilderKiosk : MonoBehaviour
 		this.UpdateLabels();
 	}
 
-	// Token: 0x06001E70 RID: 7792 RVA: 0x00094530 File Offset: 0x00092730
+	// Token: 0x06001E70 RID: 7792 RVA: 0x00094550 File Offset: 0x00092750
 	private void OnDestroy()
 	{
 		if (this.leftPurchaseButton != null)
@@ -167,7 +167,7 @@ public class BuilderKiosk : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001E71 RID: 7793 RVA: 0x000946E0 File Offset: 0x000928E0
+	// Token: 0x06001E71 RID: 7793 RVA: 0x00094700 File Offset: 0x00092900
 	private void OnOwnedSetsUpdated()
 	{
 		if (this.hasInitFromPlayfab || !BuilderSetManager.instance.pulledStoreItems)
@@ -202,7 +202,7 @@ public class BuilderKiosk : MonoBehaviour
 		this.ProcessPurchaseItemState(null, false);
 	}
 
-	// Token: 0x06001E72 RID: 7794 RVA: 0x000947D4 File Offset: 0x000929D4
+	// Token: 0x06001E72 RID: 7794 RVA: 0x000947F4 File Offset: 0x000929F4
 	private void OnSetButtonPressed(GorillaPressableButton button, bool isLeft)
 	{
 		if (this.currentPurchaseItemStage != CosmeticsController.PurchaseItemStages.Buying && !this.animating)
@@ -237,7 +237,7 @@ public class BuilderKiosk : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001E73 RID: 7795 RVA: 0x000948AC File Offset: 0x00092AAC
+	// Token: 0x06001E73 RID: 7795 RVA: 0x000948CC File Offset: 0x00092ACC
 	private void OnPreviousPageClicked()
 	{
 		int num = Mathf.Clamp(this.pageIndex - 1, 0, this.totalPages - 1);
@@ -248,7 +248,7 @@ public class BuilderKiosk : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001E74 RID: 7796 RVA: 0x000948E8 File Offset: 0x00092AE8
+	// Token: 0x06001E74 RID: 7796 RVA: 0x00094908 File Offset: 0x00092B08
 	private void OnNextPageClicked()
 	{
 		int num = Mathf.Clamp(this.pageIndex + 1, 0, this.totalPages - 1);
@@ -259,7 +259,7 @@ public class BuilderKiosk : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001E75 RID: 7797 RVA: 0x00094924 File Offset: 0x00092B24
+	// Token: 0x06001E75 RID: 7797 RVA: 0x00094944 File Offset: 0x00092B44
 	private void UpdateLabels()
 	{
 		if (this.isMiniKiosk)
@@ -314,7 +314,7 @@ public class BuilderKiosk : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001E76 RID: 7798 RVA: 0x00094BBC File Offset: 0x00092DBC
+	// Token: 0x06001E76 RID: 7798 RVA: 0x00094BDC File Offset: 0x00092DDC
 	public void UpdateDiorama()
 	{
 		if (this.isMiniKiosk)
@@ -366,7 +366,7 @@ public class BuilderKiosk : MonoBehaviour
 		base.StartCoroutine(this.PlaySwapAnimation());
 	}
 
-	// Token: 0x06001E77 RID: 7799 RVA: 0x00094D27 File Offset: 0x00092F27
+	// Token: 0x06001E77 RID: 7799 RVA: 0x00094D47 File Offset: 0x00092F47
 	private IEnumerator PlaySwapAnimation()
 	{
 		this.itemDisplayAnimation.Play();
@@ -382,7 +382,7 @@ public class BuilderKiosk : MonoBehaviour
 		yield break;
 	}
 
-	// Token: 0x06001E78 RID: 7800 RVA: 0x00094D36 File Offset: 0x00092F36
+	// Token: 0x06001E78 RID: 7800 RVA: 0x00094D56 File Offset: 0x00092F56
 	public void PressLeftPurchaseItemButton(GorillaPressableButton pressedPurchaseItemButton, bool isLeftHand)
 	{
 		if (this.currentPurchaseItemStage != CosmeticsController.PurchaseItemStages.Start && !this.animating)
@@ -391,7 +391,7 @@ public class BuilderKiosk : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001E79 RID: 7801 RVA: 0x00094D54 File Offset: 0x00092F54
+	// Token: 0x06001E79 RID: 7801 RVA: 0x00094D74 File Offset: 0x00092F74
 	public void PressRightPurchaseItemButton(GorillaPressableButton pressedPurchaseItemButton, bool isLeftHand)
 	{
 		if (this.currentPurchaseItemStage != CosmeticsController.PurchaseItemStages.Start && !this.animating)
@@ -400,7 +400,7 @@ public class BuilderKiosk : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001E7A RID: 7802 RVA: 0x00094D72 File Offset: 0x00092F72
+	// Token: 0x06001E7A RID: 7802 RVA: 0x00094D92 File Offset: 0x00092F92
 	public void OnUpdateCurrencyBalance()
 	{
 		if (this.currentPurchaseItemStage == CosmeticsController.PurchaseItemStages.Start || this.currentPurchaseItemStage == CosmeticsController.PurchaseItemStages.CheckoutButtonPressed || this.currentPurchaseItemStage == CosmeticsController.PurchaseItemStages.ItemOwned)
@@ -409,7 +409,7 @@ public class BuilderKiosk : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001E7B RID: 7803 RVA: 0x00094D96 File Offset: 0x00092F96
+	// Token: 0x06001E7B RID: 7803 RVA: 0x00094DB6 File Offset: 0x00092FB6
 	public void ClearCheckout()
 	{
 		GorillaTelemetry.PostBuilderKioskEvent(GorillaTagger.Instance.offlineVRRig, GTShopEventType.checkout_cancel, this.itemToBuy);
@@ -417,7 +417,7 @@ public class BuilderKiosk : MonoBehaviour
 		this.currentPurchaseItemStage = CosmeticsController.PurchaseItemStages.Start;
 	}
 
-	// Token: 0x06001E7C RID: 7804 RVA: 0x00094DC0 File Offset: 0x00092FC0
+	// Token: 0x06001E7C RID: 7804 RVA: 0x00094DE0 File Offset: 0x00092FE0
 	public void ProcessPurchaseItemState(string buttonSide, bool isLeftHand)
 	{
 		switch (this.currentPurchaseItemStage)
@@ -525,7 +525,7 @@ public class BuilderKiosk : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001E7D RID: 7805 RVA: 0x00095284 File Offset: 0x00093484
+	// Token: 0x06001E7D RID: 7805 RVA: 0x000952A4 File Offset: 0x000934A4
 	public void FormattedPurchaseText(string finalLineVar)
 	{
 		this.finalLine = finalLineVar;
@@ -542,7 +542,7 @@ public class BuilderKiosk : MonoBehaviour
 		});
 	}
 
-	// Token: 0x06001E7E RID: 7806 RVA: 0x00095311 File Offset: 0x00093511
+	// Token: 0x06001E7E RID: 7806 RVA: 0x00095331 File Offset: 0x00093531
 	public void PurchaseItem()
 	{
 		BuilderSetManager.instance.TryPurchaseItem(this.itemToBuy.setID, delegate(bool result)

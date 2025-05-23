@@ -6,7 +6,7 @@ namespace emotitron.Compression.HalfFloat
 	// Token: 0x02000E16 RID: 3606
 	public static class HalfUtilities
 	{
-		// Token: 0x06005A54 RID: 23124 RVA: 0x001B8218 File Offset: 0x001B6418
+		// Token: 0x06005A55 RID: 23125 RVA: 0x001B82F0 File Offset: 0x001B64F0
 		static HalfUtilities()
 		{
 			HalfUtilities.HalfToFloatMantissaTable[0] = 0U;
@@ -89,7 +89,7 @@ namespace emotitron.Compression.HalfFloat
 			}
 		}
 
-		// Token: 0x06005A55 RID: 23125 RVA: 0x001B84FC File Offset: 0x001B66FC
+		// Token: 0x06005A56 RID: 23126 RVA: 0x001B85D4 File Offset: 0x001B67D4
 		public static float Unpack(ushort value)
 		{
 			return new HalfUtilities.FloatToUint
@@ -98,7 +98,7 @@ namespace emotitron.Compression.HalfFloat
 			}.floatValue;
 		}
 
-		// Token: 0x06005A56 RID: 23126 RVA: 0x001B8544 File Offset: 0x001B6744
+		// Token: 0x06005A57 RID: 23127 RVA: 0x001B861C File Offset: 0x001B681C
 		public static ushort Pack(float value)
 		{
 			HalfUtilities.FloatToUint floatToUint = default(HalfUtilities.FloatToUint);
@@ -106,30 +106,30 @@ namespace emotitron.Compression.HalfFloat
 			return (ushort)((uint)HalfUtilities.FloatToHalfBaseTable[(int)((floatToUint.uintValue >> 23) & 511U)] + ((floatToUint.uintValue & 8388607U) >> (int)HalfUtilities.FloatToHalfShiftTable[(int)((floatToUint.uintValue >> 23) & 511U)]));
 		}
 
-		// Token: 0x04005E7B RID: 24187
+		// Token: 0x04005E7C RID: 24188
 		private static readonly uint[] HalfToFloatMantissaTable = new uint[2048];
 
-		// Token: 0x04005E7C RID: 24188
+		// Token: 0x04005E7D RID: 24189
 		private static readonly uint[] HalfToFloatExponentTable = new uint[64];
 
-		// Token: 0x04005E7D RID: 24189
+		// Token: 0x04005E7E RID: 24190
 		private static readonly uint[] HalfToFloatOffsetTable = new uint[64];
 
-		// Token: 0x04005E7E RID: 24190
+		// Token: 0x04005E7F RID: 24191
 		private static readonly ushort[] FloatToHalfBaseTable = new ushort[512];
 
-		// Token: 0x04005E7F RID: 24191
+		// Token: 0x04005E80 RID: 24192
 		private static readonly byte[] FloatToHalfShiftTable = new byte[512];
 
 		// Token: 0x02000E17 RID: 3607
 		[StructLayout(LayoutKind.Explicit)]
 		private struct FloatToUint
 		{
-			// Token: 0x04005E80 RID: 24192
+			// Token: 0x04005E81 RID: 24193
 			[FieldOffset(0)]
 			public uint uintValue;
 
-			// Token: 0x04005E81 RID: 24193
+			// Token: 0x04005E82 RID: 24194
 			[FieldOffset(0)]
 			public float floatValue;
 		}

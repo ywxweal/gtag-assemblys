@@ -8,7 +8,7 @@ using UnityEngine.XR;
 // Token: 0x02000576 RID: 1398
 public class GamePlayerLocal : MonoBehaviour
 {
-	// Token: 0x06002231 RID: 8753 RVA: 0x000AB0C8 File Offset: 0x000A92C8
+	// Token: 0x06002231 RID: 8753 RVA: 0x000AB0E8 File Offset: 0x000A92E8
 	private void Awake()
 	{
 		GamePlayerLocal.instance = this;
@@ -20,7 +20,7 @@ public class GamePlayerLocal : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06002232 RID: 8754 RVA: 0x000AB118 File Offset: 0x000A9318
+	// Token: 0x06002232 RID: 8754 RVA: 0x000AB138 File Offset: 0x000A9338
 	public void OnUpdateInteract()
 	{
 		for (int i = 0; i < this.inputData.Length; i++)
@@ -33,7 +33,7 @@ public class GamePlayerLocal : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06002233 RID: 8755 RVA: 0x000AB15C File Offset: 0x000A935C
+	// Token: 0x06002233 RID: 8755 RVA: 0x000AB17C File Offset: 0x000A937C
 	private void UpdateInput(int handIndex)
 	{
 		XRNode xrnode = this.GetXRNode(handIndex);
@@ -47,7 +47,7 @@ public class GamePlayerLocal : MonoBehaviour
 		this.inputData[handIndex].AddInput(inputDataMotion);
 	}
 
-	// Token: 0x06002234 RID: 8756 RVA: 0x000AB1E8 File Offset: 0x000A93E8
+	// Token: 0x06002234 RID: 8756 RVA: 0x000AB208 File Offset: 0x000A9408
 	private void UpdateHand(int handIndex)
 	{
 		if (!this.gamePlayer.GetGameEntityId(handIndex).IsValid())
@@ -58,7 +58,7 @@ public class GamePlayerLocal : MonoBehaviour
 		this.UpdateHandHolding(handIndex);
 	}
 
-	// Token: 0x06002235 RID: 8757 RVA: 0x000AB21C File Offset: 0x000A941C
+	// Token: 0x06002235 RID: 8757 RVA: 0x000AB23C File Offset: 0x000A943C
 	public void SetGrabbed(GameEntityId gameBallId, int handIndex)
 	{
 		GamePlayerLocal.HandData handData = this.hands[handIndex];
@@ -76,7 +76,7 @@ public class GamePlayerLocal : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06002236 RID: 8758 RVA: 0x000AB29C File Offset: 0x000A949C
+	// Token: 0x06002236 RID: 8758 RVA: 0x000AB2BC File Offset: 0x000A94BC
 	public void ClearGrabbedIfHeld(GameEntityId gameBallId)
 	{
 		for (int i = 0; i < 2; i++)
@@ -88,13 +88,13 @@ public class GamePlayerLocal : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06002237 RID: 8759 RVA: 0x000AB2D5 File Offset: 0x000A94D5
+	// Token: 0x06002237 RID: 8759 RVA: 0x000AB2F5 File Offset: 0x000A94F5
 	public void ClearGrabbed(int handIndex)
 	{
 		this.SetGrabbed(GameEntityId.Invalid, handIndex);
 	}
 
-	// Token: 0x06002238 RID: 8760 RVA: 0x000AB2E4 File Offset: 0x000A94E4
+	// Token: 0x06002238 RID: 8760 RVA: 0x000AB304 File Offset: 0x000A9504
 	private void UpdateStuckState()
 	{
 		bool flag = false;
@@ -109,7 +109,7 @@ public class GamePlayerLocal : MonoBehaviour
 		GTPlayer.Instance.disableMovement = flag;
 	}
 
-	// Token: 0x06002239 RID: 8761 RVA: 0x000AB32C File Offset: 0x000A952C
+	// Token: 0x06002239 RID: 8761 RVA: 0x000AB34C File Offset: 0x000A954C
 	private void UpdateHandEmpty(int handIndex)
 	{
 		if (this.gamePlayer.IsGrabbingDisabled())
@@ -155,7 +155,7 @@ public class GamePlayerLocal : MonoBehaviour
 		}
 	}
 
-	// Token: 0x0600223A RID: 8762 RVA: 0x000AB498 File Offset: 0x000A9698
+	// Token: 0x0600223A RID: 8762 RVA: 0x000AB4B8 File Offset: 0x000A96B8
 	private void UpdateHandHolding(int handIndex)
 	{
 		XRNode xrnode = this.GetXRNode(handIndex);
@@ -180,7 +180,7 @@ public class GamePlayerLocal : MonoBehaviour
 		}
 	}
 
-	// Token: 0x0600223B RID: 8763 RVA: 0x0008E380 File Offset: 0x0008C580
+	// Token: 0x0600223B RID: 8763 RVA: 0x0008E3A0 File Offset: 0x0008C5A0
 	private XRNode GetXRNode(int handIndex)
 	{
 		if (handIndex != 0)
@@ -190,13 +190,13 @@ public class GamePlayerLocal : MonoBehaviour
 		return XRNode.LeftHand;
 	}
 
-	// Token: 0x0600223C RID: 8764 RVA: 0x000AB5D3 File Offset: 0x000A97D3
+	// Token: 0x0600223C RID: 8764 RVA: 0x000AB5F3 File Offset: 0x000A97F3
 	private Transform GetHandTransform(int handIndex)
 	{
 		return GamePlayer.GetHandTransform(GorillaTagger.Instance.offlineVRRig, handIndex);
 	}
 
-	// Token: 0x0600223D RID: 8765 RVA: 0x000AB5E8 File Offset: 0x000A97E8
+	// Token: 0x0600223D RID: 8765 RVA: 0x000AB608 File Offset: 0x000A9808
 	public Vector3 GetHandVelocity(int handIndex)
 	{
 		Quaternion rotation = GTPlayer.Instance.turnParent.transform.rotation;
@@ -206,19 +206,19 @@ public class GamePlayerLocal : MonoBehaviour
 		return vector * base.transform.localScale.x;
 	}
 
-	// Token: 0x0600223E RID: 8766 RVA: 0x000AB65F File Offset: 0x000A985F
+	// Token: 0x0600223E RID: 8766 RVA: 0x000AB67F File Offset: 0x000A987F
 	public float GetHandSpeed(int handIndex)
 	{
 		return this.inputData[handIndex].GetMaxSpeed(0f, 0.05f);
 	}
 
-	// Token: 0x0600223F RID: 8767 RVA: 0x0008DD4B File Offset: 0x0008BF4B
+	// Token: 0x0600223F RID: 8767 RVA: 0x0008DD6B File Offset: 0x0008BF6B
 	public static bool IsLeftHand(int handIndex)
 	{
 		return handIndex == 0;
 	}
 
-	// Token: 0x06002240 RID: 8768 RVA: 0x0008DD51 File Offset: 0x0008BF51
+	// Token: 0x06002240 RID: 8768 RVA: 0x0008DD71 File Offset: 0x0008BF71
 	public static int GetHandIndex(bool leftHand)
 	{
 		if (!leftHand)
@@ -228,13 +228,13 @@ public class GamePlayerLocal : MonoBehaviour
 		return 0;
 	}
 
-	// Token: 0x06002241 RID: 8769 RVA: 0x0008E3BB File Offset: 0x0008C5BB
+	// Token: 0x06002241 RID: 8769 RVA: 0x0008E3DB File Offset: 0x0008C5DB
 	public void PlayCatchFx(bool isLeftHand)
 	{
 		GorillaTagger.Instance.StartVibration(isLeftHand, GorillaTagger.Instance.tapHapticStrength, 0.1f);
 	}
 
-	// Token: 0x06002242 RID: 8770 RVA: 0x0008E3D7 File Offset: 0x0008C5D7
+	// Token: 0x06002242 RID: 8770 RVA: 0x0008E3F7 File Offset: 0x0008C5F7
 	public void PlayThrowFx(bool isLeftHand)
 	{
 		GorillaTagger.Instance.StartVibration(isLeftHand, GorillaTagger.Instance.tapHapticStrength * 0.15f, 0.1f);
@@ -303,14 +303,14 @@ public class GamePlayerLocal : MonoBehaviour
 	// Token: 0x0200057A RID: 1402
 	public class InputData
 	{
-		// Token: 0x06002244 RID: 8772 RVA: 0x000AB678 File Offset: 0x000A9878
+		// Token: 0x06002244 RID: 8772 RVA: 0x000AB698 File Offset: 0x000A9898
 		public InputData(int maxInputs)
 		{
 			this.maxInputs = maxInputs;
 			this.inputMotionHistory = new List<GamePlayerLocal.InputDataMotion>(maxInputs);
 		}
 
-		// Token: 0x06002245 RID: 8773 RVA: 0x000AB693 File Offset: 0x000A9893
+		// Token: 0x06002245 RID: 8773 RVA: 0x000AB6B3 File Offset: 0x000A98B3
 		public void AddInput(GamePlayerLocal.InputDataMotion data)
 		{
 			if (this.inputMotionHistory.Count >= this.maxInputs)
@@ -320,7 +320,7 @@ public class GamePlayerLocal : MonoBehaviour
 			this.inputMotionHistory.Add(data);
 		}
 
-		// Token: 0x06002246 RID: 8774 RVA: 0x000AB6C0 File Offset: 0x000A98C0
+		// Token: 0x06002246 RID: 8774 RVA: 0x000AB6E0 File Offset: 0x000A98E0
 		public float GetMaxSpeed(float ignoreRecent, float window)
 		{
 			double timeAsDouble = Time.timeAsDouble;
@@ -346,7 +346,7 @@ public class GamePlayerLocal : MonoBehaviour
 			return Mathf.Sqrt(num3);
 		}
 
-		// Token: 0x06002247 RID: 8775 RVA: 0x000AB73C File Offset: 0x000A993C
+		// Token: 0x06002247 RID: 8775 RVA: 0x000AB75C File Offset: 0x000A995C
 		public Vector3 GetAvgVel(float ignoreRecent, float window)
 		{
 			double timeAsDouble = Time.timeAsDouble;

@@ -7,7 +7,7 @@ using UnityEngine;
 // Token: 0x020004E2 RID: 1250
 public class BuilderDispenser : MonoBehaviour
 {
-	// Token: 0x06001E38 RID: 7736 RVA: 0x00092F0C File Offset: 0x0009110C
+	// Token: 0x06001E38 RID: 7736 RVA: 0x00092F2C File Offset: 0x0009112C
 	private void Awake()
 	{
 		this.nullPiece = new BuilderPieceSet.PieceInfo
@@ -17,7 +17,7 @@ public class BuilderDispenser : MonoBehaviour
 		};
 	}
 
-	// Token: 0x06001E39 RID: 7737 RVA: 0x00092F38 File Offset: 0x00091138
+	// Token: 0x06001E39 RID: 7737 RVA: 0x00092F58 File Offset: 0x00091158
 	public void UpdateDispenser()
 	{
 		if (!PhotonNetwork.IsMasterClient)
@@ -43,7 +43,7 @@ public class BuilderDispenser : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001E3A RID: 7738 RVA: 0x00093004 File Offset: 0x00091204
+	// Token: 0x06001E3A RID: 7738 RVA: 0x00093024 File Offset: 0x00091224
 	public void ShelfPieceCreated(BuilderPiece piece, bool playAnimation)
 	{
 		if (piece != null && this.pieceToSpawn.piecePrefab != null && piece.pieceType == this.pieceToSpawn.piecePrefab.name.GetStaticHash())
@@ -79,7 +79,7 @@ public class BuilderDispenser : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001E3B RID: 7739 RVA: 0x0009317A File Offset: 0x0009137A
+	// Token: 0x06001E3B RID: 7739 RVA: 0x0009319A File Offset: 0x0009139A
 	private IEnumerator PlayAnimation()
 	{
 		this.spawnedPieceInstance.SetState(BuilderPiece.State.Displayed, false);
@@ -100,7 +100,7 @@ public class BuilderDispenser : MonoBehaviour
 		yield break;
 	}
 
-	// Token: 0x06001E3C RID: 7740 RVA: 0x0009318C File Offset: 0x0009138C
+	// Token: 0x06001E3C RID: 7740 RVA: 0x000931AC File Offset: 0x000913AC
 	public void ShelfPieceRecycled(BuilderPiece piece)
 	{
 		if (piece != null && this.spawnedPieceInstance != null && piece.Equals(this.spawnedPieceInstance))
@@ -112,7 +112,7 @@ public class BuilderDispenser : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001E3D RID: 7741 RVA: 0x000931E8 File Offset: 0x000913E8
+	// Token: 0x06001E3D RID: 7741 RVA: 0x00093208 File Offset: 0x00091408
 	public void AssignPieceType(BuilderPieceSet.PieceInfo piece, int inMaterialType)
 	{
 		this.playFX = false;
@@ -124,7 +124,7 @@ public class BuilderDispenser : MonoBehaviour
 		this.spawnCount = 0;
 	}
 
-	// Token: 0x06001E3E RID: 7742 RVA: 0x00093244 File Offset: 0x00091444
+	// Token: 0x06001E3E RID: 7742 RVA: 0x00093264 File Offset: 0x00091464
 	private void TrySpawnPiece()
 	{
 		if (this.spawnedPieceInstance != null && this.spawnedPieceInstance.state == BuilderPiece.State.OnShelf)
@@ -158,7 +158,7 @@ public class BuilderDispenser : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001E3F RID: 7743 RVA: 0x0009337C File Offset: 0x0009157C
+	// Token: 0x06001E3F RID: 7743 RVA: 0x0009339C File Offset: 0x0009159C
 	public void ParentPieceToShelf(Transform shelfTransform)
 	{
 		if (this.spawnedPieceInstance != null)
@@ -180,7 +180,7 @@ public class BuilderDispenser : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001E40 RID: 7744 RVA: 0x00093414 File Offset: 0x00091614
+	// Token: 0x06001E40 RID: 7744 RVA: 0x00093434 File Offset: 0x00091634
 	public void ClearDispenser()
 	{
 		if (!PhotonNetwork.IsMasterClient)
@@ -202,7 +202,7 @@ public class BuilderDispenser : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001E41 RID: 7745 RVA: 0x000934A0 File Offset: 0x000916A0
+	// Token: 0x06001E41 RID: 7745 RVA: 0x000934C0 File Offset: 0x000916C0
 	public void OnClearTable()
 	{
 		this.playFX = false;

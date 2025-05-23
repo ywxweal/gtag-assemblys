@@ -7,7 +7,7 @@ namespace OculusSampleFramework
 	public class TrainCar : TrainCarBase
 	{
 		// Token: 0x1700077F RID: 1919
-		// (get) Token: 0x06004BA6 RID: 19366 RVA: 0x00166CA5 File Offset: 0x00164EA5
+		// (get) Token: 0x06004BA7 RID: 19367 RVA: 0x00166D7D File Offset: 0x00164F7D
 		public float DistanceBehindParentScaled
 		{
 			get
@@ -16,13 +16,13 @@ namespace OculusSampleFramework
 			}
 		}
 
-		// Token: 0x06004BA7 RID: 19367 RVA: 0x00166CB4 File Offset: 0x00164EB4
+		// Token: 0x06004BA8 RID: 19368 RVA: 0x00166D8C File Offset: 0x00164F8C
 		protected override void Awake()
 		{
 			base.Awake();
 		}
 
-		// Token: 0x06004BA8 RID: 19368 RVA: 0x00166CBC File Offset: 0x00164EBC
+		// Token: 0x06004BA9 RID: 19369 RVA: 0x00166D94 File Offset: 0x00164F94
 		public override void UpdatePosition()
 		{
 			base.Distance = this._parentLocomotive.Distance - this.DistanceBehindParentScaled;
@@ -30,11 +30,11 @@ namespace OculusSampleFramework
 			base.RotateCarWheels();
 		}
 
-		// Token: 0x04004E40 RID: 20032
+		// Token: 0x04004E41 RID: 20033
 		[SerializeField]
 		private TrainCarBase _parentLocomotive;
 
-		// Token: 0x04004E41 RID: 20033
+		// Token: 0x04004E42 RID: 20034
 		[SerializeField]
 		protected float _distanceBehindParent = 0.1f;
 	}

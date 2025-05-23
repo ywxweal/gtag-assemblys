@@ -7,7 +7,7 @@ namespace GorillaTag.Reactions
 	public class ShakeReaction : MonoBehaviour, ITickSystemPost
 	{
 		// Token: 0x17000886 RID: 2182
-		// (get) Token: 0x0600554A RID: 21834 RVA: 0x0019F96A File Offset: 0x0019DB6A
+		// (get) Token: 0x0600554B RID: 21835 RVA: 0x0019FA42 File Offset: 0x0019DC42
 		private float loopSoundTotalDuration
 		{
 			get
@@ -17,11 +17,11 @@ namespace GorillaTag.Reactions
 		}
 
 		// Token: 0x17000887 RID: 2183
-		// (get) Token: 0x0600554B RID: 21835 RVA: 0x0019F980 File Offset: 0x0019DB80
-		// (set) Token: 0x0600554C RID: 21836 RVA: 0x0019F988 File Offset: 0x0019DB88
+		// (get) Token: 0x0600554C RID: 21836 RVA: 0x0019FA58 File Offset: 0x0019DC58
+		// (set) Token: 0x0600554D RID: 21837 RVA: 0x0019FA60 File Offset: 0x0019DC60
 		bool ITickSystemPost.PostTickRunning { get; set; }
 
-		// Token: 0x0600554D RID: 21837 RVA: 0x0019F994 File Offset: 0x0019DB94
+		// Token: 0x0600554E RID: 21838 RVA: 0x0019FA6C File Offset: 0x0019DC6C
 		protected void Awake()
 		{
 			this.sampleHistoryPos = new Vector3[256];
@@ -34,7 +34,7 @@ namespace GorillaTag.Reactions
 			Application.quitting += this.HandleApplicationQuitting;
 		}
 
-		// Token: 0x0600554E RID: 21838 RVA: 0x0019FA14 File Offset: 0x0019DC14
+		// Token: 0x0600554F RID: 21839 RVA: 0x0019FAEC File Offset: 0x0019DCEC
 		protected void OnEnable()
 		{
 			float unscaledTime = Time.unscaledTime;
@@ -56,7 +56,7 @@ namespace GorillaTag.Reactions
 			TickSystem<object>.AddPostTickCallback(this);
 		}
 
-		// Token: 0x0600554F RID: 21839 RVA: 0x0019FACB File Offset: 0x0019DCCB
+		// Token: 0x06005550 RID: 21840 RVA: 0x0019FBA3 File Offset: 0x0019DDA3
 		protected void OnDisable()
 		{
 			if (this.loopSoundAudioSource != null)
@@ -66,13 +66,13 @@ namespace GorillaTag.Reactions
 			TickSystem<object>.RemovePostTickCallback(this);
 		}
 
-		// Token: 0x06005550 RID: 21840 RVA: 0x000D1CE3 File Offset: 0x000CFEE3
+		// Token: 0x06005551 RID: 21841 RVA: 0x000D1D87 File Offset: 0x000CFF87
 		private void HandleApplicationQuitting()
 		{
 			TickSystem<object>.RemovePostTickCallback(this);
 		}
 
-		// Token: 0x06005551 RID: 21841 RVA: 0x0019FAEC File Offset: 0x0019DCEC
+		// Token: 0x06005552 RID: 21842 RVA: 0x0019FBC4 File Offset: 0x0019DDC4
 		void ITickSystemPost.PostTick()
 		{
 			float unscaledTime = Time.unscaledTime;
@@ -125,96 +125,96 @@ namespace GorillaTag.Reactions
 			}
 		}
 
-		// Token: 0x040058A6 RID: 22694
+		// Token: 0x040058A7 RID: 22695
 		[SerializeField]
 		private Transform shakeXform;
 
-		// Token: 0x040058A7 RID: 22695
+		// Token: 0x040058A8 RID: 22696
 		[SerializeField]
 		private float velocityThreshold = 5f;
 
-		// Token: 0x040058A8 RID: 22696
+		// Token: 0x040058A9 RID: 22697
 		[SerializeField]
 		private SoundBankPlayer shakeSoundBankPlayer;
 
-		// Token: 0x040058A9 RID: 22697
+		// Token: 0x040058AA RID: 22698
 		[SerializeField]
 		private float shakeSoundCooldown = 1f;
 
-		// Token: 0x040058AA RID: 22698
+		// Token: 0x040058AB RID: 22699
 		[SerializeField]
 		private AudioSource loopSoundAudioSource;
 
-		// Token: 0x040058AB RID: 22699
+		// Token: 0x040058AC RID: 22700
 		[SerializeField]
 		private float loopSoundBaseVolume = 1f;
 
-		// Token: 0x040058AC RID: 22700
+		// Token: 0x040058AD RID: 22701
 		[SerializeField]
 		private float loopSoundSustainDuration = 1f;
 
-		// Token: 0x040058AD RID: 22701
+		// Token: 0x040058AE RID: 22702
 		[SerializeField]
 		private float loopSoundFadeInDuration = 1f;
 
-		// Token: 0x040058AE RID: 22702
+		// Token: 0x040058AF RID: 22703
 		[SerializeField]
 		private AnimationCurve loopSoundFadeInCurve;
 
-		// Token: 0x040058AF RID: 22703
+		// Token: 0x040058B0 RID: 22704
 		[SerializeField]
 		private float loopSoundFadeOutDuration = 1f;
 
-		// Token: 0x040058B0 RID: 22704
+		// Token: 0x040058B1 RID: 22705
 		[SerializeField]
 		private AnimationCurve loopSoundFadeOutCurve;
 
-		// Token: 0x040058B1 RID: 22705
+		// Token: 0x040058B2 RID: 22706
 		[SerializeField]
 		private ParticleSystem particles;
 
-		// Token: 0x040058B2 RID: 22706
+		// Token: 0x040058B3 RID: 22707
 		[SerializeField]
 		private AnimationCurve emissionCurve;
 
-		// Token: 0x040058B3 RID: 22707
+		// Token: 0x040058B4 RID: 22708
 		[SerializeField]
 		private float particleDuration = 5f;
 
-		// Token: 0x040058B5 RID: 22709
+		// Token: 0x040058B6 RID: 22710
 		private const int sampleHistorySize = 256;
 
-		// Token: 0x040058B6 RID: 22710
+		// Token: 0x040058B7 RID: 22711
 		private float[] sampleHistoryTime;
 
-		// Token: 0x040058B7 RID: 22711
+		// Token: 0x040058B8 RID: 22712
 		private Vector3[] sampleHistoryPos;
 
-		// Token: 0x040058B8 RID: 22712
+		// Token: 0x040058B9 RID: 22713
 		private Vector3[] sampleHistoryVel;
 
-		// Token: 0x040058B9 RID: 22713
+		// Token: 0x040058BA RID: 22714
 		private int currentIndex;
 
-		// Token: 0x040058BA RID: 22714
+		// Token: 0x040058BB RID: 22715
 		private float lastShakeSoundTime = float.MinValue;
 
-		// Token: 0x040058BB RID: 22715
+		// Token: 0x040058BC RID: 22716
 		private float lastShakeTime = float.MinValue;
 
-		// Token: 0x040058BC RID: 22716
+		// Token: 0x040058BD RID: 22717
 		private float maxEmissionRate;
 
-		// Token: 0x040058BD RID: 22717
+		// Token: 0x040058BE RID: 22718
 		private bool hasLoopSound;
 
-		// Token: 0x040058BE RID: 22718
+		// Token: 0x040058BF RID: 22719
 		private bool hasShakeSound;
 
-		// Token: 0x040058BF RID: 22719
+		// Token: 0x040058C0 RID: 22720
 		private bool hasParticleSystem;
 
-		// Token: 0x040058C0 RID: 22720
+		// Token: 0x040058C1 RID: 22721
 		[DebugReadout]
 		private float poopVelocity;
 	}

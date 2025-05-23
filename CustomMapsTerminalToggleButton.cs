@@ -4,7 +4,7 @@ using Photon.Pun;
 // Token: 0x0200073A RID: 1850
 public class CustomMapsTerminalToggleButton : CustomMapsTerminalButton
 {
-	// Token: 0x06002E35 RID: 11829 RVA: 0x000E6C2C File Offset: 0x000E4E2C
+	// Token: 0x06002E36 RID: 11830 RVA: 0x000E6CD0 File Offset: 0x000E4ED0
 	public override void ButtonActivationWithHand(bool isLeftHand)
 	{
 		GorillaTagger.Instance.StartVibration(isLeftHand, GorillaTagger.Instance.tapHapticStrength / 2f, GorillaTagger.Instance.tapHapticDuration);
@@ -19,7 +19,7 @@ public class CustomMapsTerminalToggleButton : CustomMapsTerminalButton
 		}
 	}
 
-	// Token: 0x06002E36 RID: 11830 RVA: 0x000E6CE5 File Offset: 0x000E4EE5
+	// Token: 0x06002E37 RID: 11831 RVA: 0x000E6D89 File Offset: 0x000E4F89
 	public void SetButtonStatus(bool isPressed)
 	{
 		this.isOn = isPressed;

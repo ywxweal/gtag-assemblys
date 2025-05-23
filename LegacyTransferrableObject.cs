@@ -6,7 +6,7 @@ using UnityEngine.XR;
 // Token: 0x02000408 RID: 1032
 public class LegacyTransferrableObject : HoldableObject
 {
-	// Token: 0x060018FC RID: 6396 RVA: 0x00078EBC File Offset: 0x000770BC
+	// Token: 0x060018FC RID: 6396 RVA: 0x00078EDC File Offset: 0x000770DC
 	protected void Awake()
 	{
 		this.latched = false;
@@ -14,7 +14,7 @@ public class LegacyTransferrableObject : HoldableObject
 		this.initRotation = base.transform.localRotation;
 	}
 
-	// Token: 0x060018FD RID: 6397 RVA: 0x00078EE8 File Offset: 0x000770E8
+	// Token: 0x060018FD RID: 6397 RVA: 0x00078F08 File Offset: 0x00077108
 	protected virtual void Start()
 	{
 		RoomSystem.JoinedRoomEvent = (Action)Delegate.Combine(RoomSystem.JoinedRoomEvent, new Action(this.OnJoinedRoom));
@@ -22,7 +22,7 @@ public class LegacyTransferrableObject : HoldableObject
 		RoomSystem.PlayerJoinedEvent = (Action<NetPlayer>)Delegate.Combine(RoomSystem.PlayerJoinedEvent, new Action<NetPlayer>(this.OnPlayerLeftRoom));
 	}
 
-	// Token: 0x060018FE RID: 6398 RVA: 0x00078F58 File Offset: 0x00077158
+	// Token: 0x060018FE RID: 6398 RVA: 0x00078F78 File Offset: 0x00077178
 	public void OnEnable()
 	{
 		if (this.myRig == null && this.myOnlineRig != null && this.myOnlineRig.netView != null && this.myOnlineRig.netView.IsMine)
@@ -74,13 +74,13 @@ public class LegacyTransferrableObject : HoldableObject
 		this.SpawnShareableObject();
 	}
 
-	// Token: 0x060018FF RID: 6399 RVA: 0x000790DE File Offset: 0x000772DE
+	// Token: 0x060018FF RID: 6399 RVA: 0x000790FE File Offset: 0x000772FE
 	public void OnDisable()
 	{
 		this.enabledOnFrame = -1;
 	}
 
-	// Token: 0x06001900 RID: 6400 RVA: 0x000790E8 File Offset: 0x000772E8
+	// Token: 0x06001900 RID: 6400 RVA: 0x00079108 File Offset: 0x00077308
 	private void SpawnShareableObject()
 	{
 		if (!PhotonNetwork.InRoom)
@@ -107,14 +107,14 @@ public class LegacyTransferrableObject : HoldableObject
 		}
 	}
 
-	// Token: 0x06001901 RID: 6401 RVA: 0x00079184 File Offset: 0x00077384
+	// Token: 0x06001901 RID: 6401 RVA: 0x000791A4 File Offset: 0x000773A4
 	public void OnJoinedRoom()
 	{
 		Debug.Log("Here");
 		this.SpawnShareableObject();
 	}
 
-	// Token: 0x06001902 RID: 6402 RVA: 0x00079196 File Offset: 0x00077396
+	// Token: 0x06001902 RID: 6402 RVA: 0x000791B6 File Offset: 0x000773B6
 	public void OnLeftRoom()
 	{
 		if (this.worldShareableInstance != null)
@@ -124,13 +124,13 @@ public class LegacyTransferrableObject : HoldableObject
 		this.OnWorldShareableItemDeallocated(NetworkSystem.Instance.LocalPlayer);
 	}
 
-	// Token: 0x06001903 RID: 6403 RVA: 0x000791C1 File Offset: 0x000773C1
+	// Token: 0x06001903 RID: 6403 RVA: 0x000791E1 File Offset: 0x000773E1
 	public void OnPlayerLeftRoom(NetPlayer otherPlayer)
 	{
 		this.OnWorldShareableItemDeallocated(otherPlayer);
 	}
 
-	// Token: 0x06001904 RID: 6404 RVA: 0x000791CA File Offset: 0x000773CA
+	// Token: 0x06001904 RID: 6404 RVA: 0x000791EA File Offset: 0x000773EA
 	public void SetWorldShareableItem(GameObject item)
 	{
 		this.worldShareableInstance = item;
@@ -147,7 +147,7 @@ public class LegacyTransferrableObject : HoldableObject
 	{
 	}
 
-	// Token: 0x06001907 RID: 6407 RVA: 0x000791DC File Offset: 0x000773DC
+	// Token: 0x06001907 RID: 6407 RVA: 0x000791FC File Offset: 0x000773FC
 	public virtual void LateUpdate()
 	{
 		if (this.interactor == null)
@@ -166,7 +166,7 @@ public class LegacyTransferrableObject : HoldableObject
 		this.previousState = this.currentState;
 	}
 
-	// Token: 0x06001908 RID: 6408 RVA: 0x0007922C File Offset: 0x0007742C
+	// Token: 0x06001908 RID: 6408 RVA: 0x0007924C File Offset: 0x0007744C
 	protected Transform DefaultAnchor()
 	{
 		if (!(this.anchor == null))
@@ -176,7 +176,7 @@ public class LegacyTransferrableObject : HoldableObject
 		return base.transform;
 	}
 
-	// Token: 0x06001909 RID: 6409 RVA: 0x00079249 File Offset: 0x00077449
+	// Token: 0x06001909 RID: 6409 RVA: 0x00079269 File Offset: 0x00077469
 	private Transform GetAnchor(TransferrableObject.PositionState pos)
 	{
 		if (this.grabAnchor == null)
@@ -190,14 +190,14 @@ public class LegacyTransferrableObject : HoldableObject
 		return this.DefaultAnchor();
 	}
 
-	// Token: 0x0600190A RID: 6410 RVA: 0x00079278 File Offset: 0x00077478
+	// Token: 0x0600190A RID: 6410 RVA: 0x00079298 File Offset: 0x00077498
 	protected bool Attached()
 	{
 		bool flag = this.InHand() && this.detatchOnGrab;
 		return !this.Dropped() && !flag;
 	}
 
-	// Token: 0x0600190B RID: 6411 RVA: 0x000792A8 File Offset: 0x000774A8
+	// Token: 0x0600190B RID: 6411 RVA: 0x000792C8 File Offset: 0x000774C8
 	private void UpdateFollowXform()
 	{
 		if (this.targetRig == null)
@@ -301,13 +301,13 @@ public class LegacyTransferrableObject : HoldableObject
 		}
 	}
 
-	// Token: 0x0600190C RID: 6412 RVA: 0x000795CD File Offset: 0x000777CD
+	// Token: 0x0600190C RID: 6412 RVA: 0x000795ED File Offset: 0x000777ED
 	public void DropItem()
 	{
 		base.transform.parent = null;
 	}
 
-	// Token: 0x0600190D RID: 6413 RVA: 0x000795DC File Offset: 0x000777DC
+	// Token: 0x0600190D RID: 6413 RVA: 0x000795FC File Offset: 0x000777FC
 	protected virtual void LateUpdateShared()
 	{
 		this.disableItem = true;
@@ -339,7 +339,7 @@ public class LegacyTransferrableObject : HoldableObject
 		}
 	}
 
-	// Token: 0x0600190E RID: 6414 RVA: 0x00079684 File Offset: 0x00077884
+	// Token: 0x0600190E RID: 6414 RVA: 0x000796A4 File Offset: 0x000778A4
 	protected void ResetXf()
 	{
 		if (this.canDrop)
@@ -354,7 +354,7 @@ public class LegacyTransferrableObject : HoldableObject
 		}
 	}
 
-	// Token: 0x0600190F RID: 6415 RVA: 0x000796EF File Offset: 0x000778EF
+	// Token: 0x0600190F RID: 6415 RVA: 0x0007970F File Offset: 0x0007790F
 	protected void ReDock()
 	{
 		if (this.IsMyItem())
@@ -364,7 +364,7 @@ public class LegacyTransferrableObject : HoldableObject
 		this.ResetXf();
 	}
 
-	// Token: 0x06001910 RID: 6416 RVA: 0x0007970C File Offset: 0x0007790C
+	// Token: 0x06001910 RID: 6416 RVA: 0x0007972C File Offset: 0x0007792C
 	private void HandleLocalInput()
 	{
 		GameObject[] array;
@@ -405,7 +405,7 @@ public class LegacyTransferrableObject : HoldableObject
 		}
 	}
 
-	// Token: 0x06001911 RID: 6417 RVA: 0x000797F8 File Offset: 0x000779F8
+	// Token: 0x06001911 RID: 6417 RVA: 0x00079818 File Offset: 0x00077A18
 	protected virtual void LateUpdateLocal()
 	{
 		this.wasHover = this.isHover;
@@ -419,7 +419,7 @@ public class LegacyTransferrableObject : HoldableObject
 		this.HandleLocalInput();
 	}
 
-	// Token: 0x06001912 RID: 6418 RVA: 0x00079860 File Offset: 0x00077A60
+	// Token: 0x06001912 RID: 6418 RVA: 0x00079880 File Offset: 0x00077A80
 	protected virtual void LateUpdateReplicated()
 	{
 		this.currentState = this.myOnlineRig.TransferrablePosStates(this.objectIndex);
@@ -455,7 +455,7 @@ public class LegacyTransferrableObject : HoldableObject
 		}
 	}
 
-	// Token: 0x06001913 RID: 6419 RVA: 0x00079952 File Offset: 0x00077B52
+	// Token: 0x06001913 RID: 6419 RVA: 0x00079972 File Offset: 0x00077B72
 	public virtual void ResetToDefaultState()
 	{
 		this.canAutoGrabLeft = true;
@@ -465,7 +465,7 @@ public class LegacyTransferrableObject : HoldableObject
 		this.ResetXf();
 	}
 
-	// Token: 0x06001914 RID: 6420 RVA: 0x00079978 File Offset: 0x00077B78
+	// Token: 0x06001914 RID: 6420 RVA: 0x00079998 File Offset: 0x00077B98
 	public override void OnGrab(InteractionPoint pointGrabbed, GameObject grabbingHand)
 	{
 		if (!this.IsMyItem())
@@ -497,7 +497,7 @@ public class LegacyTransferrableObject : HoldableObject
 		GorillaTagger.Instance.StartVibration(true, GorillaTagger.Instance.tapHapticStrength / 8f, GorillaTagger.Instance.tapHapticDuration * 0.5f);
 	}
 
-	// Token: 0x06001915 RID: 6421 RVA: 0x00079A80 File Offset: 0x00077C80
+	// Token: 0x06001915 RID: 6421 RVA: 0x00079AA0 File Offset: 0x00077CA0
 	public override bool OnRelease(DropZone zoneReleased, GameObject releasingHand)
 	{
 		if (!this.IsMyItem())
@@ -538,7 +538,7 @@ public class LegacyTransferrableObject : HoldableObject
 		return false;
 	}
 
-	// Token: 0x06001916 RID: 6422 RVA: 0x00079BF4 File Offset: 0x00077DF4
+	// Token: 0x06001916 RID: 6422 RVA: 0x00079C14 File Offset: 0x00077E14
 	public override void DropItemCleanup()
 	{
 		if (this.canDrop)
@@ -575,7 +575,7 @@ public class LegacyTransferrableObject : HoldableObject
 		}
 	}
 
-	// Token: 0x06001917 RID: 6423 RVA: 0x00079C68 File Offset: 0x00077E68
+	// Token: 0x06001917 RID: 6423 RVA: 0x00079C88 File Offset: 0x00077E88
 	public override void OnHover(InteractionPoint pointHovered, GameObject hoveringHand)
 	{
 		if (!this.IsMyItem())
@@ -589,7 +589,7 @@ public class LegacyTransferrableObject : HoldableObject
 		this.isHover = true;
 	}
 
-	// Token: 0x06001918 RID: 6424 RVA: 0x00079CCC File Offset: 0x00077ECC
+	// Token: 0x06001918 RID: 6424 RVA: 0x00079CEC File Offset: 0x00077EEC
 	protected void ActivateItemFX(float hapticStrength, float hapticDuration, int soundIndex, float soundVolume)
 	{
 		bool flag = this.currentState == TransferrableObject.PositionState.InLeftHand;
@@ -607,7 +607,7 @@ public class LegacyTransferrableObject : HoldableObject
 	{
 	}
 
-	// Token: 0x0600191A RID: 6426 RVA: 0x00079D38 File Offset: 0x00077F38
+	// Token: 0x0600191A RID: 6426 RVA: 0x00079D58 File Offset: 0x00077F58
 	public virtual bool AutoGrabTrue(bool leftGrabbingHand)
 	{
 		if (!leftGrabbingHand)
@@ -629,67 +629,67 @@ public class LegacyTransferrableObject : HoldableObject
 		return true;
 	}
 
-	// Token: 0x0600191D RID: 6429 RVA: 0x00079D4A File Offset: 0x00077F4A
+	// Token: 0x0600191D RID: 6429 RVA: 0x00079D6A File Offset: 0x00077F6A
 	public virtual void OnActivate()
 	{
 		this.latched = true;
 	}
 
-	// Token: 0x0600191E RID: 6430 RVA: 0x00079D53 File Offset: 0x00077F53
+	// Token: 0x0600191E RID: 6430 RVA: 0x00079D73 File Offset: 0x00077F73
 	public virtual void OnDeactivate()
 	{
 		this.latched = false;
 	}
 
-	// Token: 0x0600191F RID: 6431 RVA: 0x00079D5C File Offset: 0x00077F5C
+	// Token: 0x0600191F RID: 6431 RVA: 0x00079D7C File Offset: 0x00077F7C
 	public virtual bool IsMyItem()
 	{
 		return this.myRig != null && this.myRig.isOfflineVRRig;
 	}
 
-	// Token: 0x06001920 RID: 6432 RVA: 0x00079D7C File Offset: 0x00077F7C
+	// Token: 0x06001920 RID: 6432 RVA: 0x00079D9C File Offset: 0x00077F9C
 	protected virtual bool IsHeld()
 	{
 		return (EquipmentInteractor.instance.leftHandHeldEquipment != null && (LegacyTransferrableObject)EquipmentInteractor.instance.leftHandHeldEquipment == this) || (EquipmentInteractor.instance.rightHandHeldEquipment != null && (LegacyTransferrableObject)EquipmentInteractor.instance.rightHandHeldEquipment == this);
 	}
 
-	// Token: 0x06001921 RID: 6433 RVA: 0x00079DD9 File Offset: 0x00077FD9
+	// Token: 0x06001921 RID: 6433 RVA: 0x00079DF9 File Offset: 0x00077FF9
 	public bool InHand()
 	{
 		return this.currentState == TransferrableObject.PositionState.InLeftHand || this.currentState == TransferrableObject.PositionState.InRightHand;
 	}
 
-	// Token: 0x06001922 RID: 6434 RVA: 0x00079DEF File Offset: 0x00077FEF
+	// Token: 0x06001922 RID: 6434 RVA: 0x00079E0F File Offset: 0x0007800F
 	public bool Dropped()
 	{
 		return this.currentState == TransferrableObject.PositionState.Dropped;
 	}
 
-	// Token: 0x06001923 RID: 6435 RVA: 0x00079DFE File Offset: 0x00077FFE
+	// Token: 0x06001923 RID: 6435 RVA: 0x00079E1E File Offset: 0x0007801E
 	public bool InLeftHand()
 	{
 		return this.currentState == TransferrableObject.PositionState.InLeftHand;
 	}
 
-	// Token: 0x06001924 RID: 6436 RVA: 0x00079E09 File Offset: 0x00078009
+	// Token: 0x06001924 RID: 6436 RVA: 0x00079E29 File Offset: 0x00078029
 	public bool InRightHand()
 	{
 		return this.currentState == TransferrableObject.PositionState.InRightHand;
 	}
 
-	// Token: 0x06001925 RID: 6437 RVA: 0x00079E14 File Offset: 0x00078014
+	// Token: 0x06001925 RID: 6437 RVA: 0x00079E34 File Offset: 0x00078034
 	public bool OnChest()
 	{
 		return this.currentState == TransferrableObject.PositionState.OnChest;
 	}
 
-	// Token: 0x06001926 RID: 6438 RVA: 0x00079E20 File Offset: 0x00078020
+	// Token: 0x06001926 RID: 6438 RVA: 0x00079E40 File Offset: 0x00078040
 	public bool OnShoulder()
 	{
 		return this.currentState == TransferrableObject.PositionState.OnLeftShoulder || this.currentState == TransferrableObject.PositionState.OnRightShoulder;
 	}
 
-	// Token: 0x06001927 RID: 6439 RVA: 0x00079E38 File Offset: 0x00078038
+	// Token: 0x06001927 RID: 6439 RVA: 0x00079E58 File Offset: 0x00078058
 	protected NetPlayer OwningPlayer()
 	{
 		if (this.myRig == null)

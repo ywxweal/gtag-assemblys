@@ -7,7 +7,7 @@ namespace BoingKit
 	// Token: 0x02000E80 RID: 3712
 	internal static class BoingWorkSynchronous
 	{
-		// Token: 0x06005CB9 RID: 23737 RVA: 0x001CA1DC File Offset: 0x001C83DC
+		// Token: 0x06005CBA RID: 23738 RVA: 0x001CA2B4 File Offset: 0x001C84B4
 		internal static void ExecuteBehaviors(Dictionary<int, BoingBehavior> behaviorMap, BoingManager.UpdateMode updateMode)
 		{
 			float deltaTime = Time.deltaTime;
@@ -33,7 +33,7 @@ namespace BoingKit
 			}
 		}
 
-		// Token: 0x06005CBA RID: 23738 RVA: 0x001CA268 File Offset: 0x001C8468
+		// Token: 0x06005CBB RID: 23739 RVA: 0x001CA340 File Offset: 0x001C8540
 		internal static void ExecuteReactors(BoingEffector.Params[] aEffectorParams, Dictionary<int, BoingReactor> reactorMap, Dictionary<int, BoingReactorField> fieldMap, Dictionary<int, BoingReactorFieldCPUSampler> cpuSamplerMap, BoingManager.UpdateMode updateMode)
 		{
 			float deltaTime = BoingManager.DeltaTime;
@@ -79,7 +79,7 @@ namespace BoingKit
 			}
 		}
 
-		// Token: 0x06005CBB RID: 23739 RVA: 0x001CA3C0 File Offset: 0x001C85C0
+		// Token: 0x06005CBC RID: 23740 RVA: 0x001CA498 File Offset: 0x001C8698
 		internal static void ExecuteBones(BoingEffector.Params[] aEffectorParams, Dictionary<int, BoingBones> bonesMap, BoingManager.UpdateMode updateMode)
 		{
 			float deltaTime = BoingManager.DeltaTime;
@@ -113,7 +113,7 @@ namespace BoingKit
 			}
 		}
 
-		// Token: 0x06005CBC RID: 23740 RVA: 0x001CA48C File Offset: 0x001C868C
+		// Token: 0x06005CBD RID: 23741 RVA: 0x001CA564 File Offset: 0x001C8764
 		internal static void PullBonesResults(BoingEffector.Params[] aEffectorParams, Dictionary<int, BoingBones> bonesMap, BoingManager.UpdateMode updateMode)
 		{
 			foreach (KeyValuePair<int, BoingBones> keyValuePair in bonesMap)

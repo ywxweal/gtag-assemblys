@@ -8,7 +8,7 @@ using UnityEngine;
 public class FriendCard : MonoBehaviour
 {
 	// Token: 0x1700056C RID: 1388
-	// (get) Token: 0x0600368D RID: 13965 RVA: 0x00106B2C File Offset: 0x00104D2C
+	// (get) Token: 0x0600368E RID: 13966 RVA: 0x00106C04 File Offset: 0x00104E04
 	public TextMeshProUGUI NameText
 	{
 		get
@@ -18,7 +18,7 @@ public class FriendCard : MonoBehaviour
 	}
 
 	// Token: 0x1700056D RID: 1389
-	// (get) Token: 0x0600368E RID: 13966 RVA: 0x00106B34 File Offset: 0x00104D34
+	// (get) Token: 0x0600368F RID: 13967 RVA: 0x00106C0C File Offset: 0x00104E0C
 	public TextMeshProUGUI RoomText
 	{
 		get
@@ -28,7 +28,7 @@ public class FriendCard : MonoBehaviour
 	}
 
 	// Token: 0x1700056E RID: 1390
-	// (get) Token: 0x0600368F RID: 13967 RVA: 0x00106B3C File Offset: 0x00104D3C
+	// (get) Token: 0x06003690 RID: 13968 RVA: 0x00106C14 File Offset: 0x00104E14
 	public TextMeshProUGUI ZoneText
 	{
 		get
@@ -38,7 +38,7 @@ public class FriendCard : MonoBehaviour
 	}
 
 	// Token: 0x1700056F RID: 1391
-	// (get) Token: 0x06003690 RID: 13968 RVA: 0x00106B44 File Offset: 0x00104D44
+	// (get) Token: 0x06003691 RID: 13969 RVA: 0x00106C1C File Offset: 0x00104E1C
 	public float Width
 	{
 		get
@@ -48,11 +48,11 @@ public class FriendCard : MonoBehaviour
 	}
 
 	// Token: 0x17000570 RID: 1392
-	// (get) Token: 0x06003691 RID: 13969 RVA: 0x00106B4C File Offset: 0x00104D4C
-	// (set) Token: 0x06003692 RID: 13970 RVA: 0x00106B54 File Offset: 0x00104D54
+	// (get) Token: 0x06003692 RID: 13970 RVA: 0x00106C24 File Offset: 0x00104E24
+	// (set) Token: 0x06003693 RID: 13971 RVA: 0x00106C2C File Offset: 0x00104E2C
 	public float Height { get; private set; } = 0.25f;
 
-	// Token: 0x06003693 RID: 13971 RVA: 0x00106B5D File Offset: 0x00104D5D
+	// Token: 0x06003694 RID: 13972 RVA: 0x00106C35 File Offset: 0x00104E35
 	private void Awake()
 	{
 		if (this.removeProgressBar)
@@ -61,7 +61,7 @@ public class FriendCard : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06003694 RID: 13972 RVA: 0x00106B7D File Offset: 0x00104D7D
+	// Token: 0x06003695 RID: 13973 RVA: 0x00106C55 File Offset: 0x00104E55
 	private void OnDestroy()
 	{
 		if (this._button)
@@ -70,13 +70,13 @@ public class FriendCard : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06003695 RID: 13973 RVA: 0x00106BA3 File Offset: 0x00104DA3
+	// Token: 0x06003696 RID: 13974 RVA: 0x00106C7B File Offset: 0x00104E7B
 	public void Init(FriendDisplay owner)
 	{
 		this.friendDisplay = owner;
 	}
 
-	// Token: 0x06003696 RID: 13974 RVA: 0x00106BAC File Offset: 0x00104DAC
+	// Token: 0x06003697 RID: 13975 RVA: 0x00106C84 File Offset: 0x00104E84
 	private void UpdateComponentStates()
 	{
 		if (this.removeProgressBar)
@@ -96,7 +96,7 @@ public class FriendCard : MonoBehaviour
 		this.SetButtonState(FriendDisplay.ButtonState.Default);
 	}
 
-	// Token: 0x06003697 RID: 13975 RVA: 0x00106C10 File Offset: 0x00104E10
+	// Token: 0x06003698 RID: 13976 RVA: 0x00106CE8 File Offset: 0x00104EE8
 	private void SetButtonState(FriendDisplay.ButtonState newState)
 	{
 		if (this._button == null)
@@ -129,7 +129,7 @@ public class FriendCard : MonoBehaviour
 		this._button.delayTime = (float)((this._buttonState == FriendDisplay.ButtonState.Alert) ? 3 : 0);
 	}
 
-	// Token: 0x06003698 RID: 13976 RVA: 0x00106CAC File Offset: 0x00104EAC
+	// Token: 0x06003699 RID: 13977 RVA: 0x00106D84 File Offset: 0x00104F84
 	public void Populate(FriendBackendController.Friend friend)
 	{
 		this.SetEmpty();
@@ -185,7 +185,7 @@ public class FriendCard : MonoBehaviour
 		this.UpdateComponentStates();
 	}
 
-	// Token: 0x06003699 RID: 13977 RVA: 0x00106EC0 File Offset: 0x001050C0
+	// Token: 0x0600369A RID: 13978 RVA: 0x00106F98 File Offset: 0x00105198
 	public void SetName(string friendName)
 	{
 		TMP_Text tmp_Text = this.nameText;
@@ -193,7 +193,7 @@ public class FriendCard : MonoBehaviour
 		tmp_Text.text = friendName;
 	}
 
-	// Token: 0x0600369A RID: 13978 RVA: 0x00106EE4 File Offset: 0x001050E4
+	// Token: 0x0600369B RID: 13979 RVA: 0x00106FBC File Offset: 0x001051BC
 	public void SetRoom(string friendRoom)
 	{
 		TMP_Text tmp_Text = this.roomText;
@@ -201,7 +201,7 @@ public class FriendCard : MonoBehaviour
 		tmp_Text.text = friendRoom;
 	}
 
-	// Token: 0x0600369B RID: 13979 RVA: 0x00106F08 File Offset: 0x00105108
+	// Token: 0x0600369C RID: 13980 RVA: 0x00106FE0 File Offset: 0x001051E0
 	public void SetZone(string friendZone)
 	{
 		TMP_Text tmp_Text = this.zoneText;
@@ -209,7 +209,7 @@ public class FriendCard : MonoBehaviour
 		tmp_Text.text = friendZone;
 	}
 
-	// Token: 0x0600369C RID: 13980 RVA: 0x00106F2C File Offset: 0x0010512C
+	// Token: 0x0600369D RID: 13981 RVA: 0x00107004 File Offset: 0x00105204
 	public void Randomize()
 	{
 		this.SetEmpty();
@@ -237,7 +237,7 @@ public class FriendCard : MonoBehaviour
 		this.UpdateComponentStates();
 	}
 
-	// Token: 0x0600369D RID: 13981 RVA: 0x00107032 File Offset: 0x00105232
+	// Token: 0x0600369E RID: 13982 RVA: 0x0010710A File Offset: 0x0010530A
 	public void SetEmpty()
 	{
 		this.SetName(this.emptyString);
@@ -248,14 +248,14 @@ public class FriendCard : MonoBehaviour
 		this.UpdateComponentStates();
 	}
 
-	// Token: 0x0600369E RID: 13982 RVA: 0x0010706C File Offset: 0x0010526C
+	// Token: 0x0600369F RID: 13983 RVA: 0x00107144 File Offset: 0x00105344
 	public void SetRemoveEnabled(bool enabled)
 	{
 		this.canRemove = enabled;
 		this.UpdateComponentStates();
 	}
 
-	// Token: 0x0600369F RID: 13983 RVA: 0x0010707C File Offset: 0x0010527C
+	// Token: 0x060036A0 RID: 13984 RVA: 0x00107154 File Offset: 0x00105354
 	private void JoinButtonPressed()
 	{
 		if (this.joinable && this.currentFriend != null && this.currentFriend.Presence != null)
@@ -270,7 +270,7 @@ public class FriendCard : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060036A0 RID: 13984 RVA: 0x00107104 File Offset: 0x00105304
+	// Token: 0x060036A1 RID: 13985 RVA: 0x001071DC File Offset: 0x001053DC
 	private void RemoveFriendButtonPressed()
 	{
 		if (this.friendDisplay.InRemoveMode)
@@ -280,7 +280,7 @@ public class FriendCard : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060036A1 RID: 13985 RVA: 0x0010712C File Offset: 0x0010532C
+	// Token: 0x060036A2 RID: 13986 RVA: 0x00107204 File Offset: 0x00105404
 	private void OnDrawGizmosSelected()
 	{
 		float num = this.width * 0.5f * base.transform.lossyScale.x;
@@ -298,7 +298,7 @@ public class FriendCard : MonoBehaviour
 		Gizmos.DrawLine(vector3, vector);
 	}
 
-	// Token: 0x060036A2 RID: 13986 RVA: 0x00107260 File Offset: 0x00105460
+	// Token: 0x060036A3 RID: 13987 RVA: 0x00107338 File Offset: 0x00105538
 	public void SetButton(GorillaPressableDelayButton friendCardButton, Material[] normalMaterials, Material[] activeMaterials, Material[] alertMaterials, TextMeshProUGUI buttonText)
 	{
 		this._button = friendCardButton;
@@ -313,7 +313,7 @@ public class FriendCard : MonoBehaviour
 		this.SetButtonState(FriendDisplay.ButtonState.Default);
 	}
 
-	// Token: 0x060036A3 RID: 13987 RVA: 0x001072EF File Offset: 0x001054EF
+	// Token: 0x060036A4 RID: 13988 RVA: 0x001073C7 File Offset: 0x001055C7
 	private void OnRemoveFriendBegin()
 	{
 		this.nameText.text = "REMOVING";
@@ -321,7 +321,7 @@ public class FriendCard : MonoBehaviour
 		this.zoneText.text = this.emptyString;
 	}
 
-	// Token: 0x060036A4 RID: 13988 RVA: 0x00107322 File Offset: 0x00105522
+	// Token: 0x060036A5 RID: 13989 RVA: 0x001073FA File Offset: 0x001055FA
 	private void OnRemoveFriendEnd()
 	{
 		this.nameText.text = this._friendName;
@@ -329,7 +329,7 @@ public class FriendCard : MonoBehaviour
 		this.zoneText.text = this._friendZone;
 	}
 
-	// Token: 0x060036A5 RID: 13989 RVA: 0x00107358 File Offset: 0x00105558
+	// Token: 0x060036A6 RID: 13990 RVA: 0x00107430 File Offset: 0x00105630
 	private void OnButtonPressBegin()
 	{
 		switch (this._buttonState)
@@ -345,7 +345,7 @@ public class FriendCard : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060036A6 RID: 13990 RVA: 0x00107388 File Offset: 0x00105588
+	// Token: 0x060036A7 RID: 13991 RVA: 0x00107460 File Offset: 0x00105660
 	private void OnButtonPressAbort()
 	{
 		switch (this._buttonState)
@@ -361,7 +361,7 @@ public class FriendCard : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060036A7 RID: 13991 RVA: 0x001073B8 File Offset: 0x001055B8
+	// Token: 0x060036A8 RID: 13992 RVA: 0x00107490 File Offset: 0x00105690
 	private void OnButtonPressed(GorillaPressableButton button, bool isLeftHand)
 	{
 		switch (this._buttonState)
@@ -379,60 +379,60 @@ public class FriendCard : MonoBehaviour
 		}
 	}
 
-	// Token: 0x04003C2B RID: 15403
+	// Token: 0x04003C2C RID: 15404
 	[SerializeField]
 	private TextMeshProUGUI nameText;
 
-	// Token: 0x04003C2C RID: 15404
+	// Token: 0x04003C2D RID: 15405
 	[SerializeField]
 	private TextMeshProUGUI roomText;
 
-	// Token: 0x04003C2D RID: 15405
+	// Token: 0x04003C2E RID: 15406
 	[SerializeField]
 	private TextMeshProUGUI zoneText;
 
-	// Token: 0x04003C2E RID: 15406
+	// Token: 0x04003C2F RID: 15407
 	[SerializeField]
 	private Transform removeProgressBar;
 
-	// Token: 0x04003C2F RID: 15407
+	// Token: 0x04003C30 RID: 15408
 	[SerializeField]
 	private float width = 0.25f;
 
-	// Token: 0x04003C31 RID: 15409
+	// Token: 0x04003C32 RID: 15410
 	private string emptyString = "";
 
-	// Token: 0x04003C32 RID: 15410
+	// Token: 0x04003C33 RID: 15411
 	private string privateString = "PRIVATE";
 
-	// Token: 0x04003C33 RID: 15411
+	// Token: 0x04003C34 RID: 15412
 	private bool joinable;
 
-	// Token: 0x04003C34 RID: 15412
+	// Token: 0x04003C35 RID: 15413
 	private bool canRemove;
 
-	// Token: 0x04003C35 RID: 15413
+	// Token: 0x04003C36 RID: 15414
 	private GorillaPressableDelayButton _button;
 
-	// Token: 0x04003C36 RID: 15414
+	// Token: 0x04003C37 RID: 15415
 	private TextMeshProUGUI _buttonText;
 
-	// Token: 0x04003C37 RID: 15415
+	// Token: 0x04003C38 RID: 15416
 	private string _friendName;
 
-	// Token: 0x04003C38 RID: 15416
+	// Token: 0x04003C39 RID: 15417
 	private string _friendRoom;
 
-	// Token: 0x04003C39 RID: 15417
+	// Token: 0x04003C3A RID: 15418
 	private string _friendZone;
 
-	// Token: 0x04003C3A RID: 15418
+	// Token: 0x04003C3B RID: 15419
 	private FriendBackendController.Friend currentFriend;
 
-	// Token: 0x04003C3B RID: 15419
+	// Token: 0x04003C3C RID: 15420
 	private FriendDisplay friendDisplay;
 
-	// Token: 0x04003C3C RID: 15420
+	// Token: 0x04003C3D RID: 15421
 	private string[] randomNames = new string[]
 	{
 		"Veronica", "Roman", "Janiyah", "Dalton", "Bellamy", "Eithan", "Celeste", "Isaac", "Astrid", "Azariah",
@@ -442,15 +442,15 @@ public class FriendCard : MonoBehaviour
 		"Aliana", "Beckett", "Mylah", "Melvin", "Magdalena", "Leroy", "Madeleine"
 	};
 
-	// Token: 0x04003C3D RID: 15421
+	// Token: 0x04003C3E RID: 15422
 	private FriendDisplay.ButtonState _buttonState = (FriendDisplay.ButtonState)(-1);
 
-	// Token: 0x04003C3E RID: 15422
+	// Token: 0x04003C3F RID: 15423
 	private Material[] _buttonDefaultMaterials;
 
-	// Token: 0x04003C3F RID: 15423
+	// Token: 0x04003C40 RID: 15424
 	private Material[] _buttonActiveMaterials;
 
-	// Token: 0x04003C40 RID: 15424
+	// Token: 0x04003C41 RID: 15425
 	private Material[] _buttonAlertMaterials;
 }

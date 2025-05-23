@@ -10,7 +10,7 @@ using UnityEngine;
 [NetworkBehaviourWeaved(0)]
 public class GameBallManager : NetworkComponent
 {
-	// Token: 0x06001D07 RID: 7431 RVA: 0x0008C810 File Offset: 0x0008AA10
+	// Token: 0x06001D07 RID: 7431 RVA: 0x0008C830 File Offset: 0x0008AA30
 	protected override void Awake()
 	{
 		base.Awake();
@@ -28,7 +28,7 @@ public class GameBallManager : NetworkComponent
 		this._callLimiters[7] = new CallLimiter(25, 1f, 0.5f);
 	}
 
-	// Token: 0x06001D08 RID: 7432 RVA: 0x0008C91C File Offset: 0x0008AB1C
+	// Token: 0x06001D08 RID: 7432 RVA: 0x0008C93C File Offset: 0x0008AB3C
 	private bool ValidateCallLimits(GameBallManager.RPC rpcCall, PhotonMessageInfo info)
 	{
 		if (rpcCall < GameBallManager.RPC.RequestGrabBall || rpcCall >= GameBallManager.RPC.Count)
@@ -43,13 +43,13 @@ public class GameBallManager : NetworkComponent
 		return flag;
 	}
 
-	// Token: 0x06001D09 RID: 7433 RVA: 0x0008C957 File Offset: 0x0008AB57
+	// Token: 0x06001D09 RID: 7433 RVA: 0x0008C977 File Offset: 0x0008AB77
 	private void ReportRPCCall(GameBallManager.RPC rpcCall, PhotonMessageInfo info, string susReason)
 	{
 		GorillaNot.instance.SendReport(string.Format("Reason: {0}   RPC: {1}", susReason, rpcCall), info.Sender.UserId, info.Sender.NickName);
 	}
 
-	// Token: 0x06001D0A RID: 7434 RVA: 0x0008C98C File Offset: 0x0008AB8C
+	// Token: 0x06001D0A RID: 7434 RVA: 0x0008C9AC File Offset: 0x0008ABAC
 	public GameBallId AddGameBall(GameBall gameBall)
 	{
 		int count = this.gameBallData.Count;
@@ -60,7 +60,7 @@ public class GameBallManager : NetworkComponent
 		return gameBall.id;
 	}
 
-	// Token: 0x06001D0B RID: 7435 RVA: 0x0008C9D8 File Offset: 0x0008ABD8
+	// Token: 0x06001D0B RID: 7435 RVA: 0x0008C9F8 File Offset: 0x0008ABF8
 	public GameBall GetGameBall(GameBallId id)
 	{
 		if (!id.IsValid())
@@ -71,7 +71,7 @@ public class GameBallManager : NetworkComponent
 		return this.gameBalls[index];
 	}
 
-	// Token: 0x06001D0C RID: 7436 RVA: 0x0008CA04 File Offset: 0x0008AC04
+	// Token: 0x06001D0C RID: 7436 RVA: 0x0008CA24 File Offset: 0x0008AC24
 	public GameBallId TryGrabLocal(Vector3 handPosition, int teamId)
 	{
 		int actorNumber = PhotonNetwork.LocalPlayer.ActorNumber;
@@ -98,7 +98,7 @@ public class GameBallManager : NetworkComponent
 		return gameBallId;
 	}
 
-	// Token: 0x06001D0D RID: 7437 RVA: 0x0008CAEC File Offset: 0x0008ACEC
+	// Token: 0x06001D0D RID: 7437 RVA: 0x0008CB0C File Offset: 0x0008AD0C
 	public void RequestGrabBall(GameBallId ballId, bool isLeftHand, Vector3 localPosition, Quaternion localRotation)
 	{
 		this.GrabBall(ballId, isLeftHand, localPosition, localRotation, NetPlayer.Get(PhotonNetwork.LocalPlayer));
@@ -107,7 +107,7 @@ public class GameBallManager : NetworkComponent
 		PhotonNetwork.SendAllOutgoingCommands();
 	}
 
-	// Token: 0x06001D0E RID: 7438 RVA: 0x0008CB54 File Offset: 0x0008AD54
+	// Token: 0x06001D0E RID: 7438 RVA: 0x0008CB74 File Offset: 0x0008AD74
 	[PunRPC]
 	private void RequestGrabBallRPC(int gameBallIndex, bool isLeftHand, long packedPosRot, PhotonMessageInfo info)
 	{
@@ -170,7 +170,7 @@ public class GameBallManager : NetworkComponent
 		}
 	}
 
-	// Token: 0x06001D0F RID: 7439 RVA: 0x0008CCB8 File Offset: 0x0008AEB8
+	// Token: 0x06001D0F RID: 7439 RVA: 0x0008CCD8 File Offset: 0x0008AED8
 	[PunRPC]
 	private void GrabBallRPC(int gameBallIndex, bool isLeftHand, long packedPosRot, Player grabbedBy, PhotonMessageInfo info)
 	{
@@ -200,7 +200,7 @@ public class GameBallManager : NetworkComponent
 		this.GrabBall(new GameBallId(gameBallIndex), isLeftHand, vector, quaternion, NetPlayer.Get(grabbedBy));
 	}
 
-	// Token: 0x06001D10 RID: 7440 RVA: 0x0008CD58 File Offset: 0x0008AF58
+	// Token: 0x06001D10 RID: 7440 RVA: 0x0008CD78 File Offset: 0x0008AF78
 	private void GrabBall(GameBallId gameBallId, bool isLeftHand, Vector3 localPosition, Quaternion localRotation, NetPlayer grabbedByPlayer)
 	{
 		RigContainer rigContainer;
@@ -265,7 +265,7 @@ public class GameBallManager : NetworkComponent
 		}
 	}
 
-	// Token: 0x06001D11 RID: 7441 RVA: 0x0008CF60 File Offset: 0x0008B160
+	// Token: 0x06001D11 RID: 7441 RVA: 0x0008CF80 File Offset: 0x0008B180
 	public void RequestThrowBall(GameBallId ballId, bool isLeftHand, Vector3 velocity, Vector3 angVelocity)
 	{
 		GameBall gameBall = this.GetGameBall(ballId);
@@ -280,7 +280,7 @@ public class GameBallManager : NetworkComponent
 		PhotonNetwork.SendAllOutgoingCommands();
 	}
 
-	// Token: 0x06001D12 RID: 7442 RVA: 0x0008D008 File Offset: 0x0008B208
+	// Token: 0x06001D12 RID: 7442 RVA: 0x0008D028 File Offset: 0x0008B228
 	[PunRPC]
 	private void RequestThrowBallRPC(int gameBallIndex, bool isLeftHand, Vector3 position, Quaternion rotation, Vector3 velocity, Vector3 angVelocity, PhotonMessageInfo info)
 	{
@@ -325,7 +325,7 @@ public class GameBallManager : NetworkComponent
 		}
 	}
 
-	// Token: 0x06001D13 RID: 7443 RVA: 0x0008D1A8 File Offset: 0x0008B3A8
+	// Token: 0x06001D13 RID: 7443 RVA: 0x0008D1C8 File Offset: 0x0008B3C8
 	[PunRPC]
 	private void ThrowBallRPC(int gameBallIndex, bool isLeftHand, Vector3 position, Quaternion rotation, Vector3 velocity, Vector3 angVelocity, Player thrownBy, double throwTime, PhotonMessageInfo info)
 	{
@@ -366,7 +366,7 @@ public class GameBallManager : NetworkComponent
 		this.ThrowBall(new GameBallId(gameBallIndex), isLeftHand, position, rotation, velocity, angVelocity, NetPlayer.Get(thrownBy));
 	}
 
-	// Token: 0x06001D14 RID: 7444 RVA: 0x0008D310 File Offset: 0x0008B510
+	// Token: 0x06001D14 RID: 7444 RVA: 0x0008D330 File Offset: 0x0008B530
 	private bool ValidateThrowBallParams(int gameBallIndex, Vector3 position, Quaternion rotation, Vector3 velocity, Vector3 angVelocity)
 	{
 		if (gameBallIndex < 0 || gameBallIndex >= this.gameBalls.Count)
@@ -389,7 +389,7 @@ public class GameBallManager : NetworkComponent
 		return false;
 	}
 
-	// Token: 0x06001D15 RID: 7445 RVA: 0x0008D380 File Offset: 0x0008B580
+	// Token: 0x06001D15 RID: 7445 RVA: 0x0008D3A0 File Offset: 0x0008B5A0
 	private void ThrowBall(GameBallId gameBallId, bool isLeftHand, Vector3 position, Quaternion rotation, Vector3 velocity, Vector3 angVelocity, NetPlayer thrownByPlayer)
 	{
 		GameBall gameBall = this.gameBalls[gameBallId.index];
@@ -434,7 +434,7 @@ public class GameBallManager : NetworkComponent
 		gameBall.PlayThrowFx();
 	}
 
-	// Token: 0x06001D16 RID: 7446 RVA: 0x0008D4AC File Offset: 0x0008B6AC
+	// Token: 0x06001D16 RID: 7446 RVA: 0x0008D4CC File Offset: 0x0008B6CC
 	public void RequestLaunchBall(GameBallId ballId, Vector3 velocity)
 	{
 		GameBall gameBall = this.GetGameBall(ballId);
@@ -449,7 +449,7 @@ public class GameBallManager : NetworkComponent
 		PhotonNetwork.SendAllOutgoingCommands();
 	}
 
-	// Token: 0x06001D17 RID: 7447 RVA: 0x0008D534 File Offset: 0x0008B734
+	// Token: 0x06001D17 RID: 7447 RVA: 0x0008D554 File Offset: 0x0008B754
 	[PunRPC]
 	private void RequestLaunchBallRPC(int gameBallIndex, Vector3 position, Quaternion rotation, Vector3 velocity, PhotonMessageInfo info)
 	{
@@ -480,7 +480,7 @@ public class GameBallManager : NetworkComponent
 		}
 	}
 
-	// Token: 0x06001D18 RID: 7448 RVA: 0x0008D60C File Offset: 0x0008B80C
+	// Token: 0x06001D18 RID: 7448 RVA: 0x0008D62C File Offset: 0x0008B82C
 	[PunRPC]
 	private void LaunchBallRPC(int gameBallIndex, Vector3 position, Quaternion rotation, Vector3 velocity, double throwTime, PhotonMessageInfo info)
 	{
@@ -510,7 +510,7 @@ public class GameBallManager : NetworkComponent
 		this.LaunchBall(new GameBallId(gameBallIndex), position, rotation, velocity);
 	}
 
-	// Token: 0x06001D19 RID: 7449 RVA: 0x0008D704 File Offset: 0x0008B904
+	// Token: 0x06001D19 RID: 7449 RVA: 0x0008D724 File Offset: 0x0008B924
 	private void LaunchBall(GameBallId gameBallId, Vector3 position, Quaternion rotation, Vector3 velocity)
 	{
 		GameBall gameBall = this.gameBalls[gameBallId.index];
@@ -539,7 +539,7 @@ public class GameBallManager : NetworkComponent
 		GameBallPlayerLocal.instance.ClearAllGrabbed();
 	}
 
-	// Token: 0x06001D1A RID: 7450 RVA: 0x0008D7C8 File Offset: 0x0008B9C8
+	// Token: 0x06001D1A RID: 7450 RVA: 0x0008D7E8 File Offset: 0x0008B9E8
 	public void RequestTeleportBall(GameBallId id, Vector3 position, Quaternion rotation, Vector3 velocity, Vector3 angularVelocity)
 	{
 		if (!PhotonNetwork.IsMasterClient)
@@ -549,7 +549,7 @@ public class GameBallManager : NetworkComponent
 		this.photonView.RPC("TeleportBallRPC", RpcTarget.All, new object[] { id.index, position, rotation, velocity, angularVelocity });
 	}
 
-	// Token: 0x06001D1B RID: 7451 RVA: 0x0008D828 File Offset: 0x0008BA28
+	// Token: 0x06001D1B RID: 7451 RVA: 0x0008D848 File Offset: 0x0008BA48
 	[PunRPC]
 	private void TeleportBallRPC(int gameBallIndex, Vector3 position, Quaternion rotation, Vector3 velocity, Vector3 angularVelocity, PhotonMessageInfo info)
 	{
@@ -590,7 +590,7 @@ public class GameBallManager : NetworkComponent
 		this.ReportRPCCall(GameBallManager.RPC.TeleportBall, info, "Ball params are invalid.");
 	}
 
-	// Token: 0x06001D1C RID: 7452 RVA: 0x0008D910 File Offset: 0x0008BB10
+	// Token: 0x06001D1C RID: 7452 RVA: 0x0008D930 File Offset: 0x0008BB30
 	private void TeleportBall(GameBallId gameBallId, Vector3 position, Quaternion rotation, Vector3 velocity, Vector3 angularVelocity)
 	{
 		int index = gameBallId.index;
@@ -617,7 +617,7 @@ public class GameBallManager : NetworkComponent
 		}
 	}
 
-	// Token: 0x06001D1D RID: 7453 RVA: 0x0008D9A4 File Offset: 0x0008BBA4
+	// Token: 0x06001D1D RID: 7453 RVA: 0x0008D9C4 File Offset: 0x0008BBC4
 	public void RequestSetBallPosition(GameBallId ballId)
 	{
 		if (this.GetGameBall(ballId) == null)
@@ -632,7 +632,7 @@ public class GameBallManager : NetworkComponent
 		PhotonNetwork.SendAllOutgoingCommands();
 	}
 
-	// Token: 0x06001D1E RID: 7454 RVA: 0x0008D9F8 File Offset: 0x0008BBF8
+	// Token: 0x06001D1E RID: 7454 RVA: 0x0008DA18 File Offset: 0x0008BC18
 	[PunRPC]
 	private void RequestSetBallPositionRPC(int gameBallIndex, PhotonMessageInfo info)
 	{

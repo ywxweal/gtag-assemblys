@@ -8,13 +8,13 @@ using UnityEngine.Animations.Rigging;
 // Token: 0x020003CE RID: 974
 public class CalibrationCube : MonoBehaviour
 {
-	// Token: 0x060016B1 RID: 5809 RVA: 0x0006D23F File Offset: 0x0006B43F
+	// Token: 0x060016B1 RID: 5809 RVA: 0x0006D25F File Offset: 0x0006B45F
 	private void Awake()
 	{
 		this.calibratedLength = this.baseLength;
 	}
 
-	// Token: 0x060016B2 RID: 5810 RVA: 0x0006D250 File Offset: 0x0006B450
+	// Token: 0x060016B2 RID: 5810 RVA: 0x0006D270 File Offset: 0x0006B470
 	private void Start()
 	{
 		try
@@ -36,7 +36,7 @@ public class CalibrationCube : MonoBehaviour
 	{
 	}
 
-	// Token: 0x060016B5 RID: 5813 RVA: 0x0006D27C File Offset: 0x0006B47C
+	// Token: 0x060016B5 RID: 5813 RVA: 0x0006D29C File Offset: 0x0006B49C
 	public void RecalibrateSize(bool pressed)
 	{
 		this.lastCalibratedLength = this.calibratedLength;
@@ -59,7 +59,7 @@ public class CalibrationCube : MonoBehaviour
 	{
 	}
 
-	// Token: 0x060016B7 RID: 5815 RVA: 0x0006D3D8 File Offset: 0x0006B5D8
+	// Token: 0x060016B7 RID: 5815 RVA: 0x0006D3F8 File Offset: 0x0006B5F8
 	private void OnCollisionExit(Collision collision)
 	{
 		try

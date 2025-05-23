@@ -6,8 +6,8 @@ using Fusion;
 public class HuntGameModeData : FusionGameModeData
 {
 	// Token: 0x17000316 RID: 790
-	// (get) Token: 0x06001C69 RID: 7273 RVA: 0x0008B05B File Offset: 0x0008925B
-	// (set) Token: 0x06001C6A RID: 7274 RVA: 0x0008B068 File Offset: 0x00089268
+	// (get) Token: 0x06001C69 RID: 7273 RVA: 0x0008B07B File Offset: 0x0008927B
+	// (set) Token: 0x06001C6A RID: 7274 RVA: 0x0008B088 File Offset: 0x00089288
 	public override object Data
 	{
 		get
@@ -21,8 +21,8 @@ public class HuntGameModeData : FusionGameModeData
 	}
 
 	// Token: 0x17000317 RID: 791
-	// (get) Token: 0x06001C6B RID: 7275 RVA: 0x0008B076 File Offset: 0x00089276
-	// (set) Token: 0x06001C6C RID: 7276 RVA: 0x0008B0A0 File Offset: 0x000892A0
+	// (get) Token: 0x06001C6B RID: 7275 RVA: 0x0008B096 File Offset: 0x00089296
+	// (set) Token: 0x06001C6C RID: 7276 RVA: 0x0008B0C0 File Offset: 0x000892C0
 	[Networked]
 	[NetworkedWeaved(0, 23)]
 	private unsafe HuntData huntdata
@@ -45,7 +45,7 @@ public class HuntGameModeData : FusionGameModeData
 		}
 	}
 
-	// Token: 0x06001C6E RID: 7278 RVA: 0x0008B0CB File Offset: 0x000892CB
+	// Token: 0x06001C6E RID: 7278 RVA: 0x0008B0EB File Offset: 0x000892EB
 	[WeaverGenerated]
 	public override void CopyBackingFieldsToState(bool A_1)
 	{
@@ -53,7 +53,7 @@ public class HuntGameModeData : FusionGameModeData
 		this.huntdata = this._huntdata;
 	}
 
-	// Token: 0x06001C6F RID: 7279 RVA: 0x0008B0E3 File Offset: 0x000892E3
+	// Token: 0x06001C6F RID: 7279 RVA: 0x0008B103 File Offset: 0x00089303
 	[WeaverGenerated]
 	public override void CopyStateToBackingFields()
 	{

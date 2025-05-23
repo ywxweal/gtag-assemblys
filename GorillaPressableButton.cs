@@ -9,26 +9,26 @@ using UnityEngine.UI;
 public class GorillaPressableButton : MonoBehaviour
 {
 	// Token: 0x1400005C RID: 92
-	// (add) Token: 0x06002BDA RID: 11226 RVA: 0x000D8520 File Offset: 0x000D6720
-	// (remove) Token: 0x06002BDB RID: 11227 RVA: 0x000D8558 File Offset: 0x000D6758
+	// (add) Token: 0x06002BDB RID: 11227 RVA: 0x000D85C4 File Offset: 0x000D67C4
+	// (remove) Token: 0x06002BDC RID: 11228 RVA: 0x000D85FC File Offset: 0x000D67FC
 	public event Action<GorillaPressableButton, bool> onPressed;
 
-	// Token: 0x06002BDC RID: 11228 RVA: 0x000023F4 File Offset: 0x000005F4
+	// Token: 0x06002BDD RID: 11229 RVA: 0x000023F4 File Offset: 0x000005F4
 	public virtual void Start()
 	{
 	}
 
-	// Token: 0x06002BDD RID: 11229 RVA: 0x000023F4 File Offset: 0x000005F4
+	// Token: 0x06002BDE RID: 11230 RVA: 0x000023F4 File Offset: 0x000005F4
 	private void OnEnable()
 	{
 	}
 
-	// Token: 0x06002BDE RID: 11230 RVA: 0x000023F4 File Offset: 0x000005F4
+	// Token: 0x06002BDF RID: 11231 RVA: 0x000023F4 File Offset: 0x000005F4
 	private void OnDisable()
 	{
 	}
 
-	// Token: 0x06002BDF RID: 11231 RVA: 0x000D8590 File Offset: 0x000D6790
+	// Token: 0x06002BE0 RID: 11232 RVA: 0x000D8634 File Offset: 0x000D6834
 	protected void OnTriggerEnter(Collider collider)
 	{
 		if (!base.enabled)
@@ -69,7 +69,7 @@ public class GorillaPressableButton : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06002BE0 RID: 11232 RVA: 0x000D86CC File Offset: 0x000D68CC
+	// Token: 0x06002BE1 RID: 11233 RVA: 0x000D8770 File Offset: 0x000D6970
 	public virtual void UpdateColor()
 	{
 		if (this.isOn)
@@ -109,72 +109,72 @@ public class GorillaPressableButton : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06002BE1 RID: 11233 RVA: 0x000023F4 File Offset: 0x000005F4
+	// Token: 0x06002BE2 RID: 11234 RVA: 0x000023F4 File Offset: 0x000005F4
 	public virtual void ButtonActivation()
 	{
 	}
 
-	// Token: 0x06002BE2 RID: 11234 RVA: 0x000023F4 File Offset: 0x000005F4
+	// Token: 0x06002BE3 RID: 11235 RVA: 0x000023F4 File Offset: 0x000005F4
 	public virtual void ButtonActivationWithHand(bool isLeftHand)
 	{
 	}
 
-	// Token: 0x06002BE3 RID: 11235 RVA: 0x000D87C3 File Offset: 0x000D69C3
+	// Token: 0x06002BE4 RID: 11236 RVA: 0x000D8867 File Offset: 0x000D6A67
 	public virtual void ResetState()
 	{
 		this.isOn = false;
 		this.UpdateColor();
 	}
 
-	// Token: 0x04003209 RID: 12809
+	// Token: 0x0400320B RID: 12811
 	public Material pressedMaterial;
 
-	// Token: 0x0400320A RID: 12810
+	// Token: 0x0400320C RID: 12812
 	public Material unpressedMaterial;
 
-	// Token: 0x0400320B RID: 12811
+	// Token: 0x0400320D RID: 12813
 	public MeshRenderer buttonRenderer;
 
-	// Token: 0x0400320C RID: 12812
+	// Token: 0x0400320E RID: 12814
 	public int pressButtonSoundIndex = 67;
 
-	// Token: 0x0400320D RID: 12813
+	// Token: 0x0400320F RID: 12815
 	public bool isOn;
 
-	// Token: 0x0400320E RID: 12814
+	// Token: 0x04003210 RID: 12816
 	public float debounceTime = 0.25f;
 
-	// Token: 0x0400320F RID: 12815
+	// Token: 0x04003211 RID: 12817
 	public float touchTime;
 
-	// Token: 0x04003210 RID: 12816
+	// Token: 0x04003212 RID: 12818
 	public bool testPress;
 
-	// Token: 0x04003211 RID: 12817
+	// Token: 0x04003213 RID: 12819
 	public bool testHandLeft;
 
-	// Token: 0x04003212 RID: 12818
+	// Token: 0x04003214 RID: 12820
 	[TextArea]
 	public string offText;
 
-	// Token: 0x04003213 RID: 12819
+	// Token: 0x04003215 RID: 12821
 	[TextArea]
 	public string onText;
 
-	// Token: 0x04003214 RID: 12820
+	// Token: 0x04003216 RID: 12822
 	[SerializeField]
 	[Tooltip("Use this one when you can. Don't use MyText if you can help it!")]
 	public TMP_Text myTmpText;
 
-	// Token: 0x04003215 RID: 12821
+	// Token: 0x04003217 RID: 12823
 	[SerializeField]
 	[Tooltip("Use this one when you can. Don't use MyText if you can help it!")]
 	public TMP_Text myTmpText2;
 
-	// Token: 0x04003216 RID: 12822
+	// Token: 0x04003218 RID: 12824
 	public Text myText;
 
-	// Token: 0x04003217 RID: 12823
+	// Token: 0x04003219 RID: 12825
 	[Space]
 	public UnityEvent onPressButton;
 }

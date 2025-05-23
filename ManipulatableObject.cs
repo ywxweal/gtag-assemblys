@@ -31,7 +31,7 @@ public class ManipulatableObject : HoldableObject
 	{
 	}
 
-	// Token: 0x06001937 RID: 6455 RVA: 0x0007A120 File Offset: 0x00078320
+	// Token: 0x06001937 RID: 6455 RVA: 0x0007A140 File Offset: 0x00078340
 	public virtual void LateUpdate()
 	{
 		if (this.isHeld)
@@ -59,7 +59,7 @@ public class ManipulatableObject : HoldableObject
 	{
 	}
 
-	// Token: 0x06001939 RID: 6457 RVA: 0x0007A180 File Offset: 0x00078380
+	// Token: 0x06001939 RID: 6457 RVA: 0x0007A1A0 File Offset: 0x000783A0
 	public override void OnGrab(InteractionPoint pointGrabbed, GameObject grabbingHand)
 	{
 		bool flag = grabbingHand == EquipmentInteractor.instance.leftHand;
@@ -69,7 +69,7 @@ public class ManipulatableObject : HoldableObject
 		this.OnStartManipulation(this.holdingHand);
 	}
 
-	// Token: 0x0600193A RID: 6458 RVA: 0x0007A1C8 File Offset: 0x000783C8
+	// Token: 0x0600193A RID: 6458 RVA: 0x0007A1E8 File Offset: 0x000783E8
 	public override bool OnRelease(DropZone zoneReleased, GameObject releasingHand)
 	{
 		if (!base.OnRelease(zoneReleased, releasingHand))

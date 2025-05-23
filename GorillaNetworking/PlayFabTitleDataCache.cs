@@ -17,12 +17,12 @@ namespace GorillaNetworking
 	public class PlayFabTitleDataCache : MonoBehaviour
 	{
 		// Token: 0x170007CD RID: 1997
-		// (get) Token: 0x06004EE5 RID: 20197 RVA: 0x001781F0 File Offset: 0x001763F0
-		// (set) Token: 0x06004EE6 RID: 20198 RVA: 0x001781F7 File Offset: 0x001763F7
+		// (get) Token: 0x06004EE6 RID: 20198 RVA: 0x001782C8 File Offset: 0x001764C8
+		// (set) Token: 0x06004EE7 RID: 20199 RVA: 0x001782CF File Offset: 0x001764CF
 		public static PlayFabTitleDataCache Instance { get; private set; }
 
 		// Token: 0x170007CE RID: 1998
-		// (get) Token: 0x06004EE7 RID: 20199 RVA: 0x001781FF File Offset: 0x001763FF
+		// (get) Token: 0x06004EE8 RID: 20200 RVA: 0x001782D7 File Offset: 0x001764D7
 		private static string FilePath
 		{
 			get
@@ -31,7 +31,7 @@ namespace GorillaNetworking
 			}
 		}
 
-		// Token: 0x06004EE8 RID: 20200 RVA: 0x00178210 File Offset: 0x00176410
+		// Token: 0x06004EE9 RID: 20201 RVA: 0x001782E8 File Offset: 0x001764E8
 		public void GetTitleData(string name, Action<string> callback, Action<PlayFabError> errorCallback)
 		{
 			if (this.isDataUpToDate && this.titleData.ContainsKey(name))
@@ -52,7 +52,7 @@ namespace GorillaNetworking
 			}
 		}
 
-		// Token: 0x06004EE9 RID: 20201 RVA: 0x00178283 File Offset: 0x00176483
+		// Token: 0x06004EEA RID: 20202 RVA: 0x0017835B File Offset: 0x0017655B
 		private void Awake()
 		{
 			if (PlayFabTitleDataCache.Instance != null)
@@ -63,13 +63,13 @@ namespace GorillaNetworking
 			PlayFabTitleDataCache.Instance = this;
 		}
 
-		// Token: 0x06004EEA RID: 20202 RVA: 0x0017829F File Offset: 0x0017649F
+		// Token: 0x06004EEB RID: 20203 RVA: 0x00178377 File Offset: 0x00176577
 		private void Start()
 		{
 			this.UpdateData();
 		}
 
-		// Token: 0x06004EEB RID: 20203 RVA: 0x001782A8 File Offset: 0x001764A8
+		// Token: 0x06004EEC RID: 20204 RVA: 0x00178380 File Offset: 0x00176580
 		public void LoadDataFromFile()
 		{
 			try
@@ -90,7 +90,7 @@ namespace GorillaNetworking
 			}
 		}
 
-		// Token: 0x06004EEC RID: 20204 RVA: 0x00178318 File Offset: 0x00176518
+		// Token: 0x06004EED RID: 20205 RVA: 0x001783F0 File Offset: 0x001765F0
 		private void SaveDataToFile(string filepath)
 		{
 			try
@@ -104,13 +104,13 @@ namespace GorillaNetworking
 			}
 		}
 
-		// Token: 0x06004EED RID: 20205 RVA: 0x00178360 File Offset: 0x00176560
+		// Token: 0x06004EEE RID: 20206 RVA: 0x00178438 File Offset: 0x00176638
 		public void UpdateData()
 		{
 			this.updateDataCoroutine = base.StartCoroutine(this.UpdateDataCo());
 		}
 
-		// Token: 0x06004EEE RID: 20206 RVA: 0x00178374 File Offset: 0x00176574
+		// Token: 0x06004EEF RID: 20207 RVA: 0x0017844C File Offset: 0x0017664C
 		private IEnumerator UpdateDataCo()
 		{
 			this.LoadDataFromFile();
@@ -198,14 +198,14 @@ namespace GorillaNetworking
 			yield break;
 		}
 
-		// Token: 0x06004EEF RID: 20207 RVA: 0x00178384 File Offset: 0x00176584
+		// Token: 0x06004EF0 RID: 20208 RVA: 0x0017845C File Offset: 0x0017665C
 		private void LoadKey()
 		{
 			TextAsset textAsset = Resources.Load<TextAsset>("title_data_key");
 			this.titleDataKey = textAsset.text;
 		}
 
-		// Token: 0x06004EF0 RID: 20208 RVA: 0x001783A8 File Offset: 0x001765A8
+		// Token: 0x06004EF1 RID: 20209 RVA: 0x00178480 File Offset: 0x00176680
 		private static string MD5(string value)
 		{
 			HashAlgorithm hashAlgorithm = new MD5CryptoServiceProvider();
@@ -219,7 +219,7 @@ namespace GorillaNetworking
 			return stringBuilder.ToString();
 		}
 
-		// Token: 0x06004EF1 RID: 20209 RVA: 0x00178400 File Offset: 0x00176600
+		// Token: 0x06004EF2 RID: 20210 RVA: 0x001784D8 File Offset: 0x001766D8
 		private void ClearRequestWithError(PlayFabError e = null)
 		{
 			if (e == null)
@@ -233,25 +233,25 @@ namespace GorillaNetworking
 			this.requests.Clear();
 		}
 
-		// Token: 0x0400520C RID: 21004
+		// Token: 0x0400520D RID: 21005
 		public PlayFabTitleDataCache.DataUpdate OnTitleDataUpdate;
 
-		// Token: 0x0400520D RID: 21005
+		// Token: 0x0400520E RID: 21006
 		private const string FileName = "TitleDataCache.json";
 
-		// Token: 0x0400520E RID: 21006
+		// Token: 0x0400520F RID: 21007
 		private readonly List<PlayFabTitleDataCache.DataRequest> requests = new List<PlayFabTitleDataCache.DataRequest>();
 
-		// Token: 0x0400520F RID: 21007
+		// Token: 0x04005210 RID: 21008
 		private Dictionary<string, string> titleData = new Dictionary<string, string>();
 
-		// Token: 0x04005210 RID: 21008
+		// Token: 0x04005211 RID: 21009
 		private string titleDataKey;
 
-		// Token: 0x04005211 RID: 21009
+		// Token: 0x04005212 RID: 21010
 		private bool isDataUpToDate;
 
-		// Token: 0x04005212 RID: 21010
+		// Token: 0x04005213 RID: 21011
 		private Coroutine updateDataCoroutine;
 
 		// Token: 0x02000C6E RID: 3182
@@ -264,18 +264,18 @@ namespace GorillaNetworking
 		private class DataRequest
 		{
 			// Token: 0x170007CF RID: 1999
-			// (get) Token: 0x06004EF5 RID: 20213 RVA: 0x001784C5 File Offset: 0x001766C5
-			// (set) Token: 0x06004EF6 RID: 20214 RVA: 0x001784CD File Offset: 0x001766CD
+			// (get) Token: 0x06004EF6 RID: 20214 RVA: 0x0017859D File Offset: 0x0017679D
+			// (set) Token: 0x06004EF7 RID: 20215 RVA: 0x001785A5 File Offset: 0x001767A5
 			public string Name { get; set; }
 
 			// Token: 0x170007D0 RID: 2000
-			// (get) Token: 0x06004EF7 RID: 20215 RVA: 0x001784D6 File Offset: 0x001766D6
-			// (set) Token: 0x06004EF8 RID: 20216 RVA: 0x001784DE File Offset: 0x001766DE
+			// (get) Token: 0x06004EF8 RID: 20216 RVA: 0x001785AE File Offset: 0x001767AE
+			// (set) Token: 0x06004EF9 RID: 20217 RVA: 0x001785B6 File Offset: 0x001767B6
 			public Action<string> Callback { get; set; }
 
 			// Token: 0x170007D1 RID: 2001
-			// (get) Token: 0x06004EF9 RID: 20217 RVA: 0x001784E7 File Offset: 0x001766E7
-			// (set) Token: 0x06004EFA RID: 20218 RVA: 0x001784EF File Offset: 0x001766EF
+			// (get) Token: 0x06004EFA RID: 20218 RVA: 0x001785BF File Offset: 0x001767BF
+			// (set) Token: 0x06004EFB RID: 20219 RVA: 0x001785C7 File Offset: 0x001767C7
 			public Action<PlayFabError> ErrorCallback { get; set; }
 		}
 	}

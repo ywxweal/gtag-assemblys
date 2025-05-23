@@ -7,12 +7,12 @@ namespace GorillaTag
 	public static class GTAppState
 	{
 		// Token: 0x1700085D RID: 2141
-		// (get) Token: 0x060053D1 RID: 21457 RVA: 0x0019678C File Offset: 0x0019498C
-		// (set) Token: 0x060053D2 RID: 21458 RVA: 0x00196793 File Offset: 0x00194993
+		// (get) Token: 0x060053D2 RID: 21458 RVA: 0x00196864 File Offset: 0x00194A64
+		// (set) Token: 0x060053D3 RID: 21459 RVA: 0x0019686B File Offset: 0x00194A6B
 		[OnEnterPlay_Set(false)]
 		public static bool isQuitting { get; private set; }
 
-		// Token: 0x060053D3 RID: 21459 RVA: 0x0019679C File Offset: 0x0019499C
+		// Token: 0x060053D4 RID: 21460 RVA: 0x00196874 File Offset: 0x00194A74
 		[RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
 		private static void HandleOnSubsystemRegistration()
 		{
@@ -31,7 +31,7 @@ namespace GorillaTag
 			}));
 		}
 
-		// Token: 0x060053D4 RID: 21460 RVA: 0x000023F4 File Offset: 0x000005F4
+		// Token: 0x060053D5 RID: 21461 RVA: 0x000023F4 File Offset: 0x000005F4
 		[RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
 		private static void HandleOnAfterSceneLoad()
 		{

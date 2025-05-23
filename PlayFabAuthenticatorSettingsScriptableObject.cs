@@ -5,30 +5,30 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "PlayFabAuthenticatorSettings", menuName = "ScriptableObjects/PlayFabAuthenticatorSettings")]
 public class PlayFabAuthenticatorSettingsScriptableObject : ScriptableObject
 {
-	// Token: 0x04003D10 RID: 15632
+	// Token: 0x04003D11 RID: 15633
 	public string TitleId;
 
-	// Token: 0x04003D11 RID: 15633
+	// Token: 0x04003D12 RID: 15634
 	public string AuthApiBaseUrl;
 
-	// Token: 0x04003D12 RID: 15634
+	// Token: 0x04003D13 RID: 15635
 	public string FriendApiBaseUrl;
 
-	// Token: 0x04003D13 RID: 15635
+	// Token: 0x04003D14 RID: 15636
 	public string HpPromoApiBaseUrl;
 
-	// Token: 0x04003D14 RID: 15636
+	// Token: 0x04003D15 RID: 15637
 	public string IapApiBaseUrl;
 
-	// Token: 0x04003D15 RID: 15637
+	// Token: 0x04003D16 RID: 15638
 	public string KidApiBaseUrl;
 
-	// Token: 0x04003D16 RID: 15638
+	// Token: 0x04003D17 RID: 15639
 	public string ProgressionApiBaseUrl;
 
-	// Token: 0x04003D17 RID: 15639
+	// Token: 0x04003D18 RID: 15640
 	public string TitleDataApiBaseUrl;
 
-	// Token: 0x04003D18 RID: 15640
+	// Token: 0x04003D19 RID: 15641
 	public string VotingApiBaseUrl;
 }

@@ -9,7 +9,7 @@ using UnityEngine.Events;
 [NetworkBehaviourWeaved(337)]
 public class FlockingManager : NetworkComponent
 {
-	// Token: 0x060020DC RID: 8412 RVA: 0x000A5244 File Offset: 0x000A3444
+	// Token: 0x060020DC RID: 8412 RVA: 0x000A5264 File Offset: 0x000A3464
 	protected override void Awake()
 	{
 		base.Awake();
@@ -49,7 +49,7 @@ public class FlockingManager : NetworkComponent
 		NetworkSystem.Instance.RegisterSceneNetworkItem(base.gameObject);
 	}
 
-	// Token: 0x060020DE RID: 8414 RVA: 0x000A539C File Offset: 0x000A359C
+	// Token: 0x060020DE RID: 8414 RVA: 0x000A53BC File Offset: 0x000A35BC
 	private void OnDestroy()
 	{
 		NetworkBehaviourUtils.InternalOnDestroy(this);
@@ -67,7 +67,7 @@ public class FlockingManager : NetworkComponent
 		}
 	}
 
-	// Token: 0x060020DF RID: 8415 RVA: 0x000A5444 File Offset: 0x000A3644
+	// Token: 0x060020DF RID: 8415 RVA: 0x000A5464 File Offset: 0x000A3664
 	private void Update()
 	{
 		if (Random.Range(0, 10000) < 50)
@@ -85,7 +85,7 @@ public class FlockingManager : NetworkComponent
 		}
 	}
 
-	// Token: 0x060020E0 RID: 8416 RVA: 0x000A5510 File Offset: 0x000A3710
+	// Token: 0x060020E0 RID: 8416 RVA: 0x000A5530 File Offset: 0x000A3730
 	public Vector3 GetRandomPointInsideCollider(FlockingManager.FishArea fishArea)
 	{
 		int num = Random.Range(0, fishArea.colliders.Length);
@@ -95,7 +95,7 @@ public class FlockingManager : NetworkComponent
 		return boxCollider.transform.TransformPoint(vector2);
 	}
 
-	// Token: 0x060020E1 RID: 8417 RVA: 0x000A5590 File Offset: 0x000A3790
+	// Token: 0x060020E1 RID: 8417 RVA: 0x000A55B0 File Offset: 0x000A37B0
 	public bool IsInside(Vector3 point, FlockingManager.FishArea fish)
 	{
 		foreach (BoxCollider boxCollider in fish.colliders)
@@ -112,7 +112,7 @@ public class FlockingManager : NetworkComponent
 		return false;
 	}
 
-	// Token: 0x060020E2 RID: 8418 RVA: 0x000A562C File Offset: 0x000A382C
+	// Token: 0x060020E2 RID: 8418 RVA: 0x000A564C File Offset: 0x000A384C
 	public Vector3 RestrictPointToArea(Vector3 point, FlockingManager.FishArea fish)
 	{
 		Vector3 vector = default(Vector3);
@@ -151,7 +151,7 @@ public class FlockingManager : NetworkComponent
 		return vector;
 	}
 
-	// Token: 0x060020E3 RID: 8419 RVA: 0x000A57DC File Offset: 0x000A39DC
+	// Token: 0x060020E3 RID: 8419 RVA: 0x000A57FC File Offset: 0x000A39FC
 	private void ProjectileHitReceiver(SlingshotProjectile projectile, Collider collider1)
 	{
 		bool flag = projectile.CompareTag(this.foodProjectileTag);
@@ -169,7 +169,7 @@ public class FlockingManager : NetworkComponent
 		unityAction(fishFood);
 	}
 
-	// Token: 0x060020E4 RID: 8420 RVA: 0x000A5827 File Offset: 0x000A3A27
+	// Token: 0x060020E4 RID: 8420 RVA: 0x000A5847 File Offset: 0x000A3A47
 	private void ProjectileHitExit(SlingshotProjectile projectile, Collider collider2)
 	{
 		UnityAction<BoxCollider> unityAction = this.onFoodDestroyed;
@@ -181,8 +181,8 @@ public class FlockingManager : NetworkComponent
 	}
 
 	// Token: 0x1700034D RID: 845
-	// (get) Token: 0x060020E5 RID: 8421 RVA: 0x000A583F File Offset: 0x000A3A3F
-	// (set) Token: 0x060020E6 RID: 8422 RVA: 0x000A5869 File Offset: 0x000A3A69
+	// (get) Token: 0x060020E5 RID: 8421 RVA: 0x000A585F File Offset: 0x000A3A5F
+	// (set) Token: 0x060020E6 RID: 8422 RVA: 0x000A5889 File Offset: 0x000A3A89
 	[Networked]
 	[NetworkedWeaved(0, 337)]
 	public unsafe FlockingData Data
@@ -205,13 +205,13 @@ public class FlockingManager : NetworkComponent
 		}
 	}
 
-	// Token: 0x060020E7 RID: 8423 RVA: 0x000A5894 File Offset: 0x000A3A94
+	// Token: 0x060020E7 RID: 8423 RVA: 0x000A58B4 File Offset: 0x000A3AB4
 	public override void WriteDataFusion()
 	{
 		this.Data = new FlockingData(this.allFish);
 	}
 
-	// Token: 0x060020E8 RID: 8424 RVA: 0x000A58A8 File Offset: 0x000A3AA8
+	// Token: 0x060020E8 RID: 8424 RVA: 0x000A58C8 File Offset: 0x000A3AC8
 	public override void ReadDataFusion()
 	{
 		for (int i = 0; i < this.Data.count; i++)
@@ -232,19 +232,19 @@ public class FlockingManager : NetworkComponent
 	{
 	}
 
-	// Token: 0x060020EB RID: 8427 RVA: 0x000A5913 File Offset: 0x000A3B13
+	// Token: 0x060020EB RID: 8427 RVA: 0x000A5933 File Offset: 0x000A3B33
 	public static void RegisterAvoidPoint(GameObject obj)
 	{
 		FlockingManager.avoidPoints.Add(obj);
 	}
 
-	// Token: 0x060020EC RID: 8428 RVA: 0x000A5920 File Offset: 0x000A3B20
+	// Token: 0x060020EC RID: 8428 RVA: 0x000A5940 File Offset: 0x000A3B40
 	public static void UnregisterAvoidPoint(GameObject obj)
 	{
 		FlockingManager.avoidPoints.Remove(obj);
 	}
 
-	// Token: 0x060020EF RID: 8431 RVA: 0x000A596E File Offset: 0x000A3B6E
+	// Token: 0x060020EF RID: 8431 RVA: 0x000A598E File Offset: 0x000A3B8E
 	[WeaverGenerated]
 	public override void CopyBackingFieldsToState(bool A_1)
 	{
@@ -252,7 +252,7 @@ public class FlockingManager : NetworkComponent
 		this.Data = this._Data;
 	}
 
-	// Token: 0x060020F0 RID: 8432 RVA: 0x000A5986 File Offset: 0x000A3B86
+	// Token: 0x060020F0 RID: 8432 RVA: 0x000A59A6 File Offset: 0x000A3BA6
 	[WeaverGenerated]
 	public override void CopyStateToBackingFields()
 	{

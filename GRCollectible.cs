@@ -9,7 +9,7 @@ public class GRCollectible : MonoBehaviour
 	{
 	}
 
-	// Token: 0x0600230B RID: 8971 RVA: 0x000AF596 File Offset: 0x000AD796
+	// Token: 0x0600230B RID: 8971 RVA: 0x000AF5B6 File Offset: 0x000AD7B6
 	public void InvokeOnCollected()
 	{
 		Action onCollected = this.OnCollected;

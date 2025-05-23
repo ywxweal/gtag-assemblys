@@ -6,7 +6,7 @@ using Fusion;
 public class CasualGameModeData : FusionGameModeData
 {
 	// Token: 0x17000311 RID: 785
-	// (get) Token: 0x06001C5B RID: 7259 RVA: 0x0008AF7B File Offset: 0x0008917B
+	// (get) Token: 0x06001C5B RID: 7259 RVA: 0x0008AF9B File Offset: 0x0008919B
 	// (set) Token: 0x06001C5C RID: 7260 RVA: 0x000023F4 File Offset: 0x000005F4
 	public override object Data
 	{
@@ -20,8 +20,8 @@ public class CasualGameModeData : FusionGameModeData
 	}
 
 	// Token: 0x17000312 RID: 786
-	// (get) Token: 0x06001C5D RID: 7261 RVA: 0x0008AF88 File Offset: 0x00089188
-	// (set) Token: 0x06001C5E RID: 7262 RVA: 0x0008AFB2 File Offset: 0x000891B2
+	// (get) Token: 0x06001C5D RID: 7261 RVA: 0x0008AFA8 File Offset: 0x000891A8
+	// (set) Token: 0x06001C5E RID: 7262 RVA: 0x0008AFD2 File Offset: 0x000891D2
 	[Networked]
 	[NetworkedWeaved(0, 1)]
 	private unsafe CasualData casualData
@@ -44,7 +44,7 @@ public class CasualGameModeData : FusionGameModeData
 		}
 	}
 
-	// Token: 0x06001C60 RID: 7264 RVA: 0x0008AFDD File Offset: 0x000891DD
+	// Token: 0x06001C60 RID: 7264 RVA: 0x0008AFFD File Offset: 0x000891FD
 	[WeaverGenerated]
 	public override void CopyBackingFieldsToState(bool A_1)
 	{
@@ -52,7 +52,7 @@ public class CasualGameModeData : FusionGameModeData
 		this.casualData = this._casualData;
 	}
 
-	// Token: 0x06001C61 RID: 7265 RVA: 0x0008AFF5 File Offset: 0x000891F5
+	// Token: 0x06001C61 RID: 7265 RVA: 0x0008B015 File Offset: 0x00089215
 	[WeaverGenerated]
 	public override void CopyStateToBackingFields()
 	{

@@ -8,8 +8,8 @@ namespace OculusSampleFramework
 	public class DistanceGrabberSample : MonoBehaviour
 	{
 		// Token: 0x17000771 RID: 1905
-		// (get) Token: 0x06004B5B RID: 19291 RVA: 0x00165B0B File Offset: 0x00163D0B
-		// (set) Token: 0x06004B5C RID: 19292 RVA: 0x00165B14 File Offset: 0x00163D14
+		// (get) Token: 0x06004B5C RID: 19292 RVA: 0x00165BE3 File Offset: 0x00163DE3
+		// (set) Token: 0x06004B5D RID: 19293 RVA: 0x00165BEC File Offset: 0x00163DEC
 		public bool UseSpherecast
 		{
 			get
@@ -27,8 +27,8 @@ namespace OculusSampleFramework
 		}
 
 		// Token: 0x17000772 RID: 1906
-		// (get) Token: 0x06004B5D RID: 19293 RVA: 0x00165B4E File Offset: 0x00163D4E
-		// (set) Token: 0x06004B5E RID: 19294 RVA: 0x00165B58 File Offset: 0x00163D58
+		// (get) Token: 0x06004B5E RID: 19294 RVA: 0x00165C26 File Offset: 0x00163E26
+		// (set) Token: 0x06004B5F RID: 19295 RVA: 0x00165C30 File Offset: 0x00163E30
 		public bool AllowGrabThroughWalls
 		{
 			get
@@ -45,7 +45,7 @@ namespace OculusSampleFramework
 			}
 		}
 
-		// Token: 0x06004B5F RID: 19295 RVA: 0x00165B98 File Offset: 0x00163D98
+		// Token: 0x06004B60 RID: 19296 RVA: 0x00165C70 File Offset: 0x00163E70
 		private void Start()
 		{
 			DebugUIBuilder.instance.AddLabel("Distance Grab Sample", 0);
@@ -60,25 +60,25 @@ namespace OculusSampleFramework
 			}
 		}
 
-		// Token: 0x06004B60 RID: 19296 RVA: 0x00165C43 File Offset: 0x00163E43
+		// Token: 0x06004B61 RID: 19297 RVA: 0x00165D1B File Offset: 0x00163F1B
 		public void ToggleSphereCasting(Toggle t)
 		{
 			this.UseSpherecast = !this.UseSpherecast;
 		}
 
-		// Token: 0x06004B61 RID: 19297 RVA: 0x00165C54 File Offset: 0x00163E54
+		// Token: 0x06004B62 RID: 19298 RVA: 0x00165D2C File Offset: 0x00163F2C
 		public void ToggleGrabThroughWalls(Toggle t)
 		{
 			this.AllowGrabThroughWalls = !this.AllowGrabThroughWalls;
 		}
 
-		// Token: 0x04004DF7 RID: 19959
+		// Token: 0x04004DF8 RID: 19960
 		private bool useSpherecast;
 
-		// Token: 0x04004DF8 RID: 19960
+		// Token: 0x04004DF9 RID: 19961
 		private bool allowGrabThroughWalls;
 
-		// Token: 0x04004DF9 RID: 19961
+		// Token: 0x04004DFA RID: 19962
 		[SerializeField]
 		private DistanceGrabber[] m_grabbers;
 	}

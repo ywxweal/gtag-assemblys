@@ -6,28 +6,28 @@ namespace BoingKit
 	// Token: 0x02000E91 RID: 3729
 	public struct Vector4Spring
 	{
-		// Token: 0x06005D4E RID: 23886 RVA: 0x001CC0F3 File Offset: 0x001CA2F3
+		// Token: 0x06005D4F RID: 23887 RVA: 0x001CC1CB File Offset: 0x001CA3CB
 		public void Reset()
 		{
 			this.Value = Vector4.zero;
 			this.Velocity = Vector4.zero;
 		}
 
-		// Token: 0x06005D4F RID: 23887 RVA: 0x001CC10B File Offset: 0x001CA30B
+		// Token: 0x06005D50 RID: 23888 RVA: 0x001CC1E3 File Offset: 0x001CA3E3
 		public void Reset(Vector4 initValue)
 		{
 			this.Value = initValue;
 			this.Velocity = Vector4.zero;
 		}
 
-		// Token: 0x06005D50 RID: 23888 RVA: 0x001CC11F File Offset: 0x001CA31F
+		// Token: 0x06005D51 RID: 23889 RVA: 0x001CC1F7 File Offset: 0x001CA3F7
 		public void Reset(Vector4 initValue, Vector4 initVelocity)
 		{
 			this.Value = initValue;
 			this.Velocity = initVelocity;
 		}
 
-		// Token: 0x06005D51 RID: 23889 RVA: 0x001CC130 File Offset: 0x001CA330
+		// Token: 0x06005D52 RID: 23890 RVA: 0x001CC208 File Offset: 0x001CA408
 		public Vector4 TrackDampingRatio(Vector4 targetValue, float angularFrequency, float dampingRatio, float deltaTime)
 		{
 			if (angularFrequency < MathUtil.Epsilon)
@@ -53,7 +53,7 @@ namespace BoingKit
 			return this.Value;
 		}
 
-		// Token: 0x06005D52 RID: 23890 RVA: 0x001CC22C File Offset: 0x001CA42C
+		// Token: 0x06005D53 RID: 23891 RVA: 0x001CC304 File Offset: 0x001CA504
 		public Vector4 TrackHalfLife(Vector4 targetValue, float frequencyHz, float halfLife, float deltaTime)
 		{
 			if (halfLife < MathUtil.Epsilon)
@@ -67,7 +67,7 @@ namespace BoingKit
 			return this.TrackDampingRatio(targetValue, num, num2, deltaTime);
 		}
 
-		// Token: 0x06005D53 RID: 23891 RVA: 0x001CC278 File Offset: 0x001CA478
+		// Token: 0x06005D54 RID: 23892 RVA: 0x001CC350 File Offset: 0x001CA550
 		public Vector4 TrackExponential(Vector4 targetValue, float halfLife, float deltaTime)
 		{
 			if (halfLife < MathUtil.Epsilon)
@@ -81,13 +81,13 @@ namespace BoingKit
 			return this.TrackDampingRatio(targetValue, num, num2, deltaTime);
 		}
 
-		// Token: 0x04006145 RID: 24901
+		// Token: 0x04006146 RID: 24902
 		public static readonly int Stride = 32;
 
-		// Token: 0x04006146 RID: 24902
+		// Token: 0x04006147 RID: 24903
 		public Vector4 Value;
 
-		// Token: 0x04006147 RID: 24903
+		// Token: 0x04006148 RID: 24904
 		public Vector4 Velocity;
 	}
 }

@@ -9,7 +9,7 @@ using UnityEngine;
 // Token: 0x020006FD RID: 1789
 public class CMSZoneShaderSettingsTrigger : MonoBehaviour
 {
-	// Token: 0x06002C81 RID: 11393 RVA: 0x000DB720 File Offset: 0x000D9920
+	// Token: 0x06002C82 RID: 11394 RVA: 0x000DB7C4 File Offset: 0x000D99C4
 	public void OnEnable()
 	{
 		if (this.activateOnEnable)
@@ -18,7 +18,7 @@ public class CMSZoneShaderSettingsTrigger : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06002C82 RID: 11394 RVA: 0x000DB730 File Offset: 0x000D9930
+	// Token: 0x06002C83 RID: 11395 RVA: 0x000DB7D4 File Offset: 0x000D99D4
 	public void CopySettings(ZoneShaderTriggerSettings triggerSettings)
 	{
 		base.gameObject.layer = UnityLayer.GorillaBoundary.ToLayerIndex();
@@ -35,7 +35,7 @@ public class CMSZoneShaderSettingsTrigger : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06002C83 RID: 11395 RVA: 0x000DB782 File Offset: 0x000D9982
+	// Token: 0x06002C84 RID: 11396 RVA: 0x000DB826 File Offset: 0x000D9A26
 	public void OnTriggerEnter(Collider other)
 	{
 		if (other == GTPlayer.Instance.bodyCollider)
@@ -44,7 +44,7 @@ public class CMSZoneShaderSettingsTrigger : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06002C84 RID: 11396 RVA: 0x000DB79C File Offset: 0x000D999C
+	// Token: 0x06002C85 RID: 11397 RVA: 0x000DB840 File Offset: 0x000D9A40
 	private void ActivateShaderSettings()
 	{
 		if (this.activateCustomMapDefaults)
@@ -62,12 +62,12 @@ public class CMSZoneShaderSettingsTrigger : MonoBehaviour
 		}
 	}
 
-	// Token: 0x040032CA RID: 13002
+	// Token: 0x040032CC RID: 13004
 	public GameObject shaderSettingsObject;
 
-	// Token: 0x040032CB RID: 13003
+	// Token: 0x040032CD RID: 13005
 	public bool activateCustomMapDefaults;
 
-	// Token: 0x040032CC RID: 13004
+	// Token: 0x040032CE RID: 13006
 	public bool activateOnEnable;
 }

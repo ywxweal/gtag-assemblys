@@ -6,7 +6,7 @@ using UnityEngine;
 // Token: 0x02000A34 RID: 2612
 public class BoundsCalcs : MonoBehaviour
 {
-	// Token: 0x06003E0B RID: 15883 RVA: 0x00126C78 File Offset: 0x00124E78
+	// Token: 0x06003E0C RID: 15884 RVA: 0x00126D50 File Offset: 0x00124F50
 	public void Compute()
 	{
 		MeshFilter[] array;
@@ -49,24 +49,24 @@ public class BoundsCalcs : MonoBehaviour
 		list.ForEach(new Action<Mesh>(Object.DestroyImmediate));
 	}
 
-	// Token: 0x04004299 RID: 17049
+	// Token: 0x0400429A RID: 17050
 	public MeshFilter[] optionalTargets = new MeshFilter[0];
 
-	// Token: 0x0400429A RID: 17050
-	public bool useRootMeshOnly;
-
 	// Token: 0x0400429B RID: 17051
-	[Space]
-	public List<BoundsInfo> elements = new List<BoundsInfo>();
+	public bool useRootMeshOnly;
 
 	// Token: 0x0400429C RID: 17052
 	[Space]
-	public BoundsInfo composite;
+	public List<BoundsInfo> elements = new List<BoundsInfo>();
 
 	// Token: 0x0400429D RID: 17053
 	[Space]
-	private StateHash _state;
+	public BoundsInfo composite;
 
 	// Token: 0x0400429E RID: 17054
+	[Space]
+	private StateHash _state;
+
+	// Token: 0x0400429F RID: 17055
 	private static MeshFilter[] singleMesh = new MeshFilter[1];
 }

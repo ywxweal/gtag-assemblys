@@ -7,7 +7,7 @@ namespace GorillaTagScripts.Builder
 	// Token: 0x02000B6E RID: 2926
 	public class BuilderSpeedBooster : MonoBehaviour
 	{
-		// Token: 0x06004878 RID: 18552 RVA: 0x00159E03 File Offset: 0x00158003
+		// Token: 0x06004879 RID: 18553 RVA: 0x00159EDB File Offset: 0x001580DB
 		private void Awake()
 		{
 			this.volume = base.GetComponent<Collider>();
@@ -15,7 +15,7 @@ namespace GorillaTagScripts.Builder
 			this.boosting = false;
 		}
 
-		// Token: 0x06004879 RID: 18553 RVA: 0x00159E24 File Offset: 0x00158024
+		// Token: 0x0600487A RID: 18554 RVA: 0x00159EFC File Offset: 0x001580FC
 		private void LateUpdate()
 		{
 			if (this.audioSource && this.audioSource != null && !this.audioSource.isPlaying && this.audioSource.enabled)
@@ -24,7 +24,7 @@ namespace GorillaTagScripts.Builder
 			}
 		}
 
-		// Token: 0x0600487A RID: 18554 RVA: 0x00159E74 File Offset: 0x00158074
+		// Token: 0x0600487B RID: 18555 RVA: 0x00159F4C File Offset: 0x0015814C
 		private bool TriggerFilter(Collider other, out Rigidbody rb, out Transform xf)
 		{
 			rb = null;
@@ -37,7 +37,7 @@ namespace GorillaTagScripts.Builder
 			return rb != null && xf != null;
 		}
 
-		// Token: 0x0600487B RID: 18555 RVA: 0x00159ED4 File Offset: 0x001580D4
+		// Token: 0x0600487C RID: 18556 RVA: 0x00159FAC File Offset: 0x001581AC
 		private void CheckTableZone()
 		{
 			if (this.hasCheckedZone)
@@ -52,7 +52,7 @@ namespace GorillaTagScripts.Builder
 			this.hasCheckedZone = true;
 		}
 
-		// Token: 0x0600487C RID: 18556 RVA: 0x00159F20 File Offset: 0x00158120
+		// Token: 0x0600487D RID: 18557 RVA: 0x00159FF8 File Offset: 0x001581F8
 		public void OnTriggerEnter(Collider other)
 		{
 			Rigidbody rigidbody = null;
@@ -84,7 +84,7 @@ namespace GorillaTagScripts.Builder
 			}
 		}
 
-		// Token: 0x0600487D RID: 18557 RVA: 0x0015A010 File Offset: 0x00158210
+		// Token: 0x0600487E RID: 18558 RVA: 0x0015A0E8 File Offset: 0x001582E8
 		public void OnTriggerExit(Collider other)
 		{
 			Rigidbody rigidbody = null;
@@ -108,7 +108,7 @@ namespace GorillaTagScripts.Builder
 			this.boosting = false;
 		}
 
-		// Token: 0x0600487E RID: 18558 RVA: 0x0015A0B0 File Offset: 0x001582B0
+		// Token: 0x0600487F RID: 18559 RVA: 0x0015A188 File Offset: 0x00158388
 		public void OnTriggerStay(Collider other)
 		{
 			if (!this.boosting)
@@ -220,7 +220,7 @@ namespace GorillaTagScripts.Builder
 			rigidbody.velocity = vector;
 		}
 
-		// Token: 0x0600487F RID: 18559 RVA: 0x0015A4C4 File Offset: 0x001586C4
+		// Token: 0x06004880 RID: 18560 RVA: 0x0015A59C File Offset: 0x0015879C
 		public void OnDrawGizmosSelected()
 		{
 			base.GetComponents<Collider>();
@@ -229,90 +229,90 @@ namespace GorillaTagScripts.Builder
 			Gizmos.DrawWireCube(Vector3.zero, new Vector3(this.pullTOCenterMinDistance / base.transform.lossyScale.x, 1f, this.pullTOCenterMinDistance / base.transform.lossyScale.z));
 		}
 
-		// Token: 0x04004B14 RID: 19220
+		// Token: 0x04004B15 RID: 19221
 		[SerializeField]
 		public bool scaleWithSize = true;
 
-		// Token: 0x04004B15 RID: 19221
+		// Token: 0x04004B16 RID: 19222
 		[SerializeField]
 		private float accel;
 
-		// Token: 0x04004B16 RID: 19222
+		// Token: 0x04004B17 RID: 19223
 		[SerializeField]
 		private float maxDepth = -1f;
 
-		// Token: 0x04004B17 RID: 19223
+		// Token: 0x04004B18 RID: 19224
 		[SerializeField]
 		private float maxSpeed;
 
-		// Token: 0x04004B18 RID: 19224
+		// Token: 0x04004B19 RID: 19225
 		[SerializeField]
 		private bool disableGrip;
 
-		// Token: 0x04004B19 RID: 19225
+		// Token: 0x04004B1A RID: 19226
 		[SerializeField]
 		private bool dampenLateralVelocity = true;
 
-		// Token: 0x04004B1A RID: 19226
+		// Token: 0x04004B1B RID: 19227
 		[SerializeField]
 		private float dampenXVelPerc;
 
-		// Token: 0x04004B1B RID: 19227
+		// Token: 0x04004B1C RID: 19228
 		[SerializeField]
 		private float dampenZVelPerc;
 
-		// Token: 0x04004B1C RID: 19228
+		// Token: 0x04004B1D RID: 19229
 		[SerializeField]
 		private bool applyPullToCenterAcceleration = true;
 
-		// Token: 0x04004B1D RID: 19229
+		// Token: 0x04004B1E RID: 19230
 		[SerializeField]
 		private float pullToCenterAccel;
 
-		// Token: 0x04004B1E RID: 19230
+		// Token: 0x04004B1F RID: 19231
 		[SerializeField]
 		private float pullToCenterMaxSpeed;
 
-		// Token: 0x04004B1F RID: 19231
+		// Token: 0x04004B20 RID: 19232
 		[SerializeField]
 		private float pullTOCenterMinDistance = 0.1f;
 
-		// Token: 0x04004B20 RID: 19232
+		// Token: 0x04004B21 RID: 19233
 		[SerializeField]
 		private float addedWorldUpVelocity = 10f;
 
-		// Token: 0x04004B21 RID: 19233
+		// Token: 0x04004B22 RID: 19234
 		[SerializeField]
 		private float maxBoostDuration = 2f;
 
-		// Token: 0x04004B22 RID: 19234
+		// Token: 0x04004B23 RID: 19235
 		private bool boosting;
 
-		// Token: 0x04004B23 RID: 19235
+		// Token: 0x04004B24 RID: 19236
 		private double enterTime;
 
-		// Token: 0x04004B24 RID: 19236
+		// Token: 0x04004B25 RID: 19237
 		private Collider volume;
 
-		// Token: 0x04004B25 RID: 19237
+		// Token: 0x04004B26 RID: 19238
 		public AudioClip exitClip;
 
-		// Token: 0x04004B26 RID: 19238
+		// Token: 0x04004B27 RID: 19239
 		public AudioSource audioSource;
 
-		// Token: 0x04004B27 RID: 19239
+		// Token: 0x04004B28 RID: 19240
 		public MeshRenderer windRenderer;
 
-		// Token: 0x04004B28 RID: 19240
+		// Token: 0x04004B29 RID: 19241
 		private Vector3 enterPos;
 
-		// Token: 0x04004B29 RID: 19241
+		// Token: 0x04004B2A RID: 19242
 		private bool positiveForce = true;
 
-		// Token: 0x04004B2A RID: 19242
+		// Token: 0x04004B2B RID: 19243
 		private bool ignoreMonkeScale;
 
-		// Token: 0x04004B2B RID: 19243
+		// Token: 0x04004B2C RID: 19244
 		private bool hasCheckedZone;
 	}
 }

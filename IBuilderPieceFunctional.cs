@@ -21,7 +21,7 @@ public interface IBuilderPieceFunctional
 		throw new NotImplementedException();
 	}
 
-	// Token: 0x06001E9D RID: 7837 RVA: 0x00095623 File Offset: 0x00093823
+	// Token: 0x06001E9D RID: 7837 RVA: 0x00095643 File Offset: 0x00093843
 	float GetInteractionDistace()
 	{
 		return 2.5f;

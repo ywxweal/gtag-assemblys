@@ -7,7 +7,7 @@ using UnityEngine;
 // Token: 0x02000810 RID: 2064
 public class KIDUI_AgeAppealEmailScreen : MonoBehaviour
 {
-	// Token: 0x060032AA RID: 12970 RVA: 0x000F9AD8 File Offset: 0x000F7CD8
+	// Token: 0x060032AB RID: 12971 RVA: 0x000F9BB0 File Offset: 0x000F7DB0
 	public void ShowAgeAppealEmailScreen(bool receivedChallenge, int newAge)
 	{
 		this.newAgeToAppeal = newAge;
@@ -36,7 +36,7 @@ public class KIDUI_AgeAppealEmailScreen : MonoBehaviour
 		});
 	}
 
-	// Token: 0x060032AB RID: 12971 RVA: 0x000F9BB4 File Offset: 0x000F7DB4
+	// Token: 0x060032AC RID: 12972 RVA: 0x000F9C8C File Offset: 0x000F7E8C
 	public void OnInputChanged(string newVal)
 	{
 		bool flag = !string.IsNullOrEmpty(newVal);
@@ -47,7 +47,7 @@ public class KIDUI_AgeAppealEmailScreen : MonoBehaviour
 		this._confirmButton.interactable = flag;
 	}
 
-	// Token: 0x060032AC RID: 12972 RVA: 0x000F9BE8 File Offset: 0x000F7DE8
+	// Token: 0x060032AD RID: 12973 RVA: 0x000F9CC0 File Offset: 0x000F7EC0
 	public void OnConfirmPressed()
 	{
 		if (string.IsNullOrEmpty(this._emailText.text))
@@ -59,35 +59,35 @@ public class KIDUI_AgeAppealEmailScreen : MonoBehaviour
 		base.gameObject.SetActive(false);
 	}
 
-	// Token: 0x04003958 RID: 14680
+	// Token: 0x04003959 RID: 14681
 	[SerializeField]
 	private KIDUIButton _confirmButton;
 
-	// Token: 0x04003959 RID: 14681
+	// Token: 0x0400395A RID: 14682
 	[SerializeField]
 	private KIDUI_AgeAppealEmailConfirmation _confirmationScreen;
 
-	// Token: 0x0400395A RID: 14682
+	// Token: 0x0400395B RID: 14683
 	[SerializeField]
 	private TMP_Text _enterEmailText;
 
-	// Token: 0x0400395B RID: 14683
+	// Token: 0x0400395C RID: 14684
 	[SerializeField]
 	private TMP_InputField _emailText;
 
-	// Token: 0x0400395C RID: 14684
+	// Token: 0x0400395D RID: 14685
 	[SerializeField]
 	private GameObject _parentPermissionNotice;
 
-	// Token: 0x0400395D RID: 14685
+	// Token: 0x0400395E RID: 14686
 	private string PARENT_EMAIL_DESCRIPTION = "Enter your parent or guardian's email address below.";
 
-	// Token: 0x0400395E RID: 14686
+	// Token: 0x0400395F RID: 14687
 	private string VERIFY_AGE_EMAIL_DESCRIPTION = "Enter your email address below";
 
-	// Token: 0x0400395F RID: 14687
+	// Token: 0x04003960 RID: 14688
 	private bool hasChallenge = true;
 
-	// Token: 0x04003960 RID: 14688
+	// Token: 0x04003961 RID: 14689
 	private int newAgeToAppeal;
 }

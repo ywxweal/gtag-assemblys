@@ -4,7 +4,7 @@
 [Serializable]
 public class CallLimitType<T> where T : CallLimiter
 {
-	// Token: 0x06003927 RID: 14631 RVA: 0x00112F23 File Offset: 0x00111123
+	// Token: 0x06003928 RID: 14632 RVA: 0x00112FFB File Offset: 0x001111FB
 	public static implicit operator CallLimitType<CallLimiter>(CallLimitType<T> clt)
 	{
 		return new CallLimitType<CallLimiter>
@@ -15,12 +15,12 @@ public class CallLimitType<T> where T : CallLimiter
 		};
 	}
 
-	// Token: 0x04003E51 RID: 15953
+	// Token: 0x04003E52 RID: 15954
 	public FXType Key;
 
-	// Token: 0x04003E52 RID: 15954
+	// Token: 0x04003E53 RID: 15955
 	public bool UseNetWorkTime;
 
-	// Token: 0x04003E53 RID: 15955
+	// Token: 0x04003E54 RID: 15956
 	public T CallLimitSettings;
 }

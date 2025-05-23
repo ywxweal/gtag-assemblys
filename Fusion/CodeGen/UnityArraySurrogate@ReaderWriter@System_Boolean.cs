@@ -9,8 +9,8 @@ namespace Fusion.CodeGen
 	internal class UnityArraySurrogate@ReaderWriter@System_Boolean : UnityArraySurrogate<bool, ReaderWriter@System_Boolean>
 	{
 		// Token: 0x17000928 RID: 2344
-		// (get) Token: 0x06005DF7 RID: 24055 RVA: 0x001CD614 File Offset: 0x001CB814
-		// (set) Token: 0x06005DF8 RID: 24056 RVA: 0x001CD61C File Offset: 0x001CB81C
+		// (get) Token: 0x06005DF8 RID: 24056 RVA: 0x001CD6EC File Offset: 0x001CB8EC
+		// (set) Token: 0x06005DF9 RID: 24057 RVA: 0x001CD6F4 File Offset: 0x001CB8F4
 		[WeaverGenerated]
 		public override bool[] DataProperty
 		{
@@ -26,13 +26,13 @@ namespace Fusion.CodeGen
 			}
 		}
 
-		// Token: 0x06005DF9 RID: 24057 RVA: 0x001CD625 File Offset: 0x001CB825
+		// Token: 0x06005DFA RID: 24058 RVA: 0x001CD6FD File Offset: 0x001CB8FD
 		[WeaverGenerated]
 		public UnityArraySurrogate@ReaderWriter@System_Boolean()
 		{
 		}
 
-		// Token: 0x040064B4 RID: 25780
+		// Token: 0x040064B5 RID: 25781
 		[WeaverGenerated]
 		public bool[] Data = Array.Empty<bool>();
 	}
