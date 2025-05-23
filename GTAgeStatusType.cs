@@ -1,0 +1,14 @@
+﻿using System;
+
+// Token: 0x02000794 RID: 1940
+public enum GTAgeStatusType
+{
+	// Token: 0x040036BB RID: 14011
+	PROHIBITED,
+	// Token: 0x040036BC RID: 14012
+	DIGITALMINOR,
+	// Token: 0x040036BD RID: 14013
+	DIGITALYOUTH,
+	// Token: 0x040036BE RID: 14014
+	LEGALADULT
+}

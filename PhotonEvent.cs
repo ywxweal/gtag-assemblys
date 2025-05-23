@@ -1,0 +1,412 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using ExitGames.Client.Photon;
+using Photon.Pun;
+using Photon.Realtime;
+using UnityEngine;
+
+// Token: 0x020008FF RID: 2303
+[Serializable]
+public class PhotonEvent : IOnEventCallback, IEquatable<PhotonEvent>
+{
+	// Token: 0x17000585 RID: 1413
+	// (get) Token: 0x060037E8 RID: 14312 RVA: 0x0010FA6D File Offset: 0x0010DC6D
+	// (set) Token: 0x060037E9 RID: 14313 RVA: 0x0010FA75 File Offset: 0x0010DC75
+	public bool reliable
+	{
+		get
+		{
+			return this._reliable;
+		}
+		set
+		{
+			this._reliable = value;
+		}
+	}
+
+	// Token: 0x17000586 RID: 1414
+	// (get) Token: 0x060037EA RID: 14314 RVA: 0x0010FA7E File Offset: 0x0010DC7E
+	// (set) Token: 0x060037EB RID: 14315 RVA: 0x0010FA86 File Offset: 0x0010DC86
+	public bool failSilent
+	{
+		get
+		{
+			return this._failSilent;
+		}
+		set
+		{
+			this._failSilent = value;
+		}
+	}
+
+	// Token: 0x060037EC RID: 14316 RVA: 0x0010FA8F File Offset: 0x0010DC8F
+	private PhotonEvent()
+	{
+	}
+
+	// Token: 0x060037ED RID: 14317 RVA: 0x0010FA9E File Offset: 0x0010DC9E
+	public PhotonEvent(int eventId)
+	{
+		if (eventId == -1)
+		{
+			throw new Exception(string.Format("<{0}> cannot be {1}.", "eventId", -1));
+		}
+		this._eventId = eventId;
+		this.Enable();
+	}
+
+	// Token: 0x060037EE RID: 14318 RVA: 0x0010FAD9 File Offset: 0x0010DCD9
+	public PhotonEvent(string eventId)
+		: this(StaticHash.Compute(eventId))
+	{
+	}
+
+	// Token: 0x060037EF RID: 14319 RVA: 0x0010FAE7 File Offset: 0x0010DCE7
+	public PhotonEvent(int eventId, Action<int, int, object[], PhotonMessageInfoWrapped> callback)
+		: this(eventId)
+	{
+		this.AddCallback(callback);
+	}
+
+	// Token: 0x060037F0 RID: 14320 RVA: 0x0010FAF7 File Offset: 0x0010DCF7
+	public PhotonEvent(string eventId, Action<int, int, object[], PhotonMessageInfoWrapped> callback)
+		: this(eventId)
+	{
+		this.AddCallback(callback);
+	}
+
+	// Token: 0x060037F1 RID: 14321 RVA: 0x0010FB08 File Offset: 0x0010DD08
+	~PhotonEvent()
+	{
+		this.Dispose();
+	}
+
+	// Token: 0x060037F2 RID: 14322 RVA: 0x0010FB34 File Offset: 0x0010DD34
+	public void AddCallback(Action<int, int, object[], PhotonMessageInfoWrapped> callback)
+	{
+		if (this._disposed)
+		{
+			return;
+		}
+		if (callback == null)
+		{
+			throw new ArgumentNullException("callback");
+		}
+		if (this._delegate != null)
+		{
+			foreach (Delegate @delegate in this._delegate.GetInvocationList())
+			{
+				if (@delegate != null && @delegate.Equals(callback))
+				{
+					return;
+				}
+			}
+		}
+		this._delegate = (Action<int, int, object[], PhotonMessageInfoWrapped>)Delegate.Combine(this._delegate, callback);
+	}
+
+	// Token: 0x060037F3 RID: 14323 RVA: 0x0010FBA2 File Offset: 0x0010DDA2
+	public void RemoveCallback(Action<int, int, object[], PhotonMessageInfoWrapped> callback)
+	{
+		if (this._disposed)
+		{
+			return;
+		}
+		if (callback != null)
+		{
+			this._delegate = (Action<int, int, object[], PhotonMessageInfoWrapped>)Delegate.Remove(this._delegate, callback);
+		}
+	}
+
+	// Token: 0x060037F4 RID: 14324 RVA: 0x0010FBC7 File Offset: 0x0010DDC7
+	public void Enable()
+	{
+		if (this._disposed)
+		{
+			return;
+		}
+		if (this._enabled)
+		{
+			return;
+		}
+		if (Application.isPlaying)
+		{
+			PhotonNetwork.AddCallbackTarget(this);
+		}
+		this._enabled = true;
+	}
+
+	// Token: 0x060037F5 RID: 14325 RVA: 0x0010FBEF File Offset: 0x0010DDEF
+	public void Disable()
+	{
+		if (this._disposed)
+		{
+			return;
+		}
+		if (!this._enabled)
+		{
+			return;
+		}
+		if (Application.isPlaying)
+		{
+			PhotonNetwork.RemoveCallbackTarget(this);
+		}
+		this._enabled = false;
+	}
+
+	// Token: 0x060037F6 RID: 14326 RVA: 0x0010FC17 File Offset: 0x0010DE17
+	public void Dispose()
+	{
+		this._delegate = null;
+		if (this._enabled)
+		{
+			this._enabled = false;
+			if (Application.isPlaying)
+			{
+				PhotonNetwork.RemoveCallbackTarget(this);
+			}
+		}
+		this._eventId = -1;
+		this._disposed = true;
+	}
+
+	// Token: 0x14000063 RID: 99
+	// (add) Token: 0x060037F7 RID: 14327 RVA: 0x0010FC4C File Offset: 0x0010DE4C
+	// (remove) Token: 0x060037F8 RID: 14328 RVA: 0x0010FC80 File Offset: 0x0010DE80
+	public static event Action<PhotonEvent, EventData, Exception> OnError;
+
+	// Token: 0x060037F9 RID: 14329 RVA: 0x0010FCB4 File Offset: 0x0010DEB4
+	void IOnEventCallback.OnEvent(EventData ev)
+	{
+		if (ev.Code != 176)
+		{
+			return;
+		}
+		if (this._disposed)
+		{
+			return;
+		}
+		if (!this._enabled)
+		{
+			return;
+		}
+		try
+		{
+			object[] array = (object[])ev.CustomData;
+			if (array.Length == 0)
+			{
+				throw new Exception("Invalid/missing event data!");
+			}
+			int num = (int)array[0];
+			int eventId = this._eventId;
+			if (num == -1)
+			{
+				throw new Exception(string.Format("Invalid {0} ID! ({1})", "sender", -1));
+			}
+			if (eventId == -1)
+			{
+				throw new Exception(string.Format("Invalid {0} ID! ({1})", "receiver", -1));
+			}
+			object[] array2 = ((array.Length == 1) ? Array.Empty<object>() : array.Skip(1).ToArray<object>());
+			PhotonMessageInfoWrapped photonMessageInfoWrapped = new PhotonMessageInfoWrapped(ev.Sender, PhotonNetwork.ServerTimestamp);
+			this.InvokeDelegate(num, eventId, array2, photonMessageInfoWrapped);
+		}
+		catch (Exception ex)
+		{
+			Action<PhotonEvent, EventData, Exception> onError = PhotonEvent.OnError;
+			if (onError != null)
+			{
+				onError(this, ev, ex);
+			}
+		}
+	}
+
+	// Token: 0x060037FA RID: 14330 RVA: 0x0010FDAC File Offset: 0x0010DFAC
+	private void InvokeDelegate(int sender, int target, object[] args, PhotonMessageInfoWrapped info)
+	{
+		Action<int, int, object[], PhotonMessageInfoWrapped> @delegate = this._delegate;
+		if (@delegate == null)
+		{
+			return;
+		}
+		@delegate(sender, target, args, info);
+	}
+
+	// Token: 0x060037FB RID: 14331 RVA: 0x0010FDC3 File Offset: 0x0010DFC3
+	public void RaiseLocal(params object[] args)
+	{
+		this.Raise(PhotonEvent.RaiseMode.Local, args);
+	}
+
+	// Token: 0x060037FC RID: 14332 RVA: 0x0010FDCD File Offset: 0x0010DFCD
+	public void RaiseOthers(params object[] args)
+	{
+		this.Raise(PhotonEvent.RaiseMode.RemoteOthers, args);
+	}
+
+	// Token: 0x060037FD RID: 14333 RVA: 0x0010FDD7 File Offset: 0x0010DFD7
+	public void RaiseAll(params object[] args)
+	{
+		this.Raise(PhotonEvent.RaiseMode.RemoteAll, args);
+	}
+
+	// Token: 0x060037FE RID: 14334 RVA: 0x0010FDE4 File Offset: 0x0010DFE4
+	private void Raise(PhotonEvent.RaiseMode mode, params object[] args)
+	{
+		if (this._disposed)
+		{
+			return;
+		}
+		if (!Application.isPlaying)
+		{
+			return;
+		}
+		if (!this._enabled)
+		{
+			return;
+		}
+		SendOptions sendOptions = (this._reliable ? PhotonEvent.gSendReliable : PhotonEvent.gSendUnreliable);
+		switch (mode)
+		{
+		case PhotonEvent.RaiseMode.Local:
+			this.InvokeDelegate(this._eventId, this._eventId, args, new PhotonMessageInfoWrapped(PhotonNetwork.LocalPlayer.ActorNumber, PhotonNetwork.ServerTimestamp));
+			return;
+		case PhotonEvent.RaiseMode.RemoteOthers:
+		{
+			object[] array = args.Prepend(this._eventId).ToArray<object>();
+			PhotonNetwork.RaiseEvent(176, array, PhotonEvent.gReceiversOthers, sendOptions);
+			return;
+		}
+		case PhotonEvent.RaiseMode.RemoteAll:
+		{
+			object[] array2 = args.Prepend(this._eventId).ToArray<object>();
+			PhotonNetwork.RaiseEvent(176, array2, PhotonEvent.gReceiversAll, sendOptions);
+			return;
+		}
+		default:
+			return;
+		}
+	}
+
+	// Token: 0x060037FF RID: 14335 RVA: 0x0010FEB0 File Offset: 0x0010E0B0
+	public bool Equals(PhotonEvent other)
+	{
+		return !(other == null) && (this._eventId == other._eventId && this._enabled == other._enabled && this._reliable == other._reliable && this._failSilent == other._failSilent) && this._disposed == other._disposed;
+	}
+
+	// Token: 0x06003800 RID: 14336 RVA: 0x0010FF10 File Offset: 0x0010E110
+	public override bool Equals(object obj)
+	{
+		PhotonEvent photonEvent = obj as PhotonEvent;
+		return photonEvent != null && this.Equals(photonEvent);
+	}
+
+	// Token: 0x06003801 RID: 14337 RVA: 0x0010FF30 File Offset: 0x0010E130
+	public override int GetHashCode()
+	{
+		int staticHash = this._eventId.GetStaticHash();
+		int num = StaticHash.Compute(this._enabled, this._reliable, this._failSilent, this._disposed);
+		return StaticHash.Compute(staticHash, num);
+	}
+
+	// Token: 0x06003802 RID: 14338 RVA: 0x0010FF6C File Offset: 0x0010E16C
+	public static PhotonEvent operator +(PhotonEvent photonEvent, Action<int, int, object[], PhotonMessageInfoWrapped> callback)
+	{
+		if (photonEvent == null)
+		{
+			throw new ArgumentNullException("photonEvent");
+		}
+		photonEvent.AddCallback(callback);
+		return photonEvent;
+	}
+
+	// Token: 0x06003803 RID: 14339 RVA: 0x0010FF8A File Offset: 0x0010E18A
+	public static PhotonEvent operator -(PhotonEvent photonEvent, Action<int, int, object[], PhotonMessageInfoWrapped> callback)
+	{
+		if (photonEvent == null)
+		{
+			throw new ArgumentNullException("photonEvent");
+		}
+		photonEvent.RemoveCallback(callback);
+		return photonEvent;
+	}
+
+	// Token: 0x06003804 RID: 14340 RVA: 0x0010FFA8 File Offset: 0x0010E1A8
+	static PhotonEvent()
+	{
+		PhotonEvent.gSendUnreliable.Encrypt = true;
+		PhotonEvent.gSendReliable = SendOptions.SendReliable;
+		PhotonEvent.gSendReliable.Encrypt = true;
+	}
+
+	// Token: 0x06003805 RID: 14341 RVA: 0x00110001 File Offset: 0x0010E201
+	public static bool operator ==(PhotonEvent x, PhotonEvent y)
+	{
+		return EqualityComparer<PhotonEvent>.Default.Equals(x, y);
+	}
+
+	// Token: 0x06003806 RID: 14342 RVA: 0x0011000F File Offset: 0x0010E20F
+	public static bool operator !=(PhotonEvent x, PhotonEvent y)
+	{
+		return !EqualityComparer<PhotonEvent>.Default.Equals(x, y);
+	}
+
+	// Token: 0x04003DC8 RID: 15816
+	private const int INVALID_ID = -1;
+
+	// Token: 0x04003DC9 RID: 15817
+	[SerializeField]
+	private int _eventId = -1;
+
+	// Token: 0x04003DCA RID: 15818
+	[SerializeField]
+	private bool _enabled;
+
+	// Token: 0x04003DCB RID: 15819
+	[SerializeField]
+	private bool _reliable;
+
+	// Token: 0x04003DCC RID: 15820
+	[SerializeField]
+	private bool _failSilent;
+
+	// Token: 0x04003DCD RID: 15821
+	[NonSerialized]
+	private bool _disposed;
+
+	// Token: 0x04003DCE RID: 15822
+	private Action<int, int, object[], PhotonMessageInfoWrapped> _delegate;
+
+	// Token: 0x04003DD0 RID: 15824
+	public const byte PHOTON_EVENT_CODE = 176;
+
+	// Token: 0x04003DD1 RID: 15825
+	private static readonly RaiseEventOptions gReceiversAll = new RaiseEventOptions
+	{
+		Receivers = ReceiverGroup.All
+	};
+
+	// Token: 0x04003DD2 RID: 15826
+	private static readonly RaiseEventOptions gReceiversOthers = new RaiseEventOptions
+	{
+		Receivers = ReceiverGroup.Others
+	};
+
+	// Token: 0x04003DD3 RID: 15827
+	private static readonly SendOptions gSendReliable;
+
+	// Token: 0x04003DD4 RID: 15828
+	private static readonly SendOptions gSendUnreliable = SendOptions.SendUnreliable;
+
+	// Token: 0x02000900 RID: 2304
+	public enum RaiseMode
+	{
+		// Token: 0x04003DD6 RID: 15830
+		Local,
+		// Token: 0x04003DD7 RID: 15831
+		RemoteOthers,
+		// Token: 0x04003DD8 RID: 15832
+		RemoteAll
+	}
+}

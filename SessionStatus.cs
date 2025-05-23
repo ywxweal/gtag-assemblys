@@ -1,0 +1,16 @@
+﻿using System;
+
+// Token: 0x02000797 RID: 1943
+public enum SessionStatus
+{
+	// Token: 0x040036C9 RID: 14025
+	PASS,
+	// Token: 0x040036CA RID: 14026
+	PROHIBITED,
+	// Token: 0x040036CB RID: 14027
+	CHALLENGE,
+	// Token: 0x040036CC RID: 14028
+	CHALLENGE_SESSION_UPGRADE,
+	// Token: 0x040036CD RID: 14029
+	PENDING_AGE_APPEAL
+}
